@@ -23,6 +23,7 @@ diagram_links:
   queries: queries
   history: history
   config: architecture.instances
+  testing: testing
 ---
 
 ## Architecture map
@@ -54,6 +55,7 @@ flowchart LR
   build -->|model| renderer
   build -->|index| queries
   build -->|snapshot| history
+  build -.->|verified by| testing["Testing"]
 ```
 
 ## TL;DR
@@ -102,5 +104,10 @@ project wiki. Explore the child pages for the contracts each command relies on.
 
 ## Verification
 
-The extracted framework is checked against fresh builds of the original P721 engine,
-comparing anchor IDs and bound implementations on the same source checkout.
+[Testing architecture](testing.html) maps the automated checks from parser fixtures
+through document validation, progressive queries, publication, and diagram links.
+Select a test area to inspect the assertions and their source implementations.
+
+Browser interaction, installed-wheel smoke checks, and comparison against the original
+P721 engine are separate verification activities; the testing guide explains these
+boundaries and how to run the automated suite.

@@ -15,6 +15,7 @@ from codewiki.query import query, main as query_cli
 from codewiki.snapshot import freshness
 
 
+# @wiki:impl test-framework.fixtures
 @pytest.fixture
 def instance(tmp_path):
     src = tmp_path / 'src'
@@ -51,12 +52,14 @@ Another section.
     return w
 
 
+# @wiki:impl test-framework.fixtures
 def build(w):
     rc, warnings, ix = run(w, strict=True, quiet=True)
     assert rc == 0, [(x.kind, x.message) for x in warnings]
     return ix
 
 
+# @wiki:impl test-framework.queries
 def test_progressive_queries_preserve_markdown_and_source(instance):
     ix = build(instance)
     overview = query(instance, ix, 'doc', 'architecture')
@@ -73,6 +76,7 @@ def test_progressive_queries_preserve_markdown_and_source(instance):
     assert second['next_offset'] is None
 
 
+# @wiki:impl test-framework.queries
 def test_freshness_rejects_old_source_ranges_and_detects_additions(instance):
     ix = build(instance)
     src = instance.abs('../src/main.py')
@@ -88,6 +92,7 @@ def test_freshness_rejects_old_source_ranges_and_detects_additions(instance):
     assert '../src/main.py' in freshness(instance, ix)['changed']
 
 
+# @wiki:impl test-framework.publication
 def test_duplicate_heading_fails_without_replacing_valid_outputs(instance):
     build(instance)
     before = instance.index_path.read_bytes()
@@ -101,6 +106,7 @@ def test_duplicate_heading_fails_without_replacing_valid_outputs(instance):
     assert (instance.site_dir / 'architecture.html').read_bytes() == html
 
 
+# @wiki:impl test-framework.validation
 @pytest.mark.parametrize('extra', [
     'parent: missing\n', 'related: [missing]\n',
     'decisions: [{id: rationale, reason: evidence, anchors: [missing.anchor]}]\n',
@@ -113,6 +119,7 @@ def test_broken_relationships_fail(instance, extra):
     assert any(x.kind.startswith('broken-') for x in warnings)
 
 
+# @wiki:impl test-framework.validation
 def test_hierarchy_cycle_and_duplicate_document(instance):
     path = instance.wiki_dir / 'architecture.md'
     path.write_text(path.read_text().replace('title: Architecture', 'parent: child\ntitle: Architecture'))
@@ -123,6 +130,7 @@ def test_hierarchy_cycle_and_duplicate_document(instance):
     assert any(x.kind == 'duplicate-doc' for x in run(instance, strict=True, quiet=True)[1])
 
 
+# @wiki:impl test-framework.initialization
 def test_hierarchy_navigation_and_partial_theme(instance):
     (instance.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\nsummary: Child summary\n---\n## Child\n')
     theme = instance.wiki_dir / '_theme'
@@ -140,6 +148,7 @@ def test_hierarchy_navigation_and_partial_theme(instance):
     assert (instance.site_dir / 'vendor/LICENSE.mermaid').is_file()
 
 
+# @wiki:impl test-framework.initialization
 def test_init_preserves_customization_and_uses_package_assets(instance):
     root = instance.root.parent
     page = instance.wiki_dir / 'architecture.md'
@@ -154,6 +163,7 @@ def test_init_preserves_customization_and_uses_package_assets(instance):
         init(['--root', str(root), '--dir', '../outside'])
 
 
+# @wiki:impl test-framework.queries
 def test_cli_json_and_config_on_either_side(instance, capsys):
     build(instance)
     capsys.readouterr()
@@ -165,6 +175,7 @@ def test_cli_json_and_config_on_either_side(instance, capsys):
     assert 'error' in json.loads(capsys.readouterr().out)
 
 
+# @wiki:impl test-framework.queries
 def test_file_lookup_does_not_silently_choose_duplicate_basename(instance):
     other = instance.abs('../src/nested/main.py')
     other.parent.mkdir()
@@ -175,6 +186,7 @@ def test_file_lookup_does_not_silently_choose_duplicate_basename(instance):
     assert query(instance, ix, 'file', '../src/main.py')['covered'] is True
 
 
+# @wiki:impl test-languages.parsers
 def test_python_decorators_scopes_and_comments():
     src = b'''class Worker:
     # @wiki:impl work.dispatch
@@ -196,6 +208,7 @@ async def entry():
     assert len([t for t in targets if t.qualified == 'Worker.dispatch']) == 1
 
 
+# @wiki:impl test-framework.validation
 @pytest.mark.parametrize('text', [
     'No frontmatter', '---\nid: x\n', '---\nid: ../../escape\n---\n',
     '---\nid: index\n---\n', '---\nid: x\nrefs: invalid\n---\n',
@@ -208,6 +221,7 @@ def test_invalid_markdown_is_a_validation_error(tmp_path, text):
         read_document(page)
 
 
+# @wiki:impl test-framework.publication
 def test_theme_failure_preserves_index_and_site(instance):
     build(instance)
     before = instance.index_path.read_bytes()
@@ -221,6 +235,7 @@ def test_theme_failure_preserves_index_and_site(instance):
     assert (instance.site_dir / 'architecture.html').read_bytes() == html
 
 
+# @wiki:impl test-framework.publication
 def test_removed_document_retires_generated_page(instance):
     child = instance.wiki_dir / 'child.md'
     child.write_text('---\nid: child\nparent: architecture\n---\n## Child\n')
@@ -231,6 +246,7 @@ def test_removed_document_retires_generated_page(instance):
     assert not (instance.site_dir / 'child.html').exists()
 
 
+# @wiki:impl test-framework.queries
 def test_old_index_requests_rebuild_instead_of_empty_results(instance, capsys):
     instance.index_path.write_text('{"docs": [], "by_file": {}}')
     capsys.readouterr()
@@ -238,6 +254,7 @@ def test_old_index_requests_rebuild_instead_of_empty_results(instance, capsys):
     assert 'run codewiki build' in json.loads(capsys.readouterr().out)['error']
 
 
+# @wiki:impl test-framework.diagrams
 @pytest.mark.parametrize('extra', [
     'depends_on: [missing]\n',
     'diagram_links: {engine: missing}\n',
@@ -254,6 +271,7 @@ def test_broken_architecture_links_preserve_published_outputs(instance, extra):
     assert instance.index_path.read_bytes() == before
 
 
+# @wiki:impl test-framework.diagrams
 @pytest.mark.parametrize('extra', [
     'depends_on: wrong\n', 'depends_on: [3]\n',
     'diagram_links: []\n', 'diagram_links: {node: 3}\n',
@@ -266,6 +284,7 @@ def test_invalid_architecture_metadata(instance, extra):
         read_document(path)
 
 
+# @wiki:impl test-framework.diagrams
 def test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids(instance):
     from codewiki.build import parse_doc, diagram_targets
     from codewiki.query import render_text
@@ -303,6 +322,7 @@ diagram_links:
     assert (instance.site_dir / 'diagrams.js').is_file()
 
 
+# @wiki:impl test-framework.diagrams
 def test_dependency_cycles_do_not_become_parent_cycles(instance):
     path = instance.wiki_dir / 'architecture.md'
     path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\ndepends_on: [child]\n'))

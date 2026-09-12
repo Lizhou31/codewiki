@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from codewiki.languages import LANGUAGES, parse_tag_comment  # noqa: E402
 
 
+# @wiki:impl test-languages.binding
 def bound(lang: str, src: str):
     comments, targets = LANGUAGES[lang].scan(src.encode())
     out = {}
@@ -23,6 +24,7 @@ def bound(lang: str, src: str):
     return out, targets
 
 
+# @wiki:impl test-languages.parsers
 def test_c():
     src = """
 /* file header */
@@ -62,6 +64,7 @@ int prototype(int a);
     assert "local" not in top
 
 
+# @wiki:impl test-languages.parsers
 def test_yaml():
     src = """# header
 # @wiki:impl b.versions
@@ -86,6 +89,7 @@ p721:
     assert {"versions", "versions.sdk", "versions.zephyr", "p721.board", "p721.list"} <= q, q
 
 
+# @wiki:impl test-languages.parsers
 def test_devicetree():
     src = """#include <dt.h>
 / {
@@ -118,6 +122,7 @@ def test_devicetree():
     assert {"motion_sensor", "&spim0", "cpi", "irq-gpios", "frequency"} <= syms, syms
 
 
+# @wiki:impl test-languages.statements
 def test_conf():
     src = """# comment
 
@@ -137,6 +142,7 @@ CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096
     assert b["c.unset"][0] == "CONFIG_FOO", b
 
 
+# @wiki:impl test-languages.statements
 def test_make():
     src = """# @wiki:impl m.flag
 AIR_KEY_DEB_LEADING_EDGE = y
@@ -157,6 +163,7 @@ endif
     assert rule.line_end == 6, rule   # continuation + recipe line included
 
 
+# @wiki:impl test-languages.statements
 def test_kconfig():
     src = """# @wiki:impl k.opt
 config OEM_SLIDE_SWITCH_WARM_RESET
@@ -174,6 +181,7 @@ config OTHER
     assert t.line_end == 6, t
 
 
+# @wiki:impl test-languages.statements
 def test_cmake():
     src = """# @wiki:impl cm.def
 zephyr_compile_definitions(AIR_HID_DEVICE_SCENARIO_SERVICE_KEY_REMAP)
@@ -185,6 +193,7 @@ set(RISCV_FEATURES a;b)
     assert b["cm.set"][0] == "RISCV_FEATURES", b
 
 
+# @wiki:impl test-languages.statements
 def test_shell():
     src = """#!/bin/bash
 # @wiki:impl sh.fn
@@ -201,6 +210,7 @@ IMAGE_TAG="${ZEPHYR_VERSION}-branch"
     assert fn.line_end == 5, fn
 
 
+# @wiki:impl test-languages.binding
 def test_parse_tag_comment_styles():
     for text in ("/* @wiki:impl a.b\n * note here */", "// @wiki:impl a.b\n// note here",
                  "# @wiki:impl a.b\n# note here", "#! @wiki:impl a.b"):

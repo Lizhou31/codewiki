@@ -2,6 +2,7 @@ wiki_dir: wiki
 site_dir: site
 code_roots:
 - ../src/codewiki
+- ../tests
 exclude_globs:
 - '*/resources/*'
 - '*/__pycache__/*'
