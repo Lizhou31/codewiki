@@ -185,7 +185,9 @@ def test_collapsible_navigation_reveals_current_page_ancestors(instance):
         }
         assert nav.links['leaf.html'][0] == ('architecture', 'child')
         assert nav.links['other-leaf.html'][0] == ('other',)
-        assert len(nav.links) == 5
+        assert len(nav.links) == 6
+        assert next(iter(nav.links)) == 'index.html'
+        assert nav.links['index.html'] == ((), 'page' if page == 'index' else None)
         if page not in {'index', 'files'}:
             assert nav.links[f'{page}.html'][1] == 'page'
 
@@ -207,6 +209,12 @@ def test_manual_is_a_separate_root_with_its_own_reading_path(instance):
     overview = (instance.site_dir / 'index.html').read_text().split('<h2>Start here</h2>')[1]
     assert 'href="user-manual.html"' in overview
     assert 'href="architecture.html"' in overview
+    assert overview.index('href="user-manual.html"') < overview.index('href="architecture.html"')
+    for page in ('index', 'files', 'user-manual', 'setup', 'advanced', 'architecture'):
+        html = (instance.site_dir / f'{page}.html').read_text()
+        sidebar = html.split('<nav class="project-nav"')[1].split('</nav>')[0]
+        assert sidebar.index('href="index.html"') < sidebar.index('href="user-manual.html"')
+        assert sidebar.index('href="user-manual.html"') < sidebar.index('href="architecture.html"')
     for page in ('user-manual', 'setup', 'advanced'):
         html = (instance.site_dir / f'{page}.html').read_text()
         reading_path = html.split('aria-label="Reading path">')[1].split('</div>')[0]

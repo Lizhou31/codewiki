@@ -57,6 +57,9 @@ falls back to packaged defaults. `_base.html.j2` owns the shared navigation and 
 source panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.
 
 Pages with no parent are independent roots in the sidebar and Overview cards.
+Manual roots appear before other roots in both places, preserving existing order
+within each group. The sidebar starts with an Overview link to `index.html`, which
+is highlighted when viewing the overview and participates in page-title search.
 A root with `type: manual` uses its actual page hierarchy for the reading path,
 so a user manual and its descendants do not display architecture reading steps.
 Architecture pages retain the Architecture → Component → Implementation path.

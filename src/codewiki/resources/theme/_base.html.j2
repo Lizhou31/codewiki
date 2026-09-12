@@ -33,6 +33,7 @@
         <a href="{{ d.out }}" class="{{ 'on' if doc is defined and d.id == doc.id }}" {% if doc is defined and d.id == doc.id %}aria-current="page"{% endif %}>{{ d.title }}</a>
         {%- endmacro %}
         <ul class="nav-tree">
+          <li class="nav-item"><a href="index.html" class="{{ 'on' if page == 'index' }}" {% if page == 'index' %}aria-current="page"{% endif %}>Overview</a></li>
           {% for d in nav_tree recursive %}
           <li class="nav-item">
             {% if d.children %}

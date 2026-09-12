@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-12T12:30:43+00:00",
+  "generated": "2026-09-12T12:51:19+00:00",
   "snapshot": {
     "framework_version": "0.3.0",
     "inputs": {
@@ -45,9 +45,9 @@
         "mtime_ns": 1789215603413110360
       },
       "wiki/manual-reading.md": {
-        "sha256": "f72d2535a64f0d8f01332f899d56d1b770c9ed669f495fb64fffdd45166697f9",
-        "size": 3686,
-        "mtime_ns": 1789216185257228116
+        "sha256": "54cf58684d1bdff56d9f57b80bdd19711d3735e29f9205ff36e46de84670d72f",
+        "size": 3785,
+        "mtime_ns": 1789217477042502963
       },
       "wiki/manual-writing.md": {
         "sha256": "7b65ccf5461cae15819e367e183946d2fd27757857e09eb0ceebea8db9c84b5e",
@@ -60,9 +60,9 @@
         "mtime_ns": 1789213619368657340
       },
       "wiki/renderer.md": {
-        "sha256": "2852f7ccf9afa731118a89b65bc52c94d4bef4c6252d414f7281216e93a7026e",
-        "size": 4926,
-        "mtime_ns": 1789216185315257648
+        "sha256": "1ebe300c4e83d4cbc76045de9cfb59ab5bbca00a17a806bc5137063e061a649a",
+        "size": 5170,
+        "mtime_ns": 1789217477102596329
       },
       "wiki/skills.md": {
         "sha256": "35ef069b38068b3ac2f406b4894091842dc0ea952851221f31e82d6be5b9f691",
@@ -75,9 +75,9 @@
         "mtime_ns": 1789213589714045494
       },
       "wiki/test-framework.md": {
-        "sha256": "611cee68858a6e9929a55c6aa595d7be9dea6660ec8cdf23f2e8914e29d349fb",
-        "size": 5658,
-        "mtime_ns": 1789216240925816832
+        "sha256": "b42649a3bfcf6df37e9adeed1094a2c8c1c092d8eaf9d07b3087ee00f8aea328",
+        "size": 5804,
+        "mtime_ns": 1789217477162296563
       },
       "wiki/test-languages.md": {
         "sha256": "bc6961e79c6e49c8e56c4f8c9b932b81a76ee1a4eb07ee7c2cd5a4fd2654b3e4",
@@ -110,9 +110,9 @@
         "mtime_ns": 1789210067035764982
       },
       "../src/codewiki/build.py": {
-        "sha256": "aa74292c93fce3935a5292deb477df0f59ad4d88a95057c88d991d6364379d45",
-        "size": 28422,
-        "mtime_ns": 1789216185018154569
+        "sha256": "697d3d98664030e781365b4e23efcf3c9433915d9180224c687586d907d36ff6",
+        "size": 28482,
+        "mtime_ns": 1789217476804661547
       },
       "../src/codewiki/config.py": {
         "sha256": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825",
@@ -140,9 +140,9 @@
         "mtime_ns": 1789213331603495972
       },
       "../src/codewiki/resources/theme/_base.html.j2": {
-        "sha256": "8b28451f8ab308e4d99eeebb668ec3f47ff1aa6ddfed4643ff365b682223688b",
-        "size": 3130,
-        "mtime_ns": 1789216185076244103
+        "sha256": "947d4a89fbc619b6420435f7a7505f886c8ea02a146a3f20d27982ce2933c324",
+        "size": 3293,
+        "mtime_ns": 1789217476862334284
       },
       "../src/codewiki/resources/theme/diagrams.js": {
         "sha256": "2685d8cf41024bd315cb323671d4da1add3d89f6625613cc78cb3971088ebf5c",
@@ -155,9 +155,9 @@
         "mtime_ns": 1789207317651475816
       },
       "../src/codewiki/resources/theme/index.html.j2": {
-        "sha256": "8cb47b62f211c089ce4a53a58c6704dcd3bfc22122da7a77c1ef14b81334838e",
-        "size": 1468,
-        "mtime_ns": 1789209439271995575
+        "sha256": "7ae0bcb99add4e24e6daf47ad17e10974e5a52a70bde724f8590a3e767d968bd",
+        "size": 1490,
+        "mtime_ns": 1789217476920548907
       },
       "../src/codewiki/resources/theme/page.html.j2": {
         "sha256": "6d3cc4b0f33081e32ffe78e72c4710e67eb460009dff491e9eaeacc69e84ad4c",
@@ -225,9 +225,9 @@
         "mtime_ns": 1789209128788425435
       },
       "../tests/test_framework.py": {
-        "sha256": "a80969179a41b47f84d0b025e91f86b0d6ee6c95aebd7c69bcf2620104f0af98",
-        "size": 17089,
-        "mtime_ns": 1789216240866040914
+        "sha256": "bef67a040841a29b524c5487440d81d00645c815c770fd24f9ec8fa261a5bff9",
+        "size": 17748,
+        "mtime_ns": 1789217476981987048
       },
       "../tests/test_languages.py": {
         "sha256": "d2764ae172f088b6fe6112f9a87242e0347fa672a3e9d4a6862fe24070543526",
@@ -238,7 +238,7 @@
     "repositories": [
       {
         "root": "..",
-        "commit": "31ea808b1883b3c80040bad2e5663bbf83614f53",
+        "commit": "16e7acbedd6e2a448cde90816d9ec36d246c266b",
         "dirty": true
       }
     ]
@@ -2542,7 +2542,7 @@
         "line_start": 516,
         "line_end": 585,
         "start_byte": 21220,
-        "end_byte": 24195,
+        "end_byte": 24255,
         "lang": "python",
         "symbol": "render_site",
         "qualified": "render_site",
@@ -2823,12 +2823,34 @@
         "qualified": "render_site.visit.node",
         "hljs": "python"
       },
+      "render_site.roots": {
+        "kind": "variable",
+        "line_start": 549,
+        "line_end": 549,
+        "start_byte": 22350,
+        "end_byte": 22416,
+        "lang": "python",
+        "symbol": "roots",
+        "qualified": "render_site.roots",
+        "hljs": "python"
+      },
+      "roots": {
+        "kind": "variable",
+        "line_start": 549,
+        "line_end": 549,
+        "start_byte": 22350,
+        "end_byte": 22416,
+        "lang": "python",
+        "symbol": "roots",
+        "qualified": "render_site.roots",
+        "hljs": "python"
+      },
       "render_site.common": {
         "kind": "variable",
         "line_start": 554,
         "line_end": 555,
-        "start_byte": 22502,
-        "end_byte": 22691,
+        "start_byte": 22562,
+        "end_byte": 22751,
         "lang": "python",
         "symbol": "common",
         "qualified": "render_site.common",
@@ -2838,8 +2860,8 @@
         "kind": "variable",
         "line_start": 554,
         "line_end": 555,
-        "start_byte": 22502,
-        "end_byte": 22691,
+        "start_byte": 22562,
+        "end_byte": 22751,
         "lang": "python",
         "symbol": "common",
         "qualified": "render_site.common",
@@ -2849,8 +2871,8 @@
         "kind": "variable",
         "line_start": 557,
         "line_end": 557,
-        "start_byte": 22697,
-        "end_byte": 22740,
+        "start_byte": 22757,
+        "end_byte": 22800,
         "lang": "python",
         "symbol": "page_tpl",
         "qualified": "render_site.page_tpl",
@@ -2860,8 +2882,8 @@
         "kind": "variable",
         "line_start": 557,
         "line_end": 557,
-        "start_byte": 22697,
-        "end_byte": 22740,
+        "start_byte": 22757,
+        "end_byte": 22800,
         "lang": "python",
         "symbol": "page_tpl",
         "qualified": "render_site.page_tpl",
@@ -2871,8 +2893,8 @@
         "kind": "variable",
         "line_start": 559,
         "line_end": 559,
-        "start_byte": 22768,
-        "end_byte": 22826,
+        "start_byte": 22828,
+        "end_byte": 22886,
         "lang": "python",
         "symbol": "anchor_map",
         "qualified": "render_site.anchor_map",
@@ -2882,8 +2904,8 @@
         "kind": "variable",
         "line_start": 559,
         "line_end": 559,
-        "start_byte": 22768,
-        "end_byte": 22826,
+        "start_byte": 22828,
+        "end_byte": 22886,
         "lang": "python",
         "symbol": "anchor_map",
         "qualified": "render_site.anchor_map",
@@ -2893,8 +2915,8 @@
         "kind": "variable",
         "line_start": 560,
         "line_end": 560,
-        "start_byte": 22835,
-        "end_byte": 22869,
+        "start_byte": 22895,
+        "end_byte": 22929,
         "lang": "python",
         "symbol": "targets",
         "qualified": "render_site.targets",
@@ -2904,8 +2926,8 @@
         "kind": "variable",
         "line_start": 565,
         "line_end": 565,
-        "start_byte": 23067,
-        "end_byte": 23096,
+        "start_byte": 23127,
+        "end_byte": 23156,
         "lang": "python",
         "symbol": "cursor",
         "qualified": "render_site.cursor",
@@ -2915,8 +2937,8 @@
         "kind": "variable",
         "line_start": 583,
         "line_end": 583,
-        "start_byte": 24060,
-        "end_byte": 24094,
+        "start_byte": 24120,
+        "end_byte": 24154,
         "lang": "python",
         "symbol": "dest",
         "qualified": "render_site.dest",
@@ -2926,8 +2948,8 @@
         "kind": "variable",
         "line_start": 583,
         "line_end": 583,
-        "start_byte": 24060,
-        "end_byte": 24094,
+        "start_byte": 24120,
+        "end_byte": 24154,
         "lang": "python",
         "symbol": "dest",
         "qualified": "render_site.dest",
@@ -2937,8 +2959,8 @@
         "kind": "function",
         "line_start": 594,
         "line_end": 658,
-        "start_byte": 24464,
-        "end_byte": 27677,
+        "start_byte": 24524,
+        "end_byte": 27737,
         "lang": "python",
         "symbol": "run",
         "qualified": "run",
@@ -2948,8 +2970,8 @@
         "kind": "variable",
         "line_start": 595,
         "line_end": 595,
-        "start_byte": 24564,
-        "end_byte": 24580,
+        "start_byte": 24624,
+        "end_byte": 24640,
         "lang": "python",
         "symbol": "t0",
         "qualified": "run.t0",
@@ -2959,8 +2981,8 @@
         "kind": "variable",
         "line_start": 595,
         "line_end": 595,
-        "start_byte": 24564,
-        "end_byte": 24580,
+        "start_byte": 24624,
+        "end_byte": 24640,
         "lang": "python",
         "symbol": "t0",
         "qualified": "run.t0",
@@ -2970,8 +2992,8 @@
         "kind": "variable",
         "line_start": 598,
         "line_end": 598,
-        "start_byte": 24634,
-        "end_byte": 24643,
+        "start_byte": 24694,
+        "end_byte": 24703,
         "lang": "python",
         "symbol": "docs",
         "qualified": "run.docs",
@@ -2981,8 +3003,8 @@
         "kind": "variable",
         "line_start": 598,
         "line_end": 598,
-        "start_byte": 24634,
-        "end_byte": 24643,
+        "start_byte": 24694,
+        "end_byte": 24703,
         "lang": "python",
         "symbol": "docs",
         "qualified": "run.docs",
@@ -2992,8 +3014,8 @@
         "kind": "variable",
         "line_start": 604,
         "line_end": 604,
-        "start_byte": 24878,
-        "end_byte": 24904,
+        "start_byte": 24938,
+        "end_byte": 24964,
         "lang": "python",
         "symbol": "d",
         "qualified": "run.d",
@@ -3003,8 +3025,8 @@
         "kind": "variable",
         "line_start": 604,
         "line_end": 604,
-        "start_byte": 24878,
-        "end_byte": 24904,
+        "start_byte": 24938,
+        "end_byte": 24964,
         "lang": "python",
         "symbol": "d",
         "qualified": "run.d",
@@ -3014,8 +3036,8 @@
         "kind": "variable",
         "line_start": 615,
         "line_end": 615,
-        "start_byte": 25305,
-        "end_byte": 25348,
+        "start_byte": 25365,
+        "end_byte": 25408,
         "lang": "python",
         "symbol": "index",
         "qualified": "run.index",
@@ -3025,8 +3047,8 @@
         "kind": "variable",
         "line_start": 615,
         "line_end": 615,
-        "start_byte": 25305,
-        "end_byte": 25348,
+        "start_byte": 25365,
+        "end_byte": 25408,
         "lang": "python",
         "symbol": "index",
         "qualified": "run.index",
@@ -3036,8 +3058,8 @@
         "kind": "variable",
         "line_start": 618,
         "line_end": 618,
-        "start_byte": 25512,
-        "end_byte": 25533,
+        "start_byte": 25572,
+        "end_byte": 25593,
         "lang": "python",
         "symbol": "staged",
         "qualified": "run.staged",
@@ -3047,8 +3069,8 @@
         "kind": "variable",
         "line_start": 618,
         "line_end": 618,
-        "start_byte": 25512,
-        "end_byte": 25533,
+        "start_byte": 25572,
+        "end_byte": 25593,
         "lang": "python",
         "symbol": "staged",
         "qualified": "run.staged",
@@ -3058,8 +3080,8 @@
         "kind": "variable",
         "line_start": 627,
         "line_end": 627,
-        "start_byte": 25902,
-        "end_byte": 25955,
+        "start_byte": 25962,
+        "end_byte": 26015,
         "lang": "python",
         "symbol": "dest",
         "qualified": "run.dest",
@@ -3069,8 +3091,8 @@
         "kind": "variable",
         "line_start": 632,
         "line_end": 632,
-        "start_byte": 26174,
-        "end_byte": 26236,
+        "start_byte": 26234,
+        "end_byte": 26296,
         "lang": "python",
         "symbol": "previous",
         "qualified": "run.previous",
@@ -3080,8 +3102,8 @@
         "kind": "variable",
         "line_start": 632,
         "line_end": 632,
-        "start_byte": 26174,
-        "end_byte": 26236,
+        "start_byte": 26234,
+        "end_byte": 26296,
         "lang": "python",
         "symbol": "previous",
         "qualified": "run.previous",
@@ -3091,8 +3113,8 @@
         "kind": "variable",
         "line_start": 633,
         "line_end": 633,
-        "start_byte": 26249,
-        "end_byte": 26286,
+        "start_byte": 26309,
+        "end_byte": 26346,
         "lang": "python",
         "symbol": "current_pages",
         "qualified": "run.current_pages",
@@ -3102,8 +3124,8 @@
         "kind": "variable",
         "line_start": 633,
         "line_end": 633,
-        "start_byte": 26249,
-        "end_byte": 26286,
+        "start_byte": 26309,
+        "end_byte": 26346,
         "lang": "python",
         "symbol": "current_pages",
         "qualified": "run.current_pages",
@@ -3113,8 +3135,8 @@
         "kind": "variable",
         "line_start": 635,
         "line_end": 635,
-        "start_byte": 26352,
-        "end_byte": 26378,
+        "start_byte": 26412,
+        "end_byte": 26438,
         "lang": "python",
         "symbol": "name",
         "qualified": "run.name",
@@ -3124,8 +3146,8 @@
         "kind": "variable",
         "line_start": 635,
         "line_end": 635,
-        "start_byte": 26352,
-        "end_byte": 26378,
+        "start_byte": 26412,
+        "end_byte": 26438,
         "lang": "python",
         "symbol": "name",
         "qualified": "run.name",
@@ -3135,8 +3157,8 @@
         "kind": "variable",
         "line_start": 643,
         "line_end": 643,
-        "start_byte": 26834,
-        "end_byte": 26902,
+        "start_byte": 26894,
+        "end_byte": 26962,
         "lang": "python",
         "symbol": "n_impl",
         "qualified": "run.n_impl",
@@ -3146,8 +3168,8 @@
         "kind": "variable",
         "line_start": 643,
         "line_end": 643,
-        "start_byte": 26834,
-        "end_byte": 26902,
+        "start_byte": 26894,
+        "end_byte": 26962,
         "lang": "python",
         "symbol": "n_impl",
         "qualified": "run.n_impl",
@@ -3157,8 +3179,8 @@
         "kind": "variable",
         "line_start": 644,
         "line_end": 644,
-        "start_byte": 26907,
-        "end_byte": 26951,
+        "start_byte": 26967,
+        "end_byte": 27011,
         "lang": "python",
         "symbol": "n_anchor",
         "qualified": "run.n_anchor",
@@ -3168,8 +3190,8 @@
         "kind": "variable",
         "line_start": 644,
         "line_end": 644,
-        "start_byte": 26907,
-        "end_byte": 26951,
+        "start_byte": 26967,
+        "end_byte": 27011,
         "lang": "python",
         "symbol": "n_anchor",
         "qualified": "run.n_anchor",
@@ -3179,8 +3201,8 @@
         "kind": "variable",
         "line_start": 645,
         "line_end": 645,
-        "start_byte": 26956,
-        "end_byte": 26998,
+        "start_byte": 27016,
+        "end_byte": 27058,
         "lang": "python",
         "symbol": "order",
         "qualified": "run.order",
@@ -3190,8 +3212,8 @@
         "kind": "variable",
         "line_start": 645,
         "line_end": 645,
-        "start_byte": 26956,
-        "end_byte": 26998,
+        "start_byte": 27016,
+        "end_byte": 27058,
         "lang": "python",
         "symbol": "order",
         "qualified": "run.order",
@@ -3201,8 +3223,8 @@
         "kind": "variable",
         "line_start": 647,
         "line_end": 647,
-        "start_byte": 27095,
-        "end_byte": 27163,
+        "start_byte": 27155,
+        "end_byte": 27223,
         "lang": "python",
         "symbol": "errors",
         "qualified": "run.errors",
@@ -3212,8 +3234,8 @@
         "kind": "variable",
         "line_start": 647,
         "line_end": 647,
-        "start_byte": 27095,
-        "end_byte": 27163,
+        "start_byte": 27155,
+        "end_byte": 27223,
         "lang": "python",
         "symbol": "errors",
         "qualified": "run.errors",
@@ -3223,8 +3245,8 @@
         "kind": "variable",
         "line_start": 653,
         "line_end": 653,
-        "start_byte": 27367,
-        "end_byte": 27401,
+        "start_byte": 27427,
+        "end_byte": 27461,
         "lang": "python",
         "symbol": "sev",
         "qualified": "run.sev",
@@ -3234,8 +3256,8 @@
         "kind": "variable",
         "line_start": 653,
         "line_end": 653,
-        "start_byte": 27367,
-        "end_byte": 27401,
+        "start_byte": 27427,
+        "end_byte": 27461,
         "lang": "python",
         "symbol": "sev",
         "qualified": "run.sev",
@@ -3245,8 +3267,8 @@
         "kind": "function",
         "line_start": 661,
         "line_end": 674,
-        "start_byte": 27680,
-        "end_byte": 28371,
+        "start_byte": 27740,
+        "end_byte": 28431,
         "lang": "python",
         "symbol": "main",
         "qualified": "main",
@@ -3256,8 +3278,8 @@
         "kind": "variable",
         "line_start": 666,
         "line_end": 667,
-        "start_byte": 27823,
-        "end_byte": 27982,
+        "start_byte": 27883,
+        "end_byte": 28042,
         "lang": "python",
         "symbol": "ap",
         "qualified": "main.ap",
@@ -3267,8 +3289,8 @@
         "kind": "variable",
         "line_start": 666,
         "line_end": 667,
-        "start_byte": 27823,
-        "end_byte": 27982,
+        "start_byte": 27883,
+        "end_byte": 28042,
         "lang": "python",
         "symbol": "ap",
         "qualified": "main.ap",
@@ -3278,8 +3300,8 @@
         "kind": "variable",
         "line_start": 671,
         "line_end": 671,
-        "start_byte": 28240,
-        "end_byte": 28266,
+        "start_byte": 28300,
+        "end_byte": 28326,
         "lang": "python",
         "symbol": "args",
         "qualified": "main.args",
@@ -3289,8 +3311,8 @@
         "kind": "variable",
         "line_start": 671,
         "line_end": 671,
-        "start_byte": 28240,
-        "end_byte": 28266,
+        "start_byte": 28300,
+        "end_byte": 28326,
         "lang": "python",
         "symbol": "args",
         "qualified": "main.args",
@@ -3300,8 +3322,8 @@
         "kind": "variable",
         "line_start": 672,
         "line_end": 672,
-        "start_byte": 28271,
-        "end_byte": 28297,
+        "start_byte": 28331,
+        "end_byte": 28357,
         "lang": "python",
         "symbol": "w",
         "qualified": "main.w",
@@ -3311,8 +3333,8 @@
         "kind": "variable",
         "line_start": 672,
         "line_end": 672,
-        "start_byte": 28271,
-        "end_byte": 28297,
+        "start_byte": 28331,
+        "end_byte": 28357,
         "lang": "python",
         "symbol": "w",
         "qualified": "main.w",
@@ -9024,9 +9046,9 @@
       "test_collapsible_navigation_reveals_current_page_ancestors": {
         "kind": "function",
         "line_start": 153,
-        "line_end": 190,
+        "line_end": 192,
         "start_byte": 5745,
-        "end_byte": 7512,
+        "end_byte": 7649,
         "lang": "python",
         "symbol": "test_collapsible_navigation_reveals_current_page_ancestors",
         "qualified": "test_collapsible_navigation_reveals_current_page_ancestors",
@@ -9188,10 +9210,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path": {
         "kind": "function",
-        "line_start": 194,
-        "line_end": 220,
-        "start_byte": 7555,
-        "end_byte": 9325,
+        "line_start": 196,
+        "line_end": 228,
+        "start_byte": 7692,
+        "end_byte": 9984,
         "lang": "python",
         "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path",
@@ -9199,10 +9221,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.ix": {
         "kind": "variable",
-        "line_start": 202,
-        "line_end": 202,
-        "start_byte": 8094,
-        "end_byte": 8114,
+        "line_start": 204,
+        "line_end": 204,
+        "start_byte": 8231,
+        "end_byte": 8251,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.ix",
@@ -9210,10 +9232,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.tree": {
         "kind": "variable",
-        "line_start": 203,
-        "line_end": 203,
-        "start_byte": 8119,
-        "end_byte": 8162,
+        "line_start": 205,
+        "line_end": 205,
+        "start_byte": 8256,
+        "end_byte": 8299,
         "lang": "python",
         "symbol": "tree",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.tree",
@@ -9221,10 +9243,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.overview": {
         "kind": "variable",
-        "line_start": 207,
-        "line_end": 207,
-        "start_byte": 8424,
-        "end_byte": 8513,
+        "line_start": 209,
+        "line_end": 209,
+        "start_byte": 8561,
+        "end_byte": 8650,
         "lang": "python",
         "symbol": "overview",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.overview",
@@ -9232,21 +9254,43 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.html": {
         "kind": "variable",
-        "line_start": 211,
-        "line_end": 211,
-        "start_byte": 8675,
-        "end_byte": 8730,
+        "line_start": 214,
+        "line_end": 214,
+        "start_byte": 8944,
+        "end_byte": 8999,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.html",
         "hljs": "python"
       },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.sidebar": {
+        "kind": "variable",
+        "line_start": 215,
+        "line_end": 215,
+        "start_byte": 9008,
+        "end_byte": 9078,
+        "lang": "python",
+        "symbol": "sidebar",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.sidebar",
+        "hljs": "python"
+      },
+      "sidebar": {
+        "kind": "variable",
+        "line_start": 215,
+        "line_end": 215,
+        "start_byte": 9008,
+        "end_byte": 9078,
+        "lang": "python",
+        "symbol": "sidebar",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.sidebar",
+        "hljs": "python"
+      },
       "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path": {
         "kind": "variable",
-        "line_start": 212,
-        "line_end": 212,
-        "start_byte": 8739,
-        "end_byte": 8816,
+        "line_start": 220,
+        "line_end": 220,
+        "start_byte": 9398,
+        "end_byte": 9475,
         "lang": "python",
         "symbol": "reading_path",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path",
@@ -9254,10 +9298,10 @@
       },
       "reading_path": {
         "kind": "variable",
-        "line_start": 212,
-        "line_end": 212,
-        "start_byte": 8739,
-        "end_byte": 8816,
+        "line_start": 220,
+        "line_end": 220,
+        "start_byte": 9398,
+        "end_byte": 9475,
         "lang": "python",
         "symbol": "reading_path",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path",
@@ -9265,10 +9309,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.architecture": {
         "kind": "variable",
-        "line_start": 219,
-        "line_end": 219,
-        "start_byte": 9172,
-        "end_byte": 9240,
+        "line_start": 227,
+        "line_end": 227,
+        "start_byte": 9831,
+        "end_byte": 9899,
         "lang": "python",
         "symbol": "architecture",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.architecture",
@@ -9276,10 +9320,10 @@
       },
       "architecture": {
         "kind": "variable",
-        "line_start": 219,
-        "line_end": 219,
-        "start_byte": 9172,
-        "end_byte": 9240,
+        "line_start": 227,
+        "line_end": 227,
+        "start_byte": 9831,
+        "end_byte": 9899,
         "lang": "python",
         "symbol": "architecture",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.architecture",
@@ -9287,10 +9331,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets": {
         "kind": "function",
-        "line_start": 224,
-        "line_end": 235,
-        "start_byte": 9371,
-        "end_byte": 10000,
+        "line_start": 232,
+        "line_end": 243,
+        "start_byte": 10030,
+        "end_byte": 10659,
         "lang": "python",
         "symbol": "test_init_preserves_customization_and_uses_package_assets",
         "qualified": "test_init_preserves_customization_and_uses_package_assets",
@@ -9298,10 +9342,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.root": {
         "kind": "variable",
-        "line_start": 225,
-        "line_end": 225,
-        "start_byte": 9448,
-        "end_byte": 9475,
+        "line_start": 233,
+        "line_end": 233,
+        "start_byte": 10107,
+        "end_byte": 10134,
         "lang": "python",
         "symbol": "root",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.root",
@@ -9309,10 +9353,10 @@
       },
       "root": {
         "kind": "variable",
-        "line_start": 225,
-        "line_end": 225,
-        "start_byte": 9448,
-        "end_byte": 9475,
+        "line_start": 233,
+        "line_end": 233,
+        "start_byte": 10107,
+        "end_byte": 10134,
         "lang": "python",
         "symbol": "root",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.root",
@@ -9320,10 +9364,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.page": {
         "kind": "variable",
-        "line_start": 226,
-        "line_end": 226,
-        "start_byte": 9480,
-        "end_byte": 9524,
+        "line_start": 234,
+        "line_end": 234,
+        "start_byte": 10139,
+        "end_byte": 10183,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.page",
@@ -9331,10 +9375,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.before": {
         "kind": "variable",
-        "line_start": 227,
-        "line_end": 227,
-        "start_byte": 9529,
-        "end_byte": 9555,
+        "line_start": 235,
+        "line_end": 235,
+        "start_byte": 10188,
+        "end_byte": 10214,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.before",
@@ -9342,10 +9386,10 @@
       },
       "test_cli_json_and_config_on_either_side": {
         "kind": "function",
-        "line_start": 239,
-        "line_end": 247,
-        "start_byte": 10039,
-        "end_byte": 10650,
+        "line_start": 247,
+        "line_end": 255,
+        "start_byte": 10698,
+        "end_byte": 11309,
         "lang": "python",
         "symbol": "test_cli_json_and_config_on_either_side",
         "qualified": "test_cli_json_and_config_on_either_side",
@@ -9353,10 +9397,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename": {
         "kind": "function",
-        "line_start": 251,
-        "line_end": 258,
-        "start_byte": 10689,
-        "end_byte": 11086,
+        "line_start": 259,
+        "line_end": 266,
+        "start_byte": 11348,
+        "end_byte": 11745,
         "lang": "python",
         "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename",
@@ -9364,10 +9408,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.other": {
         "kind": "variable",
-        "line_start": 252,
-        "line_end": 252,
-        "start_byte": 10769,
-        "end_byte": 10814,
+        "line_start": 260,
+        "line_end": 260,
+        "start_byte": 11428,
+        "end_byte": 11473,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -9375,10 +9419,10 @@
       },
       "other": {
         "kind": "variable",
-        "line_start": 252,
-        "line_end": 252,
-        "start_byte": 10769,
-        "end_byte": 10814,
+        "line_start": 260,
+        "line_end": 260,
+        "start_byte": 11428,
+        "end_byte": 11473,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -9386,10 +9430,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.ix": {
         "kind": "variable",
-        "line_start": 255,
-        "line_end": 255,
-        "start_byte": 10888,
-        "end_byte": 10908,
+        "line_start": 263,
+        "line_end": 263,
+        "start_byte": 11547,
+        "end_byte": 11567,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.ix",
@@ -9397,10 +9441,10 @@
       },
       "test_python_decorators_scopes_and_comments": {
         "kind": "function",
-        "line_start": 262,
-        "line_end": 280,
-        "start_byte": 11125,
-        "end_byte": 11812,
+        "line_start": 270,
+        "line_end": 288,
+        "start_byte": 11784,
+        "end_byte": 12471,
         "lang": "python",
         "symbol": "test_python_decorators_scopes_and_comments",
         "qualified": "test_python_decorators_scopes_and_comments",
@@ -9408,10 +9452,10 @@
       },
       "test_python_decorators_scopes_and_comments.src": {
         "kind": "variable",
-        "line_start": 263,
-        "line_end": 273,
-        "start_byte": 11179,
-        "end_byte": 11373,
+        "line_start": 271,
+        "line_end": 281,
+        "start_byte": 11838,
+        "end_byte": 12032,
         "lang": "python",
         "symbol": "src",
         "qualified": "test_python_decorators_scopes_and_comments.src",
@@ -9419,10 +9463,10 @@
       },
       "test_python_decorators_scopes_and_comments.bound": {
         "kind": "variable",
-        "line_start": 275,
-        "line_end": 275,
-        "start_byte": 11419,
-        "end_byte": 11521,
+        "line_start": 283,
+        "line_end": 283,
+        "start_byte": 12078,
+        "end_byte": 12180,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -9430,10 +9474,10 @@
       },
       "bound": {
         "kind": "variable",
-        "line_start": 275,
-        "line_end": 275,
-        "start_byte": 11419,
-        "end_byte": 11521,
+        "line_start": 283,
+        "line_end": 283,
+        "start_byte": 12078,
+        "end_byte": 12180,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -9441,10 +9485,10 @@
       },
       "test_python_decorators_scopes_and_comments.target": {
         "kind": "variable",
-        "line_start": 276,
-        "line_end": 276,
-        "start_byte": 11526,
-        "end_byte": 11557,
+        "line_start": 284,
+        "line_end": 284,
+        "start_byte": 12185,
+        "end_byte": 12216,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -9452,10 +9496,10 @@
       },
       "target": {
         "kind": "variable",
-        "line_start": 276,
-        "line_end": 276,
-        "start_byte": 11526,
-        "end_byte": 11557,
+        "line_start": 284,
+        "line_end": 284,
+        "start_byte": 12185,
+        "end_byte": 12216,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -9463,10 +9507,10 @@
       },
       "test_invalid_markdown_is_a_validation_error": {
         "kind": "function",
-        "line_start": 284,
-        "line_end": 293,
-        "start_byte": 11854,
-        "end_byte": 12253,
+        "line_start": 292,
+        "line_end": 301,
+        "start_byte": 12513,
+        "end_byte": 12912,
         "lang": "python",
         "symbol": "test_invalid_markdown_is_a_validation_error",
         "qualified": "test_invalid_markdown_is_a_validation_error",
@@ -9474,10 +9518,10 @@
       },
       "test_invalid_markdown_is_a_validation_error.page": {
         "kind": "variable",
-        "line_start": 290,
-        "line_end": 290,
-        "start_byte": 12137,
-        "end_byte": 12163,
+        "line_start": 298,
+        "line_end": 298,
+        "start_byte": 12796,
+        "end_byte": 12822,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_invalid_markdown_is_a_validation_error.page",
@@ -9485,10 +9529,10 @@
       },
       "test_theme_failure_preserves_index_and_site": {
         "kind": "function",
-        "line_start": 297,
-        "line_end": 307,
-        "start_byte": 12296,
-        "end_byte": 12852,
+        "line_start": 305,
+        "line_end": 315,
+        "start_byte": 12955,
+        "end_byte": 13511,
         "lang": "python",
         "symbol": "test_theme_failure_preserves_index_and_site",
         "qualified": "test_theme_failure_preserves_index_and_site",
@@ -9496,10 +9540,10 @@
       },
       "test_theme_failure_preserves_index_and_site.before": {
         "kind": "variable",
-        "line_start": 299,
-        "line_end": 299,
-        "start_byte": 12379,
-        "end_byte": 12420,
+        "line_start": 307,
+        "line_end": 307,
+        "start_byte": 13038,
+        "end_byte": 13079,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_theme_failure_preserves_index_and_site.before",
@@ -9507,10 +9551,10 @@
       },
       "test_theme_failure_preserves_index_and_site.html": {
         "kind": "variable",
-        "line_start": 300,
-        "line_end": 300,
-        "start_byte": 12425,
-        "end_byte": 12486,
+        "line_start": 308,
+        "line_end": 308,
+        "start_byte": 13084,
+        "end_byte": 13145,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_theme_failure_preserves_index_and_site.html",
@@ -9518,10 +9562,10 @@
       },
       "test_theme_failure_preserves_index_and_site.theme": {
         "kind": "variable",
-        "line_start": 301,
-        "line_end": 301,
-        "start_byte": 12491,
-        "end_byte": 12527,
+        "line_start": 309,
+        "line_end": 309,
+        "start_byte": 13150,
+        "end_byte": 13186,
         "lang": "python",
         "symbol": "theme",
         "qualified": "test_theme_failure_preserves_index_and_site.theme",
@@ -9529,10 +9573,10 @@
       },
       "test_removed_document_retires_generated_page": {
         "kind": "function",
-        "line_start": 311,
-        "line_end": 318,
-        "start_byte": 12895,
-        "end_byte": 13249,
+        "line_start": 319,
+        "line_end": 326,
+        "start_byte": 13554,
+        "end_byte": 13908,
         "lang": "python",
         "symbol": "test_removed_document_retires_generated_page",
         "qualified": "test_removed_document_retires_generated_page",
@@ -9540,10 +9584,10 @@
       },
       "test_removed_document_retires_generated_page.child": {
         "kind": "variable",
-        "line_start": 312,
-        "line_end": 312,
-        "start_byte": 12959,
-        "end_byte": 12997,
+        "line_start": 320,
+        "line_end": 320,
+        "start_byte": 13618,
+        "end_byte": 13656,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_removed_document_retires_generated_page.child",
@@ -9551,10 +9595,10 @@
       },
       "test_old_index_requests_rebuild_instead_of_empty_results": {
         "kind": "function",
-        "line_start": 322,
-        "line_end": 326,
-        "start_byte": 13288,
-        "end_byte": 13619,
+        "line_start": 330,
+        "line_end": 334,
+        "start_byte": 13947,
+        "end_byte": 14278,
         "lang": "python",
         "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
         "qualified": "test_old_index_requests_rebuild_instead_of_empty_results",
@@ -9562,10 +9606,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs": {
         "kind": "function",
-        "line_start": 330,
-        "line_end": 343,
-        "start_byte": 13659,
-        "end_byte": 14347,
+        "line_start": 338,
+        "line_end": 351,
+        "start_byte": 14318,
+        "end_byte": 15006,
         "lang": "python",
         "symbol": "test_broken_architecture_links_preserve_published_outputs",
         "qualified": "test_broken_architecture_links_preserve_published_outputs",
@@ -9573,10 +9617,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.before": {
         "kind": "variable",
-        "line_start": 337,
-        "line_end": 337,
-        "start_byte": 13930,
-        "end_byte": 13971,
+        "line_start": 345,
+        "line_end": 345,
+        "start_byte": 14589,
+        "end_byte": 14630,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.before",
@@ -9584,10 +9628,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.path": {
         "kind": "variable",
-        "line_start": 338,
-        "line_end": 338,
-        "start_byte": 13976,
-        "end_byte": 14020,
+        "line_start": 346,
+        "line_end": 346,
+        "start_byte": 14635,
+        "end_byte": 14679,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.path",
@@ -9595,10 +9639,10 @@
       },
       "test_invalid_architecture_metadata": {
         "kind": "function",
-        "line_start": 347,
-        "line_end": 356,
-        "start_byte": 14387,
-        "end_byte": 14858,
+        "line_start": 355,
+        "line_end": 364,
+        "start_byte": 15046,
+        "end_byte": 15517,
         "lang": "python",
         "symbol": "test_invalid_architecture_metadata",
         "qualified": "test_invalid_architecture_metadata",
@@ -9606,10 +9650,10 @@
       },
       "test_invalid_architecture_metadata.path": {
         "kind": "variable",
-        "line_start": 353,
-        "line_end": 353,
-        "start_byte": 14646,
-        "end_byte": 14690,
+        "line_start": 361,
+        "line_end": 361,
+        "start_byte": 15305,
+        "end_byte": 15349,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_invalid_architecture_metadata.path",
@@ -9617,10 +9661,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids": {
         "kind": "function",
-        "line_start": 360,
-        "line_end": 394,
-        "start_byte": 14898,
-        "end_byte": 16610,
+        "line_start": 368,
+        "line_end": 402,
+        "start_byte": 15557,
+        "end_byte": 17269,
         "lang": "python",
         "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
@@ -9628,10 +9672,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child": {
         "kind": "variable",
-        "line_start": 363,
-        "line_end": 363,
-        "start_byte": 15082,
-        "end_byte": 15120,
+        "line_start": 371,
+        "line_end": 371,
+        "start_byte": 15741,
+        "end_byte": 15779,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child",
@@ -9639,10 +9683,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path": {
         "kind": "variable",
-        "line_start": 373,
-        "line_end": 373,
-        "start_byte": 15286,
-        "end_byte": 15330,
+        "line_start": 381,
+        "line_end": 381,
+        "start_byte": 15945,
+        "end_byte": 15989,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path",
@@ -9650,10 +9694,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix": {
         "kind": "variable",
-        "line_start": 379,
-        "line_end": 379,
-        "start_byte": 15563,
-        "end_byte": 15583,
+        "line_start": 387,
+        "line_end": 387,
+        "start_byte": 16222,
+        "end_byte": 16242,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix",
@@ -9661,10 +9705,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result": {
         "kind": "variable",
-        "line_start": 380,
-        "line_end": 380,
-        "start_byte": 15588,
-        "end_byte": 15639,
+        "line_start": 388,
+        "line_end": 388,
+        "start_byte": 16247,
+        "end_byte": 16298,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -9672,10 +9716,10 @@
       },
       "result": {
         "kind": "variable",
-        "line_start": 380,
-        "line_end": 380,
-        "start_byte": 15588,
-        "end_byte": 15639,
+        "line_start": 388,
+        "line_end": 388,
+        "start_byte": 16247,
+        "end_byte": 16298,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -9683,10 +9727,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs": {
         "kind": "variable",
-        "line_start": 385,
-        "line_end": 385,
-        "start_byte": 15931,
-        "end_byte": 15989,
+        "line_start": 393,
+        "line_end": 393,
+        "start_byte": 16590,
+        "end_byte": 16648,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -9694,10 +9738,10 @@
       },
       "docs": {
         "kind": "variable",
-        "line_start": 385,
-        "line_end": 385,
-        "start_byte": 15931,
-        "end_byte": 15989,
+        "line_start": 393,
+        "line_end": 393,
+        "start_byte": 16590,
+        "end_byte": 16648,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -9705,10 +9749,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets": {
         "kind": "variable",
-        "line_start": 386,
-        "line_end": 386,
-        "start_byte": 15994,
-        "end_byte": 16034,
+        "line_start": 394,
+        "line_end": 394,
+        "start_byte": 16653,
+        "end_byte": 16693,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -9716,10 +9760,10 @@
       },
       "targets": {
         "kind": "variable",
-        "line_start": 386,
-        "line_end": 386,
-        "start_byte": 15994,
-        "end_byte": 16034,
+        "line_start": 394,
+        "line_end": 394,
+        "start_byte": 16653,
+        "end_byte": 16693,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -9727,10 +9771,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html": {
         "kind": "variable",
-        "line_start": 391,
-        "line_end": 391,
-        "start_byte": 16376,
-        "end_byte": 16436,
+        "line_start": 399,
+        "line_end": 399,
+        "start_byte": 17035,
+        "end_byte": 17095,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html",
@@ -9738,10 +9782,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles": {
         "kind": "function",
-        "line_start": 398,
-        "line_end": 403,
-        "start_byte": 16650,
-        "end_byte": 17088,
+        "line_start": 406,
+        "line_end": 411,
+        "start_byte": 17309,
+        "end_byte": 17747,
         "lang": "python",
         "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles",
@@ -9749,10 +9793,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.path": {
         "kind": "variable",
-        "line_start": 399,
-        "line_end": 399,
-        "start_byte": 16720,
-        "end_byte": 16764,
+        "line_start": 407,
+        "line_end": 407,
+        "start_byte": 17379,
+        "end_byte": 17423,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.path",
@@ -9760,10 +9804,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.ix": {
         "kind": "variable",
-        "line_start": 402,
-        "line_end": 402,
-        "start_byte": 17019,
-        "end_byte": 17039,
+        "line_start": 410,
+        "line_end": 410,
+        "start_byte": 17678,
+        "end_byte": 17698,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.ix",
@@ -11560,7 +11604,7 @@
       "summary": "Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.",
       "parent": "user-manual",
       "children": [],
-      "markdown": "---\nid: manual-reading\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Reading and querying\nsummary: Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.\nrelated: [manual-getting-started, manual-configuration]\n---\n\n## TL;DR\n\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
+      "markdown": "---\nid: manual-reading\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Reading and querying\nsummary: Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.\nrelated: [manual-getting-started, manual-configuration]\n---\n\n## TL;DR\n\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n## Browse the site {#browse}\n\nThe sidebar begins with **Overview**, followed by **User manual** and **CodeWiki\narchitecture**. Use Overview to choose a top-level section; its cards also put the\nmanual first. The manual and architecture are independent sections. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
       "decisions": [],
       "sections": [
         {
@@ -11583,9 +11627,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 17,
-          "line_end": 38,
-          "markdown": "## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
-          "body": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n"
+          "line_end": 39,
+          "markdown": "## Browse the site {#browse}\n\nThe sidebar begins with **Overview**, followed by **User manual** and **CodeWiki\narchitecture**. Use Overview to choose a top-level section; its cards also put the\nmanual first. The manual and architecture are independent sections. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
+          "body": "\nThe sidebar begins with **Overview**, followed by **User manual** and **CodeWiki\narchitecture**. Use Overview to choose a top-level section; its cards also put the\nmanual first. The manual and architecture are independent sections. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n"
         },
         {
           "id": "manual-reading.query",
@@ -11594,8 +11638,8 @@
           "title": "Find a page or section",
           "level": 2,
           "kind": "other",
-          "line_start": 39,
-          "line_end": 66,
+          "line_start": 40,
+          "line_end": 67,
           "markdown": "## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n",
           "body": "\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n"
         },
@@ -11606,8 +11650,8 @@
           "title": "Inspect source evidence",
           "level": 2,
           "kind": "other",
-          "line_start": 67,
-          "line_end": 80,
+          "line_start": 68,
+          "line_end": 81,
           "markdown": "## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n",
           "body": "\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n"
         },
@@ -11618,8 +11662,8 @@
           "title": "Keep results current",
           "level": 2,
           "kind": "other",
-          "line_start": 81,
-          "line_end": 92,
+          "line_start": 82,
+          "line_end": 93,
           "markdown": "## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
           "body": "\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n"
         }
@@ -11629,8 +11673,8 @@
           "id": "manual-reading.browse",
           "title": "Browse the site",
           "kind": "other",
-          "text": "Use Overview to choose a top-level section. User manual and CodeWiki architecture are independent sections of this wiki. Click the arrow beside a parent page to expand or collapse its children; click its title to open that page. Keyboard users can focus the arrow control and press Enter or Space. The current page's ancestor groups open automatically. Expand all and Collapse all control the whole tree. The sidebar's Find a page field filters page titles and opens the groups leading to matching pages. Clear the field or press Escape to restore the previous expanded groups. The all-group controls are disabled while filtering. On this page jumps to headings in the open page. Architecture diagrams can link to pages or sections. Follow a linked node or use the ordinary links beneath the diagram. Expand the diagram for a larger view; press Escape to close it. Expand an Implementation panel to read attached code. Open in editor uses the project's configured editor link. Source index lists files with documentation links. If you need to search prose or source symbols instead of page titles, use the CLI search command below.",
-          "markdown": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
+          "text": "The sidebar begins with Overview , followed by User manual and CodeWiki architecture . Use Overview to choose a top-level section; its cards also put the manual first. The manual and architecture are independent sections. Click the arrow beside a parent page to expand or collapse its children; click its title to open that page. Keyboard users can focus the arrow control and press Enter or Space. The current page's ancestor groups open automatically. Expand all and Collapse all control the whole tree. The sidebar's Find a page field filters page titles and opens the groups leading to matching pages. Clear the field or press Escape to restore the previous expanded groups. The all-group controls are disabled while filtering. On this page jumps to headings in the open page. Architecture diagrams can link to pages or sections. Follow a linked node or use the ordinary links beneath the diagram. Expand the diagram for a larger view; press Escape to close it. Expand an Implementation panel to read attached code. Open in editor uses the project's configured editor link. Source index lists files with documentation links. If you need to search prose or source symbols instead of page titles, use the CLI search command below.",
+          "markdown": "\nThe sidebar begins with **Overview**, followed by **User manual** and **CodeWiki\narchitecture**. Use Overview to choose a top-level section; its cards also put the\nmanual first. The manual and architecture are independent sections. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
           "impls": []
         },
         {
@@ -12022,7 +12066,7 @@
       "summary": "Turn the document model into an offline architecture explorer: component maps, section navigation, and expandable source evidence.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
+      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
       "decisions": [],
       "sections": [
         {
@@ -12057,9 +12101,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 52,
-          "line_end": 67,
-          "markdown": "## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
-          "body": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n"
+          "line_end": 70,
+          "markdown": "## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
+          "body": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n"
         },
         {
           "id": "renderer.navigation",
@@ -12068,8 +12112,8 @@
           "title": "Resolve diagram links",
           "level": 2,
           "kind": "other",
-          "line_start": 68,
-          "line_end": 80,
+          "line_start": 71,
+          "line_end": 83,
           "markdown": "## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n",
           "body": "\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n"
         },
@@ -12080,8 +12124,8 @@
           "title": "Browser behavior",
           "level": 2,
           "kind": "other",
-          "line_start": 81,
-          "line_end": 88,
+          "line_start": 84,
+          "line_end": 91,
           "markdown": "## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n",
           "body": "\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n"
         },
@@ -12092,8 +12136,8 @@
           "title": "Reading and source evidence",
           "level": 2,
           "kind": "other",
-          "line_start": 89,
-          "line_end": 106,
+          "line_start": 92,
+          "line_end": 109,
           "markdown": "## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
           "body": "\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n"
         }
@@ -12124,8 +12168,8 @@
           "id": "renderer.publication",
           "title": "Compose and publish pages",
           "kind": "other",
-          "text": "render_site() loads Jinja templates from the project's wiki/_theme/ first, then falls back to packaged defaults. _base.html.j2 owns the shared navigation and shell; page.html.j2 owns document sections, dependencies, component cards, diagrams, and source panels. index.html.j2 and files.html.j2 provide overview and file lookup. Pages with no parent are independent roots in the sidebar and Overview cards. A root with type: manual uses its actual page hierarchy for the reading path, so a user manual and its descendants do not display architecture reading steps. Architecture pages retain the Architecture \u2192 Component \u2192 Implementation path. CSS provides the responsive layout, diagram canvas, and reading-depth cues. There is no client-side app router or production application server. Output includes local Mermaid and syntax-highlighting assets and can be served by any static host.",
-          "markdown": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
+          "text": "render_site() loads Jinja templates from the project's wiki/_theme/ first, then falls back to packaged defaults. _base.html.j2 owns the shared navigation and shell; page.html.j2 owns document sections, dependencies, component cards, diagrams, and source panels. index.html.j2 and files.html.j2 provide overview and file lookup. Pages with no parent are independent roots in the sidebar and Overview cards. Manual roots appear before other roots in both places, preserving existing order within each group. The sidebar starts with an Overview link to index.html , which is highlighted when viewing the overview and participates in page-title search. A root with type: manual uses its actual page hierarchy for the reading path, so a user manual and its descendants do not display architecture reading steps. Architecture pages retain the Architecture \u2192 Component \u2192 Implementation path. CSS provides the responsive layout, diagram canvas, and reading-depth cues. There is no client-side app router or production application server. Output includes local Mermaid and syntax-highlighting assets and can be served by any static host.",
+          "markdown": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -12504,7 +12548,7 @@
       "summary": "Temporary projects exercise validation, queries, publication, initialization, and the shared architecture graph.",
       "parent": "testing",
       "children": [],
-      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
+      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\nThe sidebar begins with Overview and places the manual before architecture on all\npage types; the overview cards use the same manual-first order.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
       "decisions": [],
       "sections": [
         {
@@ -12575,9 +12619,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 86,
-          "line_end": 104,
-          "markdown": "## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
-          "body": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n"
+          "line_end": 106,
+          "markdown": "## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\nThe sidebar begins with Overview and places the manual before architecture on all\npage types; the overview cards use the same manual-first order.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
+          "body": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\nThe sidebar begins with Overview and places the manual before architecture on all\npage types; the overview cards use the same manual-first order.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n"
         },
         {
           "id": "test-framework.diagrams",
@@ -12586,8 +12630,8 @@
           "title": "Architecture navigation agrees with CLI data",
           "level": 2,
           "kind": "other",
-          "line_start": 105,
-          "line_end": 117,
+          "line_start": 107,
+          "line_end": 119,
           "markdown": "## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n",
           "body": "\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n"
         },
@@ -12598,8 +12642,8 @@
           "title": "Initialization and theme customization survive",
           "level": 2,
           "kind": "other",
-          "line_start": 118,
-          "line_end": 127,
+          "line_start": 120,
+          "line_end": 129,
           "markdown": "## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
           "body": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n"
         }
@@ -12675,8 +12719,8 @@
               "symbol": "test_invalid_markdown_is_a_validation_error",
               "kind": "function",
               "lines": [
-                284,
-                293
+                292,
+                301
               ],
               "note": "",
               "lang": "python"
@@ -12720,8 +12764,8 @@
               "symbol": "test_cli_json_and_config_on_either_side",
               "kind": "function",
               "lines": [
-                239,
-                247
+                247,
+                255
               ],
               "note": "",
               "lang": "python"
@@ -12732,8 +12776,8 @@
               "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
               "kind": "function",
               "lines": [
-                251,
-                258
+                259,
+                266
               ],
               "note": "",
               "lang": "python"
@@ -12744,8 +12788,8 @@
               "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
               "kind": "function",
               "lines": [
-                322,
-                326
+                330,
+                334
               ],
               "note": "",
               "lang": "python"
@@ -12756,8 +12800,8 @@
           "id": "test-framework.publication",
           "title": "Publication keeps usable outputs",
           "kind": "other",
-          "text": "A separate manual-root fixture verifies that Overview and CLI navigation expose the manual alongside architecture, with children at the correct depths. Manual descendants use their own reading path, including intermediate pages; architecture pages keep their existing implementation-oriented path. A nested navigation fixture checks native disclosure groups on overview, source index, parent, and leaf pages. Only the current page's branch and ancestors start open, every page keeps its link, and unrelated groups remain collapsed. A duplicate heading must fail without replacing either the saved index or rendered page. A malformed Jinja template must leave the previous outputs intact. Removing a document and rebuilding must retire its generated HTML page. These are observable file-state assertions around failure and success. They do not simulate concurrent readers or prove that publishing the whole site is atomic; see the publication boundary for that limitation.",
-          "markdown": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
+          "text": "A separate manual-root fixture verifies that Overview and CLI navigation expose the manual alongside architecture, with children at the correct depths. Manual descendants use their own reading path, including intermediate pages; architecture pages keep their existing implementation-oriented path. The sidebar begins with Overview and places the manual before architecture on all page types; the overview cards use the same manual-first order. A nested navigation fixture checks native disclosure groups on overview, source index, parent, and leaf pages. Only the current page's branch and ancestors start open, every page keeps its link, and unrelated groups remain collapsed. A duplicate heading must fail without replacing either the saved index or rendered page. A malformed Jinja template must leave the previous outputs intact. Removing a document and rebuilding must retire its generated HTML page. These are observable file-state assertions around failure and success. They do not simulate concurrent readers or prove that publishing the whole site is atomic; see the publication boundary for that limitation.",
+          "markdown": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\nThe sidebar begins with Overview and places the manual before architecture on all\npage types; the overview cards use the same manual-first order.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -12778,7 +12822,7 @@
               "kind": "function",
               "lines": [
                 153,
-                190
+                192
               ],
               "note": "",
               "lang": "python"
@@ -12789,8 +12833,8 @@
               "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
               "kind": "function",
               "lines": [
-                194,
-                220
+                196,
+                228
               ],
               "note": "",
               "lang": "python"
@@ -12801,8 +12845,8 @@
               "symbol": "test_theme_failure_preserves_index_and_site",
               "kind": "function",
               "lines": [
-                297,
-                307
+                305,
+                315
               ],
               "note": "",
               "lang": "python"
@@ -12813,8 +12857,8 @@
               "symbol": "test_removed_document_retires_generated_page",
               "kind": "function",
               "lines": [
-                311,
-                318
+                319,
+                326
               ],
               "note": "",
               "lang": "python"
@@ -12834,8 +12878,8 @@
               "symbol": "test_broken_architecture_links_preserve_published_outputs",
               "kind": "function",
               "lines": [
-                330,
-                343
+                338,
+                351
               ],
               "note": "",
               "lang": "python"
@@ -12846,8 +12890,8 @@
               "symbol": "test_invalid_architecture_metadata",
               "kind": "function",
               "lines": [
-                347,
-                356
+                355,
+                364
               ],
               "note": "",
               "lang": "python"
@@ -12858,8 +12902,8 @@
               "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
               "kind": "function",
               "lines": [
-                360,
-                394
+                368,
+                402
               ],
               "note": "",
               "lang": "python"
@@ -12870,8 +12914,8 @@
               "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
               "kind": "function",
               "lines": [
-                398,
-                403
+                406,
+                411
               ],
               "note": "",
               "lang": "python"
@@ -12903,8 +12947,8 @@
               "symbol": "test_init_preserves_customization_and_uses_package_assets",
               "kind": "function",
               "lines": [
-                224,
-                235
+                232,
+                243
               ],
               "note": "",
               "lang": "python"
@@ -13052,8 +13096,8 @@
               "symbol": "test_python_decorators_scopes_and_comments",
               "kind": "function",
               "lines": [
-                262,
-                280
+                270,
+                288
               ],
               "note": "",
               "lang": "python"
@@ -13791,8 +13835,8 @@
           "role": "impl",
           "symbol": "test_invalid_markdown_is_a_validation_error",
           "lines": [
-            284,
-            293
+            292,
+            301
           ],
           "doc": "test-framework",
           "url": "test-framework.html#validation",
@@ -13833,8 +13877,8 @@
           "role": "impl",
           "symbol": "test_cli_json_and_config_on_either_side",
           "lines": [
-            239,
-            247
+            247,
+            255
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13847,8 +13891,8 @@
           "role": "impl",
           "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
           "lines": [
-            251,
-            258
+            259,
+            266
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13861,8 +13905,8 @@
           "role": "impl",
           "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
           "lines": [
-            322,
-            326
+            330,
+            334
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13890,7 +13934,7 @@
           "symbol": "test_collapsible_navigation_reveals_current_page_ancestors",
           "lines": [
             153,
-            190
+            192
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13903,8 +13947,8 @@
           "role": "impl",
           "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
           "lines": [
-            194,
-            220
+            196,
+            228
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13917,8 +13961,8 @@
           "role": "impl",
           "symbol": "test_theme_failure_preserves_index_and_site",
           "lines": [
-            297,
-            307
+            305,
+            315
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13931,8 +13975,8 @@
           "role": "impl",
           "symbol": "test_removed_document_retires_generated_page",
           "lines": [
-            311,
-            318
+            319,
+            326
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13945,8 +13989,8 @@
           "role": "impl",
           "symbol": "test_broken_architecture_links_preserve_published_outputs",
           "lines": [
-            330,
-            343
+            338,
+            351
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13959,8 +14003,8 @@
           "role": "impl",
           "symbol": "test_invalid_architecture_metadata",
           "lines": [
-            347,
-            356
+            355,
+            364
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13973,8 +14017,8 @@
           "role": "impl",
           "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
           "lines": [
-            360,
-            394
+            368,
+            402
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13987,8 +14031,8 @@
           "role": "impl",
           "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
           "lines": [
-            398,
-            403
+            406,
+            411
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -14015,8 +14059,8 @@
           "role": "impl",
           "symbol": "test_init_preserves_customization_and_uses_package_assets",
           "lines": [
-            224,
-            235
+            232,
+            243
           ],
           "doc": "test-framework",
           "url": "test-framework.html#initialization",
@@ -14029,8 +14073,8 @@
           "role": "impl",
           "symbol": "test_python_decorators_scopes_and_comments",
           "lines": [
-            262,
-            280
+            270,
+            288
           ],
           "doc": "test-languages",
           "url": "test-languages.html#parsers",

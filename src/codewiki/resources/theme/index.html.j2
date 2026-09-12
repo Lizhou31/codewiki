@@ -14,7 +14,8 @@
 
 <h2>Start here</h2>
 <div class="cards">
-  {% for d in docs if not d.parent %}
+  {% for node in nav_tree %}
+  {% set d = by_id[node.id] %}
   <div class="card">
     <h3><a href="{{ d.out }}">{{ d.title }}</a></h3>
     <div class="meta">{{ d.id }} · {{ d.anchors | length }} anchors · {{ d.owns | length }} files</div>

@@ -16,8 +16,9 @@ related: [manual-getting-started, manual-configuration]
 
 ## Browse the site {#browse}
 
-Use **Overview** to choose a top-level section. **User manual** and **CodeWiki
-architecture** are independent sections of this wiki. Click the arrow beside a
+The sidebar begins with **Overview**, followed by **User manual** and **CodeWiki
+architecture**. Use Overview to choose a top-level section; its cards also put the
+manual first. The manual and architecture are independent sections. Click the arrow beside a
 parent page to expand or collapse its children; click its title to open that page.
 Keyboard users can focus the arrow control and press Enter or Space. The current
 page's ancestor groups open automatically. **Expand all** and **Collapse all**

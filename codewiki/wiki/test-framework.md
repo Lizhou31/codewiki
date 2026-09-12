@@ -89,6 +89,8 @@ A separate manual-root fixture verifies that Overview and CLI navigation expose
 the manual alongside architecture, with children at the correct depths. Manual
 descendants use their own reading path, including intermediate pages; architecture
 pages keep their existing implementation-oriented path.
+The sidebar begins with Overview and places the manual before architecture on all
+page types; the overview cards use the same manual-first order.
 
 A nested navigation fixture checks native disclosure groups on overview, source
 index, parent, and leaf pages. Only the current page's branch and ancestors start

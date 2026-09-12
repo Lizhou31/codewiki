@@ -546,9 +546,9 @@ def render_site(w: Wiki, docs, tags, warns, index):
         for child in docs:
             if child.parent == d.id:
                 visit(child, depth + 1, node['children'])
-    for d in docs:
-        if not d.parent or d.parent not in by_id:
-            visit(d, 0, nav_tree)
+    roots = [d for d in docs if not d.parent or d.parent not in by_id]
+    for d in sorted(roots, key=lambda d: d.type != 'manual'):
+        visit(d, 0, nav_tree)
     for d in docs:
         visit(d, 0, nav_tree)
     common = dict(nav=nav, nav_tree=nav_tree, by_id=by_id, project=w.cfg.get("project", {}), docs=docs, generated=index["generated"],
