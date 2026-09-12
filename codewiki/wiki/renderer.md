@@ -88,7 +88,14 @@ when diagrams fail to render or a reader prefers text.
 
 ## Reading and source evidence {#reading}
 
-`reading.js` filters the document tree, tracks the visible section in the outline,
+The sidebar renders nested native `details` groups for parent pages, with separate
+page links in their summaries. The current page and its ancestors start expanded;
+other groups start collapsed. Individual groups work without JavaScript. The
+renderer also retains the flat `nav` data contract for custom theme overrides.
+
+`reading.js` adds expand/collapse-all controls and filters the document tree,
+revealing ancestors of matches and restoring pre-search expansion when cleared.
+It tracks the visible section in the outline,
 and loads syntax highlighting when code is visible. Native `details` elements keep
 implementation bodies closed until requested; file paths and line ranges identify
 the source evidence. File ownership links open the configured editor, including

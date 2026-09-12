@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-12T12:25:45+00:00",
+  "generated": "2026-09-12T12:30:43+00:00",
   "snapshot": {
     "framework_version": "0.3.0",
     "inputs": {
@@ -45,9 +45,9 @@
         "mtime_ns": 1789215603413110360
       },
       "wiki/manual-reading.md": {
-        "sha256": "501032d11148255a15f4142db17bbb277909e03e79cfbb3a6aa537e509dc50e8",
-        "size": 3220,
-        "mtime_ns": 1789215603474359198
+        "sha256": "f72d2535a64f0d8f01332f899d56d1b770c9ed669f495fb64fffdd45166697f9",
+        "size": 3686,
+        "mtime_ns": 1789216185257228116
       },
       "wiki/manual-writing.md": {
         "sha256": "7b65ccf5461cae15819e367e183946d2fd27757857e09eb0ceebea8db9c84b5e",
@@ -60,9 +60,9 @@
         "mtime_ns": 1789213619368657340
       },
       "wiki/renderer.md": {
-        "sha256": "fc35680bed32a71814fcbcabe80b82e1df9dbaece3faaeaca10dc9419ebb3982",
-        "size": 4483,
-        "mtime_ns": 1789215603830231874
+        "sha256": "2852f7ccf9afa731118a89b65bc52c94d4bef4c6252d414f7281216e93a7026e",
+        "size": 4926,
+        "mtime_ns": 1789216185315257648
       },
       "wiki/skills.md": {
         "sha256": "35ef069b38068b3ac2f406b4894091842dc0ea952851221f31e82d6be5b9f691",
@@ -75,9 +75,9 @@
         "mtime_ns": 1789213589714045494
       },
       "wiki/test-framework.md": {
-        "sha256": "b7ed92ff10a7849347c22ae95d50bcb4685367a6cafa189a84e34efd1ed79a9e",
-        "size": 5423,
-        "mtime_ns": 1789215631825177585
+        "sha256": "611cee68858a6e9929a55c6aa595d7be9dea6660ec8cdf23f2e8914e29d349fb",
+        "size": 5658,
+        "mtime_ns": 1789216240925816832
       },
       "wiki/test-languages.md": {
         "sha256": "bc6961e79c6e49c8e56c4f8c9b932b81a76ee1a4eb07ee7c2cd5a4fd2654b3e4",
@@ -110,9 +110,9 @@
         "mtime_ns": 1789210067035764982
       },
       "../src/codewiki/build.py": {
-        "sha256": "3c59b9b6ae4d8eb296da2cfb77ccedb4220ac2ba15e9028830ade2a8ed46c2f6",
-        "size": 28246,
-        "mtime_ns": 1789213619135999681
+        "sha256": "aa74292c93fce3935a5292deb477df0f59ad4d88a95057c88d991d6364379d45",
+        "size": 28422,
+        "mtime_ns": 1789216185018154569
       },
       "../src/codewiki/config.py": {
         "sha256": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825",
@@ -140,9 +140,9 @@
         "mtime_ns": 1789213331603495972
       },
       "../src/codewiki/resources/theme/_base.html.j2": {
-        "sha256": "39fb73ac1d9d2d08ef60f476fb012b458c9ace25cabd0af9fbdce13f3fcec544",
-        "size": 2279,
-        "mtime_ns": 1789215603709178742
+        "sha256": "8b28451f8ab308e4d99eeebb668ec3f47ff1aa6ddfed4643ff365b682223688b",
+        "size": 3130,
+        "mtime_ns": 1789216185076244103
       },
       "../src/codewiki/resources/theme/diagrams.js": {
         "sha256": "2685d8cf41024bd315cb323671d4da1add3d89f6625613cc78cb3971088ebf5c",
@@ -165,14 +165,14 @@
         "mtime_ns": 1789215603651533555
       },
       "../src/codewiki/resources/theme/reading.js": {
-        "sha256": "2330872015cb69c4e852eeb1c2b0b53d7e91ba8b1c3a628948e1b6ccf955743d",
-        "size": 2829,
-        "mtime_ns": 1789212070839668124
+        "sha256": "9a0068e24790bd744ad6b57060bd21aaba24bebcab62cd23fd69850f24090685",
+        "size": 4205,
+        "mtime_ns": 1789216185198031090
       },
       "../src/codewiki/resources/theme/style.css": {
-        "sha256": "49bd85c21c7f48b0ff4a9538e07945244d6fc10e658af84a1b87da4e1d0e42dc",
-        "size": 18501,
-        "mtime_ns": 1789213926067452574
+        "sha256": "fcceb4f4aef96b162774ecd82a03d49ef725ca352affd7c5c303eec5bc5470b3",
+        "size": 19541,
+        "mtime_ns": 1789216185137934954
       },
       "../src/codewiki/resources/theme/vendor/LICENSE.highlightjs": {
         "sha256": "6c081431591d9df696c82dc598fe1423765b8a299b200ed00b281afd0f64c490",
@@ -225,9 +225,9 @@
         "mtime_ns": 1789209128788425435
       },
       "../tests/test_framework.py": {
-        "sha256": "aeb67cb995a6e0e5a8c4b528f3e9131ee02630e85117a21cf3cbbeaf2f268087",
-        "size": 15244,
-        "mtime_ns": 1789215631763213518
+        "sha256": "a80969179a41b47f84d0b025e91f86b0d6ee6c95aebd7c69bcf2620104f0af98",
+        "size": 17089,
+        "mtime_ns": 1789216240866040914
       },
       "../tests/test_languages.py": {
         "sha256": "d2764ae172f088b6fe6112f9a87242e0347fa672a3e9d4a6862fe24070543526",
@@ -238,7 +238,7 @@
     "repositories": [
       {
         "root": "..",
-        "commit": "8fb9aefff47c018913b0d1a67ba30fb4a6be6abe",
+        "commit": "31ea808b1883b3c80040bad2e5663bbf83614f53",
         "dirty": true
       }
     ]
@@ -2540,9 +2540,9 @@
       "render_site": {
         "kind": "function",
         "line_start": 516,
-        "line_end": 581,
+        "line_end": 585,
         "start_byte": 21220,
-        "end_byte": 24019,
+        "end_byte": 24195,
         "lang": "python",
         "symbol": "render_site",
         "qualified": "render_site",
@@ -2713,12 +2713,34 @@
         "qualified": "render_site.nav",
         "hljs": "python"
       },
-      "render_site.visited": {
+      "render_site.nav_tree": {
         "kind": "variable",
         "line_start": 536,
         "line_end": 536,
         "start_byte": 21918,
-        "end_byte": 21933,
+        "end_byte": 21931,
+        "lang": "python",
+        "symbol": "nav_tree",
+        "qualified": "render_site.nav_tree",
+        "hljs": "python"
+      },
+      "nav_tree": {
+        "kind": "variable",
+        "line_start": 536,
+        "line_end": 536,
+        "start_byte": 21918,
+        "end_byte": 21931,
+        "lang": "python",
+        "symbol": "nav_tree",
+        "qualified": "render_site.nav_tree",
+        "hljs": "python"
+      },
+      "render_site.visited": {
+        "kind": "variable",
+        "line_start": 537,
+        "line_end": 537,
+        "start_byte": 21936,
+        "end_byte": 21951,
         "lang": "python",
         "symbol": "visited",
         "qualified": "render_site.visited",
@@ -2726,10 +2748,10 @@
       },
       "visited": {
         "kind": "variable",
-        "line_start": 536,
-        "line_end": 536,
-        "start_byte": 21918,
-        "end_byte": 21933,
+        "line_start": 537,
+        "line_end": 537,
+        "start_byte": 21936,
+        "end_byte": 21951,
         "lang": "python",
         "symbol": "visited",
         "qualified": "render_site.visited",
@@ -2737,10 +2759,10 @@
       },
       "render_site.visit": {
         "kind": "function",
-        "line_start": 537,
-        "line_end": 544,
-        "start_byte": 21938,
-        "end_byte": 22208,
+        "line_start": 538,
+        "line_end": 548,
+        "start_byte": 21956,
+        "end_byte": 22345,
         "lang": "python",
         "symbol": "visit",
         "qualified": "render_site.visit",
@@ -2748,21 +2770,65 @@
       },
       "visit": {
         "kind": "function",
-        "line_start": 537,
-        "line_end": 544,
-        "start_byte": 21938,
-        "end_byte": 22208,
+        "line_start": 538,
+        "line_end": 548,
+        "start_byte": 21956,
+        "end_byte": 22345,
         "lang": "python",
         "symbol": "visit",
         "qualified": "render_site.visit",
         "hljs": "python"
       },
+      "render_site.visit.item": {
+        "kind": "variable",
+        "line_start": 542,
+        "line_end": 542,
+        "start_byte": 22068,
+        "end_byte": 22127,
+        "lang": "python",
+        "symbol": "item",
+        "qualified": "render_site.visit.item",
+        "hljs": "python"
+      },
+      "item": {
+        "kind": "variable",
+        "line_start": 542,
+        "line_end": 542,
+        "start_byte": 22068,
+        "end_byte": 22127,
+        "lang": "python",
+        "symbol": "item",
+        "qualified": "render_site.visit.item",
+        "hljs": "python"
+      },
+      "render_site.visit.node": {
+        "kind": "variable",
+        "line_start": 544,
+        "line_end": 544,
+        "start_byte": 22161,
+        "end_byte": 22193,
+        "lang": "python",
+        "symbol": "node",
+        "qualified": "render_site.visit.node",
+        "hljs": "python"
+      },
+      "node": {
+        "kind": "variable",
+        "line_start": 544,
+        "line_end": 544,
+        "start_byte": 22161,
+        "end_byte": 22193,
+        "lang": "python",
+        "symbol": "node",
+        "qualified": "render_site.visit.node",
+        "hljs": "python"
+      },
       "render_site.common": {
         "kind": "variable",
-        "line_start": 550,
-        "line_end": 551,
-        "start_byte": 22345,
-        "end_byte": 22515,
+        "line_start": 554,
+        "line_end": 555,
+        "start_byte": 22502,
+        "end_byte": 22691,
         "lang": "python",
         "symbol": "common",
         "qualified": "render_site.common",
@@ -2770,10 +2836,10 @@
       },
       "common": {
         "kind": "variable",
-        "line_start": 550,
-        "line_end": 551,
-        "start_byte": 22345,
-        "end_byte": 22515,
+        "line_start": 554,
+        "line_end": 555,
+        "start_byte": 22502,
+        "end_byte": 22691,
         "lang": "python",
         "symbol": "common",
         "qualified": "render_site.common",
@@ -2781,10 +2847,10 @@
       },
       "render_site.page_tpl": {
         "kind": "variable",
-        "line_start": 553,
-        "line_end": 553,
-        "start_byte": 22521,
-        "end_byte": 22564,
+        "line_start": 557,
+        "line_end": 557,
+        "start_byte": 22697,
+        "end_byte": 22740,
         "lang": "python",
         "symbol": "page_tpl",
         "qualified": "render_site.page_tpl",
@@ -2792,10 +2858,10 @@
       },
       "page_tpl": {
         "kind": "variable",
-        "line_start": 553,
-        "line_end": 553,
-        "start_byte": 22521,
-        "end_byte": 22564,
+        "line_start": 557,
+        "line_end": 557,
+        "start_byte": 22697,
+        "end_byte": 22740,
         "lang": "python",
         "symbol": "page_tpl",
         "qualified": "render_site.page_tpl",
@@ -2803,10 +2869,10 @@
       },
       "render_site.anchor_map": {
         "kind": "variable",
-        "line_start": 555,
-        "line_end": 555,
-        "start_byte": 22592,
-        "end_byte": 22650,
+        "line_start": 559,
+        "line_end": 559,
+        "start_byte": 22768,
+        "end_byte": 22826,
         "lang": "python",
         "symbol": "anchor_map",
         "qualified": "render_site.anchor_map",
@@ -2814,10 +2880,10 @@
       },
       "anchor_map": {
         "kind": "variable",
-        "line_start": 555,
-        "line_end": 555,
-        "start_byte": 22592,
-        "end_byte": 22650,
+        "line_start": 559,
+        "line_end": 559,
+        "start_byte": 22768,
+        "end_byte": 22826,
         "lang": "python",
         "symbol": "anchor_map",
         "qualified": "render_site.anchor_map",
@@ -2825,10 +2891,10 @@
       },
       "render_site.targets": {
         "kind": "variable",
-        "line_start": 556,
-        "line_end": 556,
-        "start_byte": 22659,
-        "end_byte": 22693,
+        "line_start": 560,
+        "line_end": 560,
+        "start_byte": 22835,
+        "end_byte": 22869,
         "lang": "python",
         "symbol": "targets",
         "qualified": "render_site.targets",
@@ -2836,10 +2902,10 @@
       },
       "render_site.cursor": {
         "kind": "variable",
-        "line_start": 561,
-        "line_end": 561,
-        "start_byte": 22891,
-        "end_byte": 22920,
+        "line_start": 565,
+        "line_end": 565,
+        "start_byte": 23067,
+        "end_byte": 23096,
         "lang": "python",
         "symbol": "cursor",
         "qualified": "render_site.cursor",
@@ -2847,10 +2913,10 @@
       },
       "render_site.dest": {
         "kind": "variable",
-        "line_start": 579,
-        "line_end": 579,
-        "start_byte": 23884,
-        "end_byte": 23918,
+        "line_start": 583,
+        "line_end": 583,
+        "start_byte": 24060,
+        "end_byte": 24094,
         "lang": "python",
         "symbol": "dest",
         "qualified": "render_site.dest",
@@ -2858,10 +2924,10 @@
       },
       "dest": {
         "kind": "variable",
-        "line_start": 579,
-        "line_end": 579,
-        "start_byte": 23884,
-        "end_byte": 23918,
+        "line_start": 583,
+        "line_end": 583,
+        "start_byte": 24060,
+        "end_byte": 24094,
         "lang": "python",
         "symbol": "dest",
         "qualified": "render_site.dest",
@@ -2869,10 +2935,10 @@
       },
       "run": {
         "kind": "function",
-        "line_start": 590,
-        "line_end": 654,
-        "start_byte": 24288,
-        "end_byte": 27501,
+        "line_start": 594,
+        "line_end": 658,
+        "start_byte": 24464,
+        "end_byte": 27677,
         "lang": "python",
         "symbol": "run",
         "qualified": "run",
@@ -2880,10 +2946,10 @@
       },
       "run.t0": {
         "kind": "variable",
-        "line_start": 591,
-        "line_end": 591,
-        "start_byte": 24388,
-        "end_byte": 24404,
+        "line_start": 595,
+        "line_end": 595,
+        "start_byte": 24564,
+        "end_byte": 24580,
         "lang": "python",
         "symbol": "t0",
         "qualified": "run.t0",
@@ -2891,10 +2957,10 @@
       },
       "t0": {
         "kind": "variable",
-        "line_start": 591,
-        "line_end": 591,
-        "start_byte": 24388,
-        "end_byte": 24404,
+        "line_start": 595,
+        "line_end": 595,
+        "start_byte": 24564,
+        "end_byte": 24580,
         "lang": "python",
         "symbol": "t0",
         "qualified": "run.t0",
@@ -2902,10 +2968,10 @@
       },
       "run.docs": {
         "kind": "variable",
-        "line_start": 594,
-        "line_end": 594,
-        "start_byte": 24458,
-        "end_byte": 24467,
+        "line_start": 598,
+        "line_end": 598,
+        "start_byte": 24634,
+        "end_byte": 24643,
         "lang": "python",
         "symbol": "docs",
         "qualified": "run.docs",
@@ -2913,10 +2979,10 @@
       },
       "docs": {
         "kind": "variable",
-        "line_start": 594,
-        "line_end": 594,
-        "start_byte": 24458,
-        "end_byte": 24467,
+        "line_start": 598,
+        "line_end": 598,
+        "start_byte": 24634,
+        "end_byte": 24643,
         "lang": "python",
         "symbol": "docs",
         "qualified": "run.docs",
@@ -2924,10 +2990,10 @@
       },
       "run.d": {
         "kind": "variable",
-        "line_start": 600,
-        "line_end": 600,
-        "start_byte": 24702,
-        "end_byte": 24728,
+        "line_start": 604,
+        "line_end": 604,
+        "start_byte": 24878,
+        "end_byte": 24904,
         "lang": "python",
         "symbol": "d",
         "qualified": "run.d",
@@ -2935,10 +3001,10 @@
       },
       "d": {
         "kind": "variable",
-        "line_start": 600,
-        "line_end": 600,
-        "start_byte": 24702,
-        "end_byte": 24728,
+        "line_start": 604,
+        "line_end": 604,
+        "start_byte": 24878,
+        "end_byte": 24904,
         "lang": "python",
         "symbol": "d",
         "qualified": "run.d",
@@ -2946,10 +3012,10 @@
       },
       "run.index": {
         "kind": "variable",
-        "line_start": 611,
-        "line_end": 611,
-        "start_byte": 25129,
-        "end_byte": 25172,
+        "line_start": 615,
+        "line_end": 615,
+        "start_byte": 25305,
+        "end_byte": 25348,
         "lang": "python",
         "symbol": "index",
         "qualified": "run.index",
@@ -2957,10 +3023,10 @@
       },
       "index": {
         "kind": "variable",
-        "line_start": 611,
-        "line_end": 611,
-        "start_byte": 25129,
-        "end_byte": 25172,
+        "line_start": 615,
+        "line_end": 615,
+        "start_byte": 25305,
+        "end_byte": 25348,
         "lang": "python",
         "symbol": "index",
         "qualified": "run.index",
@@ -2968,10 +3034,10 @@
       },
       "run.staged": {
         "kind": "variable",
-        "line_start": 614,
-        "line_end": 614,
-        "start_byte": 25336,
-        "end_byte": 25357,
+        "line_start": 618,
+        "line_end": 618,
+        "start_byte": 25512,
+        "end_byte": 25533,
         "lang": "python",
         "symbol": "staged",
         "qualified": "run.staged",
@@ -2979,10 +3045,10 @@
       },
       "staged": {
         "kind": "variable",
-        "line_start": 614,
-        "line_end": 614,
-        "start_byte": 25336,
-        "end_byte": 25357,
+        "line_start": 618,
+        "line_end": 618,
+        "start_byte": 25512,
+        "end_byte": 25533,
         "lang": "python",
         "symbol": "staged",
         "qualified": "run.staged",
@@ -2990,10 +3056,10 @@
       },
       "run.dest": {
         "kind": "variable",
-        "line_start": 623,
-        "line_end": 623,
-        "start_byte": 25726,
-        "end_byte": 25779,
+        "line_start": 627,
+        "line_end": 627,
+        "start_byte": 25902,
+        "end_byte": 25955,
         "lang": "python",
         "symbol": "dest",
         "qualified": "run.dest",
@@ -3001,10 +3067,10 @@
       },
       "run.previous": {
         "kind": "variable",
-        "line_start": 628,
-        "line_end": 628,
-        "start_byte": 25998,
-        "end_byte": 26060,
+        "line_start": 632,
+        "line_end": 632,
+        "start_byte": 26174,
+        "end_byte": 26236,
         "lang": "python",
         "symbol": "previous",
         "qualified": "run.previous",
@@ -3012,10 +3078,10 @@
       },
       "previous": {
         "kind": "variable",
-        "line_start": 628,
-        "line_end": 628,
-        "start_byte": 25998,
-        "end_byte": 26060,
+        "line_start": 632,
+        "line_end": 632,
+        "start_byte": 26174,
+        "end_byte": 26236,
         "lang": "python",
         "symbol": "previous",
         "qualified": "run.previous",
@@ -3023,10 +3089,10 @@
       },
       "run.current_pages": {
         "kind": "variable",
-        "line_start": 629,
-        "line_end": 629,
-        "start_byte": 26073,
-        "end_byte": 26110,
+        "line_start": 633,
+        "line_end": 633,
+        "start_byte": 26249,
+        "end_byte": 26286,
         "lang": "python",
         "symbol": "current_pages",
         "qualified": "run.current_pages",
@@ -3034,10 +3100,10 @@
       },
       "current_pages": {
         "kind": "variable",
-        "line_start": 629,
-        "line_end": 629,
-        "start_byte": 26073,
-        "end_byte": 26110,
+        "line_start": 633,
+        "line_end": 633,
+        "start_byte": 26249,
+        "end_byte": 26286,
         "lang": "python",
         "symbol": "current_pages",
         "qualified": "run.current_pages",
@@ -3045,10 +3111,10 @@
       },
       "run.name": {
         "kind": "variable",
-        "line_start": 631,
-        "line_end": 631,
-        "start_byte": 26176,
-        "end_byte": 26202,
+        "line_start": 635,
+        "line_end": 635,
+        "start_byte": 26352,
+        "end_byte": 26378,
         "lang": "python",
         "symbol": "name",
         "qualified": "run.name",
@@ -3056,10 +3122,10 @@
       },
       "name": {
         "kind": "variable",
-        "line_start": 631,
-        "line_end": 631,
-        "start_byte": 26176,
-        "end_byte": 26202,
+        "line_start": 635,
+        "line_end": 635,
+        "start_byte": 26352,
+        "end_byte": 26378,
         "lang": "python",
         "symbol": "name",
         "qualified": "run.name",
@@ -3067,10 +3133,10 @@
       },
       "run.n_impl": {
         "kind": "variable",
-        "line_start": 639,
-        "line_end": 639,
-        "start_byte": 26658,
-        "end_byte": 26726,
+        "line_start": 643,
+        "line_end": 643,
+        "start_byte": 26834,
+        "end_byte": 26902,
         "lang": "python",
         "symbol": "n_impl",
         "qualified": "run.n_impl",
@@ -3078,10 +3144,10 @@
       },
       "n_impl": {
         "kind": "variable",
-        "line_start": 639,
-        "line_end": 639,
-        "start_byte": 26658,
-        "end_byte": 26726,
+        "line_start": 643,
+        "line_end": 643,
+        "start_byte": 26834,
+        "end_byte": 26902,
         "lang": "python",
         "symbol": "n_impl",
         "qualified": "run.n_impl",
@@ -3089,10 +3155,10 @@
       },
       "run.n_anchor": {
         "kind": "variable",
-        "line_start": 640,
-        "line_end": 640,
-        "start_byte": 26731,
-        "end_byte": 26775,
+        "line_start": 644,
+        "line_end": 644,
+        "start_byte": 26907,
+        "end_byte": 26951,
         "lang": "python",
         "symbol": "n_anchor",
         "qualified": "run.n_anchor",
@@ -3100,10 +3166,10 @@
       },
       "n_anchor": {
         "kind": "variable",
-        "line_start": 640,
-        "line_end": 640,
-        "start_byte": 26731,
-        "end_byte": 26775,
+        "line_start": 644,
+        "line_end": 644,
+        "start_byte": 26907,
+        "end_byte": 26951,
         "lang": "python",
         "symbol": "n_anchor",
         "qualified": "run.n_anchor",
@@ -3111,10 +3177,10 @@
       },
       "run.order": {
         "kind": "variable",
-        "line_start": 641,
-        "line_end": 641,
-        "start_byte": 26780,
-        "end_byte": 26822,
+        "line_start": 645,
+        "line_end": 645,
+        "start_byte": 26956,
+        "end_byte": 26998,
         "lang": "python",
         "symbol": "order",
         "qualified": "run.order",
@@ -3122,10 +3188,10 @@
       },
       "order": {
         "kind": "variable",
-        "line_start": 641,
-        "line_end": 641,
-        "start_byte": 26780,
-        "end_byte": 26822,
+        "line_start": 645,
+        "line_end": 645,
+        "start_byte": 26956,
+        "end_byte": 26998,
         "lang": "python",
         "symbol": "order",
         "qualified": "run.order",
@@ -3133,10 +3199,10 @@
       },
       "run.errors": {
         "kind": "variable",
-        "line_start": 643,
-        "line_end": 643,
-        "start_byte": 26919,
-        "end_byte": 26987,
+        "line_start": 647,
+        "line_end": 647,
+        "start_byte": 27095,
+        "end_byte": 27163,
         "lang": "python",
         "symbol": "errors",
         "qualified": "run.errors",
@@ -3144,10 +3210,10 @@
       },
       "errors": {
         "kind": "variable",
-        "line_start": 643,
-        "line_end": 643,
-        "start_byte": 26919,
-        "end_byte": 26987,
+        "line_start": 647,
+        "line_end": 647,
+        "start_byte": 27095,
+        "end_byte": 27163,
         "lang": "python",
         "symbol": "errors",
         "qualified": "run.errors",
@@ -3155,10 +3221,10 @@
       },
       "run.sev": {
         "kind": "variable",
-        "line_start": 649,
-        "line_end": 649,
-        "start_byte": 27191,
-        "end_byte": 27225,
+        "line_start": 653,
+        "line_end": 653,
+        "start_byte": 27367,
+        "end_byte": 27401,
         "lang": "python",
         "symbol": "sev",
         "qualified": "run.sev",
@@ -3166,10 +3232,10 @@
       },
       "sev": {
         "kind": "variable",
-        "line_start": 649,
-        "line_end": 649,
-        "start_byte": 27191,
-        "end_byte": 27225,
+        "line_start": 653,
+        "line_end": 653,
+        "start_byte": 27367,
+        "end_byte": 27401,
         "lang": "python",
         "symbol": "sev",
         "qualified": "run.sev",
@@ -3177,10 +3243,10 @@
       },
       "main": {
         "kind": "function",
-        "line_start": 657,
-        "line_end": 670,
-        "start_byte": 27504,
-        "end_byte": 28195,
+        "line_start": 661,
+        "line_end": 674,
+        "start_byte": 27680,
+        "end_byte": 28371,
         "lang": "python",
         "symbol": "main",
         "qualified": "main",
@@ -3188,10 +3254,10 @@
       },
       "main.ap": {
         "kind": "variable",
-        "line_start": 662,
-        "line_end": 663,
-        "start_byte": 27647,
-        "end_byte": 27806,
+        "line_start": 666,
+        "line_end": 667,
+        "start_byte": 27823,
+        "end_byte": 27982,
         "lang": "python",
         "symbol": "ap",
         "qualified": "main.ap",
@@ -3199,10 +3265,10 @@
       },
       "ap": {
         "kind": "variable",
-        "line_start": 662,
-        "line_end": 663,
-        "start_byte": 27647,
-        "end_byte": 27806,
+        "line_start": 666,
+        "line_end": 667,
+        "start_byte": 27823,
+        "end_byte": 27982,
         "lang": "python",
         "symbol": "ap",
         "qualified": "main.ap",
@@ -3210,10 +3276,10 @@
       },
       "main.args": {
         "kind": "variable",
-        "line_start": 667,
-        "line_end": 667,
-        "start_byte": 28064,
-        "end_byte": 28090,
+        "line_start": 671,
+        "line_end": 671,
+        "start_byte": 28240,
+        "end_byte": 28266,
         "lang": "python",
         "symbol": "args",
         "qualified": "main.args",
@@ -3221,10 +3287,10 @@
       },
       "args": {
         "kind": "variable",
-        "line_start": 667,
-        "line_end": 667,
-        "start_byte": 28064,
-        "end_byte": 28090,
+        "line_start": 671,
+        "line_end": 671,
+        "start_byte": 28240,
+        "end_byte": 28266,
         "lang": "python",
         "symbol": "args",
         "qualified": "main.args",
@@ -3232,10 +3298,10 @@
       },
       "main.w": {
         "kind": "variable",
-        "line_start": 668,
-        "line_end": 668,
-        "start_byte": 28095,
-        "end_byte": 28121,
+        "line_start": 672,
+        "line_end": 672,
+        "start_byte": 28271,
+        "end_byte": 28297,
         "lang": "python",
         "symbol": "w",
         "qualified": "main.w",
@@ -3243,10 +3309,10 @@
       },
       "w": {
         "kind": "variable",
-        "line_start": 668,
-        "line_end": 668,
-        "start_byte": 28095,
-        "end_byte": 28121,
+        "line_start": 672,
+        "line_end": 672,
+        "start_byte": 28271,
+        "end_byte": 28297,
         "lang": "python",
         "symbol": "w",
         "qualified": "main.w",
@@ -8506,10 +8572,10 @@
     "../tests/test_framework.py": {
       "instance": {
         "kind": "function",
-        "line_start": 19,
-        "line_end": 52,
-        "start_byte": 450,
-        "end_byte": 1178,
+        "line_start": 20,
+        "line_end": 53,
+        "start_byte": 485,
+        "end_byte": 1213,
         "lang": "python",
         "symbol": "instance",
         "qualified": "instance",
@@ -8517,10 +8583,10 @@
       },
       "instance.src": {
         "kind": "variable",
-        "line_start": 21,
-        "line_end": 21,
-        "start_byte": 494,
-        "end_byte": 516,
+        "line_start": 22,
+        "line_end": 22,
+        "start_byte": 529,
+        "end_byte": 551,
         "lang": "python",
         "symbol": "src",
         "qualified": "instance.src",
@@ -8528,10 +8594,10 @@
       },
       "src": {
         "kind": "variable",
-        "line_start": 21,
-        "line_end": 21,
-        "start_byte": 494,
-        "end_byte": 516,
+        "line_start": 22,
+        "line_end": 22,
+        "start_byte": 529,
+        "end_byte": 551,
         "lang": "python",
         "symbol": "src",
         "qualified": "instance.src",
@@ -8539,10 +8605,10 @@
       },
       "instance.w": {
         "kind": "variable",
-        "line_start": 25,
-        "line_end": 25,
-        "start_byte": 758,
-        "end_byte": 806,
+        "line_start": 26,
+        "line_end": 26,
+        "start_byte": 793,
+        "end_byte": 841,
         "lang": "python",
         "symbol": "w",
         "qualified": "instance.w",
@@ -8550,10 +8616,10 @@
       },
       "w": {
         "kind": "variable",
-        "line_start": 25,
-        "line_end": 25,
-        "start_byte": 758,
-        "end_byte": 806,
+        "line_start": 26,
+        "line_end": 26,
+        "start_byte": 793,
+        "end_byte": 841,
         "lang": "python",
         "symbol": "w",
         "qualified": "instance.w",
@@ -8561,10 +8627,10 @@
       },
       "build": {
         "kind": "function",
-        "line_start": 56,
-        "line_end": 59,
-        "start_byte": 1218,
-        "end_byte": 1360,
+        "line_start": 57,
+        "line_end": 60,
+        "start_byte": 1253,
+        "end_byte": 1395,
         "lang": "python",
         "symbol": "build",
         "qualified": "build",
@@ -8572,10 +8638,10 @@
       },
       "test_progressive_queries_preserve_markdown_and_source": {
         "kind": "function",
-        "line_start": 63,
-        "line_end": 76,
-        "start_byte": 1399,
-        "end_byte": 2245,
+        "line_start": 64,
+        "line_end": 77,
+        "start_byte": 1434,
+        "end_byte": 2280,
         "lang": "python",
         "symbol": "test_progressive_queries_preserve_markdown_and_source",
         "qualified": "test_progressive_queries_preserve_markdown_and_source",
@@ -8583,10 +8649,10 @@
       },
       "test_progressive_queries_preserve_markdown_and_source.ix": {
         "kind": "variable",
-        "line_start": 64,
-        "line_end": 64,
-        "start_byte": 1472,
-        "end_byte": 1492,
+        "line_start": 65,
+        "line_end": 65,
+        "start_byte": 1507,
+        "end_byte": 1527,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.ix",
@@ -8594,10 +8660,10 @@
       },
       "ix": {
         "kind": "variable",
-        "line_start": 64,
-        "line_end": 64,
-        "start_byte": 1472,
-        "end_byte": 1492,
+        "line_start": 65,
+        "line_end": 65,
+        "start_byte": 1507,
+        "end_byte": 1527,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.ix",
@@ -8605,10 +8671,10 @@
       },
       "test_progressive_queries_preserve_markdown_and_source.overview": {
         "kind": "variable",
-        "line_start": 65,
-        "line_end": 65,
-        "start_byte": 1497,
-        "end_byte": 1550,
+        "line_start": 66,
+        "line_end": 66,
+        "start_byte": 1532,
+        "end_byte": 1585,
         "lang": "python",
         "symbol": "overview",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.overview",
@@ -8616,10 +8682,10 @@
       },
       "overview": {
         "kind": "variable",
-        "line_start": 65,
-        "line_end": 65,
-        "start_byte": 1497,
-        "end_byte": 1550,
+        "line_start": 66,
+        "line_end": 66,
+        "start_byte": 1532,
+        "end_byte": 1585,
         "lang": "python",
         "symbol": "overview",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.overview",
@@ -8627,10 +8693,10 @@
       },
       "test_progressive_queries_preserve_markdown_and_source.selected": {
         "kind": "variable",
-        "line_start": 67,
-        "line_end": 67,
-        "start_byte": 1593,
-        "end_byte": 1670,
+        "line_start": 68,
+        "line_end": 68,
+        "start_byte": 1628,
+        "end_byte": 1705,
         "lang": "python",
         "symbol": "selected",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.selected",
@@ -8638,10 +8704,10 @@
       },
       "selected": {
         "kind": "variable",
-        "line_start": 67,
-        "line_end": 67,
-        "start_byte": 1593,
-        "end_byte": 1670,
+        "line_start": 68,
+        "line_end": 68,
+        "start_byte": 1628,
+        "end_byte": 1705,
         "lang": "python",
         "symbol": "selected",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.selected",
@@ -8649,10 +8715,10 @@
       },
       "test_progressive_queries_preserve_markdown_and_source.first": {
         "kind": "variable",
-        "line_start": 72,
-        "line_end": 72,
-        "start_byte": 1920,
-        "end_byte": 1987,
+        "line_start": 73,
+        "line_end": 73,
+        "start_byte": 1955,
+        "end_byte": 2022,
         "lang": "python",
         "symbol": "first",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.first",
@@ -8660,10 +8726,10 @@
       },
       "first": {
         "kind": "variable",
-        "line_start": 72,
-        "line_end": 72,
-        "start_byte": 1920,
-        "end_byte": 1987,
+        "line_start": 73,
+        "line_end": 73,
+        "start_byte": 1955,
+        "end_byte": 2022,
         "lang": "python",
         "symbol": "first",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.first",
@@ -8671,10 +8737,10 @@
       },
       "test_progressive_queries_preserve_markdown_and_source.second": {
         "kind": "variable",
-        "line_start": 73,
-        "line_end": 73,
-        "start_byte": 1992,
-        "end_byte": 2089,
+        "line_start": 74,
+        "line_end": 74,
+        "start_byte": 2027,
+        "end_byte": 2124,
         "lang": "python",
         "symbol": "second",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.second",
@@ -8682,10 +8748,10 @@
       },
       "second": {
         "kind": "variable",
-        "line_start": 73,
-        "line_end": 73,
-        "start_byte": 1992,
-        "end_byte": 2089,
+        "line_start": 74,
+        "line_end": 74,
+        "start_byte": 2027,
+        "end_byte": 2124,
         "lang": "python",
         "symbol": "second",
         "qualified": "test_progressive_queries_preserve_markdown_and_source.second",
@@ -8693,10 +8759,10 @@
       },
       "test_freshness_rejects_old_source_ranges_and_detects_additions": {
         "kind": "function",
-        "line_start": 80,
-        "line_end": 92,
-        "start_byte": 2284,
-        "end_byte": 2904,
+        "line_start": 81,
+        "line_end": 93,
+        "start_byte": 2319,
+        "end_byte": 2939,
         "lang": "python",
         "symbol": "test_freshness_rejects_old_source_ranges_and_detects_additions",
         "qualified": "test_freshness_rejects_old_source_ranges_and_detects_additions",
@@ -8704,10 +8770,10 @@
       },
       "test_freshness_rejects_old_source_ranges_and_detects_additions.ix": {
         "kind": "variable",
-        "line_start": 81,
-        "line_end": 81,
-        "start_byte": 2366,
-        "end_byte": 2386,
+        "line_start": 82,
+        "line_end": 82,
+        "start_byte": 2401,
+        "end_byte": 2421,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_freshness_rejects_old_source_ranges_and_detects_additions.ix",
@@ -8715,10 +8781,10 @@
       },
       "test_freshness_rejects_old_source_ranges_and_detects_additions.src": {
         "kind": "variable",
-        "line_start": 82,
-        "line_end": 82,
-        "start_byte": 2391,
-        "end_byte": 2427,
+        "line_start": 83,
+        "line_end": 83,
+        "start_byte": 2426,
+        "end_byte": 2462,
         "lang": "python",
         "symbol": "src",
         "qualified": "test_freshness_rejects_old_source_ranges_and_detects_additions.src",
@@ -8726,10 +8792,10 @@
       },
       "test_duplicate_heading_fails_without_replacing_valid_outputs": {
         "kind": "function",
-        "line_start": 96,
-        "line_end": 106,
-        "start_byte": 2947,
-        "end_byte": 3542,
+        "line_start": 97,
+        "line_end": 107,
+        "start_byte": 2982,
+        "end_byte": 3577,
         "lang": "python",
         "symbol": "test_duplicate_heading_fails_without_replacing_valid_outputs",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs",
@@ -8737,10 +8803,10 @@
       },
       "test_duplicate_heading_fails_without_replacing_valid_outputs.before": {
         "kind": "variable",
-        "line_start": 98,
-        "line_end": 98,
-        "start_byte": 3047,
-        "end_byte": 3088,
+        "line_start": 99,
+        "line_end": 99,
+        "start_byte": 3082,
+        "end_byte": 3123,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs.before",
@@ -8748,10 +8814,10 @@
       },
       "before": {
         "kind": "variable",
-        "line_start": 98,
-        "line_end": 98,
-        "start_byte": 3047,
-        "end_byte": 3088,
+        "line_start": 99,
+        "line_end": 99,
+        "start_byte": 3082,
+        "end_byte": 3123,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs.before",
@@ -8759,10 +8825,10 @@
       },
       "test_duplicate_heading_fails_without_replacing_valid_outputs.html": {
         "kind": "variable",
-        "line_start": 99,
-        "line_end": 99,
-        "start_byte": 3093,
-        "end_byte": 3154,
+        "line_start": 100,
+        "line_end": 100,
+        "start_byte": 3128,
+        "end_byte": 3189,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs.html",
@@ -8770,10 +8836,10 @@
       },
       "html": {
         "kind": "variable",
-        "line_start": 99,
-        "line_end": 99,
-        "start_byte": 3093,
-        "end_byte": 3154,
+        "line_start": 100,
+        "line_end": 100,
+        "start_byte": 3128,
+        "end_byte": 3189,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs.html",
@@ -8781,10 +8847,10 @@
       },
       "test_duplicate_heading_fails_without_replacing_valid_outputs.page": {
         "kind": "variable",
-        "line_start": 100,
-        "line_end": 100,
-        "start_byte": 3159,
-        "end_byte": 3203,
+        "line_start": 101,
+        "line_end": 101,
+        "start_byte": 3194,
+        "end_byte": 3238,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs.page",
@@ -8792,10 +8858,10 @@
       },
       "page": {
         "kind": "variable",
-        "line_start": 100,
-        "line_end": 100,
-        "start_byte": 3159,
-        "end_byte": 3203,
+        "line_start": 101,
+        "line_end": 101,
+        "start_byte": 3194,
+        "end_byte": 3238,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_duplicate_heading_fails_without_replacing_valid_outputs.page",
@@ -8803,10 +8869,10 @@
       },
       "test_broken_relationships_fail": {
         "kind": "function",
-        "line_start": 110,
-        "line_end": 119,
-        "start_byte": 3584,
-        "end_byte": 4103,
+        "line_start": 111,
+        "line_end": 120,
+        "start_byte": 3619,
+        "end_byte": 4138,
         "lang": "python",
         "symbol": "test_broken_relationships_fail",
         "qualified": "test_broken_relationships_fail",
@@ -8814,10 +8880,10 @@
       },
       "test_broken_relationships_fail.path": {
         "kind": "variable",
-        "line_start": 115,
-        "line_end": 115,
-        "start_byte": 3812,
-        "end_byte": 3856,
+        "line_start": 116,
+        "line_end": 116,
+        "start_byte": 3847,
+        "end_byte": 3891,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_broken_relationships_fail.path",
@@ -8825,10 +8891,10 @@
       },
       "path": {
         "kind": "variable",
-        "line_start": 115,
-        "line_end": 115,
-        "start_byte": 3812,
-        "end_byte": 3856,
+        "line_start": 116,
+        "line_end": 116,
+        "start_byte": 3847,
+        "end_byte": 3891,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_broken_relationships_fail.path",
@@ -8836,10 +8902,10 @@
       },
       "test_hierarchy_cycle_and_duplicate_document": {
         "kind": "function",
-        "line_start": 123,
-        "line_end": 130,
-        "start_byte": 4145,
-        "end_byte": 4731,
+        "line_start": 124,
+        "line_end": 131,
+        "start_byte": 4180,
+        "end_byte": 4766,
         "lang": "python",
         "symbol": "test_hierarchy_cycle_and_duplicate_document",
         "qualified": "test_hierarchy_cycle_and_duplicate_document",
@@ -8847,10 +8913,10 @@
       },
       "test_hierarchy_cycle_and_duplicate_document.path": {
         "kind": "variable",
-        "line_start": 124,
-        "line_end": 124,
-        "start_byte": 4208,
-        "end_byte": 4252,
+        "line_start": 125,
+        "line_end": 125,
+        "start_byte": 4243,
+        "end_byte": 4287,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_hierarchy_cycle_and_duplicate_document.path",
@@ -8858,10 +8924,10 @@
       },
       "test_hierarchy_cycle_and_duplicate_document.child": {
         "kind": "variable",
-        "line_start": 126,
-        "line_end": 126,
-        "start_byte": 4364,
-        "end_byte": 4402,
+        "line_start": 127,
+        "line_end": 127,
+        "start_byte": 4399,
+        "end_byte": 4437,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_hierarchy_cycle_and_duplicate_document.child",
@@ -8869,10 +8935,10 @@
       },
       "child": {
         "kind": "variable",
-        "line_start": 126,
-        "line_end": 126,
-        "start_byte": 4364,
-        "end_byte": 4402,
+        "line_start": 127,
+        "line_end": 127,
+        "start_byte": 4399,
+        "end_byte": 4437,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_hierarchy_cycle_and_duplicate_document.child",
@@ -8880,10 +8946,10 @@
       },
       "test_hierarchy_navigation_and_partial_theme": {
         "kind": "function",
-        "line_start": 134,
-        "line_end": 148,
-        "start_byte": 4777,
-        "end_byte": 5667,
+        "line_start": 135,
+        "line_end": 149,
+        "start_byte": 4812,
+        "end_byte": 5702,
         "lang": "python",
         "symbol": "test_hierarchy_navigation_and_partial_theme",
         "qualified": "test_hierarchy_navigation_and_partial_theme",
@@ -8891,10 +8957,10 @@
       },
       "test_hierarchy_navigation_and_partial_theme.theme": {
         "kind": "variable",
-        "line_start": 136,
-        "line_end": 136,
-        "start_byte": 4969,
-        "end_byte": 5005,
+        "line_start": 137,
+        "line_end": 137,
+        "start_byte": 5004,
+        "end_byte": 5040,
         "lang": "python",
         "symbol": "theme",
         "qualified": "test_hierarchy_navigation_and_partial_theme.theme",
@@ -8902,10 +8968,10 @@
       },
       "theme": {
         "kind": "variable",
-        "line_start": 136,
-        "line_end": 136,
-        "start_byte": 4969,
-        "end_byte": 5005,
+        "line_start": 137,
+        "line_end": 137,
+        "start_byte": 5004,
+        "end_byte": 5040,
         "lang": "python",
         "symbol": "theme",
         "qualified": "test_hierarchy_navigation_and_partial_theme.theme",
@@ -8913,10 +8979,10 @@
       },
       "test_hierarchy_navigation_and_partial_theme.ix": {
         "kind": "variable",
-        "line_start": 139,
-        "line_end": 139,
-        "start_byte": 5091,
-        "end_byte": 5111,
+        "line_start": 140,
+        "line_end": 140,
+        "start_byte": 5126,
+        "end_byte": 5146,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_hierarchy_navigation_and_partial_theme.ix",
@@ -8924,10 +8990,10 @@
       },
       "test_hierarchy_navigation_and_partial_theme.tree": {
         "kind": "variable",
-        "line_start": 140,
-        "line_end": 140,
-        "start_byte": 5116,
-        "end_byte": 5159,
+        "line_start": 141,
+        "line_end": 141,
+        "start_byte": 5151,
+        "end_byte": 5194,
         "lang": "python",
         "symbol": "tree",
         "qualified": "test_hierarchy_navigation_and_partial_theme.tree",
@@ -8935,10 +9001,10 @@
       },
       "tree": {
         "kind": "variable",
-        "line_start": 140,
-        "line_end": 140,
-        "start_byte": 5116,
-        "end_byte": 5159,
+        "line_start": 141,
+        "line_end": 141,
+        "start_byte": 5151,
+        "end_byte": 5194,
         "lang": "python",
         "symbol": "tree",
         "qualified": "test_hierarchy_navigation_and_partial_theme.tree",
@@ -8946,21 +9012,186 @@
       },
       "test_hierarchy_navigation_and_partial_theme.html": {
         "kind": "variable",
-        "line_start": 144,
-        "line_end": 144,
-        "start_byte": 5327,
-        "end_byte": 5387,
+        "line_start": 145,
+        "line_end": 145,
+        "start_byte": 5362,
+        "end_byte": 5422,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_hierarchy_navigation_and_partial_theme.html",
         "hljs": "python"
       },
+      "test_collapsible_navigation_reveals_current_page_ancestors": {
+        "kind": "function",
+        "line_start": 153,
+        "line_end": 190,
+        "start_byte": 5745,
+        "end_byte": 7512,
+        "lang": "python",
+        "symbol": "test_collapsible_navigation_reveals_current_page_ancestors",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.Navigation": {
+        "kind": "type",
+        "line_start": 160,
+        "line_end": 177,
+        "start_byte": 6129,
+        "end_byte": 6877,
+        "lang": "python",
+        "symbol": "Navigation",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation",
+        "hljs": "python"
+      },
+      "Navigation": {
+        "kind": "type",
+        "line_start": 160,
+        "line_end": 177,
+        "start_byte": 6129,
+        "end_byte": 6877,
+        "lang": "python",
+        "symbol": "Navigation",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.__init__": {
+        "kind": "function",
+        "line_start": 161,
+        "line_end": 164,
+        "start_byte": 6167,
+        "end_byte": 6370,
+        "lang": "python",
+        "symbol": "__init__",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.__init__",
+        "hljs": "python"
+      },
+      "__init__": {
+        "kind": "function",
+        "line_start": 161,
+        "line_end": 164,
+        "start_byte": 6167,
+        "end_byte": 6370,
+        "lang": "python",
+        "symbol": "__init__",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.__init__",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag": {
+        "kind": "function",
+        "line_start": 166,
+        "line_end": 173,
+        "start_byte": 6380,
+        "end_byte": 6772,
+        "lang": "python",
+        "symbol": "handle_starttag",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag",
+        "hljs": "python"
+      },
+      "handle_starttag": {
+        "kind": "function",
+        "line_start": 166,
+        "line_end": 173,
+        "start_byte": 6380,
+        "end_byte": 6772,
+        "lang": "python",
+        "symbol": "handle_starttag",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag.attrs": {
+        "kind": "variable",
+        "line_start": 167,
+        "line_end": 167,
+        "start_byte": 6431,
+        "end_byte": 6450,
+        "lang": "python",
+        "symbol": "attrs",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag.attrs",
+        "hljs": "python"
+      },
+      "attrs": {
+        "kind": "variable",
+        "line_start": 167,
+        "line_end": 167,
+        "start_byte": 6431,
+        "end_byte": 6450,
+        "lang": "python",
+        "symbol": "attrs",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag.attrs",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag.page_id": {
+        "kind": "variable",
+        "line_start": 169,
+        "line_end": 169,
+        "start_byte": 6500,
+        "end_byte": 6531,
+        "lang": "python",
+        "symbol": "page_id",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag.page_id",
+        "hljs": "python"
+      },
+      "page_id": {
+        "kind": "variable",
+        "line_start": 169,
+        "line_end": 169,
+        "start_byte": 6500,
+        "end_byte": 6531,
+        "lang": "python",
+        "symbol": "page_id",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_starttag.page_id",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_endtag": {
+        "kind": "function",
+        "line_start": 175,
+        "line_end": 177,
+        "start_byte": 6782,
+        "end_byte": 6877,
+        "lang": "python",
+        "symbol": "handle_endtag",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_endtag",
+        "hljs": "python"
+      },
+      "handle_endtag": {
+        "kind": "function",
+        "line_start": 175,
+        "line_end": 177,
+        "start_byte": 6782,
+        "end_byte": 6877,
+        "lang": "python",
+        "symbol": "handle_endtag",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.Navigation.handle_endtag",
+        "hljs": "python"
+      },
+      "test_collapsible_navigation_reveals_current_page_ancestors.nav": {
+        "kind": "variable",
+        "line_start": 180,
+        "line_end": 180,
+        "start_byte": 6956,
+        "end_byte": 7022,
+        "lang": "python",
+        "symbol": "nav",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.nav",
+        "hljs": "python"
+      },
+      "nav": {
+        "kind": "variable",
+        "line_start": 180,
+        "line_end": 180,
+        "start_byte": 6956,
+        "end_byte": 7022,
+        "lang": "python",
+        "symbol": "nav",
+        "qualified": "test_collapsible_navigation_reveals_current_page_ancestors.nav",
+        "hljs": "python"
+      },
       "test_manual_is_a_separate_root_with_its_own_reading_path": {
         "kind": "function",
-        "line_start": 152,
-        "line_end": 178,
-        "start_byte": 5710,
-        "end_byte": 7480,
+        "line_start": 194,
+        "line_end": 220,
+        "start_byte": 7555,
+        "end_byte": 9325,
         "lang": "python",
         "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path",
@@ -8968,10 +9199,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.ix": {
         "kind": "variable",
-        "line_start": 160,
-        "line_end": 160,
-        "start_byte": 6249,
-        "end_byte": 6269,
+        "line_start": 202,
+        "line_end": 202,
+        "start_byte": 8094,
+        "end_byte": 8114,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.ix",
@@ -8979,10 +9210,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.tree": {
         "kind": "variable",
-        "line_start": 161,
-        "line_end": 161,
-        "start_byte": 6274,
-        "end_byte": 6317,
+        "line_start": 203,
+        "line_end": 203,
+        "start_byte": 8119,
+        "end_byte": 8162,
         "lang": "python",
         "symbol": "tree",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.tree",
@@ -8990,10 +9221,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.overview": {
         "kind": "variable",
-        "line_start": 165,
-        "line_end": 165,
-        "start_byte": 6579,
-        "end_byte": 6668,
+        "line_start": 207,
+        "line_end": 207,
+        "start_byte": 8424,
+        "end_byte": 8513,
         "lang": "python",
         "symbol": "overview",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.overview",
@@ -9001,10 +9232,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.html": {
         "kind": "variable",
-        "line_start": 169,
-        "line_end": 169,
-        "start_byte": 6830,
-        "end_byte": 6885,
+        "line_start": 211,
+        "line_end": 211,
+        "start_byte": 8675,
+        "end_byte": 8730,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.html",
@@ -9012,10 +9243,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path": {
         "kind": "variable",
-        "line_start": 170,
-        "line_end": 170,
-        "start_byte": 6894,
-        "end_byte": 6971,
+        "line_start": 212,
+        "line_end": 212,
+        "start_byte": 8739,
+        "end_byte": 8816,
         "lang": "python",
         "symbol": "reading_path",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path",
@@ -9023,10 +9254,10 @@
       },
       "reading_path": {
         "kind": "variable",
-        "line_start": 170,
-        "line_end": 170,
-        "start_byte": 6894,
-        "end_byte": 6971,
+        "line_start": 212,
+        "line_end": 212,
+        "start_byte": 8739,
+        "end_byte": 8816,
         "lang": "python",
         "symbol": "reading_path",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path",
@@ -9034,10 +9265,10 @@
       },
       "test_manual_is_a_separate_root_with_its_own_reading_path.architecture": {
         "kind": "variable",
-        "line_start": 177,
-        "line_end": 177,
-        "start_byte": 7327,
-        "end_byte": 7395,
+        "line_start": 219,
+        "line_end": 219,
+        "start_byte": 9172,
+        "end_byte": 9240,
         "lang": "python",
         "symbol": "architecture",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.architecture",
@@ -9045,10 +9276,10 @@
       },
       "architecture": {
         "kind": "variable",
-        "line_start": 177,
-        "line_end": 177,
-        "start_byte": 7327,
-        "end_byte": 7395,
+        "line_start": 219,
+        "line_end": 219,
+        "start_byte": 9172,
+        "end_byte": 9240,
         "lang": "python",
         "symbol": "architecture",
         "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.architecture",
@@ -9056,10 +9287,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets": {
         "kind": "function",
-        "line_start": 182,
-        "line_end": 193,
-        "start_byte": 7526,
-        "end_byte": 8155,
+        "line_start": 224,
+        "line_end": 235,
+        "start_byte": 9371,
+        "end_byte": 10000,
         "lang": "python",
         "symbol": "test_init_preserves_customization_and_uses_package_assets",
         "qualified": "test_init_preserves_customization_and_uses_package_assets",
@@ -9067,10 +9298,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.root": {
         "kind": "variable",
-        "line_start": 183,
-        "line_end": 183,
-        "start_byte": 7603,
-        "end_byte": 7630,
+        "line_start": 225,
+        "line_end": 225,
+        "start_byte": 9448,
+        "end_byte": 9475,
         "lang": "python",
         "symbol": "root",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.root",
@@ -9078,10 +9309,10 @@
       },
       "root": {
         "kind": "variable",
-        "line_start": 183,
-        "line_end": 183,
-        "start_byte": 7603,
-        "end_byte": 7630,
+        "line_start": 225,
+        "line_end": 225,
+        "start_byte": 9448,
+        "end_byte": 9475,
         "lang": "python",
         "symbol": "root",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.root",
@@ -9089,10 +9320,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.page": {
         "kind": "variable",
-        "line_start": 184,
-        "line_end": 184,
-        "start_byte": 7635,
-        "end_byte": 7679,
+        "line_start": 226,
+        "line_end": 226,
+        "start_byte": 9480,
+        "end_byte": 9524,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.page",
@@ -9100,10 +9331,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.before": {
         "kind": "variable",
-        "line_start": 185,
-        "line_end": 185,
-        "start_byte": 7684,
-        "end_byte": 7710,
+        "line_start": 227,
+        "line_end": 227,
+        "start_byte": 9529,
+        "end_byte": 9555,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.before",
@@ -9111,10 +9342,10 @@
       },
       "test_cli_json_and_config_on_either_side": {
         "kind": "function",
-        "line_start": 197,
-        "line_end": 205,
-        "start_byte": 8194,
-        "end_byte": 8805,
+        "line_start": 239,
+        "line_end": 247,
+        "start_byte": 10039,
+        "end_byte": 10650,
         "lang": "python",
         "symbol": "test_cli_json_and_config_on_either_side",
         "qualified": "test_cli_json_and_config_on_either_side",
@@ -9122,10 +9353,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename": {
         "kind": "function",
-        "line_start": 209,
-        "line_end": 216,
-        "start_byte": 8844,
-        "end_byte": 9241,
+        "line_start": 251,
+        "line_end": 258,
+        "start_byte": 10689,
+        "end_byte": 11086,
         "lang": "python",
         "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename",
@@ -9133,10 +9364,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.other": {
         "kind": "variable",
-        "line_start": 210,
-        "line_end": 210,
-        "start_byte": 8924,
-        "end_byte": 8969,
+        "line_start": 252,
+        "line_end": 252,
+        "start_byte": 10769,
+        "end_byte": 10814,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -9144,10 +9375,10 @@
       },
       "other": {
         "kind": "variable",
-        "line_start": 210,
-        "line_end": 210,
-        "start_byte": 8924,
-        "end_byte": 8969,
+        "line_start": 252,
+        "line_end": 252,
+        "start_byte": 10769,
+        "end_byte": 10814,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -9155,10 +9386,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.ix": {
         "kind": "variable",
-        "line_start": 213,
-        "line_end": 213,
-        "start_byte": 9043,
-        "end_byte": 9063,
+        "line_start": 255,
+        "line_end": 255,
+        "start_byte": 10888,
+        "end_byte": 10908,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.ix",
@@ -9166,10 +9397,10 @@
       },
       "test_python_decorators_scopes_and_comments": {
         "kind": "function",
-        "line_start": 220,
-        "line_end": 238,
-        "start_byte": 9280,
-        "end_byte": 9967,
+        "line_start": 262,
+        "line_end": 280,
+        "start_byte": 11125,
+        "end_byte": 11812,
         "lang": "python",
         "symbol": "test_python_decorators_scopes_and_comments",
         "qualified": "test_python_decorators_scopes_and_comments",
@@ -9177,10 +9408,10 @@
       },
       "test_python_decorators_scopes_and_comments.src": {
         "kind": "variable",
-        "line_start": 221,
-        "line_end": 231,
-        "start_byte": 9334,
-        "end_byte": 9528,
+        "line_start": 263,
+        "line_end": 273,
+        "start_byte": 11179,
+        "end_byte": 11373,
         "lang": "python",
         "symbol": "src",
         "qualified": "test_python_decorators_scopes_and_comments.src",
@@ -9188,10 +9419,10 @@
       },
       "test_python_decorators_scopes_and_comments.bound": {
         "kind": "variable",
-        "line_start": 233,
-        "line_end": 233,
-        "start_byte": 9574,
-        "end_byte": 9676,
+        "line_start": 275,
+        "line_end": 275,
+        "start_byte": 11419,
+        "end_byte": 11521,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -9199,10 +9430,10 @@
       },
       "bound": {
         "kind": "variable",
-        "line_start": 233,
-        "line_end": 233,
-        "start_byte": 9574,
-        "end_byte": 9676,
+        "line_start": 275,
+        "line_end": 275,
+        "start_byte": 11419,
+        "end_byte": 11521,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -9210,10 +9441,10 @@
       },
       "test_python_decorators_scopes_and_comments.target": {
         "kind": "variable",
-        "line_start": 234,
-        "line_end": 234,
-        "start_byte": 9681,
-        "end_byte": 9712,
+        "line_start": 276,
+        "line_end": 276,
+        "start_byte": 11526,
+        "end_byte": 11557,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -9221,10 +9452,10 @@
       },
       "target": {
         "kind": "variable",
-        "line_start": 234,
-        "line_end": 234,
-        "start_byte": 9681,
-        "end_byte": 9712,
+        "line_start": 276,
+        "line_end": 276,
+        "start_byte": 11526,
+        "end_byte": 11557,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -9232,10 +9463,10 @@
       },
       "test_invalid_markdown_is_a_validation_error": {
         "kind": "function",
-        "line_start": 242,
-        "line_end": 251,
-        "start_byte": 10009,
-        "end_byte": 10408,
+        "line_start": 284,
+        "line_end": 293,
+        "start_byte": 11854,
+        "end_byte": 12253,
         "lang": "python",
         "symbol": "test_invalid_markdown_is_a_validation_error",
         "qualified": "test_invalid_markdown_is_a_validation_error",
@@ -9243,10 +9474,10 @@
       },
       "test_invalid_markdown_is_a_validation_error.page": {
         "kind": "variable",
-        "line_start": 248,
-        "line_end": 248,
-        "start_byte": 10292,
-        "end_byte": 10318,
+        "line_start": 290,
+        "line_end": 290,
+        "start_byte": 12137,
+        "end_byte": 12163,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_invalid_markdown_is_a_validation_error.page",
@@ -9254,10 +9485,10 @@
       },
       "test_theme_failure_preserves_index_and_site": {
         "kind": "function",
-        "line_start": 255,
-        "line_end": 265,
-        "start_byte": 10451,
-        "end_byte": 11007,
+        "line_start": 297,
+        "line_end": 307,
+        "start_byte": 12296,
+        "end_byte": 12852,
         "lang": "python",
         "symbol": "test_theme_failure_preserves_index_and_site",
         "qualified": "test_theme_failure_preserves_index_and_site",
@@ -9265,10 +9496,10 @@
       },
       "test_theme_failure_preserves_index_and_site.before": {
         "kind": "variable",
-        "line_start": 257,
-        "line_end": 257,
-        "start_byte": 10534,
-        "end_byte": 10575,
+        "line_start": 299,
+        "line_end": 299,
+        "start_byte": 12379,
+        "end_byte": 12420,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_theme_failure_preserves_index_and_site.before",
@@ -9276,10 +9507,10 @@
       },
       "test_theme_failure_preserves_index_and_site.html": {
         "kind": "variable",
-        "line_start": 258,
-        "line_end": 258,
-        "start_byte": 10580,
-        "end_byte": 10641,
+        "line_start": 300,
+        "line_end": 300,
+        "start_byte": 12425,
+        "end_byte": 12486,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_theme_failure_preserves_index_and_site.html",
@@ -9287,10 +9518,10 @@
       },
       "test_theme_failure_preserves_index_and_site.theme": {
         "kind": "variable",
-        "line_start": 259,
-        "line_end": 259,
-        "start_byte": 10646,
-        "end_byte": 10682,
+        "line_start": 301,
+        "line_end": 301,
+        "start_byte": 12491,
+        "end_byte": 12527,
         "lang": "python",
         "symbol": "theme",
         "qualified": "test_theme_failure_preserves_index_and_site.theme",
@@ -9298,10 +9529,10 @@
       },
       "test_removed_document_retires_generated_page": {
         "kind": "function",
-        "line_start": 269,
-        "line_end": 276,
-        "start_byte": 11050,
-        "end_byte": 11404,
+        "line_start": 311,
+        "line_end": 318,
+        "start_byte": 12895,
+        "end_byte": 13249,
         "lang": "python",
         "symbol": "test_removed_document_retires_generated_page",
         "qualified": "test_removed_document_retires_generated_page",
@@ -9309,10 +9540,10 @@
       },
       "test_removed_document_retires_generated_page.child": {
         "kind": "variable",
-        "line_start": 270,
-        "line_end": 270,
-        "start_byte": 11114,
-        "end_byte": 11152,
+        "line_start": 312,
+        "line_end": 312,
+        "start_byte": 12959,
+        "end_byte": 12997,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_removed_document_retires_generated_page.child",
@@ -9320,10 +9551,10 @@
       },
       "test_old_index_requests_rebuild_instead_of_empty_results": {
         "kind": "function",
-        "line_start": 280,
-        "line_end": 284,
-        "start_byte": 11443,
-        "end_byte": 11774,
+        "line_start": 322,
+        "line_end": 326,
+        "start_byte": 13288,
+        "end_byte": 13619,
         "lang": "python",
         "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
         "qualified": "test_old_index_requests_rebuild_instead_of_empty_results",
@@ -9331,10 +9562,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs": {
         "kind": "function",
-        "line_start": 288,
-        "line_end": 301,
-        "start_byte": 11814,
-        "end_byte": 12502,
+        "line_start": 330,
+        "line_end": 343,
+        "start_byte": 13659,
+        "end_byte": 14347,
         "lang": "python",
         "symbol": "test_broken_architecture_links_preserve_published_outputs",
         "qualified": "test_broken_architecture_links_preserve_published_outputs",
@@ -9342,10 +9573,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.before": {
         "kind": "variable",
-        "line_start": 295,
-        "line_end": 295,
-        "start_byte": 12085,
-        "end_byte": 12126,
+        "line_start": 337,
+        "line_end": 337,
+        "start_byte": 13930,
+        "end_byte": 13971,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.before",
@@ -9353,10 +9584,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.path": {
         "kind": "variable",
-        "line_start": 296,
-        "line_end": 296,
-        "start_byte": 12131,
-        "end_byte": 12175,
+        "line_start": 338,
+        "line_end": 338,
+        "start_byte": 13976,
+        "end_byte": 14020,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.path",
@@ -9364,10 +9595,10 @@
       },
       "test_invalid_architecture_metadata": {
         "kind": "function",
-        "line_start": 305,
-        "line_end": 314,
-        "start_byte": 12542,
-        "end_byte": 13013,
+        "line_start": 347,
+        "line_end": 356,
+        "start_byte": 14387,
+        "end_byte": 14858,
         "lang": "python",
         "symbol": "test_invalid_architecture_metadata",
         "qualified": "test_invalid_architecture_metadata",
@@ -9375,10 +9606,10 @@
       },
       "test_invalid_architecture_metadata.path": {
         "kind": "variable",
-        "line_start": 311,
-        "line_end": 311,
-        "start_byte": 12801,
-        "end_byte": 12845,
+        "line_start": 353,
+        "line_end": 353,
+        "start_byte": 14646,
+        "end_byte": 14690,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_invalid_architecture_metadata.path",
@@ -9386,10 +9617,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids": {
         "kind": "function",
-        "line_start": 318,
-        "line_end": 352,
-        "start_byte": 13053,
-        "end_byte": 14765,
+        "line_start": 360,
+        "line_end": 394,
+        "start_byte": 14898,
+        "end_byte": 16610,
         "lang": "python",
         "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
@@ -9397,10 +9628,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child": {
         "kind": "variable",
-        "line_start": 321,
-        "line_end": 321,
-        "start_byte": 13237,
-        "end_byte": 13275,
+        "line_start": 363,
+        "line_end": 363,
+        "start_byte": 15082,
+        "end_byte": 15120,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child",
@@ -9408,10 +9639,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path": {
         "kind": "variable",
-        "line_start": 331,
-        "line_end": 331,
-        "start_byte": 13441,
-        "end_byte": 13485,
+        "line_start": 373,
+        "line_end": 373,
+        "start_byte": 15286,
+        "end_byte": 15330,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path",
@@ -9419,10 +9650,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix": {
         "kind": "variable",
-        "line_start": 337,
-        "line_end": 337,
-        "start_byte": 13718,
-        "end_byte": 13738,
+        "line_start": 379,
+        "line_end": 379,
+        "start_byte": 15563,
+        "end_byte": 15583,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix",
@@ -9430,10 +9661,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result": {
         "kind": "variable",
-        "line_start": 338,
-        "line_end": 338,
-        "start_byte": 13743,
-        "end_byte": 13794,
+        "line_start": 380,
+        "line_end": 380,
+        "start_byte": 15588,
+        "end_byte": 15639,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -9441,10 +9672,10 @@
       },
       "result": {
         "kind": "variable",
-        "line_start": 338,
-        "line_end": 338,
-        "start_byte": 13743,
-        "end_byte": 13794,
+        "line_start": 380,
+        "line_end": 380,
+        "start_byte": 15588,
+        "end_byte": 15639,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -9452,10 +9683,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs": {
         "kind": "variable",
-        "line_start": 343,
-        "line_end": 343,
-        "start_byte": 14086,
-        "end_byte": 14144,
+        "line_start": 385,
+        "line_end": 385,
+        "start_byte": 15931,
+        "end_byte": 15989,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -9463,10 +9694,10 @@
       },
       "docs": {
         "kind": "variable",
-        "line_start": 343,
-        "line_end": 343,
-        "start_byte": 14086,
-        "end_byte": 14144,
+        "line_start": 385,
+        "line_end": 385,
+        "start_byte": 15931,
+        "end_byte": 15989,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -9474,10 +9705,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets": {
         "kind": "variable",
-        "line_start": 344,
-        "line_end": 344,
-        "start_byte": 14149,
-        "end_byte": 14189,
+        "line_start": 386,
+        "line_end": 386,
+        "start_byte": 15994,
+        "end_byte": 16034,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -9485,10 +9716,10 @@
       },
       "targets": {
         "kind": "variable",
-        "line_start": 344,
-        "line_end": 344,
-        "start_byte": 14149,
-        "end_byte": 14189,
+        "line_start": 386,
+        "line_end": 386,
+        "start_byte": 15994,
+        "end_byte": 16034,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -9496,10 +9727,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html": {
         "kind": "variable",
-        "line_start": 349,
-        "line_end": 349,
-        "start_byte": 14531,
-        "end_byte": 14591,
+        "line_start": 391,
+        "line_end": 391,
+        "start_byte": 16376,
+        "end_byte": 16436,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html",
@@ -9507,10 +9738,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles": {
         "kind": "function",
-        "line_start": 356,
-        "line_end": 361,
-        "start_byte": 14805,
-        "end_byte": 15243,
+        "line_start": 398,
+        "line_end": 403,
+        "start_byte": 16650,
+        "end_byte": 17088,
         "lang": "python",
         "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles",
@@ -9518,10 +9749,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.path": {
         "kind": "variable",
-        "line_start": 357,
-        "line_end": 357,
-        "start_byte": 14875,
-        "end_byte": 14919,
+        "line_start": 399,
+        "line_end": 399,
+        "start_byte": 16720,
+        "end_byte": 16764,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.path",
@@ -9529,10 +9760,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.ix": {
         "kind": "variable",
-        "line_start": 360,
-        "line_end": 360,
-        "start_byte": 15174,
-        "end_byte": 15194,
+        "line_start": 402,
+        "line_end": 402,
+        "start_byte": 17019,
+        "end_byte": 17039,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.ix",
@@ -10128,8 +10359,8 @@
               "symbol": "run",
               "kind": "function",
               "lines": [
-                590,
-                654
+                594,
+                658
               ],
               "note": "",
               "lang": "python"
@@ -10435,8 +10666,8 @@
               "symbol": "run",
               "kind": "function",
               "lines": [
-                590,
-                654
+                594,
+                658
               ],
               "note": "",
               "lang": "python"
@@ -10477,8 +10708,8 @@
               "symbol": "run",
               "kind": "function",
               "lines": [
-                590,
-                654
+                594,
+                658
               ],
               "note": "",
               "lang": "python"
@@ -10728,7 +10959,7 @@
               "kind": "function",
               "lines": [
                 516,
-                581
+                585
               ],
               "note": "",
               "lang": "python"
@@ -11329,7 +11560,7 @@
       "summary": "Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.",
       "parent": "user-manual",
       "children": [],
-      "markdown": "---\nid: manual-reading\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Reading and querying\nsummary: Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.\nrelated: [manual-getting-started, manual-configuration]\n---\n\n## TL;DR\n\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
+      "markdown": "---\nid: manual-reading\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Reading and querying\nsummary: Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.\nrelated: [manual-getting-started, manual-configuration]\n---\n\n## TL;DR\n\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
       "decisions": [],
       "sections": [
         {
@@ -11352,9 +11583,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 17,
-          "line_end": 30,
-          "markdown": "## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
-          "body": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n"
+          "line_end": 38,
+          "markdown": "## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
+          "body": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n"
         },
         {
           "id": "manual-reading.query",
@@ -11363,8 +11594,8 @@
           "title": "Find a page or section",
           "level": 2,
           "kind": "other",
-          "line_start": 31,
-          "line_end": 58,
+          "line_start": 39,
+          "line_end": 66,
           "markdown": "## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n",
           "body": "\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n"
         },
@@ -11375,8 +11606,8 @@
           "title": "Inspect source evidence",
           "level": 2,
           "kind": "other",
-          "line_start": 59,
-          "line_end": 72,
+          "line_start": 67,
+          "line_end": 80,
           "markdown": "## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n",
           "body": "\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n"
         },
@@ -11387,8 +11618,8 @@
           "title": "Keep results current",
           "level": 2,
           "kind": "other",
-          "line_start": 73,
-          "line_end": 84,
+          "line_start": 81,
+          "line_end": 92,
           "markdown": "## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
           "body": "\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n"
         }
@@ -11398,8 +11629,8 @@
           "id": "manual-reading.browse",
           "title": "Browse the site",
           "kind": "other",
-          "text": "Use Overview to choose a top-level section. User manual and CodeWiki architecture are independent sections of this wiki. The sidebar's Find a page field filters page titles; On this page jumps to headings in the open page. Architecture diagrams can link to pages or sections. Follow a linked node or use the ordinary links beneath the diagram. Expand the diagram for a larger view; press Escape to close it. Expand an Implementation panel to read attached code. Open in editor uses the project's configured editor link. Source index lists files with documentation links. If you need to search prose or source symbols instead of page titles, use the CLI search command below.",
-          "markdown": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
+          "text": "Use Overview to choose a top-level section. User manual and CodeWiki architecture are independent sections of this wiki. Click the arrow beside a parent page to expand or collapse its children; click its title to open that page. Keyboard users can focus the arrow control and press Enter or Space. The current page's ancestor groups open automatically. Expand all and Collapse all control the whole tree. The sidebar's Find a page field filters page titles and opens the groups leading to matching pages. Clear the field or press Escape to restore the previous expanded groups. The all-group controls are disabled while filtering. On this page jumps to headings in the open page. Architecture diagrams can link to pages or sections. Follow a linked node or use the ordinary links beneath the diagram. Expand the diagram for a larger view; press Escape to close it. Expand an Implementation panel to read attached code. Open in editor uses the project's configured editor link. Source index lists files with documentation links. If you need to search prose or source symbols instead of page titles, use the CLI search command below.",
+          "markdown": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. Click the arrow beside a\nparent page to expand or collapse its children; click its title to open that page.\nKeyboard users can focus the arrow control and press Enter or Space. The current\npage's ancestor groups open automatically. **Expand all** and **Collapse all**\ncontrol the whole tree.\n\nThe sidebar's **Find a page** field filters page titles and opens the groups leading\nto matching pages. Clear the field or press Escape to restore the previous expanded\ngroups. The all-group controls are disabled while filtering. **On this page** jumps\nto headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
           "impls": []
         },
         {
@@ -11791,7 +12022,7 @@
       "summary": "Turn the document model into an offline architecture explorer: component maps, section navigation, and expandable source evidence.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
+      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
       "decisions": [],
       "sections": [
         {
@@ -11862,9 +12093,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 89,
-          "line_end": 99,
-          "markdown": "## Reading and source evidence {#reading}\n\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
-          "body": "\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n"
+          "line_end": 106,
+          "markdown": "## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
+          "body": "\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n"
         }
       ],
       "anchors": [
@@ -11903,7 +12134,7 @@
               "kind": "function",
               "lines": [
                 516,
-                581
+                585
               ],
               "note": "",
               "lang": "python"
@@ -11943,8 +12174,8 @@
           "id": "renderer.reading",
           "title": "Reading and source evidence",
           "kind": "other",
-          "text": "reading.js filters the document tree, tracks the visible section in the outline, and loads syntax highlighting when code is visible. Native details elements keep implementation bodies closed until requested; file paths and line ranges identify the source evidence. File ownership links open the configured editor, including Jinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages. The HTML includes declaration snippets up to the configured build limit. Use query source for paginated source retrieval with freshness checking. Markdown and Mermaid are trusted project content, so project authors control embedded HTML.",
-          "markdown": "\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
+          "text": "The sidebar renders nested native details groups for parent pages, with separate page links in their summaries. The current page and its ancestors start expanded; other groups start collapsed. Individual groups work without JavaScript. The renderer also retains the flat nav data contract for custom theme overrides. reading.js adds expand/collapse-all controls and filters the document tree, revealing ancestors of matches and restoring pre-search expansion when cleared. It tracks the visible section in the outline, and loads syntax highlighting when code is visible. Native details elements keep implementation bodies closed until requested; file paths and line ranges identify the source evidence. File ownership links open the configured editor, including Jinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages. The HTML includes declaration snippets up to the configured build limit. Use query source for paginated source retrieval with freshness checking. Markdown and Mermaid are trusted project content, so project authors control embedded HTML.",
+          "markdown": "\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
           "impls": []
         }
       ],
@@ -12273,7 +12504,7 @@
       "summary": "Temporary projects exercise validation, queries, publication, initialization, and the shared architecture graph.",
       "parent": "testing",
       "children": [],
-      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
+      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
       "decisions": [],
       "sections": [
         {
@@ -12344,9 +12575,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 86,
-          "line_end": 100,
-          "markdown": "## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
-          "body": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n"
+          "line_end": 104,
+          "markdown": "## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
+          "body": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n"
         },
         {
           "id": "test-framework.diagrams",
@@ -12355,8 +12586,8 @@
           "title": "Architecture navigation agrees with CLI data",
           "level": 2,
           "kind": "other",
-          "line_start": 101,
-          "line_end": 113,
+          "line_start": 105,
+          "line_end": 117,
           "markdown": "## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n",
           "body": "\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n"
         },
@@ -12367,8 +12598,8 @@
           "title": "Initialization and theme customization survive",
           "level": 2,
           "kind": "other",
-          "line_start": 114,
-          "line_end": 123,
+          "line_start": 118,
+          "line_end": 127,
           "markdown": "## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
           "body": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n"
         }
@@ -12387,8 +12618,8 @@
               "symbol": "instance",
               "kind": "function",
               "lines": [
-                19,
-                52
+                20,
+                53
               ],
               "note": "",
               "lang": "python"
@@ -12399,8 +12630,8 @@
               "symbol": "build",
               "kind": "function",
               "lines": [
-                56,
-                59
+                57,
+                60
               ],
               "note": "",
               "lang": "python"
@@ -12420,8 +12651,8 @@
               "symbol": "test_broken_relationships_fail",
               "kind": "function",
               "lines": [
-                110,
-                119
+                111,
+                120
               ],
               "note": "",
               "lang": "python"
@@ -12432,8 +12663,8 @@
               "symbol": "test_hierarchy_cycle_and_duplicate_document",
               "kind": "function",
               "lines": [
-                123,
-                130
+                124,
+                131
               ],
               "note": "",
               "lang": "python"
@@ -12444,8 +12675,8 @@
               "symbol": "test_invalid_markdown_is_a_validation_error",
               "kind": "function",
               "lines": [
-                242,
-                251
+                284,
+                293
               ],
               "note": "",
               "lang": "python"
@@ -12465,8 +12696,8 @@
               "symbol": "test_progressive_queries_preserve_markdown_and_source",
               "kind": "function",
               "lines": [
-                63,
-                76
+                64,
+                77
               ],
               "note": "",
               "lang": "python"
@@ -12477,8 +12708,8 @@
               "symbol": "test_freshness_rejects_old_source_ranges_and_detects_additions",
               "kind": "function",
               "lines": [
-                80,
-                92
+                81,
+                93
               ],
               "note": "",
               "lang": "python"
@@ -12489,8 +12720,8 @@
               "symbol": "test_cli_json_and_config_on_either_side",
               "kind": "function",
               "lines": [
-                197,
-                205
+                239,
+                247
               ],
               "note": "",
               "lang": "python"
@@ -12501,8 +12732,8 @@
               "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
               "kind": "function",
               "lines": [
-                209,
-                216
+                251,
+                258
               ],
               "note": "",
               "lang": "python"
@@ -12513,8 +12744,8 @@
               "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
               "kind": "function",
               "lines": [
-                280,
-                284
+                322,
+                326
               ],
               "note": "",
               "lang": "python"
@@ -12525,8 +12756,8 @@
           "id": "test-framework.publication",
           "title": "Publication keeps usable outputs",
           "kind": "other",
-          "text": "A separate manual-root fixture verifies that Overview and CLI navigation expose the manual alongside architecture, with children at the correct depths. Manual descendants use their own reading path, including intermediate pages; architecture pages keep their existing implementation-oriented path. A duplicate heading must fail without replacing either the saved index or rendered page. A malformed Jinja template must leave the previous outputs intact. Removing a document and rebuilding must retire its generated HTML page. These are observable file-state assertions around failure and success. They do not simulate concurrent readers or prove that publishing the whole site is atomic; see the publication boundary for that limitation.",
-          "markdown": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
+          "text": "A separate manual-root fixture verifies that Overview and CLI navigation expose the manual alongside architecture, with children at the correct depths. Manual descendants use their own reading path, including intermediate pages; architecture pages keep their existing implementation-oriented path. A nested navigation fixture checks native disclosure groups on overview, source index, parent, and leaf pages. Only the current page's branch and ancestors start open, every page keeps its link, and unrelated groups remain collapsed. A duplicate heading must fail without replacing either the saved index or rendered page. A malformed Jinja template must leave the previous outputs intact. Removing a document and rebuilding must retire its generated HTML page. These are observable file-state assertions around failure and success. They do not simulate concurrent readers or prove that publishing the whole site is atomic; see the publication boundary for that limitation.",
+          "markdown": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -12534,8 +12765,20 @@
               "symbol": "test_duplicate_heading_fails_without_replacing_valid_outputs",
               "kind": "function",
               "lines": [
-                96,
-                106
+                97,
+                107
+              ],
+              "note": "",
+              "lang": "python"
+            },
+            {
+              "role": "impl",
+              "file": "../tests/test_framework.py",
+              "symbol": "test_collapsible_navigation_reveals_current_page_ancestors",
+              "kind": "function",
+              "lines": [
+                153,
+                190
               ],
               "note": "",
               "lang": "python"
@@ -12546,8 +12789,8 @@
               "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
               "kind": "function",
               "lines": [
-                152,
-                178
+                194,
+                220
               ],
               "note": "",
               "lang": "python"
@@ -12558,8 +12801,8 @@
               "symbol": "test_theme_failure_preserves_index_and_site",
               "kind": "function",
               "lines": [
-                255,
-                265
+                297,
+                307
               ],
               "note": "",
               "lang": "python"
@@ -12570,8 +12813,8 @@
               "symbol": "test_removed_document_retires_generated_page",
               "kind": "function",
               "lines": [
-                269,
-                276
+                311,
+                318
               ],
               "note": "",
               "lang": "python"
@@ -12591,8 +12834,8 @@
               "symbol": "test_broken_architecture_links_preserve_published_outputs",
               "kind": "function",
               "lines": [
-                288,
-                301
+                330,
+                343
               ],
               "note": "",
               "lang": "python"
@@ -12603,8 +12846,8 @@
               "symbol": "test_invalid_architecture_metadata",
               "kind": "function",
               "lines": [
-                305,
-                314
+                347,
+                356
               ],
               "note": "",
               "lang": "python"
@@ -12615,8 +12858,8 @@
               "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
               "kind": "function",
               "lines": [
-                318,
-                352
+                360,
+                394
               ],
               "note": "",
               "lang": "python"
@@ -12627,8 +12870,8 @@
               "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
               "kind": "function",
               "lines": [
-                356,
-                361
+                398,
+                403
               ],
               "note": "",
               "lang": "python"
@@ -12648,8 +12891,8 @@
               "symbol": "test_hierarchy_navigation_and_partial_theme",
               "kind": "function",
               "lines": [
-                134,
-                148
+                135,
+                149
               ],
               "note": "",
               "lang": "python"
@@ -12660,8 +12903,8 @@
               "symbol": "test_init_preserves_customization_and_uses_package_assets",
               "kind": "function",
               "lines": [
-                182,
-                193
+                224,
+                235
               ],
               "note": "",
               "lang": "python"
@@ -12809,8 +13052,8 @@
               "symbol": "test_python_decorators_scopes_and_comments",
               "kind": "function",
               "lines": [
-                220,
-                238
+                262,
+                280
               ],
               "note": "",
               "lang": "python"
@@ -13169,8 +13412,8 @@
           "role": "impl",
           "symbol": "run",
           "lines": [
-            590,
-            654
+            594,
+            658
           ],
           "doc": "architecture",
           "url": "architecture.html#pipeline",
@@ -13183,8 +13426,8 @@
           "role": "impl",
           "symbol": "run",
           "lines": [
-            590,
-            654
+            594,
+            658
           ],
           "doc": "build",
           "url": "build.html#orchestration",
@@ -13211,8 +13454,8 @@
           "role": "impl",
           "symbol": "run",
           "lines": [
-            590,
-            654
+            594,
+            658
           ],
           "doc": "build",
           "url": "build.html#publication",
@@ -13240,7 +13483,7 @@
           "symbol": "render_site",
           "lines": [
             516,
-            581
+            585
           ],
           "doc": "documents",
           "url": "documents.html#rendering",
@@ -13282,7 +13525,7 @@
           "symbol": "render_site",
           "lines": [
             516,
-            581
+            585
           ],
           "doc": "renderer",
           "url": "renderer.html#publication",
@@ -13492,8 +13735,8 @@
           "role": "impl",
           "symbol": "instance",
           "lines": [
-            19,
-            52
+            20,
+            53
           ],
           "doc": "test-framework",
           "url": "test-framework.html#fixtures",
@@ -13506,8 +13749,8 @@
           "role": "impl",
           "symbol": "build",
           "lines": [
-            56,
-            59
+            57,
+            60
           ],
           "doc": "test-framework",
           "url": "test-framework.html#fixtures",
@@ -13520,8 +13763,8 @@
           "role": "impl",
           "symbol": "test_broken_relationships_fail",
           "lines": [
-            110,
-            119
+            111,
+            120
           ],
           "doc": "test-framework",
           "url": "test-framework.html#validation",
@@ -13534,8 +13777,8 @@
           "role": "impl",
           "symbol": "test_hierarchy_cycle_and_duplicate_document",
           "lines": [
-            123,
-            130
+            124,
+            131
           ],
           "doc": "test-framework",
           "url": "test-framework.html#validation",
@@ -13548,8 +13791,8 @@
           "role": "impl",
           "symbol": "test_invalid_markdown_is_a_validation_error",
           "lines": [
-            242,
-            251
+            284,
+            293
           ],
           "doc": "test-framework",
           "url": "test-framework.html#validation",
@@ -13562,8 +13805,8 @@
           "role": "impl",
           "symbol": "test_progressive_queries_preserve_markdown_and_source",
           "lines": [
-            63,
-            76
+            64,
+            77
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13576,8 +13819,8 @@
           "role": "impl",
           "symbol": "test_freshness_rejects_old_source_ranges_and_detects_additions",
           "lines": [
-            80,
-            92
+            81,
+            93
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13590,8 +13833,8 @@
           "role": "impl",
           "symbol": "test_cli_json_and_config_on_either_side",
           "lines": [
-            197,
-            205
+            239,
+            247
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13604,8 +13847,8 @@
           "role": "impl",
           "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
           "lines": [
-            209,
-            216
+            251,
+            258
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13618,8 +13861,8 @@
           "role": "impl",
           "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
           "lines": [
-            280,
-            284
+            322,
+            326
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -13632,8 +13875,22 @@
           "role": "impl",
           "symbol": "test_duplicate_heading_fails_without_replacing_valid_outputs",
           "lines": [
-            96,
-            106
+            97,
+            107
+          ],
+          "doc": "test-framework",
+          "url": "test-framework.html#publication",
+          "lang": "python"
+        },
+        {
+          "id": "test-framework.publication",
+          "title": "Publication keeps usable outputs",
+          "kind": "other",
+          "role": "impl",
+          "symbol": "test_collapsible_navigation_reveals_current_page_ancestors",
+          "lines": [
+            153,
+            190
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13646,8 +13903,8 @@
           "role": "impl",
           "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
           "lines": [
-            152,
-            178
+            194,
+            220
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13660,8 +13917,8 @@
           "role": "impl",
           "symbol": "test_theme_failure_preserves_index_and_site",
           "lines": [
-            255,
-            265
+            297,
+            307
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13674,8 +13931,8 @@
           "role": "impl",
           "symbol": "test_removed_document_retires_generated_page",
           "lines": [
-            269,
-            276
+            311,
+            318
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -13688,8 +13945,8 @@
           "role": "impl",
           "symbol": "test_broken_architecture_links_preserve_published_outputs",
           "lines": [
-            288,
-            301
+            330,
+            343
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13702,8 +13959,8 @@
           "role": "impl",
           "symbol": "test_invalid_architecture_metadata",
           "lines": [
-            305,
-            314
+            347,
+            356
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13716,8 +13973,8 @@
           "role": "impl",
           "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
           "lines": [
-            318,
-            352
+            360,
+            394
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13730,8 +13987,8 @@
           "role": "impl",
           "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
           "lines": [
-            356,
-            361
+            398,
+            403
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13744,8 +14001,8 @@
           "role": "impl",
           "symbol": "test_hierarchy_navigation_and_partial_theme",
           "lines": [
-            134,
-            148
+            135,
+            149
           ],
           "doc": "test-framework",
           "url": "test-framework.html#initialization",
@@ -13758,8 +14015,8 @@
           "role": "impl",
           "symbol": "test_init_preserves_customization_and_uses_package_assets",
           "lines": [
-            182,
-            193
+            224,
+            235
           ],
           "doc": "test-framework",
           "url": "test-framework.html#initialization",
@@ -13772,8 +14029,8 @@
           "role": "impl",
           "symbol": "test_python_decorators_scopes_and_comments",
           "lines": [
-            220,
-            238
+            262,
+            280
           ],
           "doc": "test-languages",
           "url": "test-languages.html#parsers",

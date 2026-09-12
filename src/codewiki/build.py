@@ -533,21 +533,25 @@ def render_site(w: Wiki, docs, tags, warns, index):
 
     by_id = {d.id: d for d in docs}
     nav = []
+    nav_tree = []
     visited = set()
-    def visit(d, depth):
+    def visit(d, depth, siblings):
         if d.id in visited:
             return
         visited.add(d.id)
-        nav.append(dict(id=d.id, title=d.title, out=d.out, depth=depth))
+        item = dict(id=d.id, title=d.title, out=d.out, depth=depth)
+        nav.append(item)
+        node = dict(**item, children=[])
+        siblings.append(node)
         for child in docs:
             if child.parent == d.id:
-                visit(child, depth + 1)
+                visit(child, depth + 1, node['children'])
     for d in docs:
         if not d.parent or d.parent not in by_id:
-            visit(d, 0)
+            visit(d, 0, nav_tree)
     for d in docs:
-        visit(d, 0)
-    common = dict(nav=nav, by_id=by_id, project=w.cfg.get("project", {}), docs=docs, generated=index["generated"],
+        visit(d, 0, nav_tree)
+    common = dict(nav=nav, nav_tree=nav_tree, by_id=by_id, project=w.cfg.get("project", {}), docs=docs, generated=index["generated"],
                   editor_url=editor_url, severity=SEVERITY)
 
     page_tpl = env.get_template("page.html.j2")

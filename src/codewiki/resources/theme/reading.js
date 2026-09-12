@@ -9,12 +9,38 @@
 
   const input = document.querySelector('#page-search');
   const links = [...document.querySelectorAll('.project-nav a')];
+  const branches = [...document.querySelectorAll('.nav-branch')];
+  const items = [...document.querySelectorAll('.nav-item')];
+  const actions = document.querySelector('.nav-actions');
+  const buttons = [...document.querySelectorAll('[data-nav-expand]')];
+  let beforeSearch;
+  if (actions && branches.length) {
+    actions.hidden = false;
+    buttons.forEach(button => button.addEventListener('click', () => {
+      branches.forEach(branch => { branch.open = button.dataset.navExpand === 'true'; });
+    }));
+  }
   if (input) {
     input.closest('.page-search').hidden = false;
     input.addEventListener('input', () => {
-      const words = input.value.trim().toLocaleLowerCase().split(/\s+/);
-      links.forEach(link => { link.hidden = !words.every(word => link.textContent.toLocaleLowerCase().includes(word)); });
-      document.querySelector('.search-empty').hidden = links.some(link => !link.hidden);
+      const query = input.value.trim().toLocaleLowerCase();
+      const words = query.split(/\s+/);
+      const matches = new Set(links.filter(link => words.every(word => link.textContent.toLocaleLowerCase().includes(word))));
+      if (query && !beforeSearch) beforeSearch = new Map(branches.map(branch => [branch, branch.open]));
+      if (items.length) {
+        // Keep ancestors of matches visible so results retain their page hierarchy.
+        items.forEach(item => { item.hidden = ![...item.querySelectorAll('a')].some(link => matches.has(link)); });
+        branches.forEach(branch => {
+          if (query) branch.open = [...branch.querySelectorAll('ul a')].some(link => matches.has(link));
+          else if (beforeSearch) branch.open = beforeSearch.get(branch);
+        });
+      } else {
+        // Project template overrides may still supply a flat navigation list.
+        links.forEach(link => { link.hidden = !matches.has(link); });
+      }
+      if (!query) beforeSearch = undefined;
+      buttons.forEach(button => { button.disabled = Boolean(query); });
+      document.querySelector('.search-empty').hidden = matches.size > 0;
     });
     input.addEventListener('keydown', event => {
       if (event.key === 'Escape') { input.value = ''; input.dispatchEvent(new Event('input')); }

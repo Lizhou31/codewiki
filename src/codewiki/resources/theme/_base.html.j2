@@ -23,10 +23,29 @@
         <label class="sr-only" for="page-search">Find a page</label>
         <input id="page-search" type="search" placeholder="Find a page…" autocomplete="off">
       </div>
+      <div class="nav-actions" hidden>
+        <button type="button" data-nav-expand="true">Expand all</button>
+        <button type="button" data-nav-expand="false">Collapse all</button>
+      </div>
       <nav class="project-nav" aria-label="Project documents">
-        {% for d in nav %}
-        <a href="{{ d.out }}" style="--depth: {{ d.depth }}" class="{{ 'on' if doc is defined and d.id == doc.id }}" {% if doc is defined and d.id == doc.id %}aria-current="page"{% endif %}>{{ d.title }}</a>
-        {% endfor %}
+        {% set active_ids = (ancestors | default([]) | map(attribute='id') | list) + ([doc.id] if doc is defined else []) %}
+        {% macro page_link(d) -%}
+        <a href="{{ d.out }}" class="{{ 'on' if doc is defined and d.id == doc.id }}" {% if doc is defined and d.id == doc.id %}aria-current="page"{% endif %}>{{ d.title }}</a>
+        {%- endmacro %}
+        <ul class="nav-tree">
+          {% for d in nav_tree recursive %}
+          <li class="nav-item">
+            {% if d.children %}
+            <details class="nav-branch" data-page-id="{{ d.id }}" {% if d.id in active_ids %}open{% endif %}>
+              <summary aria-label="Toggle pages under {{ d.title }}">{{ page_link(d) }}</summary>
+              <ul>{{ loop(d.children) }}</ul>
+            </details>
+            {% else %}
+            {{ page_link(d) }}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
       </nav>
       <p class="search-empty" role="status" hidden>No matching pages.</p>
     </details>

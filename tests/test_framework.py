@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from html.parser import HTMLParser
 from pathlib import Path
 
 import pytest
@@ -146,6 +147,47 @@ def test_hierarchy_navigation_and_partial_theme(instance):
     assert (instance.site_dir / 'style.css').read_text() == '/* project override */'
     assert (instance.site_dir / 'vendor/mermaid.min.js').is_file()
     assert (instance.site_dir / 'vendor/LICENSE.mermaid').is_file()
+
+
+# @wiki:impl test-framework.publication
+def test_collapsible_navigation_reveals_current_page_ancestors(instance):
+    for page_id, parent in [('child', 'architecture'), ('leaf', 'child'),
+                            ('other', None), ('other-leaf', 'other')]:
+        (instance.wiki_dir / f'{page_id}.md').write_text(
+            f'---\nid: {page_id}\nparent: {parent or "null"}\n---\n## Content\n')
+    build(instance)
+
+    class Navigation(HTMLParser):
+        def __init__(self, html):
+            super().__init__()
+            self.stack, self.branches, self.links = [], {}, {}
+            self.feed(html.split('<nav class="project-nav"')[1].split('</nav>')[0])
+
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            if tag == 'details':
+                page_id = attrs['data-page-id']
+                self.branches[page_id] = ('open' in attrs, tuple(self.stack))
+                self.stack.append(page_id)
+            elif tag == 'a':
+                self.links[attrs['href']] = (tuple(self.stack), attrs.get('aria-current'))
+
+        def handle_endtag(self, tag):
+            if tag == 'details':
+                self.stack.pop()
+
+    for page in ('index', 'files', 'architecture', 'child', 'leaf'):
+        nav = Navigation((instance.site_dir / f'{page}.html').read_text())
+        assert nav.branches == {
+            'architecture': (page in {'architecture', 'child', 'leaf'}, ()),
+            'child': (page in {'child', 'leaf'}, ('architecture',)),
+            'other': (False, ()),
+        }
+        assert nav.links['leaf.html'][0] == ('architecture', 'child')
+        assert nav.links['other-leaf.html'][0] == ('other',)
+        assert len(nav.links) == 5
+        if page not in {'index', 'files'}:
+            assert nav.links[f'{page}.html'][1] == 'page'
 
 
 # @wiki:impl test-framework.publication

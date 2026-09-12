@@ -90,6 +90,10 @@ the manual alongside architecture, with children at the correct depths. Manual
 descendants use their own reading path, including intermediate pages; architecture
 pages keep their existing implementation-oriented path.
 
+A nested navigation fixture checks native disclosure groups on overview, source
+index, parent, and leaf pages. Only the current page's branch and ancestors start
+open, every page keeps its link, and unrelated groups remain collapsed.
+
 A duplicate heading must fail without replacing either the saved index or rendered
 page. A malformed Jinja template must leave the previous outputs intact. Removing
 a document and rebuilding must retire its generated HTML page.

@@ -17,8 +17,16 @@ related: [manual-getting-started, manual-configuration]
 ## Browse the site {#browse}
 
 Use **Overview** to choose a top-level section. **User manual** and **CodeWiki
-architecture** are independent sections of this wiki. The sidebar's **Find a page**
-field filters page titles; **On this page** jumps to headings in the open page.
+architecture** are independent sections of this wiki. Click the arrow beside a
+parent page to expand or collapse its children; click its title to open that page.
+Keyboard users can focus the arrow control and press Enter or Space. The current
+page's ancestor groups open automatically. **Expand all** and **Collapse all**
+control the whole tree.
+
+The sidebar's **Find a page** field filters page titles and opens the groups leading
+to matching pages. Clear the field or press Escape to restore the previous expanded
+groups. The all-group controls are disabled while filtering. **On this page** jumps
+to headings in the open page.
 
 Architecture diagrams can link to pages or sections. Follow a linked node or use
 the ordinary links beneath the diagram. Expand the diagram for a larger view;
