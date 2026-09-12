@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}{{ project.name }}{% endblock %}</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vendor/hljs-light.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="vendor/hljs-dark.css" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="brand">{{ project.name }}<small>{{ project.subtitle }}</small></div>
+    <h4>Overview</h4>
+    <nav>
+      <a href="index.html" class="{{ 'on' if page == 'index' }}">Project overview</a>
+      <a href="files.html" class="{{ 'on' if page == 'files' }}">Source file index</a>
+    </nav>
+    <h4>Architecture</h4>
+    <nav>
+      {% for d in nav %}
+      <a style="padding-left: {{ 12 + d.depth * 14 }}px" href="{{ d.out }}" class="{{ 'on' if doc is defined and d.id == doc.id }}">{{ d.title }}</a>
+      {% endfor %}
+    </nav>
+    {% block sidenav %}{% endblock %}
+  </aside>
+  <main>
+    {% block main %}{% endblock %}
+    <footer>Generated {{ generated }} · <code>codewiki build --strict</code></footer>
+  </main>
+</div>
+<script src="vendor/highlight.min.js"></script>
+<script src="vendor/hljs-extra.js"></script>
+<script>
+  if (window.hljs) document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el));
+</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

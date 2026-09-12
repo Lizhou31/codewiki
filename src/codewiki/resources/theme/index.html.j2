@@ -1,0 +1,41 @@
+{% extends "_base.html.j2" %}
+{% set page = 'index' %}
+{% block title %}{{ project.name }} — {{ project.subtitle }}{% endblock %}
+{% block main %}
+<div class="crumb">{{ project.subtitle }}</div>
+<h1>{{ project.name }}</h1>
+
+<div class="stats">
+  <div class="stat"><div class="n">{{ docs | length }}</div><div class="l">Documents</div></div>
+  <div class="stat"><div class="n">{{ index.docs | map(attribute='anchors') | map('length') | sum }}</div><div class="l">Anchors</div></div>
+  <div class="stat"><div class="n">{{ index.by_file | length }}</div><div class="l">Files linked</div></div>
+  <div class="stat"><div class="n">{{ warnings | selectattr('kind','equalto','unimplemented') | list | length }}</div><div class="l">Unbound concepts</div></div>
+</div>
+
+<h2>Start here</h2>
+<div class="cards">
+  {% for d in docs if not d.parent %}
+  <div class="card">
+    <h3><a href="{{ d.out }}">{{ d.title }}</a></h3>
+    <div class="meta">{{ d.id }} · {{ d.anchors | length }} anchors · {{ d.owns | length }} files</div>
+    <p>{{ d.summary }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>Build report</h2>
+{% if warnings %}
+<div class="report">
+  {% for w in warnings %}
+  {% set sev = severity.get(w.kind, 'warn') %}
+  <div class="row">
+    <span class="sev {{ sev }}">{{ sev }}</span>
+    <span class="where">{{ w.where }}</span>
+    <span class="msg">{{ w.message }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>No problems found.</p>
+{% endif %}
+{% endblock %}

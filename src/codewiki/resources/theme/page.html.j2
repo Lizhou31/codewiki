@@ -1,0 +1,154 @@
+{% extends "_base.html.j2" %}
+{% block title %}{{ doc.title }} — {{ project.name }}{% endblock %}
+
+{% block sidenav %}
+<h4>On this page</h4>
+<nav>
+  {% for s in doc.outline %}
+    <a href="#{{ s.slug }}" class="{{ 'sub' if s.level > 2 }}">{{ s.title }}</a>
+  {% endfor %}
+</nav>
+{% endblock %}
+
+{% block main %}
+<div class="crumb">{{ project.name }} · {{ doc.type }}</div>
+<h1>{{ doc.title }}</h1>
+<div class="chips">
+  <span class="chip st-{{ doc.status }}">{{ doc.status }}</span>
+  <span class="chip">{{ doc.id }}</span>
+  {% if doc.updated %}<span class="chip">updated {{ doc.updated }}</span>{% endif %}
+  {% for r in doc.related %}<span class="chip"><a href="{{ r }}.html">{{ r }}</a></span>{% endfor %}
+</div>
+
+{% if warnings %}
+<div class="report">
+  {% for w in warnings %}
+  <div class="row"><span class="sev {{ severity.get(w.kind,'warn') }}">{{ severity.get(w.kind,'warn') }}</span>
+  <span class="msg">{{ w.message }}</span></div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if doc.parent and doc.parent in by_id %}
+<p class="crumb">Parent: <a href="{{ by_id[doc.parent].out }}">{{ by_id[doc.parent].title }}</a></p>
+{% endif %}
+{% if doc.summary %}<div class="tldr">{{ doc.summary }}</div>{% endif %}
+{% set children = docs | selectattr('parent', 'equalto', doc.id) | list %}
+{% if children %}
+<h2>Explore next</h2>
+<div class="cards">{% for child in children %}
+<div class="card"><h3><a href="{{ child.out }}">{{ child.title }}</a></h3><p>{{ child.summary }}</p></div>
+{% endfor %}</div>
+{% endif %}
+{{ doc.preamble | safe }}
+{% for s in doc.outline %}
+<section id="{{ s.slug }}" class="{{ 'anchor-card ' + s.kind if s.explicit else '' }}">
+  <h{{ s.level }}>{{ s.title }}{% if s.explicit %} <span class="aid">{{ s.id }}</span>{% endif %}</h{{ s.level }}>
+  {{ s.body_html | safe }}
+  {% set a = doc.anchors.get(s.id) %}
+  {% if a and a.impls %}
+  <div class="impls"><h5>Implementations</h5>
+    {% for t in a.impls %}
+    <details class="impl"><summary>
+      <span class="role {{ t.role }}">{{ t.role }}</span>
+      <span class="sym">{{ t.symbol or (t.file | basename) }}</span>
+      <span class="loc">{{ t.file }}:{{ t.line_start }}–{{ t.line_end }}
+        {% set u = editor_url(t.file, t.line_start) %}{% if u %} · <a href="{{ u }}">open</a>{% endif %}
+      </span>
+    </summary>
+    {% if t.note %}<p class="impl-note">{{ t.note }}</p>{% endif %}
+    {% if t.code %}<pre><code class="language-{{ t.hljs }}">{{ t.code }}</code></pre>{% endif %}
+    </details>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endfor %}
+{% if doc.decisions %}
+<h2>Decisions and change references</h2>
+{% for decision in doc.decisions %}
+<details class="impl"><summary>{{ decision.id }}</summary>
+<p>{{ decision.reason }}</p>
+{% for aid in decision.get('anchors', []) %}<p><code>{{ aid }}</code></p>{% endfor %}
+{% for commit in decision.get('commits', []) %}<p>Commit: <code>{{ commit }}</code></p>{% endfor %}
+{% for pr in decision.get('prs', []) %}<p><a href="{{ pr }}">{{ pr }}</a></p>{% endfor %}
+</details>
+{% endfor %}
+{% endif %}
+
+{% if doc.owns or doc.refs %}
+<h2 id="sec-code">Code map</h2>
+{% if doc.owns %}
+<table>
+  <tr><th>Owned file</th><th>Anchors here</th></tr>
+  {% for f in doc.owns %}
+  <tr><td><code>{{ f }}</code></td>
+      <td>{% for a in doc.anchors.values() %}{% for t in a.impls if t.file == f %}<a href="#{{ a.slug }}">{{ a.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endfor %}</td></tr>
+  {% endfor %}
+</table>
+{% endif %}
+{% if doc.refs %}
+<h3>Read-only references</h3>
+<p class="crumb">Vendor code linked by symbol, not by tag.</p>
+{% for r in doc.refs %}
+<details class="impl">
+  <summary>
+    <span class="role">{{ 'ref' if r.resolved else 'broken' }}</span>
+    <span class="sym">{{ r.symbol }}</span>
+    <span class="loc">{{ r.file }}{% if r.resolved %}:{{ r.line_start }}–{{ r.line_end }}{% endif %}
+      {% set u = editor_url(r.file, r.line_start) %}
+      {% if r.resolved and u %}· <a href="{{ u }}">open</a>{% endif %}
+    </span>
+  </summary>
+  {% if r.code %}<pre><code class="language-{{ r.hljs }}">{{ r.code }}</code></pre>{% endif %}
+</details>
+{% endfor %}
+{% endif %}
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="vendor/mermaid.min.js"></script>
+<script>
+(async () => {
+  const ANCHORS = {{ anchor_map | tojson }};
+  if (!window.mermaid) return;
+  const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // Neutral node styling, so the accent colour means "this links somewhere".
+  mermaid.initialize({
+    startOnLoad:false, securityLevel:"loose",
+    theme:"base", flowchart:{ curve:"basis", padding:16, useMaxWidth:false, nodeSpacing:40, rankSpacing:50 },
+    themeVariables: dark
+      ? { primaryColor:"#22262f", primaryBorderColor:"#3a4150", primaryTextColor:"#e6e8ee",
+          lineColor:"#767d92", fontSize:"16px", fontFamily:"-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" }
+      : { primaryColor:"#f2f3f7", primaryBorderColor:"#cfd4e0", primaryTextColor:"#1b1d23",
+          lineColor:"#868da0", fontSize:"16px", fontFamily:"-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" }
+  });
+  await mermaid.run({ querySelector:".mermaid" });
+
+  // Wire every mermaid node whose id matches an anchor slug in this doc.
+  // Mermaid ids look like "mermaid-<ts>-flowchart-<nodeId>-<n>"; match longest
+  // slug first so "scan" never shadows "scan-cycle".
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const slugs = Object.keys(ANCHORS).sort((a, b) => b.length - a.length);
+  for (const el of document.querySelectorAll("svg .node")) {
+    const key = slugs.find(s =>
+      el.id === s || new RegExp("-" + esc(s) + "-\\d+$").test(el.id));
+    if (!key) continue;
+    const title = ANCHORS[key];
+    el.classList.add("mm-link");
+    const t = document.createElementNS("http://www.w3.org/2000/svg", "title");
+    t.textContent = "Go to: " + title;
+    el.appendChild(t);
+    el.addEventListener("click", () => {
+      const target = document.getElementById(key);
+      if (!target) return;
+      target.scrollIntoView({ behavior:"smooth", block:"start" });
+      target.style.transition = "box-shadow .25s";
+      target.style.boxShadow = "0 0 0 3px var(--accent)";
+      setTimeout(() => { target.style.boxShadow = ""; }, 1100);
+    });
+  }
+})();
+</script>
+{% endblock %}

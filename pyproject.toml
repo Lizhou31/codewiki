@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codewiki-framework"
+version = "0.3.0"
+description = "A project-local architecture wiki joined to source code, for humans and LLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0", "Markdown>=3.5", "Jinja2>=3.1",
+  "tree-sitter>=0.23,<0.26", "tree-sitter-c>=0.23,<0.25",
+  "tree-sitter-python>=0.23,<0.26", "tree-sitter-yaml>=0.7,<0.8",
+  "tree-sitter-devicetree>=0.14,<0.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1"]
+
+[project.scripts]
+codewiki = "codewiki.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["codewiki*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+codewiki = ["resources/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

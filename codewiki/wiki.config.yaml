@@ -1,0 +1,14 @@
+wiki_dir: wiki
+site_dir: site
+code_roots:
+- ../src/codewiki
+exclude_globs:
+- '*/resources/*'
+- '*/__pycache__/*'
+readonly_globs: []
+languages: {}
+max_snippet_lines: 100
+editor_url_template: vscode://file/{abs}:{line}
+project:
+  name: CodeWiki
+  subtitle: Architecture you can read, then inspect
