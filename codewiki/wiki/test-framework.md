@@ -85,6 +85,11 @@ and an explicit rebuild request for an old index format.
 
 ## Publication keeps usable outputs {#publication}
 
+A separate manual-root fixture verifies that Overview and CLI navigation expose
+the manual alongside architecture, with children at the correct depths. Manual
+descendants use their own reading path, including intermediate pages; architecture
+pages keep their existing implementation-oriented path.
+
 A duplicate heading must fail without replacing either the saved index or rendered
 page. A malformed Jinja template must leave the previous outputs intact. Removing
 a document and rebuilding must retire its generated HTML page.
@@ -116,4 +121,3 @@ The hierarchy/theme test checks a child page and paginated tree depth, a project
 override, and packaged Mermaid assets and license presence. This is an in-process
 initialization/build test. Verifying a built wheel from an unrelated directory is
 an additional packaging check.
-

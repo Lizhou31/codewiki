@@ -20,7 +20,12 @@
 <span>{{ doc.type | capitalize }}</span>
 </nav>
 <header class="page-heading">
+  {% set root = ancestors[0] if ancestors else doc %}
+  {% if root.type == 'manual' %}
+  <div class="reading-depth" aria-label="Reading path"><a href="{{ root.out }}">{{ root.title }}</a>{% for ancestor in ancestors[1:] %}<span>→</span><a href="{{ ancestor.out }}">{{ ancestor.title }}</a>{% endfor %}{% if doc.parent %}<span>→</span><span class="active">{{ doc.title }}</span>{% endif %}</div>
+  {% else %}
   <div class="reading-depth" aria-label="Reading path"><a href="{{ ancestors[0].out if ancestors else doc.out }}">01 Architecture</a><span>→</span><span class="{{ 'active' if doc.parent }}">02 Component</span><span>→</span><span>03 Implementation</span></div>
+  {% endif %}
   <div class="eyebrow">{{ doc.type }} guide <span class="status st-{{ doc.status }}">{{ doc.status }}</span></div>
   <h1>{{ doc.title }}</h1>
   {% if doc.summary %}<p class="lead">{{ doc.summary }}</p>{% endif %}

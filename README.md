@@ -7,6 +7,10 @@ serve humans through static HTML and LLMs through progressive CLI queries.
 
 This repository documents itself in `codewiki/`.
 
+The [User manual](codewiki/wiki/user-manual.md) covers installation, reading and
+querying, writing pages, and configuration. It is a separate top-level section
+alongside Architecture in the built site (`codewiki/site/user-manual.html`).
+
 ```text
 Code_Wiki/                    # Workspace, not a Git repository
 ├── P729/                     # Target test project (its own repository)
@@ -14,7 +18,7 @@ Code_Wiki/                    # Workspace, not a Git repository
     ├── src/codewiki/         # Python package and shared resources
     ├── codewiki/             # The framework's own wiki instance
     │   ├── wiki.config.yaml
-    │   ├── wiki/             # Authored architecture documents
+    │   ├── wiki/             # Architecture and user manual pages
     │   └── site/             # Generated HTML
     ├── tests/
     └── pyproject.toml

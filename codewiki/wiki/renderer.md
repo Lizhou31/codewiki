@@ -56,6 +56,11 @@ falls back to packaged defaults. `_base.html.j2` owns the shared navigation and 
 `page.html.j2` owns document sections, dependencies, component cards, diagrams, and
 source panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.
 
+Pages with no parent are independent roots in the sidebar and Overview cards.
+A root with `type: manual` uses its actual page hierarchy for the reading path,
+so a user manual and its descendants do not display architecture reading steps.
+Architecture pages retain the Architecture → Component → Implementation path.
+
 CSS provides the responsive layout, diagram canvas, and reading-depth cues. There
 is no client-side app router or production application server. Output includes
 local Mermaid and syntax-highlighting assets and can be served by any static host.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-12T12:12:39+00:00",
+  "generated": "2026-09-12T12:25:45+00:00",
   "snapshot": {
     "framework_version": "0.3.0",
     "inputs": {
@@ -34,15 +34,35 @@
         "size": 2941,
         "mtime_ns": 1789213589715687414
       },
+      "wiki/manual-configuration.md": {
+        "sha256": "4e6ec158c38ae64ed32b815ae1d4277033dd2b3df31f0b0bb79bf7f846eb5938",
+        "size": 4571,
+        "mtime_ns": 1789215603594575096
+      },
+      "wiki/manual-getting-started.md": {
+        "sha256": "86b1cceb36ce1051e215a3cb213f20e28f63e4cd19776b61146bc838b499e645",
+        "size": 2957,
+        "mtime_ns": 1789215603413110360
+      },
+      "wiki/manual-reading.md": {
+        "sha256": "501032d11148255a15f4142db17bbb277909e03e79cfbb3a6aa537e509dc50e8",
+        "size": 3220,
+        "mtime_ns": 1789215603474359198
+      },
+      "wiki/manual-writing.md": {
+        "sha256": "7b65ccf5461cae15819e367e183946d2fd27757857e09eb0ceebea8db9c84b5e",
+        "size": 3884,
+        "mtime_ns": 1789215603536190178
+      },
       "wiki/queries.md": {
         "sha256": "f6a06f9e4da1f742910ecd96220a816e556a185898e5299a507829249018561f",
         "size": 3208,
         "mtime_ns": 1789213619368657340
       },
       "wiki/renderer.md": {
-        "sha256": "8d6bd2546c6d76419c88612a12a3cc9b4a02660783443f66bbf68bb82cd78f6b",
-        "size": 4162,
-        "mtime_ns": 1789213589713355809
+        "sha256": "fc35680bed32a71814fcbcabe80b82e1df9dbaece3faaeaca10dc9419ebb3982",
+        "size": 4483,
+        "mtime_ns": 1789215603830231874
       },
       "wiki/skills.md": {
         "sha256": "35ef069b38068b3ac2f406b4894091842dc0ea952851221f31e82d6be5b9f691",
@@ -55,9 +75,9 @@
         "mtime_ns": 1789213589714045494
       },
       "wiki/test-framework.md": {
-        "sha256": "bcf08b28af436a34fc4f0a5153a516da70b54012b583844cad32f14dd6684a30",
-        "size": 5125,
-        "mtime_ns": 1789215158275156942
+        "sha256": "b7ed92ff10a7849347c22ae95d50bcb4685367a6cafa189a84e34efd1ed79a9e",
+        "size": 5423,
+        "mtime_ns": 1789215631825177585
       },
       "wiki/test-languages.md": {
         "sha256": "bc6961e79c6e49c8e56c4f8c9b932b81a76ee1a4eb07ee7c2cd5a4fd2654b3e4",
@@ -68,6 +88,11 @@
         "sha256": "f838868b21fdc6b0c3a0a50fb24e72fc83740cec5a6a16575e7d6447c276d4bd",
         "size": 3844,
         "mtime_ns": 1789215158274337709
+      },
+      "wiki/user-manual.md": {
+        "sha256": "95be4e76e54e55a07b74646e59ec605c9efc882e4af7c0036ec1b78602564df0",
+        "size": 1619,
+        "mtime_ns": 1789215603356046399
       },
       "wiki.config.yaml": {
         "sha256": "6f9e156aca8437772a6a3bfb9da7e984d205f2203e354762cbbb64211ee02f4e",
@@ -115,9 +140,9 @@
         "mtime_ns": 1789213331603495972
       },
       "../src/codewiki/resources/theme/_base.html.j2": {
-        "sha256": "b8119fe670488d9841a16ca2a0f6e5f085579e92a1c615b99d5fb691b1b1614e",
+        "sha256": "39fb73ac1d9d2d08ef60f476fb012b458c9ace25cabd0af9fbdce13f3fcec544",
         "size": 2279,
-        "mtime_ns": 1789213405706557629
+        "mtime_ns": 1789215603709178742
       },
       "../src/codewiki/resources/theme/diagrams.js": {
         "sha256": "2685d8cf41024bd315cb323671d4da1add3d89f6625613cc78cb3971088ebf5c",
@@ -135,9 +160,9 @@
         "mtime_ns": 1789209439271995575
       },
       "../src/codewiki/resources/theme/page.html.j2": {
-        "sha256": "f1fd06ebe6a8fc4cae2f62b4583d180e15943bedfe43b2835e456420785db2b9",
-        "size": 7960,
-        "mtime_ns": 1789213840157999458
+        "sha256": "6d3cc4b0f33081e32ffe78e72c4710e67eb460009dff491e9eaeacc69e84ad4c",
+        "size": 8386,
+        "mtime_ns": 1789215603651533555
       },
       "../src/codewiki/resources/theme/reading.js": {
         "sha256": "2330872015cb69c4e852eeb1c2b0b53d7e91ba8b1c3a628948e1b6ccf955743d",
@@ -200,9 +225,9 @@
         "mtime_ns": 1789209128788425435
       },
       "../tests/test_framework.py": {
-        "sha256": "4b2147febd2a368e7c0c7102ec49be3492a947a2bb53ff097162c242f69ee510",
-        "size": 13431,
-        "mtime_ns": 1789215158275571829
+        "sha256": "aeb67cb995a6e0e5a8c4b528f3e9131ee02630e85117a21cf3cbbeaf2f268087",
+        "size": 15244,
+        "mtime_ns": 1789215631763213518
       },
       "../tests/test_languages.py": {
         "sha256": "d2764ae172f088b6fe6112f9a87242e0347fa672a3e9d4a6862fe24070543526",
@@ -213,7 +238,7 @@
     "repositories": [
       {
         "root": "..",
-        "commit": "7acb014a7b5f9a907dbdbb550c62ec9ed3874a32",
+        "commit": "8fb9aefff47c018913b0d1a67ba30fb4a6be6abe",
         "dirty": true
       }
     ]
@@ -8930,12 +8955,111 @@
         "qualified": "test_hierarchy_navigation_and_partial_theme.html",
         "hljs": "python"
       },
-      "test_init_preserves_customization_and_uses_package_assets": {
+      "test_manual_is_a_separate_root_with_its_own_reading_path": {
         "kind": "function",
         "line_start": 152,
-        "line_end": 163,
-        "start_byte": 5713,
-        "end_byte": 6342,
+        "line_end": 178,
+        "start_byte": 5710,
+        "end_byte": 7480,
+        "lang": "python",
+        "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path",
+        "hljs": "python"
+      },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.ix": {
+        "kind": "variable",
+        "line_start": 160,
+        "line_end": 160,
+        "start_byte": 6249,
+        "end_byte": 6269,
+        "lang": "python",
+        "symbol": "ix",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.ix",
+        "hljs": "python"
+      },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.tree": {
+        "kind": "variable",
+        "line_start": 161,
+        "line_end": 161,
+        "start_byte": 6274,
+        "end_byte": 6317,
+        "lang": "python",
+        "symbol": "tree",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.tree",
+        "hljs": "python"
+      },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.overview": {
+        "kind": "variable",
+        "line_start": 165,
+        "line_end": 165,
+        "start_byte": 6579,
+        "end_byte": 6668,
+        "lang": "python",
+        "symbol": "overview",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.overview",
+        "hljs": "python"
+      },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.html": {
+        "kind": "variable",
+        "line_start": 169,
+        "line_end": 169,
+        "start_byte": 6830,
+        "end_byte": 6885,
+        "lang": "python",
+        "symbol": "html",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.html",
+        "hljs": "python"
+      },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path": {
+        "kind": "variable",
+        "line_start": 170,
+        "line_end": 170,
+        "start_byte": 6894,
+        "end_byte": 6971,
+        "lang": "python",
+        "symbol": "reading_path",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path",
+        "hljs": "python"
+      },
+      "reading_path": {
+        "kind": "variable",
+        "line_start": 170,
+        "line_end": 170,
+        "start_byte": 6894,
+        "end_byte": 6971,
+        "lang": "python",
+        "symbol": "reading_path",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.reading_path",
+        "hljs": "python"
+      },
+      "test_manual_is_a_separate_root_with_its_own_reading_path.architecture": {
+        "kind": "variable",
+        "line_start": 177,
+        "line_end": 177,
+        "start_byte": 7327,
+        "end_byte": 7395,
+        "lang": "python",
+        "symbol": "architecture",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.architecture",
+        "hljs": "python"
+      },
+      "architecture": {
+        "kind": "variable",
+        "line_start": 177,
+        "line_end": 177,
+        "start_byte": 7327,
+        "end_byte": 7395,
+        "lang": "python",
+        "symbol": "architecture",
+        "qualified": "test_manual_is_a_separate_root_with_its_own_reading_path.architecture",
+        "hljs": "python"
+      },
+      "test_init_preserves_customization_and_uses_package_assets": {
+        "kind": "function",
+        "line_start": 182,
+        "line_end": 193,
+        "start_byte": 7526,
+        "end_byte": 8155,
         "lang": "python",
         "symbol": "test_init_preserves_customization_and_uses_package_assets",
         "qualified": "test_init_preserves_customization_and_uses_package_assets",
@@ -8943,10 +9067,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.root": {
         "kind": "variable",
-        "line_start": 153,
-        "line_end": 153,
-        "start_byte": 5790,
-        "end_byte": 5817,
+        "line_start": 183,
+        "line_end": 183,
+        "start_byte": 7603,
+        "end_byte": 7630,
         "lang": "python",
         "symbol": "root",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.root",
@@ -8954,10 +9078,10 @@
       },
       "root": {
         "kind": "variable",
-        "line_start": 153,
-        "line_end": 153,
-        "start_byte": 5790,
-        "end_byte": 5817,
+        "line_start": 183,
+        "line_end": 183,
+        "start_byte": 7603,
+        "end_byte": 7630,
         "lang": "python",
         "symbol": "root",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.root",
@@ -8965,10 +9089,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.page": {
         "kind": "variable",
-        "line_start": 154,
-        "line_end": 154,
-        "start_byte": 5822,
-        "end_byte": 5866,
+        "line_start": 184,
+        "line_end": 184,
+        "start_byte": 7635,
+        "end_byte": 7679,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.page",
@@ -8976,10 +9100,10 @@
       },
       "test_init_preserves_customization_and_uses_package_assets.before": {
         "kind": "variable",
-        "line_start": 155,
-        "line_end": 155,
-        "start_byte": 5871,
-        "end_byte": 5897,
+        "line_start": 185,
+        "line_end": 185,
+        "start_byte": 7684,
+        "end_byte": 7710,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_init_preserves_customization_and_uses_package_assets.before",
@@ -8987,10 +9111,10 @@
       },
       "test_cli_json_and_config_on_either_side": {
         "kind": "function",
-        "line_start": 167,
-        "line_end": 175,
-        "start_byte": 6381,
-        "end_byte": 6992,
+        "line_start": 197,
+        "line_end": 205,
+        "start_byte": 8194,
+        "end_byte": 8805,
         "lang": "python",
         "symbol": "test_cli_json_and_config_on_either_side",
         "qualified": "test_cli_json_and_config_on_either_side",
@@ -8998,10 +9122,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename": {
         "kind": "function",
-        "line_start": 179,
-        "line_end": 186,
-        "start_byte": 7031,
-        "end_byte": 7428,
+        "line_start": 209,
+        "line_end": 216,
+        "start_byte": 8844,
+        "end_byte": 9241,
         "lang": "python",
         "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename",
@@ -9009,10 +9133,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.other": {
         "kind": "variable",
-        "line_start": 180,
-        "line_end": 180,
-        "start_byte": 7111,
-        "end_byte": 7156,
+        "line_start": 210,
+        "line_end": 210,
+        "start_byte": 8924,
+        "end_byte": 8969,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -9020,10 +9144,10 @@
       },
       "other": {
         "kind": "variable",
-        "line_start": 180,
-        "line_end": 180,
-        "start_byte": 7111,
-        "end_byte": 7156,
+        "line_start": 210,
+        "line_end": 210,
+        "start_byte": 8924,
+        "end_byte": 8969,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -9031,10 +9155,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.ix": {
         "kind": "variable",
-        "line_start": 183,
-        "line_end": 183,
-        "start_byte": 7230,
-        "end_byte": 7250,
+        "line_start": 213,
+        "line_end": 213,
+        "start_byte": 9043,
+        "end_byte": 9063,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.ix",
@@ -9042,10 +9166,10 @@
       },
       "test_python_decorators_scopes_and_comments": {
         "kind": "function",
-        "line_start": 190,
-        "line_end": 208,
-        "start_byte": 7467,
-        "end_byte": 8154,
+        "line_start": 220,
+        "line_end": 238,
+        "start_byte": 9280,
+        "end_byte": 9967,
         "lang": "python",
         "symbol": "test_python_decorators_scopes_and_comments",
         "qualified": "test_python_decorators_scopes_and_comments",
@@ -9053,10 +9177,10 @@
       },
       "test_python_decorators_scopes_and_comments.src": {
         "kind": "variable",
-        "line_start": 191,
-        "line_end": 201,
-        "start_byte": 7521,
-        "end_byte": 7715,
+        "line_start": 221,
+        "line_end": 231,
+        "start_byte": 9334,
+        "end_byte": 9528,
         "lang": "python",
         "symbol": "src",
         "qualified": "test_python_decorators_scopes_and_comments.src",
@@ -9064,10 +9188,10 @@
       },
       "test_python_decorators_scopes_and_comments.bound": {
         "kind": "variable",
-        "line_start": 203,
-        "line_end": 203,
-        "start_byte": 7761,
-        "end_byte": 7863,
+        "line_start": 233,
+        "line_end": 233,
+        "start_byte": 9574,
+        "end_byte": 9676,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -9075,10 +9199,10 @@
       },
       "bound": {
         "kind": "variable",
-        "line_start": 203,
-        "line_end": 203,
-        "start_byte": 7761,
-        "end_byte": 7863,
+        "line_start": 233,
+        "line_end": 233,
+        "start_byte": 9574,
+        "end_byte": 9676,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -9086,10 +9210,10 @@
       },
       "test_python_decorators_scopes_and_comments.target": {
         "kind": "variable",
-        "line_start": 204,
-        "line_end": 204,
-        "start_byte": 7868,
-        "end_byte": 7899,
+        "line_start": 234,
+        "line_end": 234,
+        "start_byte": 9681,
+        "end_byte": 9712,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -9097,10 +9221,10 @@
       },
       "target": {
         "kind": "variable",
-        "line_start": 204,
-        "line_end": 204,
-        "start_byte": 7868,
-        "end_byte": 7899,
+        "line_start": 234,
+        "line_end": 234,
+        "start_byte": 9681,
+        "end_byte": 9712,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -9108,10 +9232,10 @@
       },
       "test_invalid_markdown_is_a_validation_error": {
         "kind": "function",
-        "line_start": 212,
-        "line_end": 221,
-        "start_byte": 8196,
-        "end_byte": 8595,
+        "line_start": 242,
+        "line_end": 251,
+        "start_byte": 10009,
+        "end_byte": 10408,
         "lang": "python",
         "symbol": "test_invalid_markdown_is_a_validation_error",
         "qualified": "test_invalid_markdown_is_a_validation_error",
@@ -9119,10 +9243,10 @@
       },
       "test_invalid_markdown_is_a_validation_error.page": {
         "kind": "variable",
-        "line_start": 218,
-        "line_end": 218,
-        "start_byte": 8479,
-        "end_byte": 8505,
+        "line_start": 248,
+        "line_end": 248,
+        "start_byte": 10292,
+        "end_byte": 10318,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_invalid_markdown_is_a_validation_error.page",
@@ -9130,10 +9254,10 @@
       },
       "test_theme_failure_preserves_index_and_site": {
         "kind": "function",
-        "line_start": 225,
-        "line_end": 235,
-        "start_byte": 8638,
-        "end_byte": 9194,
+        "line_start": 255,
+        "line_end": 265,
+        "start_byte": 10451,
+        "end_byte": 11007,
         "lang": "python",
         "symbol": "test_theme_failure_preserves_index_and_site",
         "qualified": "test_theme_failure_preserves_index_and_site",
@@ -9141,10 +9265,10 @@
       },
       "test_theme_failure_preserves_index_and_site.before": {
         "kind": "variable",
-        "line_start": 227,
-        "line_end": 227,
-        "start_byte": 8721,
-        "end_byte": 8762,
+        "line_start": 257,
+        "line_end": 257,
+        "start_byte": 10534,
+        "end_byte": 10575,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_theme_failure_preserves_index_and_site.before",
@@ -9152,10 +9276,10 @@
       },
       "test_theme_failure_preserves_index_and_site.html": {
         "kind": "variable",
-        "line_start": 228,
-        "line_end": 228,
-        "start_byte": 8767,
-        "end_byte": 8828,
+        "line_start": 258,
+        "line_end": 258,
+        "start_byte": 10580,
+        "end_byte": 10641,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_theme_failure_preserves_index_and_site.html",
@@ -9163,10 +9287,10 @@
       },
       "test_theme_failure_preserves_index_and_site.theme": {
         "kind": "variable",
-        "line_start": 229,
-        "line_end": 229,
-        "start_byte": 8833,
-        "end_byte": 8869,
+        "line_start": 259,
+        "line_end": 259,
+        "start_byte": 10646,
+        "end_byte": 10682,
         "lang": "python",
         "symbol": "theme",
         "qualified": "test_theme_failure_preserves_index_and_site.theme",
@@ -9174,10 +9298,10 @@
       },
       "test_removed_document_retires_generated_page": {
         "kind": "function",
-        "line_start": 239,
-        "line_end": 246,
-        "start_byte": 9237,
-        "end_byte": 9591,
+        "line_start": 269,
+        "line_end": 276,
+        "start_byte": 11050,
+        "end_byte": 11404,
         "lang": "python",
         "symbol": "test_removed_document_retires_generated_page",
         "qualified": "test_removed_document_retires_generated_page",
@@ -9185,10 +9309,10 @@
       },
       "test_removed_document_retires_generated_page.child": {
         "kind": "variable",
-        "line_start": 240,
-        "line_end": 240,
-        "start_byte": 9301,
-        "end_byte": 9339,
+        "line_start": 270,
+        "line_end": 270,
+        "start_byte": 11114,
+        "end_byte": 11152,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_removed_document_retires_generated_page.child",
@@ -9196,10 +9320,10 @@
       },
       "test_old_index_requests_rebuild_instead_of_empty_results": {
         "kind": "function",
-        "line_start": 250,
-        "line_end": 254,
-        "start_byte": 9630,
-        "end_byte": 9961,
+        "line_start": 280,
+        "line_end": 284,
+        "start_byte": 11443,
+        "end_byte": 11774,
         "lang": "python",
         "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
         "qualified": "test_old_index_requests_rebuild_instead_of_empty_results",
@@ -9207,10 +9331,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs": {
         "kind": "function",
-        "line_start": 258,
-        "line_end": 271,
-        "start_byte": 10001,
-        "end_byte": 10689,
+        "line_start": 288,
+        "line_end": 301,
+        "start_byte": 11814,
+        "end_byte": 12502,
         "lang": "python",
         "symbol": "test_broken_architecture_links_preserve_published_outputs",
         "qualified": "test_broken_architecture_links_preserve_published_outputs",
@@ -9218,10 +9342,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.before": {
         "kind": "variable",
-        "line_start": 265,
-        "line_end": 265,
-        "start_byte": 10272,
-        "end_byte": 10313,
+        "line_start": 295,
+        "line_end": 295,
+        "start_byte": 12085,
+        "end_byte": 12126,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.before",
@@ -9229,10 +9353,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.path": {
         "kind": "variable",
-        "line_start": 266,
-        "line_end": 266,
-        "start_byte": 10318,
-        "end_byte": 10362,
+        "line_start": 296,
+        "line_end": 296,
+        "start_byte": 12131,
+        "end_byte": 12175,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.path",
@@ -9240,10 +9364,10 @@
       },
       "test_invalid_architecture_metadata": {
         "kind": "function",
-        "line_start": 275,
-        "line_end": 284,
-        "start_byte": 10729,
-        "end_byte": 11200,
+        "line_start": 305,
+        "line_end": 314,
+        "start_byte": 12542,
+        "end_byte": 13013,
         "lang": "python",
         "symbol": "test_invalid_architecture_metadata",
         "qualified": "test_invalid_architecture_metadata",
@@ -9251,10 +9375,10 @@
       },
       "test_invalid_architecture_metadata.path": {
         "kind": "variable",
-        "line_start": 281,
-        "line_end": 281,
-        "start_byte": 10988,
-        "end_byte": 11032,
+        "line_start": 311,
+        "line_end": 311,
+        "start_byte": 12801,
+        "end_byte": 12845,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_invalid_architecture_metadata.path",
@@ -9262,10 +9386,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids": {
         "kind": "function",
-        "line_start": 288,
-        "line_end": 322,
-        "start_byte": 11240,
-        "end_byte": 12952,
+        "line_start": 318,
+        "line_end": 352,
+        "start_byte": 13053,
+        "end_byte": 14765,
         "lang": "python",
         "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
@@ -9273,10 +9397,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child": {
         "kind": "variable",
-        "line_start": 291,
-        "line_end": 291,
-        "start_byte": 11424,
-        "end_byte": 11462,
+        "line_start": 321,
+        "line_end": 321,
+        "start_byte": 13237,
+        "end_byte": 13275,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child",
@@ -9284,10 +9408,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path": {
         "kind": "variable",
-        "line_start": 301,
-        "line_end": 301,
-        "start_byte": 11628,
-        "end_byte": 11672,
+        "line_start": 331,
+        "line_end": 331,
+        "start_byte": 13441,
+        "end_byte": 13485,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path",
@@ -9295,10 +9419,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix": {
         "kind": "variable",
-        "line_start": 307,
-        "line_end": 307,
-        "start_byte": 11905,
-        "end_byte": 11925,
+        "line_start": 337,
+        "line_end": 337,
+        "start_byte": 13718,
+        "end_byte": 13738,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix",
@@ -9306,10 +9430,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result": {
         "kind": "variable",
-        "line_start": 308,
-        "line_end": 308,
-        "start_byte": 11930,
-        "end_byte": 11981,
+        "line_start": 338,
+        "line_end": 338,
+        "start_byte": 13743,
+        "end_byte": 13794,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -9317,10 +9441,10 @@
       },
       "result": {
         "kind": "variable",
-        "line_start": 308,
-        "line_end": 308,
-        "start_byte": 11930,
-        "end_byte": 11981,
+        "line_start": 338,
+        "line_end": 338,
+        "start_byte": 13743,
+        "end_byte": 13794,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -9328,10 +9452,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs": {
         "kind": "variable",
-        "line_start": 313,
-        "line_end": 313,
-        "start_byte": 12273,
-        "end_byte": 12331,
+        "line_start": 343,
+        "line_end": 343,
+        "start_byte": 14086,
+        "end_byte": 14144,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -9339,10 +9463,10 @@
       },
       "docs": {
         "kind": "variable",
-        "line_start": 313,
-        "line_end": 313,
-        "start_byte": 12273,
-        "end_byte": 12331,
+        "line_start": 343,
+        "line_end": 343,
+        "start_byte": 14086,
+        "end_byte": 14144,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -9350,10 +9474,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets": {
         "kind": "variable",
-        "line_start": 314,
-        "line_end": 314,
-        "start_byte": 12336,
-        "end_byte": 12376,
+        "line_start": 344,
+        "line_end": 344,
+        "start_byte": 14149,
+        "end_byte": 14189,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -9361,10 +9485,10 @@
       },
       "targets": {
         "kind": "variable",
-        "line_start": 314,
-        "line_end": 314,
-        "start_byte": 12336,
-        "end_byte": 12376,
+        "line_start": 344,
+        "line_end": 344,
+        "start_byte": 14149,
+        "end_byte": 14189,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -9372,10 +9496,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html": {
         "kind": "variable",
-        "line_start": 319,
-        "line_end": 319,
-        "start_byte": 12718,
-        "end_byte": 12778,
+        "line_start": 349,
+        "line_end": 349,
+        "start_byte": 14531,
+        "end_byte": 14591,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html",
@@ -9383,10 +9507,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles": {
         "kind": "function",
-        "line_start": 326,
-        "line_end": 331,
-        "start_byte": 12992,
-        "end_byte": 13430,
+        "line_start": 356,
+        "line_end": 361,
+        "start_byte": 14805,
+        "end_byte": 15243,
         "lang": "python",
         "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles",
@@ -9394,10 +9518,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.path": {
         "kind": "variable",
-        "line_start": 327,
-        "line_end": 327,
-        "start_byte": 13062,
-        "end_byte": 13106,
+        "line_start": 357,
+        "line_end": 357,
+        "start_byte": 14875,
+        "end_byte": 14919,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.path",
@@ -9405,10 +9529,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.ix": {
         "kind": "variable",
-        "line_start": 330,
-        "line_end": 330,
-        "start_byte": 13361,
-        "end_byte": 13381,
+        "line_start": 360,
+        "line_end": 360,
+        "start_byte": 15174,
+        "end_byte": 15194,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.ix",
@@ -10952,6 +11076,484 @@
       "refs": []
     },
     {
+      "id": "manual-configuration",
+      "title": "Configuration and troubleshooting",
+      "type": "manual",
+      "status": "stable",
+      "source": "wiki/manual-configuration.md",
+      "html": "manual-configuration.html",
+      "tldr": [
+        "Configuration and frontmatter paths resolve from the directory containing `wiki.config.yaml`.",
+        "Pass `--config` when working with multiple instances.",
+        "A strict build reports errors and keeps the previous published output when validation fails."
+      ],
+      "owns": [],
+      "related": [
+        "manual-getting-started",
+        "manual-writing",
+        "manual-reading"
+      ],
+      "updated": "",
+      "depends_on": [],
+      "diagram_links": {},
+      "used_by": [],
+      "summary": "Select the right wiki instance, configure source scanning and preview, and resolve common build and query problems.",
+      "parent": "user-manual",
+      "children": [],
+      "markdown": "---\nid: manual-configuration\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Configuration and troubleshooting\nsummary: Select the right wiki instance, configure source scanning and preview, and resolve common build and query problems.\nrelated: [manual-getting-started, manual-writing, manual-reading]\n---\n\n## TL;DR\n\n- Configuration and frontmatter paths resolve from the directory containing `wiki.config.yaml`.\n- Pass `--config` when working with multiple instances.\n- A strict build reports errors and keeps the previous published output when validation fails.\n\n## Select an instance {#select-instance}\n\nBuild, query, and serve discover configuration by walking upward from your working\ndirectory. An explicit `--config` takes precedence over `CODE_WIKI_CONFIG`, which\ntakes precedence over automatic discovery.\n\n```sh\ncodewiki build --strict --config /path/to/project/codewiki/wiki.config.yaml\ncodewiki query --config /path/to/project/codewiki/wiki.config.yaml tree\ncodewiki serve --config /path/to/project/codewiki/wiki.config.yaml --no-open\n```\n\nUse the same configuration for all three commands. If a command shows the wrong\nproject, check both your working directory and `CODE_WIKI_CONFIG`.\n\n## Configure the project {#settings}\n\nFor the default `project/codewiki/wiki.config.yaml` layout, a typical configuration is:\n\n```yaml\nwiki_dir: wiki\nsite_dir: site\ncode_roots:\n  - ../src\n  - ../tests\nexclude_globs:\n  - '*/build/*'\n  - '*/__pycache__/*'\nreadonly_globs:\n  - '../src/vendor/*'\nlanguages: {}\nmax_snippet_lines: 120\neditor_url_template: 'vscode://file/{abs}:{line}'\nproject:\n  name: My Project\n  subtitle: Project documentation\n```\n\n| Setting | Use |\n| --- | --- |\n| `wiki_dir` | Authored Markdown directory |\n| `site_dir` | Generated HTML directory; keep it separate from the inputs |\n| `code_roots` | Source files or directories to scan |\n| `exclude_globs` | Paths to leave out of source scanning |\n| `readonly_globs` | Paths where source tags are disallowed; use document-side references |\n| `languages` | File-extension overrides; an empty mapping uses built-in detection |\n| `max_snippet_lines` | Maximum lines in rendered declaration snippets |\n| `editor_url_template` | Editor links using absolute path and line placeholders |\n| `project` | Site name and subtitle |\n\nFor a theme customization, place only the files you want to override in\n`wiki/_theme/`, such as `style.css`. Other files continue to use the package's\ndefaults. Rebuild after changing configuration or theme files.\n\n## Preview changes {#preview}\n\n```sh\ncodewiki serve --no-open --port 8001\n```\n\nOpen `http://localhost:8001`. The preview watches Markdown, source roots,\nconfiguration, and theme files, rebuilds after changes, and notifies the browser.\nFix any displayed validation errors to resume a successful preview. Restart the\nserver after changing `site_dir`. The default port is 8000; `--no-open` suppresses\nautomatic browser launch.\n\n## Troubleshooting {#troubleshooting}\n\n| Symptom | Action |\n| --- | --- |\n| `codewiki` command is not found | Activate the environment where you installed the framework. Try `python -m codewiki --help` in that environment. |\n| No `wiki.config.yaml` is found | Run from your initialized project, pass `--config`, or initialize it first. |\n| A new page is absent | Check its YAML frontmatter and unique ID, move it out of underscore-prefixed folders, and rebuild. |\n| A page is nested under the wrong section | Set its `parent` to the intended page ID; use `null` for a separate root. |\n| A strict build reports a broken parent or related page | Correct the referenced ID or restore the missing page. |\n| A source reference is broken | Check the path relative to the config directory, scanned source roots, exclusions, and symbol spelling. |\n| A tag points to a missing anchor | Match `page-id.slug` to the page ID and explicit `{#slug}` heading, then rebuild. |\n| An anchor is listed as unbound | Add source evidence if the section describes implementation. Pure usage guidance can remain unbound; this is informational. |\n| A query reports a stale or incompatible index | Rebuild with the installed framework using the same configuration, then repeat the query. |\n| HTML still shows an older version after an error | Correct the build errors and rebuild; failed strict validation preserves the last published output. |\n| The preview port is already in use | Select another port with `--port`. |\n\nUse `codewiki build --help`, `codewiki query --help`, `codewiki serve --help`, and\n`codewiki init --help` for the installed command options.\n",
+      "decisions": [],
+      "sections": [
+        {
+          "id": "manual-configuration.tl-dr",
+          "slug": "tl-dr",
+          "explicit": false,
+          "title": "TL;DR",
+          "level": 2,
+          "kind": "other",
+          "line_start": 11,
+          "line_end": 16,
+          "markdown": "## TL;DR\n\n- Configuration and frontmatter paths resolve from the directory containing `wiki.config.yaml`.\n- Pass `--config` when working with multiple instances.\n- A strict build reports errors and keeps the previous published output when validation fails.\n\n",
+          "body": "\n- Configuration and frontmatter paths resolve from the directory containing `wiki.config.yaml`.\n- Pass `--config` when working with multiple instances.\n- A strict build reports errors and keeps the previous published output when validation fails.\n\n"
+        },
+        {
+          "id": "manual-configuration.select-instance",
+          "slug": "select-instance",
+          "explicit": true,
+          "title": "Select an instance",
+          "level": 2,
+          "kind": "other",
+          "line_start": 17,
+          "line_end": 31,
+          "markdown": "## Select an instance {#select-instance}\n\nBuild, query, and serve discover configuration by walking upward from your working\ndirectory. An explicit `--config` takes precedence over `CODE_WIKI_CONFIG`, which\ntakes precedence over automatic discovery.\n\n```sh\ncodewiki build --strict --config /path/to/project/codewiki/wiki.config.yaml\ncodewiki query --config /path/to/project/codewiki/wiki.config.yaml tree\ncodewiki serve --config /path/to/project/codewiki/wiki.config.yaml --no-open\n```\n\nUse the same configuration for all three commands. If a command shows the wrong\nproject, check both your working directory and `CODE_WIKI_CONFIG`.\n\n",
+          "body": "\nBuild, query, and serve discover configuration by walking upward from your working\ndirectory. An explicit `--config` takes precedence over `CODE_WIKI_CONFIG`, which\ntakes precedence over automatic discovery.\n\n```sh\ncodewiki build --strict --config /path/to/project/codewiki/wiki.config.yaml\ncodewiki query --config /path/to/project/codewiki/wiki.config.yaml tree\ncodewiki serve --config /path/to/project/codewiki/wiki.config.yaml --no-open\n```\n\nUse the same configuration for all three commands. If a command shows the wrong\nproject, check both your working directory and `CODE_WIKI_CONFIG`.\n\n"
+        },
+        {
+          "id": "manual-configuration.settings",
+          "slug": "settings",
+          "explicit": true,
+          "title": "Configure the project",
+          "level": 2,
+          "kind": "other",
+          "line_start": 32,
+          "line_end": 70,
+          "markdown": "## Configure the project {#settings}\n\nFor the default `project/codewiki/wiki.config.yaml` layout, a typical configuration is:\n\n```yaml\nwiki_dir: wiki\nsite_dir: site\ncode_roots:\n  - ../src\n  - ../tests\nexclude_globs:\n  - '*/build/*'\n  - '*/__pycache__/*'\nreadonly_globs:\n  - '../src/vendor/*'\nlanguages: {}\nmax_snippet_lines: 120\neditor_url_template: 'vscode://file/{abs}:{line}'\nproject:\n  name: My Project\n  subtitle: Project documentation\n```\n\n| Setting | Use |\n| --- | --- |\n| `wiki_dir` | Authored Markdown directory |\n| `site_dir` | Generated HTML directory; keep it separate from the inputs |\n| `code_roots` | Source files or directories to scan |\n| `exclude_globs` | Paths to leave out of source scanning |\n| `readonly_globs` | Paths where source tags are disallowed; use document-side references |\n| `languages` | File-extension overrides; an empty mapping uses built-in detection |\n| `max_snippet_lines` | Maximum lines in rendered declaration snippets |\n| `editor_url_template` | Editor links using absolute path and line placeholders |\n| `project` | Site name and subtitle |\n\nFor a theme customization, place only the files you want to override in\n`wiki/_theme/`, such as `style.css`. Other files continue to use the package's\ndefaults. Rebuild after changing configuration or theme files.\n\n",
+          "body": "\nFor the default `project/codewiki/wiki.config.yaml` layout, a typical configuration is:\n\n```yaml\nwiki_dir: wiki\nsite_dir: site\ncode_roots:\n  - ../src\n  - ../tests\nexclude_globs:\n  - '*/build/*'\n  - '*/__pycache__/*'\nreadonly_globs:\n  - '../src/vendor/*'\nlanguages: {}\nmax_snippet_lines: 120\neditor_url_template: 'vscode://file/{abs}:{line}'\nproject:\n  name: My Project\n  subtitle: Project documentation\n```\n\n| Setting | Use |\n| --- | --- |\n| `wiki_dir` | Authored Markdown directory |\n| `site_dir` | Generated HTML directory; keep it separate from the inputs |\n| `code_roots` | Source files or directories to scan |\n| `exclude_globs` | Paths to leave out of source scanning |\n| `readonly_globs` | Paths where source tags are disallowed; use document-side references |\n| `languages` | File-extension overrides; an empty mapping uses built-in detection |\n| `max_snippet_lines` | Maximum lines in rendered declaration snippets |\n| `editor_url_template` | Editor links using absolute path and line placeholders |\n| `project` | Site name and subtitle |\n\nFor a theme customization, place only the files you want to override in\n`wiki/_theme/`, such as `style.css`. Other files continue to use the package's\ndefaults. Rebuild after changing configuration or theme files.\n\n"
+        },
+        {
+          "id": "manual-configuration.preview",
+          "slug": "preview",
+          "explicit": true,
+          "title": "Preview changes",
+          "level": 2,
+          "kind": "other",
+          "line_start": 71,
+          "line_end": 82,
+          "markdown": "## Preview changes {#preview}\n\n```sh\ncodewiki serve --no-open --port 8001\n```\n\nOpen `http://localhost:8001`. The preview watches Markdown, source roots,\nconfiguration, and theme files, rebuilds after changes, and notifies the browser.\nFix any displayed validation errors to resume a successful preview. Restart the\nserver after changing `site_dir`. The default port is 8000; `--no-open` suppresses\nautomatic browser launch.\n\n",
+          "body": "\n```sh\ncodewiki serve --no-open --port 8001\n```\n\nOpen `http://localhost:8001`. The preview watches Markdown, source roots,\nconfiguration, and theme files, rebuilds after changes, and notifies the browser.\nFix any displayed validation errors to resume a successful preview. Restart the\nserver after changing `site_dir`. The default port is 8000; `--no-open` suppresses\nautomatic browser launch.\n\n"
+        },
+        {
+          "id": "manual-configuration.troubleshooting",
+          "slug": "troubleshooting",
+          "explicit": true,
+          "title": "Troubleshooting",
+          "level": 2,
+          "kind": "other",
+          "line_start": 83,
+          "line_end": 100,
+          "markdown": "## Troubleshooting {#troubleshooting}\n\n| Symptom | Action |\n| --- | --- |\n| `codewiki` command is not found | Activate the environment where you installed the framework. Try `python -m codewiki --help` in that environment. |\n| No `wiki.config.yaml` is found | Run from your initialized project, pass `--config`, or initialize it first. |\n| A new page is absent | Check its YAML frontmatter and unique ID, move it out of underscore-prefixed folders, and rebuild. |\n| A page is nested under the wrong section | Set its `parent` to the intended page ID; use `null` for a separate root. |\n| A strict build reports a broken parent or related page | Correct the referenced ID or restore the missing page. |\n| A source reference is broken | Check the path relative to the config directory, scanned source roots, exclusions, and symbol spelling. |\n| A tag points to a missing anchor | Match `page-id.slug` to the page ID and explicit `{#slug}` heading, then rebuild. |\n| An anchor is listed as unbound | Add source evidence if the section describes implementation. Pure usage guidance can remain unbound; this is informational. |\n| A query reports a stale or incompatible index | Rebuild with the installed framework using the same configuration, then repeat the query. |\n| HTML still shows an older version after an error | Correct the build errors and rebuild; failed strict validation preserves the last published output. |\n| The preview port is already in use | Select another port with `--port`. |\n\nUse `codewiki build --help`, `codewiki query --help`, `codewiki serve --help`, and\n`codewiki init --help` for the installed command options.\n",
+          "body": "\n| Symptom | Action |\n| --- | --- |\n| `codewiki` command is not found | Activate the environment where you installed the framework. Try `python -m codewiki --help` in that environment. |\n| No `wiki.config.yaml` is found | Run from your initialized project, pass `--config`, or initialize it first. |\n| A new page is absent | Check its YAML frontmatter and unique ID, move it out of underscore-prefixed folders, and rebuild. |\n| A page is nested under the wrong section | Set its `parent` to the intended page ID; use `null` for a separate root. |\n| A strict build reports a broken parent or related page | Correct the referenced ID or restore the missing page. |\n| A source reference is broken | Check the path relative to the config directory, scanned source roots, exclusions, and symbol spelling. |\n| A tag points to a missing anchor | Match `page-id.slug` to the page ID and explicit `{#slug}` heading, then rebuild. |\n| An anchor is listed as unbound | Add source evidence if the section describes implementation. Pure usage guidance can remain unbound; this is informational. |\n| A query reports a stale or incompatible index | Rebuild with the installed framework using the same configuration, then repeat the query. |\n| HTML still shows an older version after an error | Correct the build errors and rebuild; failed strict validation preserves the last published output. |\n| The preview port is already in use | Select another port with `--port`. |\n\nUse `codewiki build --help`, `codewiki query --help`, `codewiki serve --help`, and\n`codewiki init --help` for the installed command options.\n"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "manual-configuration.select-instance",
+          "title": "Select an instance",
+          "kind": "other",
+          "text": "Build, query, and serve discover configuration by walking upward from your working directory. An explicit --config takes precedence over CODE_WIKI_CONFIG , which takes precedence over automatic discovery. codewiki build --strict --config /path/to/project/codewiki/wiki.config.yaml codewiki query --config /path/to/project/codewiki/wiki.config.yaml tree codewiki serve --config /path/to/project/codewiki/wiki.config.yaml --no-open Use the same configuration for all three commands. If a command shows the wrong project, check both your working directory and CODE_WIKI_CONFIG .",
+          "markdown": "\nBuild, query, and serve discover configuration by walking upward from your working\ndirectory. An explicit `--config` takes precedence over `CODE_WIKI_CONFIG`, which\ntakes precedence over automatic discovery.\n\n```sh\ncodewiki build --strict --config /path/to/project/codewiki/wiki.config.yaml\ncodewiki query --config /path/to/project/codewiki/wiki.config.yaml tree\ncodewiki serve --config /path/to/project/codewiki/wiki.config.yaml --no-open\n```\n\nUse the same configuration for all three commands. If a command shows the wrong\nproject, check both your working directory and `CODE_WIKI_CONFIG`.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-configuration.settings",
+          "title": "Configure the project",
+          "kind": "other",
+          "text": "For the default project/codewiki/wiki.config.yaml layout, a typical configuration is: wiki_dir: wiki site_dir: site code_roots: - ../src - ../tests exclude_globs: - '*/build/*' - '*/__pycache__/*' readonly_globs: - '../src/vendor/*' languages: {} max_snippet_lines: 120 editor_url_template: 'vscode://file/{abs}:{line}' project: name: My Project subtitle: Project documentation Setting Use wiki_dir Authored Markdown directory site_dir Generated HTML directory; keep it separate from the inputs code_roots Source files or directories to scan exclude_globs Paths to leave out of source scanning readonly_globs Paths where source tags are disallowed; use document-side references languages File-extension overrides; an empty mapping uses built-in detection max_snippet_lines Maximum lines in rendered declaration snippets editor_url_template Editor links using absolute path and line placeholders project Site name and subtitle For a theme customization, place only the files you want to override in wiki/_theme/ , such as style.css . Other files continue to use the package's defaults. Rebuild after changing configuration or theme files.",
+          "markdown": "\nFor the default `project/codewiki/wiki.config.yaml` layout, a typical configuration is:\n\n```yaml\nwiki_dir: wiki\nsite_dir: site\ncode_roots:\n  - ../src\n  - ../tests\nexclude_globs:\n  - '*/build/*'\n  - '*/__pycache__/*'\nreadonly_globs:\n  - '../src/vendor/*'\nlanguages: {}\nmax_snippet_lines: 120\neditor_url_template: 'vscode://file/{abs}:{line}'\nproject:\n  name: My Project\n  subtitle: Project documentation\n```\n\n| Setting | Use |\n| --- | --- |\n| `wiki_dir` | Authored Markdown directory |\n| `site_dir` | Generated HTML directory; keep it separate from the inputs |\n| `code_roots` | Source files or directories to scan |\n| `exclude_globs` | Paths to leave out of source scanning |\n| `readonly_globs` | Paths where source tags are disallowed; use document-side references |\n| `languages` | File-extension overrides; an empty mapping uses built-in detection |\n| `max_snippet_lines` | Maximum lines in rendered declaration snippets |\n| `editor_url_template` | Editor links using absolute path and line placeholders |\n| `project` | Site name and subtitle |\n\nFor a theme customization, place only the files you want to override in\n`wiki/_theme/`, such as `style.css`. Other files continue to use the package's\ndefaults. Rebuild after changing configuration or theme files.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-configuration.preview",
+          "title": "Preview changes",
+          "kind": "other",
+          "text": "codewiki serve --no-open --port 8001 Open http://localhost:8001 . The preview watches Markdown, source roots, configuration, and theme files, rebuilds after changes, and notifies the browser. Fix any displayed validation errors to resume a successful preview. Restart the server after changing site_dir . The default port is 8000; --no-open suppresses automatic browser launch.",
+          "markdown": "\n```sh\ncodewiki serve --no-open --port 8001\n```\n\nOpen `http://localhost:8001`. The preview watches Markdown, source roots,\nconfiguration, and theme files, rebuilds after changes, and notifies the browser.\nFix any displayed validation errors to resume a successful preview. Restart the\nserver after changing `site_dir`. The default port is 8000; `--no-open` suppresses\nautomatic browser launch.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-configuration.troubleshooting",
+          "title": "Troubleshooting",
+          "kind": "other",
+          "text": "Symptom Action codewiki command is not found Activate the environment where you installed the framework. Try python -m codewiki --help in that environment. No wiki.config.yaml is found Run from your initialized project, pass --config , or initialize it first. A new page is absent Check its YAML frontmatter and unique ID, move it out of underscore-prefixed folders, and rebuild. A page is nested under the wrong section Set its parent to the intended page ID; use null for a separate root. A strict build reports a broken parent or related page Correct the referenced ID or restore the missing page. A source reference is broken Check the path relative to the config directory, scanned source roots, exclusions, and symbol spelling. A tag points to a missing anchor Match page-id.slug to the page ID and explicit {#slug} heading, then rebuild. An anchor is listed as unbound Add source evidence if the section describes implementation. Pure usage guidance can remain unbound; this is informational. A query reports a stale or incompatible index Rebuild with the installed framework using the same configuration, then repeat the query. HTML still shows an older version after an error Correct the build errors and rebuild; failed strict validation preserves the last published output. The preview port is already in use Select another port with --port . Use codewiki build --help , codewiki query --help , codewiki serve --help , and codewiki init --help for the installed command options.",
+          "markdown": "\n| Symptom | Action |\n| --- | --- |\n| `codewiki` command is not found | Activate the environment where you installed the framework. Try `python -m codewiki --help` in that environment. |\n| No `wiki.config.yaml` is found | Run from your initialized project, pass `--config`, or initialize it first. |\n| A new page is absent | Check its YAML frontmatter and unique ID, move it out of underscore-prefixed folders, and rebuild. |\n| A page is nested under the wrong section | Set its `parent` to the intended page ID; use `null` for a separate root. |\n| A strict build reports a broken parent or related page | Correct the referenced ID or restore the missing page. |\n| A source reference is broken | Check the path relative to the config directory, scanned source roots, exclusions, and symbol spelling. |\n| A tag points to a missing anchor | Match `page-id.slug` to the page ID and explicit `{#slug}` heading, then rebuild. |\n| An anchor is listed as unbound | Add source evidence if the section describes implementation. Pure usage guidance can remain unbound; this is informational. |\n| A query reports a stale or incompatible index | Rebuild with the installed framework using the same configuration, then repeat the query. |\n| HTML still shows an older version after an error | Correct the build errors and rebuild; failed strict validation preserves the last published output. |\n| The preview port is already in use | Select another port with `--port`. |\n\nUse `codewiki build --help`, `codewiki query --help`, `codewiki serve --help`, and\n`codewiki init --help` for the installed command options.\n",
+          "impls": []
+        }
+      ],
+      "refs": []
+    },
+    {
+      "id": "manual-getting-started",
+      "title": "Getting started",
+      "type": "manual",
+      "status": "stable",
+      "source": "wiki/manual-getting-started.md",
+      "html": "manual-getting-started.html",
+      "tldr": [
+        "CodeWiki requires Python 3.10 or newer.",
+        "Install the framework in a virtual environment, then initialize a wiki in an existing project.",
+        "Build with `--strict` and preview the generated HTML locally."
+      ],
+      "owns": [],
+      "related": [
+        "manual-reading",
+        "manual-writing",
+        "manual-configuration"
+      ],
+      "updated": "",
+      "depends_on": [],
+      "diagram_links": {},
+      "used_by": [],
+      "summary": "Install the framework, build its example wiki, and initialize documentation in your own project.",
+      "parent": "user-manual",
+      "children": [],
+      "markdown": "---\nid: manual-getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Install the framework, build its example wiki, and initialize documentation in your own project.\nrelated: [manual-reading, manual-writing, manual-configuration]\n---\n\n## TL;DR\n\n- CodeWiki requires Python 3.10 or newer.\n- Install the framework in a virtual environment, then initialize a wiki in an existing project.\n- Build with `--strict` and preview the generated HTML locally.\n\n## Install and try the example {#install}\n\nFrom the CodeWiki framework repository, run:\n\n```sh\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e '.[dev]'\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\nOpen `http://localhost:8000` in your browser. Choose **User manual** on the\nOverview page for usage guides, or **CodeWiki architecture** for implementation\ndocumentation. Stop the preview with Ctrl+C.\n\nYou can also open `codewiki/site/index.html` directly. Built pages, syntax\nhighlighting, and diagrams use bundled assets and work offline.\n\n## Add a wiki to your project {#initialize}\n\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n## Make your first edit {#first-edit}\n\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n",
+      "decisions": [],
+      "sections": [
+        {
+          "id": "manual-getting-started.tl-dr",
+          "slug": "tl-dr",
+          "explicit": false,
+          "title": "TL;DR",
+          "level": 2,
+          "kind": "other",
+          "line_start": 11,
+          "line_end": 16,
+          "markdown": "## TL;DR\n\n- CodeWiki requires Python 3.10 or newer.\n- Install the framework in a virtual environment, then initialize a wiki in an existing project.\n- Build with `--strict` and preview the generated HTML locally.\n\n",
+          "body": "\n- CodeWiki requires Python 3.10 or newer.\n- Install the framework in a virtual environment, then initialize a wiki in an existing project.\n- Build with `--strict` and preview the generated HTML locally.\n\n"
+        },
+        {
+          "id": "manual-getting-started.install",
+          "slug": "install",
+          "explicit": true,
+          "title": "Install and try the example",
+          "level": 2,
+          "kind": "other",
+          "line_start": 17,
+          "line_end": 35,
+          "markdown": "## Install and try the example {#install}\n\nFrom the CodeWiki framework repository, run:\n\n```sh\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e '.[dev]'\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\nOpen `http://localhost:8000` in your browser. Choose **User manual** on the\nOverview page for usage guides, or **CodeWiki architecture** for implementation\ndocumentation. Stop the preview with Ctrl+C.\n\nYou can also open `codewiki/site/index.html` directly. Built pages, syntax\nhighlighting, and diagrams use bundled assets and work offline.\n\n",
+          "body": "\nFrom the CodeWiki framework repository, run:\n\n```sh\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e '.[dev]'\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\nOpen `http://localhost:8000` in your browser. Choose **User manual** on the\nOverview page for usage guides, or **CodeWiki architecture** for implementation\ndocumentation. Stop the preview with Ctrl+C.\n\nYou can also open `codewiki/site/index.html` directly. Built pages, syntax\nhighlighting, and diagrams use bundled assets and work offline.\n\n"
+        },
+        {
+          "id": "manual-getting-started.initialize",
+          "slug": "initialize",
+          "explicit": true,
+          "title": "Add a wiki to your project",
+          "level": 2,
+          "kind": "other",
+          "line_start": 36,
+          "line_end": 66,
+          "markdown": "## Add a wiki to your project {#initialize}\n\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n",
+          "body": "\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n"
+        },
+        {
+          "id": "manual-getting-started.first-edit",
+          "slug": "first-edit",
+          "explicit": true,
+          "title": "Make your first edit",
+          "level": 2,
+          "kind": "other",
+          "line_start": 67,
+          "line_end": 84,
+          "markdown": "## Make your first edit {#first-edit}\n\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n",
+          "body": "\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "manual-getting-started.install",
+          "title": "Install and try the example",
+          "kind": "other",
+          "text": "From the CodeWiki framework repository, run: python3 -m venv .venv source .venv/bin/activate python -m pip install -e '.[dev]' codewiki build --strict codewiki serve --no-open Open http://localhost:8000 in your browser. Choose User manual on the Overview page for usage guides, or CodeWiki architecture for implementation documentation. Stop the preview with Ctrl+C. You can also open codewiki/site/index.html directly. Built pages, syntax highlighting, and diagrams use bundled assets and work offline.",
+          "markdown": "\nFrom the CodeWiki framework repository, run:\n\n```sh\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e '.[dev]'\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\nOpen `http://localhost:8000` in your browser. Choose **User manual** on the\nOverview page for usage guides, or **CodeWiki architecture** for implementation\ndocumentation. Stop the preview with Ctrl+C.\n\nYou can also open `codewiki/site/index.html` directly. Built pages, syntax\nhighlighting, and diagrams use bundled assets and work offline.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-getting-started.initialize",
+          "title": "Add a wiki to your project",
+          "kind": "other",
+          "text": "Keep the environment containing the installed framework active. Replace the example path and project name below with your own; the project must already exist. codewiki init --root /path/to/project --code-root src --name 'My Project' cd /path/to/project codewiki build --strict codewiki serve --no-open --code-root src selects a directory relative to the project root. Repeat it to include more directories, for example --code-root src --code-root tests . Individual source files are also supported. Use --dir docs/codewiki during initialization if you want a different instance directory. Initialization creates: Path inside codewiki/ Purpose wiki.config.yaml Project name, source roots, and output settings wiki/architecture.md Starter page to replace with your project's explanations wiki/_templates/ Reusable page templates wiki/TAGS.md Source-tag syntax and examples skills/ and AGENTS.md Instructions for agents working with this wiki The build creates site/ and index.json . Edit the Markdown inputs; rebuild to update the HTML and query index. Repeating init preserves existing files and does not replace your authored pages.",
+          "markdown": "\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-getting-started.first-edit",
+          "title": "Make your first edit",
+          "kind": "other",
+          "text": "Open codewiki/wiki/architecture.md , keep its stable id , and replace the starter title, summary, and text with information about your project. Run: codewiki build --strict codewiki query tree The tree lists your page and its sections are available through query doc &lt;id&gt; . Continue with Writing pages to add children or a separate top-level manual. For a non-default location, select the config explicitly: codewiki build --strict --config docs/codewiki/wiki.config.yaml codewiki serve --no-open --config docs/codewiki/wiki.config.yaml",
+          "markdown": "\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n",
+          "impls": []
+        }
+      ],
+      "refs": []
+    },
+    {
+      "id": "manual-reading",
+      "title": "Reading and querying",
+      "type": "manual",
+      "status": "stable",
+      "source": "wiki/manual-reading.md",
+      "html": "manual-reading.html",
+      "tldr": [
+        "Overview shows the top-level sections; the sidebar shows their page hierarchy.",
+        "Query progressively: tree, document, section, symbol, then source.",
+        "Rebuild a stale index before relying on source locations."
+      ],
+      "owns": [],
+      "related": [
+        "manual-getting-started",
+        "manual-configuration"
+      ],
+      "updated": "",
+      "depends_on": [],
+      "diagram_links": {},
+      "used_by": [],
+      "summary": "Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.",
+      "parent": "user-manual",
+      "children": [],
+      "markdown": "---\nid: manual-reading\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Reading and querying\nsummary: Navigate the wiki in a browser, search its contents, and retrieve focused documentation or source through the CLI.\nrelated: [manual-getting-started, manual-configuration]\n---\n\n## TL;DR\n\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
+      "decisions": [],
+      "sections": [
+        {
+          "id": "manual-reading.tl-dr",
+          "slug": "tl-dr",
+          "explicit": false,
+          "title": "TL;DR",
+          "level": 2,
+          "kind": "other",
+          "line_start": 11,
+          "line_end": 16,
+          "markdown": "## TL;DR\n\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n",
+          "body": "\n- Overview shows the top-level sections; the sidebar shows their page hierarchy.\n- Query progressively: tree, document, section, symbol, then source.\n- Rebuild a stale index before relying on source locations.\n\n"
+        },
+        {
+          "id": "manual-reading.browse",
+          "slug": "browse",
+          "explicit": true,
+          "title": "Browse the site",
+          "level": 2,
+          "kind": "other",
+          "line_start": 17,
+          "line_end": 30,
+          "markdown": "## Browse the site {#browse}\n\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
+          "body": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n"
+        },
+        {
+          "id": "manual-reading.query",
+          "slug": "query",
+          "explicit": true,
+          "title": "Find a page or section",
+          "level": 2,
+          "kind": "other",
+          "line_start": 31,
+          "line_end": 58,
+          "markdown": "## Find a page or section {#query}\n\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n",
+          "body": "\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n"
+        },
+        {
+          "id": "manual-reading.source",
+          "slug": "source",
+          "explicit": true,
+          "title": "Inspect source evidence",
+          "level": 2,
+          "kind": "other",
+          "line_start": 59,
+          "line_end": 72,
+          "markdown": "## Inspect source evidence {#source}\n\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n",
+          "body": "\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n"
+        },
+        {
+          "id": "manual-reading.freshness",
+          "slug": "freshness",
+          "explicit": true,
+          "title": "Keep results current",
+          "level": 2,
+          "kind": "other",
+          "line_start": 73,
+          "line_end": 84,
+          "markdown": "## Keep results current {#freshness}\n\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
+          "body": "\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "manual-reading.browse",
+          "title": "Browse the site",
+          "kind": "other",
+          "text": "Use Overview to choose a top-level section. User manual and CodeWiki architecture are independent sections of this wiki. The sidebar's Find a page field filters page titles; On this page jumps to headings in the open page. Architecture diagrams can link to pages or sections. Follow a linked node or use the ordinary links beneath the diagram. Expand the diagram for a larger view; press Escape to close it. Expand an Implementation panel to read attached code. Open in editor uses the project's configured editor link. Source index lists files with documentation links. If you need to search prose or source symbols instead of page titles, use the CLI search command below.",
+          "markdown": "\nUse **Overview** to choose a top-level section. **User manual** and **CodeWiki\narchitecture** are independent sections of this wiki. The sidebar's **Find a page**\nfield filters page titles; **On this page** jumps to headings in the open page.\n\nArchitecture diagrams can link to pages or sections. Follow a linked node or use\nthe ordinary links beneath the diagram. Expand the diagram for a larger view;\npress Escape to close it. Expand an **Implementation** panel to read attached code.\n**Open in editor** uses the project's configured editor link.\n\n**Source index** lists files with documentation links. If you need to search prose\nor source symbols instead of page titles, use the CLI search command below.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-reading.query",
+          "title": "Find a page or section",
+          "kind": "other",
+          "text": "Run these examples from the framework repository after building its wiki: codewiki query tree codewiki query doc user-manual codewiki query doc manual-getting-started codewiki query section manual-getting-started.install codewiki query search 'source roots' --limit 5 tree shows the hierarchy and summaries. doc gives a page summary, its relationships, and section IDs. section retrieves the selected Markdown and available source evidence. Use IDs returned by your own wiki when querying another project. codewiki query doc manual-writing --full --limit 40 codewiki query doc manual-writing --full --offset 40 --limit 40 codewiki query --json search 'source roots' --limit 5 --full requests original Markdown. --limit and --offset paginate items or text lines, depending on the query; they do not specify a token budget. JSON responses provide next_offset when more content is available. Follow that value to continue reading. Limits must be between 1 and 200.",
+          "markdown": "\nRun these examples from the framework repository after building its wiki:\n\n```sh\ncodewiki query tree\ncodewiki query doc user-manual\ncodewiki query doc manual-getting-started\ncodewiki query section manual-getting-started.install\ncodewiki query search 'source roots' --limit 5\n```\n\n`tree` shows the hierarchy and summaries. `doc` gives a page summary, its\nrelationships, and section IDs. `section` retrieves the selected Markdown and\navailable source evidence. Use IDs returned by your own wiki when querying\nanother project.\n\n```sh\ncodewiki query doc manual-writing --full --limit 40\ncodewiki query doc manual-writing --full --offset 40 --limit 40\ncodewiki query --json search 'source roots' --limit 5\n```\n\n`--full` requests original Markdown. `--limit` and `--offset` paginate items or\ntext lines, depending on the query; they do not specify a token budget. JSON\nresponses provide `next_offset` when more content is available. Follow that value\nto continue reading. Limits must be between 1 and 200.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-reading.source",
+          "title": "Inspect source evidence",
+          "kind": "other",
+          "text": "For this framework's own source, try: codewiki query file src/codewiki/build.py codewiki query symbol codewiki.build.run codewiki query source codewiki.build.run --limit 40 file finds documentation associated with a file. symbol reveals declaration metadata; source reads its indexed source lines. If a name is ambiguous, use the exact ID or file-qualified name returned by the query instead of guessing.",
+          "markdown": "\nFor this framework's own source, try:\n\n```sh\ncodewiki query file src/codewiki/build.py\ncodewiki query symbol codewiki.build.run\ncodewiki query source codewiki.build.run --limit 40\n```\n\n`file` finds documentation associated with a file. `symbol` reveals declaration\nmetadata; `source` reads its indexed source lines. If a name is ambiguous, use the\nexact ID or file-qualified name returned by the query instead of guessing.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-reading.freshness",
+          "title": "Keep results current",
+          "kind": "other",
+          "text": "Queries use the saved index.json and check whether inputs have changed. After editing Markdown, source, configuration, or theme files, run: codewiki build --strict A stale index may still return old documentation with a freshness warning. Source queries reject stale locations. If the rebuild fails, fix the reported problems before using the source ranges; see Troubleshooting .",
+          "markdown": "\nQueries use the saved `index.json` and check whether inputs have changed.\nAfter editing Markdown, source, configuration, or theme files, run:\n\n```sh\ncodewiki build --strict\n```\n\nA stale index may still return old documentation with a freshness warning. Source\nqueries reject stale locations. If the rebuild fails, fix the reported problems\nbefore using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).\n",
+          "impls": []
+        }
+      ],
+      "refs": []
+    },
+    {
+      "id": "manual-writing",
+      "title": "Writing pages",
+      "type": "manual",
+      "status": "stable",
+      "source": "wiki/manual-writing.md",
+      "html": "manual-writing.html",
+      "tldr": [
+        "Each page needs YAML frontmatter with a unique, stable `id`.",
+        "Use `parent: null` for a top-level section and a parent ID for its child pages.",
+        "Build strictly and check both the HTML page and its CLI section after editing."
+      ],
+      "owns": [],
+      "related": [
+        "manual-getting-started",
+        "manual-configuration"
+      ],
+      "updated": "",
+      "depends_on": [],
+      "diagram_links": {},
+      "used_by": [],
+      "summary": "Create Markdown pages, organize a manual separately from architecture, and connect explanations to source code.",
+      "parent": "user-manual",
+      "children": [],
+      "markdown": "---\nid: manual-writing\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Writing pages\nsummary: Create Markdown pages, organize a manual separately from architecture, and connect explanations to source code.\nrelated: [manual-getting-started, manual-configuration]\n---\n\n## TL;DR\n\n- Each page needs YAML frontmatter with a unique, stable `id`.\n- Use `parent: null` for a top-level section and a parent ID for its child pages.\n- Build strictly and check both the HTML page and its CLI section after editing.\n\n## Create a separate manual {#hierarchy}\n\nSave the following as `codewiki/wiki/user-manual.md` in your project:\n\n```markdown\n---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Learn how to set up and use this project.\n---\n\n## TL;DR\n\n- Start with the setup guide.\n\n## First steps {#first-steps}\n\nOpen [Getting started](getting-started.html).\n```\n\nCreate the linked child as `codewiki/wiki/getting-started.md`:\n\n```markdown\n---\nid: getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Set up the project and complete a first task.\n---\n\n## TL;DR\n\n- Follow the setup steps below.\n\n## Setup {#setup}\n\nWrite the prerequisites, commands, and expected result here.\n```\n\nBoth pages appear in the sidebar. The root gets an Overview card; its child\nappears under it. The `parent` field determines nesting, independent of the file's\ndirectory. Use `type: manual` for manual pages. Keep architecture component pages\nunder their existing architecture root.\n\n## Link pages and headings {#links}\n\nAn ID such as `getting-started` produces `getting-started.html`. Link to its\nexplicit heading using `[Setup](getting-started.html#setup)`. Inside the same page,\nuse `[Setup](#setup)`. The heading above also has the CLI section ID\n`getting-started.setup`.\n\nPreserve page IDs and explicit heading slugs when renaming titles. Use `related`\nfor additional page links without changing the primary hierarchy:\n\n```yaml\nrelated: [getting-started]\n```\n\nPage IDs must be unique; `index` and `files` are reserved. Keep authored pages\noutside underscore-prefixed directories such as `_templates/`, which are excluded\nfrom page discovery. `README.md` and `TAGS.md` are reference files, not wiki pages.\n\n## Attach source evidence {#evidence}\n\nFor an explanation tied to implementation, add an explicit heading such as\n`### Dispatch {#dispatch}` in a page whose ID is `scheduler`. Place a tag directly\nabove the declaration in source:\n\n```python\n# @wiki:impl scheduler.dispatch\ndef dispatch(value):\n    return value + 1\n```\n\nThe parser identifies the declaration; the tag names the documentation anchor,\nnot the function. `impl` links implementation, `gotcha` links a documented hazard,\nand `entry` marks an entry point. A user-facing procedure can stand on its own\nwithout an implementation tag.\n\nFor source you cannot annotate, add frontmatter references instead:\n\n```yaml\nrefs:\n  - file: ../src/scheduler.py\n    symbols: [dispatch]\n```\n\nPaths are relative to the configuration directory, not the Markdown file. Check\nyour instance's `wiki/TAGS.md` for language-specific examples. Source configured\nunder `readonly_globs` must use document-side references.\n\n## Validate and preview {#validate}\n\n```sh\ncodewiki build --strict\ncodewiki query doc getting-started\ncodewiki query section getting-started.setup\ncodewiki serve --no-open\n```\n\nOpen the page, follow its links, and check the displayed command examples. Strict\nvalidation checks IDs, hierarchy, declared relationships, tags, and source\nreferences; it does not prove that prose is correct or that every ordinary\nMarkdown hyperlink has a valid destination.\n\nFor architecture diagrams, node IDs can target pages or local headings. Explicit\ncross-page targets use `diagram_links`; see the separate\n[HTML renderer guide](renderer.html#navigation) for the resolution rules.\n",
+      "decisions": [],
+      "sections": [
+        {
+          "id": "manual-writing.tl-dr",
+          "slug": "tl-dr",
+          "explicit": false,
+          "title": "TL;DR",
+          "level": 2,
+          "kind": "other",
+          "line_start": 11,
+          "line_end": 16,
+          "markdown": "## TL;DR\n\n- Each page needs YAML frontmatter with a unique, stable `id`.\n- Use `parent: null` for a top-level section and a parent ID for its child pages.\n- Build strictly and check both the HTML page and its CLI section after editing.\n\n",
+          "body": "\n- Each page needs YAML frontmatter with a unique, stable `id`.\n- Use `parent: null` for a top-level section and a parent ID for its child pages.\n- Build strictly and check both the HTML page and its CLI section after editing.\n\n"
+        },
+        {
+          "id": "manual-writing.hierarchy",
+          "slug": "hierarchy",
+          "explicit": true,
+          "title": "Create a separate manual",
+          "level": 2,
+          "kind": "other",
+          "line_start": 17,
+          "line_end": 65,
+          "markdown": "## Create a separate manual {#hierarchy}\n\nSave the following as `codewiki/wiki/user-manual.md` in your project:\n\n```markdown\n---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Learn how to set up and use this project.\n---\n\n## TL;DR\n\n- Start with the setup guide.\n\n## First steps {#first-steps}\n\nOpen [Getting started](getting-started.html).\n```\n\nCreate the linked child as `codewiki/wiki/getting-started.md`:\n\n```markdown\n---\nid: getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Set up the project and complete a first task.\n---\n\n## TL;DR\n\n- Follow the setup steps below.\n\n## Setup {#setup}\n\nWrite the prerequisites, commands, and expected result here.\n```\n\nBoth pages appear in the sidebar. The root gets an Overview card; its child\nappears under it. The `parent` field determines nesting, independent of the file's\ndirectory. Use `type: manual` for manual pages. Keep architecture component pages\nunder their existing architecture root.\n\n",
+          "body": "\nSave the following as `codewiki/wiki/user-manual.md` in your project:\n\n```markdown\n---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Learn how to set up and use this project.\n---\n\n## TL;DR\n\n- Start with the setup guide.\n\n## First steps {#first-steps}\n\nOpen [Getting started](getting-started.html).\n```\n\nCreate the linked child as `codewiki/wiki/getting-started.md`:\n\n```markdown\n---\nid: getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Set up the project and complete a first task.\n---\n\n## TL;DR\n\n- Follow the setup steps below.\n\n## Setup {#setup}\n\nWrite the prerequisites, commands, and expected result here.\n```\n\nBoth pages appear in the sidebar. The root gets an Overview card; its child\nappears under it. The `parent` field determines nesting, independent of the file's\ndirectory. Use `type: manual` for manual pages. Keep architecture component pages\nunder their existing architecture root.\n\n"
+        },
+        {
+          "id": "manual-writing.links",
+          "slug": "links",
+          "explicit": true,
+          "title": "Link pages and headings",
+          "level": 2,
+          "kind": "other",
+          "line_start": 66,
+          "line_end": 83,
+          "markdown": "## Link pages and headings {#links}\n\nAn ID such as `getting-started` produces `getting-started.html`. Link to its\nexplicit heading using `[Setup](getting-started.html#setup)`. Inside the same page,\nuse `[Setup](#setup)`. The heading above also has the CLI section ID\n`getting-started.setup`.\n\nPreserve page IDs and explicit heading slugs when renaming titles. Use `related`\nfor additional page links without changing the primary hierarchy:\n\n```yaml\nrelated: [getting-started]\n```\n\nPage IDs must be unique; `index` and `files` are reserved. Keep authored pages\noutside underscore-prefixed directories such as `_templates/`, which are excluded\nfrom page discovery. `README.md` and `TAGS.md` are reference files, not wiki pages.\n\n",
+          "body": "\nAn ID such as `getting-started` produces `getting-started.html`. Link to its\nexplicit heading using `[Setup](getting-started.html#setup)`. Inside the same page,\nuse `[Setup](#setup)`. The heading above also has the CLI section ID\n`getting-started.setup`.\n\nPreserve page IDs and explicit heading slugs when renaming titles. Use `related`\nfor additional page links without changing the primary hierarchy:\n\n```yaml\nrelated: [getting-started]\n```\n\nPage IDs must be unique; `index` and `files` are reserved. Keep authored pages\noutside underscore-prefixed directories such as `_templates/`, which are excluded\nfrom page discovery. `README.md` and `TAGS.md` are reference files, not wiki pages.\n\n"
+        },
+        {
+          "id": "manual-writing.evidence",
+          "slug": "evidence",
+          "explicit": true,
+          "title": "Attach source evidence",
+          "level": 2,
+          "kind": "other",
+          "line_start": 84,
+          "line_end": 112,
+          "markdown": "## Attach source evidence {#evidence}\n\nFor an explanation tied to implementation, add an explicit heading such as\n`### Dispatch {#dispatch}` in a page whose ID is `scheduler`. Place a tag directly\nabove the declaration in source:\n\n```python\n# @wiki:impl scheduler.dispatch\ndef dispatch(value):\n    return value + 1\n```\n\nThe parser identifies the declaration; the tag names the documentation anchor,\nnot the function. `impl` links implementation, `gotcha` links a documented hazard,\nand `entry` marks an entry point. A user-facing procedure can stand on its own\nwithout an implementation tag.\n\nFor source you cannot annotate, add frontmatter references instead:\n\n```yaml\nrefs:\n  - file: ../src/scheduler.py\n    symbols: [dispatch]\n```\n\nPaths are relative to the configuration directory, not the Markdown file. Check\nyour instance's `wiki/TAGS.md` for language-specific examples. Source configured\nunder `readonly_globs` must use document-side references.\n\n",
+          "body": "\nFor an explanation tied to implementation, add an explicit heading such as\n`### Dispatch {#dispatch}` in a page whose ID is `scheduler`. Place a tag directly\nabove the declaration in source:\n\n```python\n# @wiki:impl scheduler.dispatch\ndef dispatch(value):\n    return value + 1\n```\n\nThe parser identifies the declaration; the tag names the documentation anchor,\nnot the function. `impl` links implementation, `gotcha` links a documented hazard,\nand `entry` marks an entry point. A user-facing procedure can stand on its own\nwithout an implementation tag.\n\nFor source you cannot annotate, add frontmatter references instead:\n\n```yaml\nrefs:\n  - file: ../src/scheduler.py\n    symbols: [dispatch]\n```\n\nPaths are relative to the configuration directory, not the Markdown file. Check\nyour instance's `wiki/TAGS.md` for language-specific examples. Source configured\nunder `readonly_globs` must use document-side references.\n\n"
+        },
+        {
+          "id": "manual-writing.validate",
+          "slug": "validate",
+          "explicit": true,
+          "title": "Validate and preview",
+          "level": 2,
+          "kind": "other",
+          "line_start": 113,
+          "line_end": 129,
+          "markdown": "## Validate and preview {#validate}\n\n```sh\ncodewiki build --strict\ncodewiki query doc getting-started\ncodewiki query section getting-started.setup\ncodewiki serve --no-open\n```\n\nOpen the page, follow its links, and check the displayed command examples. Strict\nvalidation checks IDs, hierarchy, declared relationships, tags, and source\nreferences; it does not prove that prose is correct or that every ordinary\nMarkdown hyperlink has a valid destination.\n\nFor architecture diagrams, node IDs can target pages or local headings. Explicit\ncross-page targets use `diagram_links`; see the separate\n[HTML renderer guide](renderer.html#navigation) for the resolution rules.\n",
+          "body": "\n```sh\ncodewiki build --strict\ncodewiki query doc getting-started\ncodewiki query section getting-started.setup\ncodewiki serve --no-open\n```\n\nOpen the page, follow its links, and check the displayed command examples. Strict\nvalidation checks IDs, hierarchy, declared relationships, tags, and source\nreferences; it does not prove that prose is correct or that every ordinary\nMarkdown hyperlink has a valid destination.\n\nFor architecture diagrams, node IDs can target pages or local headings. Explicit\ncross-page targets use `diagram_links`; see the separate\n[HTML renderer guide](renderer.html#navigation) for the resolution rules.\n"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "manual-writing.hierarchy",
+          "title": "Create a separate manual",
+          "kind": "other",
+          "text": "Save the following as codewiki/wiki/user-manual.md in your project: --- id: user-manual type: manual status: stable parent: null title: User manual summary: Learn how to set up and use this project. --- ## TL;DR - Start with the setup guide. ## First steps {#first-steps} Open [Getting started](getting-started.html). Create the linked child as codewiki/wiki/getting-started.md : --- id: getting-started type: manual status: stable parent: user-manual title: Getting started summary: Set up the project and complete a first task. --- ## TL;DR - Follow the setup steps below. ## Setup {#setup} Write the prerequisites, commands, and expected result here. Both pages appear in the sidebar. The root gets an Overview card; its child appears under it. The parent field determines nesting, independent of the file's directory. Use type: manual for manual pages. Keep architecture component pages under their existing architecture root.",
+          "markdown": "\nSave the following as `codewiki/wiki/user-manual.md` in your project:\n\n```markdown\n---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Learn how to set up and use this project.\n---\n\n## TL;DR\n\n- Start with the setup guide.\n\n## First steps {#first-steps}\n\nOpen [Getting started](getting-started.html).\n```\n\nCreate the linked child as `codewiki/wiki/getting-started.md`:\n\n```markdown\n---\nid: getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Set up the project and complete a first task.\n---\n\n## TL;DR\n\n- Follow the setup steps below.\n\n## Setup {#setup}\n\nWrite the prerequisites, commands, and expected result here.\n```\n\nBoth pages appear in the sidebar. The root gets an Overview card; its child\nappears under it. The `parent` field determines nesting, independent of the file's\ndirectory. Use `type: manual` for manual pages. Keep architecture component pages\nunder their existing architecture root.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-writing.links",
+          "title": "Link pages and headings",
+          "kind": "other",
+          "text": "An ID such as getting-started produces getting-started.html . Link to its explicit heading using [Setup](getting-started.html#setup) . Inside the same page, use [Setup](#setup) . The heading above also has the CLI section ID getting-started.setup . Preserve page IDs and explicit heading slugs when renaming titles. Use related for additional page links without changing the primary hierarchy: related: [getting-started] Page IDs must be unique; index and files are reserved. Keep authored pages outside underscore-prefixed directories such as _templates/ , which are excluded from page discovery. README.md and TAGS.md are reference files, not wiki pages.",
+          "markdown": "\nAn ID such as `getting-started` produces `getting-started.html`. Link to its\nexplicit heading using `[Setup](getting-started.html#setup)`. Inside the same page,\nuse `[Setup](#setup)`. The heading above also has the CLI section ID\n`getting-started.setup`.\n\nPreserve page IDs and explicit heading slugs when renaming titles. Use `related`\nfor additional page links without changing the primary hierarchy:\n\n```yaml\nrelated: [getting-started]\n```\n\nPage IDs must be unique; `index` and `files` are reserved. Keep authored pages\noutside underscore-prefixed directories such as `_templates/`, which are excluded\nfrom page discovery. `README.md` and `TAGS.md` are reference files, not wiki pages.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-writing.evidence",
+          "title": "Attach source evidence",
+          "kind": "other",
+          "text": "For an explanation tied to implementation, add an explicit heading such as ### Dispatch {#dispatch} in a page whose ID is scheduler . Place a tag directly above the declaration in source: # @wiki:impl scheduler.dispatch def dispatch(value): return value + 1 The parser identifies the declaration; the tag names the documentation anchor, not the function. impl links implementation, gotcha links a documented hazard, and entry marks an entry point. A user-facing procedure can stand on its own without an implementation tag. For source you cannot annotate, add frontmatter references instead: refs: - file: ../src/scheduler.py symbols: [dispatch] Paths are relative to the configuration directory, not the Markdown file. Check your instance's wiki/TAGS.md for language-specific examples. Source configured under readonly_globs must use document-side references.",
+          "markdown": "\nFor an explanation tied to implementation, add an explicit heading such as\n`### Dispatch {#dispatch}` in a page whose ID is `scheduler`. Place a tag directly\nabove the declaration in source:\n\n```python\n# @wiki:impl scheduler.dispatch\ndef dispatch(value):\n    return value + 1\n```\n\nThe parser identifies the declaration; the tag names the documentation anchor,\nnot the function. `impl` links implementation, `gotcha` links a documented hazard,\nand `entry` marks an entry point. A user-facing procedure can stand on its own\nwithout an implementation tag.\n\nFor source you cannot annotate, add frontmatter references instead:\n\n```yaml\nrefs:\n  - file: ../src/scheduler.py\n    symbols: [dispatch]\n```\n\nPaths are relative to the configuration directory, not the Markdown file. Check\nyour instance's `wiki/TAGS.md` for language-specific examples. Source configured\nunder `readonly_globs` must use document-side references.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-writing.validate",
+          "title": "Validate and preview",
+          "kind": "other",
+          "text": "codewiki build --strict codewiki query doc getting-started codewiki query section getting-started.setup codewiki serve --no-open Open the page, follow its links, and check the displayed command examples. Strict validation checks IDs, hierarchy, declared relationships, tags, and source references; it does not prove that prose is correct or that every ordinary Markdown hyperlink has a valid destination. For architecture diagrams, node IDs can target pages or local headings. Explicit cross-page targets use diagram_links ; see the separate HTML renderer guide for the resolution rules.",
+          "markdown": "\n```sh\ncodewiki build --strict\ncodewiki query doc getting-started\ncodewiki query section getting-started.setup\ncodewiki serve --no-open\n```\n\nOpen the page, follow its links, and check the displayed command examples. Strict\nvalidation checks IDs, hierarchy, declared relationships, tags, and source\nreferences; it does not prove that prose is correct or that every ordinary\nMarkdown hyperlink has a valid destination.\n\nFor architecture diagrams, node IDs can target pages or local headings. Explicit\ncross-page targets use `diagram_links`; see the separate\n[HTML renderer guide](renderer.html#navigation) for the resolution rules.\n",
+          "impls": []
+        }
+      ],
+      "refs": []
+    },
+    {
       "id": "queries",
       "title": "Progressive CLI queries",
       "type": "component",
@@ -11189,7 +11791,7 @@
       "summary": "Turn the document model into an offline architecture explorer: component maps, section navigation, and expandable source evidence.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
+      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
       "decisions": [],
       "sections": [
         {
@@ -11224,9 +11826,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 52,
-          "line_end": 62,
-          "markdown": "## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
-          "body": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n"
+          "line_end": 67,
+          "markdown": "## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
+          "body": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n"
         },
         {
           "id": "renderer.navigation",
@@ -11235,8 +11837,8 @@
           "title": "Resolve diagram links",
           "level": 2,
           "kind": "other",
-          "line_start": 63,
-          "line_end": 75,
+          "line_start": 68,
+          "line_end": 80,
           "markdown": "## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n",
           "body": "\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n"
         },
@@ -11247,8 +11849,8 @@
           "title": "Browser behavior",
           "level": 2,
           "kind": "other",
-          "line_start": 76,
-          "line_end": 83,
+          "line_start": 81,
+          "line_end": 88,
           "markdown": "## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n",
           "body": "\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n"
         },
@@ -11259,8 +11861,8 @@
           "title": "Reading and source evidence",
           "level": 2,
           "kind": "other",
-          "line_start": 84,
-          "line_end": 94,
+          "line_start": 89,
+          "line_end": 99,
           "markdown": "## Reading and source evidence {#reading}\n\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
           "body": "\n`reading.js` filters the document tree, tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n"
         }
@@ -11291,8 +11893,8 @@
           "id": "renderer.publication",
           "title": "Compose and publish pages",
           "kind": "other",
-          "text": "render_site() loads Jinja templates from the project's wiki/_theme/ first, then falls back to packaged defaults. _base.html.j2 owns the shared navigation and shell; page.html.j2 owns document sections, dependencies, component cards, diagrams, and source panels. index.html.j2 and files.html.j2 provide overview and file lookup. CSS provides the responsive layout, diagram canvas, and reading-depth cues. There is no client-side app router or production application server. Output includes local Mermaid and syntax-highlighting assets and can be served by any static host.",
-          "markdown": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
+          "text": "render_site() loads Jinja templates from the project's wiki/_theme/ first, then falls back to packaged defaults. _base.html.j2 owns the shared navigation and shell; page.html.j2 owns document sections, dependencies, component cards, diagrams, and source panels. index.html.j2 and files.html.j2 provide overview and file lookup. Pages with no parent are independent roots in the sidebar and Overview cards. A root with type: manual uses its actual page hierarchy for the reading path, so a user manual and its descendants do not display architecture reading steps. Architecture pages retain the Architecture \u2192 Component \u2192 Implementation path. CSS provides the responsive layout, diagram canvas, and reading-depth cues. There is no client-side app router or production application server. Output includes local Mermaid and syntax-highlighting assets and can be served by any static host.",
+          "markdown": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -11671,7 +12273,7 @@
       "summary": "Temporary projects exercise validation, queries, publication, initialization, and the shared architecture graph.",
       "parent": "testing",
       "children": [],
-      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
+      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
       "decisions": [],
       "sections": [
         {
@@ -11742,9 +12344,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 86,
-          "line_end": 95,
-          "markdown": "## Publication keeps usable outputs {#publication}\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
-          "body": "\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n"
+          "line_end": 100,
+          "markdown": "## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
+          "body": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n"
         },
         {
           "id": "test-framework.diagrams",
@@ -11753,8 +12355,8 @@
           "title": "Architecture navigation agrees with CLI data",
           "level": 2,
           "kind": "other",
-          "line_start": 96,
-          "line_end": 108,
+          "line_start": 101,
+          "line_end": 113,
           "markdown": "## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n",
           "body": "\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n"
         },
@@ -11765,10 +12367,10 @@
           "title": "Initialization and theme customization survive",
           "level": 2,
           "kind": "other",
-          "line_start": 109,
-          "line_end": 119,
-          "markdown": "## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
-          "body": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n"
+          "line_start": 114,
+          "line_end": 123,
+          "markdown": "## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
+          "body": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n"
         }
       ],
       "anchors": [
@@ -11842,8 +12444,8 @@
               "symbol": "test_invalid_markdown_is_a_validation_error",
               "kind": "function",
               "lines": [
-                212,
-                221
+                242,
+                251
               ],
               "note": "",
               "lang": "python"
@@ -11887,8 +12489,8 @@
               "symbol": "test_cli_json_and_config_on_either_side",
               "kind": "function",
               "lines": [
-                167,
-                175
+                197,
+                205
               ],
               "note": "",
               "lang": "python"
@@ -11899,8 +12501,8 @@
               "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
               "kind": "function",
               "lines": [
-                179,
-                186
+                209,
+                216
               ],
               "note": "",
               "lang": "python"
@@ -11911,8 +12513,8 @@
               "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
               "kind": "function",
               "lines": [
-                250,
-                254
+                280,
+                284
               ],
               "note": "",
               "lang": "python"
@@ -11923,8 +12525,8 @@
           "id": "test-framework.publication",
           "title": "Publication keeps usable outputs",
           "kind": "other",
-          "text": "A duplicate heading must fail without replacing either the saved index or rendered page. A malformed Jinja template must leave the previous outputs intact. Removing a document and rebuilding must retire its generated HTML page. These are observable file-state assertions around failure and success. They do not simulate concurrent readers or prove that publishing the whole site is atomic; see the publication boundary for that limitation.",
-          "markdown": "\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
+          "text": "A separate manual-root fixture verifies that Overview and CLI navigation expose the manual alongside architecture, with children at the correct depths. Manual descendants use their own reading path, including intermediate pages; architecture pages keep their existing implementation-oriented path. A duplicate heading must fail without replacing either the saved index or rendered page. A malformed Jinja template must leave the previous outputs intact. Removing a document and rebuilding must retire its generated HTML page. These are observable file-state assertions around failure and success. They do not simulate concurrent readers or prove that publishing the whole site is atomic; see the publication boundary for that limitation.",
+          "markdown": "\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -11941,11 +12543,23 @@
             {
               "role": "impl",
               "file": "../tests/test_framework.py",
+              "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
+              "kind": "function",
+              "lines": [
+                152,
+                178
+              ],
+              "note": "",
+              "lang": "python"
+            },
+            {
+              "role": "impl",
+              "file": "../tests/test_framework.py",
               "symbol": "test_theme_failure_preserves_index_and_site",
               "kind": "function",
               "lines": [
-                225,
-                235
+                255,
+                265
               ],
               "note": "",
               "lang": "python"
@@ -11956,8 +12570,8 @@
               "symbol": "test_removed_document_retires_generated_page",
               "kind": "function",
               "lines": [
-                239,
-                246
+                269,
+                276
               ],
               "note": "",
               "lang": "python"
@@ -11977,8 +12591,8 @@
               "symbol": "test_broken_architecture_links_preserve_published_outputs",
               "kind": "function",
               "lines": [
-                258,
-                271
+                288,
+                301
               ],
               "note": "",
               "lang": "python"
@@ -11989,8 +12603,8 @@
               "symbol": "test_invalid_architecture_metadata",
               "kind": "function",
               "lines": [
-                275,
-                284
+                305,
+                314
               ],
               "note": "",
               "lang": "python"
@@ -12001,8 +12615,8 @@
               "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
               "kind": "function",
               "lines": [
-                288,
-                322
+                318,
+                352
               ],
               "note": "",
               "lang": "python"
@@ -12013,8 +12627,8 @@
               "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
               "kind": "function",
               "lines": [
-                326,
-                331
+                356,
+                361
               ],
               "note": "",
               "lang": "python"
@@ -12026,7 +12640,7 @@
           "title": "Initialization and theme customization survive",
           "kind": "other",
           "text": "Repeated initialization preserves authored Markdown and existing configuration, keeps the framework engine outside the instance, and copies the portable skills. An attempted instance directory outside the project is rejected. The hierarchy/theme test checks a child page and paginated tree depth, a project CSS override, and packaged Mermaid assets and license presence. This is an in-process initialization/build test. Verifying a built wheel from an unrelated directory is an additional packaging check.",
-          "markdown": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
+          "markdown": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n",
           "impls": [
             {
               "role": "impl",
@@ -12046,8 +12660,8 @@
               "symbol": "test_init_preserves_customization_and_uses_package_assets",
               "kind": "function",
               "lines": [
-                152,
-                163
+                182,
+                193
               ],
               "note": "",
               "lang": "python"
@@ -12195,8 +12809,8 @@
               "symbol": "test_python_decorators_scopes_and_comments",
               "kind": "function",
               "lines": [
-                190,
-                208
+                220,
+                238
               ],
               "note": "",
               "lang": "python"
@@ -12390,6 +13004,92 @@
         }
       ],
       "anchors": [],
+      "refs": []
+    },
+    {
+      "id": "user-manual",
+      "title": "User manual",
+      "type": "manual",
+      "status": "stable",
+      "source": "wiki/user-manual.md",
+      "html": "user-manual.html",
+      "tldr": [
+        "Start with Getting started to install CodeWiki and build your first wiki.",
+        "Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.",
+        "Use Writing pages and Configuration and troubleshooting when maintaining a wiki."
+      ],
+      "owns": [],
+      "related": [],
+      "updated": "",
+      "depends_on": [],
+      "diagram_links": {},
+      "used_by": [],
+      "summary": "Install CodeWiki, create a project wiki, find documentation, and keep your pages and source references current.",
+      "parent": null,
+      "children": [
+        "manual-configuration",
+        "manual-getting-started",
+        "manual-reading",
+        "manual-writing"
+      ],
+      "markdown": "---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Install CodeWiki, create a project wiki, find documentation, and keep your pages and source references current.\n---\n\n## TL;DR\n\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.\n\n## Choose a task {#choose-a-task}\n\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n## The everyday workflow {#workflow}\n\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n",
+      "decisions": [],
+      "sections": [
+        {
+          "id": "user-manual.tl-dr",
+          "slug": "tl-dr",
+          "explicit": false,
+          "title": "TL;DR",
+          "level": 2,
+          "kind": "other",
+          "line_start": 10,
+          "line_end": 15,
+          "markdown": "## TL;DR\n\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.\n\n",
+          "body": "\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.\n\n"
+        },
+        {
+          "id": "user-manual.choose-a-task",
+          "slug": "choose-a-task",
+          "explicit": true,
+          "title": "Choose a task",
+          "level": 2,
+          "kind": "other",
+          "line_start": 16,
+          "line_end": 27,
+          "markdown": "## Choose a task {#choose-a-task}\n\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n",
+          "body": "\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n"
+        },
+        {
+          "id": "user-manual.workflow",
+          "slug": "workflow",
+          "explicit": true,
+          "title": "The everyday workflow",
+          "level": 2,
+          "kind": "other",
+          "line_start": 28,
+          "line_end": 36,
+          "markdown": "## The everyday workflow {#workflow}\n\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n",
+          "body": "\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "user-manual.choose-a-task",
+          "title": "Choose a task",
+          "kind": "other",
+          "text": "I want to\u2026 Guide Install CodeWiki or add it to a project Getting started Browse pages, inspect source, or search from the command line Reading and querying Create a page, organize sections, or attach source evidence Writing pages Select an instance, change settings, or fix build errors Configuration and troubleshooting These guides describe everyday usage. For the framework's internal components, open the separate CodeWiki architecture section.",
+          "markdown": "\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n",
+          "impls": []
+        },
+        {
+          "id": "user-manual.workflow",
+          "title": "The everyday workflow",
+          "kind": "other",
+          "text": "Edit Markdown in your instance's wiki/ directory. Run codewiki build --strict from the project directory. Open the generated site or run codewiki serve --no-open for a live preview. Use codewiki query tree to find a page, then query only the section you need. The examples use the default instance folder, codewiki/ . If your instance has another location, pass --config path/to/wiki.config.yaml to build, serve, and query.",
+          "markdown": "\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n",
+          "impls": []
+        }
+      ],
       "refs": []
     }
   ],
@@ -12848,8 +13548,8 @@
           "role": "impl",
           "symbol": "test_invalid_markdown_is_a_validation_error",
           "lines": [
-            212,
-            221
+            242,
+            251
           ],
           "doc": "test-framework",
           "url": "test-framework.html#validation",
@@ -12890,8 +13590,8 @@
           "role": "impl",
           "symbol": "test_cli_json_and_config_on_either_side",
           "lines": [
-            167,
-            175
+            197,
+            205
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -12904,8 +13604,8 @@
           "role": "impl",
           "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
           "lines": [
-            179,
-            186
+            209,
+            216
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -12918,8 +13618,8 @@
           "role": "impl",
           "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
           "lines": [
-            250,
-            254
+            280,
+            284
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -12944,10 +13644,24 @@
           "title": "Publication keeps usable outputs",
           "kind": "other",
           "role": "impl",
+          "symbol": "test_manual_is_a_separate_root_with_its_own_reading_path",
+          "lines": [
+            152,
+            178
+          ],
+          "doc": "test-framework",
+          "url": "test-framework.html#publication",
+          "lang": "python"
+        },
+        {
+          "id": "test-framework.publication",
+          "title": "Publication keeps usable outputs",
+          "kind": "other",
+          "role": "impl",
           "symbol": "test_theme_failure_preserves_index_and_site",
           "lines": [
-            225,
-            235
+            255,
+            265
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -12960,8 +13674,8 @@
           "role": "impl",
           "symbol": "test_removed_document_retires_generated_page",
           "lines": [
-            239,
-            246
+            269,
+            276
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -12974,8 +13688,8 @@
           "role": "impl",
           "symbol": "test_broken_architecture_links_preserve_published_outputs",
           "lines": [
-            258,
-            271
+            288,
+            301
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -12988,8 +13702,8 @@
           "role": "impl",
           "symbol": "test_invalid_architecture_metadata",
           "lines": [
-            275,
-            284
+            305,
+            314
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13002,8 +13716,8 @@
           "role": "impl",
           "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
           "lines": [
-            288,
-            322
+            318,
+            352
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13016,8 +13730,8 @@
           "role": "impl",
           "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
           "lines": [
-            326,
-            331
+            356,
+            361
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -13044,8 +13758,8 @@
           "role": "impl",
           "symbol": "test_init_preserves_customization_and_uses_package_assets",
           "lines": [
-            152,
-            163
+            182,
+            193
           ],
           "doc": "test-framework",
           "url": "test-framework.html#initialization",
@@ -13058,8 +13772,8 @@
           "role": "impl",
           "symbol": "test_python_decorators_scopes_and_comments",
           "lines": [
-            190,
-            208
+            220,
+            238
           ],
           "doc": "test-languages",
           "url": "test-languages.html#parsers",

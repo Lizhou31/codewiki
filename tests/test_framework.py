@@ -148,6 +148,36 @@ def test_hierarchy_navigation_and_partial_theme(instance):
     assert (instance.site_dir / 'vendor/LICENSE.mermaid').is_file()
 
 
+# @wiki:impl test-framework.publication
+def test_manual_is_a_separate_root_with_its_own_reading_path(instance):
+    (instance.wiki_dir / 'user-manual.md').write_text(
+        '---\nid: user-manual\ntype: manual\nparent: null\n'
+        'title: User manual\nsummary: Everyday usage.\n---\n## Start here\n')
+    (instance.wiki_dir / 'setup.md').write_text(
+        '---\nid: setup\nparent: user-manual\ntitle: Setup\n---\n## Install\n')
+    (instance.wiki_dir / 'advanced.md').write_text(
+        '---\nid: advanced\nparent: setup\ntitle: Advanced setup\n---\n## Configure\n')
+    ix = build(instance)
+    tree = query(instance, ix, 'tree')['items']
+    assert {item['id'] for item in tree if item['depth'] == 0} == {'architecture', 'user-manual'}
+    assert next(item for item in tree if item['id'] == 'setup')['depth'] == 1
+    assert next(item for item in tree if item['id'] == 'advanced')['depth'] == 2
+    overview = (instance.site_dir / 'index.html').read_text().split('<h2>Start here</h2>')[1]
+    assert 'href="user-manual.html"' in overview
+    assert 'href="architecture.html"' in overview
+    for page in ('user-manual', 'setup', 'advanced'):
+        html = (instance.site_dir / f'{page}.html').read_text()
+        reading_path = html.split('aria-label="Reading path">')[1].split('</div>')[0]
+        assert 'href="user-manual.html">User manual</a>' in reading_path
+        assert 'Architecture' not in reading_path
+        assert 'Implementation' not in reading_path
+        if page == 'advanced':
+            assert 'href="setup.html">Setup</a>' in reading_path
+            assert '<span class="active">Advanced setup</span>' in reading_path
+    architecture = (instance.site_dir / 'architecture.html').read_text()
+    assert '01 Architecture' in architecture and '03 Implementation' in architecture
+
+
 # @wiki:impl test-framework.initialization
 def test_init_preserves_customization_and_uses_package_assets(instance):
     root = instance.root.parent
