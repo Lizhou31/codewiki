@@ -88,6 +88,29 @@ Supported parsers: C, Python, YAML, devicetree; statement scanners: shell,
 Make, Kconfig, CMake, and `.conf`. Parsing is structural; it does not establish
 a complete semantic call graph or infer design reasons.
 
+## Explore architecture through diagrams
+
+Start at `codewiki/site/architecture.html` for the framework's own example. Select
+a component, follow its internal diagram to a section, then expand the tagged
+implementation. Component cards, dependency links, and source paths provide
+alternative reading routes. The diagram can expand into a keyboard-accessible
+canvas; its destinations are also available as ordinary text links.
+
+Mermaid node IDs matching document IDs link to those pages. Local heading slugs
+link to their sections. Optional frontmatter makes cross-page links explicit:
+
+```yaml
+depends_on: [documents]
+diagram_links:
+  parser: documents.sections
+  renderer: renderer
+```
+
+Here a Mermaid node named `parser` opens the `sections` heading in `documents`.
+The strict build validates the targets and derives reverse "used by" links.
+`query doc` exposes these same relationships for LLM tools. Authors describe
+architectural dependencies; code tags attach source evidence to the explanation.
+
 ## Customization and upgrades
 
 Put optional theme overrides in `wiki/_theme/`. Individual files override the

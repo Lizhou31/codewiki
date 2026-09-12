@@ -5,13 +5,33 @@ status: stable
 parent: architecture
 related: []
 refs: []
-title: Starting and maintaining a wiki
+title: Initialization & preview
 summary: Initialize a project-local instance, write source-grounded pages, validate
   links, and preview with the installed framework.
 owns:
 - ../src/codewiki/init_project.py
 - ../src/codewiki/serve.py
+depends_on:
+- templates
+- documents
+- build
+diagram_links:
+  scaffold: authoring.scaffold
+  templates: templates
+  skills: skills
+  preview: authoring.preview
+  build: build
 ---
+
+## The authoring loop
+
+```mermaid
+flowchart TB
+  templates["Document templates"] --> scaffold["Initialize project instance"]
+  skills["Portable skill instructions"] --> scaffold
+  scaffold --> preview["Watch Markdown + source changes"]
+  preview --> build["Build + reload local preview"]
+```
 
 ## TL;DR
 

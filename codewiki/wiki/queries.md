@@ -10,6 +10,14 @@ summary: 'Read only the relevant branch: overview, summary, section, declaration
   and source. Every response exposes index freshness.'
 owns:
 - ../src/codewiki/query.py
+depends_on:
+- history
+diagram_links:
+  tree: queries.disclosure
+  doc: queries.disclosure
+  section: queries.disclosure
+  symbols: queries.symbols
+  source: queries.freshness
 ---
 
 ## TL;DR
@@ -62,3 +70,11 @@ indexed explanation, with a visible stale status.
 The query envelope and index carry a schema version. Older embedded indexes must
 be rebuilt with the installed framework before progressive queries are available;
 the CLI reports this explicitly instead of presenting an empty section outline.
+
+## Follow the architecture graph
+
+Document summaries include `depends_on`, reverse `used_by`, and `diagram_links` in
+both the JSON envelope and text output. These fields expose the same authored
+relationships as the HTML map. Query the destination document or section rather
+than loading the entire wiki. Older schema-v1 indexes without these optional
+fields still load; rebuild to include them.

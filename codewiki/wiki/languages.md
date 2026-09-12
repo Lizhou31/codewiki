@@ -5,12 +5,29 @@ status: stable
 parent: architecture
 related: []
 refs: []
-title: Language adapters and source binding
+title: Language adapters
 summary: Tree-sitter and small statement scanners resolve documentation tags into
   source declarations without storing symbol names in tags.
 owns:
 - ../src/codewiki/languages.py
+diagram_links:
+  registry: languages.registry
+  python: languages.python
+  binding: languages.registry
+  query: queries.symbols
 ---
+
+## Source to evidence
+
+```mermaid
+flowchart TB
+  registry["Select language adapter"] --> python["Parse comments + declarations"]
+  python --> binding["Bind nearby tags to targets"]
+  binding --> query["Expose symbols + source ranges"]
+```
+
+The parse node opens the Python adapter used by this repository. Other supported
+languages implement the same comment/target contract.
 
 ## TL;DR
 

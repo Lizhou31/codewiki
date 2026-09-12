@@ -8,6 +8,8 @@ parent: null
 owns: []
 refs: []
 related: []
+depends_on: []
+diagram_links: {}
 decisions: []
 ---
 
@@ -23,6 +25,10 @@ flowchart LR
   input[Inputs] --> core[Core responsibilities]
   core --> output[Outputs]
 ```
+
+Name diagram nodes after child document IDs to make them clickable. Use
+`diagram_links` to map other node names to a page or an explicit section ID.
+Describe what arrows mean, and give each major component a deeper page.
 
 ## Entry Points
 

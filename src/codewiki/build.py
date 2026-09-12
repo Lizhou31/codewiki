@@ -77,6 +77,8 @@ class Doc:
     owns: list = field(default_factory=list)
     refs: list = field(default_factory=list)
     related: list = field(default_factory=list)
+    depends_on: list = field(default_factory=list)
+    diagram_links: dict = field(default_factory=dict)
     updated: str = ""
     summary: str = ""
     parent: str | None = None
@@ -99,7 +101,7 @@ SEVERITY = {
     "double-owned": "error", "unknown-role": "error", "tag-in-readonly": "error",
     "missing-root": "error", "invalid-doc": "error", "duplicate-doc": "error",
     "broken-related": "error", "broken-parent": "error", "hierarchy-cycle": "error",
-    "broken-decision": "error",
+    "broken-decision": "error", "broken-dependency": "error", "broken-diagram-link": "error",
     "anchorless-heading": "warn", "stale-doc": "warn", "parse-error": "warn",
     "unimplemented": "info",
 }
@@ -274,6 +276,7 @@ def split_mermaid(lines: list[str]):
         out.append(("mermaid" if in_mm else "md", buf))
     return out
 
+# @wiki:impl renderer.markdown
 def render_body(lines: list[str]) -> tuple[str, list[str]]:
     parts, mermaids = [], []
     for kind, chunk in split_mermaid(lines):
@@ -284,7 +287,7 @@ def render_body(lines: list[str]) -> tuple[str, list[str]]:
             mermaids.append(text)
             parts.append(
                 '<div class="mermaid-wrap"><pre class="mermaid">%s</pre>'
-                '<p class="mermaid-hint">Highlighted nodes link to their section.</p></div>'
+                '<p class="mermaid-hint">Follow a linked node to explore its component or implementation.</p></div>'
                 % html.escape(text))
         else:
             parts.append(render_md(text))
@@ -302,6 +305,7 @@ def parse_doc(w: Wiki, path: Path, warns: list[Warning]) -> Doc | None:
         path=w.rel(path), out=f"{fm['id']}.html",
         owns=[w.rel(w.root / x) for x in fm.get("owns", [])],
         related=fm.get("related", []), updated=str(fm.get("updated", "")),
+        depends_on=fm.get("depends_on", []), diagram_links=fm.get("diagram_links", {}),
         summary=fm.get("summary", ""), parent=fm.get("parent"),
         markdown=raw, preamble=render_md(preamble), outline=outline,
         decisions=fm.get("decisions", []),
@@ -345,7 +349,14 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
         if d.id in by_id:
             warns.append(Warning("duplicate-doc", f"duplicate document id '{d.id}'", d.path))
         by_id[d.id] = d
+    destinations = diagram_destinations(docs)
     for d in docs:
+        for dependency in d.depends_on:
+            if dependency not in by_id:
+                warns.append(Warning("broken-dependency", f"unknown dependency '{dependency}'", d.path))
+        for target in d.diagram_links.values():
+            if target not in destinations:
+                warns.append(Warning("broken-diagram-link", f"unknown diagram target '{target}'", d.path))
         if d.parent and d.parent not in by_id:
             warns.append(Warning("broken-parent", f"unknown parent '{d.parent}'", d.path))
         for rel in d.related:
@@ -420,6 +431,7 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
 def strip_html(s: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).strip()
 
+# @wiki:impl build.index
 def build_index(w: Wiki, docs: list[Doc], tags: list[Tag], symbols=None) -> dict:
     by_file: dict[str, dict] = {}
     for d in docs:
@@ -452,6 +464,8 @@ def build_index(w: Wiki, docs: list[Doc], tags: list[Tag], symbols=None) -> dict
             "id": d.id, "title": d.title, "type": d.type, "status": d.status,
             "source": d.path, "html": d.out, "tldr": d.tldr, "owns": d.owns,
             "related": d.related, "updated": d.updated,
+            "depends_on": d.depends_on, "diagram_links": d.diagram_links,
+            "used_by": [other.id for other in docs if d.id in other.depends_on],
             "summary": d.summary, "parent": d.parent,
             "children": [child.id for child in docs if child.parent == d.id],
             "markdown": d.markdown, "decisions": d.decisions,
@@ -471,7 +485,34 @@ def build_index(w: Wiki, docs: list[Doc], tags: list[Tag], symbols=None) -> dict
         "by_file": by_file,
     }
 
+def diagram_destinations(docs):
+    """Resolve IDs by exact lookup, including document IDs that contain dots."""
+    targets = {}
+    for d in docs:
+        for section in d.outline:
+            targets[section["id"]] = dict(href=f"{d.out}#{section['slug']}",
+                title=section["title"], kind="section", document=d.id)
+    # An exact document ID takes precedence over a colliding section ID.
+    targets.update({d.id: dict(href=d.out, title=d.title, kind="component", document=d.id) for d in docs})
+    return targets
+
+
+# @wiki:impl renderer.navigation
+def diagram_targets(doc, docs):
+    """Document IDs work automatically; local slugs and explicit mappings override them."""
+    destinations = diagram_destinations(docs)
+    targets = {d.id: destinations[d.id] for d in docs}
+    for section in doc.outline:
+        targets[section["slug"]] = dict(href=f"#{section['slug']}", title=section["title"],
+                                      kind="section", document=doc.id)
+    for node, target in doc.diagram_links.items():
+        if target in destinations:
+            targets[node] = destinations[target]
+    return targets
+
+
 # @wiki:impl documents.rendering
+# @wiki:impl renderer.publication
 def render_site(w: Wiki, docs, tags, warns, index):
     themes = w.theme_dirs
     env = Environment(loader=FileSystemLoader([str(p) for p in themes]),
@@ -512,8 +553,16 @@ def render_site(w: Wiki, docs, tags, warns, index):
     page_tpl = env.get_template("page.html.j2")
     for d in docs:
         anchor_map = {a.slug: a.title for a in d.anchors.values()}
+        targets = diagram_targets(d, docs)
+        ancestors, cursor, seen = [], d.parent, {d.id}
+        while cursor in by_id and cursor not in seen:
+            seen.add(cursor)
+            ancestors.insert(0, by_id[cursor])
+            cursor = by_id[cursor].parent
         (site / d.out).write_text(page_tpl.render(
             doc=d, anchor_map=(json.dumps(anchor_map) if (w.wiki_dir / "_theme/page.html.j2").is_file() else anchor_map),
+            diagram_targets=targets, ancestors=ancestors,
+            used_by=[other for other in docs if d.id in other.depends_on],
             warnings=warn_by_doc.get(d.path, []), **common), encoding="utf8")
 
     (site / "index.html").write_text(env.get_template("index.html.j2").render(
@@ -536,6 +585,8 @@ def render_site(w: Wiki, docs, tags, warns, index):
 # --------------------------------------------------------------------------- #
 
 # @wiki:impl architecture.pipeline
+# @wiki:impl build.orchestration
+# @wiki:impl build.publication
 def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[Warning], dict]:
     t0 = time.time()
     tags, symbols, warns, nfiles = scan_code(w)

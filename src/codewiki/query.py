@@ -32,7 +32,7 @@ def document(ix, name):
 
 
 def summary(d):
-    return {k: d.get(k) for k in ("id", "title", "type", "status", "source", "summary", "tldr", "parent", "children", "related")}
+    return {k: d.get(k) for k in ("id", "title", "type", "status", "source", "summary", "tldr", "parent", "children", "related", "depends_on", "used_by", "diagram_links")}
 
 
 def resolve_file(w, ix, name):
@@ -189,6 +189,11 @@ def render_text(result):
             lines.append(f"Parent: {doc['parent']}")
         if doc.get("children"):
             lines.append("Children: " + ", ".join(doc["children"]))
+        for key, label in (("depends_on", "Depends on"), ("used_by", "Used by")):
+            if doc.get(key):
+                lines.append(label + ": " + ", ".join(doc[key]))
+        for node, target in (doc.get("diagram_links") or {}).items():
+            lines.append(f"Diagram: {node} → {target}")
     if result.get("message"):
         lines.append(result["message"])
     if "markdown" in result:

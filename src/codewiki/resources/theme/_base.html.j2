@@ -9,32 +9,36 @@
 <link rel="stylesheet" href="vendor/hljs-dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body>
-<div class="layout">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">cw</span>{{ project.name }}</a>
+  <span class="topbar-label">Code documentation</span>
+  <nav aria-label="Main"><a href="index.html" {{ 'aria-current=page' if page == 'index' }}>Overview</a><a href="files.html" {{ 'aria-current=page' if page == 'files' }}>Source index</a></nav>
+</header>
+<div class="layout {{ 'has-toc' if doc is defined }} {{ 'architecture-layout' if doc is defined and doc.type == 'architecture' }}">
   <aside class="side">
-    <div class="brand">{{ project.name }}<small>{{ project.subtitle }}</small></div>
-    <h4>Overview</h4>
-    <nav>
-      <a href="index.html" class="{{ 'on' if page == 'index' }}">Project overview</a>
-      <a href="files.html" class="{{ 'on' if page == 'files' }}">Source file index</a>
-    </nav>
-    <h4>Architecture</h4>
-    <nav>
-      {% for d in nav %}
-      <a style="padding-left: {{ 12 + d.depth * 14 }}px" href="{{ d.out }}" class="{{ 'on' if doc is defined and d.id == doc.id }}">{{ d.title }}</a>
-      {% endfor %}
-    </nav>
-    {% block sidenav %}{% endblock %}
+    <details class="nav-panel" open>
+      <summary>Browse documentation</summary>
+      <div class="page-search" hidden>
+        <label class="sr-only" for="page-search">Find a page</label>
+        <input id="page-search" type="search" placeholder="Find a page…" autocomplete="off">
+      </div>
+      <nav class="project-nav" aria-label="Project documents">
+        {% for d in nav %}
+        <a href="{{ d.out }}" style="--depth: {{ d.depth }}" class="{{ 'on' if doc is defined and d.id == doc.id }}" {% if doc is defined and d.id == doc.id %}aria-current="page"{% endif %}>{{ d.title }}</a>
+        {% endfor %}
+      </nav>
+      <p class="search-empty" role="status" hidden>No matching pages.</p>
+    </details>
+    <div class="side-note">Start with the architecture.<br>Follow a concept into the code.</div>
   </aside>
-  <main>
+  <main id="content" tabindex="-1">
     {% block main %}{% endblock %}
-    <footer>Generated {{ generated }} · <code>codewiki build --strict</code></footer>
+    <footer><span>{{ project.name }} documentation</span><span>Built {{ generated[:10] }}</span></footer>
   </main>
+  {% if doc is defined %}<aside class="page-toc" aria-label="On this page">{% block sidenav %}{% endblock %}</aside>{% endif %}
 </div>
-<script src="vendor/highlight.min.js"></script>
-<script src="vendor/hljs-extra.js"></script>
-<script>
-  if (window.hljs) document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el));
-</script>
+<script src="reading.js" defer></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

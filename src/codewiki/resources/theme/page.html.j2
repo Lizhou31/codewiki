@@ -2,60 +2,72 @@
 {% block title %}{{ doc.title }} — {{ project.name }}{% endblock %}
 
 {% block sidenav %}
-<h4>On this page</h4>
+<p class="eyebrow">On this page</p>
 <nav>
   {% for s in doc.outline %}
     <a href="#{{ s.slug }}" class="{{ 'sub' if s.level > 2 }}">{{ s.title }}</a>
   {% endfor %}
+  {% if docs | selectattr('parent', 'equalto', doc.id) | list %}<a href="#explore-next">Explore next</a>{% endif %}
+  {% if doc.owns or doc.refs %}<a href="#sec-code">Source references</a>{% endif %}
 </nav>
+<p class="toc-source">Page source<br><code>{{ doc.path }}</code></p>
 {% endblock %}
 
 {% block main %}
-<div class="crumb">{{ project.name }} · {{ doc.type }}</div>
-<h1>{{ doc.title }}</h1>
-<div class="chips">
-  <span class="chip st-{{ doc.status }}">{{ doc.status }}</span>
-  <span class="chip">{{ doc.id }}</span>
-  {% if doc.updated %}<span class="chip">updated {{ doc.updated }}</span>{% endif %}
-  {% for r in doc.related %}<span class="chip"><a href="{{ r }}.html">{{ r }}</a></span>{% endfor %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="index.html">{{ project.name }}</a><span aria-hidden="true">/</span>
+{% for ancestor in ancestors %}<a href="{{ ancestor.out }}">{{ ancestor.title }}</a><span aria-hidden="true">/</span>{% endfor %}
+<span>{{ doc.type | capitalize }}</span>
+</nav>
+<header class="page-heading">
+  <div class="reading-depth" aria-label="Reading path"><a href="{{ ancestors[0].out if ancestors else doc.out }}">01 Architecture</a><span>→</span><span class="{{ 'active' if doc.parent }}">02 Component</span><span>→</span><span>03 Implementation</span></div>
+  <div class="eyebrow">{{ doc.type }} guide <span class="status st-{{ doc.status }}">{{ doc.status }}</span></div>
+  <h1>{{ doc.title }}</h1>
+  {% if doc.summary %}<p class="lead">{{ doc.summary }}</p>{% endif %}
+  {% if doc.related %}<div class="related">Related: {% for r in doc.related %}<a href="{{ r }}.html">{{ by_id[r].title if r in by_id else r }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</div>{% endif %}
+</header>
+{% if doc.depends_on or used_by %}
+<div class="dependency-strip">
+{% if doc.depends_on %}<div><span class="relationship-label">Depends on</span>{% for id in doc.depends_on if id in by_id %}<a href="{{ by_id[id].out }}">{{ by_id[id].title }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}
+{% if used_by %}<div><span class="relationship-label">Used by</span>{% for other in used_by %}<a href="{{ other.out }}">{{ other.title }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}
 </div>
-
+{% endif %}
+<details class="mobile-outline"><summary>On this page</summary><nav aria-label="Page sections">
+{% for s in doc.outline %}<a href="#{{ s.slug }}" class="{{ 'sub' if s.level > 2 }}">{{ s.title }}</a>{% endfor %}
+</nav></details>
 {% if warnings %}
-<div class="report">
-  {% for w in warnings %}
-  <div class="row"><span class="sev {{ severity.get(w.kind,'warn') }}">{{ severity.get(w.kind,'warn') }}</span>
-  <span class="msg">{{ w.message }}</span></div>
-  {% endfor %}
-</div>
+<details class="build-notes"><summary>{{ warnings | length }} build note{{ 's' if warnings | length != 1 }} to review</summary>
+  {% for w in warnings %}<p><span class="sev {{ severity.get(w.kind,'warn') }}">{{ severity.get(w.kind,'warn') }}</span> {{ w.message }}</p>{% endfor %}
+</details>
 {% endif %}
-
-{% if doc.parent and doc.parent in by_id %}
-<p class="crumb">Parent: <a href="{{ by_id[doc.parent].out }}">{{ by_id[doc.parent].title }}</a></p>
-{% endif %}
-{% if doc.summary %}<div class="tldr">{{ doc.summary }}</div>{% endif %}
 {% set children = docs | selectattr('parent', 'equalto', doc.id) | list %}
-{% if children %}
-<h2>Explore next</h2>
-<div class="cards">{% for child in children %}
-<div class="card"><h3><a href="{{ child.out }}">{{ child.title }}</a></h3><p>{{ child.summary }}</p></div>
-{% endfor %}</div>
-{% endif %}
+{% set maps = namespace(shown=false) %}
 {{ doc.preamble | safe }}
 {% for s in doc.outline %}
-<section id="{{ s.slug }}" class="{{ 'anchor-card ' + s.kind if s.explicit else '' }}">
-  <h{{ s.level }}>{{ s.title }}{% if s.explicit %} <span class="aid">{{ s.id }}</span>{% endif %}</h{{ s.level }}>
+<section id="{{ s.slug }}" class="doc-section {{ 'anchored ' + s.kind if s.explicit else '' }} {{ 'tldr' if s.title | lower == 'tl;dr' }}">
+  <h{{ s.level }}>{{ s.title }} <a class="heading-link" href="#{{ s.slug }}" aria-label="Link to {{ s.title }}">#</a></h{{ s.level }}>
   {{ s.body_html | safe }}
+  {% if 'class="mermaid"' in s.body_html and doc.diagram_links %}
+  <details class="diagram-destinations"><summary>Diagram destinations · {{ doc.diagram_links | length }}</summary>
+  <nav aria-label="Diagram destinations">{% for node in doc.diagram_links if node in diagram_targets %}{% set target = diagram_targets[node] %}<a href="{{ target.href }}"><code>{{ node }}</code><span>{{ target.title }} ↗</span></a>{% endfor %}</nav>
+  </details>
+  {% endif %}
+  {% if 'class="mermaid"' in s.body_html and children and not maps.shown %}
+  {% set maps.shown=true %}
+  <div class="component-grid" id="explore-next" aria-label="Components">{% for child in children %}
+  <a class="component-card" href="{{ child.out }}"><span class="component-number">{{ '%02d' | format(loop.index) }} <span aria-hidden="true">↗</span></span><h3>{{ child.title }}</h3><p>{{ child.summary }}</p><div class="component-meta">{{ child.owns | length }} owned file{{ 's' if child.owns | length != 1 }} · {{ child.anchors | length }} stable anchor{{ 's' if child.anchors | length != 1 }}</div></a>
+  {% endfor %}</div>
+  {% endif %}
   {% set a = doc.anchors.get(s.id) %}
   {% if a and a.impls %}
-  <div class="impls"><h5>Implementations</h5>
+  <div class="impls"><p class="evidence-label">Implementation <span>{{ a.impls | length }} linked declaration{{ 's' if a.impls | length != 1 }}</span></p>
     {% for t in a.impls %}
     <details class="impl"><summary>
       <span class="role {{ t.role }}">{{ t.role }}</span>
       <span class="sym">{{ t.symbol or (t.file | basename) }}</span>
-      <span class="loc">{{ t.file }}:{{ t.line_start }}–{{ t.line_end }}
-        {% set u = editor_url(t.file, t.line_start) %}{% if u %} · <a href="{{ u }}">open</a>{% endif %}
-      </span>
+      <span class="loc" title="{{ t.file }}">{{ t.file | basename }}:{{ t.line_start }}–{{ t.line_end }}</span>
     </summary>
+    <div class="source-toolbar"><span>{{ t.file }}</span>{% set u = editor_url(t.file, t.line_start) %}{% if u %}<a href="{{ u }}">Open in editor ↗</a>{% endif %}</div>
     {% if t.note %}<p class="impl-note">{{ t.note }}</p>{% endif %}
     {% if t.code %}<pre><code class="language-{{ t.hljs }}">{{ t.code }}</code></pre>{% endif %}
     </details>
@@ -76,20 +88,29 @@
 {% endfor %}
 {% endif %}
 
+{% if children and not maps.shown %}
+<section class="explore" id="explore-next">
+<p class="eyebrow">Continue exploring</p><h2>Explore next</h2>
+<div class="reading-links">{% for child in children %}
+<a class="reading-link" href="{{ child.out }}"><div><h3>{{ child.title }}</h3><p>{{ child.summary }}</p></div><span aria-hidden="true">↗</span></a>
+{% endfor %}</div>
+</section>
+{% endif %}
+
 {% if doc.owns or doc.refs %}
-<h2 id="sec-code">Code map</h2>
+<details class="source-references" id="sec-code"><summary>Source references <span>{{ doc.owns | length }} owned files · {{ doc.refs | length }} references</span></summary>
 {% if doc.owns %}
 <table>
   <tr><th>Owned file</th><th>Anchors here</th></tr>
   {% for f in doc.owns %}
-  <tr><td><code>{{ f }}</code></td>
+  <tr><td>{% set u = editor_url(f, 1) %}{% if u %}<a href="{{ u }}"><code>{{ f }}</code> ↗</a>{% else %}<code>{{ f }}</code>{% endif %}</td>
       <td>{% for a in doc.anchors.values() %}{% for t in a.impls if t.file == f %}<a href="#{{ a.slug }}">{{ a.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endfor %}</td></tr>
   {% endfor %}
 </table>
 {% endif %}
 {% if doc.refs %}
 <h3>Read-only references</h3>
-<p class="crumb">Vendor code linked by symbol, not by tag.</p>
+<p class="crumb">Declarations referenced by this document.</p>
 {% for r in doc.refs %}
 <details class="impl">
   <summary>
@@ -104,51 +125,16 @@
 </details>
 {% endfor %}
 {% endif %}
+</details>
 {% endif %}
 {% endblock %}
 
 {% block scripts %}
+{% set diagrams = namespace(present=false) %}
+{% for section in doc.outline %}{% if 'class="mermaid"' in section.body_html %}{% set diagrams.present=true %}{% endif %}{% endfor %}
+{% if diagrams.present %}
 <script src="vendor/mermaid.min.js"></script>
-<script>
-(async () => {
-  const ANCHORS = {{ anchor_map | tojson }};
-  if (!window.mermaid) return;
-  const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  // Neutral node styling, so the accent colour means "this links somewhere".
-  mermaid.initialize({
-    startOnLoad:false, securityLevel:"loose",
-    theme:"base", flowchart:{ curve:"basis", padding:16, useMaxWidth:false, nodeSpacing:40, rankSpacing:50 },
-    themeVariables: dark
-      ? { primaryColor:"#22262f", primaryBorderColor:"#3a4150", primaryTextColor:"#e6e8ee",
-          lineColor:"#767d92", fontSize:"16px", fontFamily:"-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" }
-      : { primaryColor:"#f2f3f7", primaryBorderColor:"#cfd4e0", primaryTextColor:"#1b1d23",
-          lineColor:"#868da0", fontSize:"16px", fontFamily:"-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" }
-  });
-  await mermaid.run({ querySelector:".mermaid" });
-
-  // Wire every mermaid node whose id matches an anchor slug in this doc.
-  // Mermaid ids look like "mermaid-<ts>-flowchart-<nodeId>-<n>"; match longest
-  // slug first so "scan" never shadows "scan-cycle".
-  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const slugs = Object.keys(ANCHORS).sort((a, b) => b.length - a.length);
-  for (const el of document.querySelectorAll("svg .node")) {
-    const key = slugs.find(s =>
-      el.id === s || new RegExp("-" + esc(s) + "-\\d+$").test(el.id));
-    if (!key) continue;
-    const title = ANCHORS[key];
-    el.classList.add("mm-link");
-    const t = document.createElementNS("http://www.w3.org/2000/svg", "title");
-    t.textContent = "Go to: " + title;
-    el.appendChild(t);
-    el.addEventListener("click", () => {
-      const target = document.getElementById(key);
-      if (!target) return;
-      target.scrollIntoView({ behavior:"smooth", block:"start" });
-      target.style.transition = "box-shadow .25s";
-      target.style.boxShadow = "0 0 0 3px var(--accent)";
-      setTimeout(() => { target.style.boxShadow = ""; }, 1100);
-    });
-  }
-})();
-</script>
+<script id="diagram-targets" type="application/json">{{ diagram_targets | tojson }}</script>
+<script src="diagrams.js" defer></script>
+{% endif %}
 {% endblock %}

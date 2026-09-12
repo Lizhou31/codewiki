@@ -5,7 +5,7 @@ status: stable
 parent: architecture
 related: []
 refs: []
-title: History and design decisions
+title: Provenance & decisions
 summary: Record explicit reasons and commit/PR references now; preserve build provenance
   for future change-impact and history features.
 owns:
@@ -22,7 +22,24 @@ decisions:
     MCP adapter can reuse the query model in a later release.
   anchors:
   - queries.disclosure
+diagram_links:
+  inputs: history.fingerprints
+  snapshot: history.fingerprints
+  query: queries.freshness
+  decisions: history.decision-records
 ---
+
+## What the index remembers
+
+```mermaid
+flowchart TB
+  inputs["Configuration + Markdown + code + theme"] --> snapshot["Content hashes + Git state"]
+  snapshot --> query["Query freshness checks"]
+  decisions["Authored reasons + commit / PR refs"] --> query
+```
+
+Freshness uses content hashes. Decision records travel alongside provenance but
+are returned by `query history`; they do not affect whether source ranges are current.
 
 ## TL;DR
 

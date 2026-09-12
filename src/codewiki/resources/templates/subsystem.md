@@ -8,6 +8,8 @@ parent: architecture
 owns: []
 refs: []
 related: []
+depends_on: []
+diagram_links: {}
 decisions: []
 ---
 

@@ -1,0 +1,94 @@
+---
+id: renderer
+type: component
+status: stable
+parent: architecture
+title: HTML renderer
+summary: 'Turn the document model into an offline architecture explorer: component
+  maps, section navigation, and expandable source evidence.'
+owns:
+- ../src/codewiki/resources/theme/_base.html.j2
+- ../src/codewiki/resources/theme/page.html.j2
+- ../src/codewiki/resources/theme/index.html.j2
+- ../src/codewiki/resources/theme/files.html.j2
+- ../src/codewiki/resources/theme/style.css
+- ../src/codewiki/resources/theme/reading.js
+- ../src/codewiki/resources/theme/diagrams.js
+depends_on:
+- documents
+related: []
+diagram_links:
+  markdown: renderer.markdown
+  model: documents.validation
+  publication: renderer.publication
+  theme: renderer.publication
+  navigation: renderer.navigation
+  diagrams: renderer.diagrams
+  reading: renderer.reading
+---
+
+## Inside the renderer
+
+```mermaid
+flowchart TB
+  markdown["Markdown bodies"] --> model["Rendered sections + source bindings"]
+  model --> publication["Jinja page composition"]
+  theme["Package theme + project overrides"] --> publication
+  publication --> navigation["Resolve diagram destinations"]
+  navigation --> diagrams["Clickable Mermaid nodes"]
+  publication --> reading["Outline + expandable implementations"]
+```
+
+Blue linked nodes open another component; green linked nodes open a section.
+The same page works as static HTML. JavaScript enhances diagrams and reading tools.
+
+## Markdown to sections {#markdown}
+
+`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes
+HTML; diagrams remain escaped source until the browser renders them with the vendored
+Mermaid library. Each section is emitted once, in Markdown order. Heading IDs become
+stable destinations, and tagged declarations appear directly below their explanation.
+
+## Compose and publish pages {#publication}
+
+`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then
+falls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;
+`page.html.j2` owns document sections, dependencies, component cards, diagrams, and
+source panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.
+
+CSS provides the responsive layout, diagram canvas, and reading-depth cues. There
+is no client-side app router or production application server. Output includes
+local Mermaid and syntax-highlighting assets and can be served by any static host.
+
+## Resolve diagram links {#navigation}
+
+`diagram_targets()` resolves node names using this precedence:
+
+1. A node matching a document ID links to that component page.
+2. A node matching a heading slug on this page links to that section.
+3. An explicit `diagram_links` entry overrides either automatic match.
+
+For example, the `navigation` node above points here. An author can also map a
+short node name to `documents.validation` to cross into another page's section.
+The build validates explicit destinations. It does not infer runtime dependencies
+from node positions or source tags; authors declare those relationships.
+
+## Browser behavior {#diagrams}
+
+`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.
+Links support keyboard focus, normal navigation, copying the destination, and
+opening another tab. The expand button enlarges the canvas; Escape closes it.
+A plain destination list below each explicitly mapped diagram offers the same path
+when diagrams fail to render or a reader prefers text.
+
+## Reading and source evidence {#reading}
+
+`reading.js` filters the document tree, tracks the visible section in the outline,
+and loads syntax highlighting when code is visible. Native `details` elements keep
+implementation bodies closed until requested; file paths and line ranges identify
+the source evidence. File ownership links open the configured editor, including
+Jinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.
+
+The HTML includes declaration snippets up to the configured build limit. Use
+`query source` for paginated source retrieval with freshness checking. Markdown and
+Mermaid are trusted project content, so project authors control embedded HTML.

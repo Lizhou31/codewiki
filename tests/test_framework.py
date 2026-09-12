@@ -236,3 +236,76 @@ def test_old_index_requests_rebuild_instead_of_empty_results(instance, capsys):
     capsys.readouterr()
     assert query_cli(['tree', '--json', '--config', str(instance.cfg_path)]) == 2
     assert 'run codewiki build' in json.loads(capsys.readouterr().out)['error']
+
+
+@pytest.mark.parametrize('extra', [
+    'depends_on: [missing]\n',
+    'diagram_links: {engine: missing}\n',
+    'diagram_links: {engine: architecture.missing}\n',
+])
+def test_broken_architecture_links_preserve_published_outputs(instance, extra):
+    build(instance)
+    before = instance.index_path.read_bytes()
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\n' + extra))
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1
+    assert any(x.kind in ('broken-dependency', 'broken-diagram-link') for x in warnings)
+    assert instance.index_path.read_bytes() == before
+
+
+@pytest.mark.parametrize('extra', [
+    'depends_on: wrong\n', 'depends_on: [3]\n',
+    'diagram_links: []\n', 'diagram_links: {node: 3}\n',
+    'diagram_links: {node: "javascript:alert(1)"}\n',
+])
+def test_invalid_architecture_metadata(instance, extra):
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\n' + extra))
+    with pytest.raises(ValueError):
+        read_document(path)
+
+
+def test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids(instance):
+    from codewiki.build import parse_doc, diagram_targets
+    from codewiki.query import render_text
+    child = instance.wiki_dir / 'child.md'
+    child.write_text('''---
+id: engine.v2
+title: Engine
+parent: architecture
+depends_on: [architecture]
+---
+## Internals {#run}
+Implementation explanation.
+''')
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', '''title: Architecture
+diagram_links:
+  engine: engine.v2
+  details: engine.v2.run
+''') + '\n## Map\n\n```mermaid\nflowchart LR\n engine --> details\n```\n')
+    ix = build(instance)
+    result = query(instance, ix, 'doc', 'architecture')
+    assert result['document']['used_by'] == ['engine.v2']
+    assert result['document']['diagram_links']['details'] == 'engine.v2.run'
+    assert 'Used by: engine.v2' in render_text(result)
+    assert query(instance, ix, 'doc', 'engine.v2')['document']['depends_on'] == ['architecture']
+    docs = [parse_doc(instance, p, []) for p in (path, child)]
+    targets = diagram_targets(docs[0], docs)
+    assert targets['engine']['href'] == 'engine.v2.html'
+    assert targets['details']['href'] == 'engine.v2.html#run'  # Explicit mapping overrides local slug.
+    assert targets['dispatch']['href'] == '#dispatch'  # Legacy local nodes still work.
+    assert targets['engine.v2']['href'] == 'engine.v2.html'  # Automatic document node.
+    html = (instance.site_dir / 'architecture.html').read_text()
+    assert 'href="engine.v2.html#run"' in html  # Non-JS destination link.
+    assert 'id="diagram-targets"' in html
+    assert (instance.site_dir / 'diagrams.js').is_file()
+
+
+def test_dependency_cycles_do_not_become_parent_cycles(instance):
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\ndepends_on: [child]\n'))
+    (instance.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\ndepends_on: [architecture]\n---\n## Child\n')
+    ix = build(instance)
+    assert ix['docs'][0]['used_by'] == ['child']

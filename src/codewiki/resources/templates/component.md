@@ -8,6 +8,8 @@ parent: architecture
 owns: []
 refs: []
 related: []
+depends_on: []
+diagram_links: {}
 decisions: []
 ---
 
@@ -18,7 +20,10 @@ decisions: []
 
 ## Flow
 
-Describe the main execution path and relevant ordering constraints.
+Describe the main execution path and relevant ordering constraints. Add a Mermaid
+diagram whose nodes match local heading slugs or use `diagram_links` to point to
+other pages. Declare component dependencies with `depends_on`; the build derives
+reverse "used by" links. Bind implementation sections with source tags or refs.
 
 ## Concepts
 

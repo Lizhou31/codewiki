@@ -23,9 +23,16 @@ def validate_frontmatter(fm):
     for key in ("title", "summary", "type", "status", "parent"):
         if key in fm and not isinstance(fm[key], str) and not (key == "parent" and fm[key] is None):
             raise ValueError(f"{key} must be a string")
-    for key in ("owns", "related"):
+    for key in ("owns", "related", "depends_on"):
         fm[key] = fm.get(key) or []
         _strings(fm[key], key)
+    links = fm.setdefault("diagram_links", {})
+    if not isinstance(links, dict) or any(
+        not isinstance(node, str) or not ID.fullmatch(node)
+        or not isinstance(target, str) or not ID.fullmatch(target)
+        for node, target in links.items()
+    ):
+        raise ValueError("diagram_links must map node identifiers to document or section IDs")
     fm["refs"] = fm.get("refs") or []
     if not isinstance(fm["refs"], list):
         raise ValueError("refs must be a list")

@@ -74,3 +74,22 @@ The build resolves those symbols through the same symbol table and reports a
 `broken-ref` error if one disappears. For YAML and devicetree you may also use
 the qualified path (`p721.board`, `&spim0/motion_sensor: aimpointpro2@0/cpi`)
 when a bare name is ambiguous within the file.
+
+## Clickable architecture diagrams
+
+Mermaid node IDs matching document IDs open their pages; node IDs matching local
+heading slugs open those sections. Use frontmatter for explicit cross-page targets:
+
+```yaml
+depends_on: [configuration]
+diagram_links:
+  engine: renderer
+  parse: documents.sections
+```
+
+The first field describes authored component dependencies and creates reverse
+"used by" links. The mapping binds Mermaid node names to a document ID or a full
+section ID. Explicit mappings override automatic matches. The strict build rejects
+unknown destinations. Use explicit heading anchors for durable section links.
+A component page can contain its own diagram, progressively revealing its tagged
+implementations. These fields are also available through `codewiki query doc`.
