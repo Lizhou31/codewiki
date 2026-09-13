@@ -4,8 +4,8 @@ type: component
 status: stable
 parent: architecture
 title: Build pipeline
-summary: Join explanations to source evidence, validate the graph, then publish HTML
-  and a query index from one model.
+summary: Follow the complete build process and inspect the orchestrator that coordinates
+  analysis, review status, rendering, and publication.
 owns:
 - ../src/codewiki/build.py
 depends_on:
@@ -23,36 +23,61 @@ diagram_links:
   index: build.index
   render: renderer.publication
   publish: build.publication
+  review_status: reviews.status
+  gate: build.orchestration
 ---
+
+This guide has two scopes: the diagram traces the **whole build pipeline**, while
+[Orchestration](#orchestration) explains the **coordinator** that invokes its stages.
+The [architecture map](architecture.html#architecture-map) links its Build
+orchestrator node directly to that section. The Renderer is one service used by
+the coordinator and one stage within the complete process.
 
 ## Inside the pipeline
 
+Arrows here mean **execution order**. This is a process view, so its boxes are
+operations rather than peer components. Select an operation to inspect its owner.
+
 ```mermaid
 flowchart TB
-  config["Resolve project configuration"] --> scan["Scan source · tags + symbols"]
-  config --> parse["Read Markdown · pages + sections"]
-  scan --> validate["Join · validate relationships"]
-  parse --> validate
-  validate --> index["Build query index + snapshot"]
-  index --> render["Render into staging directory"]
-  render --> publish["Publish site + index"]
+  config["Load project configuration"] --> scan["Scan source · tags + symbols"]
+  scan --> parse["Read Markdown · pages + sections"]
+  parse --> validate["Join · validate relationships"]
+  validate --> review_status["Compute documentation review status"]
+  review_status --> gate{"Strict structural validation passes?"}
+  gate -->|No| stop["Stop · preserve published outputs"]
+  gate -->|Yes| index["Assemble query index + snapshot"]
+  index --> render["Renderer · create HTML in staging"]
+  render -->|Success| publish["Publish site + index"]
+  render -->|Template error| stop
+  publish --> html_pages["HTML pages + assets"]
+  publish --> query_index["index.json"]
 ```
 
-This is the execution order of `codewiki build --strict`. Select a stage to read
-its implementation. Scanning and parsing are drawn as separate inputs to the join;
-the current Python builder executes them sequentially.
+The diagram follows `codewiki build --strict`. Source scanning and Markdown parsing
+run sequentially. Pending documentation reviews do not fail structural validation;
+`codewiki review check` is the separate review-completion gate for CI. Invalid input
+or review records can also abort the build before publication. Publication itself
+has the [boundaries described below](#publication).
 
 ## Orchestration {#orchestration}
 
-`run()` delegates scanning, Markdown parsing, and joining tags to stable anchors
-to `analyze()`. The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can
-proceed. With `--strict`, any error returns a failure and keeps the last good outputs.
-Pending documentation reviews and informational unimplemented concepts do not block
-publication. Use `codewiki review check` as the separate review gate.
+The **Build orchestrator** coordinates the process. `run()` calls `analyze()` for
+source scanning, Markdown parsing, and joining tags to stable anchors. It then
+requests review status, checks structural diagnostics, assembles the index,
+invokes `render_site()` with the model, and publishes the staged results. The
+standalone review API reuses `analyze()` without rendering or publishing.
 
-The builder coordinates other components; the language adapters own syntax-specific
-extraction, and the document parser owns Markdown structure. `Tag`, `Ref`, `Anchor`,
-and `Doc` carry the combined model through validation and rendering.
+With `--strict`, validation errors stop publication and preserve the last good
+outputs. Pending documentation reviews and informational unimplemented concepts
+do not block publication. Use `codewiki review check` as the separate review gate.
+
+Language adapters own syntax-specific extraction, the document parser owns Markdown
+structure, and the Renderer owns HTML composition. The orchestrator chooses when
+to invoke these responsibilities. `Tag`, `Ref`, `Anchor`, and `Doc` carry the combined
+model through validation and rendering. In document-level dependency lists,
+**Used by: Build pipeline** links to this guide; the caller is the orchestrator
+explained here, not an additional pipeline stage.
 
 ## Query index {#index}
 

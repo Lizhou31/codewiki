@@ -18,7 +18,7 @@ diagram_links:
   authoring: authoring
   documents: documents
   languages: languages
-  build: build
+  orchestrator: build.orchestration
   renderer: renderer
   queries: queries
   history: history
@@ -29,37 +29,55 @@ diagram_links:
 
 ## Architecture map
 
-**Select a component to go one level deeper.** Blue nodes open component guides;
-green nodes reveal a section. Arrows describe the labelled flow of data or use.
+**Select a responsibility to inspect it.** Blue nodes open guides; green nodes
+open a specific section. Solid arrows point from a caller or consumer to the
+service it uses. The dotted arrow identifies what the tests exercise.
 
 ```mermaid
 flowchart LR
-  subgraph authoring_layer["01 · AUTHORING"]
-    skills["Skills"] -->|guide| authoring["Init + preview"]
-    templates["Templates"] -->|scaffold| authoring
+  subgraph authoring_layer["AUTHORING"]
+    skills["Skills"]
+    templates["Templates"]
+    authoring["Init + preview"]
   end
-  subgraph core_layer["02 · ANALYSIS"]
-    documents["Documents"]
-    languages["Adapters"]
-    config["Config"]
+  orchestrator["Build orchestrator"]
+  subgraph analysis_services["ANALYSIS SERVICES"]
+    config["Configuration"]
+    languages["Language adapters"]
+    documents["Document parser + validation"]
+    reviews["Documentation review"]
   end
-  subgraph reading_layer["03 · READING"]
-    renderer["Renderer"]
-    queries["CLI queries"]
+  subgraph output_services["RENDERING + PROVENANCE"]
+    renderer["HTML renderer"]
     history["Provenance"]
   end
-  authoring -->|pages| documents
-  authoring -->|roots| config
-  documents -->|sections| build["Build"]
-  languages -->|tags| build
-  config -->|settings| build
-  build -->|model| renderer
-  build -->|index| queries
-  build -->|snapshot| history
-  build -.->|verified by| testing["Testing"]
-  documents -->|pages + coverage| reviews["Documentation review"]
-  reviews -->|status| renderer
+  queries["CLI queries"]
+  testing["Testing"]
+  authoring -->|copies| templates
+  authoring -->|installs| skills
+  authoring -->|runs builds through| orchestrator
+  skills -->|invoke| queries
+  orchestrator -->|reads settings from| config
+  orchestrator -->|scans source with| languages
+  orchestrator -->|parses and validates with| documents
+  orchestrator -->|requests status from| reviews
+  orchestrator -->|passes model to| renderer
+  orchestrator -->|records snapshot with| history
+  queries -->|checks freshness with| history
+  testing -.->|exercises| orchestrator
 ```
+
+**Build orchestrator** is the coordinating responsibility implemented by `run()`
+and `analyze()`. Its node opens [Orchestration](build.html#orchestration).
+The **build pipeline** is the complete process spanning analysis, review status,
+rendering, and publication; follow the separate
+[build pipeline diagram](build.html#inside-the-pipeline) to see execution order
+and outputs.
+
+This map shows primary collaborations, not execution order or every function call.
+Responsibilities can share a Python module: orchestration and HTML rendering both
+have implementations in `build.py`. Diagram groups organize responsibilities;
+they are not numbered pipeline stages.
 
 ## TL;DR
 

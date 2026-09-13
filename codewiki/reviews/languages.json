@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "document": "languages",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:16:24+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "1a6e3066266e041fb859e55279f961260e4d7ada52095c0142f4208cca6ac457",
+  "snapshot": {
+    "document_path": "wiki/languages.md",
+    "document_sha256": "4c088e87e6cdbc85e895048367229eb28d6a8a3539738aab641377094e302b14",
+    "sources": {
+      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/languages.py": "cf4f134a1a80ac60d790cc1dd82f941d837f1a3b70cc92168906c4b30f88d197"
+    },
+    "coverage": [
+      {
+        "anchor": "languages.python",
+        "file": "../src/codewiki/languages.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "languages.registry",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/languages.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "document": "renderer",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:16:58+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "a0f3d8cd62214022fefad6e47dcf844342adcc04e665f15d3b7286f28ffeb3bd",
+  "snapshot": {
+    "document_path": "wiki/renderer.md",
+    "document_sha256": "6def1c252b48004df6b36b57f500a1c3f44164280d0e92e0ba7a1878e28c225a",
+    "sources": {
+      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/resources/theme/_base.html.j2": "947d4a89fbc619b6420435f7a7505f886c8ea02a146a3f20d27982ce2933c324",
+      "../src/codewiki/resources/theme/diagrams.js": "2685d8cf41024bd315cb323671d4da1add3d89f6625613cc78cb3971088ebf5c",
+      "../src/codewiki/resources/theme/files.html.j2": "ec2609ca0494e7b1316dfe2559c69f1a3f0a8b50f12b74c010b2d09819322c1b",
+      "../src/codewiki/resources/theme/index.html.j2": "5ba043a7b9b2ac8495a5f265d5037bc41acae4eb8f121a16f781f402495df7db",
+      "../src/codewiki/resources/theme/page.html.j2": "490dfffee0307b1bd79ce778a0a8a32af941f7d2e71c374104ea4a368a1763fa",
+      "../src/codewiki/resources/theme/reading.js": "9a0068e24790bd744ad6b57060bd21aaba24bebcab62cd23fd69850f24090685",
+      "../src/codewiki/resources/theme/style.css": "fcceb4f4aef96b162774ecd82a03d49ef725ca352affd7c5c303eec5bc5470b3"
+    },
+    "coverage": [
+      {
+        "anchor": "renderer.markdown",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "renderer.navigation",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "renderer.publication",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/_base.html.j2",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/diagrams.js",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/files.html.j2",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/index.html.j2",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/page.html.j2",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/reading.js",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/theme/style.css",
+        "kind": "owns"
+      }
+    ]
+  }
+}

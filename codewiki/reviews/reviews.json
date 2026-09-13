@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "document": "reviews",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T09:17:13+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "d656a1f5e94de0b5ab727cc9021fae88920ced0b8ae19aea6bdabc0e385eac7f",
+  "snapshot": {
+    "document_path": "wiki/reviews.md",
+    "document_sha256": "5ff4df3b82588879c52f46218d181bf46e793ee2be45ef08b7b83342201fabca",
+    "sources": {
+      "../src/codewiki/resources/integrations/check-docs.sh": "5681dfe9774a73ec8305cb433d0b5c7f8651858f9cd2c19bd97096bc8b4943c1",
+      "../src/codewiki/resources/integrations/github-actions.yml": "9f504a72277c6c92db7034ccaad90fecdce682ca868e4b074aa920bb9c95ab13",
+      "../src/codewiki/resources/integrations/pre-push": "31800bc7fa7ed00d575494cf802bab418ca9a4659d73595d026f87d7ecc7983c",
+      "../src/codewiki/review.py": "b153c18140305bbc210f79872a2a9a9b552f640cc48857e4cf240eefad2be1e5",
+      "../tests/test_review.py": "96662c406ab1e0bb8e290278f6dc39c8258b966ed92f8419e8dc4e3f9c3b503a"
+    },
+    "coverage": [
+      {
+        "anchor": "reviews.acknowledge",
+        "file": "../src/codewiki/review.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "reviews.status",
+        "file": "../src/codewiki/review.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "reviews.tests",
+        "file": "../tests/test_review.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/resources/integrations/check-docs.sh",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/integrations/github-actions.yml",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/integrations/pre-push",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/review.py",
+        "kind": "owns"
+      },
+      {
+        "file": "../tests/test_review.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

@@ -1,13 +1,68 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-12T13:45:53+00:00",
+  "generated": "2026-09-13T16:18:03+00:00",
   "snapshot": {
     "framework_version": "0.4.0",
     "inputs": {
+      "reviews/architecture.json": {
+        "sha256": "6510badfc0a0601b2a5a36fab14d0fad23440081498febb825dca7a5af16a5e0",
+        "size": 1466,
+        "mtime_ns": 1789316122546450365
+      },
+      "reviews/authoring.json": {
+        "sha256": "9094f491415729e1daa93446cb179dfcade9b217abf62e89773c99afdc734888",
+        "size": 1170,
+        "mtime_ns": 1789316149966104820
+      },
+      "reviews/build.json": {
+        "sha256": "ca2392792589156932424dbc98e23ae6337c480ab1ef3a488fcd0d21953ce734",
+        "size": 1096,
+        "mtime_ns": 1789315472094315627
+      },
+      "reviews/documents.json": {
+        "sha256": "025fd1e19cc5ebe6e8aa505ee8b0aff209375e9d1d6808f74dd8b8742b402d7a",
+        "size": 1382,
+        "mtime_ns": 1789316167357309642
+      },
+      "reviews/history.json": {
+        "sha256": "3d6100da3a009be43b779d2ad22c3907b7896dd1d2d06737229824d3c948306c",
+        "size": 824,
+        "mtime_ns": 1789316108020202198
+      },
+      "reviews/languages.json": {
+        "sha256": "445f4c294abe86986677119479428c7e0fd0dbaf27f3607bed60fb2dd32806c8",
+        "size": 1076,
+        "mtime_ns": 1789316184990230849
+      },
+      "reviews/queries.json": {
+        "sha256": "716ef5f56982fc6c491c660386d51d71fd0005f777e62cbed38b3e5d03398f5b",
+        "size": 1211,
+        "mtime_ns": 1789316208665836392
+      },
+      "reviews/renderer.json": {
+        "sha256": "78f1db7d0eb747f6296af23c785fb41f3ef552a2faaf170125958290fd96f8f7",
+        "size": 2603,
+        "mtime_ns": 1789316218071899037
+      },
+      "reviews/reviews.json": {
+        "sha256": "fd43f47fddad3b165a58e944376c0031e22df9e63f4e1f8b1d381a771b1ce7f2",
+        "size": 2012,
+        "mtime_ns": 1789291033212334178
+      },
+      "reviews/skills.json": {
+        "sha256": "4e37040f22ca8cf3f6034750a17f685ea73710b72a6c16b999ab190983e7e8a6",
+        "size": 1690,
+        "mtime_ns": 1789316228503280493
+      },
+      "reviews/templates.json": {
+        "sha256": "e41c77960f5348540353d0c22521a0a6ef0d33de7fd1952e23b4734cbbd9f5a3",
+        "size": 1424,
+        "mtime_ns": 1789316282500953209
+      },
       "wiki/architecture.md": {
-        "sha256": "05a179fcb8c47b430368596f158d3e8fe0e2f4be6e7269eead456c73b5e1016c",
-        "size": 4939,
-        "mtime_ns": 1789219725236244410
+        "sha256": "2deea99df8a8c729166fe945878a8bbbc6399e15bf47d028928883b1b7a26b1a",
+        "size": 5940,
+        "mtime_ns": 1789314621627624365
       },
       "wiki/authoring.md": {
         "sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
@@ -15,9 +70,9 @@
         "mtime_ns": 1789219893372347924
       },
       "wiki/build.md": {
-        "sha256": "1ecb6a8b7fd6f022643002acab0e066ca1c97dceb70f795bc940cb8dac7cff1f",
-        "size": 4160,
-        "mtime_ns": 1789219725235953363
+        "sha256": "d9231f0123f888900ee556196b2369da20fee788cb03f34a6fd013ef0401643d",
+        "size": 5645,
+        "mtime_ns": 1789314581069867706
       },
       "wiki/documents.md": {
         "sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
@@ -65,9 +120,9 @@
         "mtime_ns": 1789219893372281715
       },
       "wiki/renderer.md": {
-        "sha256": "173bb766ae6731f2b44513dd058d083e79511fc5ad878ccd1df0a0f0d2de5172",
-        "size": 6449,
-        "mtime_ns": 1789219725236580333
+        "sha256": "6def1c252b48004df6b36b57f500a1c3f44164280d0e92e0ba7a1878e28c225a",
+        "size": 6785,
+        "mtime_ns": 1789314581070020706
       },
       "wiki/reviews.md": {
         "sha256": "5ff4df3b82588879c52f46218d181bf46e793ee2be45ef08b7b83342201fabca",
@@ -318,7 +373,7 @@
     "repositories": [
       {
         "root": "..",
-        "commit": "9cb4f55692c05c56738380f4c610ea7c69977fd4",
+        "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
         "dirty": true
       }
     ]
@@ -12056,7 +12111,7 @@
         "authoring": "authoring",
         "documents": "documents",
         "languages": "languages",
-        "build": "build",
+        "orchestrator": "build.orchestration",
         "renderer": "renderer",
         "queries": "queries",
         "history": "history",
@@ -12080,7 +12135,7 @@
         "templates",
         "testing"
       ],
-      "markdown": "---\nid: architecture\ntype: architecture\nstatus: stable\nparent: null\nrelated: []\nrefs: []\ntitle: CodeWiki architecture\nsummary: Explore the framework from its major components down to the declarations\n  that implement them. Start with a node, then follow the evidence.\nowns:\n- ../src/codewiki/__main__.py\n- ../src/codewiki/__init__.py\n- ../src/codewiki/config.py\ndiagram_links:\n  skills: skills\n  templates: templates\n  authoring: authoring\n  documents: documents\n  languages: languages\n  build: build\n  renderer: renderer\n  queries: queries\n  history: history\n  config: architecture.instances\n  testing: testing\n  reviews: reviews\n---\n\n## Architecture map\n\n**Select a component to go one level deeper.** Blue nodes open component guides;\ngreen nodes reveal a section. Arrows describe the labelled flow of data or use.\n\n```mermaid\nflowchart LR\n  subgraph authoring_layer[\"01 \u00b7 AUTHORING\"]\n    skills[\"Skills\"] -->|guide| authoring[\"Init + preview\"]\n    templates[\"Templates\"] -->|scaffold| authoring\n  end\n  subgraph core_layer[\"02 \u00b7 ANALYSIS\"]\n    documents[\"Documents\"]\n    languages[\"Adapters\"]\n    config[\"Config\"]\n  end\n  subgraph reading_layer[\"03 \u00b7 READING\"]\n    renderer[\"Renderer\"]\n    queries[\"CLI queries\"]\n    history[\"Provenance\"]\n  end\n  authoring -->|pages| documents\n  authoring -->|roots| config\n  documents -->|sections| build[\"Build\"]\n  languages -->|tags| build\n  config -->|settings| build\n  build -->|model| renderer\n  build -->|index| queries\n  build -->|snapshot| history\n  build -.->|verified by| testing[\"Testing\"]\n  documents -->|pages + coverage| reviews[\"Documentation review\"]\n  reviews -->|status| renderer\n```\n\n## TL;DR\n\n- The package owns the engine, language adapters, default renderer, skills, and templates.\n- Project instances own their Markdown, configuration, source tags, and customizations.\n- Component relationships are authored in Markdown; source tags bind explanations to real declarations.\n\nFor installation and everyday authoring, start with the separate\n[User manual](user-manual.html). The website places that root before Architecture;\nthis map follows the framework's internal components. Both branches use the same\ndocument model, index, and renderer.\n\n## Follow one build\n\nStart with `codewiki build --strict`. The same document model feeds both reading interfaces:\n\n1. **Find the project.** `Wiki` loads the configuration and resolves its source roots. [See project instances](#instances).\n2. **Read the evidence.** Adapters find declarations and tags; the Markdown parser finds pages and addressable sections. [Explore language adapters](languages.html).\n3. **Connect the explanation.** Validation joins stable document anchors to their implementations and checks for broken references. [Explore document validation](documents.html#validation).\n4. **Publish the result.** The builder produces an offline HTML wiki and a JSON index for progressive queries. [Inspect the build function](#pipeline).\n\n## Concepts\n\n### A project instance uses an installed framework {#instances}\n\nConfiguration paths are relative to `wiki.config.yaml`, so the same package can\nbuild any project by selecting its config. Source roots can be individual files\nor directories. A new instance keeps Markdown and customization in its repository;\nit does not copy the Python engine or default HTML theme. Config discovery checks\nan explicit path, the environment, and then parent directories.\n\n### Build once, expose two reading interfaces {#pipeline}\n\nThe build scans source declarations and documentation, validates their relationships,\nand joins stable anchor IDs to implementations. It then writes a JSON index and\nstatic HTML. Markdown remains the authored source of truth. The index stores original\nMarkdown sections and source locations; source text is retrieved only on request.\nStrict validation errors leave the last published index and site in place.\n\n## Entry Points\n\n`codewiki build` validates and renders; `codewiki query tree` begins the LLM reading\npath; `codewiki serve` provides a local authoring loop; `codewiki init` starts a\nproject wiki. `codewiki review status` lists pending reviews from live inputs;\n`codewiki review check` enforces their completion. Explore the child pages for the contracts each command relies on.\n\n## Open Questions\n\n- How should third-party parser adapters be distributed once more languages are needed?\n- Should future releases keep large source indexes in a separate on-disk store?\n\n## Verification\n\n[Testing architecture](testing.html) maps the automated checks from parser fixtures\nthrough document validation, progressive queries, publication, and diagram links.\nSelect a test area to inspect the assertions and their source implementations.\n\nBrowser interaction, installed-wheel smoke checks, and comparison against the original\nP721 engine are separate verification activities; the testing guide explains these\nboundaries and how to run the automated suite.\n",
+      "markdown": "---\nid: architecture\ntype: architecture\nstatus: stable\nparent: null\nrelated: []\nrefs: []\ntitle: CodeWiki architecture\nsummary: Explore the framework from its major components down to the declarations\n  that implement them. Start with a node, then follow the evidence.\nowns:\n- ../src/codewiki/__main__.py\n- ../src/codewiki/__init__.py\n- ../src/codewiki/config.py\ndiagram_links:\n  skills: skills\n  templates: templates\n  authoring: authoring\n  documents: documents\n  languages: languages\n  orchestrator: build.orchestration\n  renderer: renderer\n  queries: queries\n  history: history\n  config: architecture.instances\n  testing: testing\n  reviews: reviews\n---\n\n## Architecture map\n\n**Select a responsibility to inspect it.** Blue nodes open guides; green nodes\nopen a specific section. Solid arrows point from a caller or consumer to the\nservice it uses. The dotted arrow identifies what the tests exercise.\n\n```mermaid\nflowchart LR\n  subgraph authoring_layer[\"AUTHORING\"]\n    skills[\"Skills\"]\n    templates[\"Templates\"]\n    authoring[\"Init + preview\"]\n  end\n  orchestrator[\"Build orchestrator\"]\n  subgraph analysis_services[\"ANALYSIS SERVICES\"]\n    config[\"Configuration\"]\n    languages[\"Language adapters\"]\n    documents[\"Document parser + validation\"]\n    reviews[\"Documentation review\"]\n  end\n  subgraph output_services[\"RENDERING + PROVENANCE\"]\n    renderer[\"HTML renderer\"]\n    history[\"Provenance\"]\n  end\n  queries[\"CLI queries\"]\n  testing[\"Testing\"]\n  authoring -->|copies| templates\n  authoring -->|installs| skills\n  authoring -->|runs builds through| orchestrator\n  skills -->|invoke| queries\n  orchestrator -->|reads settings from| config\n  orchestrator -->|scans source with| languages\n  orchestrator -->|parses and validates with| documents\n  orchestrator -->|requests status from| reviews\n  orchestrator -->|passes model to| renderer\n  orchestrator -->|records snapshot with| history\n  queries -->|checks freshness with| history\n  testing -.->|exercises| orchestrator\n```\n\n**Build orchestrator** is the coordinating responsibility implemented by `run()`\nand `analyze()`. Its node opens [Orchestration](build.html#orchestration).\nThe **build pipeline** is the complete process spanning analysis, review status,\nrendering, and publication; follow the separate\n[build pipeline diagram](build.html#inside-the-pipeline) to see execution order\nand outputs.\n\nThis map shows primary collaborations, not execution order or every function call.\nResponsibilities can share a Python module: orchestration and HTML rendering both\nhave implementations in `build.py`. Diagram groups organize responsibilities;\nthey are not numbered pipeline stages.\n\n## TL;DR\n\n- The package owns the engine, language adapters, default renderer, skills, and templates.\n- Project instances own their Markdown, configuration, source tags, and customizations.\n- Component relationships are authored in Markdown; source tags bind explanations to real declarations.\n\nFor installation and everyday authoring, start with the separate\n[User manual](user-manual.html). The website places that root before Architecture;\nthis map follows the framework's internal components. Both branches use the same\ndocument model, index, and renderer.\n\n## Follow one build\n\nStart with `codewiki build --strict`. The same document model feeds both reading interfaces:\n\n1. **Find the project.** `Wiki` loads the configuration and resolves its source roots. [See project instances](#instances).\n2. **Read the evidence.** Adapters find declarations and tags; the Markdown parser finds pages and addressable sections. [Explore language adapters](languages.html).\n3. **Connect the explanation.** Validation joins stable document anchors to their implementations and checks for broken references. [Explore document validation](documents.html#validation).\n4. **Publish the result.** The builder produces an offline HTML wiki and a JSON index for progressive queries. [Inspect the build function](#pipeline).\n\n## Concepts\n\n### A project instance uses an installed framework {#instances}\n\nConfiguration paths are relative to `wiki.config.yaml`, so the same package can\nbuild any project by selecting its config. Source roots can be individual files\nor directories. A new instance keeps Markdown and customization in its repository;\nit does not copy the Python engine or default HTML theme. Config discovery checks\nan explicit path, the environment, and then parent directories.\n\n### Build once, expose two reading interfaces {#pipeline}\n\nThe build scans source declarations and documentation, validates their relationships,\nand joins stable anchor IDs to implementations. It then writes a JSON index and\nstatic HTML. Markdown remains the authored source of truth. The index stores original\nMarkdown sections and source locations; source text is retrieved only on request.\nStrict validation errors leave the last published index and site in place.\n\n## Entry Points\n\n`codewiki build` validates and renders; `codewiki query tree` begins the LLM reading\npath; `codewiki serve` provides a local authoring loop; `codewiki init` starts a\nproject wiki. `codewiki review status` lists pending reviews from live inputs;\n`codewiki review check` enforces their completion. Explore the child pages for the contracts each command relies on.\n\n## Open Questions\n\n- How should third-party parser adapters be distributed once more languages are needed?\n- Should future releases keep large source indexes in a separate on-disk store?\n\n## Verification\n\n[Testing architecture](testing.html) maps the automated checks from parser fixtures\nthrough document validation, progressive queries, publication, and diagram links.\nSelect a test area to inspect the assertions and their source implementations.\n\nBrowser interaction, installed-wheel smoke checks, and comparison against the original\nP721 engine are separate verification activities; the testing guide explains these\nboundaries and how to run the automated suite.\n",
       "decisions": [],
       "sections": [
         {
@@ -12091,9 +12146,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 30,
-          "line_end": 63,
-          "markdown": "## Architecture map\n\n**Select a component to go one level deeper.** Blue nodes open component guides;\ngreen nodes reveal a section. Arrows describe the labelled flow of data or use.\n\n```mermaid\nflowchart LR\n  subgraph authoring_layer[\"01 \u00b7 AUTHORING\"]\n    skills[\"Skills\"] -->|guide| authoring[\"Init + preview\"]\n    templates[\"Templates\"] -->|scaffold| authoring\n  end\n  subgraph core_layer[\"02 \u00b7 ANALYSIS\"]\n    documents[\"Documents\"]\n    languages[\"Adapters\"]\n    config[\"Config\"]\n  end\n  subgraph reading_layer[\"03 \u00b7 READING\"]\n    renderer[\"Renderer\"]\n    queries[\"CLI queries\"]\n    history[\"Provenance\"]\n  end\n  authoring -->|pages| documents\n  authoring -->|roots| config\n  documents -->|sections| build[\"Build\"]\n  languages -->|tags| build\n  config -->|settings| build\n  build -->|model| renderer\n  build -->|index| queries\n  build -->|snapshot| history\n  build -.->|verified by| testing[\"Testing\"]\n  documents -->|pages + coverage| reviews[\"Documentation review\"]\n  reviews -->|status| renderer\n```\n\n",
-          "body": "\n**Select a component to go one level deeper.** Blue nodes open component guides;\ngreen nodes reveal a section. Arrows describe the labelled flow of data or use.\n\n```mermaid\nflowchart LR\n  subgraph authoring_layer[\"01 \u00b7 AUTHORING\"]\n    skills[\"Skills\"] -->|guide| authoring[\"Init + preview\"]\n    templates[\"Templates\"] -->|scaffold| authoring\n  end\n  subgraph core_layer[\"02 \u00b7 ANALYSIS\"]\n    documents[\"Documents\"]\n    languages[\"Adapters\"]\n    config[\"Config\"]\n  end\n  subgraph reading_layer[\"03 \u00b7 READING\"]\n    renderer[\"Renderer\"]\n    queries[\"CLI queries\"]\n    history[\"Provenance\"]\n  end\n  authoring -->|pages| documents\n  authoring -->|roots| config\n  documents -->|sections| build[\"Build\"]\n  languages -->|tags| build\n  config -->|settings| build\n  build -->|model| renderer\n  build -->|index| queries\n  build -->|snapshot| history\n  build -.->|verified by| testing[\"Testing\"]\n  documents -->|pages + coverage| reviews[\"Documentation review\"]\n  reviews -->|status| renderer\n```\n\n"
+          "line_end": 81,
+          "markdown": "## Architecture map\n\n**Select a responsibility to inspect it.** Blue nodes open guides; green nodes\nopen a specific section. Solid arrows point from a caller or consumer to the\nservice it uses. The dotted arrow identifies what the tests exercise.\n\n```mermaid\nflowchart LR\n  subgraph authoring_layer[\"AUTHORING\"]\n    skills[\"Skills\"]\n    templates[\"Templates\"]\n    authoring[\"Init + preview\"]\n  end\n  orchestrator[\"Build orchestrator\"]\n  subgraph analysis_services[\"ANALYSIS SERVICES\"]\n    config[\"Configuration\"]\n    languages[\"Language adapters\"]\n    documents[\"Document parser + validation\"]\n    reviews[\"Documentation review\"]\n  end\n  subgraph output_services[\"RENDERING + PROVENANCE\"]\n    renderer[\"HTML renderer\"]\n    history[\"Provenance\"]\n  end\n  queries[\"CLI queries\"]\n  testing[\"Testing\"]\n  authoring -->|copies| templates\n  authoring -->|installs| skills\n  authoring -->|runs builds through| orchestrator\n  skills -->|invoke| queries\n  orchestrator -->|reads settings from| config\n  orchestrator -->|scans source with| languages\n  orchestrator -->|parses and validates with| documents\n  orchestrator -->|requests status from| reviews\n  orchestrator -->|passes model to| renderer\n  orchestrator -->|records snapshot with| history\n  queries -->|checks freshness with| history\n  testing -.->|exercises| orchestrator\n```\n\n**Build orchestrator** is the coordinating responsibility implemented by `run()`\nand `analyze()`. Its node opens [Orchestration](build.html#orchestration).\nThe **build pipeline** is the complete process spanning analysis, review status,\nrendering, and publication; follow the separate\n[build pipeline diagram](build.html#inside-the-pipeline) to see execution order\nand outputs.\n\nThis map shows primary collaborations, not execution order or every function call.\nResponsibilities can share a Python module: orchestration and HTML rendering both\nhave implementations in `build.py`. Diagram groups organize responsibilities;\nthey are not numbered pipeline stages.\n\n",
+          "body": "\n**Select a responsibility to inspect it.** Blue nodes open guides; green nodes\nopen a specific section. Solid arrows point from a caller or consumer to the\nservice it uses. The dotted arrow identifies what the tests exercise.\n\n```mermaid\nflowchart LR\n  subgraph authoring_layer[\"AUTHORING\"]\n    skills[\"Skills\"]\n    templates[\"Templates\"]\n    authoring[\"Init + preview\"]\n  end\n  orchestrator[\"Build orchestrator\"]\n  subgraph analysis_services[\"ANALYSIS SERVICES\"]\n    config[\"Configuration\"]\n    languages[\"Language adapters\"]\n    documents[\"Document parser + validation\"]\n    reviews[\"Documentation review\"]\n  end\n  subgraph output_services[\"RENDERING + PROVENANCE\"]\n    renderer[\"HTML renderer\"]\n    history[\"Provenance\"]\n  end\n  queries[\"CLI queries\"]\n  testing[\"Testing\"]\n  authoring -->|copies| templates\n  authoring -->|installs| skills\n  authoring -->|runs builds through| orchestrator\n  skills -->|invoke| queries\n  orchestrator -->|reads settings from| config\n  orchestrator -->|scans source with| languages\n  orchestrator -->|parses and validates with| documents\n  orchestrator -->|requests status from| reviews\n  orchestrator -->|passes model to| renderer\n  orchestrator -->|records snapshot with| history\n  queries -->|checks freshness with| history\n  testing -.->|exercises| orchestrator\n```\n\n**Build orchestrator** is the coordinating responsibility implemented by `run()`\nand `analyze()`. Its node opens [Orchestration](build.html#orchestration).\nThe **build pipeline** is the complete process spanning analysis, review status,\nrendering, and publication; follow the separate\n[build pipeline diagram](build.html#inside-the-pipeline) to see execution order\nand outputs.\n\nThis map shows primary collaborations, not execution order or every function call.\nResponsibilities can share a Python module: orchestration and HTML rendering both\nhave implementations in `build.py`. Diagram groups organize responsibilities;\nthey are not numbered pipeline stages.\n\n"
         },
         {
           "id": "architecture.tl-dr",
@@ -12102,8 +12157,8 @@
           "title": "TL;DR",
           "level": 2,
           "kind": "other",
-          "line_start": 64,
-          "line_end": 74,
+          "line_start": 82,
+          "line_end": 92,
           "markdown": "## TL;DR\n\n- The package owns the engine, language adapters, default renderer, skills, and templates.\n- Project instances own their Markdown, configuration, source tags, and customizations.\n- Component relationships are authored in Markdown; source tags bind explanations to real declarations.\n\nFor installation and everyday authoring, start with the separate\n[User manual](user-manual.html). The website places that root before Architecture;\nthis map follows the framework's internal components. Both branches use the same\ndocument model, index, and renderer.\n\n",
           "body": "\n- The package owns the engine, language adapters, default renderer, skills, and templates.\n- Project instances own their Markdown, configuration, source tags, and customizations.\n- Component relationships are authored in Markdown; source tags bind explanations to real declarations.\n\nFor installation and everyday authoring, start with the separate\n[User manual](user-manual.html). The website places that root before Architecture;\nthis map follows the framework's internal components. Both branches use the same\ndocument model, index, and renderer.\n\n"
         },
@@ -12114,8 +12169,8 @@
           "title": "Follow one build",
           "level": 2,
           "kind": "other",
-          "line_start": 75,
-          "line_end": 83,
+          "line_start": 93,
+          "line_end": 101,
           "markdown": "## Follow one build\n\nStart with `codewiki build --strict`. The same document model feeds both reading interfaces:\n\n1. **Find the project.** `Wiki` loads the configuration and resolves its source roots. [See project instances](#instances).\n2. **Read the evidence.** Adapters find declarations and tags; the Markdown parser finds pages and addressable sections. [Explore language adapters](languages.html).\n3. **Connect the explanation.** Validation joins stable document anchors to their implementations and checks for broken references. [Explore document validation](documents.html#validation).\n4. **Publish the result.** The builder produces an offline HTML wiki and a JSON index for progressive queries. [Inspect the build function](#pipeline).\n\n",
           "body": "\nStart with `codewiki build --strict`. The same document model feeds both reading interfaces:\n\n1. **Find the project.** `Wiki` loads the configuration and resolves its source roots. [See project instances](#instances).\n2. **Read the evidence.** Adapters find declarations and tags; the Markdown parser finds pages and addressable sections. [Explore language adapters](languages.html).\n3. **Connect the explanation.** Validation joins stable document anchors to their implementations and checks for broken references. [Explore document validation](documents.html#validation).\n4. **Publish the result.** The builder produces an offline HTML wiki and a JSON index for progressive queries. [Inspect the build function](#pipeline).\n\n"
         },
@@ -12126,8 +12181,8 @@
           "title": "Concepts",
           "level": 2,
           "kind": "other",
-          "line_start": 84,
-          "line_end": 101,
+          "line_start": 102,
+          "line_end": 119,
           "markdown": "## Concepts\n\n### A project instance uses an installed framework {#instances}\n\nConfiguration paths are relative to `wiki.config.yaml`, so the same package can\nbuild any project by selecting its config. Source roots can be individual files\nor directories. A new instance keeps Markdown and customization in its repository;\nit does not copy the Python engine or default HTML theme. Config discovery checks\nan explicit path, the environment, and then parent directories.\n\n### Build once, expose two reading interfaces {#pipeline}\n\nThe build scans source declarations and documentation, validates their relationships,\nand joins stable anchor IDs to implementations. It then writes a JSON index and\nstatic HTML. Markdown remains the authored source of truth. The index stores original\nMarkdown sections and source locations; source text is retrieved only on request.\nStrict validation errors leave the last published index and site in place.\n\n",
           "body": "\n"
         },
@@ -12138,8 +12193,8 @@
           "title": "A project instance uses an installed framework",
           "level": 3,
           "kind": "concept",
-          "line_start": 86,
-          "line_end": 93,
+          "line_start": 104,
+          "line_end": 111,
           "markdown": "### A project instance uses an installed framework {#instances}\n\nConfiguration paths are relative to `wiki.config.yaml`, so the same package can\nbuild any project by selecting its config. Source roots can be individual files\nor directories. A new instance keeps Markdown and customization in its repository;\nit does not copy the Python engine or default HTML theme. Config discovery checks\nan explicit path, the environment, and then parent directories.\n\n",
           "body": "\nConfiguration paths are relative to `wiki.config.yaml`, so the same package can\nbuild any project by selecting its config. Source roots can be individual files\nor directories. A new instance keeps Markdown and customization in its repository;\nit does not copy the Python engine or default HTML theme. Config discovery checks\nan explicit path, the environment, and then parent directories.\n\n"
         },
@@ -12150,8 +12205,8 @@
           "title": "Build once, expose two reading interfaces",
           "level": 3,
           "kind": "concept",
-          "line_start": 94,
-          "line_end": 101,
+          "line_start": 112,
+          "line_end": 119,
           "markdown": "### Build once, expose two reading interfaces {#pipeline}\n\nThe build scans source declarations and documentation, validates their relationships,\nand joins stable anchor IDs to implementations. It then writes a JSON index and\nstatic HTML. Markdown remains the authored source of truth. The index stores original\nMarkdown sections and source locations; source text is retrieved only on request.\nStrict validation errors leave the last published index and site in place.\n\n",
           "body": "\nThe build scans source declarations and documentation, validates their relationships,\nand joins stable anchor IDs to implementations. It then writes a JSON index and\nstatic HTML. Markdown remains the authored source of truth. The index stores original\nMarkdown sections and source locations; source text is retrieved only on request.\nStrict validation errors leave the last published index and site in place.\n\n"
         },
@@ -12162,8 +12217,8 @@
           "title": "Entry Points",
           "level": 2,
           "kind": "other",
-          "line_start": 102,
-          "line_end": 108,
+          "line_start": 120,
+          "line_end": 126,
           "markdown": "## Entry Points\n\n`codewiki build` validates and renders; `codewiki query tree` begins the LLM reading\npath; `codewiki serve` provides a local authoring loop; `codewiki init` starts a\nproject wiki. `codewiki review status` lists pending reviews from live inputs;\n`codewiki review check` enforces their completion. Explore the child pages for the contracts each command relies on.\n\n",
           "body": "\n`codewiki build` validates and renders; `codewiki query tree` begins the LLM reading\npath; `codewiki serve` provides a local authoring loop; `codewiki init` starts a\nproject wiki. `codewiki review status` lists pending reviews from live inputs;\n`codewiki review check` enforces their completion. Explore the child pages for the contracts each command relies on.\n\n"
         },
@@ -12174,8 +12229,8 @@
           "title": "Open Questions",
           "level": 2,
           "kind": "other",
-          "line_start": 109,
-          "line_end": 113,
+          "line_start": 127,
+          "line_end": 131,
           "markdown": "## Open Questions\n\n- How should third-party parser adapters be distributed once more languages are needed?\n- Should future releases keep large source indexes in a separate on-disk store?\n\n",
           "body": "\n- How should third-party parser adapters be distributed once more languages are needed?\n- Should future releases keep large source indexes in a separate on-disk store?\n\n"
         },
@@ -12186,8 +12241,8 @@
           "title": "Verification",
           "level": 2,
           "kind": "other",
-          "line_start": 114,
-          "line_end": 122,
+          "line_start": 132,
+          "line_end": 140,
           "markdown": "## Verification\n\n[Testing architecture](testing.html) maps the automated checks from parser fixtures\nthrough document validation, progressive queries, publication, and diagram links.\nSelect a test area to inspect the assertions and their source implementations.\n\nBrowser interaction, installed-wheel smoke checks, and comparison against the original\nP721 engine are separate verification activities; the testing guide explains these\nboundaries and how to run the automated suite.\n",
           "body": "\n[Testing architecture](testing.html) maps the automated checks from parser fixtures\nthrough document validation, progressive queries, publication, and diagram links.\nSelect a test area to inspect the assertions and their source implementations.\n\nBrowser interaction, installed-wheel smoke checks, and comparison against the original\nP721 engine are separate verification activities; the testing guide explains these\nboundaries and how to run the automated suite.\n"
         }
@@ -12238,8 +12293,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -12425,8 +12480,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -12456,16 +12511,18 @@
         "validate": "documents.validation",
         "index": "build.index",
         "render": "renderer.publication",
-        "publish": "build.publication"
+        "publish": "build.publication",
+        "review_status": "reviews.status",
+        "gate": "build.orchestration"
       },
       "used_by": [
         "authoring",
         "test-framework"
       ],
-      "summary": "Join explanations to source evidence, validate the graph, then publish HTML and a query index from one model.",
+      "summary": "Follow the complete build process and inspect the orchestrator that coordinates analysis, review status, rendering, and publication.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: build\ntype: component\nstatus: stable\nparent: architecture\ntitle: Build pipeline\nsummary: Join explanations to source evidence, validate the graph, then publish HTML\n  and a query index from one model.\nowns:\n- ../src/codewiki/build.py\ndepends_on:\n- documents\n- languages\n- renderer\n- history\n- reviews\nrelated: []\ndiagram_links:\n  config: architecture.instances\n  scan: languages.registry\n  parse: documents.sections\n  validate: documents.validation\n  index: build.index\n  render: renderer.publication\n  publish: build.publication\n---\n\n## Inside the pipeline\n\n```mermaid\nflowchart TB\n  config[\"Resolve project configuration\"] --> scan[\"Scan source \u00b7 tags + symbols\"]\n  config --> parse[\"Read Markdown \u00b7 pages + sections\"]\n  scan --> validate[\"Join \u00b7 validate relationships\"]\n  parse --> validate\n  validate --> index[\"Build query index + snapshot\"]\n  index --> render[\"Render into staging directory\"]\n  render --> publish[\"Publish site + index\"]\n```\n\nThis is the execution order of `codewiki build --strict`. Select a stage to read\nits implementation. Scanning and parsing are drawn as separate inputs to the join;\nthe current Python builder executes them sequentially.\n\n## Orchestration {#orchestration}\n\n`run()` delegates scanning, Markdown parsing, and joining tags to stable anchors\nto `analyze()`. The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can\nproceed. With `--strict`, any error returns a failure and keeps the last good outputs.\nPending documentation reviews and informational unimplemented concepts do not block\npublication. Use `codewiki review check` as the separate review gate.\n\nThe builder coordinates other components; the language adapters own syntax-specific\nextraction, and the document parser owns Markdown structure. `Tag`, `Ref`, `Anchor`,\nand `Doc` carry the combined model through validation and rendering.\n\n## Query index {#index}\n\n`build_index()` exports document summaries, parent/child relationships, dependencies,\ndiagram destinations, original Markdown sections, and source symbol locations. The\n`by_file` view makes file-to-document lookup possible without loading every section.\nSource declaration text is excluded from the symbol index; the query command reads\nbounded source ranges from a verified checkout when requested.\n\nThe snapshot fingerprints inputs and records repository state. It lets queries\ndetect stale ranges, but does not prove an explanation is correct.\n\nDocuments enter the index in sorted Markdown-path order. The renderer builds its\nown navigation tree and places manual roots first; it does not reorder the index.\nThe CLI walks the indexed parent hierarchy, so its root order can differ from the\nHTML sidebar while preserving the same pages and relationships.\n\nDocumentation review uses separate committed records under `reviews/`.\n`run()` compares current inputs with those records and includes a report in the\nindex and HTML. An `outdated-doc` warning means reviewed content changed;\n`unreviewed-doc` is informational until an initial baseline is recorded. The old\nGit-date-based `stale-doc` heuristic has been replaced. Rebuilding never changes\nreview records. See [Documentation review](reviews.html).\n\n## Publication boundaries {#publication}\n\nHTML is first rendered in a temporary directory. Template errors leave previously\npublished outputs intact. On success, files are copied to the site, obsolete pages\nlisted in the previous index are retired, and a temporary index replaces the old one.\nThe entire site directory is not swapped atomically: a reader during publication\ncan briefly see files from different builds. The preview server reloads after build.\n\n## Where to change behavior\n\n| Change | Entry point |\n| --- | --- |\n| Add a diagnostic | `join()` and the `SEVERITY` mapping |\n| Export another relationship | `build_index()` and query consumers |\n| Change navigation or page layout | [Renderer](renderer.html) |\n| Add a source syntax | [Language adapters](languages.html) |\n\nThe strict build and framework tests cover broken references, stale ranges,\nfailed rendering, and retiring deleted pages.\n",
+      "markdown": "---\nid: build\ntype: component\nstatus: stable\nparent: architecture\ntitle: Build pipeline\nsummary: Follow the complete build process and inspect the orchestrator that coordinates\n  analysis, review status, rendering, and publication.\nowns:\n- ../src/codewiki/build.py\ndepends_on:\n- documents\n- languages\n- renderer\n- history\n- reviews\nrelated: []\ndiagram_links:\n  config: architecture.instances\n  scan: languages.registry\n  parse: documents.sections\n  validate: documents.validation\n  index: build.index\n  render: renderer.publication\n  publish: build.publication\n  review_status: reviews.status\n  gate: build.orchestration\n---\n\nThis guide has two scopes: the diagram traces the **whole build pipeline**, while\n[Orchestration](#orchestration) explains the **coordinator** that invokes its stages.\nThe [architecture map](architecture.html#architecture-map) links its Build\norchestrator node directly to that section. The Renderer is one service used by\nthe coordinator and one stage within the complete process.\n\n## Inside the pipeline\n\nArrows here mean **execution order**. This is a process view, so its boxes are\noperations rather than peer components. Select an operation to inspect its owner.\n\n```mermaid\nflowchart TB\n  config[\"Load project configuration\"] --> scan[\"Scan source \u00b7 tags + symbols\"]\n  scan --> parse[\"Read Markdown \u00b7 pages + sections\"]\n  parse --> validate[\"Join \u00b7 validate relationships\"]\n  validate --> review_status[\"Compute documentation review status\"]\n  review_status --> gate{\"Strict structural validation passes?\"}\n  gate -->|No| stop[\"Stop \u00b7 preserve published outputs\"]\n  gate -->|Yes| index[\"Assemble query index + snapshot\"]\n  index --> render[\"Renderer \u00b7 create HTML in staging\"]\n  render -->|Success| publish[\"Publish site + index\"]\n  render -->|Template error| stop\n  publish --> html_pages[\"HTML pages + assets\"]\n  publish --> query_index[\"index.json\"]\n```\n\nThe diagram follows `codewiki build --strict`. Source scanning and Markdown parsing\nrun sequentially. Pending documentation reviews do not fail structural validation;\n`codewiki review check` is the separate review-completion gate for CI. Invalid input\nor review records can also abort the build before publication. Publication itself\nhas the [boundaries described below](#publication).\n\n## Orchestration {#orchestration}\n\nThe **Build orchestrator** coordinates the process. `run()` calls `analyze()` for\nsource scanning, Markdown parsing, and joining tags to stable anchors. It then\nrequests review status, checks structural diagnostics, assembles the index,\ninvokes `render_site()` with the model, and publishes the staged results. The\nstandalone review API reuses `analyze()` without rendering or publishing.\n\nWith `--strict`, validation errors stop publication and preserve the last good\noutputs. Pending documentation reviews and informational unimplemented concepts\ndo not block publication. Use `codewiki review check` as the separate review gate.\n\nLanguage adapters own syntax-specific extraction, the document parser owns Markdown\nstructure, and the Renderer owns HTML composition. The orchestrator chooses when\nto invoke these responsibilities. `Tag`, `Ref`, `Anchor`, and `Doc` carry the combined\nmodel through validation and rendering. In document-level dependency lists,\n**Used by: Build pipeline** links to this guide; the caller is the orchestrator\nexplained here, not an additional pipeline stage.\n\n## Query index {#index}\n\n`build_index()` exports document summaries, parent/child relationships, dependencies,\ndiagram destinations, original Markdown sections, and source symbol locations. The\n`by_file` view makes file-to-document lookup possible without loading every section.\nSource declaration text is excluded from the symbol index; the query command reads\nbounded source ranges from a verified checkout when requested.\n\nThe snapshot fingerprints inputs and records repository state. It lets queries\ndetect stale ranges, but does not prove an explanation is correct.\n\nDocuments enter the index in sorted Markdown-path order. The renderer builds its\nown navigation tree and places manual roots first; it does not reorder the index.\nThe CLI walks the indexed parent hierarchy, so its root order can differ from the\nHTML sidebar while preserving the same pages and relationships.\n\nDocumentation review uses separate committed records under `reviews/`.\n`run()` compares current inputs with those records and includes a report in the\nindex and HTML. An `outdated-doc` warning means reviewed content changed;\n`unreviewed-doc` is informational until an initial baseline is recorded. The old\nGit-date-based `stale-doc` heuristic has been replaced. Rebuilding never changes\nreview records. See [Documentation review](reviews.html).\n\n## Publication boundaries {#publication}\n\nHTML is first rendered in a temporary directory. Template errors leave previously\npublished outputs intact. On success, files are copied to the site, obsolete pages\nlisted in the previous index are retired, and a temporary index replaces the old one.\nThe entire site directory is not swapped atomically: a reader during publication\ncan briefly see files from different builds. The preview server reloads after build.\n\n## Where to change behavior\n\n| Change | Entry point |\n| --- | --- |\n| Add a diagnostic | `join()` and the `SEVERITY` mapping |\n| Export another relationship | `build_index()` and query consumers |\n| Change navigation or page layout | [Renderer](renderer.html) |\n| Add a source syntax | [Language adapters](languages.html) |\n\nThe strict build and framework tests cover broken references, stale ranges,\nfailed rendering, and retiring deleted pages.\n",
       "decisions": [],
       "sections": [
         {
@@ -12475,10 +12532,10 @@
           "title": "Inside the pipeline",
           "level": 2,
           "kind": "other",
-          "line_start": 28,
-          "line_end": 44,
-          "markdown": "## Inside the pipeline\n\n```mermaid\nflowchart TB\n  config[\"Resolve project configuration\"] --> scan[\"Scan source \u00b7 tags + symbols\"]\n  config --> parse[\"Read Markdown \u00b7 pages + sections\"]\n  scan --> validate[\"Join \u00b7 validate relationships\"]\n  parse --> validate\n  validate --> index[\"Build query index + snapshot\"]\n  index --> render[\"Render into staging directory\"]\n  render --> publish[\"Publish site + index\"]\n```\n\nThis is the execution order of `codewiki build --strict`. Select a stage to read\nits implementation. Scanning and parsing are drawn as separate inputs to the join;\nthe current Python builder executes them sequentially.\n\n",
-          "body": "\n```mermaid\nflowchart TB\n  config[\"Resolve project configuration\"] --> scan[\"Scan source \u00b7 tags + symbols\"]\n  config --> parse[\"Read Markdown \u00b7 pages + sections\"]\n  scan --> validate[\"Join \u00b7 validate relationships\"]\n  parse --> validate\n  validate --> index[\"Build query index + snapshot\"]\n  index --> render[\"Render into staging directory\"]\n  render --> publish[\"Publish site + index\"]\n```\n\nThis is the execution order of `codewiki build --strict`. Select a stage to read\nits implementation. Scanning and parsing are drawn as separate inputs to the join;\nthe current Python builder executes them sequentially.\n\n"
+          "line_start": 36,
+          "line_end": 62,
+          "markdown": "## Inside the pipeline\n\nArrows here mean **execution order**. This is a process view, so its boxes are\noperations rather than peer components. Select an operation to inspect its owner.\n\n```mermaid\nflowchart TB\n  config[\"Load project configuration\"] --> scan[\"Scan source \u00b7 tags + symbols\"]\n  scan --> parse[\"Read Markdown \u00b7 pages + sections\"]\n  parse --> validate[\"Join \u00b7 validate relationships\"]\n  validate --> review_status[\"Compute documentation review status\"]\n  review_status --> gate{\"Strict structural validation passes?\"}\n  gate -->|No| stop[\"Stop \u00b7 preserve published outputs\"]\n  gate -->|Yes| index[\"Assemble query index + snapshot\"]\n  index --> render[\"Renderer \u00b7 create HTML in staging\"]\n  render -->|Success| publish[\"Publish site + index\"]\n  render -->|Template error| stop\n  publish --> html_pages[\"HTML pages + assets\"]\n  publish --> query_index[\"index.json\"]\n```\n\nThe diagram follows `codewiki build --strict`. Source scanning and Markdown parsing\nrun sequentially. Pending documentation reviews do not fail structural validation;\n`codewiki review check` is the separate review-completion gate for CI. Invalid input\nor review records can also abort the build before publication. Publication itself\nhas the [boundaries described below](#publication).\n\n",
+          "body": "\nArrows here mean **execution order**. This is a process view, so its boxes are\noperations rather than peer components. Select an operation to inspect its owner.\n\n```mermaid\nflowchart TB\n  config[\"Load project configuration\"] --> scan[\"Scan source \u00b7 tags + symbols\"]\n  scan --> parse[\"Read Markdown \u00b7 pages + sections\"]\n  parse --> validate[\"Join \u00b7 validate relationships\"]\n  validate --> review_status[\"Compute documentation review status\"]\n  review_status --> gate{\"Strict structural validation passes?\"}\n  gate -->|No| stop[\"Stop \u00b7 preserve published outputs\"]\n  gate -->|Yes| index[\"Assemble query index + snapshot\"]\n  index --> render[\"Renderer \u00b7 create HTML in staging\"]\n  render -->|Success| publish[\"Publish site + index\"]\n  render -->|Template error| stop\n  publish --> html_pages[\"HTML pages + assets\"]\n  publish --> query_index[\"index.json\"]\n```\n\nThe diagram follows `codewiki build --strict`. Source scanning and Markdown parsing\nrun sequentially. Pending documentation reviews do not fail structural validation;\n`codewiki review check` is the separate review-completion gate for CI. Invalid input\nor review records can also abort the build before publication. Publication itself\nhas the [boundaries described below](#publication).\n\n"
         },
         {
           "id": "build.orchestration",
@@ -12487,10 +12544,10 @@
           "title": "Orchestration",
           "level": 2,
           "kind": "other",
-          "line_start": 45,
-          "line_end": 56,
-          "markdown": "## Orchestration {#orchestration}\n\n`run()` delegates scanning, Markdown parsing, and joining tags to stable anchors\nto `analyze()`. The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can\nproceed. With `--strict`, any error returns a failure and keeps the last good outputs.\nPending documentation reviews and informational unimplemented concepts do not block\npublication. Use `codewiki review check` as the separate review gate.\n\nThe builder coordinates other components; the language adapters own syntax-specific\nextraction, and the document parser owns Markdown structure. `Tag`, `Ref`, `Anchor`,\nand `Doc` carry the combined model through validation and rendering.\n\n",
-          "body": "\n`run()` delegates scanning, Markdown parsing, and joining tags to stable anchors\nto `analyze()`. The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can\nproceed. With `--strict`, any error returns a failure and keeps the last good outputs.\nPending documentation reviews and informational unimplemented concepts do not block\npublication. Use `codewiki review check` as the separate review gate.\n\nThe builder coordinates other components; the language adapters own syntax-specific\nextraction, and the document parser owns Markdown structure. `Tag`, `Ref`, `Anchor`,\nand `Doc` carry the combined model through validation and rendering.\n\n"
+          "line_start": 63,
+          "line_end": 81,
+          "markdown": "## Orchestration {#orchestration}\n\nThe **Build orchestrator** coordinates the process. `run()` calls `analyze()` for\nsource scanning, Markdown parsing, and joining tags to stable anchors. It then\nrequests review status, checks structural diagnostics, assembles the index,\ninvokes `render_site()` with the model, and publishes the staged results. The\nstandalone review API reuses `analyze()` without rendering or publishing.\n\nWith `--strict`, validation errors stop publication and preserve the last good\noutputs. Pending documentation reviews and informational unimplemented concepts\ndo not block publication. Use `codewiki review check` as the separate review gate.\n\nLanguage adapters own syntax-specific extraction, the document parser owns Markdown\nstructure, and the Renderer owns HTML composition. The orchestrator chooses when\nto invoke these responsibilities. `Tag`, `Ref`, `Anchor`, and `Doc` carry the combined\nmodel through validation and rendering. In document-level dependency lists,\n**Used by: Build pipeline** links to this guide; the caller is the orchestrator\nexplained here, not an additional pipeline stage.\n\n",
+          "body": "\nThe **Build orchestrator** coordinates the process. `run()` calls `analyze()` for\nsource scanning, Markdown parsing, and joining tags to stable anchors. It then\nrequests review status, checks structural diagnostics, assembles the index,\ninvokes `render_site()` with the model, and publishes the staged results. The\nstandalone review API reuses `analyze()` without rendering or publishing.\n\nWith `--strict`, validation errors stop publication and preserve the last good\noutputs. Pending documentation reviews and informational unimplemented concepts\ndo not block publication. Use `codewiki review check` as the separate review gate.\n\nLanguage adapters own syntax-specific extraction, the document parser owns Markdown\nstructure, and the Renderer owns HTML composition. The orchestrator chooses when\nto invoke these responsibilities. `Tag`, `Ref`, `Anchor`, and `Doc` carry the combined\nmodel through validation and rendering. In document-level dependency lists,\n**Used by: Build pipeline** links to this guide; the caller is the orchestrator\nexplained here, not an additional pipeline stage.\n\n"
         },
         {
           "id": "build.index",
@@ -12499,8 +12556,8 @@
           "title": "Query index",
           "level": 2,
           "kind": "other",
-          "line_start": 57,
-          "line_end": 79,
+          "line_start": 82,
+          "line_end": 104,
           "markdown": "## Query index {#index}\n\n`build_index()` exports document summaries, parent/child relationships, dependencies,\ndiagram destinations, original Markdown sections, and source symbol locations. The\n`by_file` view makes file-to-document lookup possible without loading every section.\nSource declaration text is excluded from the symbol index; the query command reads\nbounded source ranges from a verified checkout when requested.\n\nThe snapshot fingerprints inputs and records repository state. It lets queries\ndetect stale ranges, but does not prove an explanation is correct.\n\nDocuments enter the index in sorted Markdown-path order. The renderer builds its\nown navigation tree and places manual roots first; it does not reorder the index.\nThe CLI walks the indexed parent hierarchy, so its root order can differ from the\nHTML sidebar while preserving the same pages and relationships.\n\nDocumentation review uses separate committed records under `reviews/`.\n`run()` compares current inputs with those records and includes a report in the\nindex and HTML. An `outdated-doc` warning means reviewed content changed;\n`unreviewed-doc` is informational until an initial baseline is recorded. The old\nGit-date-based `stale-doc` heuristic has been replaced. Rebuilding never changes\nreview records. See [Documentation review](reviews.html).\n\n",
           "body": "\n`build_index()` exports document summaries, parent/child relationships, dependencies,\ndiagram destinations, original Markdown sections, and source symbol locations. The\n`by_file` view makes file-to-document lookup possible without loading every section.\nSource declaration text is excluded from the symbol index; the query command reads\nbounded source ranges from a verified checkout when requested.\n\nThe snapshot fingerprints inputs and records repository state. It lets queries\ndetect stale ranges, but does not prove an explanation is correct.\n\nDocuments enter the index in sorted Markdown-path order. The renderer builds its\nown navigation tree and places manual roots first; it does not reorder the index.\nThe CLI walks the indexed parent hierarchy, so its root order can differ from the\nHTML sidebar while preserving the same pages and relationships.\n\nDocumentation review uses separate committed records under `reviews/`.\n`run()` compares current inputs with those records and includes a report in the\nindex and HTML. An `outdated-doc` warning means reviewed content changed;\n`unreviewed-doc` is informational until an initial baseline is recorded. The old\nGit-date-based `stale-doc` heuristic has been replaced. Rebuilding never changes\nreview records. See [Documentation review](reviews.html).\n\n"
         },
@@ -12511,8 +12568,8 @@
           "title": "Publication boundaries",
           "level": 2,
           "kind": "other",
-          "line_start": 80,
-          "line_end": 87,
+          "line_start": 105,
+          "line_end": 112,
           "markdown": "## Publication boundaries {#publication}\n\nHTML is first rendered in a temporary directory. Template errors leave previously\npublished outputs intact. On success, files are copied to the site, obsolete pages\nlisted in the previous index are retired, and a temporary index replaces the old one.\nThe entire site directory is not swapped atomically: a reader during publication\ncan briefly see files from different builds. The preview server reloads after build.\n\n",
           "body": "\nHTML is first rendered in a temporary directory. Template errors leave previously\npublished outputs intact. On success, files are copied to the site, obsolete pages\nlisted in the previous index are retired, and a temporary index replaces the old one.\nThe entire site directory is not swapped atomically: a reader during publication\ncan briefly see files from different builds. The preview server reloads after build.\n\n"
         },
@@ -12523,8 +12580,8 @@
           "title": "Where to change behavior",
           "level": 2,
           "kind": "other",
-          "line_start": 88,
-          "line_end": 98,
+          "line_start": 113,
+          "line_end": 123,
           "markdown": "## Where to change behavior\n\n| Change | Entry point |\n| --- | --- |\n| Add a diagnostic | `join()` and the `SEVERITY` mapping |\n| Export another relationship | `build_index()` and query consumers |\n| Change navigation or page layout | [Renderer](renderer.html) |\n| Add a source syntax | [Language adapters](languages.html) |\n\nThe strict build and framework tests cover broken references, stale ranges,\nfailed rendering, and retiring deleted pages.\n",
           "body": "\n| Change | Entry point |\n| --- | --- |\n| Add a diagnostic | `join()` and the `SEVERITY` mapping |\n| Export another relationship | `build_index()` and query consumers |\n| Change navigation or page layout | [Renderer](renderer.html) |\n| Add a source syntax | [Language adapters](languages.html) |\n\nThe strict build and framework tests cover broken references, stale ranges,\nfailed rendering, and retiring deleted pages.\n"
         }
@@ -12534,8 +12591,8 @@
           "id": "build.orchestration",
           "title": "Orchestration",
           "kind": "other",
-          "text": "run() delegates scanning, Markdown parsing, and joining tags to stable anchors to analyze() . The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can proceed. With --strict , any error returns a failure and keeps the last good outputs. Pending documentation reviews and informational unimplemented concepts do not block publication. Use codewiki review check as the separate review gate. The builder coordinates other components; the language adapters own syntax-specific extraction, and the document parser owns Markdown structure. Tag , Ref , Anchor , and Doc carry the combined model through validation and rendering.",
-          "markdown": "\n`run()` delegates scanning, Markdown parsing, and joining tags to stable anchors\nto `analyze()`. The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can\nproceed. With `--strict`, any error returns a failure and keeps the last good outputs.\nPending documentation reviews and informational unimplemented concepts do not block\npublication. Use `codewiki review check` as the separate review gate.\n\nThe builder coordinates other components; the language adapters own syntax-specific\nextraction, and the document parser owns Markdown structure. `Tag`, `Ref`, `Anchor`,\nand `Doc` carry the combined model through validation and rendering.\n\n",
+          "text": "The Build orchestrator coordinates the process. run() calls analyze() for source scanning, Markdown parsing, and joining tags to stable anchors. It then requests review status, checks structural diagnostics, assembles the index, invokes render_site() with the model, and publishes the staged results. The standalone review API reuses analyze() without rendering or publishing. With --strict , validation errors stop publication and preserve the last good outputs. Pending documentation reviews and informational unimplemented concepts do not block publication. Use codewiki review check as the separate review gate. Language adapters own syntax-specific extraction, the document parser owns Markdown structure, and the Renderer owns HTML composition. The orchestrator chooses when to invoke these responsibilities. Tag , Ref , Anchor , and Doc carry the combined model through validation and rendering. In document-level dependency lists, Used by: Build pipeline links to this guide; the caller is the orchestrator explained here, not an additional pipeline stage.",
+          "markdown": "\nThe **Build orchestrator** coordinates the process. `run()` calls `analyze()` for\nsource scanning, Markdown parsing, and joining tags to stable anchors. It then\nrequests review status, checks structural diagnostics, assembles the index,\ninvokes `render_site()` with the model, and publishes the staged results. The\nstandalone review API reuses `analyze()` without rendering or publishing.\n\nWith `--strict`, validation errors stop publication and preserve the last good\noutputs. Pending documentation reviews and informational unimplemented concepts\ndo not block publication. Use `codewiki review check` as the separate review gate.\n\nLanguage adapters own syntax-specific extraction, the document parser owns Markdown\nstructure, and the Renderer owns HTML composition. The orchestrator chooses when\nto invoke these responsibilities. `Tag`, `Ref`, `Anchor`, and `Doc` carry the combined\nmodel through validation and rendering. In document-level dependency lists,\n**Used by: Build pipeline** links to this guide; the caller is the orchestrator\nexplained here, not an additional pipeline stage.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -12608,8 +12665,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -12863,8 +12920,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -13039,8 +13096,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -13221,8 +13278,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -14081,8 +14138,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -14122,7 +14179,7 @@
       "summary": "Turn the document model into an offline architecture explorer: component maps, section navigation, and expandable source evidence.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\nThe renderer turns the shared document model into static pages, a collapsible\nproject tree, linked diagrams, and expandable source panels. Browser scripts add\nsearch and reading controls to the generated HTML.\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\nThe default overview also lists pending documentation reviews. Each document\nshows its review state and previous reason separately from its authored `status`\n(such as stable or draft). These are build-time results; the live review API reads\ncurrent files. Custom theme overrides must adopt these panels explicitly.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`render_site()` supplies `nav_tree` nodes with `id`, `title`, `out`, `depth`, and\n`children`; `_base.html.j2` renders them recursively. Overview and Source index\nhave no current document branch, so their groups start closed. Expansion is\nlocal to the open page: navigating or reloading uses the next page's generated\ndefaults, with no saved expansion preference.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nSearch trims the query, ignores case, and requires every whitespace-separated\nword to occur in a page title. Matching a parent title does not automatically\nshow its nonmatching children. The all-group controls are disabled during search.\nOn initial loads at widths of 760 pixels or less, the script closes the outer\nBrowse documentation panel; readers can open it to reach the same tree.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
+      "markdown": "---\nid: renderer\ntype: component\nstatus: stable\nparent: architecture\ntitle: HTML renderer\nsummary: 'Turn the document model into an offline architecture explorer: component\n  maps, section navigation, and expandable source evidence.'\nowns:\n- ../src/codewiki/resources/theme/_base.html.j2\n- ../src/codewiki/resources/theme/page.html.j2\n- ../src/codewiki/resources/theme/index.html.j2\n- ../src/codewiki/resources/theme/files.html.j2\n- ../src/codewiki/resources/theme/style.css\n- ../src/codewiki/resources/theme/reading.js\n- ../src/codewiki/resources/theme/diagrams.js\ndepends_on:\n- documents\nrelated: []\ndiagram_links:\n  markdown: renderer.markdown\n  model: documents.validation\n  publication: renderer.publication\n  theme: renderer.publication\n  navigation: renderer.navigation\n  diagrams: renderer.diagrams\n  reading: renderer.reading\n---\n\n## Inside the renderer\n\nThe renderer turns the shared document model into static pages, a collapsible\nproject tree, linked diagrams, and expandable source panels. Browser scripts add\nsearch and reading controls to the generated HTML.\n\nThe [Build orchestrator](build.html#orchestration) calls `render_site()` with the\nassembled model. Rendering is one stage of the [complete build pipeline](build.html#inside-the-pipeline);\nthe orchestrator publishes the resulting staged files. **Used by: Build pipeline**\nis the document-level link to that coordinating caller's guide.\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\nThe default overview also lists pending documentation reviews. Each document\nshows its review state and previous reason separately from its authored `status`\n(such as stable or draft). These are build-time results; the live review API reads\ncurrent files. Custom theme overrides must adopt these panels explicitly.\n\n## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`render_site()` supplies `nav_tree` nodes with `id`, `title`, `out`, `depth`, and\n`children`; `_base.html.j2` renders them recursively. Overview and Source index\nhave no current document branch, so their groups start closed. Expansion is\nlocal to the open page: navigating or reloading uses the next page's generated\ndefaults, with no saved expansion preference.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nSearch trims the query, ignores case, and requires every whitespace-separated\nword to occur in a page title. Matching a parent title does not automatically\nshow its nonmatching children. The all-group controls are disabled during search.\nOn initial loads at widths of 760 pixels or less, the script closes the outer\nBrowse documentation panel; readers can open it to reach the same tree.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
       "decisions": [],
       "sections": [
         {
@@ -14133,9 +14190,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 30,
-          "line_end": 48,
-          "markdown": "## Inside the renderer\n\nThe renderer turns the shared document model into static pages, a collapsible\nproject tree, linked diagrams, and expandable source panels. Browser scripts add\nsearch and reading controls to the generated HTML.\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n",
-          "body": "\nThe renderer turns the shared document model into static pages, a collapsible\nproject tree, linked diagrams, and expandable source panels. Browser scripts add\nsearch and reading controls to the generated HTML.\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n"
+          "line_end": 53,
+          "markdown": "## Inside the renderer\n\nThe renderer turns the shared document model into static pages, a collapsible\nproject tree, linked diagrams, and expandable source panels. Browser scripts add\nsearch and reading controls to the generated HTML.\n\nThe [Build orchestrator](build.html#orchestration) calls `render_site()` with the\nassembled model. Rendering is one stage of the [complete build pipeline](build.html#inside-the-pipeline);\nthe orchestrator publishes the resulting staged files. **Used by: Build pipeline**\nis the document-level link to that coordinating caller's guide.\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n",
+          "body": "\nThe renderer turns the shared document model into static pages, a collapsible\nproject tree, linked diagrams, and expandable source panels. Browser scripts add\nsearch and reading controls to the generated HTML.\n\nThe [Build orchestrator](build.html#orchestration) calls `render_site()` with the\nassembled model. Rendering is one stage of the [complete build pipeline](build.html#inside-the-pipeline);\nthe orchestrator publishes the resulting staged files. **Used by: Build pipeline**\nis the document-level link to that coordinating caller's guide.\n\n```mermaid\nflowchart TB\n  markdown[\"Markdown bodies\"] --> model[\"Rendered sections + source bindings\"]\n  model --> publication[\"Jinja page composition\"]\n  theme[\"Package theme + project overrides\"] --> publication\n  publication --> navigation[\"Resolve diagram destinations\"]\n  navigation --> diagrams[\"Clickable Mermaid nodes\"]\n  publication --> reading[\"Outline + expandable implementations\"]\n```\n\nBlue linked nodes open another component; green linked nodes open a section.\nThe same page works as static HTML. JavaScript enhances diagrams and reading tools.\n\n"
         },
         {
           "id": "renderer.markdown",
@@ -14144,8 +14201,8 @@
           "title": "Markdown to sections",
           "level": 2,
           "kind": "other",
-          "line_start": 49,
-          "line_end": 55,
+          "line_start": 54,
+          "line_end": 60,
           "markdown": "## Markdown to sections {#markdown}\n\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n",
           "body": "\n`render_body()` separates Mermaid fences from ordinary Markdown. Markdown becomes\nHTML; diagrams remain escaped source until the browser renders them with the vendored\nMermaid library. Each section is emitted once, in Markdown order. Heading IDs become\nstable destinations, and tagged declarations appear directly below their explanation.\n\n"
         },
@@ -14156,8 +14213,8 @@
           "title": "Compose and publish pages",
           "level": 2,
           "kind": "other",
-          "line_start": 56,
-          "line_end": 79,
+          "line_start": 61,
+          "line_end": 84,
           "markdown": "## Compose and publish pages {#publication}\n\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\nThe default overview also lists pending documentation reviews. Each document\nshows its review state and previous reason separately from its authored `status`\n(such as stable or draft). These are build-time results; the live review API reads\ncurrent files. Custom theme overrides must adopt these panels explicitly.\n\n",
           "body": "\n`render_site()` loads Jinja templates from the project's `wiki/_theme/` first, then\nfalls back to packaged defaults. `_base.html.j2` owns the shared navigation and shell;\n`page.html.j2` owns document sections, dependencies, component cards, diagrams, and\nsource panels. `index.html.j2` and `files.html.j2` provide overview and file lookup.\n\nPages with no parent are independent roots in the sidebar and Overview cards.\nManual roots appear before other roots in both places, preserving existing order\nwithin each group. The sidebar starts with an Overview link to `index.html`, which\nis highlighted when viewing the overview and participates in page-title search.\nA root with `type: manual` uses its actual page hierarchy for the reading path,\nso a user manual and its descendants do not display architecture reading steps.\nArchitecture pages retain the Architecture \u2192 Component \u2192 Implementation path.\n\nCSS provides the responsive layout, diagram canvas, and reading-depth cues. There\nis no client-side app router or production application server. Output includes\nlocal Mermaid and syntax-highlighting assets and can be served by any static host.\n\nThe default overview also lists pending documentation reviews. Each document\nshows its review state and previous reason separately from its authored `status`\n(such as stable or draft). These are build-time results; the live review API reads\ncurrent files. Custom theme overrides must adopt these panels explicitly.\n\n"
         },
@@ -14168,8 +14225,8 @@
           "title": "Resolve diagram links",
           "level": 2,
           "kind": "other",
-          "line_start": 80,
-          "line_end": 92,
+          "line_start": 85,
+          "line_end": 97,
           "markdown": "## Resolve diagram links {#navigation}\n\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n",
           "body": "\n`diagram_targets()` resolves node names using this precedence:\n\n1. A node matching a document ID links to that component page.\n2. A node matching a heading slug on this page links to that section.\n3. An explicit `diagram_links` entry overrides either automatic match.\n\nFor example, the `navigation` node above points here. An author can also map a\nshort node name to `documents.validation` to cross into another page's section.\nThe build validates explicit destinations. It does not infer runtime dependencies\nfrom node positions or source tags; authors declare those relationships.\n\n"
         },
@@ -14180,8 +14237,8 @@
           "title": "Browser behavior",
           "level": 2,
           "kind": "other",
-          "line_start": 93,
-          "line_end": 100,
+          "line_start": 98,
+          "line_end": 105,
           "markdown": "## Browser behavior {#diagrams}\n\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n",
           "body": "\n`diagrams.js` renders each diagram and wraps matching nodes in real SVG links.\nLinks support keyboard focus, normal navigation, copying the destination, and\nopening another tab. The expand button enlarges the canvas; Escape closes it.\nA plain destination list below each explicitly mapped diagram offers the same path\nwhen diagrams fail to render or a reader prefers text.\n\n"
         },
@@ -14192,8 +14249,8 @@
           "title": "Reading and source evidence",
           "level": 2,
           "kind": "other",
-          "line_start": 101,
-          "line_end": 129,
+          "line_start": 106,
+          "line_end": 134,
           "markdown": "## Reading and source evidence {#reading}\n\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`render_site()` supplies `nav_tree` nodes with `id`, `title`, `out`, `depth`, and\n`children`; `_base.html.j2` renders them recursively. Overview and Source index\nhave no current document branch, so their groups start closed. Expansion is\nlocal to the open page: navigating or reloading uses the next page's generated\ndefaults, with no saved expansion preference.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nSearch trims the query, ignores case, and requires every whitespace-separated\nword to occur in a page title. Matching a parent title does not automatically\nshow its nonmatching children. The all-group controls are disabled during search.\nOn initial loads at widths of 760 pixels or less, the script closes the outer\nBrowse documentation panel; readers can open it to reach the same tree.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n",
           "body": "\nThe sidebar renders nested native `details` groups for parent pages, with separate\npage links in their summaries. The current page and its ancestors start expanded;\nother groups start collapsed. Individual groups work without JavaScript. The\nrenderer also retains the flat `nav` data contract for custom theme overrides.\n\n`render_site()` supplies `nav_tree` nodes with `id`, `title`, `out`, `depth`, and\n`children`; `_base.html.j2` renders them recursively. Overview and Source index\nhave no current document branch, so their groups start closed. Expansion is\nlocal to the open page: navigating or reloading uses the next page's generated\ndefaults, with no saved expansion preference.\n\n`reading.js` adds expand/collapse-all controls and filters the document tree,\nrevealing ancestors of matches and restoring pre-search expansion when cleared.\nSearch trims the query, ignores case, and requires every whitespace-separated\nword to occur in a page title. Matching a parent title does not automatically\nshow its nonmatching children. The all-group controls are disabled during search.\nOn initial loads at widths of 760 pixels or less, the script closes the outer\nBrowse documentation panel; readers can open it to reach the same tree.\nIt tracks the visible section in the outline,\nand loads syntax highlighting when code is visible. Native `details` elements keep\nimplementation bodies closed until requested; file paths and line ranges identify\nthe source evidence. File ownership links open the configured editor, including\nJinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged languages.\n\nThe HTML includes declaration snippets up to the configured build limit. Use\n`query source` for paginated source retrieval with freshness checking. Markdown and\nMermaid are trusted project content, so project authors control embedded HTML.\n"
         }
@@ -14281,8 +14338,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -14695,8 +14752,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -14864,8 +14921,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -15014,8 +15071,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -17088,7 +17145,7 @@
   "reviews": {
     "schema_version": 1,
     "ok": false,
-    "pending": 20,
+    "pending": 9,
     "total": 20,
     "errors": [],
     "documents": [
@@ -17096,11 +17153,11 @@
         "document": "architecture",
         "title": "CodeWiki architecture",
         "source": "wiki/architecture.md",
-        "state": "unreviewed",
-        "fingerprint": "286cc40d5a5667e495a03a952b4b4db8597700c9a0874ceca9eb2db5fca16afb",
+        "state": "current",
+        "fingerprint": "56cae364d34fc2a36e643ce8ba5c168f9e2237f901f79ae900a6cab0f9f73264",
         "snapshot": {
           "document_path": "wiki/architecture.md",
-          "document_sha256": "05a179fcb8c47b430368596f158d3e8fe0e2f4be6e7269eead456c73b5e1016c",
+          "document_sha256": "2deea99df8a8c729166fe945878a8bbbc6399e15bf47d028928883b1b7a26b1a",
           "sources": {
             "../src/codewiki/__init__.py": "7d2c2d5f3aa944c9cf3372cf20f552810ba3118c75983c1453d7bf8ccb445ba6",
             "../src/codewiki/__main__.py": "8dc9368d75602920fb040cd35525848d25b8f8fb252e01dbf8109d752e5d532a",
@@ -17134,15 +17191,59 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "architecture",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:15:22+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "56cae364d34fc2a36e643ce8ba5c168f9e2237f901f79ae900a6cab0f9f73264",
+          "snapshot": {
+            "document_path": "wiki/architecture.md",
+            "document_sha256": "2deea99df8a8c729166fe945878a8bbbc6399e15bf47d028928883b1b7a26b1a",
+            "sources": {
+              "../src/codewiki/__init__.py": "7d2c2d5f3aa944c9cf3372cf20f552810ba3118c75983c1453d7bf8ccb445ba6",
+              "../src/codewiki/__main__.py": "8dc9368d75602920fb040cd35525848d25b8f8fb252e01dbf8109d752e5d532a",
+              "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+              "../src/codewiki/config.py": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825"
+            },
+            "coverage": [
+              {
+                "anchor": "architecture.instances",
+                "file": "../src/codewiki/config.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "architecture.pipeline",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/__init__.py",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/__main__.py",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/config.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "authoring",
         "title": "Initialization & preview",
         "source": "wiki/authoring.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "b050e9ae3075c5d08971bdc2fd4073cfe337dfb18d2b0567534c17faba45953e",
         "snapshot": {
           "document_path": "wiki/authoring.md",
@@ -17174,19 +17275,57 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "authoring",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:15:49+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "b050e9ae3075c5d08971bdc2fd4073cfe337dfb18d2b0567534c17faba45953e",
+          "snapshot": {
+            "document_path": "wiki/authoring.md",
+            "document_sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
+            "sources": {
+              "../src/codewiki/init_project.py": "aba75208d999332430ba7f7178eb0a75c0ddafdfd332a4e6b97c0a3b906069bb",
+              "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"
+            },
+            "coverage": [
+              {
+                "anchor": "authoring.preview",
+                "file": "../src/codewiki/serve.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "authoring.scaffold",
+                "file": "../src/codewiki/init_project.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/init_project.py",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/serve.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "build",
         "title": "Build pipeline",
         "source": "wiki/build.md",
-        "state": "unreviewed",
-        "fingerprint": "f3a213c33cfdf808b545d91ee7b54919f0df55eab47944d9dc3d15f1bfdbe9b0",
+        "state": "current",
+        "fingerprint": "eb2341565ed776fd5b8cdd1b4bca9ee0f16f7838de35ec71487ff20849fe37e1",
         "snapshot": {
           "document_path": "wiki/build.md",
-          "document_sha256": "1ecb6a8b7fd6f022643002acab0e066ca1c97dceb70f795bc940cb8dac7cff1f",
+          "document_sha256": "d9231f0123f888900ee556196b2369da20fee788cb03f34a6fd013ef0401643d",
           "sources": {
             "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998"
           },
@@ -17215,15 +17354,54 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "build",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:04:32+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "eb2341565ed776fd5b8cdd1b4bca9ee0f16f7838de35ec71487ff20849fe37e1",
+          "snapshot": {
+            "document_path": "wiki/build.md",
+            "document_sha256": "d9231f0123f888900ee556196b2369da20fee788cb03f34a6fd013ef0401643d",
+            "sources": {
+              "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998"
+            },
+            "coverage": [
+              {
+                "anchor": "build.index",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "build.orchestration",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "build.publication",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/build.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "documents",
         "title": "Document model & validation",
         "source": "wiki/documents.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "6e6f4babd3bf1da7626b1e4318981d7d5eeba1bbecc29a4039d418fcc7eaf240",
         "snapshot": {
           "document_path": "wiki/documents.md",
@@ -17263,15 +17441,61 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "documents",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:16:07+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "6e6f4babd3bf1da7626b1e4318981d7d5eeba1bbecc29a4039d418fcc7eaf240",
+          "snapshot": {
+            "document_path": "wiki/documents.md",
+            "document_sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
+            "sources": {
+              "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+              "../src/codewiki/documents.py": "60d76e2590e80666b48706b1d40e57cd5d27b5aed0dbb739a82c8adc4e1729e0"
+            },
+            "coverage": [
+              {
+                "anchor": "documents.frontmatter",
+                "file": "../src/codewiki/documents.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "documents.rendering",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "documents.sections",
+                "file": "../src/codewiki/documents.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "documents.validation",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/documents.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "history",
         "title": "Provenance & decisions",
         "source": "wiki/history.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "aa33e3676a68569a695c46ae733cf16972acb3fcd9e0ebb23b1481d13dfdcd66",
         "snapshot": {
           "document_path": "wiki/history.md",
@@ -17292,15 +17516,42 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "history",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:15:08+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "aa33e3676a68569a695c46ae733cf16972acb3fcd9e0ebb23b1481d13dfdcd66",
+          "snapshot": {
+            "document_path": "wiki/history.md",
+            "document_sha256": "ea1f91adddce63b085ceb4afd5c1f63d55e868d150f3b58d5c414db4c0b7d4d0",
+            "sources": {
+              "../src/codewiki/snapshot.py": "c17e7b137498c73ef4dab77b8c1f8b31a098f64802e5cb5b1978492ef2902b00"
+            },
+            "coverage": [
+              {
+                "anchor": "history.fingerprints",
+                "file": "../src/codewiki/snapshot.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/snapshot.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "languages",
         "title": "Language adapters",
         "source": "wiki/languages.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "1a6e3066266e041fb859e55279f961260e4d7ada52095c0142f4208cca6ac457",
         "snapshot": {
           "document_path": "wiki/languages.md",
@@ -17328,9 +17579,43 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "languages",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:16:24+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "1a6e3066266e041fb859e55279f961260e4d7ada52095c0142f4208cca6ac457",
+          "snapshot": {
+            "document_path": "wiki/languages.md",
+            "document_sha256": "4c088e87e6cdbc85e895048367229eb28d6a8a3539738aab641377094e302b14",
+            "sources": {
+              "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+              "../src/codewiki/languages.py": "cf4f134a1a80ac60d790cc1dd82f941d837f1a3b70cc92168906c4b30f88d197"
+            },
+            "coverage": [
+              {
+                "anchor": "languages.python",
+                "file": "../src/codewiki/languages.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "languages.registry",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/languages.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "manual-configuration",
@@ -17416,7 +17701,7 @@
         "document": "queries",
         "title": "Progressive CLI queries",
         "source": "wiki/queries.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "609b9c0a277f9316a3bb22c99bf60e027f69bcf6c6f3b03132ac9846863f7586",
         "snapshot": {
           "document_path": "wiki/queries.md",
@@ -17450,19 +17735,59 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "queries",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:16:48+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "609b9c0a277f9316a3bb22c99bf60e027f69bcf6c6f3b03132ac9846863f7586",
+          "snapshot": {
+            "document_path": "wiki/queries.md",
+            "document_sha256": "2d150a6dc5b7665615f377b1ab09ad798b538714565f8f1a8f503cc5cc46f8a5",
+            "sources": {
+              "../src/codewiki/query.py": "446ca12527dfb34b71f73388763e9546e7888bca8084d07d39c7b53ee4e4a5a3",
+              "../src/codewiki/snapshot.py": "c17e7b137498c73ef4dab77b8c1f8b31a098f64802e5cb5b1978492ef2902b00"
+            },
+            "coverage": [
+              {
+                "anchor": "queries.disclosure",
+                "file": "../src/codewiki/query.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "queries.freshness",
+                "file": "../src/codewiki/snapshot.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "queries.symbols",
+                "file": "../src/codewiki/query.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/query.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "renderer",
         "title": "HTML renderer",
         "source": "wiki/renderer.md",
-        "state": "unreviewed",
-        "fingerprint": "d37fcafb3a0a3decda67e092d68d51c52de08fc71b874f79daf6ae20091789a1",
+        "state": "current",
+        "fingerprint": "a0f3d8cd62214022fefad6e47dcf844342adcc04e665f15d3b7286f28ffeb3bd",
         "snapshot": {
           "document_path": "wiki/renderer.md",
-          "document_sha256": "173bb766ae6731f2b44513dd058d083e79511fc5ad878ccd1df0a0f0d2de5172",
+          "document_sha256": "6def1c252b48004df6b36b57f500a1c3f44164280d0e92e0ba7a1878e28c225a",
           "sources": {
             "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
             "../src/codewiki/resources/theme/_base.html.j2": "947d4a89fbc619b6420435f7a7505f886c8ea02a146a3f20d27982ce2933c324",
@@ -17522,15 +17847,85 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "renderer",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:16:58+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "a0f3d8cd62214022fefad6e47dcf844342adcc04e665f15d3b7286f28ffeb3bd",
+          "snapshot": {
+            "document_path": "wiki/renderer.md",
+            "document_sha256": "6def1c252b48004df6b36b57f500a1c3f44164280d0e92e0ba7a1878e28c225a",
+            "sources": {
+              "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+              "../src/codewiki/resources/theme/_base.html.j2": "947d4a89fbc619b6420435f7a7505f886c8ea02a146a3f20d27982ce2933c324",
+              "../src/codewiki/resources/theme/diagrams.js": "2685d8cf41024bd315cb323671d4da1add3d89f6625613cc78cb3971088ebf5c",
+              "../src/codewiki/resources/theme/files.html.j2": "ec2609ca0494e7b1316dfe2559c69f1a3f0a8b50f12b74c010b2d09819322c1b",
+              "../src/codewiki/resources/theme/index.html.j2": "5ba043a7b9b2ac8495a5f265d5037bc41acae4eb8f121a16f781f402495df7db",
+              "../src/codewiki/resources/theme/page.html.j2": "490dfffee0307b1bd79ce778a0a8a32af941f7d2e71c374104ea4a368a1763fa",
+              "../src/codewiki/resources/theme/reading.js": "9a0068e24790bd744ad6b57060bd21aaba24bebcab62cd23fd69850f24090685",
+              "../src/codewiki/resources/theme/style.css": "fcceb4f4aef96b162774ecd82a03d49ef725ca352affd7c5c303eec5bc5470b3"
+            },
+            "coverage": [
+              {
+                "anchor": "renderer.markdown",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "renderer.navigation",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "renderer.publication",
+                "file": "../src/codewiki/build.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/_base.html.j2",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/diagrams.js",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/files.html.j2",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/index.html.j2",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/page.html.j2",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/reading.js",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/theme/style.css",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "reviews",
         "title": "Documentation review",
         "source": "wiki/reviews.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "d656a1f5e94de0b5ab727cc9021fae88920ced0b8ae19aea6bdabc0e385eac7f",
         "snapshot": {
           "document_path": "wiki/reviews.md",
@@ -17583,15 +17978,74 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "reviews",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T09:17:13+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "d656a1f5e94de0b5ab727cc9021fae88920ced0b8ae19aea6bdabc0e385eac7f",
+          "snapshot": {
+            "document_path": "wiki/reviews.md",
+            "document_sha256": "5ff4df3b82588879c52f46218d181bf46e793ee2be45ef08b7b83342201fabca",
+            "sources": {
+              "../src/codewiki/resources/integrations/check-docs.sh": "5681dfe9774a73ec8305cb433d0b5c7f8651858f9cd2c19bd97096bc8b4943c1",
+              "../src/codewiki/resources/integrations/github-actions.yml": "9f504a72277c6c92db7034ccaad90fecdce682ca868e4b074aa920bb9c95ab13",
+              "../src/codewiki/resources/integrations/pre-push": "31800bc7fa7ed00d575494cf802bab418ca9a4659d73595d026f87d7ecc7983c",
+              "../src/codewiki/review.py": "b153c18140305bbc210f79872a2a9a9b552f640cc48857e4cf240eefad2be1e5",
+              "../tests/test_review.py": "96662c406ab1e0bb8e290278f6dc39c8258b966ed92f8419e8dc4e3f9c3b503a"
+            },
+            "coverage": [
+              {
+                "anchor": "reviews.acknowledge",
+                "file": "../src/codewiki/review.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "reviews.status",
+                "file": "../src/codewiki/review.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "anchor": "reviews.tests",
+                "file": "../tests/test_review.py",
+                "kind": "tag",
+                "role": "impl"
+              },
+              {
+                "file": "../src/codewiki/resources/integrations/check-docs.sh",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/integrations/github-actions.yml",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/integrations/pre-push",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/review.py",
+                "kind": "owns"
+              },
+              {
+                "file": "../tests/test_review.py",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "skills",
         "title": "LLM skills",
         "source": "wiki/skills.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "959863cace6fff4e60337c721393107adc6a63da568fa9845a7da3d22e5d8d4f",
         "snapshot": {
           "document_path": "wiki/skills.md",
@@ -17626,15 +18080,56 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "skills",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:17:08+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "959863cace6fff4e60337c721393107adc6a63da568fa9845a7da3d22e5d8d4f",
+          "snapshot": {
+            "document_path": "wiki/skills.md",
+            "document_sha256": "663eb20bd1b2a2dc37adb3948df41f8c402298b2ae352a44a4181e71cab9b10d",
+            "sources": {
+              "../src/codewiki/resources/skills/wiki-author/SKILL.md": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
+              "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
+              "../src/codewiki/resources/skills/wiki-init/SKILL.md": "82106d2718c1473b878c4b399b34b1bf875704eb7349dafc0dbd4a78daad013d",
+              "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
+              "../src/codewiki/resources/skills/wiki-review/SKILL.md": "fbeaa2de9671b3ba0e2088868ce21a2da3966563c5e51fa14d3988d034ba3174"
+            },
+            "coverage": [
+              {
+                "file": "../src/codewiki/resources/skills/wiki-author/SKILL.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/skills/wiki-build/SKILL.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/skills/wiki-init/SKILL.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/skills/wiki-query/SKILL.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/skills/wiki-review/SKILL.md",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "templates",
         "title": "Document templates",
         "source": "wiki/templates.md",
-        "state": "unreviewed",
+        "state": "current",
         "fingerprint": "af7fd26eaabd9a5d959ed08cd716469d2946ab1c9884685f8afa4492d0e33b0b",
         "snapshot": {
           "document_path": "wiki/templates.md",
@@ -17664,9 +18159,45 @@
             }
           ]
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "templates",
+          "outcome": "no-change",
+          "reason": "OK",
+          "reviewed_at": "2026-09-13T16:18:02+00:00",
+          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+          "fingerprint": "af7fd26eaabd9a5d959ed08cd716469d2946ab1c9884685f8afa4492d0e33b0b",
+          "snapshot": {
+            "document_path": "wiki/templates.md",
+            "document_sha256": "be420cd3ad25e360be578b9c721bc89dbe4c6519746fa9742598c7d1599d7a18",
+            "sources": {
+              "../src/codewiki/resources/templates/architecture.md": "3823d653d3ce25da27407fbf02e698123141c0d61f192c62bea2ccab54ed571e",
+              "../src/codewiki/resources/templates/component.md": "da5a73a738f803d300cca21ea3095f1bf0908be4e20bd46a9f2a4290ec15b83e",
+              "../src/codewiki/resources/templates/decision.md": "0e0113b3aa7374873dfdd8086e7fafcc6f63af3ab1c5b1c2ed7567f463d06dae",
+              "../src/codewiki/resources/templates/subsystem.md": "c8c657b134994febd0c68591967163b50c518617f4673d1fcd5ce6093a31d7f8"
+            },
+            "coverage": [
+              {
+                "file": "../src/codewiki/resources/templates/architecture.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/templates/component.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/templates/decision.md",
+                "kind": "owns"
+              },
+              {
+                "file": "../src/codewiki/resources/templates/subsystem.md",
+                "kind": "owns"
+              }
+            ]
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "test-framework",

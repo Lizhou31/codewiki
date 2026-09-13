@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "document": "authoring",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:15:49+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "b050e9ae3075c5d08971bdc2fd4073cfe337dfb18d2b0567534c17faba45953e",
+  "snapshot": {
+    "document_path": "wiki/authoring.md",
+    "document_sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
+    "sources": {
+      "../src/codewiki/init_project.py": "aba75208d999332430ba7f7178eb0a75c0ddafdfd332a4e6b97c0a3b906069bb",
+      "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"
+    },
+    "coverage": [
+      {
+        "anchor": "authoring.preview",
+        "file": "../src/codewiki/serve.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "authoring.scaffold",
+        "file": "../src/codewiki/init_project.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/init_project.py",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/serve.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

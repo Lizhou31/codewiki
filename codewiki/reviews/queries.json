@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "document": "queries",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:16:48+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "609b9c0a277f9316a3bb22c99bf60e027f69bcf6c6f3b03132ac9846863f7586",
+  "snapshot": {
+    "document_path": "wiki/queries.md",
+    "document_sha256": "2d150a6dc5b7665615f377b1ab09ad798b538714565f8f1a8f503cc5cc46f8a5",
+    "sources": {
+      "../src/codewiki/query.py": "446ca12527dfb34b71f73388763e9546e7888bca8084d07d39c7b53ee4e4a5a3",
+      "../src/codewiki/snapshot.py": "c17e7b137498c73ef4dab77b8c1f8b31a098f64802e5cb5b1978492ef2902b00"
+    },
+    "coverage": [
+      {
+        "anchor": "queries.disclosure",
+        "file": "../src/codewiki/query.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "queries.freshness",
+        "file": "../src/codewiki/snapshot.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "queries.symbols",
+        "file": "../src/codewiki/query.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/query.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

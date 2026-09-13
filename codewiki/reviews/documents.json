@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "document": "documents",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:16:07+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "6e6f4babd3bf1da7626b1e4318981d7d5eeba1bbecc29a4039d418fcc7eaf240",
+  "snapshot": {
+    "document_path": "wiki/documents.md",
+    "document_sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
+    "sources": {
+      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/documents.py": "60d76e2590e80666b48706b1d40e57cd5d27b5aed0dbb739a82c8adc4e1729e0"
+    },
+    "coverage": [
+      {
+        "anchor": "documents.frontmatter",
+        "file": "../src/codewiki/documents.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "documents.rendering",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "documents.sections",
+        "file": "../src/codewiki/documents.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "documents.validation",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/documents.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

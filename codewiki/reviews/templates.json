@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "document": "templates",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:18:02+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "af7fd26eaabd9a5d959ed08cd716469d2946ab1c9884685f8afa4492d0e33b0b",
+  "snapshot": {
+    "document_path": "wiki/templates.md",
+    "document_sha256": "be420cd3ad25e360be578b9c721bc89dbe4c6519746fa9742598c7d1599d7a18",
+    "sources": {
+      "../src/codewiki/resources/templates/architecture.md": "3823d653d3ce25da27407fbf02e698123141c0d61f192c62bea2ccab54ed571e",
+      "../src/codewiki/resources/templates/component.md": "da5a73a738f803d300cca21ea3095f1bf0908be4e20bd46a9f2a4290ec15b83e",
+      "../src/codewiki/resources/templates/decision.md": "0e0113b3aa7374873dfdd8086e7fafcc6f63af3ab1c5b1c2ed7567f463d06dae",
+      "../src/codewiki/resources/templates/subsystem.md": "c8c657b134994febd0c68591967163b50c518617f4673d1fcd5ce6093a31d7f8"
+    },
+    "coverage": [
+      {
+        "file": "../src/codewiki/resources/templates/architecture.md",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/templates/component.md",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/templates/decision.md",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/templates/subsystem.md",
+        "kind": "owns"
+      }
+    ]
+  }
+}

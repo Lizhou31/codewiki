@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "document": "architecture",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:15:22+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "56cae364d34fc2a36e643ce8ba5c168f9e2237f901f79ae900a6cab0f9f73264",
+  "snapshot": {
+    "document_path": "wiki/architecture.md",
+    "document_sha256": "2deea99df8a8c729166fe945878a8bbbc6399e15bf47d028928883b1b7a26b1a",
+    "sources": {
+      "../src/codewiki/__init__.py": "7d2c2d5f3aa944c9cf3372cf20f552810ba3118c75983c1453d7bf8ccb445ba6",
+      "../src/codewiki/__main__.py": "8dc9368d75602920fb040cd35525848d25b8f8fb252e01dbf8109d752e5d532a",
+      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/config.py": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825"
+    },
+    "coverage": [
+      {
+        "anchor": "architecture.instances",
+        "file": "../src/codewiki/config.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "architecture.pipeline",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/__init__.py",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/__main__.py",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/config.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

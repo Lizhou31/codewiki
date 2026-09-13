@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "document": "build",
+  "outcome": "no-change",
+  "reason": "OK",
+  "reviewed_at": "2026-09-13T16:04:32+00:00",
+  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
+  "fingerprint": "eb2341565ed776fd5b8cdd1b4bca9ee0f16f7838de35ec71487ff20849fe37e1",
+  "snapshot": {
+    "document_path": "wiki/build.md",
+    "document_sha256": "d9231f0123f888900ee556196b2369da20fee788cb03f34a6fd013ef0401643d",
+    "sources": {
+      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998"
+    },
+    "coverage": [
+      {
+        "anchor": "build.index",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "build.orchestration",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "build.publication",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/build.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}

@@ -33,6 +33,11 @@ The renderer turns the shared document model into static pages, a collapsible
 project tree, linked diagrams, and expandable source panels. Browser scripts add
 search and reading controls to the generated HTML.
 
+The [Build orchestrator](build.html#orchestration) calls `render_site()` with the
+assembled model. Rendering is one stage of the [complete build pipeline](build.html#inside-the-pipeline);
+the orchestrator publishes the resulting staged files. **Used by: Build pipeline**
+is the document-level link to that coordinating caller's guide.
+
 ```mermaid
 flowchart TB
   markdown["Markdown bodies"] --> model["Rendered sections + source bindings"]
