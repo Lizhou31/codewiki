@@ -12,8 +12,9 @@ cycles, missing source refs, invalid tags, and ownership conflicts. Fix their
 underlying cause; do not hide errors by removing validation. A strict failure
 preserves the last valid site/index, so an old page is not proof of build success.
 
-Warnings such as code newer than documentation need review; they do not prove
-that prose must change. Missing grammars appear as parse warnings; install the
+Outdated documentation needs review; it does not prove that prose must change.
+Builds report pending review states but never acknowledge them. Use
+`codewiki review check` as a separate gate, and `wiki-review` to resolve pages. Missing grammars appear as parse warnings; install the
 project's CodeWiki dependencies before treating parser coverage as complete.
 
 Use `codewiki serve --no-open` for rebuild-on-save and local browser preview.

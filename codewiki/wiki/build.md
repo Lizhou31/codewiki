@@ -13,6 +13,7 @@ depends_on:
 - languages
 - renderer
 - history
+- reviews
 related: []
 diagram_links:
   config: architecture.instances
@@ -43,10 +44,11 @@ the current Python builder executes them sequentially.
 
 ## Orchestration {#orchestration}
 
-`run()` scans configured source roots, parses project Markdown, then joins tags to
-stable anchors. It aggregates diagnostics before deciding whether publication can
+`run()` delegates scanning, Markdown parsing, and joining tags to stable anchors
+to `analyze()`. The review API reuses this analysis without publishing outputs. It aggregates diagnostics before deciding whether publication can
 proceed. With `--strict`, any error returns a failure and keeps the last good outputs.
-Warnings about timestamps and informational unimplemented concepts do not block it.
+Pending documentation reviews and informational unimplemented concepts do not block
+publication. Use `codewiki review check` as the separate review gate.
 
 The builder coordinates other components; the language adapters own syntax-specific
 extraction, and the document parser owns Markdown structure. `Tag`, `Ref`, `Anchor`,
@@ -62,6 +64,18 @@ bounded source ranges from a verified checkout when requested.
 
 The snapshot fingerprints inputs and records repository state. It lets queries
 detect stale ranges, but does not prove an explanation is correct.
+
+Documents enter the index in sorted Markdown-path order. The renderer builds its
+own navigation tree and places manual roots first; it does not reorder the index.
+The CLI walks the indexed parent hierarchy, so its root order can differ from the
+HTML sidebar while preserving the same pages and relationships.
+
+Documentation review uses separate committed records under `reviews/`.
+`run()` compares current inputs with those records and includes a report in the
+index and HTML. An `outdated-doc` warning means reviewed content changed;
+`unreviewed-doc` is informational until an initial baseline is recorded. The old
+Git-date-based `stale-doc` heuristic has been replaced. Rebuilding never changes
+review records. See [Documentation review](reviews.html).
 
 ## Publication boundaries {#publication}
 

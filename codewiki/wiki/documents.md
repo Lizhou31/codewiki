@@ -46,6 +46,12 @@ reader; `parent` chooses the primary hierarchy; `related` adds cross-links.
 by file and symbol. Paths are relative to the configuration directory. Existing
 pages without `parent` remain top-level, and TL;DR bullets supply a missing summary.
 
+`type: manual` on a root selects a hierarchy-based reading path for its entire
+branch, including descendants that omit that type. The default HTML navigation
+places manual roots before other roots. Nesting follows `parent`, not the folder
+layout; sibling order follows Markdown-path discovery order. Renaming a file can
+change that order without changing the page's stable ID or output URL.
+
 ### Sections preserve original Markdown {#sections}
 
 The parser recognizes heading levels one through six outside backtick or tilde

@@ -42,7 +42,7 @@ def main(argv=None):
             made.append(str(path))
     write("wiki.config.yaml", "# Paths are relative to this configuration file.\n" + yaml.safe_dump(cfg, sort_keys=False))
     write(".gitignore", "site/\n__pycache__/\n")
-    for folder, destination in (("templates", "wiki/_templates"), ("skills", "skills")):
+    for folder, destination in (("templates", "wiki/_templates"), ("skills", "skills"), ("integrations", "integrations")):
         for path in sorted((RESOURCES / folder).rglob("*")):
             if path.is_file():
                 write(Path(destination) / path.relative_to(RESOURCES / folder), path.read_text(encoding="utf8"))

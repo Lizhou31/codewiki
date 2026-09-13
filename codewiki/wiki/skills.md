@@ -4,22 +4,25 @@ type: component
 status: stable
 parent: architecture
 title: LLM skills
-summary: Four portable reading and authoring workflows use the CLI to explore the
+summary: Five portable reading, authoring, and review workflows use the CLI to explore the
   same architecture, one level at a time.
 owns:
 - ../src/codewiki/resources/skills/wiki-init/SKILL.md
 - ../src/codewiki/resources/skills/wiki-query/SKILL.md
 - ../src/codewiki/resources/skills/wiki-author/SKILL.md
 - ../src/codewiki/resources/skills/wiki-build/SKILL.md
+- ../src/codewiki/resources/skills/wiki-review/SKILL.md
 depends_on:
 - queries
 - authoring
+- reviews
 related: []
 diagram_links:
   init: skills.init
   query: skills.query
   author: skills.author
   check: skills.check
+  review: skills.review
 ---
 
 ## Skill workflows
@@ -30,6 +33,7 @@ flowchart TB
   query["wiki-query · read evidence"] --> author
   author --> check["wiki-build · validate + render"]
   check --> query
+  review["wiki-review · update or pass with reason"] --> check
 ```
 
 These arrows describe an authoring workflow, not Python imports. Skills are Markdown
@@ -74,6 +78,14 @@ relationships and `diagram_links` in the same Markdown change as the explanation
 reading path. Source declarations and diagram destinations must agree with the
 published page. A successful build verifies structure and bindings; a human or LLM
 still needs to assess whether the prose accurately describes behavior.
+
+## Review existing pages {#review}
+
+`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected
+page and its source, updates explanations when required, and records a specific
+reason for either an update or a no-change pass. It uses the report fingerprint
+to reject acknowledgments based on intervening changes. New baselines require
+inspection; neither a build nor an unrelated source edit warrants a blanket pass.
 
 ## Integration boundary
 

@@ -24,6 +24,7 @@ diagram_links:
   history: history
   config: architecture.instances
   testing: testing
+  reviews: reviews
 ---
 
 ## Architecture map
@@ -56,6 +57,8 @@ flowchart LR
   build -->|index| queries
   build -->|snapshot| history
   build -.->|verified by| testing["Testing"]
+  documents -->|pages + coverage| reviews["Documentation review"]
+  reviews -->|status| renderer
 ```
 
 ## TL;DR
@@ -63,6 +66,11 @@ flowchart LR
 - The package owns the engine, language adapters, default renderer, skills, and templates.
 - Project instances own their Markdown, configuration, source tags, and customizations.
 - Component relationships are authored in Markdown; source tags bind explanations to real declarations.
+
+For installation and everyday authoring, start with the separate
+[User manual](user-manual.html). The website places that root before Architecture;
+this map follows the framework's internal components. Both branches use the same
+document model, index, and renderer.
 
 ## Follow one build
 
@@ -95,7 +103,8 @@ Strict validation errors leave the last published index and site in place.
 
 `codewiki build` validates and renders; `codewiki query tree` begins the LLM reading
 path; `codewiki serve` provides a local authoring loop; `codewiki init` starts a
-project wiki. Explore the child pages for the contracts each command relies on.
+project wiki. `codewiki review status` lists pending reviews from live inputs;
+`codewiki review check` enforces their completion. Explore the child pages for the contracts each command relies on.
 
 ## Open Questions
 

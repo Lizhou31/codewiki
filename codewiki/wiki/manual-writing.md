@@ -127,3 +127,33 @@ Markdown hyperlink has a valid destination.
 For architecture diagrams, node IDs can target pages or local headings. Explicit
 cross-page targets use `diagram_links`; see the separate
 [HTML renderer guide](renderer.html#navigation) for the resolution rules.
+
+## Refresh existing documentation {#refresh}
+
+For the framework's own wiki, run these commands from the framework repository:
+
+```sh
+.venv/bin/codewiki build --strict
+.venv/bin/codewiki query tree
+.venv/bin/codewiki query file src/codewiki/build.py
+.venv/bin/codewiki query section build.orchestration
+```
+
+Use file coverage to find the explanations attached to changed source, then read
+the current implementation before revising those pages. Preserve existing page
+IDs and explicit heading slugs so source tags and incoming links keep working.
+For behavior exposed to users, update the corresponding manual procedure as well
+as the architecture explanation. Edit authored Markdown under `codewiki/wiki/`;
+the builder regenerates `codewiki/site/` and `codewiki/index.json`.
+
+After editing, run the strict build again, query each affected section, and open
+the generated pages to check their links and source panels. A docs-only update
+needs this content and rendering review; framework behavior changes also need
+the relevant [automated checks](testing.html).
+
+After inspecting the final explanation and source, record the outcome and reason
+with `codewiki review updated <id> --reason "..."` or
+`codewiki review pass <id> --reason "..."` when the prose is already accurate.
+Rebuild to display the new status, then run `codewiki review check`.
+See [Reviewing outdated documents](manual-review.html) for initial baselines,
+version-specific passes, and CI integration. Rebuilding alone never clears reviews.

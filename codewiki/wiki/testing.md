@@ -15,6 +15,7 @@ related:
 diagram_links:
   adapters: test-languages
   integration: test-framework
+  reviews: reviews.tests
 ---
 
 ## Test architecture
@@ -23,6 +24,7 @@ diagram_links:
 flowchart TB
   suite["pytest · tests/"] --> adapters["Language binding tests"]
   suite --> integration["Framework integration tests"]
+  suite --> reviews["Documentation review lifecycle"]
 ```
 
 **Choose a test layer to go deeper.** Language fixtures isolate parsing and binding;
@@ -39,6 +41,7 @@ dependencies. `pyproject.toml` configures pytest to discover `tests/`.
 .venv/bin/python -m pytest -q
 .venv/bin/python -m pytest tests/test_languages.py -q
 .venv/bin/python -m pytest tests/test_framework.py -q
+.venv/bin/python -m pytest tests/test_review.py -q
 .venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q
 .venv/bin/python -m pytest --collect-only -q
 .venv/bin/codewiki build --strict
@@ -59,7 +62,9 @@ For an LLM, the same reading path is available without loading this entire page:
 
 ## Additional verification and current gaps
 
-The committed pytest suite covers Python behavior and generated files. The following
+The committed pytest suite covers Python behavior and generated files, including
+review transitions and CI exit codes. [Review tests](reviews.html#tests) check
+that rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following
 checks remain separate activities, rather than an automated browser or release suite:
 
 - **Browser review:** open the architecture map, follow a component into a section,

@@ -48,6 +48,8 @@ Repeat `--code-root` for additional source roots. Initialization preserves exist
 files and does not replace user customizations on an upgrade. It adds an architecture
 starter only when there are no authored pages. The copied templates cover architecture,
 subsystem, component, and decision documents. Replace starter text with observed facts.
+Optional shell, Git hook, and CI examples are copied into `integrations/` without
+installing hooks or changing remote repository policy.
 
 ### Preview the build contract {#preview}
 
@@ -58,7 +60,7 @@ the configured output directory. CLI queries work from the saved index without a
 
 ## Skills
 
-The framework ships `wiki-init`, `wiki-query`, `wiki-author`, and `wiki-build` under
+The framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under
 `src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses
 the installed CLI, so it has no dependency on a Claude-specific plugin directory.
 Use the relevant client's skill discovery mechanism to register these files.
@@ -73,6 +75,6 @@ then inspect the affected section through both the browser and CLI.
 
 ## Preview Inputs
 
-The preview watches the instance configuration, Markdown, source roots, and theme
+The preview watches the instance configuration, Markdown, source roots, explicitly owned/referenced assets, review records, and theme
 files. It reloads configuration before rebuilding so changed source roots are picked
 up. Invalid configuration appears as a preview error until corrected.

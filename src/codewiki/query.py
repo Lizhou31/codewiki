@@ -32,7 +32,7 @@ def document(ix, name):
 
 
 def summary(d):
-    return {k: d.get(k) for k in ("id", "title", "type", "status", "source", "summary", "tldr", "parent", "children", "related", "depends_on", "used_by", "diagram_links")}
+    return {k: d.get(k) for k in ("id", "title", "type", "status", "source", "summary", "tldr", "parent", "children", "related", "depends_on", "used_by", "diagram_links", "review")}
 
 
 def resolve_file(w, ix, name):
@@ -185,6 +185,8 @@ def render_text(result):
     if isinstance(doc, dict):
         lines.append(f"# {doc['title']} ({doc['id']})\n{doc.get('summary') or ''}")
         lines.append(f"Markdown: {doc['source']}")
+        if doc.get("review"):
+            lines.append("Review at build: " + doc["review"]["state"] + "; codewiki review status checks live inputs")
         if doc.get("parent"):
             lines.append(f"Parent: {doc['parent']}")
         if doc.get("children"):

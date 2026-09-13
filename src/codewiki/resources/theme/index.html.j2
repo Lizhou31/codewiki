@@ -24,6 +24,21 @@
   {% endfor %}
 </div>
 
+{% if index.reviews is defined %}
+<h2>Documentation review</h2>
+<p>{{ index.reviews.pending }} pending of {{ index.reviews.total }} documents. Outdated means changed since review, not necessarily incorrect.</p>
+<div class="report">
+  {% for r in index.reviews.documents if r.state != 'current' %}
+  <div class="row">
+    <span class="sev {{ 'warn' if r.state == 'outdated' else 'info' }}">{{ r.state }}</span>
+    <span class="where">{% if not r.removed %}<a href="{{ r.document }}.html">{{ r.title }}</a>{% else %}{{ r.document }}{% endif %}</span>
+    <span class="msg">{{ r.reason }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% if not index.reviews.pending %}<p>All documents match their reviewed versions.</p>{% endif %}
+{% endif %}
+
 <h2>Build report</h2>
 {% if warnings %}
 <div class="report">

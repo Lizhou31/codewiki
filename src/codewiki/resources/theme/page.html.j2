@@ -40,6 +40,14 @@
 <details class="mobile-outline"><summary>On this page</summary><nav aria-label="Page sections">
 {% for s in doc.outline %}<a href="#{{ s.slug }}" class="{{ 'sub' if s.level > 2 }}">{{ s.title }}</a>{% endfor %}
 </nav></details>
+{% if review %}
+<details class="build-notes" {{ 'open' if review.state != 'current' }}>
+  <summary>Documentation review: {{ review.state }}</summary>
+  <p>{{ review.reason }}. This status reflects the latest site build.</p>
+  {% if review.previous %}<p>Last review: {{ review.previous.reviewed_at }} · {{ review.previous.outcome }} — {{ review.previous.reason }}</p>{% endif %}
+  {% for change in review.changes if change.kind == 'source' %}<p>Source changed: <code>{{ change.path }}</code></p>{% endfor %}
+</details>
+{% endif %}
 {% if warnings %}
 <details class="build-notes"><summary>{{ warnings | length }} build note{{ 's' if warnings | length != 1 }} to review</summary>
   {% for w in warnings %}<p><span class="sev {{ severity.get(w.kind,'warn') }}">{{ severity.get(w.kind,'warn') }}</span> {{ w.message }}</p>{% endfor %}

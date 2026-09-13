@@ -1,0 +1,19 @@
+# Example: copy to .github/workflows/documentation.yml and adapt installation/config.
+# Establish explicit review baselines before enabling this required check.
+name: Documentation review
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # Framework checkout: install from this repository. Consumer projects should
+      # replace this with their pinned CodeWiki wheel/package installation.
+      - run: python -m pip install .
+      - run: codewiki build --strict
+      - run: codewiki review check --json

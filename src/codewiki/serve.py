@@ -13,6 +13,7 @@ from pathlib import Path
 
 from .config import Wiki, load as load_wiki
 from .languages import DEFAULT_FILE_MAP
+from .snapshot import coverage_paths
 
 STATE = {"build": 0, "error": ""}
 
@@ -41,7 +42,7 @@ RELOAD_JS = """
 
 
 def watch_paths(w: Wiki):
-    paths = [w.cfg_path, w.wiki_dir, *w.theme_dirs]
+    paths = [w.cfg_path, w.wiki_dir, w.root / "reviews", *w.theme_dirs, *coverage_paths(w)]
     for root in w.cfg["code_roots"]:
         p = w.abs(root)
         if p.exists():
@@ -59,7 +60,7 @@ def fingerprint(w: Wiki, paths):
             dns[:] = [d for d in dns if d not in (".git", "site", "__pycache__", "node_modules")]
             for fn in fns:
                 p = Path(dp) / fn
-                if base == w.wiki_dir or base in w.theme_dirs or fn in file_map or p.suffix in file_map:
+                if base in (w.wiki_dir, w.root / "reviews") or base in w.theme_dirs or fn in file_map or p.suffix in file_map:
                     try:
                         out.append((str(p), p.stat().st_mtime_ns))
                     except OSError:

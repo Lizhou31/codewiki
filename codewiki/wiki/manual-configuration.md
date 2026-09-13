@@ -75,7 +75,7 @@ codewiki serve --no-open --port 8001
 ```
 
 Open `http://localhost:8001`. The preview watches Markdown, source roots,
-configuration, and theme files, rebuilds after changes, and notifies the browser.
+configuration, review records, and theme files, rebuilds after changes, and notifies the browser.
 Fix any displayed validation errors to resume a successful preview. Restart the
 server after changing `site_dir`. The default port is 8000; `--no-open` suppresses
 automatic browser launch.
@@ -94,6 +94,8 @@ automatic browser launch.
 | An anchor is listed as unbound | Add source evidence if the section describes implementation. Pure usage guidance can remain unbound; this is informational. |
 | A query reports a stale or incompatible index | Rebuild with the installed framework using the same configuration, then repeat the query. |
 | HTML still shows an older version after an error | Correct the build errors and rebuild; failed strict validation preserves the last published output. |
+| A page is unreviewed or outdated | Inspect its current source and explanation, then use `review updated` or `review pass` with a reason. Rebuilds do not acknowledge reviews. |
+| A review record is invalid | Repair its schema/content in Git; do not delete it to bypass a review. `review check` reports the error. |
 | The preview port is already in use | Select another port with `--port`. |
 
 Use `codewiki build --help`, `codewiki query --help`, `codewiki serve --help`, and

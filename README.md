@@ -59,7 +59,7 @@ codewiki build --strict
 ```
 
 The project gets `codewiki/wiki.config.yaml`, Markdown, reusable page templates,
-portable skills, and an `AGENTS.md` inside `codewiki/`. Its core and default
+portable skills, optional integration examples, and an `AGENTS.md` inside `codewiki/`. Its core and default
 theme stay in the installed package. Add a reference to `codewiki/AGENTS.md`
 in your root agent instructions when you want repository-wide wiki guidance.
 Load skills from `codewiki/skills/`, or copy the needed skill directories into
@@ -130,6 +130,31 @@ new framework against it with:
 codewiki build --strict --config ../P729/code_wiki/wiki.config.yaml
 codewiki query --config ../P729/code_wiki/wiki.config.yaml doc p721-arch
 ```
+
+## Documentation review
+
+Review existing pages when their linked source changes. State is based on content
+hashes, not commit dates; a build never approves documentation automatically.
+
+```sh
+codewiki review status --outdated --json
+codewiki review pass build --reason "Reviewed refactor; documented behavior unchanged."
+codewiki review updated build --reason "Updated the explanation for changed behavior."
+codewiki review check
+```
+
+The pass and updated examples are alternatives: choose the actual outcome after
+reviewing the page and code. Each acknowledgment saves its reason and exact input
+hashes in `codewiki/reviews/<id>.json`; commit these with the original project.
+Unreviewed pages need an explicit baseline, and later changes require another
+review. Undocumented source does not create new documentation requirements.
+
+`codewiki.review.report(Wiki(config_path))` is the shared live Python API.
+`review check` returns 0 for a pass, 1 for pending reviews, and 2 for invalid inputs
+or structural/parser failures. Run it after `build --strict` in CI. Initialization
+copies the `wiki-review` skill and optional shell, pre-push, and GitHub Actions
+examples; it does not install hooks or configure remote branch protection.
+See [Reviewing outdated documents](codewiki/wiki/manual-review.md).
 
 ## Validation and history
 

@@ -10,6 +10,11 @@ covered source files. Follow the returned freshness status and continuation offs
 When changing documented behavior, update its Markdown explanation with the code.
 Preserve stable page IDs and source tags; use `refs` for configured read-only paths.
 Run `codewiki build --strict` after changing Markdown, tags, or config.
+After source edits, run `codewiki review status --outdated` for affected existing
+pages. Use `wiki-review` to inspect them and record `updated` or `pass` with a
+specific reason; a build never acknowledges review. Run `codewiki review check`
+before finishing and report pending pages. Keep `reviews/*.json` with the project
+in Git. Uncovered source does not require creating documentation.
 
 Reusable skills live in `{{DIR}}/skills/`; page templates and tag syntax are in
 `{{DIR}}/wiki/_templates/` and `{{DIR}}/wiki/TAGS.md`.

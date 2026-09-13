@@ -65,6 +65,14 @@ references are HTTP(S) URLs. Anchor targets are validated; commit existence and 
 contents are not fetched or verified by v1. `codewiki query history <doc-id>` and
 the rendered page expose the supplied records.
 
+## Review acknowledgments
+
+The [documentation review component](reviews.html) stores separate explicit
+acknowledgments in `reviews/<id>.json`. It compares source and document content
+against the last review, whereas a build snapshot identifies the last render.
+Rebuilding refreshes provenance without approving an explanation. Both Markdown
+and review records are versioned in the project's existing Git repository.
+
 ## Future Change Tracking
 
 A later command can compare two Git revisions, map changed files or declarations

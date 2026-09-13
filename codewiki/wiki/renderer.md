@@ -29,6 +29,10 @@ diagram_links:
 
 ## Inside the renderer
 
+The renderer turns the shared document model into static pages, a collapsible
+project tree, linked diagrams, and expandable source panels. Browser scripts add
+search and reading controls to the generated HTML.
+
 ```mermaid
 flowchart TB
   markdown["Markdown bodies"] --> model["Rendered sections + source bindings"]
@@ -68,6 +72,11 @@ CSS provides the responsive layout, diagram canvas, and reading-depth cues. Ther
 is no client-side app router or production application server. Output includes
 local Mermaid and syntax-highlighting assets and can be served by any static host.
 
+The default overview also lists pending documentation reviews. Each document
+shows its review state and previous reason separately from its authored `status`
+(such as stable or draft). These are build-time results; the live review API reads
+current files. Custom theme overrides must adopt these panels explicitly.
+
 ## Resolve diagram links {#navigation}
 
 `diagram_targets()` resolves node names using this precedence:
@@ -96,8 +105,19 @@ page links in their summaries. The current page and its ancestors start expanded
 other groups start collapsed. Individual groups work without JavaScript. The
 renderer also retains the flat `nav` data contract for custom theme overrides.
 
+`render_site()` supplies `nav_tree` nodes with `id`, `title`, `out`, `depth`, and
+`children`; `_base.html.j2` renders them recursively. Overview and Source index
+have no current document branch, so their groups start closed. Expansion is
+local to the open page: navigating or reloading uses the next page's generated
+defaults, with no saved expansion preference.
+
 `reading.js` adds expand/collapse-all controls and filters the document tree,
 revealing ancestors of matches and restoring pre-search expansion when cleared.
+Search trims the query, ignores case, and requires every whitespace-separated
+word to occur in a page title. Matching a parent title does not automatically
+show its nonmatching children. The all-group controls are disabled during search.
+On initial loads at widths of 760 pixels or less, the script closes the outer
+Browse documentation panel; readers can open it to reach the same tree.
 It tracks the visible section in the outline,
 and loads syntax highlighting when code is visible. Native `details` elements keep
 implementation bodies closed until requested; file paths and line ranges identify

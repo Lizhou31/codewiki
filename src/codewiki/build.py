@@ -6,7 +6,7 @@
 """
 from __future__ import annotations
 
-import argparse, fnmatch, functools, html, json, re, shutil, subprocess, sys, time
+import argparse, fnmatch, html, json, re, shutil, sys, time
 import copy
 import tempfile
 from dataclasses import dataclass, field
@@ -102,38 +102,13 @@ SEVERITY = {
     "missing-root": "error", "invalid-doc": "error", "duplicate-doc": "error",
     "broken-related": "error", "broken-parent": "error", "hierarchy-cycle": "error",
     "broken-decision": "error", "broken-dependency": "error", "broken-diagram-link": "error",
-    "anchorless-heading": "warn", "stale-doc": "warn", "parse-error": "warn",
+    "anchorless-heading": "warn", "outdated-doc": "warn", "unreviewed-doc": "info", "parse-error": "warn",
     "unimplemented": "info",
 }
 
 # --------------------------------------------------------------------------- #
 # helpers
 # --------------------------------------------------------------------------- #
-
-def _git_root(path: Path) -> Path | None:
-    try:
-        out = subprocess.run(["git", "rev-parse", "--show-toplevel"], cwd=path,
-                             capture_output=True, text=True, timeout=5)
-        if out.returncode == 0:
-            return Path(out.stdout.strip())
-    except Exception:
-        pass
-    return None
-
-
-@functools.lru_cache(maxsize=None)
-def file_time(abs_path: str) -> float:
-    """Commit time if the file is in git, else filesystem mtime."""
-    p = Path(abs_path)
-    try:
-        out = subprocess.run(["git", "log", "-1", "--format=%ct", "--", p.name],
-                             cwd=p.parent, capture_output=True, text=True, timeout=5)
-        if out.returncode == 0 and out.stdout.strip():
-            return float(out.stdout.strip())
-    except Exception:
-        pass
-    return p.stat().st_mtime if p.exists() else 0.0
-
 
 def matches_any(path: str, globs: list[str]) -> bool:
     return any(fnmatch.fnmatch(path, g) for g in globs or [])
@@ -416,12 +391,6 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
                 warns.append(Warning("double-owned", f"'{f}' is owned by both {owned[f]} and {d.id}", d.path))
             owned[f] = d.id
 
-    for d in docs:
-        doc_t = file_time(str(w.abs(d.path)))
-        newer = sorted({t.file for t in tags
-                        if t.anchor in d.anchors and file_time(str(w.abs(t.file))) > doc_t})
-        for f in newer:
-            warns.append(Warning("stale-doc", f"'{f}' changed more recently than this doc", d.path))
     return warns
 
 # --------------------------------------------------------------------------- #
@@ -567,7 +536,8 @@ def render_site(w: Wiki, docs, tags, warns, index):
             doc=d, anchor_map=(json.dumps(anchor_map) if (w.wiki_dir / "_theme/page.html.j2").is_file() else anchor_map),
             diagram_targets=targets, ancestors=ancestors,
             used_by=[other for other in docs if d.id in other.depends_on],
-            warnings=warn_by_doc.get(d.path, []), **common), encoding="utf8")
+            warnings=warn_by_doc.get(d.path, []),
+            review=next((r for r in index.get("reviews", {}).get("documents", []) if r["document"] == d.id), None), **common), encoding="utf8")
 
     (site / "index.html").write_text(env.get_template("index.html.j2").render(
         warnings=warns, index=index, **common), encoding="utf8")
@@ -588,13 +558,10 @@ def render_site(w: Wiki, docs, tags, warns, index):
 # main
 # --------------------------------------------------------------------------- #
 
-# @wiki:impl architecture.pipeline
 # @wiki:impl build.orchestration
-# @wiki:impl build.publication
-def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[Warning], dict]:
-    t0 = time.time()
+def analyze(w: Wiki):
+    """Read and validate current inputs without publishing or acknowledging reviews."""
     tags, symbols, warns, nfiles = scan_code(w)
-
     docs = []
     for p in sorted(w.wiki_dir.rglob("*.md")):
         if any(part.startswith("_") for part in p.relative_to(w.wiki_dir).parts):
@@ -604,8 +571,23 @@ def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[W
         d = parse_doc(w, p, warns)
         if d:
             docs.append(d)
-
     warns += join(w, docs, tags, symbols)
+    return docs, tags, symbols, warns, nfiles
+
+
+# @wiki:impl architecture.pipeline
+# @wiki:impl build.orchestration
+# @wiki:impl build.publication
+def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[Warning], dict]:
+    from .review import report
+    t0 = time.time()
+    model = analyze(w)
+    docs, tags, symbols, warns, nfiles = model
+    reviews = report(w, model=model)
+    for item in reviews["documents"]:
+        if item["state"] != "current":
+            kind = "unreviewed-doc" if item["state"] == "unreviewed" else "outdated-doc"
+            warns.append(Warning(kind, item["reason"] + "; run codewiki review status", item["source"] or item["document"]))
     # Do not publish a broken build over the last valid site/index.
     if strict and any(SEVERITY.get(x.kind) == "error" for x in warns):
         if not quiet:
@@ -613,6 +595,10 @@ def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[W
                 print(f"  [{SEVERITY.get(x.kind, 'warn'):5}] {x.kind}: {x.where} {x.message}")
         return 1, warns, {}
     index = build_index(w, docs, tags, symbols)
+    index["reviews"] = reviews
+    for doc in index["docs"]:
+        item = next((r for r in reviews["documents"] if r["document"] == doc["id"]), None)
+        doc["review"] = {k: item[k] for k in ("state", "reason")} if item else None
     w.site_dir.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".codewiki-build-", dir=w.site_dir.parent) as folder:
         staged = copy.copy(w)

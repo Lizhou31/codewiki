@@ -58,6 +58,7 @@ Initialization creates:
 | `wiki/architecture.md` | Starter page to replace with your project's explanations |
 | `wiki/_templates/` | Reusable page templates |
 | `wiki/TAGS.md` | Source-tag syntax and examples |
+| `integrations/` | Optional shell, pre-push, and CI examples |
 | `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |
 
 The build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to
@@ -82,3 +83,6 @@ top-level manual. For a non-default location, select the config explicitly:
 codewiki build --strict --config docs/codewiki/wiki.config.yaml
 codewiki serve --no-open --config docs/codewiki/wiki.config.yaml
 ```
+
+New pages start unreviewed. After replacing the starter and inspecting its source,
+establish an explicit baseline using the [review workflow](manual-review.html).

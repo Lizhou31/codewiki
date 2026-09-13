@@ -21,3 +21,10 @@ ranges must not be read from a stale index.
 
 Reusable skill instructions are in `src/codewiki/resources/skills/`; each folder
 contains a portable `SKILL.md` for querying, authoring, building, or initialization.
+
+Documentation review uses `codewiki review status --outdated` on current files.
+Inspect affected pages and linked source, then record `review updated` or
+`review pass` with a specific reason and the inspected `--expected` fingerprint.
+Builds never acknowledge reviews. Keep `codewiki/reviews/*.json` in project Git
+history; `review check` is the separate CI gate. Use the packaged `wiki-review`
+skill for this workflow. Uncovered source does not require creating new pages.

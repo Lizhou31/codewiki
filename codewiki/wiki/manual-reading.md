@@ -24,10 +24,19 @@ Keyboard users can focus the arrow control and press Enter or Space. The current
 page's ancestor groups open automatically. **Expand all** and **Collapse all**
 control the whole tree.
 
+Expansion choices apply to the page currently open. Navigating to another page
+or reloading restores that page's initial groups. On a narrow screen, open
+**Browse documentation** first to reveal the navigation.
+
 The sidebar's **Find a page** field filters page titles and opens the groups leading
 to matching pages. Clear the field or press Escape to restore the previous expanded
 groups. The all-group controls are disabled while filtering. **On this page** jumps
 to headings in the open page.
+
+Title matching ignores case and requires every word you enter. A matching parent
+does not reveal all its children unless they also match; clear the search to
+browse the complete branch. Individual disclosure arrows remain usable without
+JavaScript, while search and the all-group controls require it.
 
 Architecture diagrams can link to pages or sections. Follow a linked node or use
 the ordinary links beneath the diagram. Expand the diagram for a larger view;
@@ -36,6 +45,12 @@ press Escape to close it. Expand an **Implementation** panel to read attached co
 
 **Source index** lists files with documentation links. If you need to search prose
 or source symbols instead of page titles, use the CLI search command below.
+
+The overview and individual pages also show documentation review status:
+**unreviewed** means no baseline exists, **outdated** means inputs changed since
+review, and **current** means reviewed content matches. These labels reflect the
+latest build. See [Reviewing outdated documents](manual-review.html) for live
+status and how to resolve a review.
 
 ## Find a page or section {#query}
 

@@ -10,10 +10,29 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def coverage_paths(w):
+    """Include explicitly owned/referenced assets even without a language adapter."""
+    from .documents import read_document
+    paths = set()
+    for page in w.wiki_dir.rglob("*.md"):
+        if any(part.startswith("_") for part in page.relative_to(w.wiki_dir).parts) or page.name.upper() in ("README.MD", "TAGS.MD"):
+            continue
+        try:
+            fm, _, _, _ = read_document(page)
+        except ValueError:
+            # The page itself still participates in freshness; build reports invalid metadata.
+            continue
+        paths.update(w.abs(path) for path in fm.get("owns", []))
+        paths.update(w.abs(ref["file"]) for ref in fm.get("refs", []))
+    return paths
+
+
 # @wiki:impl history.fingerprints
 def input_paths(w):
     from .build import iter_source_files
     paths = {w.cfg_path}
+    paths.update((w.root / "reviews").glob("*.json"))
+    paths.update(p for p in coverage_paths(w) if p.is_file())
     paths.update(p for p, _, _ in iter_source_files(w, []))
     paths.update(w.wiki_dir.rglob("*.md"))
     for theme in w.theme_dirs:

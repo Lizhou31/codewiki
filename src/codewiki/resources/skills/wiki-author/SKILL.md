@@ -31,3 +31,8 @@ After changing docs or tags, run `codewiki build --strict`. Inspect the affected
 HTML page and query its section to check both reading interfaces. Update the
 relevant explanation alongside a behavior change; a freshness warning calls
 for review, not an automatic rewrite of prose.
+
+Use `codewiki review status --outdated` to find pending existing pages. After
+reviewing source and explanations, record `review updated` or `review pass` with
+a specific reason, following `wiki-review` when available. Rebuilding never clears
+a review; commit acknowledgments with the source and Markdown when committing.

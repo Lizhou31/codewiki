@@ -47,6 +47,12 @@ starts with documented hazards when available. Search spans page summaries,
 section bodies, and source symbols. `--json` supplies a structured envelope for
 LLM tools; text output gives the same reading choices to a person.
 
+The tree follows the index's document order within each level. Unlike the HTML
+sidebar, it does not move manual roots ahead of architecture roots or include
+the generated Overview link as a document. Page IDs and parent relationships
+remain the same in both interfaces; consumers should use those IDs rather than
+assuming a page occupies the same position in each view.
+
 ### Symbols are addressable source evidence {#symbols}
 
 `query symbol <name>` returns declaration metadata. `query source <name>` reads
@@ -58,12 +64,19 @@ strict token budget; unusually large items may still require client-side limits.
 ### Check freshness before trusting locations {#freshness}
 
 The index records SHA-256 fingerprints of configuration, Markdown, scanned source,
-and theme inputs. Queries compare current inputs with the build snapshot, including
+explicitly owned/referenced assets, review records, and theme inputs. Queries compare current inputs with the build snapshot, including
 added or deleted files. A changed file marks the index stale, even if a new timestamp
 would otherwise obscure the change. Source queries require a current index, because
 old line ranges cannot safely identify declarations in edited source. Rebuild using
 `codewiki build --strict` before continuing. Markdown queries can still reveal the
 indexed explanation, with a visible stale status.
+
+## Documentation review status
+
+Document summaries expose a compact `review` with the state and reason at build
+time. It is distinct from the authored stable/draft status and from index freshness.
+Use `codewiki review status --json` for live inputs and detailed previous/current
+hashes; `codewiki review check` applies the CI gate without using an index.
 
 ## Index Compatibility
 

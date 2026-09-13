@@ -1,0 +1,6 @@
+#!/bin/sh
+# Optional Git hook. Integrate into an existing hook instead of replacing it.
+# Activate the environment containing codewiki before pushing.
+set -eu
+codewiki build --strict
+exec codewiki review check
