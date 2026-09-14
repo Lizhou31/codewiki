@@ -63,6 +63,12 @@ in `.codewiki-manifest.json`. Existing customized files are not treated as prist
 copies. Keep the manifest in Git; [Instance updates](updates.html) uses it to refresh
 untouched support files and detect changes that need reconciliation.
 
+`--client claude` adds Claude Code integration. The same marked section is appended
+to the project-root `CLAUDE.md`, and the packaged skills are copied into
+`.claude/skills/`, the directory Claude Code scans for project skills. Existing
+files there are preserved, so customized skills survive repeated initialization.
+`AGENTS.md` is written regardless, and the flag can be added to an older instance later.
+
 ### Preview the build contract {#preview}
 
 `codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs
@@ -74,10 +80,11 @@ the configured output directory. CLI queries work from the saved index without a
 
 The framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under
 `src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses
-the installed CLI, so it has no dependency on a Claude-specific plugin directory.
-Use the relevant client's skill discovery mechanism to register these files.
-Initialization adds the root agent reference for project-wide behavior; skill
-registration remains a separate client integration step.
+the installed CLI, so any client that loads a `SKILL.md` can use them.
+Initialization adds the root agent reference for project-wide behavior. With
+`--client claude`, it also installs the skills into `.claude/skills/` and references
+the guide from `CLAUDE.md`; other clients register the instance copies through
+their own discovery mechanism.
 
 ## Maintenance
 

@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "test-framework",
-  "outcome": "updated",
-  "reason": "Inspected added initialization tests and the passing 78-test suite: absent and existing root instructions, CRLF preservation, custom paths with spaces, customized guide retention, legacy instances, and normalized multi-instance references are covered. Updated the testing explanation in both languages.",
-  "reviewed_at": "2026-09-14T03:58:40+00:00",
-  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
-  "fingerprint": "14011b4b72716c15caa8c24937d318ddd309d53224e5f8d307e9575def0fa92e",
+  "outcome": "no-change",
+  "reason": "The Claude client test now initializes with a ./docs/wiki/ spelling and asserts the instance guide names the canonical docs/wiki path; the initialization section's description of path normalization still applies.",
+  "reviewed_at": "2026-09-14T04:14:05+00:00",
+  "commit": "02a021b4ff1d0504d3409f805071b9d5e0d167ef",
+  "fingerprint": "04ac67582319bcd5bd11eeac4aa444ed742e9cc95349d996dc09f2b60998500f",
   "snapshot": {
     "document_path": "wiki/test-framework.md",
-    "document_sha256": "a8584c971cdb5dabfe2c2108784f71569fd8380bbb8ba759f07160ccf5d74b56",
+    "document_sha256": "0f3abd56e9ae2707c5273a9abaf945ffc14855a6c63b41adf4537ed890dab79d",
     "sources": {
-      "../tests/test_framework.py": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2"
+      "../tests/test_framework.py": "6534094e747fab0b474b6e7b6eac7827be0e8d12cecb0ce8409fb3b146b581ed"
     },
     "coverage": [
       {

@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "manual-getting-started",
   "outcome": "updated",
-  "reason": "Reviewed the initialization flow and passing instance tests. Added the generated manifest to the file table and directed upgrades to update instead of repeat initialization, with matching Traditional Chinese guidance.",
-  "reviewed_at": "2026-09-14T04:39:29+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "2c9b33cb174fd19771451a5ec70e33e17ba5169674c29c7af3dc5efda36af793",
+  "reason": "Rebased onto main: the getting-started manual keeps main's manifest row and update pointer and adds the --client claude paragraph (CLAUDE.md section, .claude/skills/ installation, preservation on repeat runs).",
+  "reviewed_at": "2026-09-14T06:13:19+00:00",
+  "commit": "8756fb89cdd085c7de078e20243883cae10e8fa5",
+  "fingerprint": "6f095aceab7e77e30f90af76ca20ef3890b0562162ee1a69db03b515a39d0690",
   "snapshot": {
     "document_path": "wiki/manual-getting-started.md",
-    "document_sha256": "41a3db2a70387e6d4e30dd028b15dcb9e6868c3d877828cf255759abb950d4fe",
+    "document_sha256": "73e9851b5cd4cc24b8b76717cb3d1c9074c9d61ae842570b01944b09c06c966e",
     "sources": {},
     "coverage": []
   }

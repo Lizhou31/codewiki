@@ -2,17 +2,17 @@
   "schema_version": 1,
   "document": "skills",
   "outcome": "updated",
-  "reason": "Read the modified wiki-init skill and verified it preserves existing guidance, records the update manifest, and directs existing-instance upgrades to codewiki update. Updated both language descriptions.",
-  "reviewed_at": "2026-09-14T04:39:29+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "4bef817f507f67acf08e3de30ed86632763053260d543e2d1596f05e5fb7b109",
+  "reason": "Rebased onto main: the init section combines the update-manifest guidance with the --client claude behavior, and the integration boundary now states that codewiki update refreshes untouched instance copies while .claude/skills/ copies sit outside the instance and need manual re-copying.",
+  "reviewed_at": "2026-09-14T06:13:17+00:00",
+  "commit": "8756fb89cdd085c7de078e20243883cae10e8fa5",
+  "fingerprint": "4267b8a64a69726ae6593ae03c2c333d32cec98383666f3c68334ee555c19330",
   "snapshot": {
     "document_path": "wiki/skills.md",
-    "document_sha256": "2128366b9d75606e4e7ee46d9697000812a81e21f070e7e1e86f159e5bb8ef15",
+    "document_sha256": "f55296bb6a732ca78e6c96e95c980d81ada40e97adc9f2e80acba41101221133",
     "sources": {
       "../src/codewiki/resources/skills/wiki-author/SKILL.md": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
       "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
-      "../src/codewiki/resources/skills/wiki-init/SKILL.md": "197d3686cdff7067526035c7a19a8e6cb0f0dddf825644481d8b6df63d892240",
+      "../src/codewiki/resources/skills/wiki-init/SKILL.md": "c62e1cc5d8710c4273403a2af42b281f620e3f683d3bed49a8184ed66250fd1e",
       "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
       "../src/codewiki/resources/skills/wiki-review/SKILL.md": "fbeaa2de9671b3ba0e2088868ce21a2da3966563c5e51fa14d3988d034ba3174"
     },

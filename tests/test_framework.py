@@ -288,6 +288,43 @@ def test_init_integrates_older_instances_and_distinguishes_wiki_paths(tmp_path):
     assert agents.read_bytes() == both
 
 
+# @wiki:impl test-framework.initialization
+@pytest.mark.parametrize('existing', [None, b'# Claude rules\r\n\r\nKeep them.'])
+def test_init_client_claude_adds_guide_and_skills(tmp_path, existing):
+    claude = tmp_path / 'CLAUDE.md'
+    if existing is not None:
+        claude.write_bytes(existing)
+    # Claude Code integration is opt-in; the generic AGENTS.md reference is always written.
+    assert init(['--root', str(tmp_path), '--dir', './docs/wiki/']) == 0
+    assert not (tmp_path / '.claude').exists()
+    assert (claude.read_bytes() if claude.exists() else None) == existing
+    guide = (tmp_path / 'docs/wiki/AGENTS.md').read_text()
+    assert '`docs/wiki/wiki.config.yaml`' in guide and './docs' not in guide
+    assert init(['--root', str(tmp_path), '--dir', 'docs/wiki', '--client', 'claude', '--client', 'claude']) == 0
+    generated = claude.read_bytes()
+    assert generated.startswith(existing or b'')
+    marker = b'<!-- codewiki:agent-guide docs/wiki/AGENTS.md -->'
+    assert generated.count(marker) == 1
+    assert b'`docs/wiki/AGENTS.md`' in generated and b'`.claude/skills/`' in generated
+    agents = (tmp_path / 'AGENTS.md').read_bytes()
+    assert agents.count(marker) == 1 and b'.claude/skills' not in agents
+    skills = tmp_path / '.claude/skills'
+    assert sorted(p.name for p in skills.iterdir()) == ['wiki-author', 'wiki-build', 'wiki-init', 'wiki-query', 'wiki-review']
+    skill = skills / 'wiki-query/SKILL.md'
+    assert skill.read_text().startswith('---\nname: wiki-query\n')
+    assert skill.read_text() == (tmp_path / 'docs/wiki/skills/wiki-query/SKILL.md').read_text()
+
+    # Customized Claude Code files survive repeated initialization.
+    customized = generated.replace(b'Before working', b'Before working (including tests)')
+    claude.write_bytes(customized)
+    skill.write_text('Custom skill\n')
+    assert init(['--root', str(tmp_path), '--dir', 'docs/wiki', '--client', 'claude']) == 0
+    assert claude.read_bytes() == customized
+    assert skill.read_text() == 'Custom skill\n'
+    with pytest.raises(SystemExit):
+        init(['--root', str(tmp_path), '--client', 'other'])
+
+
 # @wiki:impl test-framework.queries
 def test_cli_json_and_config_on_either_side(instance, capsys):
     build(instance)

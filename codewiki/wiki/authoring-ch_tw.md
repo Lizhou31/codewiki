@@ -49,13 +49,15 @@ flowchart TB
 
 初始化也會在 `.codewiki-manifest.json` 記錄完全相符的套件副本雜湊與相對專案根目錄，不將既有客製化檔案當成原始副本。請將 manifest 納入 Git；[實例更新](updates.html) 用它更新未修改的支援檔案，並偵測需要整合的變更。
 
+`--client claude` 會加入 Claude Code 整合：在專案根目錄的 `CLAUDE.md` 附加相同的帶標記區段，並將套件內的技能複製到 Claude Code 掃描專案技能的 `.claude/skills/`。該處既有檔案會保留，因此客製化技能不會被重複初始化覆寫。`AGENTS.md` 一律會寫入；舊實例日後也可加上此旗標。
+
 ### 預覽建置契約 {#preview}
 
 `codewiki serve` 在本機迴路位址提供產生的 HTML，並在監看的輸入變更時重新建置。瀏覽器重新載入通知與驗證錯誤屬於開發伺服器；沒有伺服器時，靜態建置輸出仍可使用。變更輸出目錄後請重新啟動伺服器。CLI 查詢直接使用已儲存的索引，不需要伺服器。
 
 ## 技能 {#skills}
 
-框架在 `src/codewiki/resources/skills/` 提供 `wiki-init`、`wiki-query`、`wiki-author`、`wiki-build` 與 `wiki-review`。初始化會將它們複製到實例中。每項技能都使用已安裝的 CLI，因此不依賴 Claude 專用的外掛目錄。請透過所用客戶端的技能探索機制註冊這些檔案。初始化會加入根目錄的代理參照，讓指南適用於整個專案；技能註冊仍是獨立的客戶端整合步驟。
+框架在 `src/codewiki/resources/skills/` 提供 `wiki-init`、`wiki-query`、`wiki-author`、`wiki-build` 與 `wiki-review`。初始化會將它們複製到實例中。每項技能都使用已安裝的 CLI，因此任何能載入 `SKILL.md` 的客戶端都可使用。初始化會加入根目錄的代理參照，讓指南適用於整個專案；加上 `--client claude` 時，也會將技能安裝到 `.claude/skills/`，並在 `CLAUDE.md` 參照指南。其他客戶端請透過各自的探索機制註冊實例中的副本。
 
 ## 維護 {#maintenance}
 

@@ -41,7 +41,7 @@ flowchart TB
 
 ## 初始化 {#init}
 
-`wiki-init/SKILL.md` 指示工具檢查儲存庫配置、選擇真實的原始碼根目錄、執行 `codewiki init`，並用觀察到的事實取代起始內容。初始化程式將這些可攜式技能複製到專案實例；請以所選客戶端自己的探索機制註冊。初始化也會在專案根目錄的 `AGENTS.md` 加入帶標記的實例指南參照，保留既有指示，並避免重複執行時加入相同區段。技能應確認此整合結果，不需再手動加入另一份根目錄參照。它也要求將產生的更新 manifest 納入 Git，並以 `codewiki update` 升級既有實例，因為重複初始化不會替換舊支援檔案。
+`wiki-init/SKILL.md` 指示工具檢查儲存庫配置、選擇真實的原始碼根目錄、執行 `codewiki init`，並用觀察到的事實取代起始內容。初始化程式將這些可攜式技能複製到專案實例；請以所選客戶端自己的探索機制註冊。初始化也會在專案根目錄的 `AGENTS.md` 加入帶標記的實例指南參照，保留既有指示，並避免重複執行時加入相同區段。技能應確認此整合結果，不需再手動加入另一份根目錄參照。它也要求將產生的更新 manifest 納入 Git，並以 `codewiki update` 升級既有實例，因為重複初始化不會替換舊支援檔案。加上 `--client claude` 時，初始化程式也會將技能複製到 `.claude/skills/`，並在 `CLAUDE.md` 附加相同區段，讓 Claude Code 不需手動註冊即可發現兩者。
 
 ## 漸進式閱讀 {#query}
 
@@ -71,4 +71,4 @@ codewiki query source codewiki.build.diagram_targets --limit 40
 
 ## 整合界線 {#integration-boundary}
 
-隨附指示呼叫已安裝的 CLI，v1 沒有 MCP 伺服器。更新套件中的技能不會覆寫已客製化的實例副本；維護既有專案時，請明確比較並採納變更。
+隨附指示呼叫已安裝的 CLI，v1 沒有 MCP 伺服器。`codewiki update` 會更新未修改的實例副本並保留客製化副本；`.claude/skills/` 下的 Claude Code 副本位於實例之外，維護既有專案時請明確比較並重新複製。

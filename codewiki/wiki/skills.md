@@ -49,7 +49,10 @@ a marked reference to the instance guide in the project-root `AGENTS.md`, preser
 existing instructions and avoiding duplicates on repeat runs. The skill verifies
 this integration instead of manually adding another root reference. It also keeps
 the generated update manifest in Git and directs existing-instance upgrades to
-`codewiki update`, since repeating init does not replace old support files.
+`codewiki update`, since repeating init does not replace old support files. With
+`--client claude`, the initializer also copies the skills into `.claude/skills/` and
+appends the same section to `CLAUDE.md`, so Claude Code discovers both without
+manual registration.
 
 ## Read progressively {#query}
 
@@ -95,5 +98,6 @@ inspection; neither a build nor an unrelated source edit warrants a blanket pass
 ## Integration boundary
 
 The shipped instructions call the installed CLI. There is no MCP server in v1.
-Updating packaged skills does not overwrite customized instance copies; compare
-and adopt changes explicitly when maintaining an existing project.
+`codewiki update` refreshes untouched instance copies and keeps customized ones.
+The Claude Code copies under `.claude/skills/` are outside the instance, so compare
+and re-copy them explicitly when maintaining an existing project.

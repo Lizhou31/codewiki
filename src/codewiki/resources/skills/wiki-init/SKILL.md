@@ -23,8 +23,11 @@ Existing root instructions are preserved; repeating init leaves the section for
 that instance unchanged. Keep its marker when customizing the section. `--dir`
 controls the referenced path. Verify the root section points to the instance guide
 without adding another manual reference. Re-run init to add this integration to older instances.
-Skills are shipped in `<instance>/skills/`; use the client's
-supported discovery location when installation was requested.
+Skills are shipped in `<instance>/skills/`. When the user works with Claude Code,
+pass `--client claude` so init also appends the marked section to the project-root
+`CLAUDE.md` and installs the skills into `.claude/skills/`, which Claude Code scans
+automatically. For other clients, use their supported discovery location when
+installation was requested.
 
 Run `codewiki build --strict` with the new config and inspect `codewiki query tree`.
 Do not describe starter placeholders as established facts about the project.

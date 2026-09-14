@@ -56,6 +56,14 @@ codewiki build --strict
 
 專案會取得 `codewiki/wiki.config.yaml`、Markdown、可重用頁面範本、可攜式技能、選用整合範例，以及 `codewiki/` 中的 `AGENTS.md`。核心與預設主題留在已安裝套件中。初始化也會在根目錄 `AGENTS.md` 加入帶標記的實例指南參照，保留既有指示並避免重複加入。從 `codewiki/skills/` 載入技能，或將需要的技能目錄複製到客戶端支援的位置。初始化保留既有檔案。
 
+使用 Claude Code 時可加上 `--client claude`：
+
+```sh
+codewiki init --root /path/to/project --code-root src --client claude
+```
+
+這會同時在專案根目錄的 `CLAUDE.md` 附加相同的帶標記區段，並將技能安裝到 Claude Code 會自動探索的 `.claude/skills/`。兩者都保留既有檔案，因此客製化副本不會被重複初始化覆寫；既有實例日後也可加上此旗標。
+
 設定與 frontmatter 的路徑相對於設定所在目錄。需要時在每個命令傳入 `--config path/to/wiki.config.yaml`；否則會從工作目錄向上探索。`CODE_WIKI_CONFIG` 可明確選擇實例。也可用 `python -m codewiki` 執行命令。
 
 ## 文件契約

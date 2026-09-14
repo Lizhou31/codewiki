@@ -126,6 +126,10 @@ CRLF text without a trailing newline. They check default and custom paths with
 spaces, preservation of customized root sections and instance guides, integration
 of older instances, and separate references for multiple instances. Equivalent
 normalized paths do not duplicate the reference.
+The Claude Code client test checks that `--client claude` is opt-in, appends one
+marked section to an absent or existing `CLAUDE.md`, installs the five skills into
+`.claude/skills/` as exact copies, preserves customized copies of both on repeat
+runs, and rejects unknown clients.
 An attempted instance directory outside the project is rejected.
 
 The hierarchy/theme test checks a child page and paginated tree depth, a project CSS
