@@ -18,6 +18,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape, TemplateErr
 
 from .config import Wiki, load as load_wiki
 from .documents import read_document
+from .localization import (translation_source, load_translations, localized_docs,
+                           localize_links, page_name, language_tag, language_label)
 from .snapshot import snapshot
 from .languages import (DEFAULT_FILE_MAP, LANGUAGES, language_for, parse_tag_comment)
 
@@ -96,7 +98,7 @@ class Warning:
     where: str = ""
 
 SEVERITY = {
-    "duplicate-anchor": "error", "orphan-tag": "error", "no-id": "error",
+    "invalid-translation": "error", "duplicate-anchor": "error", "orphan-tag": "error", "no-id": "error",
     "no-frontmatter": "error", "broken-ref": "error", "missing-file": "error",
     "double-owned": "error", "unknown-role": "error", "tag-in-readonly": "error",
     "missing-root": "error", "invalid-doc": "error", "duplicate-doc": "error",
@@ -482,10 +484,20 @@ def diagram_targets(doc, docs):
 
 # @wiki:impl documents.rendering
 # @wiki:impl renderer.publication
-def render_site(w: Wiki, docs, tags, warns, index):
+def render_site(w: Wiki, docs, tags, warns, index, translations=None):
+    translations = translations or {}
+    locales = ["en", *sorted(translations)]
+    for locale in locales:
+        _render_language(w, docs, warns, index, translations.get(locale, {}), locale, locales)
+
+
+def _render_language(w, canonical, warns, index, variants, locale, locales):
+    docs = localized_docs(canonical, variants, locale)
     themes = w.theme_dirs
     env = Environment(loader=FileSystemLoader([str(p) for p in themes]),
                       autoescape=select_autoescape(default=True))
+    from .ui_text import translate
+    env.globals["tr"] = lambda text, count=None: translate(text, locale, count)
     env.filters["basename"] = lambda p: p.rsplit("/", 1)[-1]
     site = w.site_dir
     site.mkdir(parents=True, exist_ok=True)
@@ -521,8 +533,12 @@ def render_site(w: Wiki, docs, tags, warns, index):
     for d in docs:
         visit(d, 0, nav_tree)
     common = dict(nav=nav, nav_tree=nav_tree, by_id=by_id, project=w.cfg.get("project", {}), docs=docs, generated=index["generated"],
-                  editor_url=editor_url, severity=SEVERITY)
+                  editor_url=editor_url, severity=SEVERITY, locale=locale, html_lang=language_tag(locale),
+                  page_url=lambda name: page_name(name, locale),
+                  language_options=lambda name: [dict(code=code, label=language_label(code),
+                      tag=language_tag(code), href=page_name(name, code)) for code in locales])
 
+    source_paths = {d.id: d.path for d in canonical}
     page_tpl = env.get_template("page.html.j2")
     for d in docs:
         anchor_map = {a.slug: a.title for a in d.anchors.values()}
@@ -532,20 +548,33 @@ def render_site(w: Wiki, docs, tags, warns, index):
             seen.add(cursor)
             ancestors.insert(0, by_id[cursor])
             cursor = by_id[cursor].parent
-        (site / d.out).write_text(page_tpl.render(
+        d.preamble = localize_links(d.preamble, d, canonical, locale)
+        for section in d.outline:
+            section["body_html"] = localize_links(section["body_html"], d, canonical, locale).replace(
+                'Follow a linked node to explore its component or implementation.',
+                translate('Follow a linked node to explore its component or implementation.', locale))
+        sections_by_slug = {section["slug"]: section for section in d.outline}
+        for section in d.sections:
+            section.update(sections_by_slug[section["slug"]])
+            for child in section["children"]:
+                child.update(sections_by_slug[child["slug"]])
+        for anchor in d.anchors.values():
+            anchor.body_html = sections_by_slug[anchor.slug]["body_html"]
+        rendered = page_tpl.render(
             doc=d, anchor_map=(json.dumps(anchor_map) if (w.wiki_dir / "_theme/page.html.j2").is_file() else anchor_map),
             diagram_targets=targets, ancestors=ancestors,
             used_by=[other for other in docs if d.id in other.depends_on],
-            warnings=warn_by_doc.get(d.path, []),
-            review=next((r for r in index.get("reviews", {}).get("documents", []) if r["document"] == d.id), None), **common), encoding="utf8")
+            warnings=warn_by_doc.get(source_paths[d.id], []),
+            review=next((r for r in index.get("reviews", {}).get("documents", []) if r["document"] == d.id), None), **common)
+        (site / d.out).write_text(rendered, encoding="utf8")
 
-    (site / "index.html").write_text(env.get_template("index.html.j2").render(
+    (site / page_name("index.html", locale)).write_text(env.get_template("index.html.j2").render(
         warnings=warns, index=index, **common), encoding="utf8")
-    (site / "files.html").write_text(env.get_template("files.html.j2").render(
+    (site / page_name("files.html", locale)).write_text(env.get_template("files.html.j2").render(
         index=index, by_file=index["by_file"], **common), encoding="utf8")
 
     # Package defaults first; project assets override only the files they supply.
-    for theme in reversed(themes):
+    for theme in reversed(themes) if locale == "en" else []:
         if not theme.is_dir():
             continue
         for f in theme.rglob("*"):
@@ -566,7 +595,7 @@ def analyze(w: Wiki):
     for p in sorted(w.wiki_dir.rglob("*.md")):
         if any(part.startswith("_") for part in p.relative_to(w.wiki_dir).parts):
             continue
-        if p.name.upper() in ("TAGS.MD", "README.MD"):
+        if translation_source(p) or p.name.upper() in ("TAGS.MD", "README.MD"):
             continue
         d = parse_doc(w, p, warns)
         if d:
@@ -588,6 +617,7 @@ def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[W
         if item["state"] != "current":
             kind = "unreviewed-doc" if item["state"] == "unreviewed" else "outdated-doc"
             warns.append(Warning(kind, item["reason"] + "; run codewiki review status", item["source"] or item["document"]))
+    translations = load_translations(w, docs, warns)
     # Do not publish a broken build over the last valid site/index.
     if strict and any(SEVERITY.get(x.kind) == "error" for x in warns):
         if not quiet:
@@ -595,6 +625,10 @@ def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[W
                 print(f"  [{SEVERITY.get(x.kind, 'warn'):5}] {x.kind}: {x.where} {x.message}")
         return 1, warns, {}
     index = build_index(w, docs, tags, symbols)
+    index["rendered_pages"] = [page_name(name, locale) for locale in ["en", *sorted(translations)]
+                               for name in ["index.html", "files.html", *[d.out for d in docs]]]
+    if len(index["rendered_pages"]) != len(set(index["rendered_pages"])):
+        raise ValueError("localized output filename collides with a canonical document id")
     index["reviews"] = reviews
     for doc in index["docs"]:
         item = next((r for r in reviews["documents"] if r["document"] == doc["id"]), None)
@@ -604,7 +638,7 @@ def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[W
         staged = copy.copy(w)
         staged.site_dir = Path(folder)
         try:
-            render_site(staged, docs, tags, warns, index)
+            render_site(staged, docs, tags, warns, index, translations)
         except TemplateError as exc:
             raise ValueError(f"theme rendering failed: {exc}") from exc
         w.site_dir.mkdir(parents=True, exist_ok=True)
@@ -616,9 +650,8 @@ def run(w: Wiki, strict: bool = False, quiet: bool = False) -> tuple[int, list[W
         # Retire only pages recorded as generated by the previous build.
         if w.index_path.is_file():
             previous = json.loads(w.index_path.read_text(encoding="utf8"))
-            current_pages = {d.out for d in docs}
-            for doc in previous.get("docs", []):
-                name = doc.get("html", "")
+            current_pages = set(index["rendered_pages"])
+            for name in previous.get("rendered_pages", [d.get("html", "") for d in previous.get("docs", [])]):
                 if name and Path(name).name == name and name.endswith(".html") and name not in current_pages:
                     (w.site_dir / name).unlink(missing_ok=True)
         w.index_path.parent.mkdir(parents=True, exist_ok=True)

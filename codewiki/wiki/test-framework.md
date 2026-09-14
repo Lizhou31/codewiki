@@ -127,3 +127,13 @@ The hierarchy/theme test checks a child page and paginated tree depth, a project
 override, and packaged Mermaid assets and license presence. This is an in-process
 initialization/build test. Verifying a built wheel from an unrelated directory is
 an additional packaging check.
+
+## HTML translation boundaries {#translations}
+
+Translation fixtures verify Traditional Chinese HTML alongside English CLI Markdown,
+localized navigation and source bindings, ordinary Markdown/HTML links, unchanged
+external URLs and code examples, fallback notices, nested paths, dotted IDs, and
+localized diagram destinations. Malformed translations preserve published outputs;
+duplicate aliases and output collisions fail, multiple locales remain independent,
+and deleting the last translation retires localized pages. Translation-only edits
+leave canonical review fingerprints unchanged.

@@ -7,6 +7,8 @@ title: HTML renderer
 summary: 'Turn the document model into an offline architecture explorer: component
   maps, section navigation, and expandable source evidence.'
 owns:
+- ../src/codewiki/localization.py
+- ../src/codewiki/ui_text.py
 - ../src/codewiki/resources/theme/_base.html.j2
 - ../src/codewiki/resources/theme/page.html.j2
 - ../src/codewiki/resources/theme/index.html.j2
@@ -132,3 +134,30 @@ Jinja, CSS, JavaScript, and Markdown assets which are not parsed as tagged langu
 The HTML includes declaration snippets up to the configured build limit. Use
 `query source` for paginated source retrieval with freshness checking. Markdown and
 Mermaid are trusted project content, so project authors control embedded HTML.
+
+## HTML translations {#translations}
+
+Add a sibling such as `renderer-ch_tw.md` to an English page. Regional suffixes
+`-ll_rr.md` select HTML languages; `ch_tw` and `zh_tw` both identify Traditional
+Chinese (Taiwan), with the output suffix `-ch_tw.html` and HTML language `zh-TW`.
+Other regional suffixes (for example `ja_jp`) produce additional language choices;
+interface labels fall back to English when no label catalog is supplied.
+
+A translation keeps the English frontmatter `id` and every heading's level,
+order, and anchor. Give translated headings explicit `{#english-slug}` anchors,
+including headings that were implicit in English. Translate `title`, `summary`,
+body text, and optionally decision reasons. Relationships, ownership, references,
+source snippets, and review state are inherited from English. Invalid siblings,
+mismatched IDs/headings, and duplicate locale aliases fail strict publication.
+
+The renderer emits localized overview, file index, and document pages. The language
+links work offline without JavaScript. Page navigation, dependencies, diagram
+links, and ordinary canonical `.html` or relative `.md` links stay in the selected
+language. Untranslated pages show English content with an explicit fallback notice.
+Switching language opens the equivalent page. Explicit section anchors stay stable.
+
+English alone enters analysis, reviews, and the CLI document index, so skills keep
+reading English. Translation files remain build inputs for freshness and preview.
+A `rendered_pages` manifest retires obsolete localized HTML when translations are
+removed. Custom templates can use `locale`, `html_lang`, `page_url`, `tr`, and
+`language_options`; overriding the default shell requires adding its switcher.

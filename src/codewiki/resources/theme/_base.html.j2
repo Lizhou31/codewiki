@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ html_lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,36 +9,42 @@
 <link rel="stylesheet" href="vendor/hljs-dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body>
-<a class="skip-link" href="#content">Skip to content</a>
+<a class="skip-link" href="#content">{{ tr("Skip to content") }}</a>
 <header class="topbar">
-  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">cw</span>{{ project.name }}</a>
-  <span class="topbar-label">Code documentation</span>
-  <nav aria-label="Main"><a href="index.html" {{ 'aria-current=page' if page == 'index' }}>Overview</a><a href="files.html" {{ 'aria-current=page' if page == 'files' }}>Source index</a></nav>
+  <a class="brand" href="{{ page_url('index.html') }}"><span class="brand-mark" aria-hidden="true">cw</span>{{ project.name }}</a>
+  <span class="topbar-label">{{ tr("Code documentation") }}</span>
+  <nav aria-label="{{ tr('Main') }}"><a href="{{ page_url('index.html') }}" {{ 'aria-current=page' if page == 'index' }}>{{ tr("Overview") }}</a><a href="{{ page_url('files.html') }}" {{ 'aria-current=page' if page == 'files' }}>{{ tr("Source index") }}</a></nav>
+  {% set canonical_page = doc.id + '.html' if doc is defined else page + '.html' %}
+  {% if language_options(canonical_page) | length > 1 %}
+  <nav class="language-switch" aria-label="{{ tr('Language') }}">
+    {% for language in language_options(canonical_page) %}<a href="{{ language.href }}" lang="{{ language.tag }}" hreflang="{{ language.tag }}" {% if language.code == locale %}aria-current="true"{% endif %}>{{ language.label }}</a>{% endfor %}
+  </nav>
+  {% endif %}
 </header>
 <div class="layout {{ 'has-toc' if doc is defined }} {{ 'architecture-layout' if doc is defined and doc.type == 'architecture' }}">
   <aside class="side">
     <details class="nav-panel" open>
-      <summary>Browse documentation</summary>
+      <summary>{{ tr("Browse documentation") }}</summary>
       <div class="page-search" hidden>
-        <label class="sr-only" for="page-search">Find a page</label>
-        <input id="page-search" type="search" placeholder="Find a page…" autocomplete="off">
+        <label class="sr-only" for="page-search">{{ tr("Find a page") }}</label>
+        <input id="page-search" type="search" placeholder="{{ tr('Find a page…') }}" autocomplete="off">
       </div>
       <div class="nav-actions" hidden>
-        <button type="button" data-nav-expand="true">Expand all</button>
-        <button type="button" data-nav-expand="false">Collapse all</button>
+        <button type="button" data-nav-expand="true">{{ tr("Expand all") }}</button>
+        <button type="button" data-nav-expand="false">{{ tr("Collapse all") }}</button>
       </div>
-      <nav class="project-nav" aria-label="Project documents">
+      <nav class="project-nav" aria-label="{{ tr('Project documents') }}">
         {% set active_ids = (ancestors | default([]) | map(attribute='id') | list) + ([doc.id] if doc is defined else []) %}
         {% macro page_link(d) -%}
         <a href="{{ d.out }}" class="{{ 'on' if doc is defined and d.id == doc.id }}" {% if doc is defined and d.id == doc.id %}aria-current="page"{% endif %}>{{ d.title }}</a>
         {%- endmacro %}
         <ul class="nav-tree">
-          <li class="nav-item"><a href="index.html" class="{{ 'on' if page == 'index' }}" {% if page == 'index' %}aria-current="page"{% endif %}>Overview</a></li>
+          <li class="nav-item"><a href="{{ page_url('index.html') }}" class="{{ 'on' if page == 'index' }}" {% if page == 'index' %}aria-current="page"{% endif %}>{{ tr("Overview") }}</a></li>
           {% for d in nav_tree recursive %}
           <li class="nav-item">
             {% if d.children %}
             <details class="nav-branch" data-page-id="{{ d.id }}" {% if d.id in active_ids %}open{% endif %}>
-              <summary aria-label="Toggle pages under {{ d.title }}">{{ page_link(d) }}</summary>
+              <summary aria-label="{{ tr('Toggle pages under') }} {{ d.title }}">{{ page_link(d) }}</summary>
               <ul>{{ loop(d.children) }}</ul>
             </details>
             {% else %}
@@ -48,15 +54,15 @@
           {% endfor %}
         </ul>
       </nav>
-      <p class="search-empty" role="status" hidden>No matching pages.</p>
+      <p class="search-empty" role="status" hidden>{{ tr("No matching pages.") }}</p>
     </details>
-    <div class="side-note">Choose a guide to get started.<br>Follow links for more detail.</div>
+    <div class="side-note">{{ tr("Choose a guide to get started.") }}<br>{{ tr("Follow links for more detail.") }}</div>
   </aside>
   <main id="content" tabindex="-1">
     {% block main %}{% endblock %}
-    <footer><span>{{ project.name }} documentation</span><span>Built {{ generated[:10] }}</span></footer>
+    <footer><span>{{ project.name }} {{ tr('documentation') }}</span><span>{{ tr('Built') }} {{ generated[:10] }}</span></footer>
   </main>
-  {% if doc is defined %}<aside class="page-toc" aria-label="On this page">{% block sidenav %}{% endblock %}</aside>{% endif %}
+  {% if doc is defined %}<aside class="page-toc" aria-label="{{ tr('On this page') }}">{% block sidenav %}{% endblock %}</aside>{% endif %}
 </div>
 <script src="reading.js" defer></script>
 {% block scripts %}{% endblock %}

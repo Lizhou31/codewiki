@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "documents",
   "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:16:07+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "6e6f4babd3bf1da7626b1e4318981d7d5eeba1bbecc29a4039d418fcc7eaf240",
+  "reason": "Reviewed build parsing and rendering changes: canonical frontmatter validation and joins remain unchanged, and the renderer preserves source bindings, stable anchors, hierarchy, and legacy template sections.",
+  "reviewed_at": "2026-09-13T16:59:00+00:00",
+  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
+  "fingerprint": "392469e590387ce6cfca400f7c31c6624ea34d348af1fe63309ea8986dbed0a7",
   "snapshot": {
     "document_path": "wiki/documents.md",
     "document_sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
     "sources": {
-      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
       "../src/codewiki/documents.py": "60d76e2590e80666b48706b1d40e57cd5d27b5aed0dbb739a82c8adc4e1729e0"
     },
     "coverage": [

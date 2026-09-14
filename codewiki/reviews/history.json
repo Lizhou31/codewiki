@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "history",
   "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:15:08+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "aa33e3676a68569a695c46ae733cf16972acb3fcd9e0ebb23b1481d13dfdcd66",
+  "reason": "Reviewed snapshot.py change: translation siblings do not contribute source ownership or refs, while all Markdown files still participate in the content fingerprint and preview input model.",
+  "reviewed_at": "2026-09-13T16:59:00+00:00",
+  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
+  "fingerprint": "7c7e7d2d59e7fe3c0ee2605c852a936c71d0ef7acf30e5bee6a9615c7a8f0bc2",
   "snapshot": {
     "document_path": "wiki/history.md",
     "document_sha256": "ea1f91adddce63b085ceb4afd5c1f63d55e868d150f3b58d5c414db4c0b7d4d0",
     "sources": {
-      "../src/codewiki/snapshot.py": "c17e7b137498c73ef4dab77b8c1f8b31a098f64802e5cb5b1978492ef2902b00"
+      "../src/codewiki/snapshot.py": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67"
     },
     "coverage": [
       {

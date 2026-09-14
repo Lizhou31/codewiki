@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "languages",
   "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:16:24+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "1a6e3066266e041fb859e55279f961260e4d7ada52095c0142f4208cca6ac457",
+  "reason": "Reviewed build.py changes: source scanning and adapter tag binding are unchanged; locale suffix handling applies only to documentation discovery and HTML rendering.",
+  "reviewed_at": "2026-09-13T16:59:01+00:00",
+  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
+  "fingerprint": "a2438ea930786dc008145cbfb691719ff77ce24cbdf2f2176d8d3a538a5ea455",
   "snapshot": {
     "document_path": "wiki/languages.md",
     "document_sha256": "4c088e87e6cdbc85e895048367229eb28d6a8a3539738aab641377094e302b14",
     "sources": {
-      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
       "../src/codewiki/languages.py": "cf4f134a1a80ac60d790cc1dd82f941d837f1a3b70cc92168906c4b30f88d197"
     },
     "coverage": [

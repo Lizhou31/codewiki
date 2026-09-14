@@ -1,45 +1,45 @@
 {% extends "_base.html.j2" %}
 {% set page = 'index' %}
-{% block title %}{{ project.name }} — {{ project.subtitle }}{% endblock %}
+{% block title %}{{ project.name }} — {{ tr(project.subtitle) }}{% endblock %}
 {% block main %}
-<div class="crumb">{{ project.subtitle }}</div>
+<div class="crumb">{{ tr(project.subtitle) }}</div>
 <h1>{{ project.name }}</h1>
 
 <div class="stats">
-  <div class="stat"><div class="n">{{ docs | length }}</div><div class="l">Documents</div></div>
-  <div class="stat"><div class="n">{{ index.docs | map(attribute='anchors') | map('length') | sum }}</div><div class="l">Anchors</div></div>
-  <div class="stat"><div class="n">{{ index.by_file | length }}</div><div class="l">Files linked</div></div>
-  <div class="stat"><div class="n">{{ warnings | selectattr('kind','equalto','unimplemented') | list | length }}</div><div class="l">Unbound concepts</div></div>
+  <div class="stat"><div class="n">{{ docs | length }}</div><div class="l">{{ tr("Documents") }}</div></div>
+  <div class="stat"><div class="n">{{ index.docs | map(attribute='anchors') | map('length') | sum }}</div><div class="l">{{ tr("Anchors") }}</div></div>
+  <div class="stat"><div class="n">{{ index.by_file | length }}</div><div class="l">{{ tr("Files linked") }}</div></div>
+  <div class="stat"><div class="n">{{ warnings | selectattr('kind','equalto','unimplemented') | list | length }}</div><div class="l">{{ tr("Unbound concepts") }}</div></div>
 </div>
 
-<h2>Start here</h2>
+<h2>{{ tr("Start here") }}</h2>
 <div class="cards">
   {% for node in nav_tree %}
   {% set d = by_id[node.id] %}
   <div class="card">
     <h3><a href="{{ d.out }}">{{ d.title }}</a></h3>
-    <div class="meta">{{ d.id }} · {{ d.anchors | length }} anchors · {{ d.owns | length }} files</div>
+    <div class="meta">{{ d.id }} · {{ d.anchors | length }} {{ tr('anchors') }} · {{ d.owns | length }} {{ tr('files') }}</div>
     <p>{{ d.summary }}</p>
   </div>
   {% endfor %}
 </div>
 
 {% if index.reviews is defined %}
-<h2>Documentation review</h2>
-<p>{{ index.reviews.pending }} pending of {{ index.reviews.total }} documents. Outdated means changed since review, not necessarily incorrect.</p>
+<h2>{{ tr("Documentation review") }}</h2>
+<p>{{ index.reviews.pending }} {{ tr('pending of') }} {{ index.reviews.total }} {{ tr('documents. Outdated means changed since review, not necessarily incorrect.') }}</p>
 <div class="report">
   {% for r in index.reviews.documents if r.state != 'current' %}
   <div class="row">
-    <span class="sev {{ 'warn' if r.state == 'outdated' else 'info' }}">{{ r.state }}</span>
-    <span class="where">{% if not r.removed %}<a href="{{ r.document }}.html">{{ r.title }}</a>{% else %}{{ r.document }}{% endif %}</span>
-    <span class="msg">{{ r.reason }}</span>
+    <span class="sev {{ 'warn' if r.state == 'outdated' else 'info' }}">{{ tr(r.state) }}</span>
+    <span class="where">{% if not r.removed %}<a href="{{ page_url(r.document + '.html') }}">{{ by_id[r.document].title if r.document in by_id else r.title }}</a>{% else %}{{ r.document }}{% endif %}</span>
+    <span class="msg">{{ tr(r.reason) }}</span>
   </div>
   {% endfor %}
 </div>
-{% if not index.reviews.pending %}<p>All documents match their reviewed versions.</p>{% endif %}
+{% if not index.reviews.pending %}<p>{{ tr("All documents match their reviewed versions.") }}</p>{% endif %}
 {% endif %}
 
-<h2>Build report</h2>
+<h2>{{ tr("Build report") }}</h2>
 {% if warnings %}
 <div class="report">
   {% for w in warnings %}
@@ -52,6 +52,6 @@
   {% endfor %}
 </div>
 {% else %}
-<p>No problems found.</p>
+<p>{{ tr("No problems found.") }}</p>
 {% endif %}
 {% endblock %}

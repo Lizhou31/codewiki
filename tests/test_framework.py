@@ -409,3 +409,134 @@ def test_dependency_cycles_do_not_become_parent_cycles(instance):
     (instance.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\ndepends_on: [architecture]\n---\n## Child\n')
     ix = build(instance)
     assert ix['docs'][0]['used_by'] == ['child']
+
+
+# @wiki:impl test-framework.translations
+def test_html_translations_keep_queries_english_and_links_local(instance):
+    (instance.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\ntitle: Child\n---\n## Child\n')
+    from codewiki.review import report
+    before_review = {d['document']: d['fingerprint'] for d in report(instance)['documents']}
+    translation = instance.wiki_dir / 'architecture-ch_tw.md'
+    translation.write_text('''---
+id: architecture
+title: 架構
+summary: 工作分派。
+---
+## 重點 {#tl-dr}
+- 精簡的入口。
+## 概念 {#concepts}
+### 分派 {#dispatch}
+保留 **原始強調**。[下一頁](child.html#child) [Markdown](child.md#child)
+[網站](https://example.com/child.html) [總覽](index.html)
+```html
+<a href="child.html">literal</a>
+```
+#### 細節 {#details}
+程式碼。
+### 其他 {#other}
+另一個章節。
+''')
+    ix = build(instance)
+    assert {d['document']: d['fingerprint'] for d in report(instance)['documents']} == before_review
+    assert [d['id'] for d in ix['docs']] == ['architecture', 'child']
+    assert ix['docs'][0]['title'] == 'Architecture'
+    assert '**original emphasis**' in query(instance, ix, 'section', 'architecture.dispatch')['markdown']
+    assert '原始強調' not in json.dumps(ix['docs'], ensure_ascii=False)
+    html = (instance.site_dir / 'architecture-ch_tw.html').read_text()
+    assert '<html lang="zh-TW">' in html
+    assert '<h1>架構</h1>' in html
+    assert 'href="architecture.html" lang="en"' in html
+    assert 'href="child-ch_tw.html#child"' in html
+    assert 'href="https://example.com/child.html"' in html
+    assert '&lt;a href=&quot;child.html&quot;&gt;' in html
+    assert 'def dispatch(value)' in html
+    assert 'id="dispatch"' in html
+    fallback = (instance.site_dir / 'child-ch_tw.html').read_text()
+    assert '此頁尚未翻譯' in fallback and '<div lang="en">' in fallback
+    overview = (instance.site_dir / 'index-ch_tw.html').read_text()
+    assert 'href="architecture-ch_tw.html"' in overview and '架構' in overview
+    files = (instance.site_dir / 'files-ch_tw.html').read_text()
+    assert 'href="architecture-ch_tw.html#dispatch"' in files
+    translation.unlink()
+    build(instance)
+    assert not (instance.site_dir / 'architecture-ch_tw.html').exists()
+    assert not (instance.site_dir / 'index-ch_tw.html').exists()
+    assert (instance.site_dir / 'architecture.html').exists()
+
+
+# @wiki:impl test-framework.translations
+@pytest.mark.parametrize('filename,content', [
+    ('missing-ch_tw.md', '---\nid: missing\n---\n'),
+    ('architecture-ch_tw.md', '---\nid: other\n---\n'),
+    ('architecture-ch_tw.md', '---\nid: architecture\n---\n## Missing anchors\n'),
+    ('architecture-ch_tw.md', 'not frontmatter'),
+])
+def test_invalid_translation_preserves_published_outputs(instance, filename, content):
+    build(instance)
+    before = instance.index_path.read_bytes()
+    before_html = (instance.site_dir / 'architecture.html').read_bytes()
+    (instance.wiki_dir / filename).write_text(content)
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1
+    assert any(w.kind in ('invalid-doc', 'invalid-translation') for w in warnings)
+    assert instance.index_path.read_bytes() == before
+    assert (instance.site_dir / 'architecture.html').read_bytes() == before_html
+
+
+# @wiki:impl test-framework.translations
+def test_translation_aliases_nested_paths_and_diagrams(instance):
+    folder = instance.wiki_dir / 'nested'
+    folder.mkdir()
+    (folder / 'engine.md').write_text('''---
+id: engine.v2
+title: Engine
+parent: architecture
+diagram_links:
+  dispatch: architecture.dispatch
+---
+## Engine {#engine}
+```mermaid
+flowchart LR
+  dispatch --> engine
+```
+''')
+    (folder / 'engine-zh_tw.md').write_text('''---
+id: engine.v2
+title: 引擎
+---
+## 引擎 {#engine}
+[架構](../architecture.md#dispatch)
+```mermaid
+flowchart LR
+  dispatch --> engine
+```
+''')
+    build(instance)
+    html = (instance.site_dir / 'engine.v2-ch_tw.html').read_text()
+    assert 'href="architecture-ch_tw.html#dispatch"' in html
+    assert '"href": "architecture-ch_tw.html#dispatch"' in html
+    assert '<h1>引擎</h1>' in html
+    (folder / 'engine-ch_tw.md').write_text((folder / 'engine-zh_tw.md').read_text())
+    assert run(instance, strict=True, quiet=True)[0] == 1
+
+
+# @wiki:impl test-framework.translations
+def test_multiple_html_locales_and_output_collision(instance):
+    original = (instance.wiki_dir / 'architecture.md').read_text()
+    for locale in ('ch_tw', 'fr_fr'):
+        (instance.wiki_dir / f'architecture-{locale}.md').write_text(original)
+    build(instance)
+    french = (instance.site_dir / 'architecture-fr_fr.html').read_text()
+    assert '<html lang="fr-FR">' in french
+    assert 'href="architecture-ch_tw.html"' in french
+    assert 'href="architecture.html" lang="en"' in french
+    (instance.wiki_dir / 'architecture-ch_tw.md').unlink()
+    build(instance)
+    assert not (instance.site_dir / 'architecture-ch_tw.html').exists()
+    assert (instance.site_dir / 'architecture-fr_fr.html').is_file()
+    # A canonical ID must never overwrite a translated page, even in non-strict builds.
+    before = instance.index_path.read_bytes()
+    (instance.wiki_dir / 'collision.md').write_text('---\nid: architecture-fr_fr\n---\n')
+    with pytest.raises(ValueError, match='collides'):
+        run(instance, quiet=True)
+    assert instance.index_path.read_bytes() == before

@@ -1,5 +1,7 @@
 # CodeWiki
 
+[繁體中文（台灣）](README-ch_tw.md)
+
 An independently versioned framework for architecture documentation that lives
 alongside each project's source. Markdown holds explanations; source tags and
 symbol references attach the implementation at build time. The same documents
@@ -114,6 +116,19 @@ Here a Mermaid node named `parser` opens the `sections` heading in `documents`.
 The strict build validates the targets and derives reverse "used by" links.
 `query doc` exposes these same relationships for LLM tools. Authors describe
 architectural dependencies; code tags attach source evidence to the explanation.
+
+## HTML languages
+
+Keep canonical pages in English. Add a sibling such as `renderer-ch_tw.md` with
+the same frontmatter `id`, heading levels, and stable anchors. Translate the title,
+summary, and prose; use explicit `{#english-slug}` anchors on translated headings.
+Run `codewiki build --strict` to generate English and Traditional Chinese (Taiwan)
+pages with a language switcher. The framework's 20 wiki pages include translations.
+
+Navigation, diagrams, and page links stay in the selected language. Missing
+translations show English with a fallback notice. Skills, CLI queries, and review
+records continue to use English. Translation files participate in build freshness
+and preview. See [HTML translations](codewiki/wiki/renderer.md#translations).
 
 ## Customization and upgrades
 

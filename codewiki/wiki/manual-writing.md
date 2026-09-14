@@ -157,3 +157,19 @@ with `codewiki review updated <id> --reason "..."` or
 Rebuild to display the new status, then run `codewiki review check`.
 See [Reviewing outdated documents](manual-review.html) for initial baselines,
 version-specific passes, and CI integration. Rebuilding alone never clears reviews.
+
+## Add an HTML translation {#translations}
+
+Keep the original page in English, then copy it to a sibling named, for example,
+`getting-started-ch_tw.md`. Translate the title, summary, and prose into Traditional
+Chinese (Taiwan). Keep the same frontmatter `id`, and preserve every heading's
+anchor, level, and order. For an implicit English heading such as `## First steps`,
+write the translation as `## 開始使用 {#first-steps}`. Commands, source tags, paths,
+and relationship IDs continue to use their original values.
+
+Run `codewiki build --strict`. The HTML language links switch between English and
+繁體中文（台灣）, including the overview and source index. Canonical page links
+remain within the selected language; missing translations visibly fall back to
+English. CLI queries and skills always read the original English pages. Translated
+Markdown is only used to render HTML. See [HTML translations](renderer.html#translations)
+for naming rules, validation, and custom themes.

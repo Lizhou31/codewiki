@@ -2,17 +2,17 @@
   "schema_version": 1,
   "document": "architecture",
   "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:15:22+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "56cae364d34fc2a36e643ce8ba5c168f9e2237f901f79ae900a6cab0f9f73264",
+  "reason": "Reviewed the build.py diff: canonical analysis and source bindings still feed English CLI data; translations are a separate HTML rendering step and strict failures preserve outputs.",
+  "reviewed_at": "2026-09-13T16:59:00+00:00",
+  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
+  "fingerprint": "05ea2bc188c9c72c41396de412ed6a2007b27ef3709e04ffe0f5fab414d038a3",
   "snapshot": {
     "document_path": "wiki/architecture.md",
     "document_sha256": "2deea99df8a8c729166fe945878a8bbbc6399e15bf47d028928883b1b7a26b1a",
     "sources": {
       "../src/codewiki/__init__.py": "7d2c2d5f3aa944c9cf3372cf20f552810ba3118c75983c1453d7bf8ccb445ba6",
       "../src/codewiki/__main__.py": "8dc9368d75602920fb040cd35525848d25b8f8fb252e01dbf8109d752e5d532a",
-      "../src/codewiki/build.py": "333b66e1d6e45f9e17f91ed04e0489aa4b747ea18292e3fefc4e216546cac998",
+      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
       "../src/codewiki/config.py": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825"
     },
     "coverage": [

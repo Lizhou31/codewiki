@@ -106,3 +106,11 @@ codewiki build --strict
 A stale index may still return old documentation with a freshness warning. Source
 queries reject stale locations. If the rebuild fails, fix the reported problems
 before using the source ranges; see [Troubleshooting](manual-configuration.html#troubleshooting).
+
+## Switch the HTML language {#translations}
+
+When translations exist, the top bar offers **English** and **繁體中文（台灣）**.
+Choose a language to open the same page in that language. Navigation, page links,
+and diagrams retain that language. Pages without a translation display an English
+fallback notice. The switcher works offline and without JavaScript. CLI commands
+and skills continue to return English regardless of the selected browser language.

@@ -90,7 +90,8 @@ bounded source ranges from a verified checkout when requested.
 The snapshot fingerprints inputs and records repository state. It lets queries
 detect stale ranges, but does not prove an explanation is correct.
 
-Documents enter the index in sorted Markdown-path order. The renderer builds its
+Only canonical English documents enter the index, in sorted Markdown-path order.
+Translation siblings are validated separately for HTML rendering. The renderer builds its
 own navigation tree and places manual roots first; it does not reorder the index.
 The CLI walks the indexed parent hierarchy, so its root order can differ from the
 HTML sidebar while preserving the same pages and relationships.
@@ -106,7 +107,7 @@ review records. See [Documentation review](reviews.html).
 
 HTML is first rendered in a temporary directory. Template errors leave previously
 published outputs intact. On success, files are copied to the site, obsolete pages
-listed in the previous index are retired, and a temporary index replaces the old one.
+listed in the previous index (including the `rendered_pages` language manifest) are retired, and a temporary index replaces the old one.
 The entire site directory is not swapped atomically: a reader during publication
 can briefly see files from different builds. The preview server reloads after build.
 

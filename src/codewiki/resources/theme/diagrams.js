@@ -1,5 +1,7 @@
 /* Diagram navigation uses validated document/section IDs emitted by the build. */
 (async () => {
+  const labels = {'Diagram could not render. Use the document links below.': '圖表無法渲染，請使用下方的文件連結。', 'Architecture explorer': '架構探索', 'Expand diagram': '展開圖表', 'Expanded architecture diagram': '已展開的架構圖', 'Close diagram · Esc': '關閉圖表 · Esc', 'Explore ': '探索 ', 'Open component': '開啟元件', 'Read implementation section': '閱讀實作章節', ' linked nodes · select to explore': ' 個連結節點 · 點選以探索'};
+  const tr = text => document.documentElement.lang === 'zh-TW' ? (labels[text] || text) : text;
   const data = document.getElementById('diagram-targets');
   if (!data || !window.mermaid) return;
   const targets = JSON.parse(data.textContent);
@@ -24,7 +26,7 @@
     try {
       await mermaid.run({nodes: [diagram]});
     } catch (error) {
-      wrap.querySelector('.mermaid-hint').textContent = 'Diagram could not render. Use the document links below.';
+      wrap.querySelector('.mermaid-hint').textContent = tr('Diagram could not render. Use the document links below.');
       continue;
     }
     const svg = diagram.querySelector('svg');
@@ -32,19 +34,19 @@
     const toolbar = document.createElement('div');
     toolbar.className = 'diagram-toolbar';
     const label = document.createElement('span');
-    label.textContent = 'Architecture explorer';
+    label.textContent = tr('Architecture explorer');
     const button = document.createElement('button');
     button.type = 'button';
-    button.textContent = 'Expand diagram';
+    button.textContent = tr('Expand diagram');
     button.setAttribute('aria-expanded', 'false');
     const dialog = document.createElement('dialog');
     dialog.className = 'diagram-dialog';
-    dialog.setAttribute('aria-label', 'Expanded architecture diagram');
+    dialog.setAttribute('aria-label', tr('Expanded architecture diagram'));
     const placeholder = document.createComment('diagram position');
     dialog.addEventListener('close', () => {
       placeholder.replaceWith(wrap);
       wrap.classList.remove('diagram-expanded');
-      button.textContent = 'Expand diagram';
+      button.textContent = tr('Expand diagram');
       button.setAttribute('aria-expanded', 'false');
       button.focus({preventScroll: true});
     });
@@ -54,7 +56,7 @@
       wrap.before(placeholder);
       dialog.append(wrap);
       wrap.classList.add('diagram-expanded');
-      button.textContent = 'Close diagram · Esc';
+      button.textContent = tr('Close diagram · Esc');
       button.setAttribute('aria-expanded', 'true');
       dialog.showModal();
     };
@@ -72,17 +74,17 @@
       // A real SVG link supports keyboard navigation, copy-link, and opening a tab.
       const link = document.createElementNS('http://www.w3.org/2000/svg', 'a');
       link.setAttribute('href', target.href);
-      link.setAttribute('aria-label', 'Explore ' + target.title);
+      link.setAttribute('aria-label', tr('Explore ') + target.title);
       link.setAttribute('tabindex', '0');
       el.parentNode.insertBefore(link, el);
       link.append(el);
       const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-      title.textContent = target.title + ' · ' + (target.kind === 'component' ? 'Open component' : 'Read implementation section');
+      title.textContent = target.title + ' · ' + (target.kind === 'component' ? tr('Open component') : tr('Read implementation section'));
       el.append(title);
       link.addEventListener('click', () => {
         if (dialog.open) dialog.close();
       });
     }
-    label.textContent = linked + ' linked nodes · select to explore';
+    label.textContent = linked + tr(' linked nodes · select to explore');
   }
 })();

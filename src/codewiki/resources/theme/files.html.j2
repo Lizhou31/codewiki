@@ -1,22 +1,21 @@
 {% extends "_base.html.j2" %}
 {% set page = 'files' %}
-{% block title %}Source file index — {{ project.name }}{% endblock %}
+{% block title %}{{ tr('Source file index') }} — {{ project.name }}{% endblock %}
 {% block main %}
 <div class="crumb">{{ project.name }}</div>
-<h1>Source file index</h1>
-<p>What you need to know before touching a file. This is the view an LLM
-should be handed when it is about to edit code.</p>
+<h1>{{ tr("Source file index") }}</h1>
+<p>{{ tr('What you need to know before touching a file. This is the view an LLM should be handed when it is about to edit code.') }}</p>
 
 {% for f, e in by_file | dictsort %}
 <h2><code>{{ f }}</code></h2>
-{% if e.owner_doc %}<p class="crumb">Owned by <a href="{{ e.owner_doc }}.html">{{ e.owner_doc }}</a></p>{% endif %}
+{% if e.owner_doc %}<p class="crumb">{{ tr('Owned by') }} <a href="{{ page_url(e.owner_doc + '.html') }}">{{ e.owner_doc }}</a></p>{% endif %}
 {% if e.anchors %}
 <table>
-  <tr><th>Role</th><th>Anchor</th><th>Symbol</th><th>Lines</th></tr>
+  <tr><th>{{ tr("Role") }}</th><th>{{ tr("Anchor") }}</th><th>{{ tr("Symbol") }}</th><th>{{ tr("Lines") }}</th></tr>
   {% for a in e.anchors %}
   <tr>
     <td><span class="role {{ a.role }}">{{ a.role }}</span></td>
-    <td><a href="{{ a.url }}">{{ a.title }}</a></td>
+    <td><a href="{{ page_url(a.url.split('#')[0]) }}#{{ a.url.split('#')[1] }}">{{ by_id[a.doc].anchors[a.id].title if a.doc in by_id and a.id in by_id[a.doc].anchors else a.title }}</a></td>
     <td><code>{{ a.symbol or '—' }}</code></td>
     <td class="loc">{{ a.lines[0] }}–{{ a.lines[1] }}</td>
   </tr>
@@ -24,9 +23,9 @@ should be handed when it is about to edit code.</p>
 </table>
 {% endif %}
 {% if e.refs %}
-<p class="crumb">Referenced as read-only by:
-{% for r in e.refs %}<code>{{ r.symbol }}</code> → <a href="{{ r.doc }}.html">{{ r.doc }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+<p class="crumb">{{ tr('Referenced as read-only by:') }}
+{% for r in e.refs %}<code>{{ r.symbol }}</code> → <a href="{{ page_url(r.doc + '.html') }}">{{ r.doc }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
 {% endif %}
-{% if not e.anchors and not e.refs %}<p class="crumb">No wiki coverage.</p>{% endif %}
+{% if not e.anchors and not e.refs %}<p class="crumb">{{ tr("No wiki coverage.") }}</p>{% endif %}
 {% endfor %}
 {% endblock %}

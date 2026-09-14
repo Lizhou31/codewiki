@@ -13,9 +13,12 @@ def digest(path):
 def coverage_paths(w):
     """Include explicitly owned/referenced assets even without a language adapter."""
     from .documents import read_document
+    from .localization import translation_source
     paths = set()
     for page in w.wiki_dir.rglob("*.md"):
         if any(part.startswith("_") for part in page.relative_to(w.wiki_dir).parts) or page.name.upper() in ("README.MD", "TAGS.MD"):
+            continue
+        if translation_source(page):
             continue
         try:
             fm, _, _, _ = read_document(page)
