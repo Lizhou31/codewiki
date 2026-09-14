@@ -58,6 +58,11 @@ project-relative guide path, so repeating init preserves a customized section an
 different instances receive separate references. `--dir` controls that path. Older
 instances gain the root reference on re-initialization while their files stay intact.
 
+Initialization also records exact package-copy hashes and the relative project root
+in `.codewiki-manifest.json`. Existing customized files are not treated as pristine
+copies. Keep the manifest in Git; [Instance updates](updates.html) uses it to refresh
+untouched support files and detect changes that need reconciliation.
+
 ### Preview the build contract {#preview}
 
 `codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs

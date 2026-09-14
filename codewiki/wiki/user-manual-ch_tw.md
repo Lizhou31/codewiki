@@ -24,6 +24,7 @@ decisions: []
 | 我想要… | 指南 |
 | --- | --- |
 | 安裝 CodeWiki 或將它加入專案 | [開始使用](manual-getting-started.html) |
+| 升級已初始化的專案，包括原始碼建置 | [更新既有 Wiki](manual-updating.html) |
 | 瀏覽頁面、檢視原始碼或從命令列搜尋 | [閱讀與查詢](manual-reading.html) |
 | 建立頁面、整理章節或附加原始碼證據 | [撰寫頁面](manual-writing.html) |
 | 審查過期頁面、確認文字無須修改，或在 CI 強制檢查 | [審查已過期的文件](manual-review.html) |

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "document": "testing",
+  "outcome": "updated",
+  "reason": "Read the testing guide against pyproject test discovery and the existing test modules. Added the instance-update lifecycle node, its source-backed verification link, and the focused test_update.py command; the full suite and strict build passed.",
+  "reviewed_at": "2026-09-14T04:39:30+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "cd9df9b2cdc8cc172bf56ca795e98cd70d01ca4cde94dd699956714e005a3b7a",
+  "snapshot": {
+    "document_path": "wiki/testing.md",
+    "document_sha256": "a43a31ef316c36c8e7382ade39db17ac4fecb25256e5728f479de538d1bec178",
+    "sources": {},
+    "coverage": []
+  }
+}

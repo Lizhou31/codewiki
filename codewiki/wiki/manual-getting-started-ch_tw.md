@@ -56,6 +56,7 @@ codewiki serve --no-open
 | `codewiki/` 內的路徑 | 用途 |
 | --- | --- |
 | `wiki.config.yaml` | 專案名稱、原始碼根目錄與輸出設定 |
+| `.codewiki-manifest.json` | 未來更新使用的套件檔案基準與專案位置，請納入 Git |
 | `wiki/architecture.md` | 應替換成專案說明的起始頁 |
 | `wiki/_templates/` | 可重用的頁面範本 |
 | `wiki/TAGS.md` | 原始碼標籤語法與範例 |
@@ -67,6 +68,8 @@ codewiki serve --no-open
 可攜式技能仍需透過代理客戶端支援的探索位置註冊；複製到 Wiki 並不代表自動完成註冊。
 
 建置會產生 `site/` 與 `index.json`。請編輯 Markdown 輸入，再重新建置以更新 HTML 與查詢索引。重複執行 `init` 會保留既有實例檔案，不覆寫已撰寫的頁面。
+
+升級既有實例請見[更新既有 Wiki](manual-updating.html)。`codewiki update` 更新支援檔案；重複執行 `init` 則保留舊副本。
 
 ## 進行第一次編輯 {#first-edit}
 

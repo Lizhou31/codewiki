@@ -121,7 +121,9 @@ Strict validation errors leave the last published index and site in place.
 
 `codewiki build` validates and renders; `codewiki query tree` begins the LLM reading
 path; `codewiki serve` provides a local authoring loop; `codewiki init` starts a
-project wiki. `codewiki review status` lists pending reviews from live inputs;
+project wiki. `codewiki update` upgrades the framework and reconciles an existing
+instance; [Instance updates](updates.html) describes release/source selection and
+customization preservation. `codewiki review status` lists pending reviews from live inputs;
 `codewiki review check` enforces their completion. Explore the child pages for the contracts each command relies on.
 
 ## Open Questions

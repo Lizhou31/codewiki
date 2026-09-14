@@ -16,6 +16,7 @@ diagram_links:
   adapters: test-languages
   integration: test-framework
   reviews: reviews.tests
+  updates: updates.tests
 ---
 
 ## Test architecture
@@ -25,6 +26,7 @@ flowchart TB
   suite["pytest · tests/"] --> adapters["Language binding tests"]
   suite --> integration["Framework integration tests"]
   suite --> reviews["Documentation review lifecycle"]
+  suite --> updates["Instance update lifecycle"]
 ```
 
 **Choose a test layer to go deeper.** Language fixtures isolate parsing and binding;
@@ -42,6 +44,7 @@ dependencies. `pyproject.toml` configures pytest to discover `tests/`.
 .venv/bin/python -m pytest tests/test_languages.py -q
 .venv/bin/python -m pytest tests/test_framework.py -q
 .venv/bin/python -m pytest tests/test_review.py -q
+.venv/bin/python -m pytest tests/test_update.py -q
 .venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q
 .venv/bin/python -m pytest --collect-only -q
 .venv/bin/codewiki build --strict

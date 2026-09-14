@@ -19,4 +19,11 @@ before finishing and report pending pages. Keep `{{DIR}}/reviews/*.json` with th
 in Git. Uncovered source does not require creating documentation.
 
 Reusable skills live in `{{DIR}}/skills/`; page templates and tag syntax are in
-`{{DIR}}/wiki/_templates/` and `{{DIR}}/wiki/TAGS.md`.
+`{{DIR}}/{{WIKI_DIR}}/_templates/` and `{{DIR}}/{{WIKI_DIR}}/TAGS.md`.
+
+Use `codewiki update --config "{{DIR}}/wiki.config.yaml"` to upgrade the framework
+and refresh support files. Use `--source <framework-checkout>` for a source build,
+or `--installed` to use the currently installed framework. Commit
+`{{DIR}}/.codewiki-manifest.json` so future updates can recognize local changes.
+Compare conflicts in `{{DIR}}/.codewiki-update/` before adopting or acknowledging
+them with `--installed --keep-local <instance-relative-path>`.

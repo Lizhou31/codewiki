@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "document": "user-manual",
+  "outcome": "updated",
+  "reason": "Read the manual overview and its guide links. Added the source-build and existing-project upgrade navigation entry and checked the new English and Traditional Chinese rendered pages and their local links.",
+  "reviewed_at": "2026-09-14T04:39:30+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "07cd3602e6fded1349bad95dfa082bb57055fc7c0eda52c885bbe58a4aefc5e0",
+  "snapshot": {
+    "document_path": "wiki/user-manual.md",
+    "document_sha256": "78c71df23028c45bd7cc8374e82fc48dbae5b6aeb6ae7676bea1d3dcd3de0f87",
+    "sources": {},
+    "coverage": []
+  }
+}

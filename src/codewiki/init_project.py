@@ -7,6 +7,7 @@ from pathlib import Path
 import yaml
 
 from .config import RESOURCES
+from .instance_files import bundled_files, read_manifest, record_init
 
 
 def write_if_missing(path, text):
@@ -18,7 +19,7 @@ def write_if_missing(path, text):
 
 
 # @wiki:impl authoring.scaffold
-def add_root_agent_guidance(root, instance):
+def add_root_agent_guidance(root, instance, dry_run=False):
     """Append one instance reference, preserving existing instructions byte-for-byte."""
     guide = (instance.relative_to(root) / "AGENTS.md").as_posix()
     marker = f"<!-- codewiki:agent-guide {guide} -->"
@@ -26,6 +27,8 @@ def add_root_agent_guidance(root, instance):
     existing = path.read_bytes() if path.exists() else b""
     if marker.encode("utf8") in existing.splitlines():
         return False
+    if dry_run:
+        return True
     separator = b"" if not existing else (b"\n" if existing.endswith(b"\n") else b"\n\n")
     section = (
         f"{marker}\n"
@@ -54,6 +57,7 @@ def main(argv=None):
     instance = (root / args.dir).resolve()
     if instance == root or root not in instance.parents:
         raise ValueError("--dir must be a subdirectory inside the project")
+    read_manifest(instance)
     roots = [os.path.relpath((root / path).resolve(), instance) for path in args.code_root or ["src"]]
     cfg = dict(wiki_dir="wiki", site_dir="site", code_roots=roots,
                exclude_globs=["*/build/*", "*/out/*", "*/node_modules/*", "*/.venv/*"],
@@ -65,12 +69,9 @@ def main(argv=None):
             made.append(str(path))
     write("wiki.config.yaml", "# Paths are relative to this configuration file.\n" + yaml.safe_dump(cfg, sort_keys=False))
     write(".gitignore", "site/\n__pycache__/\n")
-    for folder, destination in (("templates", "wiki/_templates"), ("skills", "skills"), ("integrations", "integrations")):
-        for path in sorted((RESOURCES / folder).rglob("*")):
-            if path.is_file():
-                write(Path(destination) / path.relative_to(RESOURCES / folder), path.read_text(encoding="utf8"))
-    write("wiki/TAGS.md", (RESOURCES / "TAGS.md").read_text(encoding="utf8"))
-    write("AGENTS.md", (RESOURCES / "AGENTS.instance.md").read_text(encoding="utf8").replace("{{DIR}}", args.dir))
+    bundle = bundled_files(instance.relative_to(root).as_posix())
+    for name, content in bundle.items():
+        write(name, content.decode("utf8"))
     # An existing instance keeps its authored entry pages and hierarchy.
     wiki_dir = instance / "wiki"
     existing_pages = [p for p in wiki_dir.rglob("*.md")
@@ -80,6 +81,7 @@ def main(argv=None):
         starter = (RESOURCES / "templates/architecture.md").read_text(encoding="utf8")
         write("wiki/architecture.md", starter)
     root_guidance_added = add_root_agent_guidance(root, instance)
+    record_init(instance, root, bundle)
     print(f"Wiki instance: {instance}")
     for path in made:
         print(f"  + {path}")

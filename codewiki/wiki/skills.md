@@ -47,7 +47,9 @@ The initializer copies these portable skills into the project instance; register
 them using the chosen client's own discovery mechanism. Initialization also adds
 a marked reference to the instance guide in the project-root `AGENTS.md`, preserving
 existing instructions and avoiding duplicates on repeat runs. The skill verifies
-this integration instead of manually adding another root reference.
+this integration instead of manually adding another root reference. It also keeps
+the generated update manifest in Git and directs existing-instance upgrades to
+`codewiki update`, since repeating init does not replace old support files.
 
 ## Read progressively {#query}
 

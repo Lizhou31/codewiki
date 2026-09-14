@@ -55,6 +55,7 @@ Initialization creates:
 | Path inside `codewiki/` | Purpose |
 | --- | --- |
 | `wiki.config.yaml` | Project name, source roots, and output settings |
+| `.codewiki-manifest.json` | Package file baselines and project location for future updates; keep in Git |
 | `wiki/architecture.md` | Starter page to replace with your project's explanations |
 | `wiki/_templates/` | Reusable page templates |
 | `wiki/TAGS.md` | Source-tag syntax and examples |
@@ -75,6 +76,9 @@ location; copying them into the wiki does not automatically register them.
 The build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to
 update the HTML and query index. Repeating `init` preserves existing instance files and
 does not replace your authored pages.
+
+To upgrade an existing instance, use [Updating an existing wiki](manual-updating.html).
+`codewiki update` refreshes support files; repeating `init` preserves their old copies.
 
 ## Make your first edit {#first-edit}
 

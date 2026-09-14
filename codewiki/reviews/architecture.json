@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "document": "architecture",
-  "outcome": "no-change",
-  "reason": "Reviewed the build.py diff: canonical analysis and source bindings still feed English CLI data; translations are a separate HTML rendering step and strict failures preserve outputs.",
-  "reviewed_at": "2026-09-13T16:59:00+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "05ea2bc188c9c72c41396de412ed6a2007b27ef3709e04ffe0f5fab414d038a3",
+  "outcome": "updated",
+  "reason": "Reviewed CLI dispatch and version changes against the architecture entry points. Added the update command and link to its release/source and instance reconciliation component; existing build and query contracts remain unchanged.",
+  "reviewed_at": "2026-09-14T04:39:28+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "af93888015478df66d155f2e0a3aad3e523b768f51d345417e6fe327862f775c",
   "snapshot": {
     "document_path": "wiki/architecture.md",
-    "document_sha256": "2deea99df8a8c729166fe945878a8bbbc6399e15bf47d028928883b1b7a26b1a",
+    "document_sha256": "4e526e92c9efa98c79e7a60e289bdcf43de780cae57a85e0547016c8770e4737",
     "sources": {
-      "../src/codewiki/__init__.py": "7d2c2d5f3aa944c9cf3372cf20f552810ba3118c75983c1453d7bf8ccb445ba6",
-      "../src/codewiki/__main__.py": "8dc9368d75602920fb040cd35525848d25b8f8fb252e01dbf8109d752e5d532a",
+      "../src/codewiki/__init__.py": "a147385ef7deb459e6f4b5c9a04be3be5f9baf5d714520fc02e4bd126d7af586",
+      "../src/codewiki/__main__.py": "22ba1a29f62ffa66459980703bad181db550fced53617c2ba057bb3ac8671fa9",
       "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
       "../src/codewiki/config.py": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825"
     },

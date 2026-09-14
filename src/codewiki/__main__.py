@@ -1,4 +1,4 @@
-"""`python -m codewiki <build|query|serve|init|review> ...`"""
+"""`python -m codewiki <build|query|serve|init|update|review> ...`"""
 from __future__ import annotations
 
 import sys
@@ -11,6 +11,7 @@ commands:
   query   tree|doc|section|anchor|file|symbol|source|search|list (--json, --config)
   serve   author mode: rebuild on save, live reload            (--port, --config)
   init    scaffold a codewiki/ folder into a project          (--root, --code-root ...)
+  update  upgrade release and refresh an existing wiki        (--config, --installed, --dry-run)
 """
 
 
@@ -30,6 +31,8 @@ def main(argv=None) -> int:
         from .serve import main as m
     elif cmd == "init":
         from .init_project import main as m
+    elif cmd == "update":
+        from .update import main as m
     else:
         print(USAGE)
         return 2

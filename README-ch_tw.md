@@ -54,7 +54,7 @@ cd /path/to/project
 codewiki build --strict
 ```
 
-專案會取得 `codewiki/wiki.config.yaml`、Markdown、可重用頁面範本、可攜式技能、選用整合範例，以及 `codewiki/` 中的 `AGENTS.md`。核心與預設主題留在已安裝套件中。需要整個儲存庫遵循 Wiki 指引時，可在根目錄代理指示中參照 `codewiki/AGENTS.md`。從 `codewiki/skills/` 載入技能，或將需要的技能目錄複製到客戶端支援的位置。初始化保留既有檔案。
+專案會取得 `codewiki/wiki.config.yaml`、Markdown、可重用頁面範本、可攜式技能、選用整合範例，以及 `codewiki/` 中的 `AGENTS.md`。核心與預設主題留在已安裝套件中。初始化也會在根目錄 `AGENTS.md` 加入帶標記的實例指南參照，保留既有指示並避免重複加入。從 `codewiki/skills/` 載入技能，或將需要的技能目錄複製到客戶端支援的位置。初始化保留既有檔案。
 
 設定與 frontmatter 的路徑相對於設定所在目錄。需要時在每個命令傳入 `--config path/to/wiki.config.yaml`；否則會從工作目錄向上探索。`CODE_WIKI_CONFIG` 可明確選擇實例。也可用 `python -m codewiki` 執行命令。
 
@@ -88,11 +88,15 @@ diagram_links:
 
 ## HTML 語言
 
-標準頁面保留英文。新增例如 `renderer-ch_tw.md` 的同層檔案，保持相同 frontmatter `id`、標題層級與穩定錨點。翻譯標題、摘要與正文，並在翻譯標題明確加入 `{#english-slug}`。執行 `codewiki build --strict` 產生具有語言切換器的英文與台灣繁體中文頁面。框架的 20 個 Wiki 頁面都提供翻譯。
+標準頁面保留英文。新增例如 `renderer-ch_tw.md` 的同層檔案，保持相同 frontmatter `id`、標題層級與穩定錨點。翻譯標題、摘要與正文，並在翻譯標題明確加入 `{#english-slug}`。執行 `codewiki build --strict` 產生具有語言切換器的英文與台灣繁體中文頁面。框架的 Wiki 頁面都提供翻譯。
 
 導覽、圖表與頁面連結維持所選語言。缺少翻譯時顯示英文及備援提示。技能、CLI 查詢與審查紀錄繼續使用英文；翻譯檔案參與建置新鮮度與預覽。請見 [HTML 翻譯](codewiki/wiki/renderer-ch_tw.md#translations)。
 
 ## 客製化與升級
+
+在已初始化專案執行 `codewiki update`，即可安裝最新發佈框架並更新複製的支援檔案。從原始碼建置時使用 `codewiki update --source /path/to/codewiki`；使用目前已安裝或可編輯框架時，執行 `codewiki update --installed`。可先用 `codewiki update --installed --dry-run` 預覽檔案變更，再以 `codewiki build --strict` 重新建置。
+
+更新會保留已撰寫頁面、設定、審查與主題覆寫。未修改的支援檔案依 `.codewiki-manifest.json` 自動更新；衝突版本放入 `.codewiki-update/` 供比較。沒有 manifest 的舊實例會保留不同的檔案，直到完成整合。來源選擇、自訂路徑與保留或合併本機指示的方法，請見[更新既有 Wiki](codewiki/wiki/manual-updating-ch_tw.md)。
 
 將選用主題覆寫放在 `wiki/_theme/`。各檔案覆寫隨附主題，新專案不必複製整份主題。使用完整 `_theme/` 的既有 P721 風格實例仍可運作。專案專用文字、路徑、原始碼排除規則、唯讀 glob 與覆寫都屬於專案。
 
