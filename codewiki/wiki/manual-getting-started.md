@@ -72,6 +72,10 @@ instances to add the root reference without overwriting their existing guide.
 
 Portable skills still need registration in your agent client's supported discovery
 location; copying them into the wiki does not automatically register them.
+Claude Code users can pass `--client claude` to init: it appends the same marked
+section to the project-root `CLAUDE.md` and installs the skills into `.claude/skills/`,
+which Claude Code scans automatically. Customized copies there are preserved on
+repeat runs, and the flag can be added to an existing instance later.
 
 The build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to
 update the HTML and query index. Repeating `init` preserves existing instance files and

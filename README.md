@@ -71,6 +71,17 @@ older instance to add the root reference without replacing its existing files.
 Load skills from `codewiki/skills/`, or copy the needed skill directories into
 your client's supported skill location. Initialization preserves existing instance files.
 
+For Claude Code, add `--client claude`:
+
+```sh
+codewiki init --root /path/to/project --code-root src --client claude
+```
+
+This also appends the same marked section to the project-root `CLAUDE.md` and
+installs the skills into `.claude/skills/`, where Claude Code discovers them
+automatically. Both keep existing files, so customized copies survive repeated
+init, and the flag can be added to an existing instance later.
+
 Paths in configuration and frontmatter are relative to the configuration's
 directory. Use `--config path/to/wiki.config.yaml` on each command when needed;
 otherwise discovery walks upward from the working directory. `CODE_WIKI_CONFIG`

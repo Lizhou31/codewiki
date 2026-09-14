@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "test-framework",
   "outcome": "updated",
-  "reason": "Inspected added initialization tests and the passing 78-test suite: absent and existing root instructions, CRLF preservation, custom paths with spaces, customized guide retention, legacy instances, and normalized multi-instance references are covered. Updated the testing explanation in both languages.",
-  "reviewed_at": "2026-09-14T03:58:40+00:00",
-  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
-  "fingerprint": "14011b4b72716c15caa8c24937d318ddd309d53224e5f8d307e9575def0fa92e",
+  "reason": "tests/test_framework.py gained test_init_client_claude_adds_guide_and_skills (opt-in flag, CLAUDE.md section on absent/existing files, exact skill copies in .claude/skills/, customization preserved, unknown client rejected); the initialization section now describes it.",
+  "reviewed_at": "2026-09-14T04:12:26+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "005e9a65ebf5b665c4c5f874757fc70dc8a038c24a402ce9a8644d64650cdcbf",
   "snapshot": {
     "document_path": "wiki/test-framework.md",
-    "document_sha256": "a8584c971cdb5dabfe2c2108784f71569fd8380bbb8ba759f07160ccf5d74b56",
+    "document_sha256": "0f3abd56e9ae2707c5273a9abaf945ffc14855a6c63b41adf4537ed890dab79d",
     "sources": {
-      "../tests/test_framework.py": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2"
+      "../tests/test_framework.py": "a7e0d5d3d99ab858fa97f0e709cc9a0e4bf7af98d6424df7ce0bca65bc487520"
     },
     "coverage": [
       {
