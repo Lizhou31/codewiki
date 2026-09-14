@@ -99,7 +99,7 @@ flowchart LR
 
 ## 進入點 {#entry-points}
 
-`codewiki build` 負責驗證與渲染；`codewiki query tree` 是 LLM 閱讀路徑的起點；`codewiki serve` 提供本機撰寫循環；`codewiki init` 建立專案 Wiki。`codewiki review status` 根據目前輸入列出待審查項目；`codewiki review check` 檢查審查是否完成。各子頁說明這些命令依賴的契約。
+`codewiki build` 負責驗證與渲染；`codewiki query tree` 是 LLM 閱讀路徑的起點；`codewiki serve` 提供本機撰寫循環；`codewiki init` 建立專案 Wiki。`codewiki update` 升級框架並整合既有實例；[實例更新](updates.html) 說明發佈版／原始碼選擇與客製化保留。`codewiki review status` 根據目前輸入列出待審查項目；`codewiki review check` 檢查審查是否完成。各子頁說明這些命令依賴的契約。
 
 ## 開放問題 {#open-questions}
 

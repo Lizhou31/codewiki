@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "document": "manual-updating",
+  "outcome": "updated",
+  "reason": "Reviewed every documented mode against update.py and instance_files.py. Verified published-release selection using an offline 0.5.0-to-0.5.1 wheelhouse, actual local-source reinstall and uv fallback, conflict acknowledgments, dry-run preservation, custom config paths, and strict builds in an isolated environment. Documented partial failures, protected files, and legacy baselines in both languages.",
+  "reviewed_at": "2026-09-14T04:39:29+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "adef423efd73ac3f7a376a6c06cd70f8eb5ce119e42e4f8f3a763f6718779f3b",
+  "snapshot": {
+    "document_path": "wiki/manual-updating.md",
+    "document_sha256": "49177f0e61f752dd5bbfeea46b7400973432dc15f5733ac0bd95a245331b880c",
+    "sources": {},
+    "coverage": []
+  }
+}

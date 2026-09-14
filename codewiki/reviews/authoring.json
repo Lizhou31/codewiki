@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "authoring",
   "outcome": "updated",
-  "reason": "Compared initialization changes with the existing reviewed implementation: root guidance is appended without rewriting prior bytes, normalized instance markers prevent repeat additions, and existing instance files remain preserved. Updated scaffold and skills explanations in English and Traditional Chinese.",
-  "reviewed_at": "2026-09-14T03:58:39+00:00",
-  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
-  "fingerprint": "36a3e0cf2b0e2a64143e327ec529d461adbad4030554ebca594dcfc51830dd1f",
+  "reason": "Reviewed initializer refactoring to the shared support-file inventory, manifest registration, and the root-guide dry-run helper against its previously reviewed implementation. Documented exact-copy baselines and preserved customizations for future updates.",
+  "reviewed_at": "2026-09-14T04:39:29+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "6d4e13a51c3cab11ebc4fc70146af42711bda9971ab6e229c5c33f23ea00a441",
   "snapshot": {
     "document_path": "wiki/authoring.md",
-    "document_sha256": "0016c19d8983c3ee50481e6f59057935f263d2f4b3608e2ea6d9d0f97481d194",
+    "document_sha256": "86dddc130d2bea68b6dfabd83b369ca469a1c3d4a5b9ae4b5ababa260ef70665",
     "sources": {
-      "../src/codewiki/init_project.py": "e952df83f00c371e366b754ed3cb67e990bd6c1116e21610020cc946aea7fea3",
+      "../src/codewiki/init_project.py": "c909516629775f293147bd662aef932c054f891384ba7b7a7c0d54026e487058",
       "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"
     },
     "coverage": [

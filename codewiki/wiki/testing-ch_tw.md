@@ -14,6 +14,7 @@ diagram_links:
   adapters: test-languages
   integration: test-framework
   reviews: reviews.tests
+  updates: updates.tests
 refs: []
 decisions: []
 ---
@@ -25,6 +26,7 @@ flowchart TB
   suite["pytest · tests/"] --> adapters["語言綁定測試"]
   suite --> integration["框架整合測試"]
   suite --> reviews["文件審查生命週期"]
+  suite --> updates["實例更新生命週期"]
 ```
 
 **選擇測試層深入閱讀。** 語言測試資料隔離剖析與綁定行為；暫存專案則一起驗證框架元件。子頁各有圖表，將每個測試領域連到原始碼中的斷言。這些是驗證層，不是正式建置管線中的相依關係。
@@ -38,6 +40,7 @@ flowchart TB
 .venv/bin/python -m pytest tests/test_languages.py -q
 .venv/bin/python -m pytest tests/test_framework.py -q
 .venv/bin/python -m pytest tests/test_review.py -q
+.venv/bin/python -m pytest tests/test_update.py -q
 .venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q
 .venv/bin/python -m pytest --collect-only -q
 .venv/bin/codewiki build --strict

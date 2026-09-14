@@ -127,7 +127,7 @@ Keep canonical pages in English. Add a sibling such as `renderer-ch_tw.md` with
 the same frontmatter `id`, heading levels, and stable anchors. Translate the title,
 summary, and prose; use explicit `{#english-slug}` anchors on translated headings.
 Run `codewiki build --strict` to generate English and Traditional Chinese (Taiwan)
-pages with a language switcher. The framework's 20 wiki pages include translations.
+pages with a language switcher. The framework's wiki pages include translations.
 
 Navigation, diagrams, and page links stay in the selected language. Missing
 translations show English with a fallback notice. Skills, CLI queries, and review
@@ -135,6 +135,19 @@ records continue to use English. Translation files participate in build freshnes
 and preview. See [HTML translations](codewiki/wiki/renderer.md#translations).
 
 ## Customization and upgrades
+
+From an initialized project, run `codewiki update` to install the latest published
+framework and refresh its copied support files. For source builds, use
+`codewiki update --source /path/to/codewiki`; for an already installed or editable
+framework, use `codewiki update --installed`. Preview local file changes with
+`codewiki update --installed --dry-run`, then rebuild with `codewiki build --strict`.
+
+Updates preserve authored pages, configuration, reviews, and theme overrides.
+Untouched support files update automatically using `.codewiki-manifest.json`;
+conflicting versions go into `.codewiki-update/` for comparison. Older instances
+without a manifest preserve differing files until you resolve them. See
+[Updating an existing wiki](codewiki/wiki/manual-updating.md) for source selection,
+custom paths, and keeping or merging local instructions.
 
 Put optional theme overrides in `wiki/_theme/`. Individual files override the
 bundled theme; no theme copy is required for a new project. Existing P721-style

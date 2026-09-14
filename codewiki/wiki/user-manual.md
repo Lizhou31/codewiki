@@ -18,6 +18,7 @@ summary: Install CodeWiki, create a project wiki, find documentation, and keep y
 | I want to… | Guide |
 | --- | --- |
 | Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |
+| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |
 | Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |
 | Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |
 | Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |

@@ -28,3 +28,7 @@ supported discovery location when installation was requested.
 
 Run `codewiki build --strict` with the new config and inspect `codewiki query tree`.
 Do not describe starter placeholders as established facts about the project.
+
+Keep `.codewiki-manifest.json` inside the instance in Git: it records the installed
+support-file baselines for `codewiki update`. Use update for existing-instance
+upgrades; repeated init preserves old support files rather than upgrading them.

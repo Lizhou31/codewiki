@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "document": "updates",
+  "outcome": "updated",
+  "reason": "Inspected the complete updater, support-file reconciliation module, and tests. Verified hash-based adoption, untouched updates, customized/legacy conflicts, keep-local semantics, path preflight, installer isolation and fresh-process dispatch. All 90 tests and isolated pip release/source plus uv fallback smoke checks pass.",
+  "reviewed_at": "2026-09-14T04:39:30+00:00",
+  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
+  "fingerprint": "b0977899f4d3f196b4e13a136ce71f0e7f172d2849d32e72644e00db4d5e477c",
+  "snapshot": {
+    "document_path": "wiki/updates.md",
+    "document_sha256": "8a864b6c460a6fd44f96161a65f605d8eeffee64edcf12ba17a3d65b49537a0f",
+    "sources": {
+      "../src/codewiki/instance_files.py": "6920206a2f6800be0f7d62ea2fa25cd0d45de8c35a16d59154c72b8f55bff784",
+      "../src/codewiki/update.py": "f2565ed58032967052c9501698c770fe88678ea4747f1841d6f55588f63a9b44",
+      "../tests/test_update.py": "5905d2d7732928260f9c17e9ef4c736e892e6f243cdb3ecbeb3bb24247118374"
+    },
+    "coverage": [
+      {
+        "anchor": "updates.baselines",
+        "file": "../src/codewiki/instance_files.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "updates.files",
+        "file": "../src/codewiki/instance_files.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "updates.release",
+        "file": "../src/codewiki/update.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "updates.selection",
+        "file": "../src/codewiki/update.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "updates.tests",
+        "file": "../tests/test_update.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "file": "../src/codewiki/instance_files.py",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/update.py",
+        "kind": "owns"
+      },
+      {
+        "file": "../tests/test_update.py",
+        "kind": "owns"
+      }
+    ]
+  }
+}
