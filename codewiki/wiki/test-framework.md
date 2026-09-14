@@ -121,6 +121,11 @@ browser's click, keyboard, or expanded-dialog behavior.
 
 Repeated initialization preserves authored Markdown and existing configuration,
 keeps the framework engine outside the instance, and copies the portable skills.
+Root guidance tests cover absent, empty, and existing instruction files, including
+CRLF text without a trailing newline. They check default and custom paths with
+spaces, preservation of customized root sections and instance guides, integration
+of older instances, and separate references for multiple instances. Equivalent
+normalized paths do not duplicate the reference.
 An attempted instance directory outside the project is rejected.
 
 The hierarchy/theme test checks a child page and paginated tree depth, a project CSS

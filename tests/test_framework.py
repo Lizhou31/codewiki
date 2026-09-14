@@ -243,6 +243,51 @@ def test_init_preserves_customization_and_uses_package_assets(instance):
         init(['--root', str(root), '--dir', '../outside'])
 
 
+# @wiki:impl test-framework.initialization
+@pytest.mark.parametrize('directory', ['codewiki', 'docs/team wiki'])
+@pytest.mark.parametrize('existing', [None, b'', b'# Project rules\r\n\r\nKeep existing rules.'])
+def test_init_adds_root_guidance_once_and_preserves_existing_rules(tmp_path, directory, existing):
+    agents = tmp_path / 'AGENTS.md'
+    if existing is not None:
+        agents.write_bytes(existing)
+    args = ['--root', str(tmp_path), '--dir', directory]
+    assert init(args) == 0
+    generated = agents.read_bytes()
+    assert generated.startswith(existing or b'')
+    assert f'`{directory}/AGENTS.md`'.encode() in generated
+    assert b"project's source code or documentation" in generated
+    guide = tmp_path / directory / 'AGENTS.md'
+    assert f'{directory}/wiki.config.yaml' in guide.read_text()
+    assert f'{directory}/reviews/*.json' in guide.read_text()
+
+    # Both the root section and the instance guide can be customized safely.
+    customized = generated.replace(b'Before working', b'Before working (including tests)')
+    agents.write_bytes(customized)
+    guide.write_text('Custom instance instructions\n')
+    assert init(args) == 0
+    assert agents.read_bytes() == customized
+    assert guide.read_text() == 'Custom instance instructions\n'
+
+
+# @wiki:impl test-framework.initialization
+def test_init_integrates_older_instances_and_distinguishes_wiki_paths(tmp_path):
+    # Simulate an instance created before root-level integration existed.
+    guide = tmp_path / 'codewiki/AGENTS.md'
+    guide.parent.mkdir()
+    guide.write_text('Existing instance guide\n')
+    agents = tmp_path / 'AGENTS.md'
+    agents.write_text('# Project rules\n')
+    assert init(['--root', str(tmp_path)]) == 0
+    first = agents.read_bytes()
+    assert guide.read_text() == 'Existing instance guide\n'
+    assert init(['--root', str(tmp_path), '--dir', 'docs/wiki']) == 0
+    both = agents.read_bytes()
+    assert both.startswith(first)
+    assert b'`docs/wiki/AGENTS.md`' in both
+    assert init(['--root', str(tmp_path), '--dir', './docs/wiki/']) == 0
+    assert agents.read_bytes() == both
+
+
 # @wiki:impl test-framework.queries
 def test_cli_json_and_config_on_either_side(instance, capsys):
     build(instance)

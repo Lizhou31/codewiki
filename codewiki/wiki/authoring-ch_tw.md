@@ -43,7 +43,9 @@ flowchart TB
 
 ### 只建立專案應擁有的檔案 {#scaffold}
 
-`codewiki init --root <project> --code-root src` 建立 `codewiki/` 實例。重複使用 `--code-root` 可加入更多原始碼根目錄。初始化會保留既有檔案，升級時不會覆寫使用者的客製化內容。只有在尚無已撰寫頁面時才加入架構起始頁。複製的範本涵蓋架構、子系統、元件與決策文件；請用觀察到的事實取代起始文字。選用的 shell、Git hook 與 CI 範例會複製到 `integrations/`，但不會安裝 hook 或變更遠端儲存庫政策。
+`codewiki init --root <project> --code-root src` 建立 `codewiki/` 實例。重複使用 `--code-root` 可加入更多原始碼根目錄。初始化會保留既有實例檔案，升級時不會覆寫使用者的客製化內容。只有在尚無已撰寫頁面時才加入架構起始頁。複製的範本涵蓋架構、子系統、元件與決策文件；請用觀察到的事實取代起始文字。選用的 shell、Git hook 與 CI 範例會複製到 `integrations/`，但不會安裝 hook 或變更遠端儲存庫政策。
+
+初始化會在專案根目錄的 `AGENTS.md` 建立或附加帶標記的區段，要求原始碼與文件工作遵循實例指南。它直接附加位元組，不重寫既有根目錄指示。標記包含正規化後相對於專案的指南路徑，因此重複初始化會保留客製化區段，不同實例則各有參照。`--dir` 決定參照路徑。舊實例重新初始化時會加入根目錄參照，既有實例檔案仍維持原樣。
 
 ### 預覽建置契約 {#preview}
 
@@ -51,7 +53,7 @@ flowchart TB
 
 ## 技能 {#skills}
 
-框架在 `src/codewiki/resources/skills/` 提供 `wiki-init`、`wiki-query`、`wiki-author`、`wiki-build` 與 `wiki-review`。初始化會將它們複製到實例中。每項技能都使用已安裝的 CLI，因此不依賴 Claude 專用的外掛目錄。請透過所用客戶端的技能探索機制註冊這些檔案。根目錄的代理指示可參照實例指南，定義專案範圍的操作方式。
+框架在 `src/codewiki/resources/skills/` 提供 `wiki-init`、`wiki-query`、`wiki-author`、`wiki-build` 與 `wiki-review`。初始化會將它們複製到實例中。每項技能都使用已安裝的 CLI，因此不依賴 Claude 專用的外掛目錄。請透過所用客戶端的技能探索機制註冊這些檔案。初始化會加入根目錄的代理參照，讓指南適用於整個專案；技能註冊仍是獨立的客戶端整合步驟。
 
 ## 維護 {#maintenance}
 

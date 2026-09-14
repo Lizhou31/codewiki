@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "document": "manual-getting-started",
+  "outcome": "updated",
+  "reason": "Read the getting-started guide against pyproject requirements, initializer, generated instance instructions, and passing initialization/build tests. Added the root AGENTS integration, custom directory behavior, repeat-run preservation, legacy-instance migration, and separate skill registration in English and Traditional Chinese.",
+  "reviewed_at": "2026-09-14T03:58:39+00:00",
+  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+  "fingerprint": "ee112f01686b571fdb92f166b4dba268f6404b4e3230a8e547bbdc579c07596f",
+  "snapshot": {
+    "document_path": "wiki/manual-getting-started.md",
+    "document_sha256": "e5b3f4f4c5e3f090bb1f07c0a1f33788d34602032ce3a1540837b6b37300f4fb",
+    "sources": {},
+    "coverage": []
+  }
+}

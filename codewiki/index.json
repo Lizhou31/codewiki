@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-13T17:17:05+00:00",
+  "generated": "2026-09-14T03:58:40+00:00",
   "snapshot": {
     "framework_version": "0.4.0",
     "inputs": {
@@ -10,9 +10,9 @@
         "mtime_ns": 1789318740354954465
       },
       "reviews/authoring.json": {
-        "sha256": "9094f491415729e1daa93446cb179dfcade9b217abf62e89773c99afdc734888",
-        "size": 1170,
-        "mtime_ns": 1789316149966104820
+        "sha256": "21be899c9dc012cc4b490e7816d12435db2376bdda680eb339df4c98882c8357",
+        "size": 1474,
+        "mtime_ns": 1789358319733269129
       },
       "reviews/build.json": {
         "sha256": "8e516089331bbf05f10ae8bd1f152290f4b5f601c709586a0a9e74c882c74d91",
@@ -33,6 +33,11 @@
         "sha256": "f317adee005c6576f508b3f8e15f02fce650a5ce5ee73519df0bf5fd520db369",
         "size": 1238,
         "mtime_ns": 1789318741154053884
+      },
+      "reviews/manual-getting-started.json": {
+        "sha256": "25fee6429c708075a68c99c1cb2159a017a0a6c799fba2563186e38dec1b76fa",
+        "size": 828,
+        "mtime_ns": 1789358319953806703
       },
       "reviews/manual-reading.json": {
         "sha256": "7371fccc2da8d32b1a7d03f48602f7584fbce0375cc3108aa66fcbce5917a4e8",
@@ -60,9 +65,9 @@
         "mtime_ns": 1789291033212334178
       },
       "reviews/skills.json": {
-        "sha256": "4e37040f22ca8cf3f6034750a17f685ea73710b72a6c16b999ab190983e7e8a6",
-        "size": 1690,
-        "mtime_ns": 1789316228503280493
+        "sha256": "8d44cbf4fbc6e5a13cd6fd935f00894c64d66410c290a1d175f3a9d5cd050470",
+        "size": 1901,
+        "mtime_ns": 1789358320165270671
       },
       "reviews/templates.json": {
         "sha256": "e41c77960f5348540353d0c22521a0a6ef0d33de7fd1952e23b4734cbbd9f5a3",
@@ -70,9 +75,9 @@
         "mtime_ns": 1789316282500953209
       },
       "reviews/test-framework.json": {
-        "sha256": "37576bfc7b2abc0588d1114180b180670bd06556af474263bbb89a89c2c4ebf8",
-        "size": 2047,
-        "mtime_ns": 1789318742161988755
+        "sha256": "119ecff5d81486b9512d3be0b73d77c938548990df4e50824d7aeffea0963aa2",
+        "size": 2074,
+        "mtime_ns": 1789358320385544113
       },
       "wiki/architecture-ch_tw.md": {
         "sha256": "155be3a9019e96f5e777a61c37129c40994919ec1bf6b8ed23bfe49a509f4adc",
@@ -85,14 +90,14 @@
         "mtime_ns": 1789314621627624365
       },
       "wiki/authoring-ch_tw.md": {
-        "sha256": "62201caa79533eb61fb72f32373711d1e6d271e621af6c941d8d6def2bb739c9",
-        "size": 3098,
-        "mtime_ns": 1789318464034286056
+        "sha256": "05d8437319a7f059bee682e45cc1f2866d41e559bf0287d9143c96f97d93940f",
+        "size": 3598,
+        "mtime_ns": 1789358257885252923
       },
       "wiki/authoring.md": {
-        "sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
-        "size": 3162,
-        "mtime_ns": 1789219893372347924
+        "sha256": "0016c19d8983c3ee50481e6f59057935f263d2f4b3608e2ea6d9d0f97481d194",
+        "size": 3721,
+        "mtime_ns": 1789358257885049834
       },
       "wiki/build-ch_tw.md": {
         "sha256": "5ade9f023a62cf03145e33857ca54472d9eed0814da62ae8f3831c9ec6c613fd",
@@ -145,14 +150,14 @@
         "mtime_ns": 1789219725236842004
       },
       "wiki/manual-getting-started-ch_tw.md": {
-        "sha256": "7d583593f1623cb05ccb6be7230a21a2aef96d3e0946682bef05c6cb9c825b45",
-        "size": 2995,
-        "mtime_ns": 1789318464035047306
+        "sha256": "4164a73700087152b8599edc07425fee30e3c3eeb725e58b8975e8764f2151f1",
+        "size": 3704,
+        "mtime_ns": 1789358257884787118
       },
       "wiki/manual-getting-started.md": {
-        "sha256": "d0955582c121beb1fa6084721dba721d66d491d69ba2eac033111fb4b44d60d1",
-        "size": 3185,
-        "mtime_ns": 1789219725236937506
+        "sha256": "e5b3f4f4c5e3f090bb1f07c0a1f33788d34602032ce3a1540837b6b37300f4fb",
+        "size": 3914,
+        "mtime_ns": 1789358257884549611
       },
       "wiki/manual-reading-ch_tw.md": {
         "sha256": "4ceed13bd624279a90dc69fa865bf6cb678b498dc5f444fd8a3ac3adb15b4330",
@@ -215,14 +220,14 @@
         "mtime_ns": 1789219893372429092
       },
       "wiki/skills-ch_tw.md": {
-        "sha256": "04195e170b6483812b093f3aa70bbd3e73cccca148938071eb2cb0f0d18a837e",
-        "size": 3344,
-        "mtime_ns": 1789318464032788597
+        "sha256": "7379b4e22298e19241e69cffba8072587a60f0008a9561bd408976bd3b2447fb",
+        "size": 3579,
+        "mtime_ns": 1789358257885596392
       },
       "wiki/skills.md": {
-        "sha256": "663eb20bd1b2a2dc37adb3948df41f8c402298b2ae352a44a4181e71cab9b10d",
-        "size": 3657,
-        "mtime_ns": 1789219725236359287
+        "sha256": "0bcecc5ac3cb0b4ff8cf0e9e3e47daed9e49f112c632adf79f187cb8fc3aea8d",
+        "size": 3916,
+        "mtime_ns": 1789358257885505639
       },
       "wiki/templates-ch_tw.md": {
         "sha256": "49920d33b7908b1036ffbb714b809c280777cce32f79063e2f43e3c5b94239ee",
@@ -235,14 +240,14 @@
         "mtime_ns": 1789213589714045494
       },
       "wiki/test-framework-ch_tw.md": {
-        "sha256": "bb4c3de6cb1e1ef9a5048c5862e22a046cd7cea7632c191d33bc7872ad0b63b7",
-        "size": 5476,
-        "mtime_ns": 1789318687708119187
+        "sha256": "db030597045c546b50a3917d8837952a20bde90a6369430296a10485dc54cbf9",
+        "size": 5794,
+        "mtime_ns": 1789358257885982737
       },
       "wiki/test-framework.md": {
-        "sha256": "3734b0d55d1d102ff989a5fef534ccba8f075d21c3e522207fae03fde94add5b",
-        "size": 6396,
-        "mtime_ns": 1789318687707944311
+        "sha256": "a8584c971cdb5dabfe2c2108784f71569fd8380bbb8ba759f07160ccf5d74b56",
+        "size": 6768,
+        "mtime_ns": 1789358257885760772
       },
       "wiki/test-languages-ch_tw.md": {
         "sha256": "56fa97f28d866b5c04625c8b5071e5eb488f46587ee5fe486f6225e617d00442",
@@ -305,9 +310,9 @@
         "mtime_ns": 1789213331487281000
       },
       "../src/codewiki/init_project.py": {
-        "sha256": "aba75208d999332430ba7f7178eb0a75c0ddafdfd332a4e6b97c0a3b906069bb",
-        "size": 3156,
-        "mtime_ns": 1789219401541089461
+        "sha256": "e952df83f00c371e366b754ed3cb67e990bd6c1116e21610020cc946aea7fea3",
+        "size": 4389,
+        "mtime_ns": 1789358150381132163
       },
       "../src/codewiki/languages.py": {
         "sha256": "cf4f134a1a80ac60d790cc1dd82f941d837f1a3b70cc92168906c4b30f88d197",
@@ -350,9 +355,9 @@
         "mtime_ns": 1789219725237752105
       },
       "../src/codewiki/resources/skills/wiki-init/SKILL.md": {
-        "sha256": "82106d2718c1473b878c4b399b34b1bf875704eb7349dafc0dbd4a78daad013d",
-        "size": 1313,
-        "mtime_ns": 1789210067037164899
+        "sha256": "b5cf30b39476f556a974f7c8a0df69db99b7b47dc1fbd6450330485cc9822a0e",
+        "size": 1642,
+        "mtime_ns": 1789358257886097032
       },
       "../src/codewiki/resources/skills/wiki-query/SKILL.md": {
         "sha256": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
@@ -480,9 +485,9 @@
         "mtime_ns": 1789318564050043097
       },
       "../tests/test_framework.py": {
-        "sha256": "76025cd9fa17997c24303a80fbcefb6f8307db61162e826af9c5ed05677bc3e3",
-        "size": 23194,
-        "mtime_ns": 1789318564054545557
+        "sha256": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2",
+        "size": 25301,
+        "mtime_ns": 1789358257886201452
       },
       "../tests/test_languages.py": {
         "sha256": "d2764ae172f088b6fe6112f9a87242e0347fa672a3e9d4a6862fe24070543526",
@@ -498,7 +503,7 @@
     "repositories": [
       {
         "root": "..",
-        "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
+        "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
         "dirty": true
       }
     ]
@@ -4475,12 +4480,155 @@
         "qualified": "write_if_missing",
         "hljs": "python"
       },
-      "main": {
+      "add_root_agent_guidance": {
         "kind": "function",
         "line_start": 21,
-        "line_end": 64,
+        "line_end": 40,
         "start_byte": 441,
-        "end_byte": 3155,
+        "end_byte": 1478,
+        "lang": "python",
+        "symbol": "add_root_agent_guidance",
+        "qualified": "add_root_agent_guidance",
+        "hljs": "python"
+      },
+      "add_root_agent_guidance.guide": {
+        "kind": "variable",
+        "line_start": 23,
+        "line_end": 23,
+        "start_byte": 579,
+        "end_byte": 640,
+        "lang": "python",
+        "symbol": "guide",
+        "qualified": "add_root_agent_guidance.guide",
+        "hljs": "python"
+      },
+      "guide": {
+        "kind": "variable",
+        "line_start": 23,
+        "line_end": 23,
+        "start_byte": 579,
+        "end_byte": 640,
+        "lang": "python",
+        "symbol": "guide",
+        "qualified": "add_root_agent_guidance.guide",
+        "hljs": "python"
+      },
+      "add_root_agent_guidance.marker": {
+        "kind": "variable",
+        "line_start": 24,
+        "line_end": 24,
+        "start_byte": 645,
+        "end_byte": 694,
+        "lang": "python",
+        "symbol": "marker",
+        "qualified": "add_root_agent_guidance.marker",
+        "hljs": "python"
+      },
+      "marker": {
+        "kind": "variable",
+        "line_start": 24,
+        "line_end": 24,
+        "start_byte": 645,
+        "end_byte": 694,
+        "lang": "python",
+        "symbol": "marker",
+        "qualified": "add_root_agent_guidance.marker",
+        "hljs": "python"
+      },
+      "add_root_agent_guidance.path": {
+        "kind": "variable",
+        "line_start": 25,
+        "line_end": 25,
+        "start_byte": 699,
+        "end_byte": 724,
+        "lang": "python",
+        "symbol": "path",
+        "qualified": "add_root_agent_guidance.path",
+        "hljs": "python"
+      },
+      "path": {
+        "kind": "variable",
+        "line_start": 25,
+        "line_end": 25,
+        "start_byte": 699,
+        "end_byte": 724,
+        "lang": "python",
+        "symbol": "path",
+        "qualified": "add_root_agent_guidance.path",
+        "hljs": "python"
+      },
+      "add_root_agent_guidance.existing": {
+        "kind": "variable",
+        "line_start": 26,
+        "line_end": 26,
+        "start_byte": 729,
+        "end_byte": 783,
+        "lang": "python",
+        "symbol": "existing",
+        "qualified": "add_root_agent_guidance.existing",
+        "hljs": "python"
+      },
+      "existing": {
+        "kind": "variable",
+        "line_start": 26,
+        "line_end": 26,
+        "start_byte": 729,
+        "end_byte": 783,
+        "lang": "python",
+        "symbol": "existing",
+        "qualified": "add_root_agent_guidance.existing",
+        "hljs": "python"
+      },
+      "add_root_agent_guidance.separator": {
+        "kind": "variable",
+        "line_start": 29,
+        "line_end": 29,
+        "start_byte": 864,
+        "end_byte": 949,
+        "lang": "python",
+        "symbol": "separator",
+        "qualified": "add_root_agent_guidance.separator",
+        "hljs": "python"
+      },
+      "separator": {
+        "kind": "variable",
+        "line_start": 29,
+        "line_end": 29,
+        "start_byte": 864,
+        "end_byte": 949,
+        "lang": "python",
+        "symbol": "separator",
+        "qualified": "add_root_agent_guidance.separator",
+        "hljs": "python"
+      },
+      "add_root_agent_guidance.section": {
+        "kind": "variable",
+        "line_start": 30,
+        "line_end": 37,
+        "start_byte": 954,
+        "end_byte": 1369,
+        "lang": "python",
+        "symbol": "section",
+        "qualified": "add_root_agent_guidance.section",
+        "hljs": "python"
+      },
+      "section": {
+        "kind": "variable",
+        "line_start": 30,
+        "line_end": 37,
+        "start_byte": 954,
+        "end_byte": 1369,
+        "lang": "python",
+        "symbol": "section",
+        "qualified": "add_root_agent_guidance.section",
+        "hljs": "python"
+      },
+      "main": {
+        "kind": "function",
+        "line_start": 44,
+        "line_end": 90,
+        "start_byte": 1513,
+        "end_byte": 4388,
         "lang": "python",
         "symbol": "main",
         "qualified": "main",
@@ -4488,10 +4636,10 @@
       },
       "main.ap": {
         "kind": "variable",
-        "line_start": 22,
-        "line_end": 22,
-        "start_byte": 466,
-        "end_byte": 537,
+        "line_start": 45,
+        "line_end": 45,
+        "start_byte": 1538,
+        "end_byte": 1609,
         "lang": "python",
         "symbol": "ap",
         "qualified": "main.ap",
@@ -4499,10 +4647,10 @@
       },
       "ap": {
         "kind": "variable",
-        "line_start": 22,
-        "line_end": 22,
-        "start_byte": 466,
-        "end_byte": 537,
+        "line_start": 45,
+        "line_end": 45,
+        "start_byte": 1538,
+        "end_byte": 1609,
         "lang": "python",
         "symbol": "ap",
         "qualified": "main.ap",
@@ -4510,10 +4658,10 @@
       },
       "main.args": {
         "kind": "variable",
-        "line_start": 27,
-        "line_end": 27,
-        "start_byte": 730,
-        "end_byte": 756,
+        "line_start": 50,
+        "line_end": 50,
+        "start_byte": 1802,
+        "end_byte": 1828,
         "lang": "python",
         "symbol": "args",
         "qualified": "main.args",
@@ -4521,10 +4669,10 @@
       },
       "args": {
         "kind": "variable",
-        "line_start": 27,
-        "line_end": 27,
-        "start_byte": 730,
-        "end_byte": 756,
+        "line_start": 50,
+        "line_end": 50,
+        "start_byte": 1802,
+        "end_byte": 1828,
         "lang": "python",
         "symbol": "args",
         "qualified": "main.args",
@@ -4532,10 +4680,10 @@
       },
       "main.root": {
         "kind": "variable",
-        "line_start": 28,
-        "line_end": 28,
-        "start_byte": 761,
-        "end_byte": 793,
+        "line_start": 51,
+        "line_end": 51,
+        "start_byte": 1833,
+        "end_byte": 1865,
         "lang": "python",
         "symbol": "root",
         "qualified": "main.root",
@@ -4543,10 +4691,10 @@
       },
       "root": {
         "kind": "variable",
-        "line_start": 28,
-        "line_end": 28,
-        "start_byte": 761,
-        "end_byte": 793,
+        "line_start": 51,
+        "line_end": 51,
+        "start_byte": 1833,
+        "end_byte": 1865,
         "lang": "python",
         "symbol": "root",
         "qualified": "main.root",
@@ -4554,10 +4702,10 @@
       },
       "main.instance": {
         "kind": "variable",
-        "line_start": 31,
-        "line_end": 31,
-        "start_byte": 877,
-        "end_byte": 915,
+        "line_start": 54,
+        "line_end": 54,
+        "start_byte": 1949,
+        "end_byte": 1987,
         "lang": "python",
         "symbol": "instance",
         "qualified": "main.instance",
@@ -4565,10 +4713,10 @@
       },
       "instance": {
         "kind": "variable",
-        "line_start": 31,
-        "line_end": 31,
-        "start_byte": 877,
-        "end_byte": 915,
+        "line_start": 54,
+        "line_end": 54,
+        "start_byte": 1949,
+        "end_byte": 1987,
         "lang": "python",
         "symbol": "instance",
         "qualified": "main.instance",
@@ -4576,10 +4724,10 @@
       },
       "main.roots": {
         "kind": "variable",
-        "line_start": 34,
-        "line_end": 34,
-        "start_byte": 1053,
-        "end_byte": 1151,
+        "line_start": 57,
+        "line_end": 57,
+        "start_byte": 2125,
+        "end_byte": 2223,
         "lang": "python",
         "symbol": "roots",
         "qualified": "main.roots",
@@ -4587,10 +4735,10 @@
       },
       "roots": {
         "kind": "variable",
-        "line_start": 34,
-        "line_end": 34,
-        "start_byte": 1053,
-        "end_byte": 1151,
+        "line_start": 57,
+        "line_end": 57,
+        "start_byte": 2125,
+        "end_byte": 2223,
         "lang": "python",
         "symbol": "roots",
         "qualified": "main.roots",
@@ -4598,10 +4746,10 @@
       },
       "main.cfg": {
         "kind": "variable",
-        "line_start": 35,
-        "line_end": 38,
-        "start_byte": 1156,
-        "end_byte": 1507,
+        "line_start": 58,
+        "line_end": 61,
+        "start_byte": 2228,
+        "end_byte": 2579,
         "lang": "python",
         "symbol": "cfg",
         "qualified": "main.cfg",
@@ -4609,10 +4757,10 @@
       },
       "cfg": {
         "kind": "variable",
-        "line_start": 35,
-        "line_end": 38,
-        "start_byte": 1156,
-        "end_byte": 1507,
+        "line_start": 58,
+        "line_end": 61,
+        "start_byte": 2228,
+        "end_byte": 2579,
         "lang": "python",
         "symbol": "cfg",
         "qualified": "main.cfg",
@@ -4620,10 +4768,10 @@
       },
       "main.made": {
         "kind": "variable",
-        "line_start": 39,
-        "line_end": 39,
-        "start_byte": 1512,
-        "end_byte": 1521,
+        "line_start": 62,
+        "line_end": 62,
+        "start_byte": 2584,
+        "end_byte": 2593,
         "lang": "python",
         "symbol": "made",
         "qualified": "main.made",
@@ -4631,10 +4779,10 @@
       },
       "made": {
         "kind": "variable",
-        "line_start": 39,
-        "line_end": 39,
-        "start_byte": 1512,
-        "end_byte": 1521,
+        "line_start": 62,
+        "line_end": 62,
+        "start_byte": 2584,
+        "end_byte": 2593,
         "lang": "python",
         "symbol": "made",
         "qualified": "main.made",
@@ -4642,10 +4790,10 @@
       },
       "main.write": {
         "kind": "function",
-        "line_start": 40,
-        "line_end": 42,
-        "start_byte": 1526,
-        "end_byte": 1635,
+        "line_start": 63,
+        "line_end": 65,
+        "start_byte": 2598,
+        "end_byte": 2707,
         "lang": "python",
         "symbol": "write",
         "qualified": "main.write",
@@ -4653,10 +4801,10 @@
       },
       "write": {
         "kind": "function",
-        "line_start": 40,
-        "line_end": 42,
-        "start_byte": 1526,
-        "end_byte": 1635,
+        "line_start": 63,
+        "line_end": 65,
+        "start_byte": 2598,
+        "end_byte": 2707,
         "lang": "python",
         "symbol": "write",
         "qualified": "main.write",
@@ -4664,10 +4812,10 @@
       },
       "main.wiki_dir": {
         "kind": "variable",
-        "line_start": 52,
-        "line_end": 52,
-        "start_byte": 2406,
-        "end_byte": 2434,
+        "line_start": 75,
+        "line_end": 75,
+        "start_byte": 3478,
+        "end_byte": 3506,
         "lang": "python",
         "symbol": "wiki_dir",
         "qualified": "main.wiki_dir",
@@ -4675,10 +4823,10 @@
       },
       "wiki_dir": {
         "kind": "variable",
-        "line_start": 52,
-        "line_end": 52,
-        "start_byte": 2406,
-        "end_byte": 2434,
+        "line_start": 75,
+        "line_end": 75,
+        "start_byte": 3478,
+        "end_byte": 3506,
         "lang": "python",
         "symbol": "wiki_dir",
         "qualified": "main.wiki_dir",
@@ -4686,10 +4834,10 @@
       },
       "main.existing_pages": {
         "kind": "variable",
-        "line_start": 53,
-        "line_end": 55,
-        "start_byte": 2439,
-        "end_byte": 2661,
+        "line_start": 76,
+        "line_end": 78,
+        "start_byte": 3511,
+        "end_byte": 3733,
         "lang": "python",
         "symbol": "existing_pages",
         "qualified": "main.existing_pages",
@@ -4697,10 +4845,10 @@
       },
       "existing_pages": {
         "kind": "variable",
-        "line_start": 53,
-        "line_end": 55,
-        "start_byte": 2439,
-        "end_byte": 2661,
+        "line_start": 76,
+        "line_end": 78,
+        "start_byte": 3511,
+        "end_byte": 3733,
         "lang": "python",
         "symbol": "existing_pages",
         "qualified": "main.existing_pages",
@@ -4708,10 +4856,10 @@
       },
       "main.starter": {
         "kind": "variable",
-        "line_start": 57,
-        "line_end": 57,
-        "start_byte": 2697,
-        "end_byte": 2775,
+        "line_start": 80,
+        "line_end": 80,
+        "start_byte": 3769,
+        "end_byte": 3847,
         "lang": "python",
         "symbol": "starter",
         "qualified": "main.starter",
@@ -4719,13 +4867,35 @@
       },
       "starter": {
         "kind": "variable",
-        "line_start": 57,
-        "line_end": 57,
-        "start_byte": 2697,
-        "end_byte": 2775,
+        "line_start": 80,
+        "line_end": 80,
+        "start_byte": 3769,
+        "end_byte": 3847,
         "lang": "python",
         "symbol": "starter",
         "qualified": "main.starter",
+        "hljs": "python"
+      },
+      "main.root_guidance_added": {
+        "kind": "variable",
+        "line_start": 82,
+        "line_end": 82,
+        "start_byte": 3899,
+        "end_byte": 3960,
+        "lang": "python",
+        "symbol": "root_guidance_added",
+        "qualified": "main.root_guidance_added",
+        "hljs": "python"
+      },
+      "root_guidance_added": {
+        "kind": "variable",
+        "line_start": 82,
+        "line_end": 82,
+        "start_byte": 3899,
+        "end_byte": 3960,
+        "lang": "python",
+        "symbol": "root_guidance_added",
+        "qualified": "main.root_guidance_added",
         "hljs": "python"
       }
     },
@@ -11245,12 +11415,199 @@
         "qualified": "test_init_preserves_customization_and_uses_package_assets.before",
         "hljs": "python"
       },
-      "test_cli_json_and_config_on_either_side": {
+      "test_init_adds_root_guidance_once_and_preserves_existing_rules": {
         "kind": "function",
         "line_start": 247,
+        "line_end": 269,
+        "start_byte": 10705,
+        "end_byte": 11937,
+        "lang": "python",
+        "symbol": "test_init_adds_root_guidance_once_and_preserves_existing_rules",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules",
+        "hljs": "python"
+      },
+      "test_init_adds_root_guidance_once_and_preserves_existing_rules.agents": {
+        "kind": "variable",
+        "line_start": 250,
+        "line_end": 250,
+        "start_byte": 10976,
+        "end_byte": 11007,
+        "lang": "python",
+        "symbol": "agents",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.agents",
+        "hljs": "python"
+      },
+      "agents": {
+        "kind": "variable",
+        "line_start": 250,
+        "line_end": 250,
+        "start_byte": 10976,
+        "end_byte": 11007,
+        "lang": "python",
+        "symbol": "agents",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.agents",
+        "hljs": "python"
+      },
+      "test_init_adds_root_guidance_once_and_preserves_existing_rules.args": {
+        "kind": "variable",
+        "line_start": 253,
+        "line_end": 253,
+        "start_byte": 11078,
+        "end_byte": 11130,
+        "lang": "python",
+        "symbol": "args",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.args",
+        "hljs": "python"
+      },
+      "args": {
+        "kind": "variable",
+        "line_start": 253,
+        "line_end": 253,
+        "start_byte": 11078,
+        "end_byte": 11130,
+        "lang": "python",
+        "symbol": "args",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.args",
+        "hljs": "python"
+      },
+      "test_init_adds_root_guidance_once_and_preserves_existing_rules.generated": {
+        "kind": "variable",
+        "line_start": 255,
         "line_end": 255,
-        "start_byte": 10698,
-        "end_byte": 11309,
+        "start_byte": 11162,
+        "end_byte": 11193,
+        "lang": "python",
+        "symbol": "generated",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.generated",
+        "hljs": "python"
+      },
+      "generated": {
+        "kind": "variable",
+        "line_start": 255,
+        "line_end": 255,
+        "start_byte": 11162,
+        "end_byte": 11193,
+        "lang": "python",
+        "symbol": "generated",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.generated",
+        "hljs": "python"
+      },
+      "test_init_adds_root_guidance_once_and_preserves_existing_rules.guide": {
+        "kind": "variable",
+        "line_start": 259,
+        "line_end": 259,
+        "start_byte": 11373,
+        "end_byte": 11415,
+        "lang": "python",
+        "symbol": "guide",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.guide",
+        "hljs": "python"
+      },
+      "guide": {
+        "kind": "variable",
+        "line_start": 259,
+        "line_end": 259,
+        "start_byte": 11373,
+        "end_byte": 11415,
+        "lang": "python",
+        "symbol": "guide",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.guide",
+        "hljs": "python"
+      },
+      "test_init_adds_root_guidance_once_and_preserves_existing_rules.customized": {
+        "kind": "variable",
+        "line_start": 264,
+        "line_end": 264,
+        "start_byte": 11624,
+        "end_byte": 11710,
+        "lang": "python",
+        "symbol": "customized",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.customized",
+        "hljs": "python"
+      },
+      "customized": {
+        "kind": "variable",
+        "line_start": 264,
+        "line_end": 264,
+        "start_byte": 11624,
+        "end_byte": 11710,
+        "lang": "python",
+        "symbol": "customized",
+        "qualified": "test_init_adds_root_guidance_once_and_preserves_existing_rules.customized",
+        "hljs": "python"
+      },
+      "test_init_integrates_older_instances_and_distinguishes_wiki_paths": {
+        "kind": "function",
+        "line_start": 273,
+        "line_end": 288,
+        "start_byte": 11983,
+        "end_byte": 12766,
+        "lang": "python",
+        "symbol": "test_init_integrates_older_instances_and_distinguishes_wiki_paths",
+        "qualified": "test_init_integrates_older_instances_and_distinguishes_wiki_paths",
+        "hljs": "python"
+      },
+      "test_init_integrates_older_instances_and_distinguishes_wiki_paths.guide": {
+        "kind": "variable",
+        "line_start": 275,
+        "line_end": 275,
+        "start_byte": 12142,
+        "end_byte": 12181,
+        "lang": "python",
+        "symbol": "guide",
+        "qualified": "test_init_integrates_older_instances_and_distinguishes_wiki_paths.guide",
+        "hljs": "python"
+      },
+      "test_init_integrates_older_instances_and_distinguishes_wiki_paths.agents": {
+        "kind": "variable",
+        "line_start": 278,
+        "line_end": 278,
+        "start_byte": 12261,
+        "end_byte": 12292,
+        "lang": "python",
+        "symbol": "agents",
+        "qualified": "test_init_integrates_older_instances_and_distinguishes_wiki_paths.agents",
+        "hljs": "python"
+      },
+      "test_init_integrates_older_instances_and_distinguishes_wiki_paths.first": {
+        "kind": "variable",
+        "line_start": 281,
+        "line_end": 281,
+        "start_byte": 12388,
+        "end_byte": 12415,
+        "lang": "python",
+        "symbol": "first",
+        "qualified": "test_init_integrates_older_instances_and_distinguishes_wiki_paths.first",
+        "hljs": "python"
+      },
+      "test_init_integrates_older_instances_and_distinguishes_wiki_paths.both": {
+        "kind": "variable",
+        "line_start": 284,
+        "line_end": 284,
+        "start_byte": 12550,
+        "end_byte": 12576,
+        "lang": "python",
+        "symbol": "both",
+        "qualified": "test_init_integrates_older_instances_and_distinguishes_wiki_paths.both",
+        "hljs": "python"
+      },
+      "both": {
+        "kind": "variable",
+        "line_start": 284,
+        "line_end": 284,
+        "start_byte": 12550,
+        "end_byte": 12576,
+        "lang": "python",
+        "symbol": "both",
+        "qualified": "test_init_integrates_older_instances_and_distinguishes_wiki_paths.both",
+        "hljs": "python"
+      },
+      "test_cli_json_and_config_on_either_side": {
+        "kind": "function",
+        "line_start": 292,
+        "line_end": 300,
+        "start_byte": 12805,
+        "end_byte": 13416,
         "lang": "python",
         "symbol": "test_cli_json_and_config_on_either_side",
         "qualified": "test_cli_json_and_config_on_either_side",
@@ -11258,10 +11615,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename": {
         "kind": "function",
-        "line_start": 259,
-        "line_end": 266,
-        "start_byte": 11348,
-        "end_byte": 11745,
+        "line_start": 304,
+        "line_end": 311,
+        "start_byte": 13455,
+        "end_byte": 13852,
         "lang": "python",
         "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename",
@@ -11269,10 +11626,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.other": {
         "kind": "variable",
-        "line_start": 260,
-        "line_end": 260,
-        "start_byte": 11428,
-        "end_byte": 11473,
+        "line_start": 305,
+        "line_end": 305,
+        "start_byte": 13535,
+        "end_byte": 13580,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -11280,10 +11637,10 @@
       },
       "other": {
         "kind": "variable",
-        "line_start": 260,
-        "line_end": 260,
-        "start_byte": 11428,
-        "end_byte": 11473,
+        "line_start": 305,
+        "line_end": 305,
+        "start_byte": 13535,
+        "end_byte": 13580,
         "lang": "python",
         "symbol": "other",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.other",
@@ -11291,10 +11648,10 @@
       },
       "test_file_lookup_does_not_silently_choose_duplicate_basename.ix": {
         "kind": "variable",
-        "line_start": 263,
-        "line_end": 263,
-        "start_byte": 11547,
-        "end_byte": 11567,
+        "line_start": 308,
+        "line_end": 308,
+        "start_byte": 13654,
+        "end_byte": 13674,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_file_lookup_does_not_silently_choose_duplicate_basename.ix",
@@ -11302,10 +11659,10 @@
       },
       "test_python_decorators_scopes_and_comments": {
         "kind": "function",
-        "line_start": 270,
-        "line_end": 288,
-        "start_byte": 11784,
-        "end_byte": 12471,
+        "line_start": 315,
+        "line_end": 333,
+        "start_byte": 13891,
+        "end_byte": 14578,
         "lang": "python",
         "symbol": "test_python_decorators_scopes_and_comments",
         "qualified": "test_python_decorators_scopes_and_comments",
@@ -11313,10 +11670,10 @@
       },
       "test_python_decorators_scopes_and_comments.src": {
         "kind": "variable",
-        "line_start": 271,
-        "line_end": 281,
-        "start_byte": 11838,
-        "end_byte": 12032,
+        "line_start": 316,
+        "line_end": 326,
+        "start_byte": 13945,
+        "end_byte": 14139,
         "lang": "python",
         "symbol": "src",
         "qualified": "test_python_decorators_scopes_and_comments.src",
@@ -11324,10 +11681,10 @@
       },
       "test_python_decorators_scopes_and_comments.bound": {
         "kind": "variable",
-        "line_start": 283,
-        "line_end": 283,
-        "start_byte": 12078,
-        "end_byte": 12180,
+        "line_start": 328,
+        "line_end": 328,
+        "start_byte": 14185,
+        "end_byte": 14287,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -11335,10 +11692,10 @@
       },
       "bound": {
         "kind": "variable",
-        "line_start": 283,
-        "line_end": 283,
-        "start_byte": 12078,
-        "end_byte": 12180,
+        "line_start": 328,
+        "line_end": 328,
+        "start_byte": 14185,
+        "end_byte": 14287,
         "lang": "python",
         "symbol": "bound",
         "qualified": "test_python_decorators_scopes_and_comments.bound",
@@ -11346,10 +11703,10 @@
       },
       "test_python_decorators_scopes_and_comments.target": {
         "kind": "variable",
-        "line_start": 284,
-        "line_end": 284,
-        "start_byte": 12185,
-        "end_byte": 12216,
+        "line_start": 329,
+        "line_end": 329,
+        "start_byte": 14292,
+        "end_byte": 14323,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -11357,10 +11714,10 @@
       },
       "target": {
         "kind": "variable",
-        "line_start": 284,
-        "line_end": 284,
-        "start_byte": 12185,
-        "end_byte": 12216,
+        "line_start": 329,
+        "line_end": 329,
+        "start_byte": 14292,
+        "end_byte": 14323,
         "lang": "python",
         "symbol": "target",
         "qualified": "test_python_decorators_scopes_and_comments.target",
@@ -11368,10 +11725,10 @@
       },
       "test_invalid_markdown_is_a_validation_error": {
         "kind": "function",
-        "line_start": 292,
-        "line_end": 301,
-        "start_byte": 12513,
-        "end_byte": 12912,
+        "line_start": 337,
+        "line_end": 346,
+        "start_byte": 14620,
+        "end_byte": 15019,
         "lang": "python",
         "symbol": "test_invalid_markdown_is_a_validation_error",
         "qualified": "test_invalid_markdown_is_a_validation_error",
@@ -11379,10 +11736,10 @@
       },
       "test_invalid_markdown_is_a_validation_error.page": {
         "kind": "variable",
-        "line_start": 298,
-        "line_end": 298,
-        "start_byte": 12796,
-        "end_byte": 12822,
+        "line_start": 343,
+        "line_end": 343,
+        "start_byte": 14903,
+        "end_byte": 14929,
         "lang": "python",
         "symbol": "page",
         "qualified": "test_invalid_markdown_is_a_validation_error.page",
@@ -11390,10 +11747,10 @@
       },
       "test_theme_failure_preserves_index_and_site": {
         "kind": "function",
-        "line_start": 305,
-        "line_end": 315,
-        "start_byte": 12955,
-        "end_byte": 13511,
+        "line_start": 350,
+        "line_end": 360,
+        "start_byte": 15062,
+        "end_byte": 15618,
         "lang": "python",
         "symbol": "test_theme_failure_preserves_index_and_site",
         "qualified": "test_theme_failure_preserves_index_and_site",
@@ -11401,10 +11758,10 @@
       },
       "test_theme_failure_preserves_index_and_site.before": {
         "kind": "variable",
-        "line_start": 307,
-        "line_end": 307,
-        "start_byte": 13038,
-        "end_byte": 13079,
+        "line_start": 352,
+        "line_end": 352,
+        "start_byte": 15145,
+        "end_byte": 15186,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_theme_failure_preserves_index_and_site.before",
@@ -11412,10 +11769,10 @@
       },
       "test_theme_failure_preserves_index_and_site.html": {
         "kind": "variable",
-        "line_start": 308,
-        "line_end": 308,
-        "start_byte": 13084,
-        "end_byte": 13145,
+        "line_start": 353,
+        "line_end": 353,
+        "start_byte": 15191,
+        "end_byte": 15252,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_theme_failure_preserves_index_and_site.html",
@@ -11423,10 +11780,10 @@
       },
       "test_theme_failure_preserves_index_and_site.theme": {
         "kind": "variable",
-        "line_start": 309,
-        "line_end": 309,
-        "start_byte": 13150,
-        "end_byte": 13186,
+        "line_start": 354,
+        "line_end": 354,
+        "start_byte": 15257,
+        "end_byte": 15293,
         "lang": "python",
         "symbol": "theme",
         "qualified": "test_theme_failure_preserves_index_and_site.theme",
@@ -11434,10 +11791,10 @@
       },
       "test_removed_document_retires_generated_page": {
         "kind": "function",
-        "line_start": 319,
-        "line_end": 326,
-        "start_byte": 13554,
-        "end_byte": 13908,
+        "line_start": 364,
+        "line_end": 371,
+        "start_byte": 15661,
+        "end_byte": 16015,
         "lang": "python",
         "symbol": "test_removed_document_retires_generated_page",
         "qualified": "test_removed_document_retires_generated_page",
@@ -11445,10 +11802,10 @@
       },
       "test_removed_document_retires_generated_page.child": {
         "kind": "variable",
-        "line_start": 320,
-        "line_end": 320,
-        "start_byte": 13618,
-        "end_byte": 13656,
+        "line_start": 365,
+        "line_end": 365,
+        "start_byte": 15725,
+        "end_byte": 15763,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_removed_document_retires_generated_page.child",
@@ -11456,10 +11813,10 @@
       },
       "test_old_index_requests_rebuild_instead_of_empty_results": {
         "kind": "function",
-        "line_start": 330,
-        "line_end": 334,
-        "start_byte": 13947,
-        "end_byte": 14278,
+        "line_start": 375,
+        "line_end": 379,
+        "start_byte": 16054,
+        "end_byte": 16385,
         "lang": "python",
         "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
         "qualified": "test_old_index_requests_rebuild_instead_of_empty_results",
@@ -11467,10 +11824,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs": {
         "kind": "function",
-        "line_start": 338,
-        "line_end": 351,
-        "start_byte": 14318,
-        "end_byte": 15006,
+        "line_start": 383,
+        "line_end": 396,
+        "start_byte": 16425,
+        "end_byte": 17113,
         "lang": "python",
         "symbol": "test_broken_architecture_links_preserve_published_outputs",
         "qualified": "test_broken_architecture_links_preserve_published_outputs",
@@ -11478,10 +11835,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.before": {
         "kind": "variable",
-        "line_start": 345,
-        "line_end": 345,
-        "start_byte": 14589,
-        "end_byte": 14630,
+        "line_start": 390,
+        "line_end": 390,
+        "start_byte": 16696,
+        "end_byte": 16737,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.before",
@@ -11489,10 +11846,10 @@
       },
       "test_broken_architecture_links_preserve_published_outputs.path": {
         "kind": "variable",
-        "line_start": 346,
-        "line_end": 346,
-        "start_byte": 14635,
-        "end_byte": 14679,
+        "line_start": 391,
+        "line_end": 391,
+        "start_byte": 16742,
+        "end_byte": 16786,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_broken_architecture_links_preserve_published_outputs.path",
@@ -11500,10 +11857,10 @@
       },
       "test_invalid_architecture_metadata": {
         "kind": "function",
-        "line_start": 355,
-        "line_end": 364,
-        "start_byte": 15046,
-        "end_byte": 15517,
+        "line_start": 400,
+        "line_end": 409,
+        "start_byte": 17153,
+        "end_byte": 17624,
         "lang": "python",
         "symbol": "test_invalid_architecture_metadata",
         "qualified": "test_invalid_architecture_metadata",
@@ -11511,10 +11868,10 @@
       },
       "test_invalid_architecture_metadata.path": {
         "kind": "variable",
-        "line_start": 361,
-        "line_end": 361,
-        "start_byte": 15305,
-        "end_byte": 15349,
+        "line_start": 406,
+        "line_end": 406,
+        "start_byte": 17412,
+        "end_byte": 17456,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_invalid_architecture_metadata.path",
@@ -11522,10 +11879,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids": {
         "kind": "function",
-        "line_start": 368,
-        "line_end": 402,
-        "start_byte": 15557,
-        "end_byte": 17269,
+        "line_start": 413,
+        "line_end": 447,
+        "start_byte": 17664,
+        "end_byte": 19376,
         "lang": "python",
         "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
@@ -11533,10 +11890,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child": {
         "kind": "variable",
-        "line_start": 371,
-        "line_end": 371,
-        "start_byte": 15741,
-        "end_byte": 15779,
+        "line_start": 416,
+        "line_end": 416,
+        "start_byte": 17848,
+        "end_byte": 17886,
         "lang": "python",
         "symbol": "child",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.child",
@@ -11544,10 +11901,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path": {
         "kind": "variable",
-        "line_start": 381,
-        "line_end": 381,
-        "start_byte": 15945,
-        "end_byte": 15989,
+        "line_start": 426,
+        "line_end": 426,
+        "start_byte": 18052,
+        "end_byte": 18096,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.path",
@@ -11555,10 +11912,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix": {
         "kind": "variable",
-        "line_start": 387,
-        "line_end": 387,
-        "start_byte": 16222,
-        "end_byte": 16242,
+        "line_start": 432,
+        "line_end": 432,
+        "start_byte": 18329,
+        "end_byte": 18349,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.ix",
@@ -11566,10 +11923,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result": {
         "kind": "variable",
-        "line_start": 388,
-        "line_end": 388,
-        "start_byte": 16247,
-        "end_byte": 16298,
+        "line_start": 433,
+        "line_end": 433,
+        "start_byte": 18354,
+        "end_byte": 18405,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -11577,10 +11934,10 @@
       },
       "result": {
         "kind": "variable",
-        "line_start": 388,
-        "line_end": 388,
-        "start_byte": 16247,
-        "end_byte": 16298,
+        "line_start": 433,
+        "line_end": 433,
+        "start_byte": 18354,
+        "end_byte": 18405,
         "lang": "python",
         "symbol": "result",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.result",
@@ -11588,10 +11945,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs": {
         "kind": "variable",
-        "line_start": 393,
-        "line_end": 393,
-        "start_byte": 16590,
-        "end_byte": 16648,
+        "line_start": 438,
+        "line_end": 438,
+        "start_byte": 18697,
+        "end_byte": 18755,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -11599,10 +11956,10 @@
       },
       "docs": {
         "kind": "variable",
-        "line_start": 393,
-        "line_end": 393,
-        "start_byte": 16590,
-        "end_byte": 16648,
+        "line_start": 438,
+        "line_end": 438,
+        "start_byte": 18697,
+        "end_byte": 18755,
         "lang": "python",
         "symbol": "docs",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.docs",
@@ -11610,10 +11967,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets": {
         "kind": "variable",
-        "line_start": 394,
-        "line_end": 394,
-        "start_byte": 16653,
-        "end_byte": 16693,
+        "line_start": 439,
+        "line_end": 439,
+        "start_byte": 18760,
+        "end_byte": 18800,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -11621,10 +11978,10 @@
       },
       "targets": {
         "kind": "variable",
-        "line_start": 394,
-        "line_end": 394,
-        "start_byte": 16653,
-        "end_byte": 16693,
+        "line_start": 439,
+        "line_end": 439,
+        "start_byte": 18760,
+        "end_byte": 18800,
         "lang": "python",
         "symbol": "targets",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.targets",
@@ -11632,10 +11989,10 @@
       },
       "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html": {
         "kind": "variable",
-        "line_start": 399,
-        "line_end": 399,
-        "start_byte": 17035,
-        "end_byte": 17095,
+        "line_start": 444,
+        "line_end": 444,
+        "start_byte": 19142,
+        "end_byte": 19202,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids.html",
@@ -11643,10 +12000,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles": {
         "kind": "function",
-        "line_start": 406,
-        "line_end": 411,
-        "start_byte": 17309,
-        "end_byte": 17747,
+        "line_start": 451,
+        "line_end": 456,
+        "start_byte": 19416,
+        "end_byte": 19854,
         "lang": "python",
         "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles",
@@ -11654,10 +12011,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.path": {
         "kind": "variable",
-        "line_start": 407,
-        "line_end": 407,
-        "start_byte": 17379,
-        "end_byte": 17423,
+        "line_start": 452,
+        "line_end": 452,
+        "start_byte": 19486,
+        "end_byte": 19530,
         "lang": "python",
         "symbol": "path",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.path",
@@ -11665,10 +12022,10 @@
       },
       "test_dependency_cycles_do_not_become_parent_cycles.ix": {
         "kind": "variable",
-        "line_start": 410,
-        "line_end": 410,
-        "start_byte": 17678,
-        "end_byte": 17698,
+        "line_start": 455,
+        "line_end": 455,
+        "start_byte": 19785,
+        "end_byte": 19805,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_dependency_cycles_do_not_become_parent_cycles.ix",
@@ -11676,10 +12033,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local": {
         "kind": "function",
-        "line_start": 415,
-        "line_end": 464,
-        "start_byte": 17791,
-        "end_byte": 20173,
+        "line_start": 460,
+        "line_end": 509,
+        "start_byte": 19898,
+        "end_byte": 22280,
         "lang": "python",
         "symbol": "test_html_translations_keep_queries_english_and_links_local",
         "qualified": "test_html_translations_keep_queries_english_and_links_local",
@@ -11687,10 +12044,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.before_review": {
         "kind": "variable",
-        "line_start": 418,
-        "line_end": 418,
-        "start_byte": 18028,
-        "end_byte": 18116,
+        "line_start": 463,
+        "line_end": 463,
+        "start_byte": 20135,
+        "end_byte": 20223,
         "lang": "python",
         "symbol": "before_review",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.before_review",
@@ -11698,10 +12055,10 @@
       },
       "before_review": {
         "kind": "variable",
-        "line_start": 418,
-        "line_end": 418,
-        "start_byte": 18028,
-        "end_byte": 18116,
+        "line_start": 463,
+        "line_end": 463,
+        "start_byte": 20135,
+        "end_byte": 20223,
         "lang": "python",
         "symbol": "before_review",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.before_review",
@@ -11709,10 +12066,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.translation": {
         "kind": "variable",
-        "line_start": 419,
-        "line_end": 419,
-        "start_byte": 18121,
-        "end_byte": 18178,
+        "line_start": 464,
+        "line_end": 464,
+        "start_byte": 20228,
+        "end_byte": 20285,
         "lang": "python",
         "symbol": "translation",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.translation",
@@ -11720,10 +12077,10 @@
       },
       "translation": {
         "kind": "variable",
-        "line_start": 419,
-        "line_end": 419,
-        "start_byte": 18121,
-        "end_byte": 18178,
+        "line_start": 464,
+        "line_end": 464,
+        "start_byte": 20228,
+        "end_byte": 20285,
         "lang": "python",
         "symbol": "translation",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.translation",
@@ -11731,10 +12088,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.ix": {
         "kind": "variable",
-        "line_start": 439,
-        "line_end": 439,
-        "start_byte": 18632,
-        "end_byte": 18652,
+        "line_start": 484,
+        "line_end": 484,
+        "start_byte": 20739,
+        "end_byte": 20759,
         "lang": "python",
         "symbol": "ix",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.ix",
@@ -11742,10 +12099,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.html": {
         "kind": "variable",
-        "line_start": 445,
-        "line_end": 445,
-        "start_byte": 19062,
-        "end_byte": 19128,
+        "line_start": 490,
+        "line_end": 490,
+        "start_byte": 21169,
+        "end_byte": 21235,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.html",
@@ -11753,10 +12110,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.fallback": {
         "kind": "variable",
-        "line_start": 454,
-        "line_end": 454,
-        "start_byte": 19512,
-        "end_byte": 19575,
+        "line_start": 499,
+        "line_end": 499,
+        "start_byte": 21619,
+        "end_byte": 21682,
         "lang": "python",
         "symbol": "fallback",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.fallback",
@@ -11764,10 +12121,10 @@
       },
       "fallback": {
         "kind": "variable",
-        "line_start": 454,
-        "line_end": 454,
-        "start_byte": 19512,
-        "end_byte": 19575,
+        "line_start": 499,
+        "line_end": 499,
+        "start_byte": 21619,
+        "end_byte": 21682,
         "lang": "python",
         "symbol": "fallback",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.fallback",
@@ -11775,10 +12132,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.overview": {
         "kind": "variable",
-        "line_start": 456,
-        "line_end": 456,
-        "start_byte": 19658,
-        "end_byte": 19721,
+        "line_start": 501,
+        "line_end": 501,
+        "start_byte": 21765,
+        "end_byte": 21828,
         "lang": "python",
         "symbol": "overview",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.overview",
@@ -11786,10 +12143,10 @@
       },
       "test_html_translations_keep_queries_english_and_links_local.files": {
         "kind": "variable",
-        "line_start": 458,
-        "line_end": 458,
-        "start_byte": 19807,
-        "end_byte": 19867,
+        "line_start": 503,
+        "line_end": 503,
+        "start_byte": 21914,
+        "end_byte": 21974,
         "lang": "python",
         "symbol": "files",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.files",
@@ -11797,10 +12154,10 @@
       },
       "files": {
         "kind": "variable",
-        "line_start": 458,
-        "line_end": 458,
-        "start_byte": 19807,
-        "end_byte": 19867,
+        "line_start": 503,
+        "line_end": 503,
+        "start_byte": 21914,
+        "end_byte": 21974,
         "lang": "python",
         "symbol": "files",
         "qualified": "test_html_translations_keep_queries_english_and_links_local.files",
@@ -11808,10 +12165,10 @@
       },
       "test_invalid_translation_preserves_published_outputs": {
         "kind": "function",
-        "line_start": 468,
-        "line_end": 483,
-        "start_byte": 20217,
-        "end_byte": 21087,
+        "line_start": 513,
+        "line_end": 528,
+        "start_byte": 22324,
+        "end_byte": 23194,
         "lang": "python",
         "symbol": "test_invalid_translation_preserves_published_outputs",
         "qualified": "test_invalid_translation_preserves_published_outputs",
@@ -11819,10 +12176,10 @@
       },
       "test_invalid_translation_preserves_published_outputs.before": {
         "kind": "variable",
-        "line_start": 476,
-        "line_end": 476,
-        "start_byte": 20620,
-        "end_byte": 20661,
+        "line_start": 521,
+        "line_end": 521,
+        "start_byte": 22727,
+        "end_byte": 22768,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_invalid_translation_preserves_published_outputs.before",
@@ -11830,10 +12187,10 @@
       },
       "test_invalid_translation_preserves_published_outputs.before_html": {
         "kind": "variable",
-        "line_start": 477,
-        "line_end": 477,
-        "start_byte": 20666,
-        "end_byte": 20734,
+        "line_start": 522,
+        "line_end": 522,
+        "start_byte": 22773,
+        "end_byte": 22841,
         "lang": "python",
         "symbol": "before_html",
         "qualified": "test_invalid_translation_preserves_published_outputs.before_html",
@@ -11841,10 +12198,10 @@
       },
       "before_html": {
         "kind": "variable",
-        "line_start": 477,
-        "line_end": 477,
-        "start_byte": 20666,
-        "end_byte": 20734,
+        "line_start": 522,
+        "line_end": 522,
+        "start_byte": 22773,
+        "end_byte": 22841,
         "lang": "python",
         "symbol": "before_html",
         "qualified": "test_invalid_translation_preserves_published_outputs.before_html",
@@ -11852,10 +12209,10 @@
       },
       "test_translation_aliases_nested_paths_and_diagrams": {
         "kind": "function",
-        "line_start": 487,
-        "line_end": 520,
-        "start_byte": 21131,
-        "end_byte": 22069,
+        "line_start": 532,
+        "line_end": 565,
+        "start_byte": 23238,
+        "end_byte": 24176,
         "lang": "python",
         "symbol": "test_translation_aliases_nested_paths_and_diagrams",
         "qualified": "test_translation_aliases_nested_paths_and_diagrams",
@@ -11863,10 +12220,10 @@
       },
       "test_translation_aliases_nested_paths_and_diagrams.folder": {
         "kind": "variable",
-        "line_start": 488,
-        "line_end": 488,
-        "start_byte": 21201,
-        "end_byte": 21238,
+        "line_start": 533,
+        "line_end": 533,
+        "start_byte": 23308,
+        "end_byte": 23345,
         "lang": "python",
         "symbol": "folder",
         "qualified": "test_translation_aliases_nested_paths_and_diagrams.folder",
@@ -11874,10 +12231,10 @@
       },
       "folder": {
         "kind": "variable",
-        "line_start": 488,
-        "line_end": 488,
-        "start_byte": 21201,
-        "end_byte": 21238,
+        "line_start": 533,
+        "line_end": 533,
+        "start_byte": 23308,
+        "end_byte": 23345,
         "lang": "python",
         "symbol": "folder",
         "qualified": "test_translation_aliases_nested_paths_and_diagrams.folder",
@@ -11885,10 +12242,10 @@
       },
       "test_translation_aliases_nested_paths_and_diagrams.html": {
         "kind": "variable",
-        "line_start": 515,
-        "line_end": 515,
-        "start_byte": 21700,
-        "end_byte": 21763,
+        "line_start": 560,
+        "line_end": 560,
+        "start_byte": 23807,
+        "end_byte": 23870,
         "lang": "python",
         "symbol": "html",
         "qualified": "test_translation_aliases_nested_paths_and_diagrams.html",
@@ -11896,10 +12253,10 @@
       },
       "test_multiple_html_locales_and_output_collision": {
         "kind": "function",
-        "line_start": 524,
-        "line_end": 542,
-        "start_byte": 22113,
-        "end_byte": 23193,
+        "line_start": 569,
+        "line_end": 587,
+        "start_byte": 24220,
+        "end_byte": 25300,
         "lang": "python",
         "symbol": "test_multiple_html_locales_and_output_collision",
         "qualified": "test_multiple_html_locales_and_output_collision",
@@ -11907,10 +12264,10 @@
       },
       "test_multiple_html_locales_and_output_collision.original": {
         "kind": "variable",
-        "line_start": 525,
-        "line_end": 525,
-        "start_byte": 22180,
-        "end_byte": 22242,
+        "line_start": 570,
+        "line_end": 570,
+        "start_byte": 24287,
+        "end_byte": 24349,
         "lang": "python",
         "symbol": "original",
         "qualified": "test_multiple_html_locales_and_output_collision.original",
@@ -11918,10 +12275,10 @@
       },
       "original": {
         "kind": "variable",
-        "line_start": 525,
-        "line_end": 525,
-        "start_byte": 22180,
-        "end_byte": 22242,
+        "line_start": 570,
+        "line_end": 570,
+        "start_byte": 24287,
+        "end_byte": 24349,
         "lang": "python",
         "symbol": "original",
         "qualified": "test_multiple_html_locales_and_output_collision.original",
@@ -11929,10 +12286,10 @@
       },
       "test_multiple_html_locales_and_output_collision.french": {
         "kind": "variable",
-        "line_start": 529,
-        "line_end": 529,
-        "start_byte": 22384,
-        "end_byte": 22452,
+        "line_start": 574,
+        "line_end": 574,
+        "start_byte": 24491,
+        "end_byte": 24559,
         "lang": "python",
         "symbol": "french",
         "qualified": "test_multiple_html_locales_and_output_collision.french",
@@ -11940,10 +12297,10 @@
       },
       "french": {
         "kind": "variable",
-        "line_start": 529,
-        "line_end": 529,
-        "start_byte": 22384,
-        "end_byte": 22452,
+        "line_start": 574,
+        "line_end": 574,
+        "start_byte": 24491,
+        "end_byte": 24559,
         "lang": "python",
         "symbol": "french",
         "qualified": "test_multiple_html_locales_and_output_collision.french",
@@ -11951,10 +12308,10 @@
       },
       "test_multiple_html_locales_and_output_collision.before": {
         "kind": "variable",
-        "line_start": 538,
-        "line_end": 538,
-        "start_byte": 22920,
-        "end_byte": 22961,
+        "line_start": 583,
+        "line_end": 583,
+        "start_byte": 25027,
+        "end_byte": 25068,
         "lang": "python",
         "symbol": "before",
         "qualified": "test_multiple_html_locales_and_output_collision.before",
@@ -13585,7 +13942,7 @@
       "summary": "Initialize a project-local instance, write source-grounded pages, validate links, and preview with the installed framework.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: authoring\ntype: component\nstatus: stable\nparent: architecture\nrelated: []\nrefs: []\ntitle: Initialization & preview\nsummary: Initialize a project-local instance, write source-grounded pages, validate\n  links, and preview with the installed framework.\nowns:\n- ../src/codewiki/init_project.py\n- ../src/codewiki/serve.py\ndepends_on:\n- templates\n- documents\n- build\ndiagram_links:\n  scaffold: authoring.scaffold\n  templates: templates\n  skills: skills\n  preview: authoring.preview\n  build: build\n---\n\n## The authoring loop\n\n```mermaid\nflowchart TB\n  templates[\"Document templates\"] --> scaffold[\"Initialize project instance\"]\n  skills[\"Portable skill instructions\"] --> scaffold\n  scaffold --> preview[\"Watch Markdown + source changes\"]\n  preview --> build[\"Build + reload local preview\"]\n```\n\n## TL;DR\n\n- Initialization creates project-owned config, starter Markdown, templates, and portable skills.\n- Stable IDs and original explanations stay with the source repository.\n- The local server rebuilds on input changes and reports validation failures.\n\n## Concepts\n\n### Scaffold only the project-owned files {#scaffold}\n\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\nfiles and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\n### Preview the build contract {#preview}\n\n`codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs\nchange. Browser reload notifications and validation errors belong to the development\nserver; static build output stays usable without it. Restart the server if changing\nthe configured output directory. CLI queries work from the saved index without a server.\n\n## Skills\n\nThe framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under\n`src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses\nthe installed CLI, so it has no dependency on a Claude-specific plugin directory.\nUse the relevant client's skill discovery mechanism to register these files.\nRoot agent instructions can reference the instance guide for project-wide behavior.\n\n## Maintenance\n\nQuery a covered file before changing it. If behavior changes, update its explanation\nin the same change. Preserve source tags when moving or renaming declarations and\nuse document-side references for code configured as read-only. Run a strict build,\nthen inspect the affected section through both the browser and CLI.\n\n## Preview Inputs\n\nThe preview watches the instance configuration, Markdown, source roots, explicitly owned/referenced assets, review records, and theme\nfiles. It reloads configuration before rebuilding so changed source roots are picked\nup. Invalid configuration appears as a preview error until corrected.\n",
+      "markdown": "---\nid: authoring\ntype: component\nstatus: stable\nparent: architecture\nrelated: []\nrefs: []\ntitle: Initialization & preview\nsummary: Initialize a project-local instance, write source-grounded pages, validate\n  links, and preview with the installed framework.\nowns:\n- ../src/codewiki/init_project.py\n- ../src/codewiki/serve.py\ndepends_on:\n- templates\n- documents\n- build\ndiagram_links:\n  scaffold: authoring.scaffold\n  templates: templates\n  skills: skills\n  preview: authoring.preview\n  build: build\n---\n\n## The authoring loop\n\n```mermaid\nflowchart TB\n  templates[\"Document templates\"] --> scaffold[\"Initialize project instance\"]\n  skills[\"Portable skill instructions\"] --> scaffold\n  scaffold --> preview[\"Watch Markdown + source changes\"]\n  preview --> build[\"Build + reload local preview\"]\n```\n\n## TL;DR\n\n- Initialization creates project-owned config, starter Markdown, templates, and portable skills.\n- Stable IDs and original explanations stay with the source repository.\n- The local server rebuilds on input changes and reports validation failures.\n\n## Concepts\n\n### Scaffold only the project-owned files {#scaffold}\n\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\ninstance files and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\nInitialization creates or appends a marked section in the project-root `AGENTS.md`\nthat directs source and documentation work to the instance guide. It appends bytes\nwithout rewriting existing root instructions. The marker includes the normalized\nproject-relative guide path, so repeating init preserves a customized section and\ndifferent instances receive separate references. `--dir` controls that path. Older\ninstances gain the root reference on re-initialization while their files stay intact.\n\n### Preview the build contract {#preview}\n\n`codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs\nchange. Browser reload notifications and validation errors belong to the development\nserver; static build output stays usable without it. Restart the server if changing\nthe configured output directory. CLI queries work from the saved index without a server.\n\n## Skills\n\nThe framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under\n`src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses\nthe installed CLI, so it has no dependency on a Claude-specific plugin directory.\nUse the relevant client's skill discovery mechanism to register these files.\nInitialization adds the root agent reference for project-wide behavior; skill\nregistration remains a separate client integration step.\n\n## Maintenance\n\nQuery a covered file before changing it. If behavior changes, update its explanation\nin the same change. Preserve source tags when moving or renaming declarations and\nuse document-side references for code configured as read-only. Run a strict build,\nthen inspect the affected section through both the browser and CLI.\n\n## Preview Inputs\n\nThe preview watches the instance configuration, Markdown, source roots, explicitly owned/referenced assets, review records, and theme\nfiles. It reloads configuration before rebuilding so changed source roots are picked\nup. Invalid configuration appears as a preview error until corrected.\n",
       "decisions": [],
       "sections": [
         {
@@ -13620,8 +13977,8 @@
           "level": 2,
           "kind": "other",
           "line_start": 42,
-          "line_end": 60,
-          "markdown": "## Concepts\n\n### Scaffold only the project-owned files {#scaffold}\n\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\nfiles and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\n### Preview the build contract {#preview}\n\n`codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs\nchange. Browser reload notifications and validation errors belong to the development\nserver; static build output stays usable without it. Restart the server if changing\nthe configured output directory. CLI queries work from the saved index without a server.\n\n",
+          "line_end": 67,
+          "markdown": "## Concepts\n\n### Scaffold only the project-owned files {#scaffold}\n\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\ninstance files and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\nInitialization creates or appends a marked section in the project-root `AGENTS.md`\nthat directs source and documentation work to the instance guide. It appends bytes\nwithout rewriting existing root instructions. The marker includes the normalized\nproject-relative guide path, so repeating init preserves a customized section and\ndifferent instances receive separate references. `--dir` controls that path. Older\ninstances gain the root reference on re-initialization while their files stay intact.\n\n### Preview the build contract {#preview}\n\n`codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs\nchange. Browser reload notifications and validation errors belong to the development\nserver; static build output stays usable without it. Restart the server if changing\nthe configured output directory. CLI queries work from the saved index without a server.\n\n",
           "body": "\n"
         },
         {
@@ -13632,9 +13989,9 @@
           "level": 3,
           "kind": "concept",
           "line_start": 44,
-          "line_end": 53,
-          "markdown": "### Scaffold only the project-owned files {#scaffold}\n\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\nfiles and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\n",
-          "body": "\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\nfiles and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\n"
+          "line_end": 60,
+          "markdown": "### Scaffold only the project-owned files {#scaffold}\n\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\ninstance files and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\nInitialization creates or appends a marked section in the project-root `AGENTS.md`\nthat directs source and documentation work to the instance guide. It appends bytes\nwithout rewriting existing root instructions. The marker includes the normalized\nproject-relative guide path, so repeating init preserves a customized section and\ndifferent instances receive separate references. `--dir` controls that path. Older\ninstances gain the root reference on re-initialization while their files stay intact.\n\n",
+          "body": "\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\ninstance files and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\nInitialization creates or appends a marked section in the project-root `AGENTS.md`\nthat directs source and documentation work to the instance guide. It appends bytes\nwithout rewriting existing root instructions. The marker includes the normalized\nproject-relative guide path, so repeating init preserves a customized section and\ndifferent instances receive separate references. `--dir` controls that path. Older\ninstances gain the root reference on re-initialization while their files stay intact.\n\n"
         },
         {
           "id": "authoring.preview",
@@ -13643,8 +14000,8 @@
           "title": "Preview the build contract",
           "level": 3,
           "kind": "concept",
-          "line_start": 54,
-          "line_end": 60,
+          "line_start": 61,
+          "line_end": 67,
           "markdown": "### Preview the build contract {#preview}\n\n`codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs\nchange. Browser reload notifications and validation errors belong to the development\nserver; static build output stays usable without it. Restart the server if changing\nthe configured output directory. CLI queries work from the saved index without a server.\n\n",
           "body": "\n`codewiki serve` serves generated HTML on loopback and rebuilds when watched inputs\nchange. Browser reload notifications and validation errors belong to the development\nserver; static build output stays usable without it. Restart the server if changing\nthe configured output directory. CLI queries work from the saved index without a server.\n\n"
         },
@@ -13655,10 +14012,10 @@
           "title": "Skills",
           "level": 2,
           "kind": "other",
-          "line_start": 61,
-          "line_end": 68,
-          "markdown": "## Skills\n\nThe framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under\n`src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses\nthe installed CLI, so it has no dependency on a Claude-specific plugin directory.\nUse the relevant client's skill discovery mechanism to register these files.\nRoot agent instructions can reference the instance guide for project-wide behavior.\n\n",
-          "body": "\nThe framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under\n`src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses\nthe installed CLI, so it has no dependency on a Claude-specific plugin directory.\nUse the relevant client's skill discovery mechanism to register these files.\nRoot agent instructions can reference the instance guide for project-wide behavior.\n\n"
+          "line_start": 68,
+          "line_end": 76,
+          "markdown": "## Skills\n\nThe framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under\n`src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses\nthe installed CLI, so it has no dependency on a Claude-specific plugin directory.\nUse the relevant client's skill discovery mechanism to register these files.\nInitialization adds the root agent reference for project-wide behavior; skill\nregistration remains a separate client integration step.\n\n",
+          "body": "\nThe framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and `wiki-review` under\n`src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses\nthe installed CLI, so it has no dependency on a Claude-specific plugin directory.\nUse the relevant client's skill discovery mechanism to register these files.\nInitialization adds the root agent reference for project-wide behavior; skill\nregistration remains a separate client integration step.\n\n"
         },
         {
           "id": "authoring.maintenance",
@@ -13667,8 +14024,8 @@
           "title": "Maintenance",
           "level": 2,
           "kind": "other",
-          "line_start": 69,
-          "line_end": 75,
+          "line_start": 77,
+          "line_end": 83,
           "markdown": "## Maintenance\n\nQuery a covered file before changing it. If behavior changes, update its explanation\nin the same change. Preserve source tags when moving or renaming declarations and\nuse document-side references for code configured as read-only. Run a strict build,\nthen inspect the affected section through both the browser and CLI.\n\n",
           "body": "\nQuery a covered file before changing it. If behavior changes, update its explanation\nin the same change. Preserve source tags when moving or renaming declarations and\nuse document-side references for code configured as read-only. Run a strict build,\nthen inspect the affected section through both the browser and CLI.\n\n"
         },
@@ -13679,8 +14036,8 @@
           "title": "Preview Inputs",
           "level": 2,
           "kind": "other",
-          "line_start": 76,
-          "line_end": 80,
+          "line_start": 84,
+          "line_end": 88,
           "markdown": "## Preview Inputs\n\nThe preview watches the instance configuration, Markdown, source roots, explicitly owned/referenced assets, review records, and theme\nfiles. It reloads configuration before rebuilding so changed source roots are picked\nup. Invalid configuration appears as a preview error until corrected.\n",
           "body": "\nThe preview watches the instance configuration, Markdown, source roots, explicitly owned/referenced assets, review records, and theme\nfiles. It reloads configuration before rebuilding so changed source roots are picked\nup. Invalid configuration appears as a preview error until corrected.\n"
         }
@@ -13690,17 +14047,29 @@
           "id": "authoring.scaffold",
           "title": "Scaffold only the project-owned files",
           "kind": "concept",
-          "text": "codewiki init --root &lt;project&gt; --code-root src creates a codewiki/ instance. Repeat --code-root for additional source roots. Initialization preserves existing files and does not replace user customizations on an upgrade. It adds an architecture starter only when there are no authored pages. The copied templates cover architecture, subsystem, component, and decision documents. Replace starter text with observed facts. Optional shell, Git hook, and CI examples are copied into integrations/ without installing hooks or changing remote repository policy.",
-          "markdown": "\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\nfiles and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\n",
+          "text": "codewiki init --root &lt;project&gt; --code-root src creates a codewiki/ instance. Repeat --code-root for additional source roots. Initialization preserves existing instance files and does not replace user customizations on an upgrade. It adds an architecture starter only when there are no authored pages. The copied templates cover architecture, subsystem, component, and decision documents. Replace starter text with observed facts. Optional shell, Git hook, and CI examples are copied into integrations/ without installing hooks or changing remote repository policy. Initialization creates or appends a marked section in the project-root AGENTS.md that directs source and documentation work to the instance guide. It appends bytes without rewriting existing root instructions. The marker includes the normalized project-relative guide path, so repeating init preserves a customized section and different instances receive separate references. --dir controls that path. Older instances gain the root reference on re-initialization while their files stay intact.",
+          "markdown": "\n`codewiki init --root <project> --code-root src` creates a `codewiki/` instance.\nRepeat `--code-root` for additional source roots. Initialization preserves existing\ninstance files and does not replace user customizations on an upgrade. It adds an architecture\nstarter only when there are no authored pages. The copied templates cover architecture,\nsubsystem, component, and decision documents. Replace starter text with observed facts.\nOptional shell, Git hook, and CI examples are copied into `integrations/` without\ninstalling hooks or changing remote repository policy.\n\nInitialization creates or appends a marked section in the project-root `AGENTS.md`\nthat directs source and documentation work to the instance guide. It appends bytes\nwithout rewriting existing root instructions. The marker includes the normalized\nproject-relative guide path, so repeating init preserves a customized section and\ndifferent instances receive separate references. `--dir` controls that path. Older\ninstances gain the root reference on re-initialization while their files stay intact.\n\n",
           "impls": [
+            {
+              "role": "impl",
+              "file": "../src/codewiki/init_project.py",
+              "symbol": "add_root_agent_guidance",
+              "kind": "function",
+              "lines": [
+                21,
+                40
+              ],
+              "note": "",
+              "lang": "python"
+            },
             {
               "role": "impl",
               "file": "../src/codewiki/init_project.py",
               "symbol": "main",
               "kind": "function",
               "lines": [
-                21,
-                64
+                44,
+                90
               ],
               "note": "",
               "lang": "python"
@@ -14687,7 +15056,7 @@
       "summary": "Install the framework, build its example wiki, and initialize documentation in your own project.",
       "parent": "user-manual",
       "children": [],
-      "markdown": "---\nid: manual-getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Install the framework, build its example wiki, and initialize documentation in your own project.\nrelated: [manual-reading, manual-writing, manual-configuration]\n---\n\n## TL;DR\n\n- CodeWiki requires Python 3.10 or newer.\n- Install the framework in a virtual environment, then initialize a wiki in an existing project.\n- Build with `--strict` and preview the generated HTML locally.\n\n## Install and try the example {#install}\n\nFrom the CodeWiki framework repository, run:\n\n```sh\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e '.[dev]'\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\nOpen `http://localhost:8000` in your browser. Choose **User manual** on the\nOverview page for usage guides, or **CodeWiki architecture** for implementation\ndocumentation. Stop the preview with Ctrl+C.\n\nYou can also open `codewiki/site/index.html` directly. Built pages, syntax\nhighlighting, and diagrams use bundled assets and work offline.\n\n## Add a wiki to your project {#initialize}\n\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n## Make your first edit {#first-edit}\n\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n\nNew pages start unreviewed. After replacing the starter and inspecting its source,\nestablish an explicit baseline using the [review workflow](manual-review.html).\n",
+      "markdown": "---\nid: manual-getting-started\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Getting started\nsummary: Install the framework, build its example wiki, and initialize documentation in your own project.\nrelated: [manual-reading, manual-writing, manual-configuration]\n---\n\n## TL;DR\n\n- CodeWiki requires Python 3.10 or newer.\n- Install the framework in a virtual environment, then initialize a wiki in an existing project.\n- Build with `--strict` and preview the generated HTML locally.\n\n## Install and try the example {#install}\n\nFrom the CodeWiki framework repository, run:\n\n```sh\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e '.[dev]'\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\nOpen `http://localhost:8000` in your browser. Choose **User manual** on the\nOverview page for usage guides, or **CodeWiki architecture** for implementation\ndocumentation. Stop the preview with Ctrl+C.\n\nYou can also open `codewiki/site/index.html` directly. Built pages, syntax\nhighlighting, and diagrams use bundled assets and work offline.\n\n## Add a wiki to your project {#initialize}\n\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nInitialization also creates or appends a small marked section in the project-root\n`AGENTS.md`. It directs agents to read `codewiki/AGENTS.md` before working on source\ncode or documentation, so wiki lookup and review apply outside the wiki folder.\nWith `--dir docs/codewiki`, the reference is `docs/codewiki/AGENTS.md`. Existing\nroot instructions are preserved. Repeating init leaves the section for that\ninstance unchanged; keep its marker if you customize it. Re-run init on older\ninstances to add the root reference without overwriting their existing guide.\n\nPortable skills still need registration in your agent client's supported discovery\nlocation; copying them into the wiki does not automatically register them.\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing instance files and\ndoes not replace your authored pages.\n\n## Make your first edit {#first-edit}\n\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n\nNew pages start unreviewed. After replacing the starter and inspecting its source,\nestablish an explicit baseline using the [review workflow](manual-review.html).\n",
       "decisions": [],
       "sections": [
         {
@@ -14722,9 +15091,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 36,
-          "line_end": 67,
-          "markdown": "## Add a wiki to your project {#initialize}\n\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n",
-          "body": "\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n"
+          "line_end": 78,
+          "markdown": "## Add a wiki to your project {#initialize}\n\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nInitialization also creates or appends a small marked section in the project-root\n`AGENTS.md`. It directs agents to read `codewiki/AGENTS.md` before working on source\ncode or documentation, so wiki lookup and review apply outside the wiki folder.\nWith `--dir docs/codewiki`, the reference is `docs/codewiki/AGENTS.md`. Existing\nroot instructions are preserved. Repeating init leaves the section for that\ninstance unchanged; keep its marker if you customize it. Re-run init on older\ninstances to add the root reference without overwriting their existing guide.\n\nPortable skills still need registration in your agent client's supported discovery\nlocation; copying them into the wiki does not automatically register them.\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing instance files and\ndoes not replace your authored pages.\n\n",
+          "body": "\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nInitialization also creates or appends a small marked section in the project-root\n`AGENTS.md`. It directs agents to read `codewiki/AGENTS.md` before working on source\ncode or documentation, so wiki lookup and review apply outside the wiki folder.\nWith `--dir docs/codewiki`, the reference is `docs/codewiki/AGENTS.md`. Existing\nroot instructions are preserved. Repeating init leaves the section for that\ninstance unchanged; keep its marker if you customize it. Re-run init on older\ninstances to add the root reference without overwriting their existing guide.\n\nPortable skills still need registration in your agent client's supported discovery\nlocation; copying them into the wiki does not automatically register them.\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing instance files and\ndoes not replace your authored pages.\n\n"
         },
         {
           "id": "manual-getting-started.first-edit",
@@ -14733,8 +15102,8 @@
           "title": "Make your first edit",
           "level": 2,
           "kind": "other",
-          "line_start": 68,
-          "line_end": 88,
+          "line_start": 79,
+          "line_end": 99,
           "markdown": "## Make your first edit {#first-edit}\n\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n\nNew pages start unreviewed. After replacing the starter and inspecting its source,\nestablish an explicit baseline using the [review workflow](manual-review.html).\n",
           "body": "\nOpen `codewiki/wiki/architecture.md`, keep its stable `id`, and replace the starter\ntitle, summary, and text with information about your project. Run:\n\n```sh\ncodewiki build --strict\ncodewiki query tree\n```\n\nThe tree lists your page and its sections are available through `query doc <id>`.\nContinue with [Writing pages](manual-writing.html) to add children or a separate\ntop-level manual. For a non-default location, select the config explicitly:\n\n```sh\ncodewiki build --strict --config docs/codewiki/wiki.config.yaml\ncodewiki serve --no-open --config docs/codewiki/wiki.config.yaml\n```\n\nNew pages start unreviewed. After replacing the starter and inspecting its source,\nestablish an explicit baseline using the [review workflow](manual-review.html).\n"
         }
@@ -14752,8 +15121,8 @@
           "id": "manual-getting-started.initialize",
           "title": "Add a wiki to your project",
           "kind": "other",
-          "text": "Keep the environment containing the installed framework active. Replace the example path and project name below with your own; the project must already exist. codewiki init --root /path/to/project --code-root src --name 'My Project' cd /path/to/project codewiki build --strict codewiki serve --no-open --code-root src selects a directory relative to the project root. Repeat it to include more directories, for example --code-root src --code-root tests . Individual source files are also supported. Use --dir docs/codewiki during initialization if you want a different instance directory. Initialization creates: Path inside codewiki/ Purpose wiki.config.yaml Project name, source roots, and output settings wiki/architecture.md Starter page to replace with your project's explanations wiki/_templates/ Reusable page templates wiki/TAGS.md Source-tag syntax and examples integrations/ Optional shell, pre-push, and CI examples skills/ and AGENTS.md Instructions for agents working with this wiki The build creates site/ and index.json . Edit the Markdown inputs; rebuild to update the HTML and query index. Repeating init preserves existing files and does not replace your authored pages.",
-          "markdown": "\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing files and\ndoes not replace your authored pages.\n\n",
+          "text": "Keep the environment containing the installed framework active. Replace the example path and project name below with your own; the project must already exist. codewiki init --root /path/to/project --code-root src --name 'My Project' cd /path/to/project codewiki build --strict codewiki serve --no-open --code-root src selects a directory relative to the project root. Repeat it to include more directories, for example --code-root src --code-root tests . Individual source files are also supported. Use --dir docs/codewiki during initialization if you want a different instance directory. Initialization creates: Path inside codewiki/ Purpose wiki.config.yaml Project name, source roots, and output settings wiki/architecture.md Starter page to replace with your project's explanations wiki/_templates/ Reusable page templates wiki/TAGS.md Source-tag syntax and examples integrations/ Optional shell, pre-push, and CI examples skills/ and AGENTS.md Instructions for agents working with this wiki Initialization also creates or appends a small marked section in the project-root AGENTS.md . It directs agents to read codewiki/AGENTS.md before working on source code or documentation, so wiki lookup and review apply outside the wiki folder. With --dir docs/codewiki , the reference is docs/codewiki/AGENTS.md . Existing root instructions are preserved. Repeating init leaves the section for that instance unchanged; keep its marker if you customize it. Re-run init on older instances to add the root reference without overwriting their existing guide. Portable skills still need registration in your agent client's supported discovery location; copying them into the wiki does not automatically register them. The build creates site/ and index.json . Edit the Markdown inputs; rebuild to update the HTML and query index. Repeating init preserves existing instance files and does not replace your authored pages.",
+          "markdown": "\nKeep the environment containing the installed framework active. Replace the\nexample path and project name below with your own; the project must already exist.\n\n```sh\ncodewiki init --root /path/to/project --code-root src --name 'My Project'\ncd /path/to/project\ncodewiki build --strict\ncodewiki serve --no-open\n```\n\n`--code-root src` selects a directory relative to the project root. Repeat it to\ninclude more directories, for example `--code-root src --code-root tests`.\nIndividual source files are also supported. Use `--dir docs/codewiki` during\ninitialization if you want a different instance directory.\n\nInitialization creates:\n\n| Path inside `codewiki/` | Purpose |\n| --- | --- |\n| `wiki.config.yaml` | Project name, source roots, and output settings |\n| `wiki/architecture.md` | Starter page to replace with your project's explanations |\n| `wiki/_templates/` | Reusable page templates |\n| `wiki/TAGS.md` | Source-tag syntax and examples |\n| `integrations/` | Optional shell, pre-push, and CI examples |\n| `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |\n\nInitialization also creates or appends a small marked section in the project-root\n`AGENTS.md`. It directs agents to read `codewiki/AGENTS.md` before working on source\ncode or documentation, so wiki lookup and review apply outside the wiki folder.\nWith `--dir docs/codewiki`, the reference is `docs/codewiki/AGENTS.md`. Existing\nroot instructions are preserved. Repeating init leaves the section for that\ninstance unchanged; keep its marker if you customize it. Re-run init on older\ninstances to add the root reference without overwriting their existing guide.\n\nPortable skills still need registration in your agent client's supported discovery\nlocation; copying them into the wiki does not automatically register them.\n\nThe build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to\nupdate the HTML and query index. Repeating `init` preserves existing instance files and\ndoes not replace your authored pages.\n\n",
           "impls": []
         },
         {
@@ -14767,8 +15136,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "unreviewed",
-        "reason": "No review baseline"
+        "state": "current",
+        "reason": "Reviewed content matches"
       }
     },
     {
@@ -16115,7 +16484,7 @@
       "summary": "Five portable reading, authoring, and review workflows use the CLI to explore the same architecture, one level at a time.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: skills\ntype: component\nstatus: stable\nparent: architecture\ntitle: LLM skills\nsummary: Five portable reading, authoring, and review workflows use the CLI to explore the\n  same architecture, one level at a time.\nowns:\n- ../src/codewiki/resources/skills/wiki-init/SKILL.md\n- ../src/codewiki/resources/skills/wiki-query/SKILL.md\n- ../src/codewiki/resources/skills/wiki-author/SKILL.md\n- ../src/codewiki/resources/skills/wiki-build/SKILL.md\n- ../src/codewiki/resources/skills/wiki-review/SKILL.md\ndepends_on:\n- queries\n- authoring\n- reviews\nrelated: []\ndiagram_links:\n  init: skills.init\n  query: skills.query\n  author: skills.author\n  check: skills.check\n  review: skills.review\n---\n\n## Skill workflows\n\n```mermaid\nflowchart TB\n  init[\"wiki-init \u00b7 establish instance\"] --> author[\"wiki-author \u00b7 explain code\"]\n  query[\"wiki-query \u00b7 read evidence\"] --> author\n  author --> check[\"wiki-build \u00b7 validate + render\"]\n  check --> query\n  review[\"wiki-review \u00b7 update or pass with reason\"] --> check\n```\n\nThese arrows describe an authoring workflow, not Python imports. Skills are Markdown\ninstructions loaded by an LLM client; they do not run inside the renderer.\n\n## Initialize {#init}\n\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism.\n\n## Read progressively {#query}\n\n`wiki-query/SKILL.md` starts with the tree or a file query. It expands a document\nsummary, then a selected section, and only then the relevant symbols and source.\nThe CLI's `--json` form exposes dependencies and diagram destinations as identifiers,\nso an LLM follows the same component graph without parsing rendered HTML.\n\n```text\ncodewiki query tree\ncodewiki query doc renderer\ncodewiki query section renderer.navigation\ncodewiki query symbol codewiki.build.diagram_targets\ncodewiki query source codewiki.build.diagram_targets --limit 40\n```\n\nEach result reports freshness. Rebuild a stale index before trusting source ranges.\nQueries paginate results; this controls items or lines rather than guaranteeing a\ntoken budget.\n\n## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n## Validate the result {#check}\n\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n## Review existing pages {#review}\n\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n## Integration boundary\n\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\nUpdating packaged skills does not overwrite customized instance copies; compare\nand adopt changes explicitly when maintaining an existing project.\n",
+      "markdown": "---\nid: skills\ntype: component\nstatus: stable\nparent: architecture\ntitle: LLM skills\nsummary: Five portable reading, authoring, and review workflows use the CLI to explore the\n  same architecture, one level at a time.\nowns:\n- ../src/codewiki/resources/skills/wiki-init/SKILL.md\n- ../src/codewiki/resources/skills/wiki-query/SKILL.md\n- ../src/codewiki/resources/skills/wiki-author/SKILL.md\n- ../src/codewiki/resources/skills/wiki-build/SKILL.md\n- ../src/codewiki/resources/skills/wiki-review/SKILL.md\ndepends_on:\n- queries\n- authoring\n- reviews\nrelated: []\ndiagram_links:\n  init: skills.init\n  query: skills.query\n  author: skills.author\n  check: skills.check\n  review: skills.review\n---\n\n## Skill workflows\n\n```mermaid\nflowchart TB\n  init[\"wiki-init \u00b7 establish instance\"] --> author[\"wiki-author \u00b7 explain code\"]\n  query[\"wiki-query \u00b7 read evidence\"] --> author\n  author --> check[\"wiki-build \u00b7 validate + render\"]\n  check --> query\n  review[\"wiki-review \u00b7 update or pass with reason\"] --> check\n```\n\nThese arrows describe an authoring workflow, not Python imports. Skills are Markdown\ninstructions loaded by an LLM client; they do not run inside the renderer.\n\n## Initialize {#init}\n\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism. Initialization also adds\na marked reference to the instance guide in the project-root `AGENTS.md`, preserving\nexisting instructions and avoiding duplicates on repeat runs. The skill verifies\nthis integration instead of manually adding another root reference.\n\n## Read progressively {#query}\n\n`wiki-query/SKILL.md` starts with the tree or a file query. It expands a document\nsummary, then a selected section, and only then the relevant symbols and source.\nThe CLI's `--json` form exposes dependencies and diagram destinations as identifiers,\nso an LLM follows the same component graph without parsing rendered HTML.\n\n```text\ncodewiki query tree\ncodewiki query doc renderer\ncodewiki query section renderer.navigation\ncodewiki query symbol codewiki.build.diagram_targets\ncodewiki query source codewiki.build.diagram_targets --limit 40\n```\n\nEach result reports freshness. Rebuild a stale index before trusting source ranges.\nQueries paginate results; this controls items or lines rather than guaranteeing a\ntoken budget.\n\n## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n## Validate the result {#check}\n\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n## Review existing pages {#review}\n\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n## Integration boundary\n\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\nUpdating packaged skills does not overwrite customized instance copies; compare\nand adopt changes explicitly when maintaining an existing project.\n",
       "decisions": [],
       "sections": [
         {
@@ -16138,9 +16507,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 42,
-          "line_end": 48,
-          "markdown": "## Initialize {#init}\n\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism.\n\n",
-          "body": "\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism.\n\n"
+          "line_end": 51,
+          "markdown": "## Initialize {#init}\n\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism. Initialization also adds\na marked reference to the instance guide in the project-root `AGENTS.md`, preserving\nexisting instructions and avoiding duplicates on repeat runs. The skill verifies\nthis integration instead of manually adding another root reference.\n\n",
+          "body": "\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism. Initialization also adds\na marked reference to the instance guide in the project-root `AGENTS.md`, preserving\nexisting instructions and avoiding duplicates on repeat runs. The skill verifies\nthis integration instead of manually adding another root reference.\n\n"
         },
         {
           "id": "skills.query",
@@ -16149,8 +16518,8 @@
           "title": "Read progressively",
           "level": 2,
           "kind": "other",
-          "line_start": 49,
-          "line_end": 67,
+          "line_start": 52,
+          "line_end": 70,
           "markdown": "## Read progressively {#query}\n\n`wiki-query/SKILL.md` starts with the tree or a file query. It expands a document\nsummary, then a selected section, and only then the relevant symbols and source.\nThe CLI's `--json` form exposes dependencies and diagram destinations as identifiers,\nso an LLM follows the same component graph without parsing rendered HTML.\n\n```text\ncodewiki query tree\ncodewiki query doc renderer\ncodewiki query section renderer.navigation\ncodewiki query symbol codewiki.build.diagram_targets\ncodewiki query source codewiki.build.diagram_targets --limit 40\n```\n\nEach result reports freshness. Rebuild a stale index before trusting source ranges.\nQueries paginate results; this controls items or lines rather than guaranteeing a\ntoken budget.\n\n",
           "body": "\n`wiki-query/SKILL.md` starts with the tree or a file query. It expands a document\nsummary, then a selected section, and only then the relevant symbols and source.\nThe CLI's `--json` form exposes dependencies and diagram destinations as identifiers,\nso an LLM follows the same component graph without parsing rendered HTML.\n\n```text\ncodewiki query tree\ncodewiki query doc renderer\ncodewiki query section renderer.navigation\ncodewiki query symbol codewiki.build.diagram_targets\ncodewiki query source codewiki.build.diagram_targets --limit 40\n```\n\nEach result reports freshness. Rebuild a stale index before trusting source ranges.\nQueries paginate results; this controls items or lines rather than guaranteeing a\ntoken budget.\n\n"
         },
@@ -16161,8 +16530,8 @@
           "title": "Author with evidence",
           "level": 2,
           "kind": "other",
-          "line_start": 68,
-          "line_end": 74,
+          "line_start": 71,
+          "line_end": 77,
           "markdown": "## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n",
           "body": "\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n"
         },
@@ -16173,8 +16542,8 @@
           "title": "Validate the result",
           "level": 2,
           "kind": "other",
-          "line_start": 75,
-          "line_end": 81,
+          "line_start": 78,
+          "line_end": 84,
           "markdown": "## Validate the result {#check}\n\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n",
           "body": "\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n"
         },
@@ -16185,8 +16554,8 @@
           "title": "Review existing pages",
           "level": 2,
           "kind": "other",
-          "line_start": 82,
-          "line_end": 89,
+          "line_start": 85,
+          "line_end": 92,
           "markdown": "## Review existing pages {#review}\n\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n",
           "body": "\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n"
         },
@@ -16197,8 +16566,8 @@
           "title": "Integration boundary",
           "level": 2,
           "kind": "other",
-          "line_start": 90,
-          "line_end": 94,
+          "line_start": 93,
+          "line_end": 97,
           "markdown": "## Integration boundary\n\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\nUpdating packaged skills does not overwrite customized instance copies; compare\nand adopt changes explicitly when maintaining an existing project.\n",
           "body": "\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\nUpdating packaged skills does not overwrite customized instance copies; compare\nand adopt changes explicitly when maintaining an existing project.\n"
         }
@@ -16208,8 +16577,8 @@
           "id": "skills.init",
           "title": "Initialize",
           "kind": "other",
-          "text": "wiki-init/SKILL.md directs the tool to inspect the repository layout, choose real source roots, run codewiki init , and replace starter claims with observed facts. The initializer copies these portable skills into the project instance; register them using the chosen client's own discovery mechanism.",
-          "markdown": "\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism.\n\n",
+          "text": "wiki-init/SKILL.md directs the tool to inspect the repository layout, choose real source roots, run codewiki init , and replace starter claims with observed facts. The initializer copies these portable skills into the project instance; register them using the chosen client's own discovery mechanism. Initialization also adds a marked reference to the instance guide in the project-root AGENTS.md , preserving existing instructions and avoiding duplicates on repeat runs. The skill verifies this integration instead of manually adding another root reference.",
+          "markdown": "\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism. Initialization also adds\na marked reference to the instance guide in the project-root `AGENTS.md`, preserving\nexisting instructions and avoiding duplicates on repeat runs. The skill verifies\nthis integration instead of manually adding another root reference.\n\n",
           "impls": []
         },
         {
@@ -16436,7 +16805,7 @@
       "summary": "Temporary projects exercise validation, queries, publication, initialization, and the shared architecture graph.",
       "parent": "testing",
       "children": [],
-      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\nThe sidebar begins with Overview and places the manual before architecture on all\npage types; the overview cards use the same manual-first order.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n## HTML translation boundaries {#translations}\n\nTranslation fixtures verify Traditional Chinese HTML alongside English CLI Markdown,\nlocalized navigation and source bindings, ordinary Markdown/HTML links, unchanged\nexternal URLs and code examples, fallback notices, nested paths, dotted IDs, and\nlocalized diagram destinations. Malformed translations preserve published outputs;\nduplicate aliases and output collisions fail, multiple locales remain independent,\nand deleting the last translation retires localized pages. Translation-only edits\nleave canonical review fingerprints unchanged.\n",
+      "markdown": "---\ntype: component\nstatus: stable\nparent: testing\nid: test-framework\ntitle: Framework integration tests\nsummary: Temporary projects exercise validation, queries, publication, initialization,\n  and the shared architecture graph.\nowns:\n- ../tests/test_framework.py\ndepends_on:\n- documents\n- build\n- queries\n- authoring\n- history\nrelated:\n- renderer\n- test-languages\ndiagram_links:\n  fixtures: test-framework.fixtures\n  validation: test-framework.validation\n  queries: test-framework.queries\n  publication: test-framework.publication\n  diagrams: test-framework.diagrams\n  initialization: test-framework.initialization\n---\n\n## Framework test architecture\n\n```mermaid\nflowchart LR\n  fixtures[\"Temporary project\"] --> validation[\"Document validation\"]\n  fixtures --> queries[\"Queries + freshness\"]\n  fixtures --> publication[\"Publish + recover\"]\n  fixtures --> diagrams[\"Diagram links\"]\n  fixtures --> initialization[\"Init + theme\"]\n```\n\nArrows describe the shared fixture, not test execution order. Each case builds or\nmodifies an isolated project and checks its observable output. Select an area to\nread the assertions, then expand the linked test source.\n\n## Run these checks\n\n```sh\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n```\n\n## Temporary projects isolate integration tests {#fixtures}\n\nThe `instance` fixture creates a source directory under pytest's `tmp_path`, writes\na tagged Python function, initializes a real CodeWiki instance, and replaces its\nstarter document with known Markdown. Its nested headings, code fence, emphasis,\nand link give queries concrete content to preserve. The quoted project name also\nexercises configuration serialization.\n\nThe `build()` helper calls the real builder in strict mode and includes diagnostic\nkinds and messages when the build fails. Each test can change its own source,\ndocument, or theme and rebuild without touching this repository's published wiki.\nTests construct actual files instead of mocking the build and query interfaces.\n\n## Document validation rejects broken structure {#validation}\n\nThe framework suite checks missing or malformed frontmatter, unsafe and reserved\nIDs, incorrect field types, broken parent/related/decision relationships, hierarchy\ncycles, and duplicate document IDs. Parameterized cases make each malformed input\nindependently visible in pytest output.\n\nThese cases complement the [document validator](documents.html#validation).\nA structural validation pass cannot establish that an architectural explanation\nis semantically correct; that still requires comparing prose with source behavior.\n\n## Progressive queries preserve evidence {#queries}\n\nTests verify that document summaries do not eagerly include full Markdown, a section\nretains emphasis and nested subsections without leaking its siblings, fenced code\ndoes not create false headings, and source pagination returns the expected lines.\n\nFreshness tests edit, add, and delete source files and verify that stale source\nranges are rejected. Additional cases check ambiguous file basenames, JSON CLI\noutput, configuration options before and after subcommands, unknown-symbol errors,\nand an explicit rebuild request for an old index format.\n\n## Publication keeps usable outputs {#publication}\n\nA separate manual-root fixture verifies that Overview and CLI navigation expose\nthe manual alongside architecture, with children at the correct depths. Manual\ndescendants use their own reading path, including intermediate pages; architecture\npages keep their existing implementation-oriented path.\nThe sidebar begins with Overview and places the manual before architecture on all\npage types; the overview cards use the same manual-first order.\n\nA nested navigation fixture checks native disclosure groups on overview, source\nindex, parent, and leaf pages. Only the current page's branch and ancestors start\nopen, every page keeps its link, and unrelated groups remain collapsed.\n\nA duplicate heading must fail without replacing either the saved index or rendered\npage. A malformed Jinja template must leave the previous outputs intact. Removing\na document and rebuilding must retire its generated HTML page.\n\nThese are observable file-state assertions around failure and success. They do not\nsimulate concurrent readers or prove that publishing the whole site is atomic;\nsee the [publication boundary](build.html#publication) for that limitation.\n\n## Architecture navigation agrees with CLI data {#diagrams}\n\nThe diagram tests cover unknown page/section targets, missing dependencies, and\ninvalid metadata types. A failed strict build preserves the previously saved index.\nThe integration case uses a dotted document ID (`engine.v2`) to verify exact lookup,\nexplicit mapping precedence over a local slug, automatic document links, and legacy\nlocal section links. It also checks dependency and reverse-dependency data in CLI\nresults and ordinary destination links in generated HTML.\n\nA separate test allows dependency cycles while keeping the parent hierarchy acyclic.\nThese checks validate generated data and HTML. They do not execute Mermaid or the\nbrowser's click, keyboard, or expanded-dialog behavior.\n\n## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nRoot guidance tests cover absent, empty, and existing instruction files, including\nCRLF text without a trailing newline. They check default and custom paths with\nspaces, preservation of customized root sections and instance guides, integration\nof older instances, and separate references for multiple instances. Equivalent\nnormalized paths do not duplicate the reference.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n## HTML translation boundaries {#translations}\n\nTranslation fixtures verify Traditional Chinese HTML alongside English CLI Markdown,\nlocalized navigation and source bindings, ordinary Markdown/HTML links, unchanged\nexternal URLs and code examples, fallback notices, nested paths, dotted IDs, and\nlocalized diagram destinations. Malformed translations preserve published outputs;\nduplicate aliases and output collisions fail, multiple locales remain independent,\nand deleting the last translation retires localized pages. Translation-only edits\nleave canonical review fingerprints unchanged.\n",
       "decisions": [],
       "sections": [
         {
@@ -16531,9 +16900,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 120,
-          "line_end": 130,
-          "markdown": "## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
-          "body": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n"
+          "line_end": 135,
+          "markdown": "## Initialization and theme customization survive {#initialization}\n\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nRoot guidance tests cover absent, empty, and existing instruction files, including\nCRLF text without a trailing newline. They check default and custom paths with\nspaces, preservation of customized root sections and instance guides, integration\nof older instances, and separate references for multiple instances. Equivalent\nnormalized paths do not duplicate the reference.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
+          "body": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nRoot guidance tests cover absent, empty, and existing instruction files, including\nCRLF text without a trailing newline. They check default and custom paths with\nspaces, preservation of customized root sections and instance guides, integration\nof older instances, and separate references for multiple instances. Equivalent\nnormalized paths do not duplicate the reference.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n"
         },
         {
           "id": "test-framework.translations",
@@ -16542,8 +16911,8 @@
           "title": "HTML translation boundaries",
           "level": 2,
           "kind": "other",
-          "line_start": 131,
-          "line_end": 139,
+          "line_start": 136,
+          "line_end": 144,
           "markdown": "## HTML translation boundaries {#translations}\n\nTranslation fixtures verify Traditional Chinese HTML alongside English CLI Markdown,\nlocalized navigation and source bindings, ordinary Markdown/HTML links, unchanged\nexternal URLs and code examples, fallback notices, nested paths, dotted IDs, and\nlocalized diagram destinations. Malformed translations preserve published outputs;\nduplicate aliases and output collisions fail, multiple locales remain independent,\nand deleting the last translation retires localized pages. Translation-only edits\nleave canonical review fingerprints unchanged.\n",
           "body": "\nTranslation fixtures verify Traditional Chinese HTML alongside English CLI Markdown,\nlocalized navigation and source bindings, ordinary Markdown/HTML links, unchanged\nexternal URLs and code examples, fallback notices, nested paths, dotted IDs, and\nlocalized diagram destinations. Malformed translations preserve published outputs;\nduplicate aliases and output collisions fail, multiple locales remain independent,\nand deleting the last translation retires localized pages. Translation-only edits\nleave canonical review fingerprints unchanged.\n"
         }
@@ -16619,8 +16988,8 @@
               "symbol": "test_invalid_markdown_is_a_validation_error",
               "kind": "function",
               "lines": [
-                292,
-                301
+                337,
+                346
               ],
               "note": "",
               "lang": "python"
@@ -16664,8 +17033,8 @@
               "symbol": "test_cli_json_and_config_on_either_side",
               "kind": "function",
               "lines": [
-                247,
-                255
+                292,
+                300
               ],
               "note": "",
               "lang": "python"
@@ -16676,8 +17045,8 @@
               "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
               "kind": "function",
               "lines": [
-                259,
-                266
+                304,
+                311
               ],
               "note": "",
               "lang": "python"
@@ -16688,8 +17057,8 @@
               "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
               "kind": "function",
               "lines": [
-                330,
-                334
+                375,
+                379
               ],
               "note": "",
               "lang": "python"
@@ -16745,8 +17114,8 @@
               "symbol": "test_theme_failure_preserves_index_and_site",
               "kind": "function",
               "lines": [
-                305,
-                315
+                350,
+                360
               ],
               "note": "",
               "lang": "python"
@@ -16757,8 +17126,8 @@
               "symbol": "test_removed_document_retires_generated_page",
               "kind": "function",
               "lines": [
-                319,
-                326
+                364,
+                371
               ],
               "note": "",
               "lang": "python"
@@ -16778,8 +17147,8 @@
               "symbol": "test_broken_architecture_links_preserve_published_outputs",
               "kind": "function",
               "lines": [
-                338,
-                351
+                383,
+                396
               ],
               "note": "",
               "lang": "python"
@@ -16790,8 +17159,8 @@
               "symbol": "test_invalid_architecture_metadata",
               "kind": "function",
               "lines": [
-                355,
-                364
+                400,
+                409
               ],
               "note": "",
               "lang": "python"
@@ -16802,8 +17171,8 @@
               "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
               "kind": "function",
               "lines": [
-                368,
-                402
+                413,
+                447
               ],
               "note": "",
               "lang": "python"
@@ -16814,8 +17183,8 @@
               "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
               "kind": "function",
               "lines": [
-                406,
-                411
+                451,
+                456
               ],
               "note": "",
               "lang": "python"
@@ -16826,8 +17195,8 @@
           "id": "test-framework.initialization",
           "title": "Initialization and theme customization survive",
           "kind": "other",
-          "text": "Repeated initialization preserves authored Markdown and existing configuration, keeps the framework engine outside the instance, and copies the portable skills. An attempted instance directory outside the project is rejected. The hierarchy/theme test checks a child page and paginated tree depth, a project CSS override, and packaged Mermaid assets and license presence. This is an in-process initialization/build test. Verifying a built wheel from an unrelated directory is an additional packaging check.",
-          "markdown": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
+          "text": "Repeated initialization preserves authored Markdown and existing configuration, keeps the framework engine outside the instance, and copies the portable skills. Root guidance tests cover absent, empty, and existing instruction files, including CRLF text without a trailing newline. They check default and custom paths with spaces, preservation of customized root sections and instance guides, integration of older instances, and separate references for multiple instances. Equivalent normalized paths do not duplicate the reference. An attempted instance directory outside the project is rejected. The hierarchy/theme test checks a child page and paginated tree depth, a project CSS override, and packaged Mermaid assets and license presence. This is an in-process initialization/build test. Verifying a built wheel from an unrelated directory is an additional packaging check.",
+          "markdown": "\nRepeated initialization preserves authored Markdown and existing configuration,\nkeeps the framework engine outside the instance, and copies the portable skills.\nRoot guidance tests cover absent, empty, and existing instruction files, including\nCRLF text without a trailing newline. They check default and custom paths with\nspaces, preservation of customized root sections and instance guides, integration\nof older instances, and separate references for multiple instances. Equivalent\nnormalized paths do not duplicate the reference.\nAn attempted instance directory outside the project is rejected.\n\nThe hierarchy/theme test checks a child page and paginated tree depth, a project CSS\noverride, and packaged Mermaid assets and license presence. This is an in-process\ninitialization/build test. Verifying a built wheel from an unrelated directory is\nan additional packaging check.\n\n",
           "impls": [
             {
               "role": "impl",
@@ -16852,6 +17221,30 @@
               ],
               "note": "",
               "lang": "python"
+            },
+            {
+              "role": "impl",
+              "file": "../tests/test_framework.py",
+              "symbol": "test_init_adds_root_guidance_once_and_preserves_existing_rules",
+              "kind": "function",
+              "lines": [
+                247,
+                269
+              ],
+              "note": "",
+              "lang": "python"
+            },
+            {
+              "role": "impl",
+              "file": "../tests/test_framework.py",
+              "symbol": "test_init_integrates_older_instances_and_distinguishes_wiki_paths",
+              "kind": "function",
+              "lines": [
+                273,
+                288
+              ],
+              "note": "",
+              "lang": "python"
             }
           ]
         },
@@ -16868,8 +17261,8 @@
               "symbol": "test_html_translations_keep_queries_english_and_links_local",
               "kind": "function",
               "lines": [
-                415,
-                464
+                460,
+                509
               ],
               "note": "",
               "lang": "python"
@@ -16880,8 +17273,8 @@
               "symbol": "test_invalid_translation_preserves_published_outputs",
               "kind": "function",
               "lines": [
-                468,
-                483
+                513,
+                528
               ],
               "note": "",
               "lang": "python"
@@ -16892,8 +17285,8 @@
               "symbol": "test_translation_aliases_nested_paths_and_diagrams",
               "kind": "function",
               "lines": [
-                487,
-                520
+                532,
+                565
               ],
               "note": "",
               "lang": "python"
@@ -16904,8 +17297,8 @@
               "symbol": "test_multiple_html_locales_and_output_collision",
               "kind": "function",
               "lines": [
-                524,
-                542
+                569,
+                587
               ],
               "note": "",
               "lang": "python"
@@ -17057,8 +17450,8 @@
               "symbol": "test_python_decorators_scopes_and_comments",
               "kind": "function",
               "lines": [
-                270,
-                288
+                315,
+                333
               ],
               "note": "",
               "lang": "python"
@@ -17391,10 +17784,24 @@
           "title": "Scaffold only the project-owned files",
           "kind": "concept",
           "role": "impl",
-          "symbol": "main",
+          "symbol": "add_root_agent_guidance",
           "lines": [
             21,
-            64
+            40
+          ],
+          "doc": "authoring",
+          "url": "authoring.html#scaffold",
+          "lang": "python"
+        },
+        {
+          "id": "authoring.scaffold",
+          "title": "Scaffold only the project-owned files",
+          "kind": "concept",
+          "role": "impl",
+          "symbol": "main",
+          "lines": [
+            44,
+            90
           ],
           "doc": "authoring",
           "url": "authoring.html#scaffold",
@@ -18167,8 +18574,8 @@
           "role": "impl",
           "symbol": "test_invalid_markdown_is_a_validation_error",
           "lines": [
-            292,
-            301
+            337,
+            346
           ],
           "doc": "test-framework",
           "url": "test-framework.html#validation",
@@ -18209,8 +18616,8 @@
           "role": "impl",
           "symbol": "test_cli_json_and_config_on_either_side",
           "lines": [
-            247,
-            255
+            292,
+            300
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -18223,8 +18630,8 @@
           "role": "impl",
           "symbol": "test_file_lookup_does_not_silently_choose_duplicate_basename",
           "lines": [
-            259,
-            266
+            304,
+            311
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -18237,8 +18644,8 @@
           "role": "impl",
           "symbol": "test_old_index_requests_rebuild_instead_of_empty_results",
           "lines": [
-            330,
-            334
+            375,
+            379
           ],
           "doc": "test-framework",
           "url": "test-framework.html#queries",
@@ -18293,8 +18700,8 @@
           "role": "impl",
           "symbol": "test_theme_failure_preserves_index_and_site",
           "lines": [
-            305,
-            315
+            350,
+            360
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -18307,8 +18714,8 @@
           "role": "impl",
           "symbol": "test_removed_document_retires_generated_page",
           "lines": [
-            319,
-            326
+            364,
+            371
           ],
           "doc": "test-framework",
           "url": "test-framework.html#publication",
@@ -18321,8 +18728,8 @@
           "role": "impl",
           "symbol": "test_broken_architecture_links_preserve_published_outputs",
           "lines": [
-            338,
-            351
+            383,
+            396
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -18335,8 +18742,8 @@
           "role": "impl",
           "symbol": "test_invalid_architecture_metadata",
           "lines": [
-            355,
-            364
+            400,
+            409
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -18349,8 +18756,8 @@
           "role": "impl",
           "symbol": "test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids",
           "lines": [
-            368,
-            402
+            413,
+            447
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -18363,8 +18770,8 @@
           "role": "impl",
           "symbol": "test_dependency_cycles_do_not_become_parent_cycles",
           "lines": [
-            406,
-            411
+            451,
+            456
           ],
           "doc": "test-framework",
           "url": "test-framework.html#diagrams",
@@ -18399,14 +18806,42 @@
           "lang": "python"
         },
         {
+          "id": "test-framework.initialization",
+          "title": "Initialization and theme customization survive",
+          "kind": "other",
+          "role": "impl",
+          "symbol": "test_init_adds_root_guidance_once_and_preserves_existing_rules",
+          "lines": [
+            247,
+            269
+          ],
+          "doc": "test-framework",
+          "url": "test-framework.html#initialization",
+          "lang": "python"
+        },
+        {
+          "id": "test-framework.initialization",
+          "title": "Initialization and theme customization survive",
+          "kind": "other",
+          "role": "impl",
+          "symbol": "test_init_integrates_older_instances_and_distinguishes_wiki_paths",
+          "lines": [
+            273,
+            288
+          ],
+          "doc": "test-framework",
+          "url": "test-framework.html#initialization",
+          "lang": "python"
+        },
+        {
           "id": "test-framework.translations",
           "title": "HTML translation boundaries",
           "kind": "other",
           "role": "impl",
           "symbol": "test_html_translations_keep_queries_english_and_links_local",
           "lines": [
-            415,
-            464
+            460,
+            509
           ],
           "doc": "test-framework",
           "url": "test-framework.html#translations",
@@ -18419,8 +18854,8 @@
           "role": "impl",
           "symbol": "test_invalid_translation_preserves_published_outputs",
           "lines": [
-            468,
-            483
+            513,
+            528
           ],
           "doc": "test-framework",
           "url": "test-framework.html#translations",
@@ -18433,8 +18868,8 @@
           "role": "impl",
           "symbol": "test_translation_aliases_nested_paths_and_diagrams",
           "lines": [
-            487,
-            520
+            532,
+            565
           ],
           "doc": "test-framework",
           "url": "test-framework.html#translations",
@@ -18447,8 +18882,8 @@
           "role": "impl",
           "symbol": "test_multiple_html_locales_and_output_collision",
           "lines": [
-            524,
-            542
+            569,
+            587
           ],
           "doc": "test-framework",
           "url": "test-framework.html#translations",
@@ -18461,8 +18896,8 @@
           "role": "impl",
           "symbol": "test_python_decorators_scopes_and_comments",
           "lines": [
-            270,
-            288
+            315,
+            333
           ],
           "doc": "test-languages",
           "url": "test-languages.html#parsers",
@@ -18665,7 +19100,7 @@
   "reviews": {
     "schema_version": 1,
     "ok": false,
-    "pending": 6,
+    "pending": 5,
     "total": 20,
     "errors": [],
     "documents": [
@@ -18764,12 +19199,12 @@
         "title": "Initialization & preview",
         "source": "wiki/authoring.md",
         "state": "current",
-        "fingerprint": "b050e9ae3075c5d08971bdc2fd4073cfe337dfb18d2b0567534c17faba45953e",
+        "fingerprint": "36a3e0cf2b0e2a64143e327ec529d461adbad4030554ebca594dcfc51830dd1f",
         "snapshot": {
           "document_path": "wiki/authoring.md",
-          "document_sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
+          "document_sha256": "0016c19d8983c3ee50481e6f59057935f263d2f4b3608e2ea6d9d0f97481d194",
           "sources": {
-            "../src/codewiki/init_project.py": "aba75208d999332430ba7f7178eb0a75c0ddafdfd332a4e6b97c0a3b906069bb",
+            "../src/codewiki/init_project.py": "e952df83f00c371e366b754ed3cb67e990bd6c1116e21610020cc946aea7fea3",
             "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"
           },
           "coverage": [
@@ -18798,16 +19233,16 @@
         "previous": {
           "schema_version": 1,
           "document": "authoring",
-          "outcome": "no-change",
-          "reason": "OK",
-          "reviewed_at": "2026-09-13T16:15:49+00:00",
-          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-          "fingerprint": "b050e9ae3075c5d08971bdc2fd4073cfe337dfb18d2b0567534c17faba45953e",
+          "outcome": "updated",
+          "reason": "Compared initialization changes with the existing reviewed implementation: root guidance is appended without rewriting prior bytes, normalized instance markers prevent repeat additions, and existing instance files remain preserved. Updated scaffold and skills explanations in English and Traditional Chinese.",
+          "reviewed_at": "2026-09-14T03:58:39+00:00",
+          "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+          "fingerprint": "36a3e0cf2b0e2a64143e327ec529d461adbad4030554ebca594dcfc51830dd1f",
           "snapshot": {
             "document_path": "wiki/authoring.md",
-            "document_sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
+            "document_sha256": "0016c19d8983c3ee50481e6f59057935f263d2f4b3608e2ea6d9d0f97481d194",
             "sources": {
-              "../src/codewiki/init_project.py": "aba75208d999332430ba7f7178eb0a75c0ddafdfd332a4e6b97c0a3b906069bb",
+              "../src/codewiki/init_project.py": "e952df83f00c371e366b754ed3cb67e990bd6c1116e21610020cc946aea7fea3",
               "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"
             },
             "coverage": [
@@ -19157,17 +19592,31 @@
         "document": "manual-getting-started",
         "title": "Getting started",
         "source": "wiki/manual-getting-started.md",
-        "state": "unreviewed",
-        "fingerprint": "78c28e6c82073099b2e7ce4772ab10dc38cf3d205cc003c3edef4a3bba2a532f",
+        "state": "current",
+        "fingerprint": "ee112f01686b571fdb92f166b4dba268f6404b4e3230a8e547bbdc579c07596f",
         "snapshot": {
           "document_path": "wiki/manual-getting-started.md",
-          "document_sha256": "d0955582c121beb1fa6084721dba721d66d491d69ba2eac033111fb4b44d60d1",
+          "document_sha256": "e5b3f4f4c5e3f090bb1f07c0a1f33788d34602032ce3a1540837b6b37300f4fb",
           "sources": {},
           "coverage": []
         },
-        "previous": null,
+        "previous": {
+          "schema_version": 1,
+          "document": "manual-getting-started",
+          "outcome": "updated",
+          "reason": "Read the getting-started guide against pyproject requirements, initializer, generated instance instructions, and passing initialization/build tests. Added the root AGENTS integration, custom directory behavior, repeat-run preservation, legacy-instance migration, and separate skill registration in English and Traditional Chinese.",
+          "reviewed_at": "2026-09-14T03:58:39+00:00",
+          "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+          "fingerprint": "ee112f01686b571fdb92f166b4dba268f6404b4e3230a8e547bbdc579c07596f",
+          "snapshot": {
+            "document_path": "wiki/manual-getting-started.md",
+            "document_sha256": "e5b3f4f4c5e3f090bb1f07c0a1f33788d34602032ce3a1540837b6b37300f4fb",
+            "sources": {},
+            "coverage": []
+          }
+        },
         "changes": [],
-        "reason": "No review baseline"
+        "reason": "Reviewed content matches"
       },
       {
         "document": "manual-reading",
@@ -19626,14 +20075,14 @@
         "title": "LLM skills",
         "source": "wiki/skills.md",
         "state": "current",
-        "fingerprint": "959863cace6fff4e60337c721393107adc6a63da568fa9845a7da3d22e5d8d4f",
+        "fingerprint": "903377999312a092a0efd78be17da47e52c663ebbcc0c611b595a98730501e12",
         "snapshot": {
           "document_path": "wiki/skills.md",
-          "document_sha256": "663eb20bd1b2a2dc37adb3948df41f8c402298b2ae352a44a4181e71cab9b10d",
+          "document_sha256": "0bcecc5ac3cb0b4ff8cf0e9e3e47daed9e49f112c632adf79f187cb8fc3aea8d",
           "sources": {
             "../src/codewiki/resources/skills/wiki-author/SKILL.md": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
             "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
-            "../src/codewiki/resources/skills/wiki-init/SKILL.md": "82106d2718c1473b878c4b399b34b1bf875704eb7349dafc0dbd4a78daad013d",
+            "../src/codewiki/resources/skills/wiki-init/SKILL.md": "b5cf30b39476f556a974f7c8a0df69db99b7b47dc1fbd6450330485cc9822a0e",
             "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
             "../src/codewiki/resources/skills/wiki-review/SKILL.md": "fbeaa2de9671b3ba0e2088868ce21a2da3966563c5e51fa14d3988d034ba3174"
           },
@@ -19663,18 +20112,18 @@
         "previous": {
           "schema_version": 1,
           "document": "skills",
-          "outcome": "no-change",
-          "reason": "OK",
-          "reviewed_at": "2026-09-13T16:17:08+00:00",
-          "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-          "fingerprint": "959863cace6fff4e60337c721393107adc6a63da568fa9845a7da3d22e5d8d4f",
+          "outcome": "updated",
+          "reason": "Inspected the revised wiki-init skill and initializer: init now installs the root reference itself, the skill verifies it, and client-specific skill registration remains separate. Updated both language explanations.",
+          "reviewed_at": "2026-09-14T03:58:40+00:00",
+          "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+          "fingerprint": "903377999312a092a0efd78be17da47e52c663ebbcc0c611b595a98730501e12",
           "snapshot": {
             "document_path": "wiki/skills.md",
-            "document_sha256": "663eb20bd1b2a2dc37adb3948df41f8c402298b2ae352a44a4181e71cab9b10d",
+            "document_sha256": "0bcecc5ac3cb0b4ff8cf0e9e3e47daed9e49f112c632adf79f187cb8fc3aea8d",
             "sources": {
               "../src/codewiki/resources/skills/wiki-author/SKILL.md": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
               "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
-              "../src/codewiki/resources/skills/wiki-init/SKILL.md": "82106d2718c1473b878c4b399b34b1bf875704eb7349dafc0dbd4a78daad013d",
+              "../src/codewiki/resources/skills/wiki-init/SKILL.md": "b5cf30b39476f556a974f7c8a0df69db99b7b47dc1fbd6450330485cc9822a0e",
               "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
               "../src/codewiki/resources/skills/wiki-review/SKILL.md": "fbeaa2de9671b3ba0e2088868ce21a2da3966563c5e51fa14d3988d034ba3174"
             },
@@ -19784,12 +20233,12 @@
         "title": "Framework integration tests",
         "source": "wiki/test-framework.md",
         "state": "current",
-        "fingerprint": "426e217307d7bc8bb83642a1cee0a1e0d5e68edb0378662b940f67778a5c1688",
+        "fingerprint": "14011b4b72716c15caa8c24937d318ddd309d53224e5f8d307e9575def0fa92e",
         "snapshot": {
           "document_path": "wiki/test-framework.md",
-          "document_sha256": "3734b0d55d1d102ff989a5fef534ccba8f075d21c3e522207fae03fde94add5b",
+          "document_sha256": "a8584c971cdb5dabfe2c2108784f71569fd8380bbb8ba759f07160ccf5d74b56",
           "sources": {
-            "../tests/test_framework.py": "76025cd9fa17997c24303a80fbcefb6f8307db61162e826af9c5ed05677bc3e3"
+            "../tests/test_framework.py": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2"
           },
           "coverage": [
             {
@@ -19844,15 +20293,15 @@
           "schema_version": 1,
           "document": "test-framework",
           "outcome": "updated",
-          "reason": "Established a baseline after reading tests/test_framework.py and matching its assertions to the guide; added translation isolation, fallback, locale links, invalid-publication preservation, alias/collision, multiple-locale, and review-fingerprint coverage. All 71 tests pass.",
-          "reviewed_at": "2026-09-13T16:59:02+00:00",
-          "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-          "fingerprint": "426e217307d7bc8bb83642a1cee0a1e0d5e68edb0378662b940f67778a5c1688",
+          "reason": "Inspected added initialization tests and the passing 78-test suite: absent and existing root instructions, CRLF preservation, custom paths with spaces, customized guide retention, legacy instances, and normalized multi-instance references are covered. Updated the testing explanation in both languages.",
+          "reviewed_at": "2026-09-14T03:58:40+00:00",
+          "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+          "fingerprint": "14011b4b72716c15caa8c24937d318ddd309d53224e5f8d307e9575def0fa92e",
           "snapshot": {
             "document_path": "wiki/test-framework.md",
-            "document_sha256": "3734b0d55d1d102ff989a5fef534ccba8f075d21c3e522207fae03fde94add5b",
+            "document_sha256": "a8584c971cdb5dabfe2c2108784f71569fd8380bbb8ba759f07160ccf5d74b56",
             "sources": {
-              "../tests/test_framework.py": "76025cd9fa17997c24303a80fbcefb6f8307db61162e826af9c5ed05677bc3e3"
+              "../tests/test_framework.py": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2"
             },
             "coverage": [
               {
@@ -19912,12 +20361,12 @@
         "title": "Language binding tests",
         "source": "wiki/test-languages.md",
         "state": "unreviewed",
-        "fingerprint": "bcc73215a6a352253b5c27f954d1a24048ae99a035145376073681162efe42c8",
+        "fingerprint": "730543ab421ca24e5ec0b4e187f59536f860f87899ead92224677ce8e03e305e",
         "snapshot": {
           "document_path": "wiki/test-languages.md",
           "document_sha256": "bc6961e79c6e49c8e56c4f8c9b932b81a76ee1a4eb07ee7c2cd5a4fd2654b3e4",
           "sources": {
-            "../tests/test_framework.py": "76025cd9fa17997c24303a80fbcefb6f8307db61162e826af9c5ed05677bc3e3",
+            "../tests/test_framework.py": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2",
             "../tests/test_languages.py": "d2764ae172f088b6fe6112f9a87242e0347fa672a3e9d4a6862fe24070543526"
           },
           "coverage": [

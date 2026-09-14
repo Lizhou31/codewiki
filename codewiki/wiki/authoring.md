@@ -45,11 +45,18 @@ flowchart TB
 
 `codewiki init --root <project> --code-root src` creates a `codewiki/` instance.
 Repeat `--code-root` for additional source roots. Initialization preserves existing
-files and does not replace user customizations on an upgrade. It adds an architecture
+instance files and does not replace user customizations on an upgrade. It adds an architecture
 starter only when there are no authored pages. The copied templates cover architecture,
 subsystem, component, and decision documents. Replace starter text with observed facts.
 Optional shell, Git hook, and CI examples are copied into `integrations/` without
 installing hooks or changing remote repository policy.
+
+Initialization creates or appends a marked section in the project-root `AGENTS.md`
+that directs source and documentation work to the instance guide. It appends bytes
+without rewriting existing root instructions. The marker includes the normalized
+project-relative guide path, so repeating init preserves a customized section and
+different instances receive separate references. `--dir` controls that path. Older
+instances gain the root reference on re-initialization while their files stay intact.
 
 ### Preview the build contract {#preview}
 
@@ -64,7 +71,8 @@ The framework ships `wiki-init`, `wiki-query`, `wiki-author`, `wiki-build`, and 
 `src/codewiki/resources/skills/`. Initialization copies them into the instance. Each uses
 the installed CLI, so it has no dependency on a Claude-specific plugin directory.
 Use the relevant client's skill discovery mechanism to register these files.
-Root agent instructions can reference the instance guide for project-wide behavior.
+Initialization adds the root agent reference for project-wide behavior; skill
+registration remains a separate client integration step.
 
 ## Maintenance
 

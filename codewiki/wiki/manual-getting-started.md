@@ -61,8 +61,19 @@ Initialization creates:
 | `integrations/` | Optional shell, pre-push, and CI examples |
 | `skills/` and `AGENTS.md` | Instructions for agents working with this wiki |
 
+Initialization also creates or appends a small marked section in the project-root
+`AGENTS.md`. It directs agents to read `codewiki/AGENTS.md` before working on source
+code or documentation, so wiki lookup and review apply outside the wiki folder.
+With `--dir docs/codewiki`, the reference is `docs/codewiki/AGENTS.md`. Existing
+root instructions are preserved. Repeating init leaves the section for that
+instance unchanged; keep its marker if you customize it. Re-run init on older
+instances to add the root reference without overwriting their existing guide.
+
+Portable skills still need registration in your agent client's supported discovery
+location; copying them into the wiki does not automatically register them.
+
 The build creates `site/` and `index.json`. Edit the Markdown inputs; rebuild to
-update the HTML and query index. Repeating `init` preserves existing files and
+update the HTML and query index. Repeating `init` preserves existing instance files and
 does not replace your authored pages.
 
 ## Make your first edit {#first-edit}

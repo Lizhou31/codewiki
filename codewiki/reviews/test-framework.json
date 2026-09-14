@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "test-framework",
   "outcome": "updated",
-  "reason": "Established a baseline after reading tests/test_framework.py and matching its assertions to the guide; added translation isolation, fallback, locale links, invalid-publication preservation, alias/collision, multiple-locale, and review-fingerprint coverage. All 71 tests pass.",
-  "reviewed_at": "2026-09-13T16:59:02+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "426e217307d7bc8bb83642a1cee0a1e0d5e68edb0378662b940f67778a5c1688",
+  "reason": "Inspected added initialization tests and the passing 78-test suite: absent and existing root instructions, CRLF preservation, custom paths with spaces, customized guide retention, legacy instances, and normalized multi-instance references are covered. Updated the testing explanation in both languages.",
+  "reviewed_at": "2026-09-14T03:58:40+00:00",
+  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+  "fingerprint": "14011b4b72716c15caa8c24937d318ddd309d53224e5f8d307e9575def0fa92e",
   "snapshot": {
     "document_path": "wiki/test-framework.md",
-    "document_sha256": "3734b0d55d1d102ff989a5fef534ccba8f075d21c3e522207fae03fde94add5b",
+    "document_sha256": "a8584c971cdb5dabfe2c2108784f71569fd8380bbb8ba759f07160ccf5d74b56",
     "sources": {
-      "../tests/test_framework.py": "76025cd9fa17997c24303a80fbcefb6f8307db61162e826af9c5ed05677bc3e3"
+      "../tests/test_framework.py": "302da6d4dfc0b345eb0ee82a6679a46192b57bcc8c85ee3af0e28a93af7f47c2"
     },
     "coverage": [
       {

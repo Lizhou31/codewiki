@@ -44,7 +44,10 @@ instructions loaded by an LLM client; they do not run inside the renderer.
 `wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real
 source roots, run `codewiki init`, and replace starter claims with observed facts.
 The initializer copies these portable skills into the project instance; register
-them using the chosen client's own discovery mechanism.
+them using the chosen client's own discovery mechanism. Initialization also adds
+a marked reference to the instance guide in the project-root `AGENTS.md`, preserving
+existing instructions and avoiding duplicates on repeat runs. The skill verifies
+this integration instead of manually adding another root reference.
 
 ## Read progressively {#query}
 

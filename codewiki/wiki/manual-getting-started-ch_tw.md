@@ -62,7 +62,11 @@ codewiki serve --no-open
 | `integrations/` | 選用的 shell、pre-push 與 CI 範例 |
 | `skills/` 與 `AGENTS.md` | 操作此 Wiki 的代理指示 |
 
-建置會產生 `site/` 與 `index.json`。請編輯 Markdown 輸入，再重新建置以更新 HTML 與查詢索引。重複執行 `init` 會保留既有檔案，不覆寫已撰寫的頁面。
+初始化也會在專案根目錄建立 `AGENTS.md`，或在既有檔案末尾加入一小段帶標記的指示。這段指示要求代理在處理原始碼或文件前閱讀 `codewiki/AGENTS.md`，讓 Wiki 查詢與審查流程也適用於 Wiki 資料夾以外的工作。使用 `--dir docs/codewiki` 時，參照會改為 `docs/codewiki/AGENTS.md`。既有根目錄指示會保留；重複初始化不會重複加入或覆寫同一實例的區段。客製化區段時請保留標記。舊實例可重新執行 `init` 加入根目錄參照，且不會覆寫既有實例指南。
+
+可攜式技能仍需透過代理客戶端支援的探索位置註冊；複製到 Wiki 並不代表自動完成註冊。
+
+建置會產生 `site/` 與 `index.json`。請編輯 Markdown 輸入，再重新建置以更新 HTML 與查詢索引。重複執行 `init` 會保留既有實例檔案，不覆寫已撰寫的頁面。
 
 ## 進行第一次編輯 {#first-edit}
 

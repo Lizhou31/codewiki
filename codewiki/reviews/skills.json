@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "document": "skills",
-  "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:17:08+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "959863cace6fff4e60337c721393107adc6a63da568fa9845a7da3d22e5d8d4f",
+  "outcome": "updated",
+  "reason": "Inspected the revised wiki-init skill and initializer: init now installs the root reference itself, the skill verifies it, and client-specific skill registration remains separate. Updated both language explanations.",
+  "reviewed_at": "2026-09-14T03:58:40+00:00",
+  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+  "fingerprint": "903377999312a092a0efd78be17da47e52c663ebbcc0c611b595a98730501e12",
   "snapshot": {
     "document_path": "wiki/skills.md",
-    "document_sha256": "663eb20bd1b2a2dc37adb3948df41f8c402298b2ae352a44a4181e71cab9b10d",
+    "document_sha256": "0bcecc5ac3cb0b4ff8cf0e9e3e47daed9e49f112c632adf79f187cb8fc3aea8d",
     "sources": {
       "../src/codewiki/resources/skills/wiki-author/SKILL.md": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
       "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
-      "../src/codewiki/resources/skills/wiki-init/SKILL.md": "82106d2718c1473b878c4b399b34b1bf875704eb7349dafc0dbd4a78daad013d",
+      "../src/codewiki/resources/skills/wiki-init/SKILL.md": "b5cf30b39476f556a974f7c8a0df69db99b7b47dc1fbd6450330485cc9822a0e",
       "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
       "../src/codewiki/resources/skills/wiki-review/SKILL.md": "fbeaa2de9671b3ba0e2088868ce21a2da3966563c5e51fa14d3988d034ba3174"
     },

@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "authoring",
-  "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:15:49+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "b050e9ae3075c5d08971bdc2fd4073cfe337dfb18d2b0567534c17faba45953e",
+  "outcome": "updated",
+  "reason": "Compared initialization changes with the existing reviewed implementation: root guidance is appended without rewriting prior bytes, normalized instance markers prevent repeat additions, and existing instance files remain preserved. Updated scaffold and skills explanations in English and Traditional Chinese.",
+  "reviewed_at": "2026-09-14T03:58:39+00:00",
+  "commit": "3905c79c9d4bf8a77bd670e9e2f0c96f231bf6fc",
+  "fingerprint": "36a3e0cf2b0e2a64143e327ec529d461adbad4030554ebca594dcfc51830dd1f",
   "snapshot": {
     "document_path": "wiki/authoring.md",
-    "document_sha256": "e43dca29b4c6c167315e11f4c88ede20518032124b47000d0c47615f992d5e48",
+    "document_sha256": "0016c19d8983c3ee50481e6f59057935f263d2f4b3608e2ea6d9d0f97481d194",
     "sources": {
-      "../src/codewiki/init_project.py": "aba75208d999332430ba7f7178eb0a75c0ddafdfd332a4e6b97c0a3b906069bb",
+      "../src/codewiki/init_project.py": "e952df83f00c371e366b754ed3cb67e990bd6c1116e21610020cc946aea7fea3",
       "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"
     },
     "coverage": [

@@ -62,10 +62,14 @@ codewiki build --strict
 
 The project gets `codewiki/wiki.config.yaml`, Markdown, reusable page templates,
 portable skills, optional integration examples, and an `AGENTS.md` inside `codewiki/`. Its core and default
-theme stay in the installed package. Add a reference to `codewiki/AGENTS.md`
-in your root agent instructions when you want repository-wide wiki guidance.
+theme stay in the installed package. Initialization also creates or appends a small
+marked section in the project-root `AGENTS.md`, telling agents to read the instance
+guide before source or documentation work. Existing root instructions are preserved.
+Repeating init keeps that instance's section unchanged; retain its marker when
+customizing it. `--dir` selects the referenced instance path. Re-run init on an
+older instance to add the root reference without replacing its existing files.
 Load skills from `codewiki/skills/`, or copy the needed skill directories into
-your client's supported skill location. Initialization preserves existing files.
+your client's supported skill location. Initialization preserves existing instance files.
 
 Paths in configuration and frontmatter are relative to the configuration's
 directory. Use `--config path/to/wiki.config.yaml` on each command when needed;

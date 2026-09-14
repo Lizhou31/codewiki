@@ -18,6 +18,29 @@ def write_if_missing(path, text):
 
 
 # @wiki:impl authoring.scaffold
+def add_root_agent_guidance(root, instance):
+    """Append one instance reference, preserving existing instructions byte-for-byte."""
+    guide = (instance.relative_to(root) / "AGENTS.md").as_posix()
+    marker = f"<!-- codewiki:agent-guide {guide} -->"
+    path = root / "AGENTS.md"
+    existing = path.read_bytes() if path.exists() else b""
+    if marker.encode("utf8") in existing.splitlines():
+        return False
+    separator = b"" if not existing else (b"\n" if existing.endswith(b"\n") else b"\n\n")
+    section = (
+        f"{marker}\n"
+        f"## CodeWiki ({instance.relative_to(root).as_posix()})\n\n"
+        f"Before working on this project's source code or documentation, read `{guide}`\n"
+        "and follow its documentation lookup, maintenance, and review workflow.\n"
+        "Paths in that guide are relative to the project root unless stated otherwise.\n"
+        "<!-- /codewiki:agent-guide -->\n"
+    )
+    with path.open("ab") as stream:
+        stream.write(separator + section.encode("utf8"))
+    return True
+
+
+# @wiki:impl authoring.scaffold
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="codewiki init", description=__doc__)
     ap.add_argument("--root", required=True)
@@ -56,9 +79,12 @@ def main(argv=None):
     if not existing_pages:
         starter = (RESOURCES / "templates/architecture.md").read_text(encoding="utf8")
         write("wiki/architecture.md", starter)
+    root_guidance_added = add_root_agent_guidance(root, instance)
     print(f"Wiki instance: {instance}")
     for path in made:
         print(f"  + {path}")
+    if root_guidance_added:
+        print(f"Added CodeWiki guidance to: {root / 'AGENTS.md'}")
     print("Default theme and core come from the installed CodeWiki package.")
     print(f"Next: edit wiki/architecture.md; add child pages from wiki/_templates/; codewiki build --strict --config {instance / 'wiki.config.yaml'}")
     return 0
