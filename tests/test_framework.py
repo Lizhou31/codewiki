@@ -295,9 +295,11 @@ def test_init_client_claude_adds_guide_and_skills(tmp_path, existing):
     if existing is not None:
         claude.write_bytes(existing)
     # Claude Code integration is opt-in; the generic AGENTS.md reference is always written.
-    assert init(['--root', str(tmp_path), '--dir', 'docs/wiki']) == 0
+    assert init(['--root', str(tmp_path), '--dir', './docs/wiki/']) == 0
     assert not (tmp_path / '.claude').exists()
     assert (claude.read_bytes() if claude.exists() else None) == existing
+    guide = (tmp_path / 'docs/wiki/AGENTS.md').read_text()
+    assert '`docs/wiki/wiki.config.yaml`' in guide and './docs' not in guide
     assert init(['--root', str(tmp_path), '--dir', 'docs/wiki', '--client', 'claude', '--client', 'claude']) == 0
     generated = claude.read_bytes()
     assert generated.startswith(existing or b'')

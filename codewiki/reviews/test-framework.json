@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "test-framework",
-  "outcome": "updated",
-  "reason": "tests/test_framework.py gained test_init_client_claude_adds_guide_and_skills (opt-in flag, CLAUDE.md section on absent/existing files, exact skill copies in .claude/skills/, customization preserved, unknown client rejected); the initialization section now describes it.",
-  "reviewed_at": "2026-09-14T04:12:26+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "005e9a65ebf5b665c4c5f874757fc70dc8a038c24a402ce9a8644d64650cdcbf",
+  "outcome": "no-change",
+  "reason": "The Claude client test now initializes with a ./docs/wiki/ spelling and asserts the instance guide names the canonical docs/wiki path; the initialization section's description of path normalization still applies.",
+  "reviewed_at": "2026-09-14T04:14:05+00:00",
+  "commit": "02a021b4ff1d0504d3409f805071b9d5e0d167ef",
+  "fingerprint": "04ac67582319bcd5bd11eeac4aa444ed742e9cc95349d996dc09f2b60998500f",
   "snapshot": {
     "document_path": "wiki/test-framework.md",
     "document_sha256": "0f3abd56e9ae2707c5273a9abaf945ffc14855a6c63b41adf4537ed890dab79d",
     "sources": {
-      "../tests/test_framework.py": "a7e0d5d3d99ab858fa97f0e709cc9a0e4bf7af98d6424df7ce0bca65bc487520"
+      "../tests/test_framework.py": "6534094e747fab0b474b6e7b6eac7827be0e8d12cecb0ce8409fb3b146b581ed"
     },
     "coverage": [
       {
