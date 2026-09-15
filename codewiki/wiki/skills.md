@@ -80,6 +80,15 @@ choose stable IDs, define ownership, and bind important concepts with tags or re
 A high-level component diagram is an authored explanation. Keep its `depends_on`
 relationships and `diagram_links` in the same Markdown change as the explanation.
 
+After refactoring or other code changes, the skill separates current explanations
+from decision history. It updates inaccurate pages and records useful rationale as
+an appended decision entry or a linked decision page for a substantial choice.
+Accurate prose can stay unchanged; routine changes do not each require a decision.
+It preserves earlier records, uses supplied commit/PR references, and checks the
+rendered entries and `query history` output. Decision records remain separate from
+review acknowledgments. See [Maintaining documentation](manual-maintaining.html)
+for the user workflow and examples.
+
 ## Validate the result {#check}
 
 `wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the

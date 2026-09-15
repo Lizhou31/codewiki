@@ -17,7 +17,7 @@ decisions: []
 
 - 從「開始使用」安裝 CodeWiki 並建置第一個 Wiki。
 - 透過「閱讀與查詢」瀏覽 HTML 網站，或使用 CLI 取得聚焦的答案。
-- 維護 Wiki 時，請閱讀「撰寫頁面」與「設定與疑難排解」。
+- 程式碼變更與決策歷史請閱讀「文件維護規則」；撰寫細節請閱讀「撰寫頁面」。
 
 ## 選擇工作 {#choose-a-task}
 
@@ -27,6 +27,7 @@ decisions: []
 | 升級已初始化的專案，包括原始碼建置 | [更新既有 Wiki](manual-updating.html) |
 | 瀏覽頁面、檢視原始碼或從命令列搜尋 | [閱讀與查詢](manual-reading.html) |
 | 建立頁面、整理章節或附加原始碼證據 | [撰寫頁面](manual-writing.html) |
+| 程式碼變更後維護頁面，並記錄重構決策 | [文件維護規則](manual-maintaining.html) |
 | 審查過期頁面、確認文字無須修改，或在 CI 強制檢查 | [審查已過期的文件](manual-review.html) |
 | 選擇實例、調整設定或修正建置錯誤 | [設定與疑難排解](manual-configuration.html) |
 

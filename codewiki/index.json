@@ -1,564 +1,574 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-14T06:13:26+00:00",
+  "generated": "2026-09-15T05:54:06+00:00",
   "snapshot": {
     "framework_version": "0.5.0",
     "inputs": {
       "reviews/architecture.json": {
         "sha256": "89a98cd2d613bcb4a5c899baff4153a72b8b1b9e9ab334e59c2e126dd3e295c6",
         "size": 1690,
-        "mtime_ns": 1789366239424690394
+        "mtime_ns": 1789366219757506361
       },
       "reviews/authoring.json": {
         "sha256": "84db639208279e78a7974a56a346f2da075049d039a41672555ce50de96b0bd4",
         "size": 1420,
-        "mtime_ns": 1789366394782145745
+        "mtime_ns": 1789451638405981140
       },
       "reviews/build.json": {
         "sha256": "8e516089331bbf05f10ae8bd1f152290f4b5f601c709586a0a9e74c882c74d91",
         "size": 1266,
-        "mtime_ns": 1789358686461689870
+        "mtime_ns": 1789318740553240953
       },
       "reviews/documents.json": {
         "sha256": "169e7899934125167f7944e1be06e305e2d5fe222b79c0e46e0a27b86ae3eb85",
         "size": 1587,
-        "mtime_ns": 1789358686461827707
+        "mtime_ns": 1789318740752661784
       },
       "reviews/history.json": {
         "sha256": "1e9769d2d7b9887fb0d9aa972acea9ce96e348d51f8818d72cf4a0f156a75999",
         "size": 1010,
-        "mtime_ns": 1789358686461952045
+        "mtime_ns": 1789318740954044673
       },
       "reviews/languages.json": {
         "sha256": "f317adee005c6576f508b3f8e15f02fce650a5ce5ee73519df0bf5fd520db369",
         "size": 1238,
-        "mtime_ns": 1789358686462061381
+        "mtime_ns": 1789318741154053884
       },
       "reviews/manual-getting-started.json": {
         "sha256": "8ecc1597417d11d4e63942a1159cd5095f4777a35ba4e7d2593308e22d67b371",
         "size": 707,
-        "mtime_ns": 1789366399868164892
+        "mtime_ns": 1789451638406104099
       },
       "reviews/manual-reading.json": {
         "sha256": "7371fccc2da8d32b1a7d03f48602f7584fbce0375cc3108aa66fcbce5917a4e8",
         "size": 690,
-        "mtime_ns": 1789358686462328931
+        "mtime_ns": 1789318741352421165
       },
       "reviews/manual-updating.json": {
         "sha256": "579c3119423511bd5ce970ad10e26cca892ab3d322758086da8524956d810c38",
         "size": 884,
-        "mtime_ns": 1789366239425641934
+        "mtime_ns": 1789366219757966194
       },
       "reviews/manual-writing.json": {
         "sha256": "436a8edd6dd40228255eb89ed7606064f6b335691b3b0312b2ef631d677b5386",
         "size": 705,
-        "mtime_ns": 1789358686462468268
+        "mtime_ns": 1789318741552807879
       },
       "reviews/queries.json": {
         "sha256": "dd05f74bdbf6df2cb9db59a284bc303ddec6e381bff0e5b4ca672bce1c19ed08",
         "size": 1389,
-        "mtime_ns": 1789358686462583230
+        "mtime_ns": 1789318741751354494
       },
       "reviews/renderer.json": {
         "sha256": "ff09793cd9f4214e36d5f49a8e2eb2b33b649d13d6df50efef873dd7c093a576",
         "size": 3438,
-        "mtime_ns": 1789358686462691817
+        "mtime_ns": 1789318823603952595
       },
       "reviews/reviews.json": {
         "sha256": "fd43f47fddad3b165a58e944376c0031e22df9e63f4e1f8b1d381a771b1ce7f2",
         "size": 2012,
-        "mtime_ns": 1789358686462784445
+        "mtime_ns": 1789291033212334178
       },
       "reviews/skills.json": {
         "sha256": "ccfb66b3bfafa0973c561cedee4aec8e8e7c2fde3d3825f8ef4156bec979b92c",
         "size": 1973,
-        "mtime_ns": 1789366397319158495
+        "mtime_ns": 1789451638406228723
       },
       "reviews/templates.json": {
         "sha256": "e41c77960f5348540353d0c22521a0a6ef0d33de7fd1952e23b4734cbbd9f5a3",
         "size": 1424,
-        "mtime_ns": 1789358686462991368
+        "mtime_ns": 1789316282500953209
       },
       "reviews/test-framework.json": {
         "sha256": "ffd043b1d7d41eb1484c916d06f92f6d5492c8b6df8ca9080ff69aae8cfdbec9",
         "size": 1986,
-        "mtime_ns": 1789366322263730527
+        "mtime_ns": 1789451638406454431
       },
       "reviews/testing.json": {
         "sha256": "1b929e1ff20a4f2c3b6d60988281f427a52d568d0ffe76812c3654519e5e7e3a",
         "size": 713,
-        "mtime_ns": 1789366239426444349
+        "mtime_ns": 1789366219758259943
       },
       "reviews/updates.json": {
         "sha256": "b96ba3ea47cd18a250f02234612ea513da1b0e3a6ee9525ea37b62b551172140",
         "size": 2114,
-        "mtime_ns": 1789366239426557849
+        "mtime_ns": 1789366219758384777
       },
       "reviews/user-manual.json": {
         "sha256": "450bd1ed5acc1791a7122b65a007cbeaf74f2f8354afacaac0c0fed3cf78fccf",
         "size": 680,
-        "mtime_ns": 1789366239426691932
+        "mtime_ns": 1789366219758517151
       },
       "wiki/architecture-ch_tw.md": {
         "sha256": "82cb1d3c1ee28f136bd5d14c85d356f028ea8ad1857a296aa0808141a39d3ef7",
         "size": 5664,
-        "mtime_ns": 1789366239427036765
+        "mtime_ns": 1789366219758753526
       },
       "wiki/architecture.md": {
         "sha256": "4e526e92c9efa98c79e7a60e289bdcf43de780cae57a85e0547016c8770e4737",
         "size": 6118,
-        "mtime_ns": 1789366239427250390
+        "mtime_ns": 1789366219758973567
       },
       "wiki/authoring-ch_tw.md": {
         "sha256": "642ef4fcecf19519a47804b4e72a689d2035112d3da314dc530921590e7529bc",
         "size": 4326,
-        "mtime_ns": 1789366302585049930
+        "mtime_ns": 1789451638406662889
       },
       "wiki/authoring.md": {
         "sha256": "d78f706055d70879794776034b522d2cc1148d6e0f35e101bc465f8b5b7e3bad",
         "size": 4502,
-        "mtime_ns": 1789366302584592806
+        "mtime_ns": 1789451638406904971
       },
       "wiki/build-ch_tw.md": {
         "sha256": "5ade9f023a62cf03145e33857ca54472d9eed0814da62ae8f3831c9ec6c613fd",
         "size": 5227,
-        "mtime_ns": 1789358686464147152
+        "mtime_ns": 1789318464033101264
       },
       "wiki/build.md": {
         "sha256": "6e3ed4b78c76b703e3627f72c4fd8d1033fc30f1d02db03279783df1e24ab7e5",
         "size": 5786,
-        "mtime_ns": 1789358686464360617
+        "mtime_ns": 1789317561988454734
       },
       "wiki/documents-ch_tw.md": {
         "sha256": "af0f2e7e7a88bf6195defeb45a28b5b574fbb37c5ac8ee1c4b1bddeff70bd79b",
         "size": 4863,
-        "mtime_ns": 1789358686464570373
+        "mtime_ns": 1789318464032919431
       },
       "wiki/documents.md": {
         "sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
         "size": 5307,
-        "mtime_ns": 1789358686464749462
+        "mtime_ns": 1789217784937872898
       },
       "wiki/history-ch_tw.md": {
         "sha256": "6fcaf87f6ba0166a183eb4fad827b2d66603ca6a9571f3ca4c6064c5b53f4173",
         "size": 3425,
-        "mtime_ns": 1789358686464870299
+        "mtime_ns": 1789318464034809181
       },
       "wiki/history.md": {
         "sha256": "ea1f91adddce63b085ceb4afd5c1f63d55e868d150f3b58d5c414db4c0b7d4d0",
         "size": 3542,
-        "mtime_ns": 1789358686465002261
+        "mtime_ns": 1789219725236500540
       },
       "wiki/languages-ch_tw.md": {
         "sha256": "2b3db020398eeb23b5172357c77cb7522403a9181e47dddeafd30456a650824c",
         "size": 2857,
-        "mtime_ns": 1789358686465169891
+        "mtime_ns": 1789318464033257806
       },
       "wiki/languages.md": {
         "sha256": "4c088e87e6cdbc85e895048367229eb28d6a8a3539738aab641377094e302b14",
         "size": 2941,
-        "mtime_ns": 1789358686465320937
+        "mtime_ns": 1789213589715687414
       },
       "wiki/manual-configuration-ch_tw.md": {
         "sha256": "700ad0851a1813f1f39439ebb300cc7bfb786e2334c1b90c62900d8875dcc623",
         "size": 4577,
-        "mtime_ns": 1789358686465513068
+        "mtime_ns": 1789318464034943181
       },
       "wiki/manual-configuration.md": {
         "sha256": "c94b79858e93b7b6b73c92466fb4db45f163bf47f6a7e3885a73359fdad966e9",
         "size": 4903,
-        "mtime_ns": 1789358686465705449
+        "mtime_ns": 1789219725236842004
       },
       "wiki/manual-getting-started-ch_tw.md": {
         "sha256": "17f7575fad5e83d2082a58af5d2e3fc58c0fc96eff6a67d52787ecace4c1b9ef",
         "size": 4260,
-        "mtime_ns": 1789366239468133903
+        "mtime_ns": 1789451638407120513
       },
       "wiki/manual-getting-started.md": {
         "sha256": "73e9851b5cd4cc24b8b76717cb3d1c9074c9d61ae842570b01944b09c06c966e",
         "size": 4518,
-        "mtime_ns": 1789366239468288611
+        "mtime_ns": 1789451638407425304
+      },
+      "wiki/manual-maintaining-ch_tw.md": {
+        "sha256": "58d92339ac8791a4ee29c2c00f26f79346b15d60b92926a925f8d93d30ea24cd",
+        "size": 6612,
+        "mtime_ns": 1789451638417448947
+      },
+      "wiki/manual-maintaining.md": {
+        "sha256": "ec8fcdeed665a3cb7b68615c8cf31fe0eb2b17f287cb6f41626826884bb469a5",
+        "size": 7140,
+        "mtime_ns": 1789451638417635863
       },
       "wiki/manual-reading-ch_tw.md": {
         "sha256": "4ceed13bd624279a90dc69fa865bf6cb678b498dc5f444fd8a3ac3adb15b4330",
         "size": 4854,
-        "mtime_ns": 1789358686466212839
+        "mtime_ns": 1789318820531783788
       },
       "wiki/manual-reading.md": {
         "sha256": "305f8e0b7c338ca4ee31d43ff997f9bce38db558af152e341b171cd7f77baea6",
         "size": 5113,
-        "mtime_ns": 1789358686466434137
+        "mtime_ns": 1789317561959726180
       },
       "wiki/manual-review-ch_tw.md": {
         "sha256": "b5d9a66d37552d93ff0819e1a09af06220fb0d91e970897146f58bb172aa8362",
         "size": 4672,
-        "mtime_ns": 1789358686466634227
+        "mtime_ns": 1789318464033880848
       },
       "wiki/manual-review.md": {
         "sha256": "3e9766da75bbc116b16b93cd59cdd4faf23929c5857f07a072bdaab77d26021a",
         "size": 4913,
-        "mtime_ns": 1789358686466796065
+        "mtime_ns": 1789219579508605213
       },
       "wiki/manual-updating-ch_tw.md": {
         "sha256": "53bee2a398a198e84f2106c5e4e832e3662e1070540a5fb99d77a043d01b595c",
         "size": 5591,
-        "mtime_ns": 1789366239428255596
+        "mtime_ns": 1789366219759781024
       },
       "wiki/manual-updating.md": {
         "sha256": "49177f0e61f752dd5bbfeea46b7400973432dc15f5733ac0bd95a245331b880c",
         "size": 6438,
-        "mtime_ns": 1789366239428414179
+        "mtime_ns": 1789366219759914691
       },
       "wiki/manual-writing-ch_tw.md": {
         "sha256": "3285dc4c2421205d771779afd40cbd37c8a46fc517e473225c41a3a31c25c0a9",
         "size": 5772,
-        "mtime_ns": 1789358686466953361
+        "mtime_ns": 1789318464033556139
       },
       "wiki/manual-writing.md": {
         "sha256": "f111dc823c11c9dab71ce4a3b92f8c6b1c2440cb5ad5d866623b78f92b823240",
         "size": 6387,
-        "mtime_ns": 1789358686467155367
+        "mtime_ns": 1789317561957801388
       },
       "wiki/queries-ch_tw.md": {
         "sha256": "e6306d7053f2a3de006e2c4abf711dc40f342648fa1dfa6dc7c8da88bb6eeb13",
         "size": 3662,
-        "mtime_ns": 1789358686467272621
+        "mtime_ns": 1789318464033805014
       },
       "wiki/queries.md": {
         "sha256": "2d150a6dc5b7665615f377b1ab09ad798b538714565f8f1a8f503cc5cc46f8a5",
         "size": 3987,
-        "mtime_ns": 1789358686467396583
+        "mtime_ns": 1789219893372281715
       },
       "wiki/renderer-ch_tw.md": {
         "sha256": "f5007f3b1df76d2cb683796df7fdbb95bb40252f3f48d294101f69197ed409ef",
         "size": 7249,
-        "mtime_ns": 1789358686467594881
+        "mtime_ns": 1789318464034417473
       },
       "wiki/renderer.md": {
         "sha256": "656cb401b70a829040dc27975c48f3617f8d431dbc7018901d00688700ce6278",
         "size": 8584,
-        "mtime_ns": 1789358686467766677
+        "mtime_ns": 1789317561988275609
       },
       "wiki/reviews-ch_tw.md": {
         "sha256": "e85f6aa977e332af842d1308783ef7301a0dc9b1e7cb3d5ec6c87a4c9f756094",
         "size": 5772,
-        "mtime_ns": 1789358686467980725
+        "mtime_ns": 1789318464032598014
       },
       "wiki/reviews.md": {
         "sha256": "5ff4df3b82588879c52f46218d181bf46e793ee2be45ef08b7b83342201fabca",
         "size": 6265,
-        "mtime_ns": 1789358686468221524
+        "mtime_ns": 1789219893372429092
       },
       "wiki/skills-ch_tw.md": {
-        "sha256": "59b0c0da8a2cf2b703de1902e03a675895804a6822f2fb5ab316914fa3944c46",
-        "size": 3988,
-        "mtime_ns": 1789366302586061012
+        "sha256": "918c9d46d985ee8d4150e233fe1edd448377a9948de7cbc82d76d074a533f94d",
+        "size": 4519,
+        "mtime_ns": 1789451638417824988
       },
       "wiki/skills.md": {
-        "sha256": "f55296bb6a732ca78e6c96e95c980d81ada40e97adc9f2e80acba41101221133",
-        "size": 4359,
-        "mtime_ns": 1789366302585934304
+        "sha256": "e65b714d5125b62da22424c20db0b3b2991d5aab3568faa5e64777e6853b18b3",
+        "size": 4968,
+        "mtime_ns": 1789451638418030279
       },
       "wiki/templates-ch_tw.md": {
         "sha256": "49920d33b7908b1036ffbb714b809c280777cce32f79063e2f43e3c5b94239ee",
         "size": 2674,
-        "mtime_ns": 1789358686468604494
+        "mtime_ns": 1789318464033703348
       },
       "wiki/templates.md": {
         "sha256": "be420cd3ad25e360be578b9c721bc89dbe4c6519746fa9742598c7d1599d7a18",
         "size": 3000,
-        "mtime_ns": 1789358686468706081
+        "mtime_ns": 1789213589714045494
       },
       "wiki/test-framework-ch_tw.md": {
         "sha256": "385e3ce62b8c5b22e1717699e9c76166b4826591d9c1772cb23307cad4d0441e",
         "size": 6057,
-        "mtime_ns": 1789366239468930694
+        "mtime_ns": 1789451638408091010
       },
       "wiki/test-framework.md": {
         "sha256": "0f3abd56e9ae2707c5273a9abaf945ffc14855a6c63b41adf4537ed890dab79d",
         "size": 7048,
-        "mtime_ns": 1789366239469209901
+        "mtime_ns": 1789451638408260010
       },
       "wiki/test-languages-ch_tw.md": {
         "sha256": "56fa97f28d866b5c04625c8b5071e5eb488f46587ee5fe486f6225e617d00442",
         "size": 2703,
-        "mtime_ns": 1789358686469183762
+        "mtime_ns": 1789318464034175431
       },
       "wiki/test-languages.md": {
         "sha256": "bc6961e79c6e49c8e56c4f8c9b932b81a76ee1a4eb07ee7c2cd5a4fd2654b3e4",
         "size": 2901,
-        "mtime_ns": 1789358686469272722
+        "mtime_ns": 1789215158274750013
       },
       "wiki/testing-ch_tw.md": {
         "sha256": "c52b8699645b09627ee6815b5325eac0a34aefda1e1254d737738ba138c9cc2b",
         "size": 3967,
-        "mtime_ns": 1789366239429350094
+        "mtime_ns": 1789366219760490731
       },
       "wiki/testing.md": {
         "sha256": "a43a31ef316c36c8e7382ade39db17ac4fecb25256e5728f479de538d1bec178",
         "size": 4271,
-        "mtime_ns": 1789366239429599469
+        "mtime_ns": 1789366219760678231
       },
       "wiki/updates-ch_tw.md": {
         "sha256": "bf91f4e7555bf1ca6cfb042ba3ed9937f94aca227811712f8122352074a63f23",
         "size": 4032,
-        "mtime_ns": 1789366239429717635
+        "mtime_ns": 1789366219760807481
       },
       "wiki/updates.md": {
         "sha256": "8a864b6c460a6fd44f96161a65f605d8eeffee64edcf12ba17a3d65b49537a0f",
         "size": 4677,
-        "mtime_ns": 1789366239429848719
+        "mtime_ns": 1789366219760931147
       },
       "wiki/user-manual-ch_tw.md": {
-        "sha256": "f5fbd30056d7e71b5b5c36d6e3126335a43d894aec67105bba011a3a6e1e6981",
-        "size": 1953,
-        "mtime_ns": 1789366239430227051
+        "sha256": "edd7a93f53abad3776d8be679816bf82eb35de62249b06a0094ce41b850e7532",
+        "size": 2090,
+        "mtime_ns": 1789451638418156987
       },
       "wiki/user-manual.md": {
-        "sha256": "78c71df23028c45bd7cc8374e82fc48dbae5b6aeb6ae7676bea1d3dcd3de0f87",
-        "size": 2027,
-        "mtime_ns": 1789366239430417759
+        "sha256": "0800c129b89bd4b57f5450df59a1288e33be3f383eecede9a8e6a5ae947904d4",
+        "size": 2182,
+        "mtime_ns": 1789451638418267111
       },
       "wiki.config.yaml": {
         "sha256": "6f9e156aca8437772a6a3bfb9da7e984d205f2203e354762cbbb64211ee02f4e",
         "size": 306,
-        "mtime_ns": 1789358686463262792
+        "mtime_ns": 1789215073960897603
       },
       "../src/codewiki/__init__.py": {
         "sha256": "a147385ef7deb459e6f4b5c9a04be3be5f9baf5d714520fc02e4bd126d7af586",
         "size": 483,
-        "mtime_ns": 1789366239430767925
+        "mtime_ns": 1789366219761651479
       },
       "../src/codewiki/__main__.py": {
         "sha256": "22ba1a29f62ffa66459980703bad181db550fced53617c2ba057bb3ac8671fa9",
         "size": 1544,
-        "mtime_ns": 1789366239430928633
+        "mtime_ns": 1789366219761846854
       },
       "../src/codewiki/build.py": {
         "sha256": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
         "size": 30670,
-        "mtime_ns": 1789358686470300462
+        "mtime_ns": 1789318687707614308
       },
       "../src/codewiki/config.py": {
         "sha256": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825",
         "size": 3866,
-        "mtime_ns": 1789358686470461675
+        "mtime_ns": 1789210067035446972
       },
       "../src/codewiki/documents.py": {
         "sha256": "60d76e2590e80666b48706b1d40e57cd5d27b5aed0dbb739a82c8adc4e1729e0",
         "size": 5612,
-        "mtime_ns": 1789358686470633055
+        "mtime_ns": 1789213331487281000
       },
       "../src/codewiki/init_project.py": {
         "sha256": "d97925c717ce7b041bd5788e287c0e694a761947824a7dd7261d44d76361a296",
         "size": 6111,
-        "mtime_ns": 1789366340124231395
+        "mtime_ns": 1789451638408733384
       },
       "../src/codewiki/instance_files.py": {
         "sha256": "6920206a2f6800be0f7d62ea2fa25cd0d45de8c35a16d59154c72b8f55bff784",
         "size": 6554,
-        "mtime_ns": 1789366239431458507
+        "mtime_ns": 1789366219762168520
       },
       "../src/codewiki/languages.py": {
         "sha256": "cf4f134a1a80ac60d790cc1dd82f941d837f1a3b70cc92168906c4b30f88d197",
         "size": 25303,
-        "mtime_ns": 1789358686470935897
+        "mtime_ns": 1789209702827693187
       },
       "../src/codewiki/localization.py": {
         "sha256": "e9ab8dd226b078fdfd62ea218487a9c0c0c01786ab151923638a023a5323da3b",
         "size": 5954,
-        "mtime_ns": 1789358686471109444
+        "mtime_ns": 1789318820531594911
       },
       "../src/codewiki/query.py": {
         "sha256": "446ca12527dfb34b71f73388763e9546e7888bca8084d07d39c7b53ee4e4a5a3",
         "size": 11812,
-        "mtime_ns": 1789358686471266532
+        "mtime_ns": 1789219340316879794
       },
       "../src/codewiki/resources/integrations/check-docs.sh": {
         "sha256": "5681dfe9774a73ec8305cb433d0b5c7f8651858f9cd2c19bd97096bc8b4943c1",
         "size": 345,
-        "mtime_ns": 1789358686471715004
+        "mtime_ns": 1789219401548400097
       },
       "../src/codewiki/resources/integrations/github-actions.yml": {
         "sha256": "9f504a72277c6c92db7034ccaad90fecdce682ca868e4b074aa920bb9c95ab13",
         "size": 698,
-        "mtime_ns": 1789358686471801632
+        "mtime_ns": 1789219401551555115
       },
       "../src/codewiki/resources/integrations/pre-push": {
         "sha256": "31800bc7fa7ed00d575494cf802bab418ca9a4659d73595d026f87d7ecc7983c",
         "size": 210,
-        "mtime_ns": 1789358686471883634
+        "mtime_ns": 1789219401550032253
       },
       "../src/codewiki/resources/skills/wiki-author/SKILL.md": {
-        "sha256": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
-        "size": 2133,
-        "mtime_ns": 1789358686472069473
+        "sha256": "b5657efbd1a14eeaee152f19a5bb29ea3ff468c35a40c05117bace2bac3c506b",
+        "size": 4174,
+        "mtime_ns": 1789451638418466819
       },
       "../src/codewiki/resources/skills/wiki-build/SKILL.md": {
         "sha256": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
         "size": 1168,
-        "mtime_ns": 1789358686472231270
+        "mtime_ns": 1789219725237752105
       },
       "../src/codewiki/resources/skills/wiki-init/SKILL.md": {
         "sha256": "c62e1cc5d8710c4273403a2af42b281f620e3f683d3bed49a8184ed66250fd1e",
         "size": 2118,
-        "mtime_ns": 1789366239469741192
+        "mtime_ns": 1789451638409181300
       },
       "../src/codewiki/resources/skills/wiki-query/SKILL.md": {
         "sha256": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
         "size": 1632,
-        "mtime_ns": 1789358686472558279
+        "mtime_ns": 1789210067037335237
       },
       "../src/codewiki/resources/skills/wiki-review/SKILL.md": {
         "sha256": "fbeaa2de9671b3ba0e2088868ce21a2da3966563c5e51fa14d3988d034ba3174",
         "size": 2709,
-        "mtime_ns": 1789358686472700034
+        "mtime_ns": 1789219401546771234
       },
       "../src/codewiki/resources/templates/architecture.md": {
         "sha256": "3823d653d3ce25da27407fbf02e698123141c0d61f192c62bea2ccab54ed571e",
         "size": 1134,
-        "mtime_ns": 1789358686472821246
+        "mtime_ns": 1789213634257014537
       },
       "../src/codewiki/resources/templates/component.md": {
         "sha256": "da5a73a738f803d300cca21ea3095f1bf0908be4e20bd46a9f2a4290ec15b83e",
         "size": 1043,
-        "mtime_ns": 1789358686472910248
+        "mtime_ns": 1789213634257135498
       },
       "../src/codewiki/resources/templates/decision.md": {
         "sha256": "0e0113b3aa7374873dfdd8086e7fafcc6f63af3ab1c5b1c2ed7567f463d06dae",
         "size": 897,
-        "mtime_ns": 1789358686472997543
+        "mtime_ns": 1789210067036875474
       },
       "../src/codewiki/resources/templates/subsystem.md": {
         "sha256": "c8c657b134994febd0c68591967163b50c518617f4673d1fcd5ce6093a31d7f8",
         "size": 788,
-        "mtime_ns": 1789358686473095087
+        "mtime_ns": 1789213634257219584
       },
       "../src/codewiki/resources/theme/_base.html.j2": {
         "sha256": "bbce13bfafb26a6620094457eba4a81b1b5edae137b311867907af9669a67e18",
         "size": 4080,
-        "mtime_ns": 1789358686473276259
+        "mtime_ns": 1789318379043554362
       },
       "../src/codewiki/resources/theme/diagrams.js": {
         "sha256": "ffd0c8bd5127de2ffe16fd05a4fb755828cca173a573615955fae8fe04fd08ca",
         "size": 4652,
-        "mtime_ns": 1789358686473468807
+        "mtime_ns": 1789318379043944404
       },
       "../src/codewiki/resources/theme/files.html.j2": {
         "sha256": "ed84ce5ed431cdc40eedb8f98eff5dc640caae394ce72140f7b928612276d0a4",
         "size": 1551,
-        "mtime_ns": 1789358686473578393
+        "mtime_ns": 1789318379044055904
       },
       "../src/codewiki/resources/theme/index.html.j2": {
         "sha256": "c9c2d6c0f63418eea4fd215dec3e3b0a3e536ccc7abc04c905849dd4d9ff9677",
         "size": 2464,
-        "mtime_ns": 1789358686473713731
+        "mtime_ns": 1789318379043434279
       },
       "../src/codewiki/resources/theme/page.html.j2": {
         "sha256": "b8e5dae3ef7601fae3879385fe202b4f55aa3b4d2eb9f63469a0db6104aff047",
         "size": 9604,
-        "mtime_ns": 1789358686473879194
+        "mtime_ns": 1789318564050228222
       },
       "../src/codewiki/resources/theme/reading.js": {
         "sha256": "9a0068e24790bd744ad6b57060bd21aaba24bebcab62cd23fd69850f24090685",
         "size": 4205,
-        "mtime_ns": 1789358686474026157
+        "mtime_ns": 1789216185198031090
       },
       "../src/codewiki/resources/theme/style.css": {
         "sha256": "27324bbfff318c1721906a4c37edf28b8a5598bf7c3ca348f2ac6a43126e9361",
         "size": 19980,
-        "mtime_ns": 1789358686474140452
+        "mtime_ns": 1789317463116360458
       },
       "../src/codewiki/resources/theme/vendor/LICENSE.highlightjs": {
         "sha256": "6c081431591d9df696c82dc598fe1423765b8a299b200ed00b281afd0f64c490",
         "size": 1514,
-        "mtime_ns": 1789358686474287206
+        "mtime_ns": 1789207317651909954
       },
       "../src/codewiki/resources/theme/vendor/LICENSE.mermaid": {
         "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
         "size": 1089,
-        "mtime_ns": 1789358686474393835
+        "mtime_ns": 1789207317651974789
       },
       "../src/codewiki/resources/theme/vendor/README.md": {
         "sha256": "382cd9b05470de6babdfd4d3c27cfd27d991bcbd0e4b5fdb9917e10a878b2301",
         "size": 681,
-        "mtime_ns": 1789358686474488796
+        "mtime_ns": 1789207317652037208
       },
       "../src/codewiki/resources/theme/vendor/highlight.min.js": {
         "sha256": "8ab71eb09c51f501e5e25157d9cff100e46cc29bcbfc744d0b746d451fca7f53",
         "size": 129254,
-        "mtime_ns": 1789358686474833764
+        "mtime_ns": 1789207317652289423
       },
       "../src/codewiki/resources/theme/vendor/hljs-dark.css": {
         "sha256": "9f208d022102b1d0c7aebfecd8e42ca7997d5de636649d2b31ea63093d809019",
         "size": 1315,
-        "mtime_ns": 1789358686474944809
+        "mtime_ns": 1789207317652396343
       },
       "../src/codewiki/resources/theme/vendor/hljs-extra.js": {
         "sha256": "8fdfe2ff6af9090b768da829f302aeb983b224ce665fa98752b86497e58ac93c",
         "size": 2191,
-        "mtime_ns": 1789358686475032354
+        "mtime_ns": 1789207317652463637
       },
       "../src/codewiki/resources/theme/vendor/hljs-light.css": {
         "sha256": "3a9a5def8b9c311e5ae43abde85c63133185eed4f0d9f67fea4b00a8308cf066",
         "size": 1309,
-        "mtime_ns": 1789358686475124232
+        "mtime_ns": 1789207317652543139
       },
       "../src/codewiki/resources/theme/vendor/mermaid.min.js": {
         "sha256": "581ed7d74bd9048d0e3a91363927d72ef22942d7722546b27f7cc29e35390eb8",
         "size": 3572661,
-        "mtime_ns": 1789358686480557936
+        "mtime_ns": 1789207317657483532
       },
       "../src/codewiki/review.py": {
         "sha256": "b153c18140305bbc210f79872a2a9a9b552f640cc48857e4cf240eefad2be1e5",
         "size": 12591,
-        "mtime_ns": 1789358686480784776
+        "mtime_ns": 1789219725235632690
       },
       "../src/codewiki/serve.py": {
         "sha256": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514",
         "size": 6107,
-        "mtime_ns": 1789358686480948864
+        "mtime_ns": 1789219893371884124
       },
       "../src/codewiki/snapshot.py": {
         "sha256": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67",
         "size": 3376,
-        "mtime_ns": 1789358686481058243
+        "mtime_ns": 1789317561948635717
       },
       "../src/codewiki/ui_text.py": {
         "sha256": "226691851895366cfd6dc2898fc3f4fbbb4275c71b0fa8f0e98b5afb24c3bd71",
         "size": 4387,
-        "mtime_ns": 1789358686481286833
+        "mtime_ns": 1789318564050043097
       },
       "../src/codewiki/update.py": {
         "sha256": "f2565ed58032967052c9501698c770fe88678ea4747f1841d6f55588f63a9b44",
         "size": 6366,
-        "mtime_ns": 1789366239431931632
+        "mtime_ns": 1789366219762661061
       },
       "../tests/test_framework.py": {
         "sha256": "6534094e747fab0b474b6e7b6eac7827be0e8d12cecb0ce8409fb3b146b581ed",
         "size": 27430,
-        "mtime_ns": 1789366322264099484
+        "mtime_ns": 1789451638409448924
       },
       "../tests/test_languages.py": {
         "sha256": "d2764ae172f088b6fe6112f9a87242e0347fa672a3e9d4a6862fe24070543526",
         "size": 6693,
-        "mtime_ns": 1789358686481699554
+        "mtime_ns": 1789215158275449742
       },
       "../tests/test_review.py": {
         "sha256": "96662c406ab1e0bb8e290278f6dc39c8258b966ed92f8419e8dc4e3f9c3b503a",
         "size": 12358,
-        "mtime_ns": 1789358686481817224
+        "mtime_ns": 1789219893372053502
       },
       "../tests/test_update.py": {
         "sha256": "5905d2d7732928260f9c17e9ef4c736e892e6f243cdb3ecbeb3bb24247118374",
         "size": 9143,
-        "mtime_ns": 1789366239432382173
+        "mtime_ns": 1789366219762844769
       }
     },
     "repositories": [
       {
         "root": "..",
-        "commit": "8756fb89cdd085c7de078e20243883cae10e8fa5",
+        "commit": "25c06a2e488e70982e276c5b655f7b7a89e82c50",
         "dirty": true
       }
     ]
@@ -15750,7 +15760,7 @@
       }
     }
   },
-  "wiki_root": "/Users/lizhou/Code/Code_Wiki/codewiki/.claude/worktrees/claude-support/codewiki",
+  "wiki_root": "/Users/lizhou/Code/Code_Wiki/codewiki/codewiki",
   "project": {
     "name": "CodeWiki",
     "subtitle": "Architecture you can read, then inspect"
@@ -17215,6 +17225,184 @@
       "review": {
         "state": "current",
         "reason": "Reviewed content matches"
+      }
+    },
+    {
+      "id": "manual-maintaining",
+      "title": "Maintaining documentation",
+      "type": "manual",
+      "status": "stable",
+      "source": "wiki/manual-maintaining.md",
+      "html": "manual-maintaining.html",
+      "tldr": [
+        "After a refactoring or modification, review the affected wiki pages and update explanations that no longer match the code.",
+        "When the design choice is worth remembering, also record why it changed and attach the relevant commit or PR.",
+        "Use a decision entry for a short rationale or a separate decision page for a substantial change.",
+        "Build and inspect the result. A decision record and a successful build do not acknowledge a documentation review."
+      ],
+      "owns": [],
+      "related": [
+        "manual-writing",
+        "manual-review",
+        "history"
+      ],
+      "updated": "",
+      "depends_on": [],
+      "diagram_links": {},
+      "used_by": [],
+      "summary": "Keep explanations current after code changes and preserve important design reasons with commit-linked decision records.",
+      "parent": "user-manual",
+      "children": [],
+      "markdown": "---\nid: manual-maintaining\ntype: manual\nstatus: stable\nparent: user-manual\ntitle: Maintaining documentation\nsummary: Keep explanations current after code changes and preserve important design reasons with commit-linked decision records.\nrelated: [manual-writing, manual-review, history]\n---\n\n## TL;DR {#tl-dr}\n\n- After a refactoring or modification, review the affected wiki pages and update explanations that no longer match the code.\n- When the design choice is worth remembering, also record why it changed and attach the relevant commit or PR.\n- Use a decision entry for a short rationale or a separate decision page for a substantial change.\n- Build and inspect the result. A decision record and a successful build do not acknowledge a documentation review.\n\n## Decide what to maintain {#rules}\n\nThe page body explains **how the code works now**. Decision records explain **why\nthe design changed**. Review acknowledgments record **which version of the\nexplanation and linked source was inspected**.\n\n| Situation | What to do |\n| --- | --- |\n| A change makes an explanation, diagram, example, or source reference inaccurate | Update the affected page to match the current implementation. |\n| The choice has useful rationale, tradeoffs, rejected alternatives, or compatibility consequences | Also add a decision entry or a dedicated decision page. |\n| An internal refactoring leaves the explanation accurate | Review it without rewriting accurate prose; record the decision if its rationale is useful. |\n| A routine change has no lasting design rationale | Update documentation where needed; a decision record is optional. |\n\nRecord choices that will help a future reader understand or reconsider the design.\nA file diff shows what changed, but does not establish why. Use supplied reasons\nand verified evidence; leave unknown rationale as an open question.\n\n## Find and update affected pages {#affected-pages}\n\nInspect the commit or diff, then find the existing explanations:\n\n```sh\ncodewiki review status --outdated\ncodewiki query tree\ncodewiki query file src/example.py\ncodewiki query doc example-component\n```\n\nReplace the example file and document ID with your project's values. Rebuild with\n`codewiki build --strict` if queries report a stale index, before trusting source\nranges. Review current code as well as the diff. Update affected architecture,\nbehavior, diagrams, examples, and user procedures. Preserve stable page IDs,\nexplicit heading anchors, and source tags when moving or renaming declarations.\n\nKeep the main explanation focused on the current implementation. Put historical\nbefore-and-after details in the decision record or decision page. Unlinked source\nchanges do not automatically require a new wiki page.\n\n## Append a short decision {#decision-entry}\n\nAppend an entry to the affected page's existing YAML frontmatter `decisions` list;\npreserve its earlier entries. For example:\n\n```yaml\ndecisions:\n  - id: extract-validation\n    reason: >\n      Centralized validation so the CLI and build pipeline apply\n      the same rules.\n    anchors: [example-component.validation]\n    commits: [\"<full-commit-sha>\"]\n```\n\nReplace the example rationale, anchor, and commit with actual values. `id` is a\nstable identifier local to this page, and `reason` is required. Optional `anchors`\nmust name existing explicit section anchors; omit them if unnecessary. Quote\ncommit IDs. An optional `prs` list accepts HTTP(S) PR URLs. Do not add a second\n`decisions` YAML key to a page that already has one.\n\n## Create a substantial decision page {#decision-page}\n\nFor changes spanning components or needing detailed alternatives and consequences,\nstart from the instance's `wiki/_templates/decision.md` when available. Save the\nnew page under the configured `wiki_dir`, outside `_templates/`. For example:\n\n```markdown\n---\nid: refactor-validation\ntype: decision\nstatus: draft\nparent: architecture\ntitle: Centralize validation\nsummary: Explain the shared validation design and its tradeoffs.\nrelated: [example-component]\ndecisions:\n  - id: centralize-validation\n    reason: Share validation rules across CLI and build entry points.\n    commits: [\"<full-commit-sha>\"]\n---\n\n## TL;DR {#tl-dr}\n\nSummarize the change and its purpose.\n\n## Context {#context}\n\nDescribe the original problem and constraints.\n\n## Changes {#changes}\n\nExplain the before-and-after structure and any compatibility impact.\n\n## Alternatives {#alternatives}\n\nRecord known alternatives and the reasons for the chosen approach.\n\n## Consequences {#consequences}\n\nDescribe benefits, tradeoffs, and conditions for revisiting the choice.\n\n## Verification {#verification}\n\nRecord the checks performed and their results.\n```\n\nUse real existing page IDs for `parent` and `related`. The parent places the page\nin the sidebar hierarchy; related pages appear as links near its title. Add a link\nfrom affected component pages to the decision page so readers can find the reason\nfrom the current explanation. Those component pages still need any corrections\nrequired by the new implementation.\n\n## Read the recorded history {#presentation}\n\nAfter building, entries appear below a page's main content under **Decisions and\nchange references**. Each entry is collapsed by default and expands to show its\nreason, anchors, commits, and PR references. Entries follow the authored list order.\nCommit hashes and anchor IDs display as code text; PR URLs are clickable.\n\nA separate decision page uses the normal page layout and its own outline. The CLI\nreturns the decision records attached to the requested page:\n\n```sh\ncodewiki query history example-component\ncodewiki query history refactor-validation\n```\n\nQuery the page where you stored the record; `related` does not aggregate histories.\nCodeWiki does not automatically discover Git/PR rationale, verify referenced\ncommits or PR contents, or reconstruct old versions of a page. See\n[Provenance & decisions](history.html) for the distinction from build snapshots.\n\n## Verify and save the change {#verification}\n\n1. Run `codewiki build --strict`.\n2. Inspect the affected HTML pages, decision entries, and navigation links.\n3. Use `codewiki query section <page-id.section>` and `codewiki query history <page-id>` to check the CLI view.\n4. Inspect the final explanation and linked source, then follow [Reviewing outdated documents](manual-review.html) to record `updated` or `pass` with a specific reason and the inspected fingerprint. Leave pages pending when review is reserved for another reviewer.\n5. Rebuild after review acknowledgments and run `codewiki review check`. Pending reviews remain separate from build validation.\n6. Commit the authored Markdown and any completed review records with the project's changes.\n\nIf the refactoring already has a commit, reference its SHA in a follow-up\ndocumentation commit. When code and documentation are still being prepared\ntogether, record the rationale now and use an available PR URL or add the code\ncommit reference afterward; a commit cannot contain its own final SHA. Preserve\nearlier decisions when a later choice replaces them, and explain the replacement\nin a new entry or page.\n",
+      "decisions": [],
+      "sections": [
+        {
+          "id": "manual-maintaining.tl-dr",
+          "slug": "tl-dr",
+          "explicit": true,
+          "title": "TL;DR",
+          "level": 2,
+          "kind": "other",
+          "line_start": 11,
+          "line_end": 17,
+          "markdown": "## TL;DR {#tl-dr}\n\n- After a refactoring or modification, review the affected wiki pages and update explanations that no longer match the code.\n- When the design choice is worth remembering, also record why it changed and attach the relevant commit or PR.\n- Use a decision entry for a short rationale or a separate decision page for a substantial change.\n- Build and inspect the result. A decision record and a successful build do not acknowledge a documentation review.\n\n",
+          "body": "\n- After a refactoring or modification, review the affected wiki pages and update explanations that no longer match the code.\n- When the design choice is worth remembering, also record why it changed and attach the relevant commit or PR.\n- Use a decision entry for a short rationale or a separate decision page for a substantial change.\n- Build and inspect the result. A decision record and a successful build do not acknowledge a documentation review.\n\n"
+        },
+        {
+          "id": "manual-maintaining.rules",
+          "slug": "rules",
+          "explicit": true,
+          "title": "Decide what to maintain",
+          "level": 2,
+          "kind": "other",
+          "line_start": 18,
+          "line_end": 34,
+          "markdown": "## Decide what to maintain {#rules}\n\nThe page body explains **how the code works now**. Decision records explain **why\nthe design changed**. Review acknowledgments record **which version of the\nexplanation and linked source was inspected**.\n\n| Situation | What to do |\n| --- | --- |\n| A change makes an explanation, diagram, example, or source reference inaccurate | Update the affected page to match the current implementation. |\n| The choice has useful rationale, tradeoffs, rejected alternatives, or compatibility consequences | Also add a decision entry or a dedicated decision page. |\n| An internal refactoring leaves the explanation accurate | Review it without rewriting accurate prose; record the decision if its rationale is useful. |\n| A routine change has no lasting design rationale | Update documentation where needed; a decision record is optional. |\n\nRecord choices that will help a future reader understand or reconsider the design.\nA file diff shows what changed, but does not establish why. Use supplied reasons\nand verified evidence; leave unknown rationale as an open question.\n\n",
+          "body": "\nThe page body explains **how the code works now**. Decision records explain **why\nthe design changed**. Review acknowledgments record **which version of the\nexplanation and linked source was inspected**.\n\n| Situation | What to do |\n| --- | --- |\n| A change makes an explanation, diagram, example, or source reference inaccurate | Update the affected page to match the current implementation. |\n| The choice has useful rationale, tradeoffs, rejected alternatives, or compatibility consequences | Also add a decision entry or a dedicated decision page. |\n| An internal refactoring leaves the explanation accurate | Review it without rewriting accurate prose; record the decision if its rationale is useful. |\n| A routine change has no lasting design rationale | Update documentation where needed; a decision record is optional. |\n\nRecord choices that will help a future reader understand or reconsider the design.\nA file diff shows what changed, but does not establish why. Use supplied reasons\nand verified evidence; leave unknown rationale as an open question.\n\n"
+        },
+        {
+          "id": "manual-maintaining.affected-pages",
+          "slug": "affected-pages",
+          "explicit": true,
+          "title": "Find and update affected pages",
+          "level": 2,
+          "kind": "other",
+          "line_start": 35,
+          "line_end": 55,
+          "markdown": "## Find and update affected pages {#affected-pages}\n\nInspect the commit or diff, then find the existing explanations:\n\n```sh\ncodewiki review status --outdated\ncodewiki query tree\ncodewiki query file src/example.py\ncodewiki query doc example-component\n```\n\nReplace the example file and document ID with your project's values. Rebuild with\n`codewiki build --strict` if queries report a stale index, before trusting source\nranges. Review current code as well as the diff. Update affected architecture,\nbehavior, diagrams, examples, and user procedures. Preserve stable page IDs,\nexplicit heading anchors, and source tags when moving or renaming declarations.\n\nKeep the main explanation focused on the current implementation. Put historical\nbefore-and-after details in the decision record or decision page. Unlinked source\nchanges do not automatically require a new wiki page.\n\n",
+          "body": "\nInspect the commit or diff, then find the existing explanations:\n\n```sh\ncodewiki review status --outdated\ncodewiki query tree\ncodewiki query file src/example.py\ncodewiki query doc example-component\n```\n\nReplace the example file and document ID with your project's values. Rebuild with\n`codewiki build --strict` if queries report a stale index, before trusting source\nranges. Review current code as well as the diff. Update affected architecture,\nbehavior, diagrams, examples, and user procedures. Preserve stable page IDs,\nexplicit heading anchors, and source tags when moving or renaming declarations.\n\nKeep the main explanation focused on the current implementation. Put historical\nbefore-and-after details in the decision record or decision page. Unlinked source\nchanges do not automatically require a new wiki page.\n\n"
+        },
+        {
+          "id": "manual-maintaining.decision-entry",
+          "slug": "decision-entry",
+          "explicit": true,
+          "title": "Append a short decision",
+          "level": 2,
+          "kind": "other",
+          "line_start": 56,
+          "line_end": 76,
+          "markdown": "## Append a short decision {#decision-entry}\n\nAppend an entry to the affected page's existing YAML frontmatter `decisions` list;\npreserve its earlier entries. For example:\n\n```yaml\ndecisions:\n  - id: extract-validation\n    reason: >\n      Centralized validation so the CLI and build pipeline apply\n      the same rules.\n    anchors: [example-component.validation]\n    commits: [\"<full-commit-sha>\"]\n```\n\nReplace the example rationale, anchor, and commit with actual values. `id` is a\nstable identifier local to this page, and `reason` is required. Optional `anchors`\nmust name existing explicit section anchors; omit them if unnecessary. Quote\ncommit IDs. An optional `prs` list accepts HTTP(S) PR URLs. Do not add a second\n`decisions` YAML key to a page that already has one.\n\n",
+          "body": "\nAppend an entry to the affected page's existing YAML frontmatter `decisions` list;\npreserve its earlier entries. For example:\n\n```yaml\ndecisions:\n  - id: extract-validation\n    reason: >\n      Centralized validation so the CLI and build pipeline apply\n      the same rules.\n    anchors: [example-component.validation]\n    commits: [\"<full-commit-sha>\"]\n```\n\nReplace the example rationale, anchor, and commit with actual values. `id` is a\nstable identifier local to this page, and `reason` is required. Optional `anchors`\nmust name existing explicit section anchors; omit them if unnecessary. Quote\ncommit IDs. An optional `prs` list accepts HTTP(S) PR URLs. Do not add a second\n`decisions` YAML key to a page that already has one.\n\n"
+        },
+        {
+          "id": "manual-maintaining.decision-page",
+          "slug": "decision-page",
+          "explicit": true,
+          "title": "Create a substantial decision page",
+          "level": 2,
+          "kind": "other",
+          "line_start": 77,
+          "line_end": 128,
+          "markdown": "## Create a substantial decision page {#decision-page}\n\nFor changes spanning components or needing detailed alternatives and consequences,\nstart from the instance's `wiki/_templates/decision.md` when available. Save the\nnew page under the configured `wiki_dir`, outside `_templates/`. For example:\n\n```markdown\n---\nid: refactor-validation\ntype: decision\nstatus: draft\nparent: architecture\ntitle: Centralize validation\nsummary: Explain the shared validation design and its tradeoffs.\nrelated: [example-component]\ndecisions:\n  - id: centralize-validation\n    reason: Share validation rules across CLI and build entry points.\n    commits: [\"<full-commit-sha>\"]\n---\n\n## TL;DR {#tl-dr}\n\nSummarize the change and its purpose.\n\n## Context {#context}\n\nDescribe the original problem and constraints.\n\n## Changes {#changes}\n\nExplain the before-and-after structure and any compatibility impact.\n\n## Alternatives {#alternatives}\n\nRecord known alternatives and the reasons for the chosen approach.\n\n## Consequences {#consequences}\n\nDescribe benefits, tradeoffs, and conditions for revisiting the choice.\n\n## Verification {#verification}\n\nRecord the checks performed and their results.\n```\n\nUse real existing page IDs for `parent` and `related`. The parent places the page\nin the sidebar hierarchy; related pages appear as links near its title. Add a link\nfrom affected component pages to the decision page so readers can find the reason\nfrom the current explanation. Those component pages still need any corrections\nrequired by the new implementation.\n\n",
+          "body": "\nFor changes spanning components or needing detailed alternatives and consequences,\nstart from the instance's `wiki/_templates/decision.md` when available. Save the\nnew page under the configured `wiki_dir`, outside `_templates/`. For example:\n\n```markdown\n---\nid: refactor-validation\ntype: decision\nstatus: draft\nparent: architecture\ntitle: Centralize validation\nsummary: Explain the shared validation design and its tradeoffs.\nrelated: [example-component]\ndecisions:\n  - id: centralize-validation\n    reason: Share validation rules across CLI and build entry points.\n    commits: [\"<full-commit-sha>\"]\n---\n\n## TL;DR {#tl-dr}\n\nSummarize the change and its purpose.\n\n## Context {#context}\n\nDescribe the original problem and constraints.\n\n## Changes {#changes}\n\nExplain the before-and-after structure and any compatibility impact.\n\n## Alternatives {#alternatives}\n\nRecord known alternatives and the reasons for the chosen approach.\n\n## Consequences {#consequences}\n\nDescribe benefits, tradeoffs, and conditions for revisiting the choice.\n\n## Verification {#verification}\n\nRecord the checks performed and their results.\n```\n\nUse real existing page IDs for `parent` and `related`. The parent places the page\nin the sidebar hierarchy; related pages appear as links near its title. Add a link\nfrom affected component pages to the decision page so readers can find the reason\nfrom the current explanation. Those component pages still need any corrections\nrequired by the new implementation.\n\n"
+        },
+        {
+          "id": "manual-maintaining.presentation",
+          "slug": "presentation",
+          "explicit": true,
+          "title": "Read the recorded history",
+          "level": 2,
+          "kind": "other",
+          "line_start": 129,
+          "line_end": 148,
+          "markdown": "## Read the recorded history {#presentation}\n\nAfter building, entries appear below a page's main content under **Decisions and\nchange references**. Each entry is collapsed by default and expands to show its\nreason, anchors, commits, and PR references. Entries follow the authored list order.\nCommit hashes and anchor IDs display as code text; PR URLs are clickable.\n\nA separate decision page uses the normal page layout and its own outline. The CLI\nreturns the decision records attached to the requested page:\n\n```sh\ncodewiki query history example-component\ncodewiki query history refactor-validation\n```\n\nQuery the page where you stored the record; `related` does not aggregate histories.\nCodeWiki does not automatically discover Git/PR rationale, verify referenced\ncommits or PR contents, or reconstruct old versions of a page. See\n[Provenance & decisions](history.html) for the distinction from build snapshots.\n\n",
+          "body": "\nAfter building, entries appear below a page's main content under **Decisions and\nchange references**. Each entry is collapsed by default and expands to show its\nreason, anchors, commits, and PR references. Entries follow the authored list order.\nCommit hashes and anchor IDs display as code text; PR URLs are clickable.\n\nA separate decision page uses the normal page layout and its own outline. The CLI\nreturns the decision records attached to the requested page:\n\n```sh\ncodewiki query history example-component\ncodewiki query history refactor-validation\n```\n\nQuery the page where you stored the record; `related` does not aggregate histories.\nCodeWiki does not automatically discover Git/PR rationale, verify referenced\ncommits or PR contents, or reconstruct old versions of a page. See\n[Provenance & decisions](history.html) for the distinction from build snapshots.\n\n"
+        },
+        {
+          "id": "manual-maintaining.verification",
+          "slug": "verification",
+          "explicit": true,
+          "title": "Verify and save the change",
+          "level": 2,
+          "kind": "other",
+          "line_start": 149,
+          "line_end": 163,
+          "markdown": "## Verify and save the change {#verification}\n\n1. Run `codewiki build --strict`.\n2. Inspect the affected HTML pages, decision entries, and navigation links.\n3. Use `codewiki query section <page-id.section>` and `codewiki query history <page-id>` to check the CLI view.\n4. Inspect the final explanation and linked source, then follow [Reviewing outdated documents](manual-review.html) to record `updated` or `pass` with a specific reason and the inspected fingerprint. Leave pages pending when review is reserved for another reviewer.\n5. Rebuild after review acknowledgments and run `codewiki review check`. Pending reviews remain separate from build validation.\n6. Commit the authored Markdown and any completed review records with the project's changes.\n\nIf the refactoring already has a commit, reference its SHA in a follow-up\ndocumentation commit. When code and documentation are still being prepared\ntogether, record the rationale now and use an available PR URL or add the code\ncommit reference afterward; a commit cannot contain its own final SHA. Preserve\nearlier decisions when a later choice replaces them, and explain the replacement\nin a new entry or page.\n",
+          "body": "\n1. Run `codewiki build --strict`.\n2. Inspect the affected HTML pages, decision entries, and navigation links.\n3. Use `codewiki query section <page-id.section>` and `codewiki query history <page-id>` to check the CLI view.\n4. Inspect the final explanation and linked source, then follow [Reviewing outdated documents](manual-review.html) to record `updated` or `pass` with a specific reason and the inspected fingerprint. Leave pages pending when review is reserved for another reviewer.\n5. Rebuild after review acknowledgments and run `codewiki review check`. Pending reviews remain separate from build validation.\n6. Commit the authored Markdown and any completed review records with the project's changes.\n\nIf the refactoring already has a commit, reference its SHA in a follow-up\ndocumentation commit. When code and documentation are still being prepared\ntogether, record the rationale now and use an available PR URL or add the code\ncommit reference afterward; a commit cannot contain its own final SHA. Preserve\nearlier decisions when a later choice replaces them, and explain the replacement\nin a new entry or page.\n"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "manual-maintaining.tl-dr",
+          "title": "TL;DR",
+          "kind": "other",
+          "text": "After a refactoring or modification, review the affected wiki pages and update explanations that no longer match the code. When the design choice is worth remembering, also record why it changed and attach the relevant commit or PR. Use a decision entry for a short rationale or a separate decision page for a substantial change. Build and inspect the result. A decision record and a successful build do not acknowledge a documentation review.",
+          "markdown": "\n- After a refactoring or modification, review the affected wiki pages and update explanations that no longer match the code.\n- When the design choice is worth remembering, also record why it changed and attach the relevant commit or PR.\n- Use a decision entry for a short rationale or a separate decision page for a substantial change.\n- Build and inspect the result. A decision record and a successful build do not acknowledge a documentation review.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-maintaining.rules",
+          "title": "Decide what to maintain",
+          "kind": "other",
+          "text": "The page body explains how the code works now . Decision records explain why the design changed . Review acknowledgments record which version of the explanation and linked source was inspected . Situation What to do A change makes an explanation, diagram, example, or source reference inaccurate Update the affected page to match the current implementation. The choice has useful rationale, tradeoffs, rejected alternatives, or compatibility consequences Also add a decision entry or a dedicated decision page. An internal refactoring leaves the explanation accurate Review it without rewriting accurate prose; record the decision if its rationale is useful. A routine change has no lasting design rationale Update documentation where needed; a decision record is optional. Record choices that will help a future reader understand or reconsider the design. A file diff shows what changed, but does not establish why. Use supplied reasons and verified evidence; leave unknown rationale as an open question.",
+          "markdown": "\nThe page body explains **how the code works now**. Decision records explain **why\nthe design changed**. Review acknowledgments record **which version of the\nexplanation and linked source was inspected**.\n\n| Situation | What to do |\n| --- | --- |\n| A change makes an explanation, diagram, example, or source reference inaccurate | Update the affected page to match the current implementation. |\n| The choice has useful rationale, tradeoffs, rejected alternatives, or compatibility consequences | Also add a decision entry or a dedicated decision page. |\n| An internal refactoring leaves the explanation accurate | Review it without rewriting accurate prose; record the decision if its rationale is useful. |\n| A routine change has no lasting design rationale | Update documentation where needed; a decision record is optional. |\n\nRecord choices that will help a future reader understand or reconsider the design.\nA file diff shows what changed, but does not establish why. Use supplied reasons\nand verified evidence; leave unknown rationale as an open question.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-maintaining.affected-pages",
+          "title": "Find and update affected pages",
+          "kind": "other",
+          "text": "Inspect the commit or diff, then find the existing explanations: codewiki review status --outdated codewiki query tree codewiki query file src/example.py codewiki query doc example-component Replace the example file and document ID with your project's values. Rebuild with codewiki build --strict if queries report a stale index, before trusting source ranges. Review current code as well as the diff. Update affected architecture, behavior, diagrams, examples, and user procedures. Preserve stable page IDs, explicit heading anchors, and source tags when moving or renaming declarations. Keep the main explanation focused on the current implementation. Put historical before-and-after details in the decision record or decision page. Unlinked source changes do not automatically require a new wiki page.",
+          "markdown": "\nInspect the commit or diff, then find the existing explanations:\n\n```sh\ncodewiki review status --outdated\ncodewiki query tree\ncodewiki query file src/example.py\ncodewiki query doc example-component\n```\n\nReplace the example file and document ID with your project's values. Rebuild with\n`codewiki build --strict` if queries report a stale index, before trusting source\nranges. Review current code as well as the diff. Update affected architecture,\nbehavior, diagrams, examples, and user procedures. Preserve stable page IDs,\nexplicit heading anchors, and source tags when moving or renaming declarations.\n\nKeep the main explanation focused on the current implementation. Put historical\nbefore-and-after details in the decision record or decision page. Unlinked source\nchanges do not automatically require a new wiki page.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-maintaining.decision-entry",
+          "title": "Append a short decision",
+          "kind": "other",
+          "text": "Append an entry to the affected page's existing YAML frontmatter decisions list; preserve its earlier entries. For example: decisions: - id: extract-validation reason: &gt; Centralized validation so the CLI and build pipeline apply the same rules. anchors: [example-component.validation] commits: [&quot;&lt;full-commit-sha&gt;&quot;] Replace the example rationale, anchor, and commit with actual values. id is a stable identifier local to this page, and reason is required. Optional anchors must name existing explicit section anchors; omit them if unnecessary. Quote commit IDs. An optional prs list accepts HTTP(S) PR URLs. Do not add a second decisions YAML key to a page that already has one.",
+          "markdown": "\nAppend an entry to the affected page's existing YAML frontmatter `decisions` list;\npreserve its earlier entries. For example:\n\n```yaml\ndecisions:\n  - id: extract-validation\n    reason: >\n      Centralized validation so the CLI and build pipeline apply\n      the same rules.\n    anchors: [example-component.validation]\n    commits: [\"<full-commit-sha>\"]\n```\n\nReplace the example rationale, anchor, and commit with actual values. `id` is a\nstable identifier local to this page, and `reason` is required. Optional `anchors`\nmust name existing explicit section anchors; omit them if unnecessary. Quote\ncommit IDs. An optional `prs` list accepts HTTP(S) PR URLs. Do not add a second\n`decisions` YAML key to a page that already has one.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-maintaining.decision-page",
+          "title": "Create a substantial decision page",
+          "kind": "other",
+          "text": "For changes spanning components or needing detailed alternatives and consequences, start from the instance's wiki/_templates/decision.md when available. Save the new page under the configured wiki_dir , outside _templates/ . For example: --- id: refactor-validation type: decision status: draft parent: architecture title: Centralize validation summary: Explain the shared validation design and its tradeoffs. related: [example-component] decisions: - id: centralize-validation reason: Share validation rules across CLI and build entry points. commits: [&quot;&lt;full-commit-sha&gt;&quot;] --- ## TL;DR {#tl-dr} Summarize the change and its purpose. ## Context {#context} Describe the original problem and constraints. ## Changes {#changes} Explain the before-and-after structure and any compatibility impact. ## Alternatives {#alternatives} Record known alternatives and the reasons for the chosen approach. ## Consequences {#consequences} Describe benefits, tradeoffs, and conditions for revisiting the choice. ## Verification {#verification} Record the checks performed and their results. Use real existing page IDs for parent and related . The parent places the page in the sidebar hierarchy; related pages appear as links near its title. Add a link from affected component pages to the decision page so readers can find the reason from the current explanation. Those component pages still need any corrections required by the new implementation.",
+          "markdown": "\nFor changes spanning components or needing detailed alternatives and consequences,\nstart from the instance's `wiki/_templates/decision.md` when available. Save the\nnew page under the configured `wiki_dir`, outside `_templates/`. For example:\n\n```markdown\n---\nid: refactor-validation\ntype: decision\nstatus: draft\nparent: architecture\ntitle: Centralize validation\nsummary: Explain the shared validation design and its tradeoffs.\nrelated: [example-component]\ndecisions:\n  - id: centralize-validation\n    reason: Share validation rules across CLI and build entry points.\n    commits: [\"<full-commit-sha>\"]\n---\n\n## TL;DR {#tl-dr}\n\nSummarize the change and its purpose.\n\n## Context {#context}\n\nDescribe the original problem and constraints.\n\n## Changes {#changes}\n\nExplain the before-and-after structure and any compatibility impact.\n\n## Alternatives {#alternatives}\n\nRecord known alternatives and the reasons for the chosen approach.\n\n## Consequences {#consequences}\n\nDescribe benefits, tradeoffs, and conditions for revisiting the choice.\n\n## Verification {#verification}\n\nRecord the checks performed and their results.\n```\n\nUse real existing page IDs for `parent` and `related`. The parent places the page\nin the sidebar hierarchy; related pages appear as links near its title. Add a link\nfrom affected component pages to the decision page so readers can find the reason\nfrom the current explanation. Those component pages still need any corrections\nrequired by the new implementation.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-maintaining.presentation",
+          "title": "Read the recorded history",
+          "kind": "other",
+          "text": "After building, entries appear below a page's main content under Decisions and change references . Each entry is collapsed by default and expands to show its reason, anchors, commits, and PR references. Entries follow the authored list order. Commit hashes and anchor IDs display as code text; PR URLs are clickable. A separate decision page uses the normal page layout and its own outline. The CLI returns the decision records attached to the requested page: codewiki query history example-component codewiki query history refactor-validation Query the page where you stored the record; related does not aggregate histories. CodeWiki does not automatically discover Git/PR rationale, verify referenced commits or PR contents, or reconstruct old versions of a page. See Provenance &amp; decisions for the distinction from build snapshots.",
+          "markdown": "\nAfter building, entries appear below a page's main content under **Decisions and\nchange references**. Each entry is collapsed by default and expands to show its\nreason, anchors, commits, and PR references. Entries follow the authored list order.\nCommit hashes and anchor IDs display as code text; PR URLs are clickable.\n\nA separate decision page uses the normal page layout and its own outline. The CLI\nreturns the decision records attached to the requested page:\n\n```sh\ncodewiki query history example-component\ncodewiki query history refactor-validation\n```\n\nQuery the page where you stored the record; `related` does not aggregate histories.\nCodeWiki does not automatically discover Git/PR rationale, verify referenced\ncommits or PR contents, or reconstruct old versions of a page. See\n[Provenance & decisions](history.html) for the distinction from build snapshots.\n\n",
+          "impls": []
+        },
+        {
+          "id": "manual-maintaining.verification",
+          "title": "Verify and save the change",
+          "kind": "other",
+          "text": "Run codewiki build --strict . Inspect the affected HTML pages, decision entries, and navigation links. Use codewiki query section &lt;page-id.section&gt; and codewiki query history &lt;page-id&gt; to check the CLI view. Inspect the final explanation and linked source, then follow Reviewing outdated documents to record updated or pass with a specific reason and the inspected fingerprint. Leave pages pending when review is reserved for another reviewer. Rebuild after review acknowledgments and run codewiki review check . Pending reviews remain separate from build validation. Commit the authored Markdown and any completed review records with the project's changes. If the refactoring already has a commit, reference its SHA in a follow-up documentation commit. When code and documentation are still being prepared together, record the rationale now and use an available PR URL or add the code commit reference afterward; a commit cannot contain its own final SHA. Preserve earlier decisions when a later choice replaces them, and explain the replacement in a new entry or page.",
+          "markdown": "\n1. Run `codewiki build --strict`.\n2. Inspect the affected HTML pages, decision entries, and navigation links.\n3. Use `codewiki query section <page-id.section>` and `codewiki query history <page-id>` to check the CLI view.\n4. Inspect the final explanation and linked source, then follow [Reviewing outdated documents](manual-review.html) to record `updated` or `pass` with a specific reason and the inspected fingerprint. Leave pages pending when review is reserved for another reviewer.\n5. Rebuild after review acknowledgments and run `codewiki review check`. Pending reviews remain separate from build validation.\n6. Commit the authored Markdown and any completed review records with the project's changes.\n\nIf the refactoring already has a commit, reference its SHA in a follow-up\ndocumentation commit. When code and documentation are still being prepared\ntogether, record the rationale now and use an available PR URL or add the code\ncommit reference afterward; a commit cannot contain its own final SHA. Preserve\nearlier decisions when a later choice replaces them, and explain the replacement\nin a new entry or page.\n",
+          "impls": []
+        }
+      ],
+      "refs": [],
+      "review": {
+        "state": "unreviewed",
+        "reason": "No review baseline"
       }
     },
     {
@@ -18714,7 +18902,7 @@
       "summary": "Five portable reading, authoring, and review workflows use the CLI to explore the same architecture, one level at a time.",
       "parent": "architecture",
       "children": [],
-      "markdown": "---\nid: skills\ntype: component\nstatus: stable\nparent: architecture\ntitle: LLM skills\nsummary: Five portable reading, authoring, and review workflows use the CLI to explore the\n  same architecture, one level at a time.\nowns:\n- ../src/codewiki/resources/skills/wiki-init/SKILL.md\n- ../src/codewiki/resources/skills/wiki-query/SKILL.md\n- ../src/codewiki/resources/skills/wiki-author/SKILL.md\n- ../src/codewiki/resources/skills/wiki-build/SKILL.md\n- ../src/codewiki/resources/skills/wiki-review/SKILL.md\ndepends_on:\n- queries\n- authoring\n- reviews\nrelated: []\ndiagram_links:\n  init: skills.init\n  query: skills.query\n  author: skills.author\n  check: skills.check\n  review: skills.review\n---\n\n## Skill workflows\n\n```mermaid\nflowchart TB\n  init[\"wiki-init \u00b7 establish instance\"] --> author[\"wiki-author \u00b7 explain code\"]\n  query[\"wiki-query \u00b7 read evidence\"] --> author\n  author --> check[\"wiki-build \u00b7 validate + render\"]\n  check --> query\n  review[\"wiki-review \u00b7 update or pass with reason\"] --> check\n```\n\nThese arrows describe an authoring workflow, not Python imports. Skills are Markdown\ninstructions loaded by an LLM client; they do not run inside the renderer.\n\n## Initialize {#init}\n\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism. Initialization also adds\na marked reference to the instance guide in the project-root `AGENTS.md`, preserving\nexisting instructions and avoiding duplicates on repeat runs. The skill verifies\nthis integration instead of manually adding another root reference. It also keeps\nthe generated update manifest in Git and directs existing-instance upgrades to\n`codewiki update`, since repeating init does not replace old support files. With\n`--client claude`, the initializer also copies the skills into `.claude/skills/` and\nappends the same section to `CLAUDE.md`, so Claude Code discovers both without\nmanual registration.\n\n## Read progressively {#query}\n\n`wiki-query/SKILL.md` starts with the tree or a file query. It expands a document\nsummary, then a selected section, and only then the relevant symbols and source.\nThe CLI's `--json` form exposes dependencies and diagram destinations as identifiers,\nso an LLM follows the same component graph without parsing rendered HTML.\n\n```text\ncodewiki query tree\ncodewiki query doc renderer\ncodewiki query section renderer.navigation\ncodewiki query symbol codewiki.build.diagram_targets\ncodewiki query source codewiki.build.diagram_targets --limit 40\n```\n\nEach result reports freshness. Rebuild a stale index before trusting source ranges.\nQueries paginate results; this controls items or lines rather than guaranteeing a\ntoken budget.\n\n## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n## Validate the result {#check}\n\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n## Review existing pages {#review}\n\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n## Integration boundary\n\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\n`codewiki update` refreshes untouched instance copies and keeps customized ones.\nThe Claude Code copies under `.claude/skills/` are outside the instance, so compare\nand re-copy them explicitly when maintaining an existing project.\n",
+      "markdown": "---\nid: skills\ntype: component\nstatus: stable\nparent: architecture\ntitle: LLM skills\nsummary: Five portable reading, authoring, and review workflows use the CLI to explore the\n  same architecture, one level at a time.\nowns:\n- ../src/codewiki/resources/skills/wiki-init/SKILL.md\n- ../src/codewiki/resources/skills/wiki-query/SKILL.md\n- ../src/codewiki/resources/skills/wiki-author/SKILL.md\n- ../src/codewiki/resources/skills/wiki-build/SKILL.md\n- ../src/codewiki/resources/skills/wiki-review/SKILL.md\ndepends_on:\n- queries\n- authoring\n- reviews\nrelated: []\ndiagram_links:\n  init: skills.init\n  query: skills.query\n  author: skills.author\n  check: skills.check\n  review: skills.review\n---\n\n## Skill workflows\n\n```mermaid\nflowchart TB\n  init[\"wiki-init \u00b7 establish instance\"] --> author[\"wiki-author \u00b7 explain code\"]\n  query[\"wiki-query \u00b7 read evidence\"] --> author\n  author --> check[\"wiki-build \u00b7 validate + render\"]\n  check --> query\n  review[\"wiki-review \u00b7 update or pass with reason\"] --> check\n```\n\nThese arrows describe an authoring workflow, not Python imports. Skills are Markdown\ninstructions loaded by an LLM client; they do not run inside the renderer.\n\n## Initialize {#init}\n\n`wiki-init/SKILL.md` directs the tool to inspect the repository layout, choose real\nsource roots, run `codewiki init`, and replace starter claims with observed facts.\nThe initializer copies these portable skills into the project instance; register\nthem using the chosen client's own discovery mechanism. Initialization also adds\na marked reference to the instance guide in the project-root `AGENTS.md`, preserving\nexisting instructions and avoiding duplicates on repeat runs. The skill verifies\nthis integration instead of manually adding another root reference. It also keeps\nthe generated update manifest in Git and directs existing-instance upgrades to\n`codewiki update`, since repeating init does not replace old support files. With\n`--client claude`, the initializer also copies the skills into `.claude/skills/` and\nappends the same section to `CLAUDE.md`, so Claude Code discovers both without\nmanual registration.\n\n## Read progressively {#query}\n\n`wiki-query/SKILL.md` starts with the tree or a file query. It expands a document\nsummary, then a selected section, and only then the relevant symbols and source.\nThe CLI's `--json` form exposes dependencies and diagram destinations as identifiers,\nso an LLM follows the same component graph without parsing rendered HTML.\n\n```text\ncodewiki query tree\ncodewiki query doc renderer\ncodewiki query section renderer.navigation\ncodewiki query symbol codewiki.build.diagram_targets\ncodewiki query source codewiki.build.diagram_targets --limit 40\n```\n\nEach result reports freshness. Rebuild a stale index before trusting source ranges.\nQueries paginate results; this controls items or lines rather than guaranteeing a\ntoken budget.\n\n## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\nAfter refactoring or other code changes, the skill separates current explanations\nfrom decision history. It updates inaccurate pages and records useful rationale as\nan appended decision entry or a linked decision page for a substantial choice.\nAccurate prose can stay unchanged; routine changes do not each require a decision.\nIt preserves earlier records, uses supplied commit/PR references, and checks the\nrendered entries and `query history` output. Decision records remain separate from\nreview acknowledgments. See [Maintaining documentation](manual-maintaining.html)\nfor the user workflow and examples.\n\n## Validate the result {#check}\n\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n## Review existing pages {#review}\n\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n## Integration boundary\n\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\n`codewiki update` refreshes untouched instance copies and keeps customized ones.\nThe Claude Code copies under `.claude/skills/` are outside the instance, so compare\nand re-copy them explicitly when maintaining an existing project.\n",
       "decisions": [],
       "sections": [
         {
@@ -18761,9 +18949,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 76,
-          "line_end": 82,
-          "markdown": "## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n",
-          "body": "\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n"
+          "line_end": 91,
+          "markdown": "## Author with evidence {#author}\n\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\nAfter refactoring or other code changes, the skill separates current explanations\nfrom decision history. It updates inaccurate pages and records useful rationale as\nan appended decision entry or a linked decision page for a substantial choice.\nAccurate prose can stay unchanged; routine changes do not each require a decision.\nIt preserves earlier records, uses supplied commit/PR references, and checks the\nrendered entries and `query history` output. Decision records remain separate from\nreview acknowledgments. See [Maintaining documentation](manual-maintaining.html)\nfor the user workflow and examples.\n\n",
+          "body": "\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\nAfter refactoring or other code changes, the skill separates current explanations\nfrom decision history. It updates inaccurate pages and records useful rationale as\nan appended decision entry or a linked decision page for a substantial choice.\nAccurate prose can stay unchanged; routine changes do not each require a decision.\nIt preserves earlier records, uses supplied commit/PR references, and checks the\nrendered entries and `query history` output. Decision records remain separate from\nreview acknowledgments. See [Maintaining documentation](manual-maintaining.html)\nfor the user workflow and examples.\n\n"
         },
         {
           "id": "skills.check",
@@ -18772,8 +18960,8 @@
           "title": "Validate the result",
           "level": 2,
           "kind": "other",
-          "line_start": 83,
-          "line_end": 89,
+          "line_start": 92,
+          "line_end": 98,
           "markdown": "## Validate the result {#check}\n\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n",
           "body": "\n`wiki-build/SKILL.md` runs strict validation, resolves broken links, then checks the\nreading path. Source declarations and diagram destinations must agree with the\npublished page. A successful build verifies structure and bindings; a human or LLM\nstill needs to assess whether the prose accurately describes behavior.\n\n"
         },
@@ -18784,8 +18972,8 @@
           "title": "Review existing pages",
           "level": 2,
           "kind": "other",
-          "line_start": 90,
-          "line_end": 97,
+          "line_start": 99,
+          "line_end": 106,
           "markdown": "## Review existing pages {#review}\n\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n",
           "body": "\n`wiki-review/SKILL.md` reads the live JSON review report, inspects each affected\npage and its source, updates explanations when required, and records a specific\nreason for either an update or a no-change pass. It uses the report fingerprint\nto reject acknowledgments based on intervening changes. New baselines require\ninspection; neither a build nor an unrelated source edit warrants a blanket pass.\n\n"
         },
@@ -18796,8 +18984,8 @@
           "title": "Integration boundary",
           "level": 2,
           "kind": "other",
-          "line_start": 98,
-          "line_end": 103,
+          "line_start": 107,
+          "line_end": 112,
           "markdown": "## Integration boundary\n\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\n`codewiki update` refreshes untouched instance copies and keeps customized ones.\nThe Claude Code copies under `.claude/skills/` are outside the instance, so compare\nand re-copy them explicitly when maintaining an existing project.\n",
           "body": "\nThe shipped instructions call the installed CLI. There is no MCP server in v1.\n`codewiki update` refreshes untouched instance copies and keeps customized ones.\nThe Claude Code copies under `.claude/skills/` are outside the instance, so compare\nand re-copy them explicitly when maintaining an existing project.\n"
         }
@@ -18823,8 +19011,8 @@
           "id": "skills.author",
           "title": "Author with evidence",
           "kind": "other",
-          "text": "wiki-author/SKILL.md asks authors to read source before explaining behavior, choose stable IDs, define ownership, and bind important concepts with tags or refs. A high-level component diagram is an authored explanation. Keep its depends_on relationships and diagram_links in the same Markdown change as the explanation.",
-          "markdown": "\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\n",
+          "text": "wiki-author/SKILL.md asks authors to read source before explaining behavior, choose stable IDs, define ownership, and bind important concepts with tags or refs. A high-level component diagram is an authored explanation. Keep its depends_on relationships and diagram_links in the same Markdown change as the explanation. After refactoring or other code changes, the skill separates current explanations from decision history. It updates inaccurate pages and records useful rationale as an appended decision entry or a linked decision page for a substantial choice. Accurate prose can stay unchanged; routine changes do not each require a decision. It preserves earlier records, uses supplied commit/PR references, and checks the rendered entries and query history output. Decision records remain separate from review acknowledgments. See Maintaining documentation for the user workflow and examples.",
+          "markdown": "\n`wiki-author/SKILL.md` asks authors to read source before explaining behavior,\nchoose stable IDs, define ownership, and bind important concepts with tags or refs.\nA high-level component diagram is an authored explanation. Keep its `depends_on`\nrelationships and `diagram_links` in the same Markdown change as the explanation.\n\nAfter refactoring or other code changes, the skill separates current explanations\nfrom decision history. It updates inaccurate pages and records useful rationale as\nan appended decision entry or a linked decision page for a substantial choice.\nAccurate prose can stay unchanged; routine changes do not each require a decision.\nIt preserves earlier records, uses supplied commit/PR references, and checks the\nrendered entries and `query history` output. Decision records remain separate from\nreview acknowledgments. See [Maintaining documentation](manual-maintaining.html)\nfor the user workflow and examples.\n\n",
           "impls": []
         },
         {
@@ -18846,8 +19034,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "current",
-        "reason": "Reviewed content matches"
+        "state": "outdated",
+        "reason": "Changed since last review"
       }
     },
     {
@@ -20252,7 +20440,7 @@
       "tldr": [
         "Start with Getting started to install CodeWiki and build your first wiki.",
         "Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.",
-        "Use Writing pages and Configuration and troubleshooting when maintaining a wiki."
+        "Use Maintaining documentation for code changes and decision history, and Writing pages for authoring details."
       ],
       "owns": [],
       "related": [],
@@ -20265,12 +20453,13 @@
       "children": [
         "manual-configuration",
         "manual-getting-started",
+        "manual-maintaining",
         "manual-reading",
         "manual-review",
         "manual-updating",
         "manual-writing"
       ],
-      "markdown": "---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Install CodeWiki, create a project wiki, find documentation, and keep your pages and source references current.\n---\n\n## TL;DR\n\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.\n\n## Choose a task {#choose-a-task}\n\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n## The everyday workflow {#workflow}\n\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n5. Review affected pages with `codewiki review status`, record outcomes with reasons,\n   and run `codewiki review check`. Rebuild after acknowledgments to refresh the site.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n",
+      "markdown": "---\nid: user-manual\ntype: manual\nstatus: stable\nparent: null\ntitle: User manual\nsummary: Install CodeWiki, create a project wiki, find documentation, and keep your pages and source references current.\n---\n\n## TL;DR\n\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Maintaining documentation for code changes and decision history, and Writing pages for authoring details.\n\n## Choose a task {#choose-a-task}\n\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Maintain pages after code changes and record refactoring decisions | [Maintaining documentation](manual-maintaining.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n## The everyday workflow {#workflow}\n\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n5. Review affected pages with `codewiki review status`, record outcomes with reasons,\n   and run `codewiki review check`. Rebuild after acknowledgments to refresh the site.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n",
       "decisions": [],
       "sections": [
         {
@@ -20282,8 +20471,8 @@
           "kind": "other",
           "line_start": 10,
           "line_end": 15,
-          "markdown": "## TL;DR\n\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.\n\n",
-          "body": "\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.\n\n"
+          "markdown": "## TL;DR\n\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Maintaining documentation for code changes and decision history, and Writing pages for authoring details.\n\n",
+          "body": "\n- Start with Getting started to install CodeWiki and build your first wiki.\n- Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.\n- Use Maintaining documentation for code changes and decision history, and Writing pages for authoring details.\n\n"
         },
         {
           "id": "user-manual.choose-a-task",
@@ -20293,9 +20482,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 16,
-          "line_end": 29,
-          "markdown": "## Choose a task {#choose-a-task}\n\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n",
-          "body": "\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n"
+          "line_end": 30,
+          "markdown": "## Choose a task {#choose-a-task}\n\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Maintain pages after code changes and record refactoring decisions | [Maintaining documentation](manual-maintaining.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n",
+          "body": "\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Maintain pages after code changes and record refactoring decisions | [Maintaining documentation](manual-maintaining.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n"
         },
         {
           "id": "user-manual.workflow",
@@ -20304,8 +20493,8 @@
           "title": "The everyday workflow",
           "level": 2,
           "kind": "other",
-          "line_start": 30,
-          "line_end": 40,
+          "line_start": 31,
+          "line_end": 41,
           "markdown": "## The everyday workflow {#workflow}\n\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n5. Review affected pages with `codewiki review status`, record outcomes with reasons,\n   and run `codewiki review check`. Rebuild after acknowledgments to refresh the site.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n",
           "body": "\n1. Edit Markdown in your instance's `wiki/` directory.\n2. Run `codewiki build --strict` from the project directory.\n3. Open the generated site or run `codewiki serve --no-open` for a live preview.\n4. Use `codewiki query tree` to find a page, then query only the section you need.\n5. Review affected pages with `codewiki review status`, record outcomes with reasons,\n   and run `codewiki review check`. Rebuild after acknowledgments to refresh the site.\n\nThe examples use the default instance folder, `codewiki/`. If your instance has\nanother location, pass `--config path/to/wiki.config.yaml` to build, serve, and query.\n"
         }
@@ -20315,8 +20504,8 @@
           "id": "user-manual.choose-a-task",
           "title": "Choose a task",
           "kind": "other",
-          "text": "I want to\u2026 Guide Install CodeWiki or add it to a project Getting started Upgrade an initialized project, including source builds Updating an existing wiki Browse pages, inspect source, or search from the command line Reading and querying Create a page, organize sections, or attach source evidence Writing pages Review outdated pages, acknowledge unchanged prose, or enforce CI Reviewing outdated documents Select an instance, change settings, or fix build errors Configuration and troubleshooting These guides describe everyday usage. For the framework's internal components, open the separate CodeWiki architecture section.",
-          "markdown": "\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n",
+          "text": "I want to\u2026 Guide Install CodeWiki or add it to a project Getting started Upgrade an initialized project, including source builds Updating an existing wiki Browse pages, inspect source, or search from the command line Reading and querying Create a page, organize sections, or attach source evidence Writing pages Maintain pages after code changes and record refactoring decisions Maintaining documentation Review outdated pages, acknowledge unchanged prose, or enforce CI Reviewing outdated documents Select an instance, change settings, or fix build errors Configuration and troubleshooting These guides describe everyday usage. For the framework's internal components, open the separate CodeWiki architecture section.",
+          "markdown": "\n| I want to\u2026 | Guide |\n| --- | --- |\n| Install CodeWiki or add it to a project | [Getting started](manual-getting-started.html) |\n| Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |\n| Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |\n| Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |\n| Maintain pages after code changes and record refactoring decisions | [Maintaining documentation](manual-maintaining.html) |\n| Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |\n| Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |\n\nThese guides describe everyday usage. For the framework's internal components,\nopen the separate [CodeWiki architecture](architecture.html) section.\n\n",
           "impls": []
         },
         {
@@ -20330,8 +20519,8 @@
       ],
       "refs": [],
       "review": {
-        "state": "current",
-        "reason": "Reviewed content matches"
+        "state": "outdated",
+        "reason": "Changed since last review"
       }
     }
   ],
@@ -21902,6 +22091,7 @@
     "languages.html",
     "manual-configuration.html",
     "manual-getting-started.html",
+    "manual-maintaining.html",
     "manual-reading.html",
     "manual-review.html",
     "manual-updating.html",
@@ -21926,6 +22116,7 @@
     "languages-ch_tw.html",
     "manual-configuration-ch_tw.html",
     "manual-getting-started-ch_tw.html",
+    "manual-maintaining-ch_tw.html",
     "manual-reading-ch_tw.html",
     "manual-review-ch_tw.html",
     "manual-updating-ch_tw.html",
@@ -21944,8 +22135,8 @@
   "reviews": {
     "schema_version": 1,
     "ok": false,
-    "pending": 3,
-    "total": 22,
+    "pending": 6,
+    "total": 23,
     "errors": [],
     "documents": [
       {
@@ -22463,6 +22654,22 @@
         "reason": "Reviewed content matches"
       },
       {
+        "document": "manual-maintaining",
+        "title": "Maintaining documentation",
+        "source": "wiki/manual-maintaining.md",
+        "state": "unreviewed",
+        "fingerprint": "042c13a46e766f3822dc1a4aa0ca49b809dc2f298d2ff043834229b529e474ea",
+        "snapshot": {
+          "document_path": "wiki/manual-maintaining.md",
+          "document_sha256": "ec8fcdeed665a3cb7b68615c8cf31fe0eb2b17f287cb6f41626826884bb469a5",
+          "sources": {},
+          "coverage": []
+        },
+        "previous": null,
+        "changes": [],
+        "reason": "No review baseline"
+      },
+      {
         "document": "manual-reading",
         "title": "Reading and querying",
         "source": "wiki/manual-reading.md",
@@ -22948,13 +23155,13 @@
         "document": "skills",
         "title": "LLM skills",
         "source": "wiki/skills.md",
-        "state": "current",
-        "fingerprint": "4267b8a64a69726ae6593ae03c2c333d32cec98383666f3c68334ee555c19330",
+        "state": "outdated",
+        "fingerprint": "bf5e0f404a49372381755745ac4fba0eff696c8fc36df0b7770f404256588aed",
         "snapshot": {
           "document_path": "wiki/skills.md",
-          "document_sha256": "f55296bb6a732ca78e6c96e95c980d81ada40e97adc9f2e80acba41101221133",
+          "document_sha256": "e65b714d5125b62da22424c20db0b3b2991d5aab3568faa5e64777e6853b18b3",
           "sources": {
-            "../src/codewiki/resources/skills/wiki-author/SKILL.md": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
+            "../src/codewiki/resources/skills/wiki-author/SKILL.md": "b5657efbd1a14eeaee152f19a5bb29ea3ff468c35a40c05117bace2bac3c506b",
             "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
             "../src/codewiki/resources/skills/wiki-init/SKILL.md": "c62e1cc5d8710c4273403a2af42b281f620e3f683d3bed49a8184ed66250fd1e",
             "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
@@ -23025,8 +23232,21 @@
             ]
           }
         },
-        "changes": [],
-        "reason": "Reviewed content matches"
+        "changes": [
+          {
+            "kind": "source",
+            "path": "../src/codewiki/resources/skills/wiki-author/SKILL.md",
+            "previous": "9324ca1a045d2199b22b5965acf6d0ce91017bd15f9bd28ad30bbfbedea820ed",
+            "current": "b5657efbd1a14eeaee152f19a5bb29ea3ff468c35a40c05117bace2bac3c506b"
+          },
+          {
+            "kind": "document",
+            "path": "wiki/skills.md",
+            "previous": "f55296bb6a732ca78e6c96e95c980d81ada40e97adc9f2e80acba41101221133",
+            "current": "e65b714d5125b62da22424c20db0b3b2991d5aab3568faa5e64777e6853b18b3"
+          }
+        ],
+        "reason": "Changed since last review"
       },
       {
         "document": "templates",
@@ -23436,11 +23656,11 @@
         "document": "user-manual",
         "title": "User manual",
         "source": "wiki/user-manual.md",
-        "state": "current",
-        "fingerprint": "07cd3602e6fded1349bad95dfa082bb57055fc7c0eda52c885bbe58a4aefc5e0",
+        "state": "outdated",
+        "fingerprint": "4ce842dcb0cae9073e7b6c687ccae521db3edc4a0006cffe348150a7ebff905a",
         "snapshot": {
           "document_path": "wiki/user-manual.md",
-          "document_sha256": "78c71df23028c45bd7cc8374e82fc48dbae5b6aeb6ae7676bea1d3dcd3de0f87",
+          "document_sha256": "0800c129b89bd4b57f5450df59a1288e33be3f383eecede9a8e6a5ae947904d4",
           "sources": {},
           "coverage": []
         },
@@ -23459,8 +23679,15 @@
             "coverage": []
           }
         },
-        "changes": [],
-        "reason": "Reviewed content matches"
+        "changes": [
+          {
+            "kind": "document",
+            "path": "wiki/user-manual.md",
+            "previous": "78c71df23028c45bd7cc8374e82fc48dbae5b6aeb6ae7676bea1d3dcd3de0f87",
+            "current": "0800c129b89bd4b57f5450df59a1288e33be3f383eecede9a8e6a5ae947904d4"
+          }
+        ],
+        "reason": "Changed since last review"
       }
     ]
   }
