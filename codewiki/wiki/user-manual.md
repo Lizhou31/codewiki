@@ -11,7 +11,7 @@ summary: Install CodeWiki, create a project wiki, find documentation, and keep y
 
 - Start with Getting started to install CodeWiki and build your first wiki.
 - Use Reading and querying to navigate the HTML site or retrieve focused answers through the CLI.
-- Use Writing pages and Configuration and troubleshooting when maintaining a wiki.
+- Use Maintaining documentation for code changes and decision history, and Writing pages for authoring details.
 
 ## Choose a task {#choose-a-task}
 
@@ -21,6 +21,7 @@ summary: Install CodeWiki, create a project wiki, find documentation, and keep y
 | Upgrade an initialized project, including source builds | [Updating an existing wiki](manual-updating.html) |
 | Browse pages, inspect source, or search from the command line | [Reading and querying](manual-reading.html) |
 | Create a page, organize sections, or attach source evidence | [Writing pages](manual-writing.html) |
+| Maintain pages after code changes and record refactoring decisions | [Maintaining documentation](manual-maintaining.html) |
 | Review outdated pages, acknowledge unchanged prose, or enforce CI | [Reviewing outdated documents](manual-review.html) |
 | Select an instance, change settings, or fix build errors | [Configuration and troubleshooting](manual-configuration.html) |
 

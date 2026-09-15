@@ -61,6 +61,13 @@ codewiki query source codewiki.build.diagram_targets --limit 40
 
 `wiki-author/SKILL.md` 要求作者先讀原始碼再說明行為、選擇穩定 ID、定義檔案責任，並以標籤或 refs 綁定重要概念。高層元件圖是作者撰寫的說明；`depends_on` 關係與 `diagram_links` 應和說明在同一次 Markdown 變更中維護。
 
+重構或其他程式碼變更後，技能會區分目前說明與決策歷史：更新不再正確的頁面，
+並將有價值的理由附加為決策條目；重大選擇則建立連結的決策頁面。
+仍然正確的文字可以保留，例行變更也不必每次都新增決策。
+技能會保留先前紀錄、使用已提供的 commit／PR 參照，並檢查渲染條目與
+`query history` 輸出。決策紀錄與審查確認分開處理。
+使用流程與範例請參閱[文件維護規則](manual-maintaining.html)。
+
 ## 驗證結果 {#check}
 
 `wiki-build/SKILL.md` 執行嚴格驗證、修復失效連結，再檢查閱讀路徑。原始碼宣告與圖表目的地必須符合發佈頁面。建置成功驗證結構與綁定；人類或 LLM 仍需評估文字是否正確描述行為。
