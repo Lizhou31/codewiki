@@ -43,6 +43,13 @@ the ordinary links beneath the diagram. Expand the diagram for a larger view;
 press Escape to close it. Expand an **Implementation** panel to read attached code.
 **Open in editor** uses the project's configured editor link.
 
+Use **+** and **−**, or scroll over a diagram, to zoom. Drag with a mouse or one
+finger to move around; **Fit** restores the whole diagram. Zoom ranges from 25%
+to 800% of the fitted view. The same controls work in the expanded view, and
+opening or closing it preserves your position and zoom. For keyboard navigation,
+focus the diagram canvas: **+ / −** zoom, arrow keys move the view, and **0** or
+**Home** fits it again. Clicking a node still follows its link; dragging does not.
+
 **Source index** lists files with documentation links. If you need to search prose
 or source symbols instead of page titles, use the CLI search command below.
 

@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "manual-reading",
   "outcome": "updated",
-  "reason": "Established a baseline after reading the complete manual and checking the rendered navigation, English/Traditional Chinese switching, stable section links, CLI pagination examples, and current query behavior.",
-  "reviewed_at": "2026-09-13T16:59:01+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "31a988b1b1272e87a0b83ac9e0836747d7ce5a2ce84aaa306e1c1af11cc1013c",
+  "reason": "Updated the reader guide and Traditional Chinese sibling for zoom, pan, Fit, keyboard controls, and expanded-view persistence; checked the complete guide and verified the new interactions in Chromium including native touch input.",
+  "reviewed_at": "2026-09-16T09:07:24+00:00",
+  "commit": "5e169aab717c8fe9bf84c20549c344e0a080ffb6",
+  "fingerprint": "2a3e0046a45044ed6accfe14ec874268e34d924e25cabe8713d6bef27ccf4cbb",
   "snapshot": {
     "document_path": "wiki/manual-reading.md",
-    "document_sha256": "305f8e0b7c338ca4ee31d43ff997f9bce38db558af152e341b171cd7f77baea6",
+    "document_sha256": "4b61e2ea40f8cb0332e381a85b96f58c5c791eb00a64bff4114a7a4e922501af",
     "sources": {},
     "coverage": []
   }

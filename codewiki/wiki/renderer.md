@@ -102,6 +102,15 @@ from node positions or source tags; authors declare those relationships.
 `diagrams.js` renders each diagram and wraps matching nodes in real SVG links.
 Links support keyboard focus, normal navigation, copying the destination, and
 opening another tab. The expand button enlarges the canvas; Escape closes it.
+Each rendered SVG with a valid viewBox gets an independent clipped viewport.
+Zoom buttons and pointer-centered wheel zoom adjust its viewBox within 25–800%
+of the initial fitted view; Fit restores that view. Pointer dragging pans the
+diagram, including with one finger on touchscreens. Movement beyond a small
+threshold captures the pointer and suppresses the resulting click so dragging
+a linked node does not navigate. Focused canvases support +/− zoom, arrow-key
+panning, and 0/Home to fit. Toolbar labels and gesture hints follow the HTML
+language. Moving the same viewport into or out of the dialog retains its state;
+CSS fits it to the available area without stretching the diagram.
 A plain destination list below each explicitly mapped diagram offers the same path
 when diagrams fail to render or a reader prefers text.
 

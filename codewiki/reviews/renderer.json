@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "document": "renderer",
-  "outcome": "no-change",
-  "reason": "Reviewed the final render-only model: translated Markdown, legacy sections, canonical section kinds, linked HTML bodies, and source panels agree; canonical CLI documents remain untouched. Existing translation documentation remains accurate. Verified 71 tests and browser diagram navigation.",
-  "reviewed_at": "2026-09-13T17:00:23+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "240a1e507dcf4521b4242d2982c6222469543ee78d91fb83a60319c1364433da",
+  "outcome": "updated",
+  "reason": "Read the renderer guide and inspected the diagrams.js and style.css changes against the prior review; documented viewBox zoom limits, pointer-centered zoom, drag click suppression, keyboard controls, localization, and dialog state. Browser regression checks and desktop/mobile visual inspection passed.",
+  "reviewed_at": "2026-09-16T09:07:25+00:00",
+  "commit": "5e169aab717c8fe9bf84c20549c344e0a080ffb6",
+  "fingerprint": "4958ccb5db7d4d1d7d162bc4843cc720e0bc2ecc24d612dd44709b78d4ed5451",
   "snapshot": {
     "document_path": "wiki/renderer.md",
-    "document_sha256": "656cb401b70a829040dc27975c48f3617f8d431dbc7018901d00688700ce6278",
+    "document_sha256": "e22d4254654b6e935c3f5114cfad7929f1f2f5419a41ab75de5b294566c09645",
     "sources": {
       "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
       "../src/codewiki/localization.py": "e9ab8dd226b078fdfd62ea218487a9c0c0c01786ab151923638a023a5323da3b",
       "../src/codewiki/resources/theme/_base.html.j2": "bbce13bfafb26a6620094457eba4a81b1b5edae137b311867907af9669a67e18",
-      "../src/codewiki/resources/theme/diagrams.js": "ffd0c8bd5127de2ffe16fd05a4fb755828cca173a573615955fae8fe04fd08ca",
+      "../src/codewiki/resources/theme/diagrams.js": "849d26c13c080266b4e29cc1a0a091c1276d13be6b55642aa805db2befa496b1",
       "../src/codewiki/resources/theme/files.html.j2": "ed84ce5ed431cdc40eedb8f98eff5dc640caae394ce72140f7b928612276d0a4",
       "../src/codewiki/resources/theme/index.html.j2": "c9c2d6c0f63418eea4fd215dec3e3b0a3e536ccc7abc04c905849dd4d9ff9677",
       "../src/codewiki/resources/theme/page.html.j2": "b8e5dae3ef7601fae3879385fe202b4f55aa3b4d2eb9f63469a0db6104aff047",
       "../src/codewiki/resources/theme/reading.js": "9a0068e24790bd744ad6b57060bd21aaba24bebcab62cd23fd69850f24090685",
-      "../src/codewiki/resources/theme/style.css": "27324bbfff318c1721906a4c37edf28b8a5598bf7c3ca348f2ac6a43126e9361",
+      "../src/codewiki/resources/theme/style.css": "89093799d1f257d9ad3b328ffda9069bca767fe8dac101821ab8a2fdb781be7a",
       "../src/codewiki/ui_text.py": "226691851895366cfd6dc2898fc3f4fbbb4275c71b0fa8f0e98b5afb24c3bd71"
     },
     "coverage": [
