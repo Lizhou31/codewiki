@@ -79,7 +79,9 @@ checks remain separate activities, rather than an automated browser or release s
   are installed; it is not part of the pytest run.
 - **Installed-package smoke check:** build a wheel, install it in another environment,
   initialize a temporary project outside this checkout, and run a strict build.
-  Confirm that theme assets, templates, and skills were included.
+  Confirm that theme assets, templates, and skills were included. Pushing a `v*` tag
+  runs `.github/workflows/release.yml`, which repeats the tests on Python 3.10 and
+  3.13 and this smoke check before it publishes the GitHub release.
 - **Original-engine comparison:** build the target project's documentation with both
   engines against the same source state, then compare anchors and source bindings.
   The unit fixtures alone do not establish full P721 project compatibility.

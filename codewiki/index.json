@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-13T03:08:08+00:00",
+  "generated": "2026-10-13T03:17:37+00:00",
   "snapshot": {
     "framework_version": "0.5.1",
     "inputs": {
@@ -90,9 +90,9 @@
         "mtime_ns": 1791860110621338880
       },
       "reviews/testing.json": {
-        "sha256": "21fac89398442c3f3ee3961c2b27948b3179fbed00ed3291b019c2304ce6f844",
-        "size": 575,
-        "mtime_ns": 1791860048158492211
+        "sha256": "0a530354d6ddff9a655c3d3f5f7e4d2e6a5c6de9d5f0c01587666a1212b6f685",
+        "size": 612,
+        "mtime_ns": 1791861456567782800
       },
       "reviews/updates.json": {
         "sha256": "3fd2fe0c769cd862d74c866fd9ab138e0e7baf673b8b5950128b8a8a43853764",
@@ -315,14 +315,14 @@
         "mtime_ns": 1791794480617901846
       },
       "wiki/testing-ch_tw.md": {
-        "sha256": "5080f790f77544a09992b278a77bb0f8789841d1d7c542631a90e773e8d606d1",
-        "size": 4240,
-        "mtime_ns": 1791860028518441783
+        "sha256": "1ece8c800d23f6966b6d0a1bf012ff34dcf927cbc210670c601ad6616a686784",
+        "size": 4394,
+        "mtime_ns": 1791861453847157240
       },
       "wiki/testing.md": {
-        "sha256": "07f39787c440210faafb9f9c08040e294af510bf63552957d2f0328c14b7c53f",
-        "size": 4547,
-        "mtime_ns": 1791860028518203738
+        "sha256": "8bb25afb8ca308641026c13383c213380a59564dd397d061646fe4149c1bca47",
+        "size": 4717,
+        "mtime_ns": 1791861453846547719
       },
       "wiki/updates-ch_tw.md": {
         "sha256": "bf91f4e7555bf1ca6cfb042ba3ed9937f94aca227811712f8122352074a63f23",
@@ -588,7 +588,7 @@
     "repositories": [
       {
         "root": "..",
-        "commit": "1c0005e7fd80c0c194122e8f4b78a867fef607c8",
+        "commit": "d20f6468811f0ab24092fcd0c89f174d1aeb59de",
         "dirty": true
       }
     ]
@@ -22742,7 +22742,7 @@
         "test-framework",
         "test-languages"
       ],
-      "markdown": "---\nid: testing\ntype: subsystem\ntitle: Testing architecture\nstatus: stable\nparent: architecture\ngroup: verification\nsummary: Follow the verification path from isolated parser fixtures to whole-wiki\n  builds, CLI queries, and architecture navigation; inspect the assertions behind\n  each guarantee.\nowns: []\ndepends_on: []\nrelated:\n- build\n- renderer\ndiagram_links:\n  adapters: test-languages\n  integration: test-framework\n  reviews: reviews.tests\n  updates: updates.tests\n---\n\n## Test architecture\n\n```mermaid\nflowchart TB\n  suite[\"pytest \u00b7 tests/\"] --> adapters[\"Language binding tests\"]\n  suite --> integration[\"Framework integration tests\"]\n  suite --> reviews[\"Documentation review lifecycle\"]\n  suite --> updates[\"Instance update lifecycle\"]\n```\n\n**Choose a test layer to go deeper.** Language fixtures isolate parsing and binding;\ntemporary projects exercise the framework components together. The child pages\ncontain their own diagrams and link each test area to the assertions in source.\nThese are verification layers, not dependencies in the production build pipeline.\n\n## Run and select tests\n\nRun these commands from the framework repository, after installing its development\ndependencies. `pyproject.toml` configures pytest to discover `tests/`.\n\n```sh\n.venv/bin/python -m pytest -q\n.venv/bin/python -m pytest tests/test_languages.py -q\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_review.py -q\n.venv/bin/python -m pytest tests/test_update.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n.venv/bin/python -m pytest --collect-only -q\n.venv/bin/codewiki build --strict\n```\n\nParameterized cases expand into multiple pytest tests; collection is the source of\ntruth for the current case count. The strict wiki build is a separate check of\nMarkdown structure and source bindings, not a command that runs pytest.\n\nFor an LLM, the same reading path is available without loading this entire page:\n\n```sh\n.venv/bin/codewiki query doc testing\n.venv/bin/codewiki query section test-framework.diagrams\n.venv/bin/codewiki query symbol tests.test_framework.test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids\n.venv/bin/codewiki query source tests.test_framework.test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids --limit 30\n```\n\n## Additional verification and current gaps\n\nThe committed pytest suite covers Python behavior and generated files, including\nreview transitions and CI exit codes. [Review tests](reviews.html#tests) check\nthat rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following\nchecks remain separate activities, rather than an automated browser or release suite:\n\n- **Browser review:** open the architecture map, follow a component into a section,\n  expand its source, test diagram expansion and keyboard navigation, and inspect a\n  narrow viewport for overflow and console errors. The optional\n  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and\n  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright\n  are installed; it is not part of the pytest run.\n- **Installed-package smoke check:** build a wheel, install it in another environment,\n  initialize a temporary project outside this checkout, and run a strict build.\n  Confirm that theme assets, templates, and skills were included.\n- **Original-engine comparison:** build the target project's documentation with both\n  engines against the same source state, then compare anchors and source bindings.\n  The unit fixtures alone do not establish full P721 project compatibility.\n\nThere are no committed browser automation, performance, or coverage-threshold checks\nin this suite. Tests and documentation should state the guarantee actually asserted,\nnot treat a successful run as evidence of complete codebase coverage.\n\n## Extend the tests with a behavior change\n\nAdd a minimal syntax fixture in `test_languages.py` when changing a scanner. For\nchanges that cross parsing, validation, rendering, or queries, use a temporary-project\ncase in `test_framework.py`. When fixing a bug, first capture the failing input and\nassert the observable result or preserved file state.\n\nKeep the relevant `test-framework.*` or `test-languages.*` source tag above the test declaration, including above\nits decorators. The self-wiki scans `tests/`, so renamed test functions and changed\nline ranges remain reachable through the same stable documentation section.\n",
+      "markdown": "---\nid: testing\ntype: subsystem\ntitle: Testing architecture\nstatus: stable\nparent: architecture\ngroup: verification\nsummary: Follow the verification path from isolated parser fixtures to whole-wiki\n  builds, CLI queries, and architecture navigation; inspect the assertions behind\n  each guarantee.\nowns: []\ndepends_on: []\nrelated:\n- build\n- renderer\ndiagram_links:\n  adapters: test-languages\n  integration: test-framework\n  reviews: reviews.tests\n  updates: updates.tests\n---\n\n## Test architecture\n\n```mermaid\nflowchart TB\n  suite[\"pytest \u00b7 tests/\"] --> adapters[\"Language binding tests\"]\n  suite --> integration[\"Framework integration tests\"]\n  suite --> reviews[\"Documentation review lifecycle\"]\n  suite --> updates[\"Instance update lifecycle\"]\n```\n\n**Choose a test layer to go deeper.** Language fixtures isolate parsing and binding;\ntemporary projects exercise the framework components together. The child pages\ncontain their own diagrams and link each test area to the assertions in source.\nThese are verification layers, not dependencies in the production build pipeline.\n\n## Run and select tests\n\nRun these commands from the framework repository, after installing its development\ndependencies. `pyproject.toml` configures pytest to discover `tests/`.\n\n```sh\n.venv/bin/python -m pytest -q\n.venv/bin/python -m pytest tests/test_languages.py -q\n.venv/bin/python -m pytest tests/test_framework.py -q\n.venv/bin/python -m pytest tests/test_review.py -q\n.venv/bin/python -m pytest tests/test_update.py -q\n.venv/bin/python -m pytest tests/test_framework.py -k 'diagram or architecture' -q\n.venv/bin/python -m pytest --collect-only -q\n.venv/bin/codewiki build --strict\n```\n\nParameterized cases expand into multiple pytest tests; collection is the source of\ntruth for the current case count. The strict wiki build is a separate check of\nMarkdown structure and source bindings, not a command that runs pytest.\n\nFor an LLM, the same reading path is available without loading this entire page:\n\n```sh\n.venv/bin/codewiki query doc testing\n.venv/bin/codewiki query section test-framework.diagrams\n.venv/bin/codewiki query symbol tests.test_framework.test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids\n.venv/bin/codewiki query source tests.test_framework.test_diagrams_share_dependencies_with_cli_and_resolve_exact_ids --limit 30\n```\n\n## Additional verification and current gaps\n\nThe committed pytest suite covers Python behavior and generated files, including\nreview transitions and CI exit codes. [Review tests](reviews.html#tests) check\nthat rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following\nchecks remain separate activities, rather than an automated browser or release suite:\n\n- **Browser review:** open the architecture map, follow a component into a section,\n  expand its source, test diagram expansion and keyboard navigation, and inspect a\n  narrow viewport for overflow and console errors. The optional\n  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and\n  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright\n  are installed; it is not part of the pytest run.\n- **Installed-package smoke check:** build a wheel, install it in another environment,\n  initialize a temporary project outside this checkout, and run a strict build.\n  Confirm that theme assets, templates, and skills were included. Pushing a `v*` tag\n  runs `.github/workflows/release.yml`, which repeats the tests on Python 3.10 and\n  3.13 and this smoke check before it publishes the GitHub release.\n- **Original-engine comparison:** build the target project's documentation with both\n  engines against the same source state, then compare anchors and source bindings.\n  The unit fixtures alone do not establish full P721 project compatibility.\n\nThere are no committed browser automation, performance, or coverage-threshold checks\nin this suite. Tests and documentation should state the guarantee actually asserted,\nnot treat a successful run as evidence of complete codebase coverage.\n\n## Extend the tests with a behavior change\n\nAdd a minimal syntax fixture in `test_languages.py` when changing a scanner. For\nchanges that cross parsing, validation, rendering, or queries, use a temporary-project\ncase in `test_framework.py`. When fixing a bug, first capture the failing input and\nassert the observable result or preserved file state.\n\nKeep the relevant `test-framework.*` or `test-languages.*` source tag above the test declaration, including above\nits decorators. The self-wiki scans `tests/`, so renamed test functions and changed\nline ranges remain reachable through the same stable documentation section.\n",
       "decisions": [],
       "sections": [
         {
@@ -22777,9 +22777,9 @@
           "level": 2,
           "kind": "other",
           "line_start": 67,
-          "line_end": 90,
-          "markdown": "## Additional verification and current gaps\n\nThe committed pytest suite covers Python behavior and generated files, including\nreview transitions and CI exit codes. [Review tests](reviews.html#tests) check\nthat rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following\nchecks remain separate activities, rather than an automated browser or release suite:\n\n- **Browser review:** open the architecture map, follow a component into a section,\n  expand its source, test diagram expansion and keyboard navigation, and inspect a\n  narrow viewport for overflow and console errors. The optional\n  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and\n  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright\n  are installed; it is not part of the pytest run.\n- **Installed-package smoke check:** build a wheel, install it in another environment,\n  initialize a temporary project outside this checkout, and run a strict build.\n  Confirm that theme assets, templates, and skills were included.\n- **Original-engine comparison:** build the target project's documentation with both\n  engines against the same source state, then compare anchors and source bindings.\n  The unit fixtures alone do not establish full P721 project compatibility.\n\nThere are no committed browser automation, performance, or coverage-threshold checks\nin this suite. Tests and documentation should state the guarantee actually asserted,\nnot treat a successful run as evidence of complete codebase coverage.\n\n",
-          "body": "\nThe committed pytest suite covers Python behavior and generated files, including\nreview transitions and CI exit codes. [Review tests](reviews.html#tests) check\nthat rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following\nchecks remain separate activities, rather than an automated browser or release suite:\n\n- **Browser review:** open the architecture map, follow a component into a section,\n  expand its source, test diagram expansion and keyboard navigation, and inspect a\n  narrow viewport for overflow and console errors. The optional\n  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and\n  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright\n  are installed; it is not part of the pytest run.\n- **Installed-package smoke check:** build a wheel, install it in another environment,\n  initialize a temporary project outside this checkout, and run a strict build.\n  Confirm that theme assets, templates, and skills were included.\n- **Original-engine comparison:** build the target project's documentation with both\n  engines against the same source state, then compare anchors and source bindings.\n  The unit fixtures alone do not establish full P721 project compatibility.\n\nThere are no committed browser automation, performance, or coverage-threshold checks\nin this suite. Tests and documentation should state the guarantee actually asserted,\nnot treat a successful run as evidence of complete codebase coverage.\n\n"
+          "line_end": 92,
+          "markdown": "## Additional verification and current gaps\n\nThe committed pytest suite covers Python behavior and generated files, including\nreview transitions and CI exit codes. [Review tests](reviews.html#tests) check\nthat rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following\nchecks remain separate activities, rather than an automated browser or release suite:\n\n- **Browser review:** open the architecture map, follow a component into a section,\n  expand its source, test diagram expansion and keyboard navigation, and inspect a\n  narrow viewport for overflow and console errors. The optional\n  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and\n  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright\n  are installed; it is not part of the pytest run.\n- **Installed-package smoke check:** build a wheel, install it in another environment,\n  initialize a temporary project outside this checkout, and run a strict build.\n  Confirm that theme assets, templates, and skills were included. Pushing a `v*` tag\n  runs `.github/workflows/release.yml`, which repeats the tests on Python 3.10 and\n  3.13 and this smoke check before it publishes the GitHub release.\n- **Original-engine comparison:** build the target project's documentation with both\n  engines against the same source state, then compare anchors and source bindings.\n  The unit fixtures alone do not establish full P721 project compatibility.\n\nThere are no committed browser automation, performance, or coverage-threshold checks\nin this suite. Tests and documentation should state the guarantee actually asserted,\nnot treat a successful run as evidence of complete codebase coverage.\n\n",
+          "body": "\nThe committed pytest suite covers Python behavior and generated files, including\nreview transitions and CI exit codes. [Review tests](reviews.html#tests) check\nthat rebuilds cannot acknowledge a review and uncovered source stays out of scope. The following\nchecks remain separate activities, rather than an automated browser or release suite:\n\n- **Browser review:** open the architecture map, follow a component into a section,\n  expand its source, test diagram expansion and keyboard navigation, and inspect a\n  narrow viewport for overflow and console errors. The optional\n  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and\n  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright\n  are installed; it is not part of the pytest run.\n- **Installed-package smoke check:** build a wheel, install it in another environment,\n  initialize a temporary project outside this checkout, and run a strict build.\n  Confirm that theme assets, templates, and skills were included. Pushing a `v*` tag\n  runs `.github/workflows/release.yml`, which repeats the tests on Python 3.10 and\n  3.13 and this smoke check before it publishes the GitHub release.\n- **Original-engine comparison:** build the target project's documentation with both\n  engines against the same source state, then compare anchors and source bindings.\n  The unit fixtures alone do not establish full P721 project compatibility.\n\nThere are no committed browser automation, performance, or coverage-threshold checks\nin this suite. Tests and documentation should state the guarantee actually asserted,\nnot treat a successful run as evidence of complete codebase coverage.\n\n"
         },
         {
           "id": "testing.extend-the-tests-with-a-behavior-change",
@@ -22788,8 +22788,8 @@
           "title": "Extend the tests with a behavior change",
           "level": 2,
           "kind": "other",
-          "line_start": 91,
-          "line_end": 100,
+          "line_start": 93,
+          "line_end": 102,
           "markdown": "## Extend the tests with a behavior change\n\nAdd a minimal syntax fixture in `test_languages.py` when changing a scanner. For\nchanges that cross parsing, validation, rendering, or queries, use a temporary-project\ncase in `test_framework.py`. When fixing a bug, first capture the failing input and\nassert the observable result or preserved file state.\n\nKeep the relevant `test-framework.*` or `test-languages.*` source tag above the test declaration, including above\nits decorators. The self-wiki scans `tests/`, so renamed test functions and changed\nline ranges remain reachable through the same stable documentation section.\n",
           "body": "\nAdd a minimal syntax fixture in `test_languages.py` when changing a scanner. For\nchanges that cross parsing, validation, rendering, or queries, use a temporary-project\ncase in `test_framework.py`. When fixing a bug, first capture the failing input and\nassert the observable result or preserved file state.\n\nKeep the relevant `test-framework.*` or `test-languages.*` source tag above the test declaration, including above\nits decorators. The self-wiki scans `tests/`, so renamed test functions and changed\nline ranges remain reachable through the same stable documentation section.\n"
         }
@@ -26536,10 +26536,10 @@
         "title": "Testing architecture",
         "source": "wiki/testing.md",
         "state": "current",
-        "fingerprint": "b1f65bccc1e390a9f3b9768bb5f91b4ace18396ca9767dc3b5d05713d2e27185",
+        "fingerprint": "4781189233179c7d9b7cc5958312fee8eccec9a3a532290acb8c566a7eda8a1b",
         "snapshot": {
           "document_path": "wiki/testing.md",
-          "document_sha256": "07f39787c440210faafb9f9c08040e294af510bf63552957d2f0328c14b7c53f",
+          "document_sha256": "8bb25afb8ca308641026c13383c213380a59564dd397d061646fe4149c1bca47",
           "sources": {},
           "coverage": []
         },
@@ -26547,13 +26547,13 @@
           "schema_version": 1,
           "document": "testing",
           "outcome": "updated",
-          "reason": "Browser script now also checks code labels and SVG figures; updated the optional browser check description.",
-          "reviewed_at": "2026-10-13T02:54:08+00:00",
-          "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
-          "fingerprint": "b1f65bccc1e390a9f3b9768bb5f91b4ace18396ca9767dc3b5d05713d2e27185",
+          "reason": "Noted that the new tag-triggered release workflow repeats the tests on Python 3.10/3.13 and the installed-package smoke check before publishing.",
+          "reviewed_at": "2026-10-13T03:17:36+00:00",
+          "commit": "d20f6468811f0ab24092fcd0c89f174d1aeb59de",
+          "fingerprint": "4781189233179c7d9b7cc5958312fee8eccec9a3a532290acb8c566a7eda8a1b",
           "snapshot": {
             "document_path": "wiki/testing.md",
-            "document_sha256": "07f39787c440210faafb9f9c08040e294af510bf63552957d2f0328c14b7c53f",
+            "document_sha256": "8bb25afb8ca308641026c13383c213380a59564dd397d061646fe4149c1bca47",
             "sources": {},
             "coverage": []
           }
