@@ -24,13 +24,15 @@ diagram_links:
   config: architecture.instances
   testing: testing
   reviews: reviews
+diagram_groups:
+  config: analysis
 depends_on: []
 decisions: []
 ---
 
 ## 架構圖 {#architecture-map}
 
-**選擇一項職責以查看細節。** 藍色節點開啟指南，綠色節點開啟特定章節。實線箭頭由呼叫者或使用者指向其使用的服務；虛線箭頭表示測試涵蓋的對象。
+**選擇一項職責以查看細節。** 顏色代表每項職責所屬的群組，與下方元件卡片使用相同顏色。填色節點開啟指南，無填色節點開啟特定章節。
 
 ```mermaid
 flowchart LR
@@ -65,6 +67,7 @@ flowchart LR
   queries -->|檢查新鮮度| history
   testing -.->|測試| orchestrator
 ```
+Figure: 依群組區分的框架職責。實線箭頭由呼叫者或使用者指向其使用的服務，並採用呼叫者的顏色；虛線箭頭表示測試涵蓋的對象。
 
 **建置協調器**由 `run()` 與 `analyze()` 實作，負責協調各項職責。其節點連到[協調流程](build.html#orchestration)。**建置管線**是涵蓋分析、審查狀態、渲染與發佈的完整過程；請參閱獨立的[建置流程圖](build.html#inside-the-pipeline)，瞭解執行順序與輸出。
 

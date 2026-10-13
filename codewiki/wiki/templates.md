@@ -3,6 +3,7 @@ id: templates
 type: component
 status: stable
 parent: architecture
+group: authoring
 title: Document templates
 summary: Reusable architecture, subsystem, component, and decision documents establish
   the reading hierarchy without copying the framework.

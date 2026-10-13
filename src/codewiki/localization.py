@@ -37,8 +37,9 @@ def page_name(name, locale):
 
 # @wiki:impl renderer.translations
 def load_translations(w, docs, warns):
-    from .build import Warning, parse_doc
+    from .build import Warning, parse_doc, diagram_destinations, figure_issues
     canonical = {w.abs(d.path): d for d in docs}
+    destinations = diagram_destinations(docs)
     translations = {}
     for path in sorted(w.wiki_dir.rglob("*.md")):
         if any(part.startswith("_") for part in path.relative_to(w.wiki_dir).parts):
@@ -65,6 +66,8 @@ def load_translations(w, docs, warns):
         if original.id in variants:
             warns.append(Warning("invalid-translation", "duplicate translation for this language", w.rel(path)))
             continue
+        # A translation may point at its own localized SVG; it must pass the same checks.
+        warns.extend(figure_issues(w, translated, w.cfg.get("groups") or {}, destinations))
         variants[original.id] = translated
     return translations
 

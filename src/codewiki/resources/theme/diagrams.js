@@ -5,7 +5,7 @@
   Object.assign(labels, {
     'Zoom in': '放大', 'Zoom out': '縮小', 'Fit': '符合視窗',
     'Fit diagram': '圖表符合視窗', 'Diagram zoom': '圖表縮放比例',
-    'Interactive diagram': '互動圖表',
+    'Interactive diagram': '互動圖表', 'Diagram legend': '圖例',
     'Scroll to zoom · Drag to move · Focus diagram: + / − to zoom, arrows to move, 0 to fit':
       '滾動以縮放 · 拖曳以移動 · 聚焦圖表後：+ / − 縮放、方向鍵移動、0 符合視窗'
   });
@@ -139,6 +139,10 @@
   const data = document.getElementById('diagram-targets');
   if (!data || !window.mermaid) return;
   const targets = JSON.parse(data.textContent);
+  const styleData = document.getElementById('diagram-groups');
+  const styles = styleData ? JSON.parse(styleData.textContent) : {nodes: {}, groups: []};
+  const groups = new Map(styles.groups.map(group => [group.name, group]));
+  const groupOf = key => groups.get(styles.nodes[key]);
   const dark = matchMedia('(prefers-color-scheme: dark)').matches;
   mermaid.initialize({
     startOnLoad: false, securityLevel: 'loose', theme: 'base',
@@ -153,8 +157,52 @@
       fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif', fontSize: '14px'
     }
   });
-  const keys = Object.keys(targets).sort((a, b) => b.length - a.length);
+  const keys = [...new Set([...Object.keys(targets), ...Object.keys(styles.nodes)])].sort((a, b) => b.length - a.length);
   const escapeRegex = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // Edges are coloured by their source node; each colour needs its own arrowhead marker.
+  const colorEdges = (svg, nodeIds, used) => {
+    const ids = [...nodeIds].sort((a, b) => b.length - a.length);
+    const marker = (url, color) => {
+      const id = (url.match(/^url\(#(.+)\)$/) || [])[1];
+      const original = id && svg.querySelector('#' + CSS.escape(id));
+      if (!original) return url;
+      const cloneId = `${id}-cw-${color}`;
+      if (!svg.querySelector('#' + CSS.escape(cloneId))) {
+        const clone = original.cloneNode(true);
+        clone.id = cloneId;
+        clone.classList.add('cw-marker', 'cw-' + color);
+        original.after(clone);
+      }
+      return `url(#${cloneId})`;
+    };
+    for (const edge of svg.querySelectorAll('path.flowchart-link[data-id]')) {
+      const name = edge.dataset.id;
+      const source = ids.find(id => name.startsWith(`L_${id}_`) && nodeIds.has((name.slice(id.length + 3).match(/^(.+)_\d+$/) || [])[1]));
+      const group = source && groupOf(source);
+      if (!group) continue;
+      used.add(styles.nodes[source]);
+      edge.classList.add('cw-edge', 'cw-' + group.color);
+      for (const attribute of ['marker-start', 'marker-end']) {
+        const value = edge.getAttribute(attribute);
+        if (value) edge.setAttribute(attribute, marker(value, group.color));
+      }
+    }
+  };
+  // A subgraph is tinted only when every node drawn inside it belongs to the same group.
+  const colorLanes = (svg, members) => {
+    const boxes = members.map(({el, name}) => {
+      const rect = el.getBoundingClientRect();
+      return {name, x: rect.left + rect.width / 2, y: rect.top + rect.height / 2};
+    });
+    for (const cluster of svg.querySelectorAll('.cluster')) {
+      const frame = cluster.querySelector(':scope > rect');
+      const r = frame && frame.getBoundingClientRect();
+      if (!r || !r.width || !r.height) continue;
+      const names = new Set(boxes.filter(b => b.x >= r.left && b.x <= r.right && b.y >= r.top && b.y <= r.bottom).map(b => b.name));
+      const group = names.size === 1 && groups.get([...names][0]);
+      if (group) cluster.classList.add('cw-lane', 'cw-' + group.color);
+    }
+  };
   for (const diagram of document.querySelectorAll('.mermaid')) {
     const wrap = diagram.closest('.mermaid-wrap');
     try {
@@ -199,11 +247,24 @@
     wrap.prepend(toolbar);
     enableZoom(diagram, svg, toolbar);
     const nodes = svg.querySelectorAll('.node');
+    const nodeIds = new Set();
+    const grouped = [];
+    const used = new Set();
     let linked = 0;
     for (const el of nodes) {
+      const flowchartId = (el.id.match(/-flowchart-(.+)-\d+$/) || [])[1];
+      if (flowchartId) nodeIds.add(flowchartId);
       const key = keys.find(k => el.id === k || new RegExp('-' + escapeRegex(k) + '-\\d+$').test(el.id));
+      const group = key && groupOf(key);
+      // Every node is listed, so a subgraph that also holds an ungrouped node stays untinted.
+      grouped.push({el, name: group ? styles.nodes[key] : null});
       if (!key) continue;
+      if (group) {
+        used.add(styles.nodes[key]);
+        el.classList.add('cw-group', 'cw-' + group.color);
+      }
       const target = targets[key];
+      if (!target) continue;
       linked++;
       el.classList.add('mm-link', 'mm-' + target.kind);
       // A real SVG link supports keyboard navigation, copy-link, and opening a tab.
@@ -221,5 +282,20 @@
       });
     }
     label.textContent = linked + tr(' linked nodes · select to explore');
+    colorEdges(svg, nodeIds, used);
+    colorLanes(svg, grouped);
+    if (used.size) {
+      const legend = document.createElement('ul');
+      legend.className = 'diagram-legend';
+      legend.setAttribute('aria-label', tr('Diagram legend'));
+      for (const group of styles.groups) {
+        if (!used.has(group.name)) continue;
+        const item = document.createElement('li');
+        item.className = 'cw-' + group.color;
+        item.textContent = group.label;
+        legend.append(item);
+      }
+      (wrap.querySelector('.diagram-viewport') || diagram).after(legend);
+    }
   }
 })();

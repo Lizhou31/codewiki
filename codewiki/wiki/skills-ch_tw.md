@@ -36,6 +36,7 @@ flowchart TB
   check --> query
   review["wiki-review · 更新或確認並附理由"] --> check
 ```
+Figure: 五項技能如何彼此交接工作。箭頭表示工作流程順序，而非 Python 匯入關係。
 
 箭頭描述撰寫工作流程，不是 Python 匯入關係。技能是由 LLM 客戶端載入的 Markdown 指示，不在渲染器內執行。
 
@@ -59,7 +60,7 @@ codewiki query source codewiki.build.diagram_targets --limit 40
 
 ## 依證據撰寫 {#author}
 
-`wiki-author/SKILL.md` 要求作者先讀原始碼再說明行為、選擇穩定 ID、定義檔案責任，並以標籤或 refs 綁定重要概念。高層元件圖是作者撰寫的說明；`depends_on` 關係與 `diagram_links` 應和說明在同一次 Markdown 變更中維護。
+`wiki-author/SKILL.md` 要求作者先讀原始碼再說明行為、選擇穩定 ID、定義檔案責任，並以標籤或 refs 綁定重要概念。高層元件圖是作者撰寫的說明；`depends_on` 關係與 `diagram_links` 應和說明在同一次 Markdown 變更中維護。技能以設定好的頁面群組決定圖表顏色，而非臨時樣式，並在有助於讀者時加入 `Figure:` 說明文字與提示框。其 `references/figures.md` 檔記載 SVG 圖規則（主題類別、`data-group`、`data-link` 與禁止內容），只在需要繪圖時讀取。
 
 重構或其他程式碼變更後，技能會區分目前說明與決策歷史：更新不再正確的頁面，
 並將有價值的理由附加為決策條目；重大選擇則建立連結的決策頁面。

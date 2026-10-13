@@ -20,8 +20,8 @@ def validate_frontmatter(fm):
         raise ValueError("frontmatter must be a mapping")
     if not isinstance(fm.get("id"), str) or not ID.fullmatch(fm["id"]) or fm["id"] in ("index", "files"):
         raise ValueError("id must be a safe, nonempty identifier (index/files are reserved)")
-    for key in ("title", "summary", "type", "status", "parent"):
-        if key in fm and not isinstance(fm[key], str) and not (key == "parent" and fm[key] is None):
+    for key in ("title", "summary", "type", "status", "parent", "group"):
+        if key in fm and not isinstance(fm[key], str) and not (key in ("parent", "group") and fm[key] is None):
             raise ValueError(f"{key} must be a string")
     for key in ("owns", "related", "depends_on"):
         fm[key] = fm.get(key) or []
@@ -33,6 +33,12 @@ def validate_frontmatter(fm):
         for node, target in links.items()
     ):
         raise ValueError("diagram_links must map node identifiers to document or section IDs")
+    groups = fm.setdefault("diagram_groups", {})
+    if not isinstance(groups, dict) or any(
+        not isinstance(node, str) or not ID.fullmatch(node) or not isinstance(group, str)
+        for node, group in groups.items()
+    ):
+        raise ValueError("diagram_groups must map node identifiers to group names")
     fm["refs"] = fm.get("refs") or []
     if not isinstance(fm["refs"], list):
         raise ValueError("refs must be a list")

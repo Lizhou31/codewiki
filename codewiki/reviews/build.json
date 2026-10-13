@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "build",
-  "outcome": "updated",
-  "reason": "Documented canonical English indexing, separate HTML translation validation, and retirement through the rendered_pages manifest; verified orchestration and publication tests.",
-  "reviewed_at": "2026-09-13T16:59:00+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "ffbdc84a92531aab5ce332197c35527eeef0f895087e5011f94f2eda33aa4b7f",
+  "outcome": "no-change",
+  "reason": "build.py change limited to SVG figure safety: event-handler and javascript: checks now apply to tag attributes only, so figure text may mention them. Orchestration, strict gate, and index export text remain accurate.",
+  "reviewed_at": "2026-10-13T02:55:08+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "453abf913995c8074fc15221d46b56d6a8a439a3310bff2e4dcf58bf8f8553f8",
   "snapshot": {
     "document_path": "wiki/build.md",
-    "document_sha256": "6e3ed4b78c76b703e3627f72c4fd8d1033fc30f1d02db03279783df1e24ab7e5",
+    "document_sha256": "7c4687aa7e29f687cb04a202b2fd0160cdd2fca2e46f6548c31ae72e700c60cc",
     "sources": {
-      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e"
+      "../src/codewiki/build.py": "c606ef945255a1dc6ae58a572a06b8c2d79f2dc7fea9ce3c2d57da96552db03b"
     },
     "coverage": [
       {

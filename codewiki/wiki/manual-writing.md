@@ -128,6 +128,41 @@ For architecture diagrams, node IDs can target pages or local headings. Explicit
 cross-page targets use `diagram_links`; see the separate
 [HTML renderer guide](renderer.html#navigation) for the resolution rules.
 
+To make diagram colors carry meaning, declare `groups` in the configuration and
+set `group:` on the top page of each part of the system; child pages inherit it.
+Linked nodes, their outgoing arrows, uniform subgraphs, and component cards then
+share that group's color, and each diagram gets a legend. Use `diagram_groups`
+for nodes that have no page of their own. See [semantic groups](renderer.html#groups).
+
+Put a `Figure:` paragraph directly after a diagram to give it a numbered caption,
+and use GitHub alert syntax for notices that a reader must not miss:
+
+````markdown
+```mermaid
+flowchart LR
+  host --> firmware
+```
+Figure: Data path of one remap request.
+
+> [!CAUTION]
+> Build both cores with the same key count.
+````
+
+Supported alerts are `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, and `CAUTION`. GitHub
+renders the same Markdown as alerts too.
+
+Linked flowchart nodes show the file or function behind them as a second line,
+taken from your source tags and `owns` lists, so keep tags on the declarations a
+diagram names. Set `diagram_code_labels: false` in the configuration to hide them.
+
+When a picture needs exact placement, such as a timing diagram or a memory layout,
+draw an SVG file and reference it on its own line, for example
+`![Latch timing](figures/latch-timing.svg)`, followed by an optional `Figure:`
+caption. Use the theme classes and `data-group` / `data-link` attributes described
+in [SVG figures](renderer.html#figures) so the drawing follows dark mode and group
+colors and its labels open wiki pages. The `wiki-author` skill's
+`references/figures.md` gives agents the same rules.
+
 ## Refresh existing documentation {#refresh}
 
 For the framework's own wiki, run these commands from the framework repository:

@@ -3,6 +3,7 @@ id: languages
 type: component
 status: stable
 parent: architecture
+group: analysis
 related: []
 refs: []
 title: Language adapters

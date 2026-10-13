@@ -18,6 +18,32 @@ const {chromium} = require('playwright');
       await page.waitForSelector('.diagram-controls output');
     };
     await open('architecture.html');
+    // Semantic groups: legend order, lane tint, and edge + arrowhead colour follow configuration.
+    const groups = await page.evaluate(() => {
+      const svg = document.querySelector('.mermaid svg');
+      const edge = svg.querySelector('path.flowchart-link[data-id="L_authoring_templates_0"]');
+      const markerId = edge.getAttribute('marker-end').match(/#(.+)\)/)[1];
+      const arrow = svg.querySelector('#' + CSS.escape(markerId) + ' .arrowMarkerPath');
+      const node = [...svg.querySelectorAll('.node')].find(n => /-flowchart-authoring-\d+$/.test(n.id));
+      return {
+        legend: [...document.querySelectorAll('.diagram-legend li')].map(li => li.textContent),
+        lanes: [...svg.querySelectorAll('.cluster.cw-lane')].map(c => [...c.classList].find(n => /^cw-(?!lane)/.test(n))).sort(),
+        edgeClass: [...edge.classList].filter(n => n.startsWith('cw-')),
+        edgeStroke: getComputedStyle(edge).stroke, arrowFill: getComputedStyle(arrow).fill,
+        nodeStroke: getComputedStyle(node.querySelector('rect')).stroke,
+      };
+    });
+    assert.deepEqual(groups.legend, ['Authoring + instances', 'Build pipeline', 'Analysis services', 'Outputs + queries', 'Verification']);
+    assert.deepEqual(groups.lanes, ['cw-blue', 'cw-green', 'cw-violet']);
+    assert.deepEqual(groups.edgeClass, ['cw-edge', 'cw-green']);
+    assert.equal(groups.arrowFill, groups.edgeStroke);
+    assert.equal(groups.edgeStroke, groups.nodeStroke);  // An edge takes its source node's colour.
+    assert.match(await page.locator('figcaption').first().textContent(), /^Figure 1\. /);
+    // Linked nodes carry their code on one unwrapped second line.
+    const code = page.locator('.mermaid .node .cw-code', {hasText: 'build.py · '}).first();
+    assert.match(await code.textContent(), /^build\.py · \w+\(\)/);
+    const codeBox = await code.boundingBox();
+    assert.ok(codeBox.height < 24, `code label wrapped: ${codeBox.height}px`);
     const canvas = page.locator('.diagram-viewport').first();
     const wrap = page.locator('.mermaid-wrap').first();
     const svg = canvas.locator('svg');
@@ -35,7 +61,8 @@ const {chromium} = require('playwright');
     // Zoom must keep the SVG point beneath the mouse stationary.
     await canvas.scrollIntoViewIfNeeded();
     const rect = await canvas.boundingBox();
-    const mouse = {x: rect.x + rect.width * 0.65, y: rect.y + rect.height * 0.4};
+    // Wheel events report whole-pixel client coordinates; measure at the same point.
+    const mouse = {x: Math.round(rect.x + rect.width * 0.65), y: Math.round(rect.y + rect.height * 0.4)};
     const svgPoint = () => svg.evaluate((el, position) => {
       const p = el.createSVGPoint();
       p.x = position.x; p.y = position.y;
@@ -91,9 +118,21 @@ const {chromium} = require('playwright');
     assert.equal(await wrap.locator('output').textContent(), '25%');
     assert.equal(await zoomOut.isEnabled(), false);
 
+    // A hand-drawn SVG figure is inlined, themed by group, and its links navigate.
+    await page.goto(pathToFileURL(path.join(site, 'reviews.html')).href);
+    const svgFigure = page.locator('.svg-figure').first();
+    assert.equal(await svgFigure.getAttribute('aria-label'), 'Index freshness and review state over time');
+    const waves = await svgFigure.evaluate(el => [...el.querySelectorAll('[data-group]')].map(g =>
+      [g.className.baseVal, getComputedStyle(g.querySelector('.fig-wave')).stroke]));
+    assert.deepEqual(waves.map(([name]) => name), ['cw-violet', 'cw-blue', 'cw-amber']);
+    assert.equal(new Set(waves.map(([, stroke]) => stroke)).size, 3);
+    await svgFigure.locator('a.fig-link', {hasText: 'REVIEW STATE'}).click();
+    assert.match(page.url(), /reviews\.html#status$/);
+    await open('architecture.html');
     await page.setViewportSize({width: 390, height: 844});
     await open('architecture-ch_tw.html');
     assert.equal(await wrap.getByRole('button', {name: '放大', exact: true}).count(), 1);
+    assert.deepEqual(await page.locator('.diagram-legend li').allTextContents(), ['撰寫與實例', '建置流程', '分析服務', '輸出與查詢', '驗證']);
     const bounds = await canvas.boundingBox();
     const svgBounds = await svg.boundingBox();
     assert.ok(bounds.width <= 390 && Math.abs(svgBounds.width - bounds.width) < 1);
@@ -121,7 +160,7 @@ const {chromium} = require('playwright');
     await cdp.send('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []});
     assert.notEqual(await touchSvg.getAttribute('viewBox'), touchInitial);
     assert.deepEqual(errors, []);
-    console.log('Diagram browser checks passed: zoom, pointer anchoring, linked-node drag/click, dialog state, keyboard, limits, mobile layout, localization, touch.');
+    console.log('Diagram browser checks passed: group colours, legend, captions, code labels, SVG figures, zoom, pointer anchoring, linked-node drag/click, dialog state, keyboard, limits, mobile layout, localization, touch.');
   } finally {
     await browser.close();
   }

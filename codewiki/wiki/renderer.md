@@ -3,6 +3,7 @@ id: renderer
 type: component
 status: stable
 parent: architecture
+group: output
 title: HTML renderer
 summary: 'Turn the document model into an offline architecture explorer: component
   maps, section navigation, and expandable source evidence.'
@@ -27,6 +28,7 @@ diagram_links:
   navigation: renderer.navigation
   diagrams: renderer.diagrams
   reading: renderer.reading
+  groups: renderer.groups
 ---
 
 ## Inside the renderer
@@ -48,9 +50,14 @@ flowchart TB
   publication --> navigation["Resolve diagram destinations"]
   navigation --> diagrams["Clickable Mermaid nodes"]
   publication --> reading["Outline + expandable implementations"]
+  groups["Group colors + legend"] --> diagrams
 ```
+Figure: From the shared model to published pages. Each node opens the section
+that implements that stage.
 
-Blue linked nodes open another component; green linked nodes open a section.
+When a project declares [semantic groups](#groups), node color names the linked
+page's group: a tinted node opens a component and a plain node opens a section.
+Without groups, blue linked nodes open a component and green ones open a section.
 The same page works as static HTML. JavaScript enhances diagrams and reading tools.
 
 ## Markdown to sections {#markdown}
@@ -59,6 +66,13 @@ The same page works as static HTML. JavaScript enhances diagrams and reading too
 HTML; diagrams remain escaped source until the browser renders them with the vendored
 Mermaid library. Each section is emitted once, in Markdown order. Heading IDs become
 stable destinations, and tagged declarations appear directly below their explanation.
+
+A paragraph that starts with `Figure:` directly after a Mermaid block becomes that
+diagram's caption. Captioned diagrams are numbered in page order across sections
+(`Figure 1.`, `Figure 2.`); diagrams without a caption are not counted. GitHub alert
+blockquotes (`> [!NOTE]`, `TIP`, `IMPORTANT`, `WARNING`, or `CAUTION` on the first
+line) become labelled callouts; other blockquotes stay unchanged. Translated pages
+show localized figure and callout labels. The index and CLI keep the original Markdown.
 
 ## Compose and publish pages {#publication}
 
@@ -96,6 +110,112 @@ For example, the `navigation` node above points here. An author can also map a
 short node name to `documents.validation` to cross into another page's section.
 The build validates explicit destinations. It does not infer runtime dependencies
 from node positions or source tags; authors declare those relationships.
+
+## Semantic groups {#groups}
+
+Color in diagrams, component cards, and page headings means one thing: the group
+a component belongs to. `wiki.config.yaml` declares the groups:
+
+```yaml
+groups:
+  firmware:
+    color: blue
+    label: {en: CM33 firmware, ch_tw: CM33 韌體}
+  shared:
+    color: violet
+    label: Shared RAM
+```
+
+`validate_groups()` accepts only the theme palette names `blue`, `green`, `violet`,
+`amber`, `red`, `teal`, `pink`, and `slate`. Each name has light and dark values in
+`style.css`, so projects choose a meaning rather than a hex value. A label is text
+or a mapping from HTML language to text, with English as the fallback. Language
+keys use the translation suffix spelling (`en`, `ch_tw`; `zh_tw` is an alias).
+
+A page declares `group: firmware` in frontmatter. `resolve_groups()` gives a page
+without its own group the nearest ancestor's group, so child components inherit
+their subsystem's color. Unknown group names are strict build errors. The index
+records each page's resolved `group`, and `query doc` prints it.
+
+`diagram_styles()` assigns each diagram node the group of the page or section it
+links to. Frontmatter `diagram_groups` names a group for any node explicitly,
+including unlinked nodes and nodes that link to an ungrouped page. In the browser,
+`diagrams.js` then:
+
+- tints grouped nodes and outlines section links with the group color;
+- colors each flowchart edge, including its arrowhead, by its source node;
+- tints a subgraph only when every node drawn inside it has the same group;
+- adds a legend listing the groups present in that diagram.
+
+The page heading and component cards use the same group color, so a component
+keeps one color wherever it appears. Pages and nodes without a group keep the
+default theme colors.
+
+> [!TIP]
+> Set `group` on each subsystem page and let its components inherit it. Reserve
+> `diagram_groups` for nodes that have no page of their own.
+
+## Code labels on diagram nodes {#code-labels}
+
+A linked flowchart node gets a second, monospaced line that names the code behind
+it. `code_label()` takes the text from evidence the build already holds:
+
+- a section target shows its first tagged declaration, such as `build.py · run()`,
+  with `+N` when more declarations are tagged there;
+- a page target shows its first owned file, such as `config.py +2`;
+- a target without tags or owned files gets no second line.
+
+`annotate_mermaid()` adds the line while rendering each page, so the index and
+`query section` keep the authored Mermaid. It changes only flowchart nodes declared
+with a label (`id["Label"]`, `id(Label)`, and the other bracket shapes). Bare node
+IDs, Markdown-string labels, and labels that already contain `<br>` stay unchanged,
+so an author's own second line wins. Because the text comes from source tags, it
+follows a declaration when the tag moves with it. Set `diagram_code_labels: false`
+in `wiki.config.yaml` to turn the lines off.
+
+## SVG figures {#figures}
+
+Mermaid cannot draw timing diagrams, memory layouts, or precisely placed lanes.
+For those, keep a hand-drawn SVG file beside the Markdown and reference it as an
+image on a line of its own:
+
+```markdown
+![Review state over time](figures/review-timeline.svg)
+Figure: A build refreshes the index but never acknowledges a review.
+```
+
+The renderer inlines the file instead of linking an image, so the figure follows
+the page theme, dark mode, and group colors. A `Figure:` caption works as it does
+for Mermaid, and both kinds share the page's figure numbering. The path is relative
+to the Markdown file and must stay inside the wiki instance; a translation can point
+at its own localized SVG. Remote and absolute image URLs remain ordinary images.
+
+`inline_figure()` prepares each file for the page:
+
+- **IDs:** every `id` and its `url(#…)`, `href="#…"`, and `aria-labelledby`
+  references get a per-figure prefix, so two figures on one page cannot collide.
+- **Groups:** an element with `data-group="cm33"` gets that group's color class.
+  The figure classes below then draw in the group color.
+- **Links:** `<a data-link="build.orchestration">` receives the `href` of that page
+  or section, resolved like `diagram_links` and localized for translated pages.
+
+| Class | Draws |
+| --- | --- |
+| `fig-text`, `fig-muted`, `fig-code`, `fig-title` | Body, secondary, code, and bold text |
+| `fig-label`, `fig-accent` | Text in the group color (lane titles, highlights) |
+| `fig-box` | Box with the page background and a group-colored border |
+| `fig-tint` | Box filled with the group's soft color |
+| `fig-lane` | Soft background band without a border |
+| `fig-line`, `fig-wave`, `fig-dash` | Connector, signal waveform, dashed modifier |
+| `fig-head` | Arrowhead path inside a `<marker>` |
+| `fig-grid`, `fig-halo` | Dotted guide line; text outline that stays readable over lines |
+
+`figure_issues()` fails a strict build for a missing file, a path outside the
+instance, a script, embed, or event-handler attribute, an undeclared group, or an
+unknown link target. A page's figures join its review coverage, so editing an SVG
+marks the page for review, and SVG files count toward index freshness.
+`query doc` lists them under `Figures:`. The `wiki-author` skill carries the same
+class vocabulary in `references/figures.md` for agents that draw figures.
 
 ## Browser behavior {#diagrams}
 

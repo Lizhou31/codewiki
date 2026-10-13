@@ -19,7 +19,7 @@
 {% for ancestor in ancestors %}<a href="{{ ancestor.out }}">{{ ancestor.title }}</a><span aria-hidden="true">/</span>{% endfor %}
 <span>{{ tr(doc.type | capitalize) }}</span>
 </nav>
-<header class="page-heading">
+<header class="page-heading{% if doc.group_color %} cw-group cw-{{ doc.group_color }}{% endif %}">
   {% set root = ancestors[0] if ancestors else doc %}
   {% if root.type == 'manual' %}
   <div class="reading-depth" aria-label="{{ tr('Reading path') }}"><a href="{{ root.out }}">{{ root.title }}</a>{% for ancestor in ancestors[1:] %}<span>→</span><a href="{{ ancestor.out }}">{{ ancestor.title }}</a>{% endfor %}{% if doc.parent %}<span>→</span><span class="active">{{ doc.title }}</span>{% endif %}</div>
@@ -70,7 +70,7 @@
   {% if 'class="mermaid"' in s.body_html and children and not maps.shown %}
   {% set maps.shown=true %}
   <div class="component-grid" id="explore-next" aria-label="{{ tr('Components') }}">{% for child in children %}
-  <a class="component-card" href="{{ child.out }}"><span class="component-number">{{ '%02d' | format(loop.index) }} <span aria-hidden="true">↗</span></span><h3>{{ child.title }}</h3><p>{{ child.summary }}</p><div class="component-meta">{{ child.owns | length }} {{ tr('owned files', child.owns | length) }} · {{ child.anchors | length }} {{ tr('stable anchors', child.anchors | length) }}</div></a>
+  <a class="component-card{% if child.group_color %} cw-group cw-{{ child.group_color }}{% endif %}" href="{{ child.out }}"><span class="component-number">{{ '%02d' | format(loop.index) }} <span aria-hidden="true">↗</span></span><h3>{{ child.title }}</h3><p>{{ child.summary }}</p><div class="component-meta">{{ child.owns | length }} {{ tr('owned files', child.owns | length) }} · {{ child.anchors | length }} {{ tr('stable anchors', child.anchors | length) }}</div></a>
   {% endfor %}</div>
   {% endif %}
   {% set a = doc.anchors.get(s.id) %}
@@ -151,6 +151,7 @@
 {% if diagrams.present %}
 <script src="vendor/mermaid.min.js"></script>
 <script id="diagram-targets" type="application/json">{{ diagram_targets | tojson }}</script>
+{% if diagram_styles and diagram_styles.groups %}<script id="diagram-groups" type="application/json">{{ diagram_styles | tojson }}</script>{% endif %}
 <script src="diagrams.js" defer></script>
 {% endif %}
 {% endblock %}

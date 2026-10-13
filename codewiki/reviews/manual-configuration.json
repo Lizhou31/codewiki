@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "document": "manual-configuration",
+  "outcome": "updated",
+  "reason": "Added the diagram_code_labels setting row; checked its default and validation in config.py. Other settings are unchanged.",
+  "reviewed_at": "2026-10-13T02:54:04+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "e367a2676022668e1e980b0a2c7459becf9b46b4188dd2972a0b5f92f338320f",
+  "snapshot": {
+    "document_path": "wiki/manual-configuration.md",
+    "document_sha256": "8d4ed6654e3fc7d2c9f462b56e1818f58264868ca658b7c35154a3afd3629830",
+    "sources": {},
+    "coverage": []
+  }
+}

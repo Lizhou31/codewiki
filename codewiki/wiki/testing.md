@@ -4,6 +4,7 @@ type: subsystem
 title: Testing architecture
 status: stable
 parent: architecture
+group: verification
 summary: Follow the verification path from isolated parser fixtures to whole-wiki
   builds, CLI queries, and architecture navigation; inspect the assertions behind
   each guarantee.
@@ -72,7 +73,10 @@ checks remain separate activities, rather than an automated browser or release s
 
 - **Browser review:** open the architecture map, follow a component into a section,
   expand its source, test diagram expansion and keyboard navigation, and inspect a
-  narrow viewport for overflow and console errors.
+  narrow viewport for overflow and console errors. The optional
+  `tests/browser/diagrams.cjs` script automates the diagram part (group colors and
+  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright
+  are installed; it is not part of the pytest run.
 - **Installed-package smoke check:** build a wheel, install it in another environment,
   initialize a temporary project outside this checkout, and run a strict build.
   Confirm that theme assets, templates, and skills were included.

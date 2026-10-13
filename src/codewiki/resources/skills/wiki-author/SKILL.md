@@ -24,6 +24,15 @@ or renaming declarations. For supported comment forms and binding rules, read th
 instance's `wiki/TAGS.md` as needed. Never tag configured read-only paths; use
 `refs: [{file: ../src/file.c, symbols: [symbol]}]` instead.
 
+In diagrams, link nodes with `diagram_links`. Diagram colors come from page `group`
+values declared under `groups` in `wiki.config.yaml`; children inherit a parent's
+group, and `diagram_groups` covers nodes without a page. Do not invent undeclared
+groups. Put a `Figure:` caption paragraph directly after a diagram, and use
+`> [!NOTE]` or `> [!CAUTION]` alerts for points a reader must not miss.
+Linked flowchart nodes get their file or function as a second line automatically;
+do not hand-write it. For timing diagrams, memory layouts, or other drawings that
+Mermaid cannot express, draw an SVG figure as described in `references/figures.md`.
+
 ## Maintain explanations and decisions
 
 After a refactoring or modification, inspect the change and affected pages. Update

@@ -50,7 +50,7 @@ flowchart LR
 
 ### 信任位置前先檢查新鮮度 {#freshness}
 
-索引記錄設定、Markdown、掃描的原始碼、明確擁有／參照的資產、審查紀錄與主題輸入的 SHA-256 指紋。查詢將目前輸入與建置快照比較，包含新增與刪除檔案。即使時間戳無法反映變更，內容改變仍會將索引標為過期。原始碼查詢要求目前有效的索引，因為舊行範圍無法可靠識別編輯後的宣告。請先用 `codewiki build --strict` 重建。Markdown 查詢仍可回傳索引中的說明，但會明確顯示過期狀態。
+索引記錄設定、Markdown、Wiki 目錄中的 SVG 圖、掃描的原始碼、明確擁有／參照的資產、審查紀錄與主題輸入的 SHA-256 指紋。查詢將目前輸入與建置快照比較，包含新增與刪除檔案。即使時間戳無法反映變更，內容改變仍會將索引標為過期。原始碼查詢要求目前有效的索引，因為舊行範圍無法可靠識別編輯後的宣告。請先用 `codewiki build --strict` 重建。Markdown 查詢仍可回傳索引中的說明，但會明確顯示過期狀態。
 
 ## 文件審查狀態 {#documentation-review-status}
 
@@ -62,4 +62,4 @@ flowchart LR
 
 ## 沿著架構圖閱讀 {#follow-the-architecture-graph}
 
-文件摘要在 JSON 與文字輸出中都包含 `depends_on`、反向 `used_by` 與 `diagram_links`，呈現與 HTML 圖相同的作者定義關係。請查詢目的文件或章節，而非載入整個 Wiki。缺少這些選用欄位的舊 schema-v1 索引仍可載入；重新建置即可補上。
+文件摘要在 JSON 與文字輸出中都包含 `depends_on`、反向 `used_by`、`diagram_links`、解析後的語意 `group` 與內嵌的 SVG `figures`；JSON 另含 `diagram_groups`。這些欄位呈現與 HTML 圖相同的作者定義關係、顏色與繪圖。請查詢目的文件或章節，而非載入整個 Wiki。缺少這些選用欄位的舊 schema-v1 索引仍可載入；重新建置即可補上。

@@ -117,6 +117,26 @@ A separate test allows dependency cycles while keeping the parent hierarchy acyc
 These checks validate generated data and HTML. They do not execute Mermaid or the
 browser's click, keyboard, or expanded-dialog behavior.
 
+Semantic group tests configure two groups and check parent inheritance, explicit
+`diagram_groups` for an unlinked node, the index and `query doc` output, heading and
+card classes, the ordered style data for diagrams, and localized labels with English
+fallback. Unknown groups fail strict builds without replacing outputs; invalid
+frontmatter and configuration values are rejected. Caption tests check page-wide
+numbering that skips uncaptioned diagrams, inline Markdown in captions, callout and
+plain blockquotes kept separate by blank lines, translated labels, and unchanged
+Markdown in `query section`.
+
+A nested-fence test keeps Mermaid, figure, and alert syntax inside a longer fence as
+literal code. Code-label tests check the tagged-function and owned-file second lines,
+unchanged unlabelled nodes, edge labels, author line breaks, non-flowchart diagrams,
+Markdown strings, the configuration switch, and the original Markdown in queries.
+SVG figure tests check inlining, per-figure ID prefixes, group classes, resolved
+links, captions, remote images left as images, the index and `query doc` listing,
+review coverage that turns the page outdated when the SVG changes, and freshness.
+Parameterized cases reject missing, script, event-handler, `javascript:` link, non-SVG,
+undeclared-group, broken-link, outside-instance, and missing translated figures; text
+that merely mentions `onboard =` or `javascript:` stays allowed.
+
 ## Initialization and theme customization survive {#initialization}
 
 Repeated initialization preserves authored Markdown and existing configuration,

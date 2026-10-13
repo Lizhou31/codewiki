@@ -32,7 +32,7 @@ def document(ix, name):
 
 
 def summary(d):
-    return {k: d.get(k) for k in ("id", "title", "type", "status", "source", "summary", "tldr", "parent", "children", "related", "depends_on", "used_by", "diagram_links", "review")}
+    return {k: d.get(k) for k in ("id", "title", "type", "status", "source", "summary", "tldr", "parent", "children", "related", "depends_on", "used_by", "diagram_links", "group", "diagram_groups", "figures", "review")}
 
 
 def resolve_file(w, ix, name):
@@ -189,6 +189,10 @@ def render_text(result):
             lines.append("Review at build: " + doc["review"]["state"] + "; codewiki review status checks live inputs")
         if doc.get("parent"):
             lines.append(f"Parent: {doc['parent']}")
+        if doc.get("group"):
+            lines.append(f"Group: {doc['group']}")
+        if doc.get("figures"):
+            lines.append("Figures: " + ", ".join(doc["figures"]))
         if doc.get("children"):
             lines.append("Children: " + ", ".join(doc["children"]))
         for key, label in (("depends_on", "Depends on"), ("used_by", "Used by")):

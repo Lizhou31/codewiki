@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "test-framework",
-  "outcome": "no-change",
-  "reason": "The Claude client test now initializes with a ./docs/wiki/ spelling and asserts the instance guide names the canonical docs/wiki path; the initialization section's description of path normalization still applies.",
-  "reviewed_at": "2026-09-14T04:14:05+00:00",
-  "commit": "02a021b4ff1d0504d3409f805071b9d5e0d167ef",
-  "fingerprint": "04ac67582319bcd5bd11eeac4aa444ed742e9cc95349d996dc09f2b60998500f",
+  "outcome": "updated",
+  "reason": "Added the javascript: link rejection case and the allowed-text example to the SVG figure test description.",
+  "reviewed_at": "2026-10-13T02:55:10+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "7dfe7f9edf223690c8bea3d54424cbf6199342875cc3a3b78abe11a642bb64b0",
   "snapshot": {
     "document_path": "wiki/test-framework.md",
-    "document_sha256": "0f3abd56e9ae2707c5273a9abaf945ffc14855a6c63b41adf4537ed890dab79d",
+    "document_sha256": "d0995430902c963631de1ac26a080a9e48f9f5be0830c532127535c24092a316",
     "sources": {
-      "../tests/test_framework.py": "6534094e747fab0b474b6e7b6eac7827be0e8d12cecb0ce8409fb3b146b581ed"
+      "../tests/test_framework.py": "c24cc5d17b39c57359ba06f89e4a0da54d7bbeb7208350b2a07df1a4423b940f"
     },
     "coverage": [
       {

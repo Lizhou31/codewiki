@@ -43,7 +43,7 @@ def _validate_record(record, path):
     if not isinstance(value.get("coverage"), list):
         raise ValueError(f"invalid review coverage: {path}")
     for entry in value["coverage"]:
-        if not isinstance(entry, dict) or entry.get("kind") not in ("owns", "ref", "tag") or not isinstance(entry.get("file"), str):
+        if not isinstance(entry, dict) or entry.get("kind") not in ("owns", "ref", "tag", "figure") or not isinstance(entry.get("file"), str):
             raise ValueError(f"invalid review coverage entry: {path}")
         required = {"ref": ("symbol",), "tag": ("anchor", "role")}.get(entry["kind"], ())
         if any(not isinstance(entry.get(key), str) or not entry[key] for key in required):
@@ -78,6 +78,8 @@ def _document_snapshot(w, doc, tags, hashes):
     coverage += [{"kind": "ref", "file": r.file, "symbol": r.symbol} for r in doc.refs]
     coverage += [{"kind": "tag", "file": t.file, "anchor": t.anchor, "role": t.role}
                  for t in tags if t.anchor in doc.anchors]
+    # A page's SVG figures are part of its explanation, so editing one needs a review too.
+    coverage += [{"kind": "figure", "file": f} for f in doc.figures]
     coverage = sorted({json.dumps(c, sort_keys=True) for c in coverage})
     coverage = [json.loads(c) for c in coverage]
     paths = sorted({c["file"] for c in coverage})

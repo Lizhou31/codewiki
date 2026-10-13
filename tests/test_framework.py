@@ -485,6 +485,239 @@ diagram_links:
 
 
 # @wiki:impl test-framework.diagrams
+def test_semantic_groups_color_pages_nodes_and_cards(instance):
+    cfg = yaml.safe_load(instance.cfg_path.read_text())
+    cfg['groups'] = {'core': {'color': 'blue', 'label': {'en': 'Core', 'zh_TW': '核心'}},
+                     'extra': {'color': 'green'}}
+    instance.cfg_path.write_text(yaml.safe_dump(cfg, allow_unicode=True))
+    w = Wiki(instance.cfg_path)
+    path = w.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\ngroup: core\n'
+                                     'diagram_groups: {external: extra}\n')
+                    + '\n## Map\n\n```mermaid\nflowchart LR\n  child --> external\n  dispatch --> child\n```\n')
+    (w.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\ntitle: Child\n---\n## Child\n')
+    (w.wiki_dir / 'architecture-ch_tw.md').write_text(path.read_text())
+    ix = build(w)
+    assert [(d['id'], d['group']) for d in ix['docs']] == [('architecture', 'core'), ('child', 'core')]
+    assert ix['groups']['extra'] == {'color': 'green', 'label': {'en': 'extra'}}
+    from codewiki.query import render_text
+    assert 'Group: core' in render_text(query(w, ix, 'doc', 'child'))
+    html = (w.site_dir / 'architecture.html').read_text()
+    assert 'class="page-heading cw-group cw-blue"' in html
+    assert 'class="component-card cw-group cw-blue" href="child.html"' in html
+    styles_of = lambda page: json.loads(
+        page.split('<script id="diagram-groups" type="application/json">')[1].split('</script>')[0])
+    styles = styles_of(html)
+    assert styles['nodes']['child'] == 'core'  # Linked page's inherited group.
+    assert styles['nodes']['dispatch'] == 'core'  # Local section of a grouped page.
+    assert styles['nodes']['external'] == 'extra'  # Explicit group for an unlinked node.
+    assert styles['groups'] == [{'name': 'core', 'color': 'blue', 'label': 'Core'},
+                                {'name': 'extra', 'color': 'green', 'label': 'extra'}]
+    translated = styles_of((w.site_dir / 'architecture-ch_tw.html').read_text())
+    assert [g['label'] for g in translated['groups']] == ['核心', 'extra']  # English is the fallback.
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('extra', ['group: missing\n', 'diagram_groups: {node: missing}\n'])
+def test_unknown_group_preserves_published_outputs(instance, extra):
+    build(instance)
+    before = instance.index_path.read_bytes()
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\n' + extra))
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1 and any(x.kind == 'unknown-group' for x in warnings)
+    assert instance.index_path.read_bytes() == before
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('extra', ['group: [core]\n', 'diagram_groups: []\n',
+                                   'diagram_groups: {node: 3}\n', 'diagram_groups: {"bad node": core}\n'])
+def test_invalid_group_metadata(instance, extra):
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\n' + extra))
+    with pytest.raises(ValueError):
+        read_document(path)
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('groups', [
+    ['core'], {'core': 'blue'}, {'core': {'color': '#123456'}}, {'core': {}},
+    {'core': {'color': 'blue', 'label': 3}}, {'core': {'color': 'blue', 'label': {'en': ''}}},
+    {'bad name': {'color': 'blue'}},
+])
+def test_invalid_group_configuration(instance, groups):
+    cfg = yaml.safe_load(instance.cfg_path.read_text())
+    cfg['groups'] = groups
+    instance.cfg_path.write_text(yaml.safe_dump(cfg))
+    with pytest.raises(ValueError):
+        Wiki(instance.cfg_path)
+
+
+# @wiki:impl test-framework.diagrams
+def test_figure_captions_and_callouts(instance):
+    path = instance.wiki_dir / 'architecture.md'
+    body = ('\n## Diagrams {#diagrams}\n\n```mermaid\nflowchart LR\n  a --> b\n```\n'
+            'Figure: The `a` path,\ncontinued.\n\nAfter the figure.\n\n'
+            '```mermaid\nflowchart LR\n  c --> d\n```\n\n'
+            '> [!CAUTION]\n> Keep **both** in sync.\n\n> [!NOTE]\n> Next.\n\n> A plain quote.\n\n'
+            '## More {#more}\n\n```mermaid\nflowchart LR\n  e --> f\n```\n\nFigure: Second.\n')
+    path.write_text(path.read_text() + body)
+    (instance.wiki_dir / 'architecture-ch_tw.md').write_text(path.read_text())
+    ix = build(instance)
+    html = (instance.site_dir / 'architecture.html').read_text()
+    assert ('<figcaption><span class="figure-label">Figure 1.</span> The <code>a</code> path, continued.'
+            '</figcaption></figure>') in html
+    assert '<span class="figure-label">Figure 2.</span> Second.' in html  # Uncaptioned diagrams are not counted.
+    assert html.count('<figure class="diagram-figure">') == 2 and html.count('class="mermaid"') == 3
+    assert '<p>After the figure.</p>' in html
+    assert '<div class="callout callout-caution" role="note">\n<p class="callout-title">Caution</p>' in html
+    # As on GitHub, a blank line separates adjacent quotes instead of merging them.
+    assert '<p>Keep <strong>both</strong> in sync.</p>\n</div>' in html
+    assert '<p class="callout-title">Note</p>\n<p>Next.</p>\n</div>' in html
+    assert '<blockquote>\n<p>A plain quote.</p>' in html
+    translated = (instance.site_dir / 'architecture-ch_tw.html').read_text()
+    assert '<span class="figure-label">圖 2</span>' in translated
+    assert '<p class="callout-title">注意</p>' in translated
+    markdown = query(instance, ix, 'section', 'architecture.diagrams')['markdown']
+    assert 'Figure: The `a` path,' in markdown and '> [!CAUTION]' in markdown
+
+
+# @wiki:impl test-framework.diagrams
+def test_nested_fences_stay_code(instance):
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text() + '\n## Example {#example}\n\n````markdown\n```mermaid\nflowchart LR\n  a --> b\n```\n'
+                    'Figure: Not a caption.\n\n![x](figures/x.svg)\n\n> [!NOTE]\n> Literal.\n````\n')
+    build(instance)
+    html = (instance.site_dir / 'architecture.html').read_text()
+    assert 'class="mermaid"' not in html and 'svg-figure' not in html and 'callout' not in html
+    assert '```mermaid\nflowchart LR' in html and '![x](figures/x.svg)' in html
+
+
+def mermaid_sources(html):
+    from html import unescape
+    return [unescape(part.split('</pre>')[0]) for part in html.split('<pre class="mermaid">')[1:]]
+
+
+# @wiki:impl test-framework.diagrams
+def test_code_labels_on_linked_nodes(instance):
+    (instance.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\ntitle: Child\n'
+                                                'owns: [../src/main.py]\n---\n## Child\n')
+    path = instance.wiki_dir / 'architecture.md'
+    diagram = ('\n## Map {#map}\n\n```mermaid\nflowchart LR\n  dispatch["Dispatch"] --> child("Child page")\n'
+               '  other[Other]\n  plain --> dispatch\n  map["Own<br/>line"]\n  child -->|dispatch(x)| other\n```\n')
+    path.write_text(path.read_text() + diagram)
+    ix = build(instance)
+    source = mermaid_sources((instance.site_dir / 'architecture.html').read_text())[0]
+    assert 'dispatch["Dispatch<br/><span class=\'cw-code\'>main.py · dispatch()</span>"]' in source
+    assert 'child("Child page<br/><span class=\'cw-code\'>main.py</span>")' in source
+    assert 'other[Other]' in source  # A section without tagged code gets no second line.
+    assert 'map["Own<br/>line"]' in source and '|dispatch(x)|' in source and 'plain --> dispatch' in source
+    assert 'cw-code' not in query(instance, ix, 'section', 'architecture.map')['markdown']
+    cfg = yaml.safe_load(instance.cfg_path.read_text())
+    cfg['diagram_code_labels'] = False
+    instance.cfg_path.write_text(yaml.safe_dump(cfg))
+    build(Wiki(instance.cfg_path))
+    assert 'cw-code' not in (instance.site_dir / 'architecture.html').read_text()
+
+
+# @wiki:impl test-framework.diagrams
+def test_annotate_mermaid_only_changes_labelled_flowchart_nodes():
+    from codewiki.build import annotate_mermaid
+    labels = {'a': 'x.py · f()'}
+    assert annotate_mermaid('sequenceDiagram\n  a->>b: hi', labels) == 'sequenceDiagram\n  a->>b: hi'
+    assert annotate_mermaid('---\ntitle: T\n---\ngraph TD\n  a{{Decide}}', labels).endswith(
+        'a{{"Decide<br/><span class=\'cw-code\'>x.py · f()</span>"}}')
+    assert annotate_mermaid('flowchart LR\n  a["`**md**`"]', labels) == 'flowchart LR\n  a["`**md**`"]'
+    assert annotate_mermaid('flowchart LR\n  b["see a(x)"] --> a', labels) == 'flowchart LR\n  b["see a(x)"] --> a'
+    assert 'cw-code' not in annotate_mermaid('flowchart LR\n  %% a[comment]\n  style a fill:#fff', labels)
+
+
+FIGURE = """<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" aria-labelledby="t">
+  <title id='t'>Timing</title>
+  <defs><marker id="arrow"><path class="fig-head" d="M0 0L5 5z"/></marker></defs>
+  <g data-group="core" data-id="keep"><path class="fig-line" d="M0 0H90" marker-end="url(#arrow)"/></g>
+  <a data-link="architecture.dispatch"><text class="fig-text">dispatch</text></a>
+  <text>onboard = 1; see javascript: docs</text>
+</svg>
+"""
+
+
+# @wiki:impl test-framework.diagrams
+def test_svg_figures_are_inlined_themed_linked_and_reviewed(instance):
+    from codewiki.review import acknowledge, report
+    cfg = yaml.safe_load(instance.cfg_path.read_text())
+    cfg['groups'] = {'core': {'color': 'blue'}}
+    instance.cfg_path.write_text(yaml.safe_dump(cfg))
+    w = Wiki(instance.cfg_path)
+    (w.wiki_dir / 'figures').mkdir()
+    figure = w.wiki_dir / 'figures/timing.svg'
+    figure.write_text(FIGURE)
+    path = w.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text() + '\n## Timing {#timing}\n\n![Key timing](figures/timing.svg)\n'
+                    'Figure: Key **timing**.\n\n![Again](figures/timing.svg)\n\n'
+                    '![Remote](https://example.com/remote.svg)\n')
+    ix = build(w)
+    html = (w.site_dir / 'architecture.html').read_text()
+    assert ('<figure class="diagram-figure"><div class="svg-figure" role="group" aria-label="Key timing">'
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" aria-labelledby="fig1-t">') in html
+    assert "<title id='fig1-t'>" in html and 'url(#fig1-arrow)' in html and 'id="fig1-arrow"' in html
+    assert 'data-id="keep"' in html and '<?xml' not in html  # Only real IDs are renamed.
+    assert '<g data-group="core" data-id="keep" class="cw-blue">' in html
+    assert '<a data-link="architecture.dispatch" href="architecture.html#dispatch" class="fig-link">' in html
+    assert 'id="fig2-arrow"' in html  # The second copy gets its own IDs.
+    assert '<span class="figure-label">Figure 1.</span> Key <strong>timing</strong>.' in html
+    assert '<img alt="Remote" src="https://example.com/remote.svg"' in html
+    assert ix['docs'][0]['figures'] == ['wiki/figures/timing.svg']
+    from codewiki.query import render_text
+    assert 'Figures: wiki/figures/timing.svg' in render_text(query(w, ix, 'doc', 'architecture'))
+    item = next(d for d in report(w)['documents'] if d['document'] == 'architecture')
+    assert {'kind': 'figure', 'file': 'wiki/figures/timing.svg'} in item['snapshot']['coverage']
+    acknowledge(w, 'architecture', outcome='no-change', reason='Checked the timing figure.')
+    figure.write_text(FIGURE.replace('Timing', 'Changed timing'))
+    item = next(d for d in report(w)['documents'] if d['document'] == 'architecture')
+    assert item['state'] == 'outdated' and item['changes'][0]['path'] == 'wiki/figures/timing.svg'
+    assert freshness(w, ix)['state'] != 'current'  # SVG files are build inputs.
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('svg,kind', [
+    (None, 'missing-figure'),
+    ('<svg><script>alert(1)</script></svg>', 'invalid-figure'),
+    ('<svg onload="alert(1)"></svg>', 'invalid-figure'),
+    ('<svg><a href="javascript:alert(1)"><text>x</text></a></svg>', 'invalid-figure'),
+    ('<p>not svg</p>', 'invalid-figure'),
+    ('<svg><g data-group="missing"/></svg>', 'unknown-group'),
+    ('<svg><a data-link="architecture.missing"><text>x</text></a></svg>', 'broken-figure-link'),
+])
+def test_invalid_svg_figures_preserve_published_outputs(instance, svg, kind):
+    build(instance)
+    before = instance.index_path.read_bytes()
+    if svg is not None:
+        (instance.wiki_dir / 'bad.svg').write_text(svg)
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text() + '\n![Bad](bad.svg)\n')
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1 and any(x.kind == kind for x in warnings), [(x.kind, x.message) for x in warnings]
+    assert instance.index_path.read_bytes() == before
+
+
+# @wiki:impl test-framework.diagrams
+def test_svg_figure_paths_stay_inside_the_instance(instance, tmp_path):
+    (tmp_path / 'outside.svg').write_text('<svg/>')
+    path = instance.wiki_dir / 'architecture.md'
+    original = path.read_text()
+    path.write_text(original + '\n![Outside](../../outside.svg)\n')
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1 and any(x.kind == 'invalid-figure' for x in warnings)
+    # A translation's own figure is checked too.
+    path.write_text(original)
+    (instance.wiki_dir / 'architecture-ch_tw.md').write_text(original + '\n![圖](missing-ch_tw.svg)\n')
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1 and any(x.kind == 'missing-figure' and 'ch_tw' in x.where for x in warnings)
+
+
+# @wiki:impl test-framework.diagrams
 def test_dependency_cycles_do_not_become_parent_cycles(instance):
     path = instance.wiki_dir / 'architecture.md'
     path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\ndepends_on: [child]\n'))

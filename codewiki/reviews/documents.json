@@ -2,16 +2,16 @@
   "schema_version": 1,
   "document": "documents",
   "outcome": "no-change",
-  "reason": "Reviewed build parsing and rendering changes: canonical frontmatter validation and joins remain unchanged, and the renderer preserves source bindings, stable anchors, hierarchy, and legacy template sections.",
-  "reviewed_at": "2026-09-13T16:59:00+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "392469e590387ce6cfca400f7c31c6624ea34d348af1fe63309ea8986dbed0a7",
+  "reason": "build.py change limited to SVG figure safety: event-handler and javascript: checks now apply to tag attributes only, so figure text may mention them. The validation section still accurately lists unsafe figures as strict errors.",
+  "reviewed_at": "2026-10-13T02:55:09+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "e442416ce2001bd801f1f03c7e7a402815204525d0491be2838fdbb808f31b40",
   "snapshot": {
     "document_path": "wiki/documents.md",
-    "document_sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
+    "document_sha256": "6bbae25c48dada58f1c4f722cfacd33deb74d7184c7111eb81637caee06eaada",
     "sources": {
-      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
-      "../src/codewiki/documents.py": "60d76e2590e80666b48706b1d40e57cd5d27b5aed0dbb739a82c8adc4e1729e0"
+      "../src/codewiki/build.py": "c606ef945255a1dc6ae58a572a06b8c2d79f2dc7fea9ce3c2d57da96552db03b",
+      "../src/codewiki/documents.py": "3a90beb3c7ce223e3600fc56e454d9fcdab79af1e024f259ce2eb562d3efe61f"
     },
     "coverage": [
       {

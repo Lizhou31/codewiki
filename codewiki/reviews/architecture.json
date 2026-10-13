@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "document": "architecture",
-  "outcome": "updated",
-  "reason": "Reviewed CLI dispatch and version changes against the architecture entry points. Added the update command and link to its release/source and instance reconciliation component; existing build and query contracts remain unchanged.",
-  "reviewed_at": "2026-09-14T04:39:28+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "af93888015478df66d155f2e0a3aad3e523b768f51d345417e6fe327862f775c",
+  "outcome": "no-change",
+  "reason": "build.py change limited to SVG figure safety: event-handler and javascript: checks now apply to tag attributes only, so figure text may mention them. Architecture instances and pipeline explanations are unaffected.",
+  "reviewed_at": "2026-10-13T02:55:08+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "08c74c47a44e59aa77ffa2806d4ee8a9a887d04f57b873abde19da947429bc61",
   "snapshot": {
     "document_path": "wiki/architecture.md",
-    "document_sha256": "4e526e92c9efa98c79e7a60e289bdcf43de780cae57a85e0547016c8770e4737",
+    "document_sha256": "d2b0ac9c73a59f601bbc247e28a9b6de68244552403eb678a767944fca714f47",
     "sources": {
       "../src/codewiki/__init__.py": "a147385ef7deb459e6f4b5c9a04be3be5f9baf5d714520fc02e4bd126d7af586",
       "../src/codewiki/__main__.py": "22ba1a29f62ffa66459980703bad181db550fced53617c2ba057bb3ac8671fa9",
-      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
-      "../src/codewiki/config.py": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825"
+      "../src/codewiki/build.py": "c606ef945255a1dc6ae58a572a06b8c2d79f2dc7fea9ce3c2d57da96552db03b",
+      "../src/codewiki/config.py": "9068149bbd145feb58e88fa6deccf9ba9aa27f690104f2106cbae373b5edfb25"
     },
     "coverage": [
       {

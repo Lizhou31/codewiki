@@ -3,6 +3,7 @@ id: reviews
 type: component
 status: stable
 parent: architecture
+group: analysis
 title: Documentation review
 summary: Track existing pages against reviewed source content, record explicit outcomes and reasons, and expose one live check to skills, hooks, and CI.
 owns:
@@ -35,6 +36,8 @@ flowchart LR
   current -->|source or document changes| scan
   scan --> check["CI checks pending reviews + structural errors"]
 ```
+Figure: Review lifecycle of one existing page. Only an explicit `review pass` or
+`review updated` makes it current; a build never does.
 
 ## Live status API {#status}
 
@@ -53,8 +56,8 @@ index. Every document includes its ID, title, path, state, reason, current
 Outdated is a review request, not a semantic judgment. Whole-file SHA-256 hashes
 are used initially: an unrelated edit in a covered file can request review.
 `owns` includes assets such as CSS; `refs` covers untaggable declarations; source
-tags attach a file to a page's explicit anchors. The coverage list records these
-relationships. Prior coverage is retained in review records, so removing a tag or
+tags attach a file to a page's explicit anchors; SVG figures embedded in the page
+are covered too. The coverage list records these relationships. Prior coverage is retained in review records, so removing a tag or
 moving its file cannot silently clear the review request. A removed association
 has a null current source hash; that means it left coverage, not necessarily that
 the physical file was deleted.
@@ -73,6 +76,11 @@ reason. `expected` optionally guards against changes since the caller inspected
 status; the review skill uses it. An `updated` outcome requires changed Markdown
 when a previous record exists. A pass can establish the first baseline without
 changing prose. Neither operation proves semantic correctness automatically.
+
+![Index freshness and review state over time](figures/review-timeline.svg)
+Figure: One linked source edit at t1. The rebuild at t2 refreshes the index but
+leaves the review outdated. Recording the review at t3 changes `reviews/*.json`,
+a build input, so the index needs one more build at t4.
 
 One record is atomically written to `reviews/<document-id>.json` next to the
 configuration. It contains a timestamp, reason, outcome, informational Git HEAD,

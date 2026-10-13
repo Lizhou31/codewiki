@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "document": "queries",
-  "outcome": "no-change",
-  "reason": "Reviewed snapshot.py diff and English query output: translations remain freshness inputs but do not replace canonical English query content or introduce translation-owned coverage.",
-  "reviewed_at": "2026-09-13T16:59:01+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "26cce358926fd5f41de302f424d9473996effe9ea68445a6410f11c12d15d515",
+  "outcome": "updated",
+  "reason": "query doc now lists embedded SVG figures (query.py summary and text); freshness inputs now include wiki SVG files (snapshot.py); documented both.",
+  "reviewed_at": "2026-10-13T02:54:05+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "e95b8bd156a74ed6bf660e103c8d0def5a4c264d95c10794a91e621e21dbda9f",
   "snapshot": {
     "document_path": "wiki/queries.md",
-    "document_sha256": "2d150a6dc5b7665615f377b1ab09ad798b538714565f8f1a8f503cc5cc46f8a5",
+    "document_sha256": "2e1aee03216fa09998909b00af55bcae8cfe4844b92f3f7a2e0a065eb5bba0f8",
     "sources": {
-      "../src/codewiki/query.py": "446ca12527dfb34b71f73388763e9546e7888bca8084d07d39c7b53ee4e4a5a3",
-      "../src/codewiki/snapshot.py": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67"
+      "../src/codewiki/query.py": "5fbd4ff3bd5bce349183e6ac35df6022c245e86df24fdd8dfff863fdef466e0a",
+      "../src/codewiki/snapshot.py": "fd9861098fca9a8d0d80e1e29dc781b7f51847c095a670deaf7e9b4705c0c13a"
     },
     "coverage": [
       {

@@ -6,7 +6,7 @@
 """
 from __future__ import annotations
 
-import argparse, fnmatch, html, json, re, shutil, sys, time
+import argparse, fnmatch, html, json, posixpath, re, shutil, sys, time
 import copy
 import tempfile
 from dataclasses import dataclass, field
@@ -14,6 +14,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import markdown as md_lib
+from markdown.extensions import Extension
+from markdown.preprocessors import Preprocessor
+from markdown.treeprocessors import Treeprocessor
+import xml.etree.ElementTree as etree
 from jinja2 import Environment, FileSystemLoader, select_autoescape, TemplateError
 
 from .config import Wiki, load as load_wiki
@@ -24,8 +28,9 @@ from .snapshot import snapshot
 from .languages import (DEFAULT_FILE_MAP, LANGUAGES, language_for, parse_tag_comment)
 
 HEADING_RE = re.compile(r'^(#{2,4})\s+(.*?)(?:\s*\{#([A-Za-z0-9_\-.]+)\})?\s*$')
-MERMAID_RE = re.compile(r'^```mermaid\s*$')
-FENCE_RE = re.compile(r'^```\s*$')
+FENCE_RE = re.compile(r'^ {0,3}(`{3,}|~{3,})(.*)$')
+# A relative `.svg` image alone on its line is a figure; remote and absolute images stay images.
+SVG_FIGURE_RE = re.compile(r'^ {0,3}!\[([^\]]*)\]\((?![a-zA-Z][a-zA-Z0-9+.-]*:|/)([^)\s]+\.svg)\)\s*$', re.I)
 KNOWN_ROLES = {"impl", "gotcha", "entry"}
 
 # --------------------------------------------------------------------------- #
@@ -81,6 +86,11 @@ class Doc:
     related: list = field(default_factory=list)
     depends_on: list = field(default_factory=list)
     diagram_links: dict = field(default_factory=dict)
+    diagram_groups: dict = field(default_factory=dict)
+    group: str | None = None           # as authored; group_name/group_color are inherited
+    group_name: str | None = None
+    group_color: str | None = None
+    figures: list = field(default_factory=list)   # wiki-root-relative SVG figure paths
     updated: str = ""
     summary: str = ""
     parent: str | None = None
@@ -104,6 +114,8 @@ SEVERITY = {
     "missing-root": "error", "invalid-doc": "error", "duplicate-doc": "error",
     "broken-related": "error", "broken-parent": "error", "hierarchy-cycle": "error",
     "broken-decision": "error", "broken-dependency": "error", "broken-diagram-link": "error",
+    "unknown-group": "error", "missing-figure": "error", "invalid-figure": "error",
+    "broken-figure-link": "error",
     "anchorless-heading": "warn", "outdated-doc": "warn", "unreviewed-doc": "info", "parse-error": "warn",
     "unimplemented": "info",
 }
@@ -231,32 +243,137 @@ def scan_code(w: Wiki) -> tuple[list[Tag], dict, list[Warning], int]:
 # markdown scanning
 # --------------------------------------------------------------------------- #
 
-MD = md_lib.Markdown(extensions=["fenced_code", "tables", "attr_list", "sane_lists"])
+CALLOUT_RE = re.compile(r'^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*(?:\n|$)', re.I)
+CALLOUT_TITLES = {"note": "Note", "tip": "Tip", "important": "Important", "warning": "Warning", "caution": "Caution"}
+CAPTION_RE = re.compile(r'^Figure:[ \t]*(.*)$')
+FIGURE_LABEL_RE = re.compile(r'<span class="figure-label">Figure (\d+)\.</span>')
+DIAGRAM_HINT = 'Follow a linked node to explore its component or implementation.'
+FIGURE_SRC_RE = re.compile(r'<div class="svg-figure" data-figure-src="([^"]*)" data-figure-alt="([^"]*)"></div>')
+
+
+class _Callouts(Treeprocessor):
+    """GitHub alert syntax (`> [!NOTE]`) becomes a labelled notice; other quotes stay quotes."""
+    def run(self, root):
+        for quote in list(root.iter("blockquote")):
+            first = quote[0] if len(quote) else None
+            match = CALLOUT_RE.match(first.text or "") if first is not None and first.tag == "p" else None
+            if not match:
+                continue
+            kind = match.group(1).lower()
+            first.text = first.text[match.end():]
+            if not first.text.strip() and not len(first):
+                quote.remove(first)
+            quote.tag = "div"
+            quote.set("class", f"callout callout-{kind}")
+            quote.set("role", "note")
+            title = etree.Element("p", {"class": "callout-title"})
+            title.text = CALLOUT_TITLES[kind]
+            quote.insert(0, title)
+
+
+class _QuoteBreaks(Preprocessor):
+    """As on GitHub, a blank line ends a blockquote; Python-Markdown would merge the next one into it."""
+    def run(self, lines):
+        out, in_quote, blank = [], False, False
+        for line in lines:
+            if not line.strip():
+                blank = True
+                out.append(line)
+                continue
+            quote = line.startswith(">")
+            if quote and blank and in_quote:
+                out.extend(["<!-- -->", ""])
+            in_quote, blank = quote or (in_quote and not blank), False
+            out.append(line)
+        return out
+
+
+class _CalloutExtension(Extension):
+    def extendMarkdown(self, md):
+        # After fenced code is stashed, before raw HTML blocks are collected.
+        md.preprocessors.register(_QuoteBreaks(md), "codewiki-quote-breaks", 22)
+        # Before inline parsing, so the marker is still plain paragraph text.
+        md.treeprocessors.register(_Callouts(md), "codewiki-callouts", 25)
+
+
+MD = md_lib.Markdown(extensions=["fenced_code", "tables", "attr_list", "sane_lists", _CalloutExtension()])
 
 def render_md(text: str) -> str:
     MD.reset()
     return MD.convert(text)
 
-def split_mermaid(lines: list[str]):
-    buf, out, in_mm = [], [], False
+
+def localize_generated(markup: str, locale: str) -> str:
+    """Translate labels the renderer generated inside authored Markdown sections."""
+    from .ui_text import translate
+    markup = markup.replace(DIAGRAM_HINT, translate(DIAGRAM_HINT, locale))
+    markup = FIGURE_LABEL_RE.sub(lambda m: '<span class="figure-label">%s</span>'
+                                 % translate("Figure {n}.", locale).format(n=m.group(1)), markup)
+    for title in CALLOUT_TITLES.values():
+        markup = markup.replace(f'<p class="callout-title">{title}</p>',
+                                f'<p class="callout-title">{translate(title, locale)}</p>')
+    return markup
+
+def split_blocks(lines: list[str]):
+    """Separate Mermaid fences and standalone SVG figures; every other fence stays Markdown."""
+    out, buf, fence = [], [], None       # fence: (marker, is_mermaid)
+    def flush(kind):
+        if buf:
+            out.append((kind, buf[:]))
+            buf.clear()
     for line in lines:
-        if not in_mm and MERMAID_RE.match(line):
-            if buf: out.append(("md", buf)); buf = []
-            in_mm = True
+        marker = FENCE_RE.match(line)
+        if fence:
+            run, rest = marker.groups() if marker else ("", "x")
+            if run[:1] == fence[0][0] and len(run) >= len(fence[0]) and not rest.strip():
+                if fence[1]:
+                    flush("mermaid")
+                else:
+                    buf.append(line)
+                fence = None
+            else:
+                buf.append(line)
             continue
-        if in_mm and FENCE_RE.match(line):
-            out.append(("mermaid", buf)); buf = []
-            in_mm = False
+        if marker:
+            fence = (marker.group(1), marker.group(2).strip() == "mermaid")
+            if fence[1]:
+                flush("md")
+            else:
+                buf.append(line)
+            continue
+        if SVG_FIGURE_RE.match(line):
+            flush("md")
+            out.append(("svg", [line]))
             continue
         buf.append(line)
-    if buf:
-        out.append(("mermaid" if in_mm else "md", buf))
+    flush("mermaid" if fence and fence[1] else "md")
     return out
 
+def take_caption(lines: list[str]) -> tuple[str | None, list[str]]:
+    """Split a leading `Figure:` paragraph from the Markdown that follows a diagram."""
+    start = next((i for i, line in enumerate(lines) if line.strip()), len(lines))
+    match = CAPTION_RE.match(lines[start].strip()) if start < len(lines) else None
+    if not match:
+        return None, lines
+    stop = next((i for i in range(start + 1, len(lines)) if not lines[i].strip()), len(lines))
+    caption = " ".join([match.group(1), *(line.strip() for line in lines[start + 1:stop])]).strip()
+    return caption, lines[stop:]
+
+
 # @wiki:impl renderer.markdown
-def render_body(lines: list[str]) -> tuple[str, list[str]]:
-    parts, mermaids = [], []
-    for kind, chunk in split_mermaid(lines):
+def render_body(lines: list[str], figures: list[int] | None = None) -> tuple[str, list[str]]:
+    """Render Markdown and Mermaid; `figures` carries caption numbering across a page's sections."""
+    figures = [0] if figures is None else figures
+    parts, mermaids, after_diagram = [], [], False
+    for kind, chunk in split_blocks(lines):
+        if kind == "md" and after_diagram:
+            caption, chunk = take_caption(chunk)
+            if caption is not None:
+                figures[0] += 1
+                inline = re.sub(r"^<p>(.*)</p>$", r"\1", render_md(caption).strip(), flags=re.S)
+                parts[-1] = ('<figure class="diagram-figure">%s<figcaption><span class="figure-label">'
+                             'Figure %d.</span> %s</figcaption></figure>' % (parts[-1], figures[0], inline))
+        after_diagram = False
         text = "\n".join(chunk).strip("\n")
         if not text.strip():
             continue
@@ -264,8 +381,14 @@ def render_body(lines: list[str]) -> tuple[str, list[str]]:
             mermaids.append(text)
             parts.append(
                 '<div class="mermaid-wrap"><pre class="mermaid">%s</pre>'
-                '<p class="mermaid-hint">Follow a linked node to explore its component or implementation.</p></div>'
-                % html.escape(text))
+                '<p class="mermaid-hint">%s</p></div>' % (html.escape(text), DIAGRAM_HINT))
+            after_diagram = True
+        elif kind == "svg":
+            # A placeholder; the renderer inlines the validated file for each language.
+            alt, src = SVG_FIGURE_RE.match(text).groups()
+            parts.append('<div class="svg-figure" data-figure-src="%s" data-figure-alt="%s"></div>'
+                         % (html.escape(src, quote=True), html.escape(alt, quote=True)))
+            after_diagram = True
         else:
             parts.append(render_md(text))
     return "\n".join(parts), mermaids
@@ -283,6 +406,7 @@ def parse_doc(w: Wiki, path: Path, warns: list[Warning]) -> Doc | None:
         owns=[w.rel(w.root / x) for x in fm.get("owns", [])],
         related=fm.get("related", []), updated=str(fm.get("updated", "")),
         depends_on=fm.get("depends_on", []), diagram_links=fm.get("diagram_links", {}),
+        diagram_groups=fm.get("diagram_groups", {}), group=fm.get("group"),
         summary=fm.get("summary", ""), parent=fm.get("parent"),
         markdown=raw, preamble=render_md(preamble), outline=outline,
         decisions=fm.get("decisions", []),
@@ -290,8 +414,13 @@ def parse_doc(w: Wiki, path: Path, warns: list[Warning]) -> Doc | None:
     for r in fm.get("refs", []):
         for sym in r["symbols"]:
             doc.refs.append(Ref(file=w.rel(w.root / r["file"]), symbol=sym))
+    figures = [0]
     for section in outline:
-        section["body_html"], _ = render_body(section["body"].splitlines())
+        section["body_html"], _ = render_body(section["body"].splitlines(), figures)
+        for src, _ in FIGURE_SRC_RE.findall(section["body_html"]):
+            figure = posixpath.normpath(posixpath.join(posixpath.dirname(doc.path), html.unescape(src)))
+            if figure not in doc.figures:
+                doc.figures.append(figure)
         if section["title"].lower() == "tl;dr":
             doc.tldr = [line.strip()[2:].strip() for line in section["body"].splitlines()
                         if line.strip().startswith("- ")]
@@ -327,13 +456,18 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
             warns.append(Warning("duplicate-doc", f"duplicate document id '{d.id}'", d.path))
         by_id[d.id] = d
     destinations = diagram_destinations(docs)
+    groups = w.cfg.get("groups") or {}
     for d in docs:
+        for group in ([d.group] if d.group else []) + list(d.diagram_groups.values()):
+            if group not in groups:
+                warns.append(Warning("unknown-group", f"group '{group}' is not declared in wiki.config.yaml", d.path))
         for dependency in d.depends_on:
             if dependency not in by_id:
                 warns.append(Warning("broken-dependency", f"unknown dependency '{dependency}'", d.path))
         for target in d.diagram_links.values():
             if target not in destinations:
                 warns.append(Warning("broken-diagram-link", f"unknown diagram target '{target}'", d.path))
+        warns += figure_issues(w, d, groups, destinations)
         if d.parent and d.parent not in by_id:
             warns.append(Warning("broken-parent", f"unknown parent '{d.parent}'", d.path))
         for rel in d.related:
@@ -346,6 +480,7 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
                 break
             seen.add(cursor)
             cursor = by_id[cursor].parent
+    resolve_groups(docs, by_id, groups)
     for d in docs:
         for aid, a in d.anchors.items():
             if aid in anchors:
@@ -395,6 +530,177 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
 
     return warns
 
+# @wiki:impl renderer.groups
+def resolve_groups(docs, by_id, groups):
+    """A page without its own group inherits the nearest declared ancestor group."""
+    for d in docs:
+        cursor, seen = d, set()
+        while cursor is not None and cursor.id not in seen:
+            seen.add(cursor.id)
+            if cursor.group in groups:
+                d.group_name, d.group_color = cursor.group, groups[cursor.group]["color"]
+                break
+            cursor = by_id.get(cursor.parent)
+
+SVG_FORBIDDEN_RE = re.compile(r'<(?:script|iframe|embed|object)\b', re.I)
+# Handlers and javascript: URLs are only dangerous as attributes; figure text may say "onboard = 1".
+SVG_UNSAFE_ATTR_RE = re.compile(r'\son[a-z]+\s*=|javascript:', re.I)
+SVG_ATTR = r'(?<![\w:-])%s\s*=\s*(["\'])(.*?)\1'
+
+
+def _figure_text(w, figure):
+    """Return (text, problem) for a wiki-root-relative SVG figure path."""
+    path = w.abs(figure)
+    if w.root not in path.parents:
+        return None, ("invalid-figure", f"figure '{figure}' must be inside the wiki instance")
+    if not path.is_file():
+        return None, ("missing-figure", f"figure '{figure}' does not exist")
+    text = path.read_text(encoding="utf8", errors="replace")
+    tags = re.findall(r"<[A-Za-z][^<>]*>", text)
+    if (not re.search(r"<svg\b", text) or SVG_FORBIDDEN_RE.search(text)
+            or any(SVG_UNSAFE_ATTR_RE.search(tag) for tag in tags)):
+        return None, ("invalid-figure", f"figure '{figure}' must be SVG without scripts, embeds, or event handlers")
+    return text, None
+
+
+# @wiki:impl renderer.figures
+def figure_issues(w, doc, groups, destinations):
+    """Strict checks for a page's SVG figures: location, safety, declared groups, and link targets."""
+    warns = []
+    for figure in doc.figures:
+        text, problem = _figure_text(w, figure)
+        if problem:
+            warns.append(Warning(*problem, doc.path))
+            continue
+        for _, group in re.findall(SVG_ATTR % "data-group", text):
+            if group not in groups:
+                warns.append(Warning("unknown-group", f"figure '{figure}' uses undeclared group '{group}'", doc.path))
+        for _, target in re.findall(SVG_ATTR % "data-link", text):
+            if target not in destinations:
+                warns.append(Warning("broken-figure-link", f"figure '{figure}' links to unknown '{target}'", doc.path))
+    return warns
+
+
+def _add_attributes(tag, classes=(), **attributes):
+    """Append classes and new attributes to one start tag."""
+    if classes:
+        existing = re.search(SVG_ATTR % "class", tag)
+        if existing:
+            quote, value = existing.groups()
+            tag = tag[:existing.start(2)] + " ".join([value, *classes]).strip() + tag[existing.end(2):]
+        else:
+            attributes["class"] = " ".join(classes)
+    extra = "".join(f' {name.replace("_", "-")}="{html.escape(value, quote=True)}"'
+                    for name, value in attributes.items())
+    end = len(tag) - (2 if tag.endswith("/>") else 1)
+    return tag[:end].rstrip() + extra + tag[end:]
+
+
+# @wiki:impl renderer.figures
+def inline_figure(w, figure, alt, prefix, groups, destinations):
+    """Inline one project SVG: unique IDs per page, group colours, and resolved wiki links."""
+    text, problem = _figure_text(w, figure)
+    if problem:
+        return '<p class="figure-missing">%s</p>' % html.escape(problem[1])
+    text = re.sub(r"<\?xml.*?\?>|<!DOCTYPE[^>]*>|<!--.*?-->", "", text, flags=re.S).strip()
+    ids = {value for _, value in re.findall(SVG_ATTR % "id", text)}
+    rename = lambda name: f"{prefix}-{name}" if name in ids else name
+    text = re.sub(SVG_ATTR % "id", lambda m: f'id={m.group(1)}{rename(m.group(2))}{m.group(1)}', text)
+    text = re.sub(r"url\(\s*#([^)\s]+)\s*\)", lambda m: f"url(#{rename(m.group(1))})", text)
+    text = re.sub(r'\b((?:xlink:)?href)\s*=\s*(["\'])#(.*?)\2',
+                  lambda m: f'{m.group(1)}={m.group(2)}#{rename(m.group(3))}{m.group(2)}', text)
+    text = re.sub(r'\b(aria-(?:labelledby|describedby))\s*=\s*(["\'])(.*?)\2',
+                  lambda m: f'{m.group(1)}={m.group(2)}{" ".join(map(rename, m.group(3).split()))}{m.group(2)}', text)
+    linked = False
+    def start_tag(match):
+        nonlocal linked
+        tag, name = match.group(0), match.group(1)
+        group = re.search(SVG_ATTR % "data-group", tag)
+        if group and group.group(2) in groups:
+            tag = _add_attributes(tag, ["cw-" + groups[group.group(2)]["color"]])
+        link = re.search(SVG_ATTR % "data-link", tag) if name == "a" else None
+        if link and link.group(2) in destinations:
+            linked = True
+            tag = _add_attributes(tag, ["fig-link"], href=destinations[link.group(2)]["href"])
+        return tag
+    text = re.sub(r"<([A-Za-z][\w:-]*)\b[^<>]*>", start_tag, text)
+    if alt and not linked and not re.search(r"<svg\b[^>]*\brole\s*=", text):
+        text = re.sub(r"<svg\b[^>]*>", lambda m: _add_attributes(m.group(0), role="img", aria_label=alt), text, count=1)
+    return text
+
+
+def code_label(doc, section_id=None):
+    """A diagram node's second line: tagged declarations of a section, or a page's owned files."""
+    if section_id is None:
+        if not doc.owns:
+            return ""
+        first = doc.owns[0]
+        name = posixpath.basename(first)
+        if sum(posixpath.basename(f) == name for f in doc.owns) > 1:
+            name = "/".join(first.split("/")[-2:])
+        return name + (f" +{len(doc.owns) - 1}" if len(doc.owns) > 1 else "")
+    anchor = doc.anchors.get(section_id)
+    impls = list(dict.fromkeys((t.file, t.symbol, t.kind) for t in (anchor.impls if anchor else [])))
+    if not impls:
+        return ""
+    file, symbol, kind = impls[0]
+    label = posixpath.basename(file) + (f" · {symbol}{'()' if kind == 'function' else ''}" if symbol else "")
+    return label + (f" +{len(impls) - 1}" if len(impls) > 1 else "")
+
+
+MERMAID_PRE_RE = re.compile(r'<pre class="mermaid">(.*?)</pre>', re.S)
+NODE_SHAPES = {"[[": "]]", "[(": ")]", "([": "])", "((": "))", "{{": "}}", "[": "]", "(": ")", "{": "}", ">": "]"}
+SKIP_LINE_RE = re.compile(r"^\s*(?:%%|classDef\b|class\b|style\b|linkStyle\b|click\b|subgraph\b|direction\b)")
+
+
+# @wiki:impl renderer.code-labels
+def annotate_mermaid(source, labels):
+    """Add a code line under labelled flowchart nodes; other diagram types are left unchanged."""
+    lines = source.split("\n")
+    start = 0
+    if lines and lines[0].strip() == "---":   # Mermaid front matter
+        start = next((i + 1 for i in range(1, len(lines)) if lines[i].strip() == "---"), len(lines))
+    header = next((line.strip() for line in lines[start:] if line.strip() and not line.strip().startswith("%%")), "")
+    if not labels or not re.match(r"(flowchart|graph)\b", header):
+        return source
+    names = "|".join(re.escape(name) for name in sorted(labels, key=len, reverse=True))
+    opener = "|".join(re.escape(o) for o in sorted(NODE_SHAPES, key=len, reverse=True))
+    declaration = re.compile(rf"(?<![\w.-])({names})({opener})")
+    def annotate(line):
+        if SKIP_LINE_RE.match(line):
+            return line
+        # Search outside quoted text and |edge labels| so their words never match node IDs.
+        masked = re.sub(r'"[^"]*"|\|[^|]*\|', lambda m: m.group(0)[0] + "\0" * (len(m.group(0)) - 2) + m.group(0)[-1], line)
+        out, last = [], 0
+        for match in declaration.finditer(masked):
+            if match.start() < last:
+                continue
+            node, open_ = match.groups()
+            close, body_start = NODE_SHAPES[open_], match.end()
+            if line.startswith('"', body_start):
+                end = line.find('"', body_start + 1)
+                if end < 0 or not line.startswith(close, end + 1):
+                    continue
+                text, stop = line[body_start + 1:end], end + 1 + len(close)
+            else:
+                end = line.find(close, body_start)
+                text, stop = (line[body_start:end], end + len(close)) if end >= 0 else ("", -1)
+            if not text.strip() or text.startswith("`") or "<br" in text.lower():
+                continue
+            detail = re.sub(r'["<>]', "", labels[node])
+            out.append(line[last:match.start()])
+            out.append(f"{node}{open_}\"{text}<br/><span class='cw-code'>{detail}</span>\"{close}")
+            last = stop
+        return "".join(out) + line[last:]
+    return "\n".join(lines[:start] + [annotate(line) for line in lines[start:]])
+
+
+def annotate_diagrams(markup, labels):
+    if not labels:
+        return markup
+    return MERMAID_PRE_RE.sub(lambda m: '<pre class="mermaid">%s</pre>' % html.escape(
+        annotate_mermaid(html.unescape(m.group(1)), labels), quote=False), markup)
+
 # --------------------------------------------------------------------------- #
 # outputs
 # --------------------------------------------------------------------------- #
@@ -431,11 +737,13 @@ def build_index(w: Wiki, docs: list[Doc], tags: list[Tag], symbols=None) -> dict
                            for name, data in table.items()} for file, table in (symbols or {}).items()},
         "wiki_root": str(w.root),
         "project": w.cfg.get("project", {}),
+        "groups": w.cfg.get("groups", {}),
         "docs": [{
             "id": d.id, "title": d.title, "type": d.type, "status": d.status,
             "source": d.path, "html": d.out, "tldr": d.tldr, "owns": d.owns,
             "related": d.related, "updated": d.updated,
             "depends_on": d.depends_on, "diagram_links": d.diagram_links,
+            "group": d.group_name, "diagram_groups": d.diagram_groups, "figures": d.figures,
             "used_by": [other.id for other in docs if d.id in other.depends_on],
             "summary": d.summary, "parent": d.parent,
             "children": [child.id for child in docs if child.parent == d.id],
@@ -461,10 +769,11 @@ def diagram_destinations(docs):
     targets = {}
     for d in docs:
         for section in d.outline:
-            targets[section["id"]] = dict(href=f"{d.out}#{section['slug']}",
-                title=section["title"], kind="section", document=d.id)
+            targets[section["id"]] = dict(href=f"{d.out}#{section['slug']}", title=section["title"],
+                kind="section", document=d.id, code=code_label(d, section["id"]))
     # An exact document ID takes precedence over a colliding section ID.
-    targets.update({d.id: dict(href=d.out, title=d.title, kind="component", document=d.id) for d in docs})
+    targets.update({d.id: dict(href=d.out, title=d.title, kind="component", document=d.id,
+                               code=code_label(d)) for d in docs})
     return targets
 
 
@@ -475,11 +784,23 @@ def diagram_targets(doc, docs):
     targets = {d.id: destinations[d.id] for d in docs}
     for section in doc.outline:
         targets[section["slug"]] = dict(href=f"#{section['slug']}", title=section["title"],
-                                      kind="section", document=doc.id)
+                                      kind="section", document=doc.id, code=code_label(doc, section["id"]))
     for node, target in doc.diagram_links.items():
         if target in destinations:
             targets[node] = destinations[target]
     return targets
+
+
+# @wiki:impl renderer.groups
+def diagram_styles(doc, docs, targets, groups, locale="en"):
+    """A node takes the group of the page it links to; `diagram_groups` names any node explicitly."""
+    by_id = {d.id: d for d in docs}
+    nodes = {node: by_id[target["document"]].group_name for node, target in targets.items()
+             if target.get("document") in by_id and by_id[target["document"]].group_name}
+    nodes.update({node: group for node, group in doc.diagram_groups.items() if group in groups})
+    # A list keeps configuration order for the legend; JSON object keys are sorted.
+    return dict(nodes=nodes, groups=[dict(name=name, color=group["color"],
+                label=group["label"].get(locale, group["label"]["en"])) for name, group in groups.items()])
 
 
 # @wiki:impl documents.rendering
@@ -543,16 +864,27 @@ def _render_language(w, canonical, warns, index, variants, locale, locales):
     for d in docs:
         anchor_map = {a.slug: a.title for a in d.anchors.values()}
         targets = diagram_targets(d, docs)
+        groups = w.cfg.get("groups") or {}
+        styles = diagram_styles(d, docs, targets, groups, locale)
+        labels = ({node: t["code"] for node, t in targets.items() if t.get("code")}
+                  if w.cfg.get("diagram_code_labels", True) else {})
+        destinations = diagram_destinations(docs)
+        figure_ids = iter(range(1, 10_000))
+        def place_figure(match):
+            src, alt = html.unescape(match.group(1)), html.unescape(match.group(2))
+            figure = posixpath.normpath(posixpath.join(posixpath.dirname(d.path), src))
+            label = f' role="group" aria-label="{html.escape(alt, quote=True)}"' if alt else ""
+            return '<div class="svg-figure"%s>%s</div>' % (
+                label, inline_figure(w, figure, alt, f"fig{next(figure_ids)}", groups, destinations))
         ancestors, cursor, seen = [], d.parent, {d.id}
         while cursor in by_id and cursor not in seen:
             seen.add(cursor)
             ancestors.insert(0, by_id[cursor])
             cursor = by_id[cursor].parent
-        d.preamble = localize_links(d.preamble, d, canonical, locale)
+        d.preamble = localize_generated(localize_links(d.preamble, d, canonical, locale), locale)
         for section in d.outline:
-            section["body_html"] = localize_links(section["body_html"], d, canonical, locale).replace(
-                'Follow a linked node to explore its component or implementation.',
-                translate('Follow a linked node to explore its component or implementation.', locale))
+            section["body_html"] = FIGURE_SRC_RE.sub(place_figure, annotate_diagrams(localize_generated(
+                localize_links(section["body_html"], d, canonical, locale), locale), labels))
         sections_by_slug = {section["slug"]: section for section in d.outline}
         for section in d.sections:
             section.update(sections_by_slug[section["slug"]])
@@ -562,7 +894,7 @@ def _render_language(w, canonical, warns, index, variants, locale, locales):
             anchor.body_html = sections_by_slug[anchor.slug]["body_html"]
         rendered = page_tpl.render(
             doc=d, anchor_map=(json.dumps(anchor_map) if (w.wiki_dir / "_theme/page.html.j2").is_file() else anchor_map),
-            diagram_targets=targets, ancestors=ancestors,
+            diagram_targets=targets, diagram_styles=styles, ancestors=ancestors,
             used_by=[other for other in docs if d.id in other.depends_on],
             warnings=warn_by_doc.get(source_paths[d.id], []),
             review=next((r for r in index.get("reviews", {}).get("documents", []) if r["document"] == d.id), None), **common)

@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "history",
-  "outcome": "no-change",
-  "reason": "Reviewed snapshot.py change: translation siblings do not contribute source ownership or refs, while all Markdown files still participate in the content fingerprint and preview input model.",
-  "reviewed_at": "2026-09-13T16:59:00+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "7c7e7d2d59e7fe3c0ee2605c852a936c71d0ef7acf30e5bee6a9615c7a8f0bc2",
+  "outcome": "updated",
+  "reason": "Build snapshots now include SVG files from the wiki directory (snapshot.input_paths); updated the inputs node in the diagram.",
+  "reviewed_at": "2026-10-13T02:54:03+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "f15c5815a85dfc3317dccecedad6e6e09531d18658c51aac8ba53883cdff753c",
   "snapshot": {
     "document_path": "wiki/history.md",
-    "document_sha256": "ea1f91adddce63b085ceb4afd5c1f63d55e868d150f3b58d5c414db4c0b7d4d0",
+    "document_sha256": "97724f4da0aa9c411badb99f47b2f72e4adeed2dc8b49745a85c9b2d4300209c",
     "sources": {
-      "../src/codewiki/snapshot.py": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67"
+      "../src/codewiki/snapshot.py": "fd9861098fca9a8d0d80e1e29dc781b7f51847c095a670deaf7e9b4705c0c13a"
     },
     "coverage": [
       {

@@ -3,6 +3,7 @@ id: skills
 type: component
 status: stable
 parent: architecture
+group: authoring
 title: LLM skills
 summary: Five portable reading, authoring, and review workflows use the CLI to explore the
   same architecture, one level at a time.
@@ -10,6 +11,7 @@ owns:
 - ../src/codewiki/resources/skills/wiki-init/SKILL.md
 - ../src/codewiki/resources/skills/wiki-query/SKILL.md
 - ../src/codewiki/resources/skills/wiki-author/SKILL.md
+- ../src/codewiki/resources/skills/wiki-author/references/figures.md
 - ../src/codewiki/resources/skills/wiki-build/SKILL.md
 - ../src/codewiki/resources/skills/wiki-review/SKILL.md
 depends_on:
@@ -35,6 +37,8 @@ flowchart TB
   check --> query
   review["wiki-review · update or pass with reason"] --> check
 ```
+Figure: How the five skills hand work to each other. Arrows show workflow order,
+not Python imports.
 
 These arrows describe an authoring workflow, not Python imports. Skills are Markdown
 instructions loaded by an LLM client; they do not run inside the renderer.
@@ -79,6 +83,10 @@ token budget.
 choose stable IDs, define ownership, and bind important concepts with tags or refs.
 A high-level component diagram is an authored explanation. Keep its `depends_on`
 relationships and `diagram_links` in the same Markdown change as the explanation.
+The skill takes diagram color from configured page groups rather than ad hoc styling,
+and adds `Figure:` captions and alert callouts where they help a reader. Its
+`references/figures.md` file holds the SVG figure rules (theme classes, `data-group`,
+`data-link`, and forbidden content) and is read only when a drawing is needed.
 
 After refactoring or other code changes, the skill separates current explanations
 from decision history. It updates inaccurate pages and records useful rationale as

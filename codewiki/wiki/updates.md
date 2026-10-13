@@ -3,6 +3,7 @@ id: updates
 type: component
 status: stable
 parent: architecture
+group: authoring
 title: Instance updates
 summary: Install a framework release or source build, then reconcile package support files against recorded baselines without replacing project-owned content.
 owns:
