@@ -8,4 +8,4 @@ Entry points (instance commands accept --config or discover it upward from cwd):
     python -m codewiki init   --root <project> [--code-root <path> ...]
     python -m codewiki update [--source <checkout> | --installed] [--dry-run]
 """
-__version__ = "0.5.0"
+__version__ = "0.5.1"
