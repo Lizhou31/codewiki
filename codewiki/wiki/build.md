@@ -3,6 +3,7 @@ id: build
 type: component
 status: stable
 parent: architecture
+group: pipeline
 title: Build pipeline
 summary: Follow the complete build process and inspect the orchestrator that coordinates
   analysis, review status, rendering, and publication.
@@ -53,6 +54,8 @@ flowchart TB
   publish --> html_pages["HTML pages + assets"]
   publish --> query_index["index.json"]
 ```
+Figure: Execution order of `codewiki build --strict`. Each box opens the
+section that owns that operation.
 
 The diagram follows `codewiki build --strict`. Source scanning and Markdown parsing
 run sequentially. Pending documentation reviews do not fail structural validation;
@@ -82,7 +85,8 @@ explained here, not an additional pipeline stage.
 ## Query index {#index}
 
 `build_index()` exports document summaries, parent/child relationships, dependencies,
-diagram destinations, original Markdown sections, and source symbol locations. The
+diagram destinations, resolved semantic groups with their configured definitions,
+original Markdown sections, and source symbol locations. The
 `by_file` view makes file-to-document lookup possible without loading every section.
 Source declaration text is excluded from the symbol index; the query command reads
 bounded source ranges from a verified checkout when requested.

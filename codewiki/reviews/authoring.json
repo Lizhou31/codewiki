@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "document": "authoring",
-  "outcome": "updated",
-  "reason": "Rebased onto main: the scaffold section now describes both the update manifest from main and the opt-in --client claude integration (CLAUDE.md section, .claude/skills/ copies); init_project.py merges the manifest-based bundle with the client integration.",
-  "reviewed_at": "2026-09-14T06:13:14+00:00",
-  "commit": "8756fb89cdd085c7de078e20243883cae10e8fa5",
-  "fingerprint": "35f5e703b7c50a55354ff8b08422ee2c14ff225b792fa550f39d51cd140f422f",
+  "outcome": "no-change",
+  "reason": "Only added group: authoring frontmatter for diagram color; init_project.py and serve.py are unchanged and the explanation remains accurate.",
+  "reviewed_at": "2026-10-13T01:17:56+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "fabbbec2fcdf4ac68ce840434b57ce7a72d4ec0511b2a5b0a81d16ce42c6172a",
   "snapshot": {
     "document_path": "wiki/authoring.md",
-    "document_sha256": "d78f706055d70879794776034b522d2cc1148d6e0f35e101bc465f8b5b7e3bad",
+    "document_sha256": "f40981fe316859d412707308fa2ef7f63dfb02a49d5ae21329f77d09700d29a7",
     "sources": {
       "../src/codewiki/init_project.py": "d97925c717ce7b041bd5788e287c0e694a761947824a7dd7261d44d76361a296",
       "../src/codewiki/serve.py": "c94bff76bb46be75efd7f74743d0ff0715251df0ade9aa13a5b319585ba40514"

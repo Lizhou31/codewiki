@@ -132,6 +132,13 @@ The strict build validates the targets and derives reverse "used by" links.
 `query doc` exposes these same relationships for LLM tools. Authors describe
 architectural dependencies; code tags attach source evidence to the explanation.
 
+Color can carry meaning too. Declare `groups` in `wiki.config.yaml` (a palette
+color and a label each) and set `group:` on pages; children inherit it. Linked
+nodes, their outgoing arrows, uniform subgraphs, and component cards then share
+one color per group, and each diagram gets a legend. A `Figure:` paragraph after a
+diagram becomes a numbered caption, and GitHub alerts (`> [!NOTE]`, `> [!CAUTION]`)
+become callouts. See [Semantic groups](codewiki/wiki/renderer.md#groups).
+
 ## HTML languages
 
 Keep canonical pages in English. Add a sibling such as `renderer-ch_tw.md` with

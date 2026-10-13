@@ -3,6 +3,7 @@ id: queries
 type: component
 status: stable
 parent: architecture
+group: output
 related: []
 refs: []
 title: Progressive CLI queries
@@ -86,8 +87,9 @@ the CLI reports this explicitly instead of presenting an empty section outline.
 
 ## Follow the architecture graph
 
-Document summaries include `depends_on`, reverse `used_by`, and `diagram_links` in
-both the JSON envelope and text output. These fields expose the same authored
-relationships as the HTML map. Query the destination document or section rather
+Document summaries include `depends_on`, reverse `used_by`, `diagram_links`, and the
+resolved semantic `group` in both the JSON envelope and text output; JSON also carries
+`diagram_groups`. These fields expose the same authored relationships and colors as
+the HTML map. Query the destination document or section rather
 than loading the entire wiki. Older schema-v1 indexes without these optional
 fields still load; rebuild to include them.

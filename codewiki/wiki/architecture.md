@@ -25,13 +25,15 @@ diagram_links:
   config: architecture.instances
   testing: testing
   reviews: reviews
+diagram_groups:
+  config: analysis
 ---
 
 ## Architecture map
 
-**Select a responsibility to inspect it.** Blue nodes open guides; green nodes
-open a specific section. Solid arrows point from a caller or consumer to the
-service it uses. The dotted arrow identifies what the tests exercise.
+**Select a responsibility to inspect it.** Color shows the group each
+responsibility belongs to, using the same colors as the component cards below.
+A tinted node opens a guide; a plain node opens one specific section.
 
 ```mermaid
 flowchart LR
@@ -66,6 +68,9 @@ flowchart LR
   queries -->|checks freshness with| history
   testing -.->|exercises| orchestrator
 ```
+Figure: Framework responsibilities by group. Solid arrows point from a caller or
+consumer to the service it uses and take the caller's color; the dotted arrow
+marks what the tests exercise.
 
 **Build orchestrator** is the coordinating responsibility implemented by `run()`
 and `analyze()`. Its node opens [Orchestration](build.html#orchestration).

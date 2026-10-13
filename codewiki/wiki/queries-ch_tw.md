@@ -62,4 +62,4 @@ flowchart LR
 
 ## 沿著架構圖閱讀 {#follow-the-architecture-graph}
 
-文件摘要在 JSON 與文字輸出中都包含 `depends_on`、反向 `used_by` 與 `diagram_links`，呈現與 HTML 圖相同的作者定義關係。請查詢目的文件或章節，而非載入整個 Wiki。缺少這些選用欄位的舊 schema-v1 索引仍可載入；重新建置即可補上。
+文件摘要在 JSON 與文字輸出中都包含 `depends_on`、反向 `used_by`、`diagram_links` 與解析後的語意 `group`；JSON 另含 `diagram_groups`。這些欄位呈現與 HTML 圖相同的作者定義關係與顏色。請查詢目的文件或章節，而非載入整個 Wiki。缺少這些選用欄位的舊 schema-v1 索引仍可載入；重新建置即可補上。

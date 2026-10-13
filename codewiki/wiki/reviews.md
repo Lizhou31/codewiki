@@ -3,6 +3,7 @@ id: reviews
 type: component
 status: stable
 parent: architecture
+group: analysis
 title: Documentation review
 summary: Track existing pages against reviewed source content, record explicit outcomes and reasons, and expose one live check to skills, hooks, and CI.
 owns:
@@ -35,6 +36,8 @@ flowchart LR
   current -->|source or document changes| scan
   scan --> check["CI checks pending reviews + structural errors"]
 ```
+Figure: Review lifecycle of one existing page. Only an explicit `review pass` or
+`review updated` makes it current; a build never does.
 
 ## Live status API {#status}
 

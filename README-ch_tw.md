@@ -94,6 +94,8 @@ diagram_links:
 
 此處名為 `parser` 的節點會開啟 `documents` 的 `sections` 標題。嚴格建置驗證目標並推導反向使用關係。`query doc` 向 LLM 工具提供相同關係。作者描述架構相依，程式碼標籤則把原始碼證據附到說明。
 
+顏色也可以具有意義。在 `wiki.config.yaml` 宣告 `groups`（每個群組有調色盤顏色與標籤），並在頁面設定 `group:`；子頁會沿用。連結節點、其出發箭頭、成員一致的子圖與元件卡片會依群組共用同一顏色，每張圖表也會加上圖例。圖表後的 `Figure:` 段落成為編號說明，GitHub 提示語法（`> [!NOTE]`、`> [!CAUTION]`）則成為提示框。請參閱[語意群組](codewiki/wiki/renderer-ch_tw.md#groups)。
+
 ## HTML 語言
 
 標準頁面保留英文。新增例如 `renderer-ch_tw.md` 的同層檔案，保持相同 frontmatter `id`、標題層級與穩定錨點。翻譯標題、摘要與正文，並在翻譯標題明確加入 `{#english-slug}`。執行 `codewiki build --strict` 產生具有語言切換器的英文與台灣繁體中文頁面。框架的 Wiki 頁面都提供翻譯。

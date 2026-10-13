@@ -2,26 +2,39 @@
   "schema_version": 1,
   "document": "renderer",
   "outcome": "updated",
-  "reason": "Read the renderer guide and inspected the diagrams.js and style.css changes against the prior review; documented viewBox zoom limits, pointer-centered zoom, drag click suppression, keyboard controls, localization, and dialog state. Browser regression checks and desktop/mobile visual inspection passed.",
-  "reviewed_at": "2026-09-16T09:07:25+00:00",
-  "commit": "5e169aab717c8fe9bf84c20549c344e0a080ffb6",
-  "fingerprint": "4958ccb5db7d4d1d7d162bc4843cc720e0bc2ecc24d612dd44709b78d4ed5451",
+  "reason": "Added the Semantic groups section (validate_groups, resolve_groups, diagram_styles, diagrams.js node/edge/lane coloring and legend, heading/card colors), caption and callout rendering in Markdown to sections, a caption and groups node on the stage diagram, and updated the node-color sentence. Checked style.css palette tokens, page.html.j2 classes and styles JSON, and ui_text labels.",
+  "reviewed_at": "2026-10-13T01:17:59+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "3a17320c7994e6ad7ce73f56c556c831e6e1f2c5077bb8fe4f70b9cd438b3e29",
   "snapshot": {
     "document_path": "wiki/renderer.md",
-    "document_sha256": "e22d4254654b6e935c3f5114cfad7929f1f2f5419a41ab75de5b294566c09645",
+    "document_sha256": "de21690f2356d1a51d634456f0900e451cc23d3c007e09692bf5e5c13cc6e4a5",
     "sources": {
-      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
+      "../src/codewiki/build.py": "81b9e1aa709495c710e37fd57b35e2b3bbe043fb42cee7cc140d777283317c09",
+      "../src/codewiki/config.py": "c4ee4d03326bb85f28180bf32ec00f800ee30e887875268b7982acfb6bf63391",
       "../src/codewiki/localization.py": "e9ab8dd226b078fdfd62ea218487a9c0c0c01786ab151923638a023a5323da3b",
       "../src/codewiki/resources/theme/_base.html.j2": "bbce13bfafb26a6620094457eba4a81b1b5edae137b311867907af9669a67e18",
-      "../src/codewiki/resources/theme/diagrams.js": "849d26c13c080266b4e29cc1a0a091c1276d13be6b55642aa805db2befa496b1",
+      "../src/codewiki/resources/theme/diagrams.js": "9c7a7ba264d09a3a0a558071bb2cd93c6c4a80445291299a493f030e2cc3b888",
       "../src/codewiki/resources/theme/files.html.j2": "ed84ce5ed431cdc40eedb8f98eff5dc640caae394ce72140f7b928612276d0a4",
       "../src/codewiki/resources/theme/index.html.j2": "c9c2d6c0f63418eea4fd215dec3e3b0a3e536ccc7abc04c905849dd4d9ff9677",
-      "../src/codewiki/resources/theme/page.html.j2": "b8e5dae3ef7601fae3879385fe202b4f55aa3b4d2eb9f63469a0db6104aff047",
+      "../src/codewiki/resources/theme/page.html.j2": "b36e3255830ea59339dd9aaf7b4c65e5679e0a29b71dfd2c75d6aeae8d10e0d9",
       "../src/codewiki/resources/theme/reading.js": "9a0068e24790bd744ad6b57060bd21aaba24bebcab62cd23fd69850f24090685",
-      "../src/codewiki/resources/theme/style.css": "89093799d1f257d9ad3b328ffda9069bca767fe8dac101821ab8a2fdb781be7a",
-      "../src/codewiki/ui_text.py": "226691851895366cfd6dc2898fc3f4fbbb4275c71b0fa8f0e98b5afb24c3bd71"
+      "../src/codewiki/resources/theme/style.css": "7e5852c5f56509cb539c00efbd45bed84e19a3b257f713ba8015ad87a10b8d20",
+      "../src/codewiki/ui_text.py": "ee5900ea182047d44f430478f1d4d926f7265b8d6e7b84e98e7edfd952d57e30"
     },
     "coverage": [
+      {
+        "anchor": "renderer.groups",
+        "file": "../src/codewiki/build.py",
+        "kind": "tag",
+        "role": "impl"
+      },
+      {
+        "anchor": "renderer.groups",
+        "file": "../src/codewiki/config.py",
+        "kind": "tag",
+        "role": "impl"
+      },
       {
         "anchor": "renderer.markdown",
         "file": "../src/codewiki/build.py",

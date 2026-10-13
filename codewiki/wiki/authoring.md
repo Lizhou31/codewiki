@@ -3,6 +3,7 @@ id: authoring
 type: component
 status: stable
 parent: architecture
+group: authoring
 related: []
 refs: []
 title: Initialization & preview

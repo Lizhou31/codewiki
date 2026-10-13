@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "document": "manual-configuration",
+  "outcome": "updated",
+  "reason": "First baseline: checked discovery order (--config, CODE_WIKI_CONFIG, upward walk), the settings table, serve's watched inputs/default port/site_dir restart, and troubleshooting rows against config.py, serve.py, and build.py; added the optional groups setting and example.",
+  "reviewed_at": "2026-10-13T01:17:58+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "ca7d1547c6e3765cfbd3758262e23a844096dac93fe8265c711f0d176a00b284",
+  "snapshot": {
+    "document_path": "wiki/manual-configuration.md",
+    "document_sha256": "a30220c6dd098d0daf125e3c90da429044fb02470769dbeeee64e37b80089265",
+    "sources": {},
+    "coverage": []
+  }
+}

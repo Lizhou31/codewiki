@@ -14,6 +14,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import markdown as md_lib
+from markdown.extensions import Extension
+from markdown.preprocessors import Preprocessor
+from markdown.treeprocessors import Treeprocessor
+import xml.etree.ElementTree as etree
 from jinja2 import Environment, FileSystemLoader, select_autoescape, TemplateError
 
 from .config import Wiki, load as load_wiki
@@ -81,6 +85,10 @@ class Doc:
     related: list = field(default_factory=list)
     depends_on: list = field(default_factory=list)
     diagram_links: dict = field(default_factory=dict)
+    diagram_groups: dict = field(default_factory=dict)
+    group: str | None = None           # as authored; group_name/group_color are inherited
+    group_name: str | None = None
+    group_color: str | None = None
     updated: str = ""
     summary: str = ""
     parent: str | None = None
@@ -104,6 +112,7 @@ SEVERITY = {
     "missing-root": "error", "invalid-doc": "error", "duplicate-doc": "error",
     "broken-related": "error", "broken-parent": "error", "hierarchy-cycle": "error",
     "broken-decision": "error", "broken-dependency": "error", "broken-diagram-link": "error",
+    "unknown-group": "error",
     "anchorless-heading": "warn", "outdated-doc": "warn", "unreviewed-doc": "info", "parse-error": "warn",
     "unimplemented": "info",
 }
@@ -231,11 +240,75 @@ def scan_code(w: Wiki) -> tuple[list[Tag], dict, list[Warning], int]:
 # markdown scanning
 # --------------------------------------------------------------------------- #
 
-MD = md_lib.Markdown(extensions=["fenced_code", "tables", "attr_list", "sane_lists"])
+CALLOUT_RE = re.compile(r'^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*(?:\n|$)', re.I)
+CALLOUT_TITLES = {"note": "Note", "tip": "Tip", "important": "Important", "warning": "Warning", "caution": "Caution"}
+CAPTION_RE = re.compile(r'^Figure:[ \t]*(.*)$')
+FIGURE_LABEL_RE = re.compile(r'<span class="figure-label">Figure (\d+)\.</span>')
+DIAGRAM_HINT = 'Follow a linked node to explore its component or implementation.'
+
+
+class _Callouts(Treeprocessor):
+    """GitHub alert syntax (`> [!NOTE]`) becomes a labelled notice; other quotes stay quotes."""
+    def run(self, root):
+        for quote in list(root.iter("blockquote")):
+            first = quote[0] if len(quote) else None
+            match = CALLOUT_RE.match(first.text or "") if first is not None and first.tag == "p" else None
+            if not match:
+                continue
+            kind = match.group(1).lower()
+            first.text = first.text[match.end():]
+            if not first.text.strip() and not len(first):
+                quote.remove(first)
+            quote.tag = "div"
+            quote.set("class", f"callout callout-{kind}")
+            quote.set("role", "note")
+            title = etree.Element("p", {"class": "callout-title"})
+            title.text = CALLOUT_TITLES[kind]
+            quote.insert(0, title)
+
+
+class _QuoteBreaks(Preprocessor):
+    """As on GitHub, a blank line ends a blockquote; Python-Markdown would merge the next one into it."""
+    def run(self, lines):
+        out, in_quote, blank = [], False, False
+        for line in lines:
+            if not line.strip():
+                blank = True
+                out.append(line)
+                continue
+            quote = line.startswith(">")
+            if quote and blank and in_quote:
+                out.extend(["<!-- -->", ""])
+            in_quote, blank = quote or (in_quote and not blank), False
+            out.append(line)
+        return out
+
+
+class _CalloutExtension(Extension):
+    def extendMarkdown(self, md):
+        # After fenced code is stashed, before raw HTML blocks are collected.
+        md.preprocessors.register(_QuoteBreaks(md), "codewiki-quote-breaks", 22)
+        # Before inline parsing, so the marker is still plain paragraph text.
+        md.treeprocessors.register(_Callouts(md), "codewiki-callouts", 25)
+
+
+MD = md_lib.Markdown(extensions=["fenced_code", "tables", "attr_list", "sane_lists", _CalloutExtension()])
 
 def render_md(text: str) -> str:
     MD.reset()
     return MD.convert(text)
+
+
+def localize_generated(markup: str, locale: str) -> str:
+    """Translate labels the renderer generated inside authored Markdown sections."""
+    from .ui_text import translate
+    markup = markup.replace(DIAGRAM_HINT, translate(DIAGRAM_HINT, locale))
+    markup = FIGURE_LABEL_RE.sub(lambda m: '<span class="figure-label">%s</span>'
+                                 % translate("Figure {n}.", locale).format(n=m.group(1)), markup)
+    for title in CALLOUT_TITLES.values():
+        markup = markup.replace(f'<p class="callout-title">{title}</p>',
+                                f'<p class="callout-title">{translate(title, locale)}</p>')
+    return markup
 
 def split_mermaid(lines: list[str]):
     buf, out, in_mm = [], [], False
@@ -253,10 +326,31 @@ def split_mermaid(lines: list[str]):
         out.append(("mermaid" if in_mm else "md", buf))
     return out
 
+def take_caption(lines: list[str]) -> tuple[str | None, list[str]]:
+    """Split a leading `Figure:` paragraph from the Markdown that follows a diagram."""
+    start = next((i for i, line in enumerate(lines) if line.strip()), len(lines))
+    match = CAPTION_RE.match(lines[start].strip()) if start < len(lines) else None
+    if not match:
+        return None, lines
+    stop = next((i for i in range(start + 1, len(lines)) if not lines[i].strip()), len(lines))
+    caption = " ".join([match.group(1), *(line.strip() for line in lines[start + 1:stop])]).strip()
+    return caption, lines[stop:]
+
+
 # @wiki:impl renderer.markdown
-def render_body(lines: list[str]) -> tuple[str, list[str]]:
-    parts, mermaids = [], []
+def render_body(lines: list[str], figures: list[int] | None = None) -> tuple[str, list[str]]:
+    """Render Markdown and Mermaid; `figures` carries caption numbering across a page's sections."""
+    figures = [0] if figures is None else figures
+    parts, mermaids, after_diagram = [], [], False
     for kind, chunk in split_mermaid(lines):
+        if kind == "md" and after_diagram:
+            caption, chunk = take_caption(chunk)
+            if caption is not None:
+                figures[0] += 1
+                inline = re.sub(r"^<p>(.*)</p>$", r"\1", render_md(caption).strip(), flags=re.S)
+                parts[-1] = ('<figure class="diagram-figure">%s<figcaption><span class="figure-label">'
+                             'Figure %d.</span> %s</figcaption></figure>' % (parts[-1], figures[0], inline))
+        after_diagram = False
         text = "\n".join(chunk).strip("\n")
         if not text.strip():
             continue
@@ -264,8 +358,8 @@ def render_body(lines: list[str]) -> tuple[str, list[str]]:
             mermaids.append(text)
             parts.append(
                 '<div class="mermaid-wrap"><pre class="mermaid">%s</pre>'
-                '<p class="mermaid-hint">Follow a linked node to explore its component or implementation.</p></div>'
-                % html.escape(text))
+                '<p class="mermaid-hint">%s</p></div>' % (html.escape(text), DIAGRAM_HINT))
+            after_diagram = True
         else:
             parts.append(render_md(text))
     return "\n".join(parts), mermaids
@@ -283,6 +377,7 @@ def parse_doc(w: Wiki, path: Path, warns: list[Warning]) -> Doc | None:
         owns=[w.rel(w.root / x) for x in fm.get("owns", [])],
         related=fm.get("related", []), updated=str(fm.get("updated", "")),
         depends_on=fm.get("depends_on", []), diagram_links=fm.get("diagram_links", {}),
+        diagram_groups=fm.get("diagram_groups", {}), group=fm.get("group"),
         summary=fm.get("summary", ""), parent=fm.get("parent"),
         markdown=raw, preamble=render_md(preamble), outline=outline,
         decisions=fm.get("decisions", []),
@@ -290,8 +385,9 @@ def parse_doc(w: Wiki, path: Path, warns: list[Warning]) -> Doc | None:
     for r in fm.get("refs", []):
         for sym in r["symbols"]:
             doc.refs.append(Ref(file=w.rel(w.root / r["file"]), symbol=sym))
+    figures = [0]
     for section in outline:
-        section["body_html"], _ = render_body(section["body"].splitlines())
+        section["body_html"], _ = render_body(section["body"].splitlines(), figures)
         if section["title"].lower() == "tl;dr":
             doc.tldr = [line.strip()[2:].strip() for line in section["body"].splitlines()
                         if line.strip().startswith("- ")]
@@ -327,7 +423,11 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
             warns.append(Warning("duplicate-doc", f"duplicate document id '{d.id}'", d.path))
         by_id[d.id] = d
     destinations = diagram_destinations(docs)
+    groups = w.cfg.get("groups") or {}
     for d in docs:
+        for group in ([d.group] if d.group else []) + list(d.diagram_groups.values()):
+            if group not in groups:
+                warns.append(Warning("unknown-group", f"group '{group}' is not declared in wiki.config.yaml", d.path))
         for dependency in d.depends_on:
             if dependency not in by_id:
                 warns.append(Warning("broken-dependency", f"unknown dependency '{dependency}'", d.path))
@@ -346,6 +446,7 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
                 break
             seen.add(cursor)
             cursor = by_id[cursor].parent
+    resolve_groups(docs, by_id, groups)
     for d in docs:
         for aid, a in d.anchors.items():
             if aid in anchors:
@@ -395,6 +496,18 @@ def join(w: Wiki, docs: list[Doc], tags: list[Tag], symbols: dict) -> list[Warni
 
     return warns
 
+# @wiki:impl renderer.groups
+def resolve_groups(docs, by_id, groups):
+    """A page without its own group inherits the nearest declared ancestor group."""
+    for d in docs:
+        cursor, seen = d, set()
+        while cursor is not None and cursor.id not in seen:
+            seen.add(cursor.id)
+            if cursor.group in groups:
+                d.group_name, d.group_color = cursor.group, groups[cursor.group]["color"]
+                break
+            cursor = by_id.get(cursor.parent)
+
 # --------------------------------------------------------------------------- #
 # outputs
 # --------------------------------------------------------------------------- #
@@ -431,11 +544,13 @@ def build_index(w: Wiki, docs: list[Doc], tags: list[Tag], symbols=None) -> dict
                            for name, data in table.items()} for file, table in (symbols or {}).items()},
         "wiki_root": str(w.root),
         "project": w.cfg.get("project", {}),
+        "groups": w.cfg.get("groups", {}),
         "docs": [{
             "id": d.id, "title": d.title, "type": d.type, "status": d.status,
             "source": d.path, "html": d.out, "tldr": d.tldr, "owns": d.owns,
             "related": d.related, "updated": d.updated,
             "depends_on": d.depends_on, "diagram_links": d.diagram_links,
+            "group": d.group_name, "diagram_groups": d.diagram_groups,
             "used_by": [other.id for other in docs if d.id in other.depends_on],
             "summary": d.summary, "parent": d.parent,
             "children": [child.id for child in docs if child.parent == d.id],
@@ -480,6 +595,18 @@ def diagram_targets(doc, docs):
         if target in destinations:
             targets[node] = destinations[target]
     return targets
+
+
+# @wiki:impl renderer.groups
+def diagram_styles(doc, docs, targets, groups, locale="en"):
+    """A node takes the group of the page it links to; `diagram_groups` names any node explicitly."""
+    by_id = {d.id: d for d in docs}
+    nodes = {node: by_id[target["document"]].group_name for node, target in targets.items()
+             if target.get("document") in by_id and by_id[target["document"]].group_name}
+    nodes.update({node: group for node, group in doc.diagram_groups.items() if group in groups})
+    # A list keeps configuration order for the legend; JSON object keys are sorted.
+    return dict(nodes=nodes, groups=[dict(name=name, color=group["color"],
+                label=group["label"].get(locale, group["label"]["en"])) for name, group in groups.items()])
 
 
 # @wiki:impl documents.rendering
@@ -543,16 +670,16 @@ def _render_language(w, canonical, warns, index, variants, locale, locales):
     for d in docs:
         anchor_map = {a.slug: a.title for a in d.anchors.values()}
         targets = diagram_targets(d, docs)
+        styles = diagram_styles(d, docs, targets, w.cfg.get("groups") or {}, locale)
         ancestors, cursor, seen = [], d.parent, {d.id}
         while cursor in by_id and cursor not in seen:
             seen.add(cursor)
             ancestors.insert(0, by_id[cursor])
             cursor = by_id[cursor].parent
-        d.preamble = localize_links(d.preamble, d, canonical, locale)
+        d.preamble = localize_generated(localize_links(d.preamble, d, canonical, locale), locale)
         for section in d.outline:
-            section["body_html"] = localize_links(section["body_html"], d, canonical, locale).replace(
-                'Follow a linked node to explore its component or implementation.',
-                translate('Follow a linked node to explore its component or implementation.', locale))
+            section["body_html"] = localize_generated(
+                localize_links(section["body_html"], d, canonical, locale), locale)
         sections_by_slug = {section["slug"]: section for section in d.outline}
         for section in d.sections:
             section.update(sections_by_slug[section["slug"]])
@@ -562,7 +689,7 @@ def _render_language(w, canonical, warns, index, variants, locale, locales):
             anchor.body_html = sections_by_slug[anchor.slug]["body_html"]
         rendered = page_tpl.render(
             doc=d, anchor_map=(json.dumps(anchor_map) if (w.wiki_dir / "_theme/page.html.j2").is_file() else anchor_map),
-            diagram_targets=targets, ancestors=ancestors,
+            diagram_targets=targets, diagram_styles=styles, ancestors=ancestors,
             used_by=[other for other in docs if d.id in other.depends_on],
             warnings=warn_by_doc.get(source_paths[d.id], []),
             review=next((r for r in index.get("reviews", {}).get("documents", []) if r["document"] == d.id), None), **common)

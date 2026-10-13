@@ -114,6 +114,23 @@ codewiki serve --no-open
 
 架構圖的節點 ID 可指向頁面或本地標題。明確的跨頁目標使用 `diagram_links`；解析規則請參閱獨立的 [HTML 渲染器指南](renderer.html#navigation)。
 
+若要讓圖表顏色具有意義，請在設定中宣告 `groups`，並在系統各部分的最上層頁面設定 `group:`；子頁會沿用。連結節點、其出發箭頭、成員一致的子圖與元件卡片將共用該群組的顏色，每張圖表也會加上圖例。沒有專屬頁面的節點請使用 `diagram_groups`。請參閱[語意群組](renderer.html#groups)。
+
+在圖表正下方加入 `Figure:` 段落即可產生編號說明；讀者不可錯過的提醒請使用 GitHub 提示語法：
+
+````markdown
+```mermaid
+flowchart LR
+  host --> firmware
+```
+Figure: 一次重新對應請求的資料路徑。
+
+> [!CAUTION]
+> 兩個核心必須使用相同的按鍵數量建置。
+````
+
+支援的提示類型為 `NOTE`、`TIP`、`IMPORTANT`、`WARNING` 與 `CAUTION`。GitHub 也會將相同的 Markdown 顯示為提示。
+
 ## 更新既有文件 {#refresh}
 
 對框架自己的 Wiki，請在框架儲存庫中執行：

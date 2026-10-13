@@ -50,6 +50,10 @@ editor_url_template: 'vscode://file/{abs}:{line}'
 project:
   name: My Project
   subtitle: Project documentation
+groups:
+  core:
+    color: blue
+    label: Core services
 ```
 
 | Setting | Use |
@@ -63,6 +67,7 @@ project:
 | `max_snippet_lines` | Maximum lines in rendered declaration snippets |
 | `editor_url_template` | Editor links using absolute path and line placeholders |
 | `project` | Site name and subtitle |
+| `groups` | Optional semantic groups: a palette `color` and a `label` (text or per-language mapping) for each; pages opt in with `group:` |
 
 For a theme customization, place only the files you want to override in
 `wiki/_theme/`, such as `style.css`. Other files continue to use the package's

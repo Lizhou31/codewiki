@@ -13,3 +13,19 @@ editor_url_template: vscode://file/{abs}:{line}
 project:
   name: CodeWiki
   subtitle: Architecture you can read, then inspect
+groups:
+  authoring:
+    color: green
+    label: {en: Authoring + instances, ch_tw: 撰寫與實例}
+  pipeline:
+    color: slate
+    label: {en: Build pipeline, ch_tw: 建置流程}
+  analysis:
+    color: blue
+    label: {en: Analysis services, ch_tw: 分析服務}
+  output:
+    color: violet
+    label: {en: Outputs + queries, ch_tw: 輸出與查詢}
+  verification:
+    color: amber
+    label: {en: Verification, ch_tw: 驗證}

@@ -485,6 +485,104 @@ diagram_links:
 
 
 # @wiki:impl test-framework.diagrams
+def test_semantic_groups_color_pages_nodes_and_cards(instance):
+    cfg = yaml.safe_load(instance.cfg_path.read_text())
+    cfg['groups'] = {'core': {'color': 'blue', 'label': {'en': 'Core', 'zh_TW': '核心'}},
+                     'extra': {'color': 'green'}}
+    instance.cfg_path.write_text(yaml.safe_dump(cfg, allow_unicode=True))
+    w = Wiki(instance.cfg_path)
+    path = w.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\ngroup: core\n'
+                                     'diagram_groups: {external: extra}\n')
+                    + '\n## Map\n\n```mermaid\nflowchart LR\n  child --> external\n  dispatch --> child\n```\n')
+    (w.wiki_dir / 'child.md').write_text('---\nid: child\nparent: architecture\ntitle: Child\n---\n## Child\n')
+    (w.wiki_dir / 'architecture-ch_tw.md').write_text(path.read_text())
+    ix = build(w)
+    assert [(d['id'], d['group']) for d in ix['docs']] == [('architecture', 'core'), ('child', 'core')]
+    assert ix['groups']['extra'] == {'color': 'green', 'label': {'en': 'extra'}}
+    from codewiki.query import render_text
+    assert 'Group: core' in render_text(query(w, ix, 'doc', 'child'))
+    html = (w.site_dir / 'architecture.html').read_text()
+    assert 'class="page-heading cw-group cw-blue"' in html
+    assert 'class="component-card cw-group cw-blue" href="child.html"' in html
+    styles_of = lambda page: json.loads(
+        page.split('<script id="diagram-groups" type="application/json">')[1].split('</script>')[0])
+    styles = styles_of(html)
+    assert styles['nodes']['child'] == 'core'  # Linked page's inherited group.
+    assert styles['nodes']['dispatch'] == 'core'  # Local section of a grouped page.
+    assert styles['nodes']['external'] == 'extra'  # Explicit group for an unlinked node.
+    assert styles['groups'] == [{'name': 'core', 'color': 'blue', 'label': 'Core'},
+                                {'name': 'extra', 'color': 'green', 'label': 'extra'}]
+    translated = styles_of((w.site_dir / 'architecture-ch_tw.html').read_text())
+    assert [g['label'] for g in translated['groups']] == ['核心', 'extra']  # English is the fallback.
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('extra', ['group: missing\n', 'diagram_groups: {node: missing}\n'])
+def test_unknown_group_preserves_published_outputs(instance, extra):
+    build(instance)
+    before = instance.index_path.read_bytes()
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\n' + extra))
+    rc, warnings, _ = run(instance, strict=True, quiet=True)
+    assert rc == 1 and any(x.kind == 'unknown-group' for x in warnings)
+    assert instance.index_path.read_bytes() == before
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('extra', ['group: [core]\n', 'diagram_groups: []\n',
+                                   'diagram_groups: {node: 3}\n', 'diagram_groups: {"bad node": core}\n'])
+def test_invalid_group_metadata(instance, extra):
+    path = instance.wiki_dir / 'architecture.md'
+    path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\n' + extra))
+    with pytest.raises(ValueError):
+        read_document(path)
+
+
+# @wiki:impl test-framework.diagrams
+@pytest.mark.parametrize('groups', [
+    ['core'], {'core': 'blue'}, {'core': {'color': '#123456'}}, {'core': {}},
+    {'core': {'color': 'blue', 'label': 3}}, {'core': {'color': 'blue', 'label': {'en': ''}}},
+    {'bad name': {'color': 'blue'}},
+])
+def test_invalid_group_configuration(instance, groups):
+    cfg = yaml.safe_load(instance.cfg_path.read_text())
+    cfg['groups'] = groups
+    instance.cfg_path.write_text(yaml.safe_dump(cfg))
+    with pytest.raises(ValueError):
+        Wiki(instance.cfg_path)
+
+
+# @wiki:impl test-framework.diagrams
+def test_figure_captions_and_callouts(instance):
+    path = instance.wiki_dir / 'architecture.md'
+    body = ('\n## Diagrams {#diagrams}\n\n```mermaid\nflowchart LR\n  a --> b\n```\n'
+            'Figure: The `a` path,\ncontinued.\n\nAfter the figure.\n\n'
+            '```mermaid\nflowchart LR\n  c --> d\n```\n\n'
+            '> [!CAUTION]\n> Keep **both** in sync.\n\n> [!NOTE]\n> Next.\n\n> A plain quote.\n\n'
+            '## More {#more}\n\n```mermaid\nflowchart LR\n  e --> f\n```\n\nFigure: Second.\n')
+    path.write_text(path.read_text() + body)
+    (instance.wiki_dir / 'architecture-ch_tw.md').write_text(path.read_text())
+    ix = build(instance)
+    html = (instance.site_dir / 'architecture.html').read_text()
+    assert ('<figcaption><span class="figure-label">Figure 1.</span> The <code>a</code> path, continued.'
+            '</figcaption></figure>') in html
+    assert '<span class="figure-label">Figure 2.</span> Second.' in html  # Uncaptioned diagrams are not counted.
+    assert html.count('<figure class="diagram-figure">') == 2 and html.count('class="mermaid"') == 3
+    assert '<p>After the figure.</p>' in html
+    assert '<div class="callout callout-caution" role="note">\n<p class="callout-title">Caution</p>' in html
+    # As on GitHub, a blank line separates adjacent quotes instead of merging them.
+    assert '<p>Keep <strong>both</strong> in sync.</p>\n</div>' in html
+    assert '<p class="callout-title">Note</p>\n<p>Next.</p>\n</div>' in html
+    assert '<blockquote>\n<p>A plain quote.</p>' in html
+    translated = (instance.site_dir / 'architecture-ch_tw.html').read_text()
+    assert '<span class="figure-label">圖 2</span>' in translated
+    assert '<p class="callout-title">注意</p>' in translated
+    markdown = query(instance, ix, 'section', 'architecture.diagrams')['markdown']
+    assert 'Figure: The `a` path,' in markdown and '> [!CAUTION]' in markdown
+
+
+# @wiki:impl test-framework.diagrams
 def test_dependency_cycles_do_not_become_parent_cycles(instance):
     path = instance.wiki_dir / 'architecture.md'
     path.write_text(path.read_text().replace('title: Architecture\n', 'title: Architecture\ndepends_on: [child]\n'))

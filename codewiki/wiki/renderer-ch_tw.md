@@ -40,13 +40,17 @@ flowchart TB
   publication --> navigation["解析圖表目的地"]
   navigation --> diagrams["可點選的 Mermaid 節點"]
   publication --> reading["目錄與可展開實作"]
+  groups["群組顏色與圖例"] --> diagrams
 ```
+Figure: 從共用模型到發佈頁面。每個節點開啟實作該階段的章節。
 
-藍色連結節點開啟另一個元件，綠色連結節點開啟章節。同一頁可作為靜態 HTML 使用；JavaScript 增強圖表與閱讀工具。
+專案宣告[語意群組](#groups)後，節點顏色代表所連結頁面的群組：填色節點開啟元件，無填色節點開啟章節。未設定群組時，藍色連結節點開啟元件，綠色連結節點開啟章節。同一頁可作為靜態 HTML 使用；JavaScript 增強圖表與閱讀工具。
 
 ## Markdown 轉為章節 {#markdown}
 
 `render_body()` 將 Mermaid 區塊與一般 Markdown 分開。Markdown 轉成 HTML；圖表保持為已跳脫的原始內容，直到瀏覽器使用隨附 Mermaid 函式庫渲染。每個章節依 Markdown 順序只輸出一次。標題 ID 成為穩定目的地，帶標籤的宣告直接顯示在說明下方。
+
+緊接在 Mermaid 區塊之後、以 `Figure:` 開頭的段落會成為該圖表的說明文字。有說明的圖表依頁面順序跨章節編號（`圖 1`、`圖 2`）；沒有說明的圖表不列入編號。GitHub 提示區塊（第一行為 `> [!NOTE]`、`TIP`、`IMPORTANT`、`WARNING` 或 `CAUTION`）會成為加上標籤的提示框；其他引用區塊維持不變。翻譯頁面顯示在地化的圖表與提示標籤。索引與 CLI 保留原始 Markdown。
 
 ## 組合與發佈頁面 {#publication}
 
@@ -67,6 +71,36 @@ CSS 提供響應式配置、圖表畫布與閱讀深度提示。沒有客戶端�
 3. 明確的 `diagram_links` 項目覆寫自動比對。
 
 例如上圖的 `navigation` 節點指向這裡。作者也可將簡短節點名稱對應到 `documents.validation`，連到另一頁的章節。建置會驗證明確目的地，不會根據節點位置或原始碼標籤推論執行時相依；這些關係由作者宣告。
+
+## 語意群組 {#groups}
+
+圖表、元件卡片與頁面標題中的顏色只代表一件事：元件所屬的群組。`wiki.config.yaml` 宣告群組：
+
+```yaml
+groups:
+  firmware:
+    color: blue
+    label: {en: CM33 firmware, ch_tw: CM33 韌體}
+  shared:
+    color: violet
+    label: Shared RAM
+```
+
+`validate_groups()` 只接受主題調色盤名稱 `blue`、`green`、`violet`、`amber`、`red`、`teal`、`pink` 與 `slate`。每個名稱在 `style.css` 中都有淺色與深色數值，因此專案選擇的是意義而不是色碼。標籤可以是文字，或從 HTML 語言對應到文字的對照表，並以英文作為回退。語言鍵使用翻譯檔後綴的拼法（`en`、`ch_tw`；`zh_tw` 為別名）。
+
+頁面在 frontmatter 宣告 `group: firmware`。`resolve_groups()` 讓沒有自身群組的頁面採用最近祖先頁的群組，因此子元件沿用其子系統的顏色。未知群組名稱是嚴格建置錯誤。索引記錄每頁解析後的 `group`，`query doc` 也會顯示。
+
+`diagram_styles()` 讓每個圖表節點採用其連結頁面或章節的群組。frontmatter 的 `diagram_groups` 可明確指定任何節點的群組，包括未連結的節點，以及連到未分組頁面的節點。接著瀏覽器中的 `diagrams.js` 會：
+
+- 以群組顏色為已分組節點填色，並為章節連結描邊；
+- 依來源節點為每條流程圖連線（包括箭頭）上色；
+- 只有當子圖內所有節點屬於同一群組時，才為該子圖填色；
+- 加入圖例，列出該圖表中出現的群組。
+
+頁面標題與元件卡片使用相同的群組顏色，因此元件無論出現在哪裡都保持同一顏色。沒有群組的頁面與節點維持預設主題顏色。
+
+> [!TIP]
+> 在每個子系統頁面設定 `group`，讓其元件沿用；`diagram_groups` 只用於沒有專屬頁面的節點。
 
 ## 瀏覽器行為 {#diagrams}
 

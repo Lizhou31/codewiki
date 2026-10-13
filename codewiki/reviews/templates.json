@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "templates",
   "outcome": "no-change",
-  "reason": "OK",
-  "reviewed_at": "2026-09-13T16:18:02+00:00",
-  "commit": "3605a81c408821dbdb36c662b3aca4635aff6c7f",
-  "fingerprint": "af7fd26eaabd9a5d959ed08cd716469d2946ab1c9884685f8afa4492d0e33b0b",
+  "reason": "Only added group: authoring frontmatter for diagram color; the packaged templates are unchanged and the explanation remains accurate.",
+  "reviewed_at": "2026-10-13T01:18:01+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "6f459e111dca618fd06bcb2877e6e0da34979286567f7ac3cc9dbb8fcb7fd96f",
   "snapshot": {
     "document_path": "wiki/templates.md",
-    "document_sha256": "be420cd3ad25e360be578b9c721bc89dbe4c6519746fa9742598c7d1599d7a18",
+    "document_sha256": "fb2c75d1a23a534bcb42e7f51f79eea84d071222d10b3891393618db97b8f38f",
     "sources": {
       "../src/codewiki/resources/templates/architecture.md": "3823d653d3ce25da27407fbf02e698123141c0d61f192c62bea2ccab54ed571e",
       "../src/codewiki/resources/templates/component.md": "da5a73a738f803d300cca21ea3095f1bf0908be4e20bd46a9f2a4290ec15b83e",

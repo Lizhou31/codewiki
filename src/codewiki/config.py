@@ -12,6 +12,7 @@ file; that directory is the wiki "root" for path normalisation.
 from __future__ import annotations
 
 import os
+import re
 from pathlib import Path
 
 import yaml
@@ -29,9 +30,37 @@ DEFAULTS = {
     "editor_url_template": "vscode://file/{abs}:{line}",
     "max_snippet_lines": 120,
     "project": {"name": "Code Wiki", "subtitle": ""},
+    "groups": {},
 }
 
 RESOURCES = Path(__file__).resolve().parent / "resources"
+# Named theme colours with light and dark variants; projects choose names, never raw values.
+GROUP_COLORS = ("blue", "green", "violet", "amber", "red", "teal", "pink", "slate")
+GROUP_NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]*$")
+
+
+# @wiki:impl renderer.groups
+def validate_groups(groups):
+    """Return {name: {color, label}} where label maps locale -> text (`en` always present)."""
+    if not isinstance(groups, dict):
+        raise ValueError("groups must map group names to {color, label}")
+    result = {}
+    for name, spec in groups.items():
+        if not isinstance(name, str) or not GROUP_NAME.fullmatch(name):
+            raise ValueError(f"invalid group name: {name!r}")
+        if not isinstance(spec, dict) or spec.get("color") not in GROUP_COLORS:
+            raise ValueError(f"group '{name}' needs a color from: {', '.join(GROUP_COLORS)}")
+        label = spec.get("label", name)
+        if isinstance(label, str):
+            label = {"en": label}
+        if (not isinstance(label, dict) or not label
+                or any(not isinstance(k, str) or not isinstance(v, str) or not v.strip() for k, v in label.items())):
+            raise ValueError(f"group '{name}' label must be text or a mapping of locale to text")
+        # Same locale spelling as translation file suffixes: zh_tw is an alias of ch_tw.
+        label = {("ch_tw" if k.lower() == "zh_tw" else k.lower()): v for k, v in label.items()}
+        label.setdefault("en", next(iter(label.values())))
+        result[name] = dict(color=spec["color"], label=label)
+    return result
 
 
 class ConfigNotFound(SystemExit):
@@ -91,6 +120,7 @@ class Wiki:
                 raise ValueError(f"{key} must be a list of paths/globs")
         if not isinstance(cfg["project"], dict):
             raise ValueError("project must be a mapping")
+        cfg["groups"] = validate_groups(cfg["groups"] or {})
         self.cfg = cfg
         self.wiki_dir = (self.root / cfg["wiki_dir"]).resolve()
         self.site_dir = (self.root / cfg["site_dir"]).resolve()

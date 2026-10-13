@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "testing",
   "outcome": "updated",
-  "reason": "Read the testing guide against pyproject test discovery and the existing test modules. Added the instance-update lifecycle node, its source-backed verification link, and the focused test_update.py command; the full suite and strict build passed.",
-  "reviewed_at": "2026-09-14T04:39:30+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "cd9df9b2cdc8cc172bf56ca795e98cd70d01ca4cde94dd699956714e005a3b7a",
+  "reason": "Added group: verification and noted the optional tests/browser/diagrams.cjs Playwright script for diagram checks, which is separate from the pytest run.",
+  "reviewed_at": "2026-10-13T01:18:02+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "c159fd35d5aadc305dd1a8c21e6d400295ec24cb7dca21bac8e41cb59cf8e03f",
   "snapshot": {
     "document_path": "wiki/testing.md",
-    "document_sha256": "a43a31ef316c36c8e7382ade39db17ac4fecb25256e5728f479de538d1bec178",
+    "document_sha256": "1d412bd9a1aa732050ebe489354bc122c6b45b76fa74ad5ac733a9904800a3ca",
     "sources": {},
     "coverage": []
   }

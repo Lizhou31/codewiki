@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "document": "updates",
-  "outcome": "updated",
-  "reason": "Inspected the complete updater, support-file reconciliation module, and tests. Verified hash-based adoption, untouched updates, customized/legacy conflicts, keep-local semantics, path preflight, installer isolation and fresh-process dispatch. All 90 tests and isolated pip release/source plus uv fallback smoke checks pass.",
-  "reviewed_at": "2026-09-14T04:39:30+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "b0977899f4d3f196b4e13a136ce71f0e7f172d2849d32e72644e00db4d5e477c",
+  "outcome": "no-change",
+  "reason": "Only added group: authoring frontmatter for diagram color; update.py and instance_files.py are unchanged and the explanation remains accurate.",
+  "reviewed_at": "2026-10-13T01:18:02+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "95bdb2366d8bf55376acbaedf8e4191a40fbe7eb7f2111b808b0f7814d853acc",
   "snapshot": {
     "document_path": "wiki/updates.md",
-    "document_sha256": "8a864b6c460a6fd44f96161a65f605d8eeffee64edcf12ba17a3d65b49537a0f",
+    "document_sha256": "49033053689b776fef153ed7e239b8704ec65197a7664b224be7cad925299806",
     "sources": {
       "../src/codewiki/instance_files.py": "6920206a2f6800be0f7d62ea2fa25cd0d45de8c35a16d59154c72b8f55bff784",
       "../src/codewiki/update.py": "f2565ed58032967052c9501698c770fe88678ea4747f1841d6f55588f63a9b44",

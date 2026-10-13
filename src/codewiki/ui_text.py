@@ -88,7 +88,13 @@ ZH_TW = {'Skip to content': '跳至內容',
  'references': '個參照',
  'Architecture you can read, then inspect': '先閱讀架構，再檢視實作',
  'Changed since last review': '自上次審查後已有變更',
- 'No review baseline': '尚無審查基準'}
+ 'No review baseline': '尚無審查基準',
+ 'Figure {n}.': '圖 {n}',
+ 'Note': '附註',
+ 'Tip': '提示',
+ 'Important': '重要',
+ 'Warning': '警告',
+ 'Caution': '注意'}
 
 def translate(text, locale, count=None):
     if locale == "ch_tw":

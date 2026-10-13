@@ -2,18 +2,18 @@
   "schema_version": 1,
   "document": "architecture",
   "outcome": "updated",
-  "reason": "Reviewed CLI dispatch and version changes against the architecture entry points. Added the update command and link to its release/source and instance reconciliation component; existing build and query contracts remain unchanged.",
-  "reviewed_at": "2026-09-14T04:39:28+00:00",
-  "commit": "199eb29e0d7e51ee535fcc2880bc8353cff117b1",
-  "fingerprint": "af93888015478df66d155f2e0a3aad3e523b768f51d345417e6fe327862f775c",
+  "reason": "Map intro now explains group colors (tinted=guide, plain=section) and adds a Figure caption; diagram_groups maps the config node to analysis. Reviewed config.py's new validate_groups/GROUP_COLORS and build.py changes: config discovery (instances) and run()/analyze() (pipeline) explanations are unchanged and accurate.",
+  "reviewed_at": "2026-10-13T01:17:56+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "6f9c567b1e6d3ba7dabff4c158f36f36e3bc7a411c6174409012796170e14396",
   "snapshot": {
     "document_path": "wiki/architecture.md",
-    "document_sha256": "4e526e92c9efa98c79e7a60e289bdcf43de780cae57a85e0547016c8770e4737",
+    "document_sha256": "d2b0ac9c73a59f601bbc247e28a9b6de68244552403eb678a767944fca714f47",
     "sources": {
       "../src/codewiki/__init__.py": "a147385ef7deb459e6f4b5c9a04be3be5f9baf5d714520fc02e4bd126d7af586",
       "../src/codewiki/__main__.py": "22ba1a29f62ffa66459980703bad181db550fced53617c2ba057bb3ac8671fa9",
-      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
-      "../src/codewiki/config.py": "7ba9533bbc818fc0f467a0d108397f48fcfa48a804f002571a2482cbce17b825"
+      "../src/codewiki/build.py": "81b9e1aa709495c710e37fd57b35e2b3bbe043fb42cee7cc140d777283317c09",
+      "../src/codewiki/config.py": "c4ee4d03326bb85f28180bf32ec00f800ee30e887875268b7982acfb6bf63391"
     },
     "coverage": [
       {

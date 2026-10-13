@@ -44,6 +44,7 @@ flowchart LR
   current -->|原始碼或文件變更| scan
   scan --> check["CI 檢查待審查項目與結構錯誤"]
 ```
+Figure: 單一既有頁面的審查生命週期。只有明確的 `review pass` 或 `review updated` 才能使其成為已審查；建置永遠不會。
 
 ## 即時狀態 API {#status}
 

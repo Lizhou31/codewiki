@@ -128,6 +128,29 @@ For architecture diagrams, node IDs can target pages or local headings. Explicit
 cross-page targets use `diagram_links`; see the separate
 [HTML renderer guide](renderer.html#navigation) for the resolution rules.
 
+To make diagram colors carry meaning, declare `groups` in the configuration and
+set `group:` on the top page of each part of the system; child pages inherit it.
+Linked nodes, their outgoing arrows, uniform subgraphs, and component cards then
+share that group's color, and each diagram gets a legend. Use `diagram_groups`
+for nodes that have no page of their own. See [semantic groups](renderer.html#groups).
+
+Put a `Figure:` paragraph directly after a diagram to give it a numbered caption,
+and use GitHub alert syntax for notices that a reader must not miss:
+
+````markdown
+```mermaid
+flowchart LR
+  host --> firmware
+```
+Figure: Data path of one remap request.
+
+> [!CAUTION]
+> Build both cores with the same key count.
+````
+
+Supported alerts are `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, and `CAUTION`. GitHub
+renders the same Markdown as alerts too.
+
 ## Refresh existing documentation {#refresh}
 
 For the framework's own wiki, run these commands from the framework repository:

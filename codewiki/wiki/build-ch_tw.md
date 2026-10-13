@@ -49,6 +49,7 @@ flowchart TB
   publish --> html_pages["HTML 頁面與資產"]
   publish --> query_index["index.json"]
 ```
+Figure: `codewiki build --strict` 的執行順序。每個方塊開啟負責該操作的章節。
 
 此圖依照 `codewiki build --strict` 的流程。原始碼掃描與 Markdown 剖析依序執行。待處理的文件審查不會讓結構驗證失敗；CI 中獨立的審查完成關卡是 `codewiki review check`。無效輸入或審查紀錄也可能在發佈前中止建置。發佈本身具有[下方說明的界線](#publication)。
 
@@ -62,7 +63,7 @@ flowchart TB
 
 ## 查詢索引 {#index}
 
-`build_index()` 匯出文件摘要、父子關係、相依關係、圖表目的地、原始 Markdown 章節與原始碼符號位置。`by_file` 檢視可在不載入所有章節的情況下，完成檔案到文件的查找。符號索引不包含原始碼宣告文字；只有查詢請求時，才從已確認版本的工作目錄讀取有限範圍的原始碼。
+`build_index()` 匯出文件摘要、父子關係、相依關係、圖表目的地、解析後的語意群組及其設定定義、原始 Markdown 章節與原始碼符號位置。`by_file` 檢視可在不載入所有章節的情況下，完成檔案到文件的查找。符號索引不包含原始碼宣告文字；只有查詢請求時，才從已確認版本的工作目錄讀取有限範圍的原始碼。
 
 快照記錄輸入指紋與儲存庫狀態，讓查詢偵測過期行範圍，但無法證明說明正確。
 

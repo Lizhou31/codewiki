@@ -117,6 +117,15 @@ A separate test allows dependency cycles while keeping the parent hierarchy acyc
 These checks validate generated data and HTML. They do not execute Mermaid or the
 browser's click, keyboard, or expanded-dialog behavior.
 
+Semantic group tests configure two groups and check parent inheritance, explicit
+`diagram_groups` for an unlinked node, the index and `query doc` output, heading and
+card classes, the ordered style data for diagrams, and localized labels with English
+fallback. Unknown groups fail strict builds without replacing outputs; invalid
+frontmatter and configuration values are rejected. Caption tests check page-wide
+numbering that skips uncaptioned diagrams, inline Markdown in captions, callout and
+plain blockquotes kept separate by blank lines, translated labels, and unchanged
+Markdown in `query section`.
+
 ## Initialization and theme customization survive {#initialization}
 
 Repeated initialization preserves authored Markdown and existing configuration,

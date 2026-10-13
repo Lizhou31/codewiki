@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "queries",
-  "outcome": "no-change",
-  "reason": "Reviewed snapshot.py diff and English query output: translations remain freshness inputs but do not replace canonical English query content or introduce translation-owned coverage.",
-  "reviewed_at": "2026-09-13T16:59:01+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "26cce358926fd5f41de302f424d9473996effe9ea68445a6410f11c12d15d515",
+  "outcome": "updated",
+  "reason": "query doc summaries now include the resolved group (text and JSON) and diagram_groups (JSON); documented this in the architecture-graph section. Other query commands in query.py are unchanged.",
+  "reviewed_at": "2026-10-13T01:17:59+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "bbdc263a36b7028bde982bb32ae7fad9ca038cb2b063ed95a71e1254df6b9e0e",
   "snapshot": {
     "document_path": "wiki/queries.md",
-    "document_sha256": "2d150a6dc5b7665615f377b1ab09ad798b538714565f8f1a8f503cc5cc46f8a5",
+    "document_sha256": "6e385a34bedb65dc9eba5251ed926e370e348b5f5d756797646f4c87ab07476e",
     "sources": {
-      "../src/codewiki/query.py": "446ca12527dfb34b71f73388763e9546e7888bca8084d07d39c7b53ee4e4a5a3",
+      "../src/codewiki/query.py": "4023daa5d80f41dd4e5ef003037c373b51a0893b3a3ef666cda64743e76623fb",
       "../src/codewiki/snapshot.py": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67"
     },
     "coverage": [

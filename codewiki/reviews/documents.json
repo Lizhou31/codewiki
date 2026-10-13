@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "document": "documents",
-  "outcome": "no-change",
-  "reason": "Reviewed build parsing and rendering changes: canonical frontmatter validation and joins remain unchanged, and the renderer preserves source bindings, stable anchors, hierarchy, and legacy template sections.",
-  "reviewed_at": "2026-09-13T16:59:00+00:00",
-  "commit": "9bea14d34cd9542c657755556b1e975c5b3eb1c4",
-  "fingerprint": "392469e590387ce6cfca400f7c31c6624ea34d348af1fe63309ea8986dbed0a7",
+  "outcome": "updated",
+  "reason": "Documented frontmatter group/diagram_groups (declared names, inheritance) and that the join rejects undeclared group names. Reviewed documents.py validation for group/diagram_groups types and build.py join/render_body changes; sections, rendering, and publication text remain accurate.",
+  "reviewed_at": "2026-10-13T01:17:57+00:00",
+  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
+  "fingerprint": "77364122e54d53c0d550841322b72ef1b5884dfae4bed08cc20f98c6f55008af",
   "snapshot": {
     "document_path": "wiki/documents.md",
-    "document_sha256": "f0abc0d3a9b14887faa77b2f993adeea5a12f065ffc7e1363105c8dcd2e3c89d",
+    "document_sha256": "7653c8dab9c33dd48cf96041336972638d7998a3b4fc76714520b19b0547c230",
     "sources": {
-      "../src/codewiki/build.py": "1afc0e67f09da815faef739cba36e512bdddf6d48850e1e2db61e81597967e4e",
-      "../src/codewiki/documents.py": "60d76e2590e80666b48706b1d40e57cd5d27b5aed0dbb739a82c8adc4e1729e0"
+      "../src/codewiki/build.py": "81b9e1aa709495c710e37fd57b35e2b3bbe043fb42cee7cc140d777283317c09",
+      "../src/codewiki/documents.py": "3a90beb3c7ce223e3600fc56e454d9fcdab79af1e024f259ce2eb562d3efe61f"
     },
     "coverage": [
       {

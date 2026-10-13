@@ -3,6 +3,7 @@ id: renderer
 type: component
 status: stable
 parent: architecture
+group: output
 title: HTML renderer
 summary: 'Turn the document model into an offline architecture explorer: component
   maps, section navigation, and expandable source evidence.'
@@ -27,6 +28,7 @@ diagram_links:
   navigation: renderer.navigation
   diagrams: renderer.diagrams
   reading: renderer.reading
+  groups: renderer.groups
 ---
 
 ## Inside the renderer
@@ -48,9 +50,14 @@ flowchart TB
   publication --> navigation["Resolve diagram destinations"]
   navigation --> diagrams["Clickable Mermaid nodes"]
   publication --> reading["Outline + expandable implementations"]
+  groups["Group colors + legend"] --> diagrams
 ```
+Figure: From the shared model to published pages. Each node opens the section
+that implements that stage.
 
-Blue linked nodes open another component; green linked nodes open a section.
+When a project declares [semantic groups](#groups), node color names the linked
+page's group: a tinted node opens a component and a plain node opens a section.
+Without groups, blue linked nodes open a component and green ones open a section.
 The same page works as static HTML. JavaScript enhances diagrams and reading tools.
 
 ## Markdown to sections {#markdown}
@@ -59,6 +66,13 @@ The same page works as static HTML. JavaScript enhances diagrams and reading too
 HTML; diagrams remain escaped source until the browser renders them with the vendored
 Mermaid library. Each section is emitted once, in Markdown order. Heading IDs become
 stable destinations, and tagged declarations appear directly below their explanation.
+
+A paragraph that starts with `Figure:` directly after a Mermaid block becomes that
+diagram's caption. Captioned diagrams are numbered in page order across sections
+(`Figure 1.`, `Figure 2.`); diagrams without a caption are not counted. GitHub alert
+blockquotes (`> [!NOTE]`, `TIP`, `IMPORTANT`, `WARNING`, or `CAUTION` on the first
+line) become labelled callouts; other blockquotes stay unchanged. Translated pages
+show localized figure and callout labels. The index and CLI keep the original Markdown.
 
 ## Compose and publish pages {#publication}
 
@@ -96,6 +110,50 @@ For example, the `navigation` node above points here. An author can also map a
 short node name to `documents.validation` to cross into another page's section.
 The build validates explicit destinations. It does not infer runtime dependencies
 from node positions or source tags; authors declare those relationships.
+
+## Semantic groups {#groups}
+
+Color in diagrams, component cards, and page headings means one thing: the group
+a component belongs to. `wiki.config.yaml` declares the groups:
+
+```yaml
+groups:
+  firmware:
+    color: blue
+    label: {en: CM33 firmware, ch_tw: CM33 韌體}
+  shared:
+    color: violet
+    label: Shared RAM
+```
+
+`validate_groups()` accepts only the theme palette names `blue`, `green`, `violet`,
+`amber`, `red`, `teal`, `pink`, and `slate`. Each name has light and dark values in
+`style.css`, so projects choose a meaning rather than a hex value. A label is text
+or a mapping from HTML language to text, with English as the fallback. Language
+keys use the translation suffix spelling (`en`, `ch_tw`; `zh_tw` is an alias).
+
+A page declares `group: firmware` in frontmatter. `resolve_groups()` gives a page
+without its own group the nearest ancestor's group, so child components inherit
+their subsystem's color. Unknown group names are strict build errors. The index
+records each page's resolved `group`, and `query doc` prints it.
+
+`diagram_styles()` assigns each diagram node the group of the page or section it
+links to. Frontmatter `diagram_groups` names a group for any node explicitly,
+including unlinked nodes and nodes that link to an ungrouped page. In the browser,
+`diagrams.js` then:
+
+- tints grouped nodes and outlines section links with the group color;
+- colors each flowchart edge, including its arrowhead, by its source node;
+- tints a subgraph only when every node drawn inside it has the same group;
+- adds a legend listing the groups present in that diagram.
+
+The page heading and component cards use the same group color, so a component
+keeps one color wherever it appears. Pages and nodes without a group keep the
+default theme colors.
+
+> [!TIP]
+> Set `group` on each subsystem page and let its components inherit it. Reserve
+> `diagram_groups` for nodes that have no page of their own.
 
 ## Browser behavior {#diagrams}
 

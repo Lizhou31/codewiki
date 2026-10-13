@@ -3,6 +3,7 @@ id: documents
 type: component
 status: stable
 parent: architecture
+group: analysis
 related:
 - build
 - renderer
@@ -64,7 +65,8 @@ implicit IDs are generated for browsing and should not be used as persistent tag
 ### Validation joins the model {#validation}
 
 The join checks missing anchor targets, duplicate page IDs, conflicting ownership,
-unknown related pages, invalid parents, parent cycles, and broken decision anchors.
+unknown related pages, invalid parents, parent cycles, broken decision anchors, and
+group names that the configuration does not declare.
 An unresolved `refs` symbol is an error. A concept without a code tag is informational;
 that can be intentional for a high-level explanation or a draft page.
 
@@ -106,6 +108,12 @@ links one node to a page and another to an implementation section. Unknown targe
 are strict errors. Local heading slugs and document IDs also work automatically;
 explicit mappings take precedence. If a document ID collides with a full section
 ID, the document wins. Prefer explicit, unique heading slugs for durable links.
+
+`group` names one of the semantic groups declared in `wiki.config.yaml`; pages
+without it inherit their nearest ancestor's group. `diagram_groups` maps Mermaid
+node identifiers to group names for nodes that should not take the linked page's
+group. Both must name declared groups; unknown names are strict errors. See
+[semantic groups](renderer.html#groups) for how the renderer uses them.
 
 The renderer shows component cards from child-page summaries and ownership metadata.
 It exposes dependency chips, reverse relationships, text diagram destinations, and

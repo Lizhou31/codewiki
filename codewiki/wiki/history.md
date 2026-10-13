@@ -3,6 +3,7 @@ id: history
 type: component
 status: stable
 parent: architecture
+group: output
 related: []
 refs: []
 title: Provenance & decisions
