@@ -1,0 +1,85 @@
+# Publish a GitHub release when a version tag such as v0.5.1 is pushed.
+# Before tagging: bump pyproject.toml and src/codewiki/__init__.py, add
+# .github/release-notes/<tag>.md, and merge both to main.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[dev]'
+      - run: python -m pytest -q
+      - name: Build the self-wiki strictly
+        run: codewiki build --strict
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Check tag, package version, branch, and notes
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          python - "$version" <<'PY'
+          import re, sys, tomllib
+          expected = sys.argv[1]
+          project = tomllib.load(open("pyproject.toml", "rb"))["project"]["version"]
+          package = re.search(r'__version__ = "([^"]+)"', open("src/codewiki/__init__.py").read()).group(1)
+          if {project, package} != {expected}:
+              sys.exit(f"::error::tag v{expected} does not match pyproject {project} / __version__ {package}")
+          PY
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main \
+            || { echo "::error::$GITHUB_REF_NAME does not point to a commit on main"; exit 1; }
+          test -f ".github/release-notes/$GITHUB_REF_NAME.md" \
+            || { echo "::error::missing .github/release-notes/$GITHUB_REF_NAME.md"; exit 1; }
+
+      - name: Build wheel, sdist, and checksums
+        run: |
+          python -m pip install build
+          python -m build
+          cd dist && sha256sum -- * > SHA256SUMS && cat SHA256SUMS
+
+      - name: Smoke-test the wheel outside the checkout
+        run: |
+          smoke="$RUNNER_TEMP/smoke"
+          python -m venv "$smoke/venv"
+          "$smoke/venv/bin/pip" install dist/*.whl
+          "$smoke/venv/bin/pip" check
+          mkdir -p "$smoke/project/src"
+          printf 'def main():\n    return 1\n' > "$smoke/project/src/app.py"
+          cd "$smoke"
+          venv/bin/codewiki init --root project --code-root src --name Smoke --client claude
+          venv/bin/codewiki build --strict --config project/codewiki/wiki.config.yaml
+          venv/bin/codewiki query --config project/codewiki/wiki.config.yaml tree
+
+      - name: Publish the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes="$RUNNER_TEMP/notes.md"
+          sed "s/{{commit}}/$GITHUB_SHA/g" ".github/release-notes/$GITHUB_REF_NAME.md" > "$notes"
+          gh release create "$GITHUB_REF_NAME" dist/* --verify-tag \
+            --title "CodeWiki $GITHUB_REF_NAME" --notes-file "$notes"

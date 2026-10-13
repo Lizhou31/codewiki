@@ -229,3 +229,20 @@ Run `python -m pytest` for parser, build, query, scaffolding, and compatibility
 tests. Vendored JavaScript licenses are retained under
 `src/codewiki/resources/theme/vendor/`. This repository does not assign a new
 license to the extracted framework code.
+
+## Releasing
+
+Bump `version` in `pyproject.toml` and `__version__` in `src/codewiki/__init__.py`,
+add `.github/release-notes/vX.Y.Z.md`, and merge both to `main`. Then push the tag:
+
+```sh
+git tag vX.Y.Z origin/main
+git push origin vX.Y.Z
+```
+
+`.github/workflows/release.yml` runs the tests on Python 3.10 and 3.13 and builds
+the self-wiki strictly. It then checks that the tag matches both version strings,
+points to a commit on `main`, and has a notes file. Finally it builds the wheel,
+sdist, and `SHA256SUMS`, smoke-tests the wheel in a fresh project, and publishes the
+GitHub release. A failed check publishes nothing; fix it, then delete and re-push
+the tag.

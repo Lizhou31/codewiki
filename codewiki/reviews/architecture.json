@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "architecture",
   "outcome": "no-change",
-  "reason": "build.py change limited to SVG figure safety: event-handler and javascript: checks now apply to tag attributes only, so figure text may mention them. Architecture instances and pipeline explanations are unaffected.",
-  "reviewed_at": "2026-10-13T02:55:08+00:00",
-  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
-  "fingerprint": "08c74c47a44e59aa77ffa2806d4ee8a9a887d04f57b873abde19da947429bc61",
+  "reason": "Version bump to 0.5.1 in __init__.py only; the documented entry points and instance behavior are unchanged.",
+  "reviewed_at": "2026-10-13T03:08:07+00:00",
+  "commit": "1c0005e7fd80c0c194122e8f4b78a867fef607c8",
+  "fingerprint": "a17fa057fca2f5bf3d5d43440de071b507b6a4c0bb56a7d396055f5566b6fa79",
   "snapshot": {
     "document_path": "wiki/architecture.md",
     "document_sha256": "d2b0ac9c73a59f601bbc247e28a9b6de68244552403eb678a767944fca714f47",
     "sources": {
-      "../src/codewiki/__init__.py": "a147385ef7deb459e6f4b5c9a04be3be5f9baf5d714520fc02e4bd126d7af586",
+      "../src/codewiki/__init__.py": "dc41693458a9d843d513d71b9e41b58a1467707a41e76e35530ffabef18644ea",
       "../src/codewiki/__main__.py": "22ba1a29f62ffa66459980703bad181db550fced53617c2ba057bb3ac8671fa9",
       "../src/codewiki/build.py": "c606ef945255a1dc6ae58a572a06b8c2d79f2dc7fea9ce3c2d57da96552db03b",
       "../src/codewiki/config.py": "9068149bbd145feb58e88fa6deccf9ba9aa27f690104f2106cbae373b5edfb25"

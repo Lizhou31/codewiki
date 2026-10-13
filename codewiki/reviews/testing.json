@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "testing",
   "outcome": "updated",
-  "reason": "Browser script now also checks code labels and SVG figures; updated the optional browser check description.",
-  "reviewed_at": "2026-10-13T02:54:08+00:00",
-  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
-  "fingerprint": "b1f65bccc1e390a9f3b9768bb5f91b4ace18396ca9767dc3b5d05713d2e27185",
+  "reason": "Noted that the new tag-triggered release workflow repeats the tests on Python 3.10/3.13 and the installed-package smoke check before publishing.",
+  "reviewed_at": "2026-10-13T03:17:36+00:00",
+  "commit": "d20f6468811f0ab24092fcd0c89f174d1aeb59de",
+  "fingerprint": "4781189233179c7d9b7cc5958312fee8eccec9a3a532290acb8c566a7eda8a1b",
   "snapshot": {
     "document_path": "wiki/testing.md",
-    "document_sha256": "07f39787c440210faafb9f9c08040e294af510bf63552957d2f0328c14b7c53f",
+    "document_sha256": "8bb25afb8ca308641026c13383c213380a59564dd397d061646fe4149c1bca47",
     "sources": {},
     "coverage": []
   }

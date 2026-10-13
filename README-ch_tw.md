@@ -141,3 +141,14 @@ Pass 與 updated 範例是替代選項：閱讀頁面與程式碼後，選擇實
 選用決策紀錄支援理由、錨點 ID、提交 ID 與 PR 網址。建置記錄 Git 修訂版本與內容指紋。自動探索提交／PR、重建歷史與 MCP 伺服器屬於未來工作；請見 Wiki 的來源追溯與決策頁面。
 
 執行 `python -m pytest` 進行剖析器、建置、查詢、初始化與相容性測試。隨附 JavaScript 授權保留於 `src/codewiki/resources/theme/vendor/`。本儲存庫不對抽離出的框架程式碼指定新的授權。
+
+## 發行版本
+
+更新 `pyproject.toml` 的 `version` 與 `src/codewiki/__init__.py` 的 `__version__`，新增 `.github/release-notes/vX.Y.Z.md`，並將兩者合併到 `main`。接著推送標籤：
+
+```sh
+git tag vX.Y.Z origin/main
+git push origin vX.Y.Z
+```
+
+`.github/workflows/release.yml` 會在 Python 3.10 與 3.13 執行測試並嚴格建置自身 Wiki。接著確認標籤與兩處版本字串一致、指向 `main` 上的提交，且有對應的說明檔。最後建置 wheel、sdist 與 `SHA256SUMS`，在全新專案中驗證 wheel，並發佈 GitHub release。任何檢查失敗都不會發佈；修正後刪除標籤再重新推送。
