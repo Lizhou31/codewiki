@@ -38,6 +38,7 @@ def input_paths(w):
     paths.update(p for p in coverage_paths(w) if p.is_file())
     paths.update(p for p, _, _ in iter_source_files(w, []))
     paths.update(w.wiki_dir.rglob("*.md"))
+    paths.update(w.wiki_dir.rglob("*.svg"))
     for theme in w.theme_dirs:
         if theme.is_dir():
             paths.update(p for p in theme.rglob("*") if p.is_file())

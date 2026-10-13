@@ -68,6 +68,7 @@ groups:
 | `editor_url_template` | Editor links using absolute path and line placeholders |
 | `project` | Site name and subtitle |
 | `groups` | Optional semantic groups: a palette `color` and a `label` (text or per-language mapping) for each; pages opt in with `group:` |
+| `diagram_code_labels` | Show the file or function behind linked flowchart nodes as a second line (default `true`) |
 
 For a theme customization, place only the files you want to override in
 `wiki/_theme/`, such as `style.css`. Other files continue to use the package's

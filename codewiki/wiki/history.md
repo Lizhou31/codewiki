@@ -34,7 +34,7 @@ diagram_links:
 
 ```mermaid
 flowchart TB
-  inputs["Configuration + Markdown + code + theme"] --> snapshot["Content hashes + Git state"]
+  inputs["Configuration + Markdown + SVG figures + code + theme"] --> snapshot["Content hashes + Git state"]
   snapshot --> query["Query freshness checks"]
   decisions["Authored reasons + commit / PR refs"] --> query
 ```

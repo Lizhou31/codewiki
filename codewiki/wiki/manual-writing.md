@@ -151,6 +151,18 @@ Figure: Data path of one remap request.
 Supported alerts are `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, and `CAUTION`. GitHub
 renders the same Markdown as alerts too.
 
+Linked flowchart nodes show the file or function behind them as a second line,
+taken from your source tags and `owns` lists, so keep tags on the declarations a
+diagram names. Set `diagram_code_labels: false` in the configuration to hide them.
+
+When a picture needs exact placement, such as a timing diagram or a memory layout,
+draw an SVG file and reference it on its own line, for example
+`![Latch timing](figures/latch-timing.svg)`, followed by an optional `Figure:`
+caption. Use the theme classes and `data-group` / `data-link` attributes described
+in [SVG figures](renderer.html#figures) so the drawing follows dark mode and group
+colors and its labels open wiki pages. The `wiki-author` skill's
+`references/figures.md` gives agents the same rules.
+
 ## Refresh existing documentation {#refresh}
 
 For the framework's own wiki, run these commands from the framework repository:

@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "manual-configuration",
   "outcome": "updated",
-  "reason": "First baseline: checked discovery order (--config, CODE_WIKI_CONFIG, upward walk), the settings table, serve's watched inputs/default port/site_dir restart, and troubleshooting rows against config.py, serve.py, and build.py; added the optional groups setting and example.",
-  "reviewed_at": "2026-10-13T01:17:58+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "ca7d1547c6e3765cfbd3758262e23a844096dac93fe8265c711f0d176a00b284",
+  "reason": "Added the diagram_code_labels setting row; checked its default and validation in config.py. Other settings are unchanged.",
+  "reviewed_at": "2026-10-13T02:54:04+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "e367a2676022668e1e980b0a2c7459becf9b46b4188dd2972a0b5f92f338320f",
   "snapshot": {
     "document_path": "wiki/manual-configuration.md",
-    "document_sha256": "a30220c6dd098d0daf125e3c90da429044fb02470769dbeeee64e37b80089265",
+    "document_sha256": "8d4ed6654e3fc7d2c9f462b56e1818f58264868ca658b7c35154a3afd3629830",
     "sources": {},
     "coverage": []
   }

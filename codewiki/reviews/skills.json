@@ -2,15 +2,16 @@
   "schema_version": 1,
   "document": "skills",
   "outcome": "updated",
-  "reason": "Covers two changes since the 2026-09-14 review: wiki-author's decision-recording workflow from 5e169aa (already described under Author with evidence) and the new diagram guidance (configured groups, Figure: captions, alert callouts). Added a Figure caption and group: authoring; other skills are unchanged.",
-  "reviewed_at": "2026-10-13T01:18:00+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "27e16a736e0877cb2c986c52b4d5a034e2c31d80a572b29efec2bb52db0e4335",
+  "reason": "wiki-author gains references/figures.md (SVG figure rules) and a pointer for code lines and figures; added the reference to owns and the author section.",
+  "reviewed_at": "2026-10-13T02:54:07+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "2ca0aa1a6604c210c642f2119d65eff722c9969fca3b3673a1fffe535661d68f",
   "snapshot": {
     "document_path": "wiki/skills.md",
-    "document_sha256": "7bff474f496e4e903e19f221c69ad4ece401a6aa947cd35b105427fe504bb000",
+    "document_sha256": "3df11dc3c4b096db9f5ede9b4a7d341484bc6c27e9a7d9d6451bf580be4deadc",
     "sources": {
-      "../src/codewiki/resources/skills/wiki-author/SKILL.md": "48b74091c53bc823ce1fc04bb6daa0735e215dcbc5608a49b947825832bbce44",
+      "../src/codewiki/resources/skills/wiki-author/SKILL.md": "2376d2130bc92ab775288db316df72895cb2eebf96cf2696db116a7747bfb464",
+      "../src/codewiki/resources/skills/wiki-author/references/figures.md": "b5be3fcae997d661b414b41fcaeecf49f7d55e965f420fdbc2f721a8a4180549",
       "../src/codewiki/resources/skills/wiki-build/SKILL.md": "ab47c42c147aac21eb054697415baaccbe93243dbbf7b095d4f273c1b55c40fe",
       "../src/codewiki/resources/skills/wiki-init/SKILL.md": "c62e1cc5d8710c4273403a2af42b281f620e3f683d3bed49a8184ed66250fd1e",
       "../src/codewiki/resources/skills/wiki-query/SKILL.md": "7d32e1d71de1d8d1a9e4cba2b632ef5c6db271094da172806608f397ab8ab082",
@@ -19,6 +20,10 @@
     "coverage": [
       {
         "file": "../src/codewiki/resources/skills/wiki-author/SKILL.md",
+        "kind": "owns"
+      },
+      {
+        "file": "../src/codewiki/resources/skills/wiki-author/references/figures.md",
         "kind": "owns"
       },
       {

@@ -64,8 +64,8 @@ strict token budget; unusually large items may still require client-side limits.
 
 ### Check freshness before trusting locations {#freshness}
 
-The index records SHA-256 fingerprints of configuration, Markdown, scanned source,
-explicitly owned/referenced assets, review records, and theme inputs. Queries compare current inputs with the build snapshot, including
+The index records SHA-256 fingerprints of configuration, Markdown, SVG figures in the
+wiki directory, scanned source, explicitly owned/referenced assets, review records, and theme inputs. Queries compare current inputs with the build snapshot, including
 added or deleted files. A changed file marks the index stale, even if a new timestamp
 would otherwise obscure the change. Source queries require a current index, because
 old line ranges cannot safely identify declarations in edited source. Rebuild using
@@ -88,8 +88,9 @@ the CLI reports this explicitly instead of presenting an empty section outline.
 ## Follow the architecture graph
 
 Document summaries include `depends_on`, reverse `used_by`, `diagram_links`, and the
-resolved semantic `group` in both the JSON envelope and text output; JSON also carries
-`diagram_groups`. These fields expose the same authored relationships and colors as
+resolved semantic `group` and embedded SVG `figures` in both the JSON envelope and
+text output; JSON also carries `diagram_groups`. These fields expose the same
+authored relationships, colors, and drawings as
 the HTML map. Query the destination document or section rather
 than loading the entire wiki. Older schema-v1 indexes without these optional
 fields still load; rebuild to include them.

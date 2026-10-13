@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "documents",
-  "outcome": "updated",
-  "reason": "Documented frontmatter group/diagram_groups (declared names, inheritance) and that the join rejects undeclared group names. Reviewed documents.py validation for group/diagram_groups types and build.py join/render_body changes; sections, rendering, and publication text remain accurate.",
-  "reviewed_at": "2026-10-13T01:17:57+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "77364122e54d53c0d550841322b72ef1b5884dfae4bed08cc20f98c6f55008af",
+  "outcome": "no-change",
+  "reason": "build.py change limited to SVG figure safety: event-handler and javascript: checks now apply to tag attributes only, so figure text may mention them. The validation section still accurately lists unsafe figures as strict errors.",
+  "reviewed_at": "2026-10-13T02:55:09+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "e442416ce2001bd801f1f03c7e7a402815204525d0491be2838fdbb808f31b40",
   "snapshot": {
     "document_path": "wiki/documents.md",
-    "document_sha256": "7653c8dab9c33dd48cf96041336972638d7998a3b4fc76714520b19b0547c230",
+    "document_sha256": "6bbae25c48dada58f1c4f722cfacd33deb74d7184c7111eb81637caee06eaada",
     "sources": {
-      "../src/codewiki/build.py": "81b9e1aa709495c710e37fd57b35e2b3bbe043fb42cee7cc140d777283317c09",
+      "../src/codewiki/build.py": "c606ef945255a1dc6ae58a572a06b8c2d79f2dc7fea9ce3c2d57da96552db03b",
       "../src/codewiki/documents.py": "3a90beb3c7ce223e3600fc56e454d9fcdab79af1e024f259ce2eb562d3efe61f"
     },
     "coverage": [

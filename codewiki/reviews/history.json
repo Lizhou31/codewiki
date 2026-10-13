@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "document": "history",
-  "outcome": "no-change",
-  "reason": "Only added group: output frontmatter for diagram color; snapshot.py is unchanged and the provenance explanation remains accurate.",
-  "reviewed_at": "2026-10-13T01:17:57+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "c62d90aec1290bca2a2dd066242e8ed4c051c262b896add673bf8a49082f9728",
+  "outcome": "updated",
+  "reason": "Build snapshots now include SVG files from the wiki directory (snapshot.input_paths); updated the inputs node in the diagram.",
+  "reviewed_at": "2026-10-13T02:54:03+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "f15c5815a85dfc3317dccecedad6e6e09531d18658c51aac8ba53883cdff753c",
   "snapshot": {
     "document_path": "wiki/history.md",
-    "document_sha256": "4284ec25d65d0d4ce0e546e10dc3b40f8dd5c239d337bee5ba073ea9af123872",
+    "document_sha256": "97724f4da0aa9c411badb99f47b2f72e4adeed2dc8b49745a85c9b2d4300209c",
     "sources": {
-      "../src/codewiki/snapshot.py": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67"
+      "../src/codewiki/snapshot.py": "fd9861098fca9a8d0d80e1e29dc781b7f51847c095a670deaf7e9b4705c0c13a"
     },
     "coverage": [
       {

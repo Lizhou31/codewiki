@@ -2,16 +2,16 @@
   "schema_version": 1,
   "document": "queries",
   "outcome": "updated",
-  "reason": "query doc summaries now include the resolved group (text and JSON) and diagram_groups (JSON); documented this in the architecture-graph section. Other query commands in query.py are unchanged.",
-  "reviewed_at": "2026-10-13T01:17:59+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "bbdc263a36b7028bde982bb32ae7fad9ca038cb2b063ed95a71e1254df6b9e0e",
+  "reason": "query doc now lists embedded SVG figures (query.py summary and text); freshness inputs now include wiki SVG files (snapshot.py); documented both.",
+  "reviewed_at": "2026-10-13T02:54:05+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "e95b8bd156a74ed6bf660e103c8d0def5a4c264d95c10794a91e621e21dbda9f",
   "snapshot": {
     "document_path": "wiki/queries.md",
-    "document_sha256": "6e385a34bedb65dc9eba5251ed926e370e348b5f5d756797646f4c87ab07476e",
+    "document_sha256": "2e1aee03216fa09998909b00af55bcae8cfe4844b92f3f7a2e0a065eb5bba0f8",
     "sources": {
-      "../src/codewiki/query.py": "4023daa5d80f41dd4e5ef003037c373b51a0893b3a3ef666cda64743e76623fb",
-      "../src/codewiki/snapshot.py": "fb2f362c24838e7403df54101f69c71368e6f182aa883f4d9c0ea00969cabd67"
+      "../src/codewiki/query.py": "5fbd4ff3bd5bce349183e6ac35df6022c245e86df24fdd8dfff863fdef466e0a",
+      "../src/codewiki/snapshot.py": "fd9861098fca9a8d0d80e1e29dc781b7f51847c095a670deaf7e9b4705c0c13a"
     },
     "coverage": [
       {

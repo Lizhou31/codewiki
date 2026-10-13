@@ -73,6 +73,7 @@ groups:
 | `editor_url_template` | 使用絕對路徑與行號佔位符的編輯器連結 |
 | `project` | 網站名稱與副標題 |
 | `groups` | 選用的語意群組：每個群組有調色盤 `color` 與 `label`（文字或各語言對照）；頁面以 `group:` 加入 |
+| `diagram_code_labels` | 以第二行顯示有連結流程圖節點背後的檔案或函式（預設 `true`） |
 
 客製化主題時，只需將要覆寫的檔案放入 `wiki/_theme/`，例如 `style.css`。其他檔案仍使用套件預設值。變更設定或主題後請重新建置。
 

@@ -102,6 +102,46 @@ groups:
 > [!TIP]
 > 在每個子系統頁面設定 `group`，讓其元件沿用；`diagram_groups` 只用於沒有專屬頁面的節點。
 
+## 圖表節點的程式碼標籤 {#code-labels}
+
+有連結的流程圖節點會多出一行等寬字型文字，標示其背後的程式碼。`code_label()` 從建置已掌握的證據取得文字：
+
+- 章節目標顯示第一個帶標籤的宣告，例如 `build.py · run()`；若該處標記了更多宣告，則加上 `+N`；
+- 頁面目標顯示第一個負責說明的檔案，例如 `config.py +2`；
+- 沒有標籤或負責檔案的目標不加第二行。
+
+`annotate_mermaid()` 在渲染每一頁時加入這一行，因此索引與 `query section` 保留作者撰寫的 Mermaid。它只修改以標籤宣告的流程圖節點（`id["Label"]`、`id(Label)` 及其他括號形狀）。單純的節點 ID、Markdown 字串標籤，以及已含 `<br>` 的標籤維持不變，因此作者自行撰寫的第二行優先。由於文字來自原始碼標籤，宣告移動時只要標籤隨之移動，文字也會跟著更新。在 `wiki.config.yaml` 設定 `diagram_code_labels: false` 即可關閉。
+
+## SVG 圖 {#figures}
+
+Mermaid 無法繪製時序圖、記憶體配置或需要精確擺放的泳道。這類圖請將手繪 SVG 檔放在 Markdown 旁，並以獨立一行的圖片語法引用：
+
+```markdown
+![審查狀態隨時間變化](figures/review-timeline-ch_tw.svg)
+Figure: 建置會更新索引，但永遠不會確認審查。
+```
+
+渲染器會將檔案內嵌，而不是以圖片連結，因此圖會跟隨頁面主題、深色模式與群組顏色。`Figure:` 說明文字的用法與 Mermaid 相同，兩種圖共用頁面的圖號。路徑相對於 Markdown 檔，且必須位於 Wiki 實例內；翻譯頁可指向自己的在地化 SVG。遠端與絕對路徑的圖片維持一般圖片。
+
+`inline_figure()` 為頁面準備每個檔案：
+
+- **ID：** 每個 `id` 及其 `url(#…)`、`href="#…"` 與 `aria-labelledby` 參照都加上每張圖專屬的前綴，因此同頁的兩張圖不會衝突。
+- **群組：** 帶有 `data-group="cm33"` 的元素會取得該群組的顏色類別，下列圖形類別便以群組顏色繪製。
+- **連結：** `<a data-link="build.orchestration">` 會取得該頁面或章節的 `href`，解析方式與 `diagram_links` 相同，翻譯頁則使用在地化連結。
+
+| 類別 | 繪製內容 |
+| --- | --- |
+| `fig-text`、`fig-muted`、`fig-code`、`fig-title` | 內文、次要、程式碼與粗體文字 |
+| `fig-label`、`fig-accent` | 群組顏色的文字（泳道標題、重點） |
+| `fig-box` | 頁面背景、群組顏色邊框的方塊 |
+| `fig-tint` | 以群組淺色填滿的方塊 |
+| `fig-lane` | 無邊框的淺色背景帶 |
+| `fig-line`、`fig-wave`、`fig-dash` | 連接線、訊號波形、虛線修飾 |
+| `fig-head` | `<marker>` 內的箭頭路徑 |
+| `fig-grid`、`fig-halo` | 點狀輔助線；在線條上仍清楚可讀的文字外框 |
+
+`figure_issues()` 會讓嚴格建置在下列情況失敗：檔案不存在、路徑位於實例外、含有 script、嵌入內容或事件處理屬性、使用未宣告的群組，或連結目標未知。頁面的圖會納入其審查範圍，因此編輯 SVG 會讓該頁需要審查；SVG 檔也計入索引新鮮度。`query doc` 會在 `Figures:` 下列出它們。`wiki-author` 技能在 `references/figures.md` 中提供相同的類別說明，供繪製圖的代理使用。
+
 ## 瀏覽器行為 {#diagrams}
 
 `diagrams.js` 渲染每個圖表，並將符合的節點包入真正的 SVG 連結。連結支援鍵盤焦點、一般導覽、複製目的地與另開分頁。展開按鈕放大畫布；Escape 關閉。每個具有明確對應的圖表下方，都有一般目的地清單；圖表無法渲染或讀者偏好文字時，可沿相同路徑閱讀。

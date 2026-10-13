@@ -131,6 +131,10 @@ Figure: 一次重新對應請求的資料路徑。
 
 支援的提示類型為 `NOTE`、`TIP`、`IMPORTANT`、`WARNING` 與 `CAUTION`。GitHub 也會將相同的 Markdown 顯示為提示。
 
+有連結的流程圖節點會以第二行顯示其背後的檔案或函式，資料來自原始碼標籤與 `owns` 清單，因此請讓標籤留在圖表提及的宣告上。在設定中加入 `diagram_code_labels: false` 即可隱藏。
+
+需要精確擺放的圖，例如時序圖或記憶體配置，請繪製 SVG 檔並在獨立一行引用，例如 `![Latch timing](figures/latch-timing.svg)`，其後可加上 `Figure:` 說明文字。請使用 [SVG 圖](renderer.html#figures) 所述的主題類別與 `data-group`／`data-link` 屬性，讓圖跟隨深色模式與群組顏色，標籤也能開啟 Wiki 頁面。`wiki-author` 技能的 `references/figures.md` 為代理提供相同規則。
+
 ## 更新既有文件 {#refresh}
 
 對框架自己的 Wiki，請在框架儲存庫中執行：

@@ -11,6 +11,7 @@ owns:
 - ../src/codewiki/resources/skills/wiki-init/SKILL.md
 - ../src/codewiki/resources/skills/wiki-query/SKILL.md
 - ../src/codewiki/resources/skills/wiki-author/SKILL.md
+- ../src/codewiki/resources/skills/wiki-author/references/figures.md
 - ../src/codewiki/resources/skills/wiki-build/SKILL.md
 - ../src/codewiki/resources/skills/wiki-review/SKILL.md
 depends_on:
@@ -83,7 +84,9 @@ choose stable IDs, define ownership, and bind important concepts with tags or re
 A high-level component diagram is an authored explanation. Keep its `depends_on`
 relationships and `diagram_links` in the same Markdown change as the explanation.
 The skill takes diagram color from configured page groups rather than ad hoc styling,
-and adds `Figure:` captions and alert callouts where they help a reader.
+and adds `Figure:` captions and alert callouts where they help a reader. Its
+`references/figures.md` file holds the SVG figure rules (theme classes, `data-group`,
+`data-link`, and forbidden content) and is read only when a drawing is needed.
 
 After refactoring or other code changes, the skill separates current explanations
 from decision history. It updates inaccurate pages and records useful rationale as

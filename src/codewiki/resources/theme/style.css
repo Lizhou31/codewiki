@@ -318,3 +318,32 @@ footer { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; 
 .callout > :first-child { margin-top:0; }
 .callout > :last-child { margin-bottom:0; }
 .callout .callout-title { margin-bottom:4px; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--cw); }
+
+/* Code line under a linked diagram node (global so Mermaid measures it at its final size). */
+.cw-code { font:400 11.5px/1.5 var(--mono); color:var(--fg-3); white-space:nowrap; }
+
+/* Hand-drawn SVG figures: a small class vocabulary that follows the theme and group colours.
+   An element (or ancestor) with data-group gets cw-<colour>, which sets --cw and --cw-soft. */
+.svg-figure { margin:18px 0 28px; padding:14px; overflow-x:auto; background:var(--bg); border:1px solid var(--line); border-radius:8px; }
+.diagram-figure > .svg-figure { margin:0 0 10px; }
+.svg-figure svg { display:block; width:100%; height:auto; font-family:var(--sans); }
+.svg-figure .fig-text { fill:var(--fg); font-size:13px; }
+.svg-figure .fig-muted { fill:var(--fg-3); }
+.svg-figure .fig-code { font-family:var(--mono); font-size:12px; }
+.svg-figure .fig-title { font-weight:650; }
+.svg-figure .fig-label { fill:var(--cw,var(--fg-2)); font-size:12px; font-weight:700; letter-spacing:.08em; }
+.svg-figure .fig-accent { fill:var(--cw,var(--fg)); }
+.svg-figure .fig-box { fill:var(--bg); stroke:var(--cw,var(--fg-3)); stroke-width:1.4; }
+.svg-figure .fig-tint { fill:var(--cw-soft,var(--bg-3)); stroke:var(--cw,var(--line)); stroke-width:1.2; }
+.svg-figure .fig-lane { fill:var(--cw-soft,var(--bg-3)); stroke:none; }
+.svg-figure .fig-line { fill:none; stroke:var(--cw,var(--fg-3)); stroke-width:1.7; }
+.svg-figure .fig-wave { fill:none; stroke:var(--cw,var(--fg)); stroke-width:2; stroke-linejoin:round; }
+.svg-figure .fig-dash { stroke-dasharray:6 4; }
+.svg-figure .fig-grid { fill:none; stroke:var(--line); stroke-width:1; stroke-dasharray:2 4; }
+.svg-figure .fig-head { fill:var(--cw,var(--fg-3)); stroke:none; }
+.svg-figure .fig-halo { paint-order:stroke fill; stroke:var(--bg); stroke-width:5px; stroke-linejoin:round; }
+.svg-figure a.fig-link { cursor:pointer; }
+.svg-figure a.fig-link:hover :is(.fig-box,.fig-tint) { stroke-width:2.6; }
+.svg-figure a.fig-link:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.figure-missing { color:var(--err); font-size:13px; }
+@media (max-width:760px) { .svg-figure svg { min-width:560px; } }

@@ -86,7 +86,7 @@ explained here, not an additional pipeline stage.
 
 `build_index()` exports document summaries, parent/child relationships, dependencies,
 diagram destinations, resolved semantic groups with their configured definitions,
-original Markdown sections, and source symbol locations. The
+SVG figure paths, original Markdown sections, and source symbol locations. The
 `by_file` view makes file-to-document lookup possible without loading every section.
 Source declaration text is excluded from the symbol index; the query command reads
 bounded source ranges from a verified checkout when requested.

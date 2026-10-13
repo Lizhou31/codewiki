@@ -31,6 +31,7 @@ DEFAULTS = {
     "max_snippet_lines": 120,
     "project": {"name": "Code Wiki", "subtitle": ""},
     "groups": {},
+    "diagram_code_labels": True,
 }
 
 RESOURCES = Path(__file__).resolve().parent / "resources"
@@ -121,6 +122,8 @@ class Wiki:
         if not isinstance(cfg["project"], dict):
             raise ValueError("project must be a mapping")
         cfg["groups"] = validate_groups(cfg["groups"] or {})
+        if not isinstance(cfg["diagram_code_labels"], bool):
+            raise ValueError("diagram_code_labels must be true or false")
         self.cfg = cfg
         self.wiki_dir = (self.root / cfg["wiki_dir"]).resolve()
         self.site_dir = (self.root / cfg["site_dir"]).resolve()

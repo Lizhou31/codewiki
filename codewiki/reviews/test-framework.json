@@ -2,15 +2,15 @@
   "schema_version": 1,
   "document": "test-framework",
   "outcome": "updated",
-  "reason": "Documented the new semantic group, configuration validation, caption, and callout tests in test_framework.py under the diagrams section; existing test descriptions remain accurate.",
-  "reviewed_at": "2026-10-13T01:18:01+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "e8993bd2b2f8ee2c3ed44b123c94519e2000702e69345d466e2f0fc372d2bced",
+  "reason": "Added the javascript: link rejection case and the allowed-text example to the SVG figure test description.",
+  "reviewed_at": "2026-10-13T02:55:10+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "7dfe7f9edf223690c8bea3d54424cbf6199342875cc3a3b78abe11a642bb64b0",
   "snapshot": {
     "document_path": "wiki/test-framework.md",
-    "document_sha256": "0b445099e6507a83eac946398042537bd45015994c2770c6cae09b4e3aa6116f",
+    "document_sha256": "d0995430902c963631de1ac26a080a9e48f9f5be0830c532127535c24092a316",
     "sources": {
-      "../tests/test_framework.py": "283f2a0670bbc894113d1fffe42bb80eb685e09f0a6bb4a802f9da12c4385365"
+      "../tests/test_framework.py": "c24cc5d17b39c57359ba06f89e4a0da54d7bbeb7208350b2a07df1a4423b940f"
     },
     "coverage": [
       {

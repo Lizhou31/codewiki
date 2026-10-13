@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "document": "architecture",
-  "outcome": "updated",
-  "reason": "Map intro now explains group colors (tinted=guide, plain=section) and adds a Figure caption; diagram_groups maps the config node to analysis. Reviewed config.py's new validate_groups/GROUP_COLORS and build.py changes: config discovery (instances) and run()/analyze() (pipeline) explanations are unchanged and accurate.",
-  "reviewed_at": "2026-10-13T01:17:56+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "6f9c567b1e6d3ba7dabff4c158f36f36e3bc7a411c6174409012796170e14396",
+  "outcome": "no-change",
+  "reason": "build.py change limited to SVG figure safety: event-handler and javascript: checks now apply to tag attributes only, so figure text may mention them. Architecture instances and pipeline explanations are unaffected.",
+  "reviewed_at": "2026-10-13T02:55:08+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "08c74c47a44e59aa77ffa2806d4ee8a9a887d04f57b873abde19da947429bc61",
   "snapshot": {
     "document_path": "wiki/architecture.md",
     "document_sha256": "d2b0ac9c73a59f601bbc247e28a9b6de68244552403eb678a767944fca714f47",
     "sources": {
       "../src/codewiki/__init__.py": "a147385ef7deb459e6f4b5c9a04be3be5f9baf5d714520fc02e4bd126d7af586",
       "../src/codewiki/__main__.py": "22ba1a29f62ffa66459980703bad181db550fced53617c2ba057bb3ac8671fa9",
-      "../src/codewiki/build.py": "81b9e1aa709495c710e37fd57b35e2b3bbe043fb42cee7cc140d777283317c09",
-      "../src/codewiki/config.py": "c4ee4d03326bb85f28180bf32ec00f800ee30e887875268b7982acfb6bf63391"
+      "../src/codewiki/build.py": "c606ef945255a1dc6ae58a572a06b8c2d79f2dc7fea9ce3c2d57da96552db03b",
+      "../src/codewiki/config.py": "9068149bbd145feb58e88fa6deccf9ba9aa27f690104f2106cbae373b5edfb25"
     },
     "coverage": [
       {

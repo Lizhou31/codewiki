@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 330" aria-labelledby="title desc">
+  <title id="title">索引新鮮度與審查狀態隨時間變化</title>
+  <desc id="desc">編輯連結的原始碼後，索引在下次建置前維持過期，頁面審查在記錄審查前維持待審查。記錄審查會變更建置輸入，因此需要再建置一次索引才會恢復新鮮。</desc>
+
+  <!-- events -->
+  <g class="fig-text fig-code" text-anchor="middle">
+    <text x="340" y="36">編輯連結的原始碼</text>
+    <a data-link="build.orchestration"><text x="470" y="36" class="fig-accent">build --strict</text></a>
+    <a data-link="reviews.acknowledge"><text x="620" y="36" class="fig-accent">review pass</text></a>
+    <a data-link="build.orchestration"><text x="760" y="36" class="fig-accent">build --strict</text></a>
+  </g>
+  <path class="fig-grid" d="M340 48V290M470 48V290M620 48V290M760 48V290"/>
+
+  <!-- index freshness -->
+  <g data-group="output">
+    <a data-link="queries.freshness"><text x="16" y="104" class="fig-label">索引新鮮度</text></a>
+    <text x="16" y="121" class="fig-text fig-muted fig-code">query … freshness</text>
+    <polyline class="fig-wave" points="230,92 340,92 340,122 470,122 470,92 620,92 620,122 760,122 760,92 900,92"/>
+    <text x="405" y="115" class="fig-text fig-muted" text-anchor="middle">過期</text>
+    <text x="545" y="85" class="fig-text fig-muted" text-anchor="middle">最新</text>
+    <text x="690" y="115" class="fig-text fig-muted" text-anchor="middle">過期</text>
+  </g>
+
+  <!-- review state -->
+  <g data-group="analysis">
+    <rect class="fig-lane" x="340" y="152" width="280" height="44"/>
+    <a data-link="reviews.status"><text x="16" y="174" class="fig-label">審查狀態</text></a>
+    <text x="16" y="191" class="fig-text fig-muted fig-code">review status</text>
+    <polyline class="fig-wave" points="230,162 340,162 340,192 620,192 620,162 900,162"/>
+    <text x="480" y="185" class="fig-text fig-title fig-accent fig-halo" text-anchor="middle">待審查：建置不會改變它</text>
+    <text x="760" y="155" class="fig-text fig-muted" text-anchor="middle">已審查</text>
+  </g>
+
+  <!-- CI gate -->
+  <g data-group="verification">
+    <a data-link="reviews.ci"><text x="16" y="244" class="fig-label">審查檢查</text></a>
+    <text x="16" y="261" class="fig-text fig-muted fig-code">CI 結束碼</text>
+    <polyline class="fig-wave" points="230,232 340,232 340,262 620,262 620,232 900,232"/>
+    <text x="285" y="225" class="fig-text fig-muted fig-code" text-anchor="middle">0</text>
+    <text x="480" y="255" class="fig-text fig-muted fig-code" text-anchor="middle">1</text>
+    <text x="760" y="225" class="fig-text fig-muted fig-code" text-anchor="middle">0</text>
+  </g>
+
+  <!-- time axis -->
+  <path class="fig-line" d="M230 292H900M340 292v6M470 292v6M620 292v6M760 292v6"/>
+  <g class="fig-text fig-muted fig-code" text-anchor="middle">
+    <text x="340" y="314">t1</text><text x="470" y="314">t2</text><text x="620" y="314">t3</text><text x="760" y="314">t4</text>
+  </g>
+  <text x="900" y="314" class="fig-text fig-muted" text-anchor="end">時間 →</text>
+</svg>

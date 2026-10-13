@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "manual-writing",
   "outcome": "updated",
-  "reason": "Added author guidance for semantic groups (config groups, page group inheritance, diagram_groups), Figure: captions, and GitHub alert callouts, matching build.py and the renderer guide.",
-  "reviewed_at": "2026-10-13T01:17:59+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "0e6741ffc34a28660418fa5e0b520d66c8d52b81c95abcddfe333e6b245d5b6a",
+  "reason": "Added guidance for automatic code lines on linked nodes (and the switch) and for SVG figures with theme classes and data-group/data-link; the nested Markdown example now renders as code thanks to the fence-aware splitter.",
+  "reviewed_at": "2026-10-13T02:54:05+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "be3a5f4a25803c121357443bb9b2fe3988c773b9e5d7cd4cb33bdff75a9ed7b2",
   "snapshot": {
     "document_path": "wiki/manual-writing.md",
-    "document_sha256": "7d76ba0ca23ef0f1cf9c4d57c13fd1cf19619a69a5bd6a4a2948c13edc084b42",
+    "document_sha256": "e218e1aac20fe66f89553d07d65d720a6a3b6fdd790739d376df3b0134a94586",
     "sources": {},
     "coverage": []
   }

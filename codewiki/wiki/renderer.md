@@ -155,6 +155,68 @@ default theme colors.
 > Set `group` on each subsystem page and let its components inherit it. Reserve
 > `diagram_groups` for nodes that have no page of their own.
 
+## Code labels on diagram nodes {#code-labels}
+
+A linked flowchart node gets a second, monospaced line that names the code behind
+it. `code_label()` takes the text from evidence the build already holds:
+
+- a section target shows its first tagged declaration, such as `build.py · run()`,
+  with `+N` when more declarations are tagged there;
+- a page target shows its first owned file, such as `config.py +2`;
+- a target without tags or owned files gets no second line.
+
+`annotate_mermaid()` adds the line while rendering each page, so the index and
+`query section` keep the authored Mermaid. It changes only flowchart nodes declared
+with a label (`id["Label"]`, `id(Label)`, and the other bracket shapes). Bare node
+IDs, Markdown-string labels, and labels that already contain `<br>` stay unchanged,
+so an author's own second line wins. Because the text comes from source tags, it
+follows a declaration when the tag moves with it. Set `diagram_code_labels: false`
+in `wiki.config.yaml` to turn the lines off.
+
+## SVG figures {#figures}
+
+Mermaid cannot draw timing diagrams, memory layouts, or precisely placed lanes.
+For those, keep a hand-drawn SVG file beside the Markdown and reference it as an
+image on a line of its own:
+
+```markdown
+![Review state over time](figures/review-timeline.svg)
+Figure: A build refreshes the index but never acknowledges a review.
+```
+
+The renderer inlines the file instead of linking an image, so the figure follows
+the page theme, dark mode, and group colors. A `Figure:` caption works as it does
+for Mermaid, and both kinds share the page's figure numbering. The path is relative
+to the Markdown file and must stay inside the wiki instance; a translation can point
+at its own localized SVG. Remote and absolute image URLs remain ordinary images.
+
+`inline_figure()` prepares each file for the page:
+
+- **IDs:** every `id` and its `url(#…)`, `href="#…"`, and `aria-labelledby`
+  references get a per-figure prefix, so two figures on one page cannot collide.
+- **Groups:** an element with `data-group="cm33"` gets that group's color class.
+  The figure classes below then draw in the group color.
+- **Links:** `<a data-link="build.orchestration">` receives the `href` of that page
+  or section, resolved like `diagram_links` and localized for translated pages.
+
+| Class | Draws |
+| --- | --- |
+| `fig-text`, `fig-muted`, `fig-code`, `fig-title` | Body, secondary, code, and bold text |
+| `fig-label`, `fig-accent` | Text in the group color (lane titles, highlights) |
+| `fig-box` | Box with the page background and a group-colored border |
+| `fig-tint` | Box filled with the group's soft color |
+| `fig-lane` | Soft background band without a border |
+| `fig-line`, `fig-wave`, `fig-dash` | Connector, signal waveform, dashed modifier |
+| `fig-head` | Arrowhead path inside a `<marker>` |
+| `fig-grid`, `fig-halo` | Dotted guide line; text outline that stays readable over lines |
+
+`figure_issues()` fails a strict build for a missing file, a path outside the
+instance, a script, embed, or event-handler attribute, an undeclared group, or an
+unknown link target. A page's figures join its review coverage, so editing an SVG
+marks the page for review, and SVG files count toward index freshness.
+`query doc` lists them under `Figures:`. The `wiki-author` skill carries the same
+class vocabulary in `references/figures.md` for agents that draw figures.
+
 ## Browser behavior {#diagrams}
 
 `diagrams.js` renders each diagram and wraps matching nodes in real SVG links.

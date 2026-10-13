@@ -126,6 +126,17 @@ numbering that skips uncaptioned diagrams, inline Markdown in captions, callout 
 plain blockquotes kept separate by blank lines, translated labels, and unchanged
 Markdown in `query section`.
 
+A nested-fence test keeps Mermaid, figure, and alert syntax inside a longer fence as
+literal code. Code-label tests check the tagged-function and owned-file second lines,
+unchanged unlabelled nodes, edge labels, author line breaks, non-flowchart diagrams,
+Markdown strings, the configuration switch, and the original Markdown in queries.
+SVG figure tests check inlining, per-figure ID prefixes, group classes, resolved
+links, captions, remote images left as images, the index and `query doc` listing,
+review coverage that turns the page outdated when the SVG changes, and freshness.
+Parameterized cases reject missing, script, event-handler, `javascript:` link, non-SVG,
+undeclared-group, broken-link, outside-instance, and missing translated figures; text
+that merely mentions `onboard =` or `javascript:` stays allowed.
+
 ## Initialization and theme customization survive {#initialization}
 
 Repeated initialization preserves authored Markdown and existing configuration,

@@ -65,8 +65,9 @@ implicit IDs are generated for browsing and should not be used as persistent tag
 ### Validation joins the model {#validation}
 
 The join checks missing anchor targets, duplicate page IDs, conflicting ownership,
-unknown related pages, invalid parents, parent cycles, broken decision anchors, and
-group names that the configuration does not declare.
+unknown related pages, invalid parents, parent cycles, broken decision anchors,
+group names that the configuration does not declare, and SVG figures that are
+missing, unsafe, or link to unknown pages or sections.
 An unresolved `refs` symbol is an error. A concept without a code tag is informational;
 that can be intentional for a high-level explanation or a draft page.
 

@@ -2,19 +2,20 @@
   "schema_version": 1,
   "document": "reviews",
   "outcome": "updated",
-  "reason": "Added group: analysis and a Figure caption stating that only review pass/updated makes a page current and a build never does; review.py is unchanged.",
-  "reviewed_at": "2026-10-13T01:18:00+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "dc32be2585c2d18f209f3d4e9a0334598b61a150d15a4629b8d015687d774d2a",
+  "reason": "Review coverage now includes SVG figures (review.py figure kind); documented it and added the review timeline SVG figure, whose t1-t4 states match report() live status, build snapshot inputs including reviews/*.json, and review check exit codes.",
+  "reviewed_at": "2026-10-13T02:54:06+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "b403496145f5e2e3486c6fbb4b0273c92b443c31b16e1428725b32f922a90b5f",
   "snapshot": {
     "document_path": "wiki/reviews.md",
-    "document_sha256": "7f546e00181997aa0ed2622dc890de1f01b03c7fcb59d3555f2aa5b0f90ac317",
+    "document_sha256": "2069875a5d6a7b16704d9a1d38ea0b8694429b6d5a1265056b3544b526905856",
     "sources": {
       "../src/codewiki/resources/integrations/check-docs.sh": "5681dfe9774a73ec8305cb433d0b5c7f8651858f9cd2c19bd97096bc8b4943c1",
       "../src/codewiki/resources/integrations/github-actions.yml": "9f504a72277c6c92db7034ccaad90fecdce682ca868e4b074aa920bb9c95ab13",
       "../src/codewiki/resources/integrations/pre-push": "31800bc7fa7ed00d575494cf802bab418ca9a4659d73595d026f87d7ecc7983c",
-      "../src/codewiki/review.py": "b153c18140305bbc210f79872a2a9a9b552f640cc48857e4cf240eefad2be1e5",
-      "../tests/test_review.py": "96662c406ab1e0bb8e290278f6dc39c8258b966ed92f8419e8dc4e3f9c3b503a"
+      "../src/codewiki/review.py": "665096ce25df721896777b710c9abf740289197895965ce62549204b68731bc4",
+      "../tests/test_review.py": "96662c406ab1e0bb8e290278f6dc39c8258b966ed92f8419e8dc4e3f9c3b503a",
+      "wiki/figures/review-timeline.svg": "fb518c2c227ce4f000e0b699681bfcbcc61bb8a8f8bc9a87fd198951ecb776f4"
     },
     "coverage": [
       {
@@ -54,6 +55,10 @@
       {
         "file": "../tests/test_review.py",
         "kind": "owns"
+      },
+      {
+        "file": "wiki/figures/review-timeline.svg",
+        "kind": "figure"
       }
     ]
   }

@@ -139,6 +139,12 @@ one color per group, and each diagram gets a legend. A `Figure:` paragraph after
 diagram becomes a numbered caption, and GitHub alerts (`> [!NOTE]`, `> [!CAUTION]`)
 become callouts. See [Semantic groups](codewiki/wiki/renderer.md#groups).
 
+Linked flowchart nodes also show the file or function behind them as a second
+line, taken from source tags and owned files. For timing diagrams, memory layouts,
+and other drawings Mermaid cannot express, reference a hand-drawn SVG on its own
+line (`![Timing](figures/timing.svg)`); the build inlines it with theme and group
+colors and validated wiki links. See [SVG figures](codewiki/wiki/renderer.md#figures).
+
 ## HTML languages
 
 Keep canonical pages in English. Add a sibling such as `renderer-ch_tw.md` with

@@ -30,7 +30,7 @@ depends_on: []
 
 ```mermaid
 flowchart TB
-  inputs["設定、Markdown、程式碼與主題"] --> snapshot["內容雜湊與 Git 狀態"]
+  inputs["設定、Markdown、SVG 圖、程式碼與主題"] --> snapshot["內容雜湊與 Git 狀態"]
   snapshot --> query["查詢新鮮度檢查"]
   decisions["作者理由與提交／PR 參照"] --> query
 ```

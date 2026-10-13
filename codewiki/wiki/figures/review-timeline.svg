@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 330" aria-labelledby="title desc">
+  <title id="title">Index freshness and review state over time</title>
+  <desc id="desc">After a linked source edit, the index is stale until the next build and the page review is outdated until a review is recorded. Recording the review changes a build input, so one more build makes the index fresh again.</desc>
+
+  <!-- events -->
+  <g class="fig-text fig-code" text-anchor="middle">
+    <text x="340" y="36">edit linked source</text>
+    <a data-link="build.orchestration"><text x="470" y="36" class="fig-accent">build --strict</text></a>
+    <a data-link="reviews.acknowledge"><text x="620" y="36" class="fig-accent">review pass</text></a>
+    <a data-link="build.orchestration"><text x="760" y="36" class="fig-accent">build --strict</text></a>
+  </g>
+  <path class="fig-grid" d="M340 48V290M470 48V290M620 48V290M760 48V290"/>
+
+  <!-- index freshness -->
+  <g data-group="output">
+    <a data-link="queries.freshness"><text x="16" y="104" class="fig-label">INDEX FRESHNESS</text></a>
+    <text x="16" y="121" class="fig-text fig-muted fig-code">query … freshness</text>
+    <polyline class="fig-wave" points="230,92 340,92 340,122 470,122 470,92 620,92 620,122 760,122 760,92 900,92"/>
+    <text x="405" y="115" class="fig-text fig-muted" text-anchor="middle">stale</text>
+    <text x="545" y="85" class="fig-text fig-muted" text-anchor="middle">current</text>
+    <text x="690" y="115" class="fig-text fig-muted" text-anchor="middle">stale</text>
+  </g>
+
+  <!-- review state -->
+  <g data-group="analysis">
+    <rect class="fig-lane" x="340" y="152" width="280" height="44"/>
+    <a data-link="reviews.status"><text x="16" y="174" class="fig-label">REVIEW STATE</text></a>
+    <text x="16" y="191" class="fig-text fig-muted fig-code">review status</text>
+    <polyline class="fig-wave" points="230,162 340,162 340,192 620,192 620,162 900,162"/>
+    <text x="480" y="185" class="fig-text fig-title fig-accent fig-halo" text-anchor="middle">outdated — a build does not change it</text>
+    <text x="760" y="155" class="fig-text fig-muted" text-anchor="middle">current</text>
+  </g>
+
+  <!-- CI gate -->
+  <g data-group="verification">
+    <a data-link="reviews.ci"><text x="16" y="244" class="fig-label">REVIEW CHECK</text></a>
+    <text x="16" y="261" class="fig-text fig-muted fig-code">CI exit code</text>
+    <polyline class="fig-wave" points="230,232 340,232 340,262 620,262 620,232 900,232"/>
+    <text x="285" y="225" class="fig-text fig-muted fig-code" text-anchor="middle">0</text>
+    <text x="480" y="255" class="fig-text fig-muted fig-code" text-anchor="middle">1</text>
+    <text x="760" y="225" class="fig-text fig-muted fig-code" text-anchor="middle">0</text>
+  </g>
+
+  <!-- time axis -->
+  <path class="fig-line" d="M230 292H900M340 292v6M470 292v6M620 292v6M760 292v6"/>
+  <g class="fig-text fig-muted fig-code" text-anchor="middle">
+    <text x="340" y="314">t1</text><text x="470" y="314">t2</text><text x="620" y="314">t3</text><text x="760" y="314">t4</text>
+  </g>
+  <text x="900" y="314" class="fig-text fig-muted" text-anchor="end">time →</text>
+</svg>

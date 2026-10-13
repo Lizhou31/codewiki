@@ -75,7 +75,7 @@ checks remain separate activities, rather than an automated browser or release s
   expand its source, test diagram expansion and keyboard navigation, and inspect a
   narrow viewport for overflow and console errors. The optional
   `tests/browser/diagrams.cjs` script automates the diagram part (group colors and
-  legend, captions, zoom, links, dialog, keyboard, touch) when Node and Playwright
+  legend, captions, code labels, SVG figures, zoom, links, dialog, keyboard, touch) when Node and Playwright
   are installed; it is not part of the pytest run.
 - **Installed-package smoke check:** build a wheel, install it in another environment,
   initialize a temporary project outside this checkout, and run a strict build.

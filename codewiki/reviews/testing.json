@@ -2,13 +2,13 @@
   "schema_version": 1,
   "document": "testing",
   "outcome": "updated",
-  "reason": "Added group: verification and noted the optional tests/browser/diagrams.cjs Playwright script for diagram checks, which is separate from the pytest run.",
-  "reviewed_at": "2026-10-13T01:18:02+00:00",
-  "commit": "f7814d9d5603293c1549dffb482289961ea3b2b7",
-  "fingerprint": "c159fd35d5aadc305dd1a8c21e6d400295ec24cb7dca21bac8e41cb59cf8e03f",
+  "reason": "Browser script now also checks code labels and SVG figures; updated the optional browser check description.",
+  "reviewed_at": "2026-10-13T02:54:08+00:00",
+  "commit": "6f7baa68759464324d2d62cfab10f2b440655442",
+  "fingerprint": "b1f65bccc1e390a9f3b9768bb5f91b4ace18396ca9767dc3b5d05713d2e27185",
   "snapshot": {
     "document_path": "wiki/testing.md",
-    "document_sha256": "1d412bd9a1aa732050ebe489354bc122c6b45b76fa74ad5ac733a9904800a3ca",
+    "document_sha256": "07f39787c440210faafb9f9c08040e294af510bf63552957d2f0328c14b7c53f",
     "sources": {},
     "coverage": []
   }
